@@ -67,9 +67,9 @@ i{
 	font-size: 24px;
 	font-family: "Microsoft YaHei";
 	font-style: normal;
-	-webkit-animation-duration: 1.4s;/*动画持续时间*/
-    -webkit-animation-iteration-count: 1;/*定义循环资料，infinite为无限次*/
-    -webkit-animation-timing-function: ease;/*动画频率*/
+	-webkit-animation-duration: 1.4s;/* animation duration */
+    -webkit-animation-iteration-count: 1;/* iteration count; "infinite" = endless */
+    -webkit-animation-timing-function: ease;/* animation timing function */
 
     animation-duration: 1.4s;
     animation-iteration-count: 1;
