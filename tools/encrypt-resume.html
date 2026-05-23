@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>encrypt-resume · offline tool</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --fg: #e8e8ee;
+            --fg-dim: #9a9aa8;
+            --fg-mute: #5a5a6a;
+            --accent: #7c5cff;
+            --accent-2: #22d3ee;
+            --accent-3: #f472b6;
+            --good: #4ade80;
+            --bad: #f87171;
+            --border: rgba(255,255,255,0.10);
+            --card: rgba(255,255,255,0.03);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: -10%;
+            background:
+                radial-gradient(40% 35% at 20% 25%, rgba(124, 92, 255, 0.30), transparent 60%),
+                radial-gradient(35% 30% at 80% 20%, rgba(34, 211, 238, 0.22), transparent 60%),
+                radial-gradient(45% 40% at 60% 90%, rgba(244, 114, 182, 0.18), transparent 60%);
+            filter: blur(40px);
+            z-index: -1;
+        }
+        .wrap {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+        h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; }
+        h1 .small { font-size: 14px; color: var(--fg-dim); font-weight: 400; margin-left: 8px; }
+        .lead {
+            color: var(--fg-dim);
+            margin-top: 10px;
+            line-height: 1.6;
+            font-size: 14.5px;
+        }
+        .badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-family: ui-monospace, monospace;
+            font-size: 12px;
+            color: var(--good);
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(74,222,128,0.35);
+            background: rgba(74,222,128,0.08);
+            margin-top: 14px;
+        }
+        .badge .dot { width:6px; height:6px; border-radius:50%; background: var(--good); box-shadow: 0 0 8px var(--good); }
+
+        .card {
+            margin-top: 28px;
+            padding: 22px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            backdrop-filter: blur(8px);
+        }
+        .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+        label {
+            display: block;
+            font-size: 12px;
+            font-family: ui-monospace, monospace;
+            color: var(--fg-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        input[type="password"], input[type="text"], textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            color: var(--fg);
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-family: ui-monospace, monospace;
+            font-size: 13px;
+            line-height: 1.5;
+            outline: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        input:focus, textarea:focus { border-color: var(--accent); background: rgba(124,92,255,0.06); }
+        textarea { min-height: 280px; resize: vertical; }
+        .hint { font-size: 12px; color: var(--fg-mute); margin-top: 6px; }
+
+        .actions { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+        button {
+            cursor: pointer;
+            font: inherit;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.04);
+            color: var(--fg);
+            transition: transform 0.15s, background 0.15s, border-color 0.15s;
+        }
+        button:hover { transform: translateY(-1px); background: rgba(255,255,255,0.08); }
+        button.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-color: transparent; color: #0b0b13; font-weight: 600; }
+        button.primary:hover { filter: brightness(1.08); }
+        button.ghost { background: transparent; }
+        button[disabled] { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        .status {
+            font-family: ui-monospace, monospace;
+            font-size: 12.5px;
+            color: var(--fg-dim);
+            min-height: 20px;
+        }
+        .status.ok { color: var(--good); }
+        .status.err { color: var(--bad); }
+
+        .output {
+            margin-top: 18px;
+            padding: 16px;
+            background: rgba(0,0,0,0.35);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-family: ui-monospace, monospace;
+            font-size: 12.5px;
+            line-height: 1.55;
+            color: #d9d9e3;
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-height: 280px;
+            overflow: auto;
+        }
+        .checklist {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--fg-dim);
+            line-height: 1.7;
+        }
+        .checklist code { background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 4px; }
+        .pref {
+            display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px;
+            font-size: 13px; color: var(--fg-dim);
+        }
+        .pref label { display: inline-flex; align-items: center; gap: 8px; text-transform: none; letter-spacing: 0; font-family: inherit; font-size: 13px; color: var(--fg-dim); margin: 0; }
+        details { margin-top: 22px; }
+        details summary { cursor: pointer; color: var(--fg-dim); font-size: 13px; }
+        details[open] summary { color: var(--fg); }
+        .preview {
+            margin-top: 12px;
+            padding: 16px 18px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--fg);
+            max-height: 360px;
+            overflow: auto;
+        }
+        .preview h1, .preview h2, .preview h3 { letter-spacing: -0.01em; margin: 14px 0 6px; line-height: 1.25; }
+        .preview h1 { font-size: 22px; }
+        .preview h2 { font-size: 18px; }
+        .preview h3 { font-size: 15.5px; color: var(--fg-dim); font-weight: 500; }
+        .preview p { margin: 6px 0; color: var(--fg-dim); }
+        .preview ul { padding-left: 22px; margin: 6px 0; }
+        .preview li { margin: 3px 0; color: var(--fg-dim); }
+        .preview code { font-family: ui-monospace, monospace; background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+        .preview pre { background: rgba(0,0,0,0.4); padding: 12px; border-radius: 8px; overflow-x: auto; margin: 8px 0; }
+        .preview a { color: var(--accent-2); text-decoration: none; border-bottom: 1px dashed rgba(34,211,238,0.4); }
+        .preview strong { color: var(--fg); }
+        .preview hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <h1>encrypt-resume <span class="small">offline · client-side</span></h1>
+    <p class="lead">
+        Paste your resume (Markdown or plain text), choose a passphrase, and download an encrypted JSON
+        blob to commit at <code style="font-family:ui-monospace,monospace;background:rgba(255,255,255,0.06);padding:1px 6px;border-radius:4px;">assets/resume.enc.json</code>.
+        Encryption runs entirely in your browser using the Web Crypto API — your plaintext never leaves your machine.
+    </p>
+    <div class="badge"><span class="dot"></span>fully offline · open this file via <code style="background:transparent;color:inherit;">file://</code> for max safety</div>
+
+    <div class="card">
+        <label for="resume">Resume markdown</label>
+        <textarea id="resume" placeholder="# Yulong Wang&#10;&#10;## Experience&#10;...&#10;&#10;## Skills&#10;..."></textarea>
+        <div class="hint">Supports a small Markdown subset: <code>#</code> headings, <code>**bold**</code>, <code>*italic*</code>, <code>`code`</code>, <code>```code blocks```</code>, <code>- lists</code>, <code>[link](url)</code>, blank-line paragraphs, <code>---</code> hr.</div>
+
+        <details>
+            <summary>Preview rendered HTML</summary>
+            <div id="preview" class="preview"></div>
+            <div class="actions"><button class="ghost" id="btn-preview" type="button">Render preview</button></div>
+        </details>
+
+        <div class="row" style="margin-top:18px">
+            <div>
+                <label for="pass1">Passphrase</label>
+                <input id="pass1" type="password" autocomplete="new-password" spellcheck="false" />
+                <div class="hint">Pick a strong, memorable phrase. There is no recovery.</div>
+            </div>
+            <div>
+                <label for="pass2">Confirm passphrase</label>
+                <input id="pass2" type="password" autocomplete="new-password" spellcheck="false" />
+                <div class="hint">Must match exactly.</div>
+            </div>
+        </div>
+
+        <div class="pref">
+            <label><input id="show-pass" type="checkbox" /> show passphrases</label>
+            <label>PBKDF2 iterations: <input id="iter" type="text" value="250000" style="width: 100px; padding: 4px 8px;" /></label>
+        </div>
+
+        <div class="actions">
+            <button id="btn-encrypt" class="primary" type="button">Encrypt &amp; preview</button>
+            <button id="btn-download" type="button" disabled>Download resume.enc.json</button>
+            <button id="btn-copy" class="ghost" type="button" disabled>Copy JSON</button>
+            <span id="status" class="status"></span>
+        </div>
+
+        <div id="output" class="output" style="display:none;"></div>
+    </div>
+
+    <div class="checklist card" style="font-family: ui-monospace, monospace; font-size: 12.5px; line-height: 1.7; color: var(--fg-dim);">
+        <strong style="color: var(--fg);">After encrypting:</strong><br/>
+        1. Click <code>Download resume.enc.json</code><br/>
+        2. Move the file to <code>assets/resume.enc.json</code> in this repo<br/>
+        3. <code>git add assets/resume.enc.json &amp;&amp; git commit -m "chore(resume): refresh encrypted resume" &amp;&amp; git push</code><br/>
+        4. Visit your homepage, click <em>Resume (locked)</em>, enter the same passphrase to unlock
+    </div>
+</div>
+
+<script>
+(function () {
+    'use strict';
+    const $ = (id) => document.getElementById(id);
+    const buf2b64 = (buf) => {
+        const bytes = new Uint8Array(buf);
+        let s = '';
+        for (let i = 0; i < bytes.length; i++) s += String.fromCharCode(bytes[i]);
+        return btoa(s);
+    };
+
+    /* -------- minimal markdown renderer (also used in page) -------- */
+    function escapeHtml(s) {
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    function renderInline(s) {
+        s = escapeHtml(s);
+        s = s.replace(/`([^`]+)`/g, (_, c) => '<code>' + c + '</code>');
+        s = s.replace(/\*\*([^*]+)\*\*/g, (_, c) => '<strong>' + c + '</strong>');
+        s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, (_, p, c) => p + '<em>' + c + '</em>');
+        s = s.replace(/\[([^\]]+)\]\(([^) ]+)(?: "[^"]*")?\)/g, (_, label, url) => {
+            const safe = /^(https?:|mailto:|#|\/)/i.test(url) ? url : '#';
+            return '<a href="' + escapeHtml(safe) + '" target="_blank" rel="noopener">' + label + '</a>';
+        });
+        return s;
+    }
+    function renderMarkdown(src) {
+        const lines = src.replace(/\r\n?/g, '\n').split('\n');
+        const out = [];
+        let i = 0;
+        let inList = false;
+        const closeList = () => { if (inList) { out.push('</ul>'); inList = false; } };
+        while (i < lines.length) {
+            const line = lines[i];
+            if (line.startsWith('```')) {
+                closeList();
+                const buf = [];
+                i++;
+                while (i < lines.length && !lines[i].startsWith('```')) { buf.push(lines[i]); i++; }
+                i++;
+                out.push('<pre><code>' + escapeHtml(buf.join('\n')) + '</code></pre>');
+                continue;
+            }
+            if (/^---+\s*$/.test(line)) {
+                closeList();
+                out.push('<hr>');
+                i++; continue;
+            }
+            const h = /^(#{1,6})\s+(.+)$/.exec(line);
+            if (h) {
+                closeList();
+                const level = h[1].length;
+                out.push('<h' + level + '>' + renderInline(h[2]) + '</h' + level + '>');
+                i++; continue;
+            }
+            if (/^\s*[-*+]\s+/.test(line)) {
+                if (!inList) { out.push('<ul>'); inList = true; }
+                out.push('<li>' + renderInline(line.replace(/^\s*[-*+]\s+/, '')) + '</li>');
+                i++; continue;
+            }
+            if (/^\s*$/.test(line)) {
+                closeList();
+                i++; continue;
+            }
+            closeList();
+            const para = [line];
+            i++;
+            while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^#{1,6}\s/.test(lines[i]) && !/^```/.test(lines[i]) && !/^\s*[-*+]\s+/.test(lines[i]) && !/^---+\s*$/.test(lines[i])) {
+                para.push(lines[i]); i++;
+            }
+            out.push('<p>' + renderInline(para.join(' ')) + '</p>');
+        }
+        closeList();
+        return out.join('\n');
+    }
+
+    async function deriveKey(passphrase, salt, iterations) {
+        const enc = new TextEncoder();
+        const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(passphrase), 'PBKDF2', false, ['deriveKey']);
+        return crypto.subtle.deriveKey(
+            { name: 'PBKDF2', hash: 'SHA-256', salt, iterations },
+            keyMaterial,
+            { name: 'AES-GCM', length: 256 },
+            false,
+            ['encrypt']
+        );
+    }
+
+    async function encryptResume(plaintext, passphrase, iterations) {
+        const salt = crypto.getRandomValues(new Uint8Array(16));
+        const iv = crypto.getRandomValues(new Uint8Array(12));
+        const key = await deriveKey(passphrase, salt, iterations);
+        const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, new TextEncoder().encode(plaintext));
+        return {
+            v: 1,
+            kdf: 'PBKDF2-SHA256',
+            iter: iterations,
+            cipher: 'AES-GCM',
+            salt: buf2b64(salt),
+            iv: buf2b64(iv),
+            ct: buf2b64(ct)
+        };
+    }
+
+    let cachedJson = null;
+    const setStatus = (msg, kind) => {
+        const s = $('status');
+        s.textContent = msg || '';
+        s.className = 'status' + (kind ? ' ' + kind : '');
+    };
+
+    $('btn-preview').addEventListener('click', () => {
+        const md = $('resume').value || '*(empty — paste your resume above)*';
+        $('preview').innerHTML = renderMarkdown(md);
+    });
+
+    $('show-pass').addEventListener('change', (e) => {
+        $('pass1').type = $('pass2').type = e.target.checked ? 'text' : 'password';
+    });
+
+    $('btn-encrypt').addEventListener('click', async () => {
+        try {
+            const md = $('resume').value.trim();
+            const p1 = $('pass1').value;
+            const p2 = $('pass2').value;
+            const iter = Math.max(50000, parseInt($('iter').value, 10) || 250000);
+            if (!md) { setStatus('Paste your resume first.', 'err'); return; }
+            if (!p1 || p1.length < 6) { setStatus('Passphrase must be at least 6 characters.', 'err'); return; }
+            if (p1 !== p2) { setStatus('Passphrases do not match.', 'err'); return; }
+            setStatus('Encrypting…');
+            $('btn-encrypt').disabled = true;
+            const enc = await encryptResume(md, p1, iter);
+            cachedJson = JSON.stringify(enc, null, 2);
+            $('output').style.display = 'block';
+            $('output').textContent = cachedJson;
+            $('btn-download').disabled = false;
+            $('btn-copy').disabled = false;
+            $('preview').innerHTML = renderMarkdown(md);
+            setStatus('Encrypted. Now download the JSON and replace assets/resume.enc.json.', 'ok');
+        } catch (err) {
+            setStatus('Failed: ' + (err && err.message || err), 'err');
+        } finally {
+            $('btn-encrypt').disabled = false;
+        }
+    });
+
+    $('btn-download').addEventListener('click', () => {
+        if (!cachedJson) return;
+        const blob = new Blob([cachedJson], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'resume.enc.json';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    });
+
+    $('btn-copy').addEventListener('click', async () => {
+        if (!cachedJson) return;
+        try {
+            await navigator.clipboard.writeText(cachedJson);
+            setStatus('Copied to clipboard.', 'ok');
+        } catch {
+            setStatus('Clipboard blocked. Use download instead.', 'err');
+        }
+    });
+})();
+</script>
+</body>
+</html>

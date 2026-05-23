@@ -22,6 +22,8 @@
             --accent-2: #22d3ee;
             --accent-3: #f472b6;
             --accent-4: #fbbf24;
+            --good: #4ade80;
+            --bad: #f87171;
             --border: rgba(255, 255, 255, 0.08);
             --card: rgba(255, 255, 255, 0.03);
             --card-hover: rgba(255, 255, 255, 0.06);
@@ -103,8 +105,8 @@
             0%, 100% { opacity: 1; transform: scale(1); }
             50%      { opacity: 0.6; transform: scale(0.85); }
         }
-        .status { color: var(--fg-mute); }
-        .status .live { color: #4ade80; }
+        .status-pill { color: var(--fg-mute); }
+        .status-pill .live { color: var(--good); }
 
         main {
             display: flex;
@@ -155,7 +157,7 @@
 
         .tagline {
             margin-top: 22px;
-            max-width: 620px;
+            max-width: 660px;
             font-size: clamp(16px, 1.6vw, 18px);
             color: var(--fg-dim);
             line-height: 1.6;
@@ -165,9 +167,7 @@
         }
         .tagline .accent { color: var(--fg); }
 
-        @keyframes rise {
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes rise { to { opacity: 1; transform: translateY(0); } }
 
         .links {
             margin-top: 56px;
@@ -193,12 +193,15 @@
             transform: translateY(14px);
             animation: rise 0.7s ease-out forwards;
             overflow: hidden;
+            cursor: pointer;
+            font: inherit;
+            text-align: left;
+            width: 100%;
         }
         .link:nth-child(1) { animation-delay: 0.6s; }
         .link:nth-child(2) { animation-delay: 0.7s; }
         .link:nth-child(3) { animation-delay: 0.8s; }
         .link:nth-child(4) { animation-delay: 0.9s; }
-        .link:nth-child(5) { animation-delay: 1.0s; }
 
         .link::after {
             content: "";
@@ -215,12 +218,9 @@
             transition: opacity 0.25s ease;
             pointer-events: none;
         }
-        .link:hover {
-            transform: translateY(-2px);
-            background: var(--card-hover);
-            border-color: transparent;
-        }
+        .link:hover { transform: translateY(-2px); background: var(--card-hover); border-color: transparent; }
         .link:hover::after { opacity: 1; }
+        .link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
         .link .icon {
             display: grid;
@@ -234,11 +234,8 @@
         }
         .link .icon svg { width: 18px; height: 18px; }
         .link .meta { display: flex; flex-direction: column; min-width: 0; }
-        .link .label {
-            font-size: 15px;
-            font-weight: 500;
-            letter-spacing: -0.01em;
-        }
+        .link .label { font-size: 15px; font-weight: 500; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 6px; }
+        .link .label .lock-pill { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--accent-3); border: 1px solid rgba(244,114,182,0.35); padding: 2px 6px; border-radius: 999px; background: rgba(244,114,182,0.08); }
         .link .sub {
             font-family: 'JetBrains Mono', ui-monospace, monospace;
             font-size: 12px;
@@ -254,10 +251,9 @@
             transition: transform 0.25s ease, color 0.25s ease;
             flex-shrink: 0;
         }
-        .link:hover .arrow {
-            color: var(--fg);
-            transform: translate(2px, -2px);
-        }
+        .link:hover .arrow { color: var(--fg); transform: translate(2px, -2px); }
+        .link.resume .icon { background: rgba(244,114,182,0.10); color: var(--accent-3); }
+        .link.resume:hover .icon { background: rgba(244,114,182,0.18); }
 
         .scroll-cue {
             margin-top: 56px;
@@ -274,7 +270,7 @@
             border: 1px solid var(--border);
             background: rgba(255,255,255,0.02);
             opacity: 0;
-            animation: rise 0.8s ease-out 1.15s forwards;
+            animation: rise 0.8s ease-out 1.2s forwards;
             transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
         }
         .scroll-cue:hover { color: var(--fg); border-color: var(--accent); background: rgba(124,92,255,0.08); }
@@ -284,7 +280,7 @@
             50%      { transform: translateY(3px); }
         }
 
-        /* === AI / LLM / Agent / AI-Infra section === */
+        /* === Stack × Craft (AI / LLM / Agent / AI-Infra) === */
         .afterlinks {
             max-width: 920px;
             width: 100%;
@@ -342,10 +338,123 @@
             color: var(--fg-dim);
             font-size: 15px;
             line-height: 1.6;
-            max-width: 720px;
+            max-width: 740px;
         }
         .section-header .sub .zh { color: var(--fg); }
 
+        /* Full-stack journey pipeline */
+        .journey {
+            margin: 8px 0 40px;
+            padding: 22px 22px 18px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .journey .legend {
+            display: flex; flex-wrap: wrap; gap: 12px 18px;
+            align-items: center;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 11px;
+            color: var(--fg-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+        .journey .legend .title { color: var(--fg); }
+        .journey .legend .tag { display: inline-flex; align-items: center; gap: 6px; }
+        .journey .legend .swatch {
+            width: 8px; height: 8px; border-radius: 50%;
+            box-shadow: 0 0 8px currentColor;
+        }
+        .journey .legend .swatch.core { background: var(--accent-2); color: var(--accent-2); }
+        .journey .legend .swatch.expanding { background: var(--accent-3); color: var(--accent-3); }
+        .journey .legend .swatch.bridge { background: var(--accent); color: var(--accent); }
+
+        .pipeline {
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            padding: 6px 2px 12px;
+        }
+        .pipeline::-webkit-scrollbar { height: 6px; }
+        .pipeline::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 999px; }
+
+        .node {
+            position: relative;
+            flex: 1 0 auto;
+            min-width: 110px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 4px;
+        }
+        .node + .node::before {
+            content: "";
+            position: absolute;
+            left: -50%;
+            right: 50%;
+            top: 27px;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.10), rgba(255,255,255,0.22), rgba(255,255,255,0.10));
+            z-index: 0;
+        }
+        .node .dot {
+            position: relative;
+            z-index: 1;
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1.5px solid var(--n-color, var(--fg-mute));
+            box-shadow: 0 0 0 4px rgba(0,0,0,0.0);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .node[data-state="core"]      { --n-color: var(--accent-2); }
+        .node[data-state="bridge"]    { --n-color: var(--accent); }
+        .node[data-state="expanding"] { --n-color: var(--accent-3); }
+        .node .dot.filled { background: var(--n-color); box-shadow: 0 0 12px var(--n-color); }
+        .node .dot.ring   { background: transparent; }
+        .node:hover .dot { transform: scale(1.15); box-shadow: 0 0 0 4px rgba(124,92,255,0.10), 0 0 14px var(--n-color); }
+        .node .num {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 10.5px;
+            color: var(--fg-mute);
+            letter-spacing: 0.08em;
+            margin-top: 8px;
+        }
+        .node .name {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--fg);
+            letter-spacing: -0.01em;
+        }
+        .node .tech {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 10.5px;
+            color: var(--fg-dim);
+            max-width: 130px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 720px) {
+            .pipeline { flex-direction: column; gap: 14px; padding: 4px 2px; }
+            .node { flex-direction: row; min-width: 0; gap: 14px; text-align: left; }
+            .node + .node::before {
+                left: 12px; right: auto; top: -14px; bottom: auto;
+                width: 1px; height: 14px;
+                background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.22), rgba(255,255,255,0.10));
+            }
+            .node .dot { flex-shrink: 0; }
+            .node .num { margin-top: 0; }
+            .node .tech { max-width: none; }
+            .node > .col { display: flex; flex-direction: column; gap: 2px; }
+        }
+
+        /* Stack grid */
         .stack-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -375,18 +484,8 @@
         .stack-group[data-color="cyan"]   { --g-color: var(--accent-2); }
         .stack-group[data-color="pink"]   { --g-color: var(--accent-3); }
         .stack-group[data-color="amber"]  { --g-color: var(--accent-4); }
-
-        .stack-group .head {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 14px;
-        }
-        .stack-group .head .marker {
-            width: 7px; height: 7px; border-radius: 50%;
-            background: var(--g-color, var(--accent));
-            box-shadow: 0 0 12px var(--g-color, var(--accent));
-        }
+        .stack-group .head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+        .stack-group .head .marker { width: 7px; height: 7px; border-radius: 50%; background: var(--g-color, var(--accent)); box-shadow: 0 0 12px var(--g-color, var(--accent)); }
         .stack-group h3 {
             font-size: 12px;
             font-family: 'JetBrains Mono', ui-monospace, monospace;
@@ -396,13 +495,7 @@
             color: var(--fg-dim);
         }
         .stack-group h3 .idx { color: var(--fg-mute); margin-right: 4px; }
-
-        .chips {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
-        }
+        .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; }
         .chips li {
             font-size: 12.5px;
             line-height: 1;
@@ -416,6 +509,15 @@
             opacity: 0;
             transform: translateY(6px);
             white-space: nowrap;
+            position: relative;
+        }
+        .chips li.expand { color: var(--fg-dim); border-style: dashed; }
+        .chips li.expand::after {
+            content: "↗";
+            margin-left: 6px;
+            font-size: 10px;
+            color: var(--accent-3);
+            opacity: 0.8;
         }
         .afterlinks.in .chips li {
             opacity: 1;
@@ -430,6 +532,7 @@
             box-shadow: 0 0 0 1px var(--g-color, var(--accent)), 0 4px 14px rgba(0,0,0,0.4);
         }
 
+        /* Highlights */
         .highlights {
             margin-top: 36px;
             display: grid;
@@ -459,12 +562,7 @@
         }
         .hl-card:hover { transform: translateY(-2px); background: var(--card-hover); border-color: rgba(124,92,255,0.4); }
         .hl-card:hover::after { opacity: 1; }
-        .hl-card .num {
-            font-family: 'JetBrains Mono', ui-monospace, monospace;
-            font-size: 11px;
-            color: var(--accent-2);
-            letter-spacing: 0.12em;
-        }
+        .hl-card .num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: var(--accent-2); letter-spacing: 0.12em; }
         .hl-card h4 {
             margin-top: 8px;
             font-size: 16.5px;
@@ -476,13 +574,9 @@
             background-clip: text;
             color: transparent;
         }
-        .hl-card p {
-            margin-top: 10px;
-            font-size: 13.5px;
-            line-height: 1.55;
-            color: var(--fg-dim);
-        }
+        .hl-card p { margin-top: 10px; font-size: 13.5px; line-height: 1.55; color: var(--fg-dim); }
 
+        /* Currently building */
         .now {
             margin-top: 32px;
             padding: 18px 20px;
@@ -494,30 +588,16 @@
             color: var(--fg-dim);
         }
         .now h3 {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--fg);
-            font-weight: 500;
-            font-size: 12px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+            display: flex; align-items: center; gap: 8px;
+            color: var(--fg); font-weight: 500; font-size: 12px;
+            letter-spacing: 0.08em; text-transform: uppercase;
             margin-bottom: 12px;
         }
-        .now h3 .blip {
-            width: 6px; height: 6px; border-radius: 50%;
-            background: #4ade80;
-            box-shadow: 0 0 10px #4ade80;
-            animation: pulse 2s ease-in-out infinite;
-        }
+        .now h3 .blip { width: 6px; height: 6px; border-radius: 50%; background: var(--good); box-shadow: 0 0 10px var(--good); animation: pulse 2s ease-in-out infinite; }
         .now ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
         .now li { color: var(--fg-dim); display: flex; gap: 10px; }
         .now li b { color: var(--fg); font-weight: 500; margin-right: 4px; }
-        .now li::before {
-            content: "→";
-            color: var(--accent-2);
-            flex-shrink: 0;
-        }
+        .now li::before { content: "→"; color: var(--accent-2); flex-shrink: 0; }
 
         footer {
             margin-top: 80px;
@@ -550,6 +630,143 @@
             .eyebrow, h1, .tagline, .link, .scroll-cue, footer { opacity: 1; transform: none; }
             .afterlinks, .afterlinks .chips li { opacity: 1; transform: none; }
         }
+
+        /* === Resume modal === */
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 6vh 16px 16px;
+            background: rgba(5,5,10,0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            overflow-y: auto;
+        }
+        .modal[aria-hidden="false"] { display: flex; animation: fadeIn 0.2s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .modal-card {
+            width: min(720px, 100%);
+            background: linear-gradient(180deg, rgba(20,20,30,0.96), rgba(12,12,20,0.96));
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 28px 28px 24px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(124,92,255,0.18);
+            position: relative;
+            animation: pop 0.25s cubic-bezier(.2,.7,.2,1);
+        }
+        @keyframes pop { from { transform: translateY(8px) scale(0.98); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
+        .modal-card.shake { animation: shake 0.35s ease-in-out; }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-6px); } 40% { transform: translateX(5px); } 60% { transform: translateX(-3px); } 80% { transform: translateX(2px); } }
+        .modal-head {
+            display: flex; align-items: center; justify-content: space-between; gap: 10px;
+            margin-bottom: 6px;
+        }
+        .modal-head .title {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-size: 16px; font-weight: 600; letter-spacing: -0.01em;
+        }
+        .modal-head .title .lock-pill {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 9.5px; letter-spacing: 0.12em;
+            color: var(--accent-3);
+            border: 1px solid rgba(244,114,182,0.35);
+            padding: 2px 7px;
+            border-radius: 999px;
+            background: rgba(244,114,182,0.08);
+        }
+        .modal-close {
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--fg-dim);
+            width: 30px; height: 30px;
+            border-radius: 8px;
+            display: grid; place-items: center;
+            transition: color 0.2s, border-color 0.2s, background 0.2s;
+        }
+        .modal-close:hover { color: var(--fg); border-color: var(--accent); background: rgba(124,92,255,0.08); }
+        .modal-sub { color: var(--fg-dim); font-size: 13.5px; line-height: 1.55; margin-bottom: 18px; }
+        .modal-sub code { font-family: 'JetBrains Mono', ui-monospace, monospace; background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 4px; }
+
+        .pwd-row { display: flex; gap: 10px; align-items: stretch; }
+        .pwd-row input[type="password"], .pwd-row input[type="text"] {
+            flex: 1;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            color: var(--fg);
+            border-radius: 10px;
+            padding: 11px 14px;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 13.5px;
+            outline: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .pwd-row input:focus { border-color: var(--accent); background: rgba(124,92,255,0.06); }
+        .pwd-row button {
+            cursor: pointer;
+            font: inherit;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 0 16px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #0b0b13;
+            transition: filter 0.2s, transform 0.15s;
+        }
+        .pwd-row button:hover { filter: brightness(1.08); transform: translateY(-1px); }
+        .pwd-row button[disabled] { opacity: 0.6; cursor: progress; }
+        .pwd-meta { display: flex; gap: 12px; align-items: center; margin-top: 10px; font-size: 12px; color: var(--fg-mute); flex-wrap: wrap; }
+        .pwd-meta .err { color: var(--bad); }
+        .pwd-meta .ok  { color: var(--good); }
+        .pwd-meta a { color: var(--accent-2); text-decoration: none; }
+        .pwd-meta a:hover { text-decoration: underline; }
+
+        .resume-content {
+            display: none;
+            margin-top: 14px;
+            padding: 18px 20px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            max-height: 68vh;
+            overflow-y: auto;
+            line-height: 1.6;
+        }
+        .resume-content.visible { display: block; animation: fadeIn 0.3s ease-out; }
+        .resume-content h1 { font-size: 26px; letter-spacing: -0.02em; margin: 12px 0 8px; color: transparent; background: linear-gradient(135deg, #fff, #b5a8ff); -webkit-background-clip: text; background-clip: text; }
+        .resume-content h2 { font-size: 18px; margin: 18px 0 6px; color: var(--fg); letter-spacing: -0.01em; }
+        .resume-content h3 { font-size: 14px; margin: 14px 0 4px; color: var(--fg-dim); font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+        .resume-content p { margin: 6px 0; color: var(--fg-dim); font-size: 14px; }
+        .resume-content ul { padding-left: 20px; margin: 6px 0; }
+        .resume-content li { margin: 3px 0; color: var(--fg-dim); font-size: 14px; }
+        .resume-content code { font-family: 'JetBrains Mono', ui-monospace, monospace; background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 4px; font-size: 12.5px; color: var(--fg); }
+        .resume-content pre { background: rgba(0,0,0,0.4); padding: 12px; border-radius: 8px; overflow-x: auto; margin: 8px 0; }
+        .resume-content pre code { background: transparent; padding: 0; }
+        .resume-content a { color: var(--accent-2); text-decoration: none; border-bottom: 1px dashed rgba(34,211,238,0.4); }
+        .resume-content a:hover { color: var(--fg); }
+        .resume-content strong { color: var(--fg); }
+        .resume-content em { color: var(--fg); font-style: italic; opacity: 0.9; }
+        .resume-content hr { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+        .resume-content blockquote { border-left: 2px solid var(--accent); padding-left: 14px; margin: 10px 0; color: var(--fg-dim); }
+
+        .modal-foot {
+            display: flex; justify-content: space-between; align-items: center; gap: 10px;
+            margin-top: 14px;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 11px; color: var(--fg-mute);
+        }
+        .modal-foot button.linkbtn {
+            cursor: pointer;
+            background: transparent; border: none; padding: 0;
+            color: var(--accent-2); font: inherit;
+        }
+        .modal-foot button.linkbtn:hover { color: var(--fg); }
+
+        body.modal-open { overflow: hidden; }
     </style>
 </head>
 <body>
@@ -559,7 +776,7 @@
             <span class="dot" aria-hidden="true"></span>
             <span>yulong.wang</span>
         </div>
-        <div class="status"><span class="live">●</span> available for work</div>
+        <div class="status-pill"><span class="live">●</span> available for work</div>
     </header>
 
     <main>
@@ -567,7 +784,8 @@
         <h1>Yulong<span class="cursor" aria-hidden="true"></span></h1>
         <p class="tagline">
             <span class="accent">AI Infra · LLM · Agent · Engineer.</span>
-            I make large models run fast on heterogeneous hardware, and build agents that actually ship.
+            From low-level GPU / NPU performance to end-to-end agent systems —
+            expanding to a full-stack LLM &amp; AI Infra craft.
             心怀善意，虚怀若谷。
         </p>
 
@@ -610,6 +828,19 @@
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
                 </span>
             </a>
+
+            <button class="link resume" type="button" id="open-resume" aria-haspopup="dialog" aria-controls="resume-modal">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                </span>
+                <span class="meta">
+                    <span class="label">Resume <span class="lock-pill">LOCKED</span></span>
+                    <span class="sub">passphrase required</span>
+                </span>
+                <span class="arrow" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+                </span>
+            </button>
         </nav>
 
         <a class="scroll-cue" href="#stack" aria-label="Scroll to stack and highlights">
@@ -626,34 +857,83 @@
             <h2>Stack <span class="amp">×</span> Craft</h2>
             <p class="sub">
                 AI Infra · LLM Serving · Agent Systems · GPU / NPU Performance.
-                <span class="zh">让大模型在异构硬件上跑得更快、更聪明。</span>
+                <span class="zh">从底层 GPU / NPU 性能，到上层 LLM / Agent 系统 — 持续把自己拓展为大模型 &amp; AI Infra 的全栈选手。</span>
             </p>
         </header>
 
-        <div class="stack-grid">
-            <div class="stack-group" data-color="purple">
-                <div class="head">
-                    <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">01</span>LLM &amp; Agent</h3>
-                </div>
-                <ul class="chips">
-                    <li style="--i:0">Transformer</li>
-                    <li style="--i:1">vLLM</li>
-                    <li style="--i:2">SGLang</li>
-                    <li style="--i:3">TensorRT-LLM</li>
-                    <li style="--i:4">LangGraph</li>
-                    <li style="--i:5">MCP</li>
-                    <li style="--i:6">RAG</li>
-                    <li style="--i:7">Function&nbsp;Calling</li>
-                    <li style="--i:8">Agent&nbsp;Eval</li>
-                    <li style="--i:9">Claude / GPT</li>
-                </ul>
+        <!-- Full-stack journey pipeline -->
+        <div class="journey" aria-label="Full-stack LLM / AI Infra journey">
+            <div class="legend">
+                <span class="title">full-stack journey</span>
+                <span class="tag"><span class="swatch core" aria-hidden="true"></span> core / shipping</span>
+                <span class="tag"><span class="swatch bridge" aria-hidden="true"></span> bridging</span>
+                <span class="tag"><span class="swatch expanding" aria-hidden="true"></span> expanding</span>
             </div>
+            <div class="pipeline">
+                <div class="node" data-state="expanding">
+                    <span class="dot ring" aria-hidden="true"></span>
+                    <div class="col">
+                        <span class="num">01</span>
+                        <span class="name">Data</span>
+                        <span class="tech">corpora · RAG · retrieval eval</span>
+                    </div>
+                </div>
+                <div class="node" data-state="expanding">
+                    <span class="dot ring" aria-hidden="true"></span>
+                    <div class="col">
+                        <span class="num">02</span>
+                        <span class="name">Pre-train</span>
+                        <span class="tech">Megatron-LM · DeepSpeed</span>
+                    </div>
+                </div>
+                <div class="node" data-state="bridge">
+                    <span class="dot filled" aria-hidden="true"></span>
+                    <div class="col">
+                        <span class="num">03</span>
+                        <span class="name">Fine-tune</span>
+                        <span class="tech">SFT · LoRA · DPO</span>
+                    </div>
+                </div>
+                <div class="node" data-state="core">
+                    <span class="dot filled" aria-hidden="true"></span>
+                    <div class="col">
+                        <span class="num">04</span>
+                        <span class="name">Serve</span>
+                        <span class="tech">vLLM · SGLang · TRT-LLM</span>
+                    </div>
+                </div>
+                <div class="node" data-state="core">
+                    <span class="dot filled" aria-hidden="true"></span>
+                    <div class="col">
+                        <span class="num">05</span>
+                        <span class="name">Agent</span>
+                        <span class="tech">MCP · Claude Code · tools</span>
+                    </div>
+                </div>
+                <div class="node" data-state="expanding">
+                    <span class="dot ring" aria-hidden="true"></span>
+                    <div class="col">
+                        <span class="num">06</span>
+                        <span class="name">Eval</span>
+                        <span class="tech">agent eval · obs · bench</span>
+                    </div>
+                </div>
+                <div class="node" data-state="bridge">
+                    <span class="dot filled" aria-hidden="true"></span>
+                    <div class="col">
+                        <span class="num">07</span>
+                        <span class="name">Ops</span>
+                        <span class="tech">k8s · NCCL · Nsight · perf</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="stack-grid">
             <div class="stack-group" data-color="cyan">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">02</span>AI Infra</h3>
+                    <h3><span class="idx">01</span>AI Infra · core</h3>
                 </div>
                 <ul class="chips">
                     <li style="--i:0">CUDA</li>
@@ -662,44 +942,93 @@
                     <li style="--i:3">NPU&nbsp;IR</li>
                     <li style="--i:4">FlashAttention</li>
                     <li style="--i:5">Paged&nbsp;KV&nbsp;Cache</li>
-                    <li style="--i:6">NCCL / HCCL</li>
+                    <li style="--i:6">NCCL · HCCL</li>
                     <li style="--i:7">Nsight</li>
-                    <li style="--i:8">Ray</li>
-                    <li style="--i:9">Kubernetes</li>
+                    <li style="--i:8">perf</li>
+                </ul>
+            </div>
+
+            <div class="stack-group" data-color="purple">
+                <div class="head">
+                    <span class="marker" aria-hidden="true"></span>
+                    <h3><span class="idx">02</span>LLM Serving · core</h3>
+                </div>
+                <ul class="chips">
+                    <li style="--i:0">vLLM</li>
+                    <li style="--i:1">SGLang</li>
+                    <li style="--i:2">TensorRT-LLM</li>
+                    <li style="--i:3">Continuous&nbsp;Batching</li>
+                    <li style="--i:4">Speculative&nbsp;Decoding</li>
+                    <li style="--i:5">Quantization</li>
+                    <li style="--i:6">Operator&nbsp;Fusion</li>
+                    <li style="--i:7" class="expand">Multi-modal</li>
+                    <li style="--i:8" class="expand">Disaggregated&nbsp;Serving</li>
                 </ul>
             </div>
 
             <div class="stack-group" data-color="pink">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">03</span>Frameworks</h3>
+                    <h3><span class="idx">03</span>Agent · expanding</h3>
                 </div>
                 <ul class="chips">
-                    <li style="--i:0">PyTorch</li>
-                    <li style="--i:1">HuggingFace</li>
-                    <li style="--i:2">ONNX</li>
-                    <li style="--i:3">DeepSpeed</li>
-                    <li style="--i:4">Megatron-LM</li>
-                    <li style="--i:5">JAX</li>
-                    <li style="--i:6">OpenAI&nbsp;API</li>
-                    <li style="--i:7">Anthropic&nbsp;API</li>
+                    <li style="--i:0">MCP</li>
+                    <li style="--i:1">Claude&nbsp;Code</li>
+                    <li style="--i:2">Function&nbsp;Calling</li>
+                    <li style="--i:3">LangGraph</li>
+                    <li style="--i:4">Planner / ReAct</li>
+                    <li style="--i:5">RAG</li>
+                    <li style="--i:6" class="expand">Agent&nbsp;Eval</li>
+                    <li style="--i:7" class="expand">Long-horizon&nbsp;tasks</li>
                 </ul>
             </div>
 
             <div class="stack-group" data-color="amber">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">04</span>Systems &amp; Lang</h3>
+                    <h3><span class="idx">04</span>Training · expanding</h3>
+                </div>
+                <ul class="chips">
+                    <li style="--i:0">PyTorch</li>
+                    <li style="--i:1">HuggingFace</li>
+                    <li style="--i:2" class="expand">Megatron-LM</li>
+                    <li style="--i:3" class="expand">DeepSpeed</li>
+                    <li style="--i:4" class="expand">LoRA / QLoRA</li>
+                    <li style="--i:5" class="expand">RLHF / DPO</li>
+                    <li style="--i:6" class="expand">Data&nbsp;curation</li>
+                </ul>
+            </div>
+
+            <div class="stack-group" data-color="cyan">
+                <div class="head">
+                    <span class="marker" aria-hidden="true"></span>
+                    <h3><span class="idx">05</span>Systems &amp; Lang</h3>
                 </div>
                 <ul class="chips">
                     <li style="--i:0">C++</li>
                     <li style="--i:1">Python</li>
-                    <li style="--i:2">Go</li>
-                    <li style="--i:3">Linux</li>
-                    <li style="--i:4">Bash</li>
-                    <li style="--i:5">Git</li>
-                    <li style="--i:6">Docker</li>
-                    <li style="--i:7">perf / strace</li>
+                    <li style="--i:2">Linux</li>
+                    <li style="--i:3">Bash</li>
+                    <li style="--i:4">Git</li>
+                    <li style="--i:5">Docker</li>
+                    <li style="--i:6">Kubernetes</li>
+                    <li style="--i:7" class="expand">Go</li>
+                    <li style="--i:8" class="expand">Rust</li>
+                </ul>
+            </div>
+
+            <div class="stack-group" data-color="purple">
+                <div class="head">
+                    <span class="marker" aria-hidden="true"></span>
+                    <h3><span class="idx">06</span>Compilers &amp; Kernels</h3>
+                </div>
+                <ul class="chips">
+                    <li style="--i:0">TVM</li>
+                    <li style="--i:1">ONNX</li>
+                    <li style="--i:2">Stencil&nbsp;CUDA</li>
+                    <li style="--i:3">Custom&nbsp;Ops</li>
+                    <li style="--i:4" class="expand">MLIR</li>
+                    <li style="--i:5" class="expand">JAX / XLA</li>
                 </ul>
             </div>
         </div>
@@ -713,12 +1042,12 @@
             <article class="hl-card">
                 <span class="num">/ 02</span>
                 <h4>Agent &amp; tooling loops</h4>
-                <p>Building agentic workflows over MCP, Claude Code, and custom tool-calling protocols — reliable planners, evals, and observability for multi-turn agents.</p>
+                <p>Agentic workflows over MCP, Claude Code, and custom tool-calling protocols — reliable planners, evals, and observability for multi-turn agents.</p>
             </article>
             <article class="hl-card">
                 <span class="num">/ 03</span>
-                <h4>GPU kernel craftsmanship</h4>
-                <p>Hand-tuned CUDA / Triton kernels — stencil compute, attention variants, all-reduce overlap. Profiling-driven, microbenchmark-validated.</p>
+                <h4>Full-stack ambition</h4>
+                <p>Growing from infra-only to the full LLM lifecycle — data, training, fine-tuning, serving, agent, eval, ops. Each release closes one more gap in the loop.</p>
             </article>
         </div>
 
@@ -726,8 +1055,9 @@
             <h3><span class="blip" aria-hidden="true"></span> currently building</h3>
             <ul>
                 <li><span><b>Multi-agent coding loops</b> on top of MCP &amp; Claude Code.</span></li>
-                <li><span><b>Faster decode path</b> — TensorRT-LLM + speculative decoding.</span></li>
-                <li><span><b>Open-source deep-dives</b> — AscendNPU-IR, vLLM internals, FlashAttention-3.</span></li>
+                <li><span><b>Faster decode path</b> — TensorRT-LLM + speculative decoding on heterogeneous HW.</span></li>
+                <li><span><b>Full-stack dive</b> — fine-tuning + RAG + agent eval, end to end on a single laptop.</span></li>
+                <li><span><b>OSS deep-dives</b> — AscendNPU-IR, vLLM internals, FlashAttention-3.</span></li>
             </ul>
         </aside>
     </section>
@@ -740,13 +1070,56 @@
         <div>© <span id="year">2026</span> Yulong · built with care</div>
     </footer>
 </div>
-<script>
-    (function () {
-        var y = document.getElementById('year');
-        if (y) y.textContent = new Date().getFullYear();
 
-        var section = document.querySelector('.afterlinks');
-        if (!section) return;
+<!-- Resume modal -->
+<div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-hidden="true">
+    <div class="modal-card" id="resume-card">
+        <header class="modal-head">
+            <span class="title" id="resume-modal-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                Resume
+                <span class="lock-pill" id="lock-pill">PRIVATE</span>
+            </span>
+            <button class="modal-close" type="button" id="close-resume" aria-label="Close resume dialog">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+        </header>
+
+        <p class="modal-sub" id="modal-sub">
+            This resume is encrypted client-side with <code>AES-GCM</code> and a passphrase-derived key (<code>PBKDF2-SHA256</code>, 250k iters).
+            Enter the passphrase to decrypt — nothing leaves your browser.
+        </p>
+
+        <form id="pwd-form" autocomplete="off">
+            <div class="pwd-row">
+                <input id="pwd" type="password" name="pwd" placeholder="passphrase" autocomplete="off" spellcheck="false" required />
+                <button type="submit" id="pwd-submit">Unlock</button>
+            </div>
+            <div class="pwd-meta">
+                <label style="display:inline-flex;align-items:center;gap:6px;cursor:pointer"><input id="show-pwd" type="checkbox" /> show</label>
+                <span id="pwd-status"></span>
+                <span style="margin-left:auto">No passphrase? <a href="mailto:yl.w@outlook.com?subject=Resume%20access">request access</a></span>
+            </div>
+        </form>
+
+        <article class="resume-content" id="resume-content" aria-live="polite"></article>
+
+        <footer class="modal-foot">
+            <span id="resume-meta"></span>
+            <button type="button" class="linkbtn" id="resume-relock" style="display:none;">re-lock</button>
+        </footer>
+    </div>
+</div>
+
+<script>
+(function () {
+    'use strict';
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    /* Scroll reveal for AI section */
+    var section = document.querySelector('.afterlinks');
+    if (section) {
         if ('IntersectionObserver' in window) {
             var io = new IntersectionObserver(function (entries) {
                 entries.forEach(function (e) {
@@ -760,7 +1133,225 @@
         } else {
             section.classList.add('in');
         }
-    })();
+    }
+
+    /* ---------------- Resume gate ---------------- */
+    var modal = document.getElementById('resume-modal');
+    var openBtn = document.getElementById('open-resume');
+    var closeBtn = document.getElementById('close-resume');
+    var form = document.getElementById('pwd-form');
+    var pwd = document.getElementById('pwd');
+    var showPwd = document.getElementById('show-pwd');
+    var status = document.getElementById('pwd-status');
+    var card = document.getElementById('resume-card');
+    var content = document.getElementById('resume-content');
+    var lockPill = document.getElementById('lock-pill');
+    var submit = document.getElementById('pwd-submit');
+    var relock = document.getElementById('resume-relock');
+    var resumeMeta = document.getElementById('resume-meta');
+    var modalSub = document.getElementById('modal-sub');
+    var lastFocus = null;
+    var cachedBlob = null;
+    var resumeUnlocked = false;
+
+    function openModal() {
+        lastFocus = document.activeElement;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        if (resumeUnlocked) {
+            renderUnlockedState();
+        } else {
+            renderLockedState();
+            setTimeout(function () { pwd.focus(); }, 50);
+        }
+    }
+    function closeModal() {
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        setStatus('', '');
+        pwd.value = '';
+        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+    }
+    function setStatus(msg, kind) {
+        status.textContent = msg || '';
+        status.className = kind === 'err' ? 'err' : (kind === 'ok' ? 'ok' : '');
+    }
+    function renderLockedState() {
+        form.style.display = '';
+        content.classList.remove('visible');
+        content.innerHTML = '';
+        lockPill.textContent = 'PRIVATE';
+        lockPill.style.color = 'var(--accent-3)';
+        lockPill.style.borderColor = 'rgba(244,114,182,0.35)';
+        lockPill.style.background = 'rgba(244,114,182,0.08)';
+        relock.style.display = 'none';
+        resumeMeta.textContent = '';
+        modalSub.style.display = '';
+    }
+    function renderUnlockedState() {
+        form.style.display = 'none';
+        content.classList.add('visible');
+        lockPill.textContent = 'UNLOCKED';
+        lockPill.style.color = 'var(--good)';
+        lockPill.style.borderColor = 'rgba(74,222,128,0.35)';
+        lockPill.style.background = 'rgba(74,222,128,0.08)';
+        relock.style.display = '';
+        modalSub.style.display = 'none';
+    }
+
+    /* Minimal markdown renderer (matches encrypt-resume.html) */
+    function escapeHtml(s) {
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    function renderInline(s) {
+        s = escapeHtml(s);
+        s = s.replace(/`([^`]+)`/g, function (_, c) { return '<code>' + c + '</code>'; });
+        s = s.replace(/\*\*([^*]+)\*\*/g, function (_, c) { return '<strong>' + c + '</strong>'; });
+        s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, function (_, p, c) { return p + '<em>' + c + '</em>'; });
+        s = s.replace(/\[([^\]]+)\]\(([^) ]+)(?: "[^"]*")?\)/g, function (_, label, url) {
+            var safe = /^(https?:|mailto:|#|\/)/i.test(url) ? url : '#';
+            return '<a href="' + escapeHtml(safe) + '" target="_blank" rel="noopener">' + label + '</a>';
+        });
+        return s;
+    }
+    function renderMarkdown(src) {
+        var lines = src.replace(/\r\n?/g, '\n').split('\n');
+        var out = [];
+        var i = 0;
+        var inList = false;
+        var inQuote = false;
+        function closeList() { if (inList) { out.push('</ul>'); inList = false; } }
+        function closeQuote() { if (inQuote) { out.push('</blockquote>'); inQuote = false; } }
+        while (i < lines.length) {
+            var line = lines[i];
+            if (line.indexOf('```') === 0) {
+                closeList(); closeQuote();
+                var buf = [];
+                i++;
+                while (i < lines.length && lines[i].indexOf('```') !== 0) { buf.push(lines[i]); i++; }
+                i++;
+                out.push('<pre><code>' + escapeHtml(buf.join('\n')) + '</code></pre>');
+                continue;
+            }
+            if (/^---+\s*$/.test(line)) {
+                closeList(); closeQuote();
+                out.push('<hr>');
+                i++; continue;
+            }
+            var h = /^(#{1,6})\s+(.+)$/.exec(line);
+            if (h) {
+                closeList(); closeQuote();
+                var level = h[1].length;
+                out.push('<h' + level + '>' + renderInline(h[2]) + '</h' + level + '>');
+                i++; continue;
+            }
+            if (/^\s*[-*+]\s+/.test(line)) {
+                closeQuote();
+                if (!inList) { out.push('<ul>'); inList = true; }
+                out.push('<li>' + renderInline(line.replace(/^\s*[-*+]\s+/, '')) + '</li>');
+                i++; continue;
+            }
+            if (/^>\s?/.test(line)) {
+                closeList();
+                if (!inQuote) { out.push('<blockquote>'); inQuote = true; }
+                out.push('<p>' + renderInline(line.replace(/^>\s?/, '')) + '</p>');
+                i++; continue;
+            }
+            if (/^\s*$/.test(line)) { closeList(); closeQuote(); i++; continue; }
+            closeList(); closeQuote();
+            var para = [line];
+            i++;
+            while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^#{1,6}\s/.test(lines[i]) && lines[i].indexOf('```') !== 0 && !/^\s*[-*+]\s+/.test(lines[i]) && !/^---+\s*$/.test(lines[i]) && !/^>\s?/.test(lines[i])) {
+                para.push(lines[i]); i++;
+            }
+            out.push('<p>' + renderInline(para.join(' ')) + '</p>');
+        }
+        closeList(); closeQuote();
+        return out.join('\n');
+    }
+
+    function b64ToBytes(s) {
+        var bin = atob(s);
+        var b = new Uint8Array(bin.length);
+        for (var i = 0; i < bin.length; i++) b[i] = bin.charCodeAt(i);
+        return b;
+    }
+
+    async function fetchBlob() {
+        if (cachedBlob) return cachedBlob;
+        var res = await fetch('assets/resume.enc.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('encrypted resume not found');
+        cachedBlob = await res.json();
+        return cachedBlob;
+    }
+
+    async function decryptWith(passphrase) {
+        var blob = await fetchBlob();
+        var salt = b64ToBytes(blob.salt);
+        var iv = b64ToBytes(blob.iv);
+        var ct = b64ToBytes(blob.ct);
+        var iter = blob.iter || 250000;
+        var km = await crypto.subtle.importKey('raw', new TextEncoder().encode(passphrase), 'PBKDF2', false, ['deriveKey']);
+        var key = await crypto.subtle.deriveKey(
+            { name: 'PBKDF2', hash: 'SHA-256', salt: salt, iterations: iter },
+            km,
+            { name: 'AES-GCM', length: 256 },
+            false,
+            ['decrypt']
+        );
+        var pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, key, ct);
+        return new TextDecoder().decode(pt);
+    }
+
+    function shake() { card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake'); }
+
+    if (openBtn) openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function (e) {
+        if (modal.getAttribute('aria-hidden') === 'false') {
+            if (e.key === 'Escape') { closeModal(); }
+        }
+    });
+
+    if (showPwd) showPwd.addEventListener('change', function () { pwd.type = showPwd.checked ? 'text' : 'password'; });
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var phrase = pwd.value;
+        if (!phrase) return;
+        if (!window.crypto || !window.crypto.subtle) {
+            setStatus('Your browser lacks Web Crypto support.', 'err'); return;
+        }
+        submit.disabled = true;
+        setStatus('Decrypting…', '');
+        try {
+            var md = await decryptWith(phrase);
+            content.innerHTML = renderMarkdown(md);
+            renderUnlockedState();
+            resumeUnlocked = true;
+            try { sessionStorage.setItem('resume.unlocked', '1'); } catch (_) {}
+            resumeMeta.textContent = 'decrypted · session-only';
+            setStatus('Unlocked.', 'ok');
+            content.scrollTop = 0;
+        } catch (err) {
+            shake();
+            setStatus('Wrong passphrase, or blob missing / corrupted.', 'err');
+            pwd.select();
+        } finally {
+            submit.disabled = false;
+        }
+    });
+
+    relock.addEventListener('click', function () {
+        resumeUnlocked = false;
+        content.innerHTML = '';
+        try { sessionStorage.removeItem('resume.unlocked'); } catch (_) {}
+        renderLockedState();
+        setStatus('Re-locked.', 'ok');
+        setTimeout(function () { pwd.focus(); }, 50);
+    });
+})();
 </script>
 </body>
 </html>
