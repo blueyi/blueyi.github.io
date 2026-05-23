@@ -571,7 +571,106 @@
             box-shadow: 0 0 0 1px var(--g-color, var(--accent)), 0 4px 14px rgba(0,0,0,0.4);
         }
 
-        /* Highlights */
+        /* Live work log (compile / serve / launch / profile scenes) */
+        .logstream {
+            margin: 8px 0 40px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.30));
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            position: relative;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+        }
+        .logstream::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(60% 80% at 100% 0%, rgba(124,92,255,0.10), transparent 60%),
+                radial-gradient(60% 80% at 0% 100%, rgba(34,211,238,0.08), transparent 60%);
+            pointer-events: none;
+        }
+        .logstream .ls-head {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: rgba(255,255,255,0.04);
+            border-bottom: 1px solid var(--border);
+            font-size: 11.5px;
+            color: var(--fg-mute);
+            letter-spacing: 0.04em;
+        }
+        .logstream .ls-head .lights { display: flex; gap: 5px; }
+        .logstream .ls-head .lights span {
+            width: 9px; height: 9px; border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+        }
+        .logstream .ls-head .lights span:nth-child(1) { background: rgba(248, 113, 113, 0.55); }
+        .logstream .ls-head .lights span:nth-child(2) { background: rgba(251, 191, 36, 0.55); }
+        .logstream .ls-head .lights span:nth-child(3) { background: rgba(74, 222, 128, 0.55); }
+        .logstream .ls-head .title { color: var(--fg-dim); }
+        .logstream .ls-head .scene-id {
+            margin-left: auto;
+            color: var(--accent-2);
+            font-weight: 500;
+            letter-spacing: 0.06em;
+        }
+        .logstream .ls-head .scene-id .dot {
+            display: inline-block;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--good);
+            margin-right: 6px;
+            box-shadow: 0 0 8px var(--good);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        .logstream .ls-body {
+            position: relative;
+            padding: 16px 20px 18px;
+            font-size: 12.5px;
+            line-height: 1.7;
+            color: var(--fg-dim);
+            min-height: 11.2em;
+            transition: opacity 0.45s ease-out;
+        }
+        .logstream .ls-body.fading { opacity: 0; }
+        .logstream .ls-body .logline {
+            opacity: 0;
+            transform: translateX(-6px);
+            transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .logstream .ls-body .logline.in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .logstream .ls-body .prompt { color: var(--accent-2); margin-right: 6px; }
+        .logstream .ls-body .ok     { color: var(--good); }
+        .logstream .ls-body .info   { color: var(--fg-mute); }
+        .logstream .ls-body .warn   { color: var(--accent-4); }
+        .logstream .ls-body .err    { color: var(--bad); }
+        .logstream .ls-body .val    { color: var(--fg); }
+        .logstream .ls-body .num    { color: var(--accent-3); }
+        .logstream .ls-body .dim    { color: var(--fg-mute); }
+        .logstream .ls-body .caret {
+            display: inline-block;
+            width: 0.55ch; height: 1em;
+            background: var(--accent);
+            margin-left: 2px;
+            vertical-align: -2px;
+            animation: blink 1.1s steps(1) infinite;
+            border-radius: 1px;
+        }
+        @media (max-width: 520px) {
+            .logstream .ls-body { padding: 14px 14px 16px; font-size: 11.5px; min-height: 11.5em; }
+            .logstream .ls-head { padding: 8px 12px; font-size: 11px; }
+        }
+
+                /* Highlights */
         .highlights {
             margin-top: 36px;
             display: grid;
@@ -668,6 +767,8 @@
             *, *::before, *::after { animation: none !important; transition: none !important; }
             .eyebrow, h1, .tagline, .motto, .link, .scroll-cue, footer { opacity: 1; transform: none; }
             .afterlinks, .afterlinks .chips li { opacity: 1; transform: none; }
+            .logstream .ls-body .logline { opacity: 1; transform: none; }
+            .logstream .ls-body.fading { opacity: 1; }
         }
 
         /* === Resume modal === */
@@ -971,47 +1072,97 @@
             </div>
         </div>
 
-        <div class="stack-grid">
-            <div class="stack-group" data-color="cyan">
-                <div class="head">
-                    <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">01</span>AI Infra · core</h3>
-                </div>
-                <ul class="chips">
-                    <li style="--i:0">CUDA</li>
-                    <li style="--i:1">Triton</li>
-                    <li style="--i:2">Ascend&nbsp;CANN</li>
-                    <li style="--i:3">NPU&nbsp;IR</li>
-                    <li style="--i:4">FlashAttention</li>
-                    <li style="--i:5">Paged&nbsp;KV&nbsp;Cache</li>
-                    <li style="--i:6">NCCL · HCCL</li>
-                    <li style="--i:7">Nsight</li>
-                    <li style="--i:8">perf</li>
-                </ul>
+        <div class="logstream" aria-label="Live work log">
+            <div class="ls-head">
+                <span class="lights" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="title">~/work · live session</span>
+                <span class="scene-id" id="scene-id"><span class="dot" aria-hidden="true"></span><span id="scene-id-text">00 · boot</span></span>
             </div>
+            <pre class="ls-body" id="logbody" aria-live="off"></pre>
+        </div>
 
+        <div class="stack-grid">
             <div class="stack-group" data-color="purple">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">02</span>LLM Serving · core</h3>
+                    <h3><span class="idx">01</span>AI Compilers &amp; IR · core</h3>
                 </div>
                 <ul class="chips">
-                    <li style="--i:0">vLLM</li>
-                    <li style="--i:1">SGLang</li>
-                    <li style="--i:2">TensorRT-LLM</li>
-                    <li style="--i:3">Continuous&nbsp;Batching</li>
-                    <li style="--i:4">Speculative&nbsp;Decoding</li>
-                    <li style="--i:5">Quantization</li>
-                    <li style="--i:6">Operator&nbsp;Fusion</li>
-                    <li style="--i:7" class="expand">Multi-modal</li>
-                    <li style="--i:8" class="expand">Disaggregated&nbsp;Serving</li>
+                    <li style="--i:0">LLVM</li>
+                    <li style="--i:1">MLIR</li>
+                    <li style="--i:2">TVM</li>
+                    <li style="--i:3">Triton</li>
+                    <li style="--i:4">Halide</li>
+                    <li style="--i:5">AscendNPU&nbsp;IR</li>
+                    <li style="--i:6">Bisheng</li>
+                    <li style="--i:7">Multi-level&nbsp;Tiling</li>
+                    <li style="--i:8">Auto-tuning</li>
+                    <li style="--i:9">Dynamic&nbsp;Shape</li>
+                    <li style="--i:10" class="expand">XLA</li>
+                    <li style="--i:11" class="expand">IREE</li>
+                </ul>
+            </div>
+
+            <div class="stack-group" data-color="cyan">
+                <div class="head">
+                    <span class="marker" aria-hidden="true"></span>
+                    <h3><span class="idx">02</span>GPU / NPU Kernels · core</h3>
+                </div>
+                <ul class="chips">
+                    <li style="--i:0">CUDA</li>
+                    <li style="--i:1">CUTLASS</li>
+                    <li style="--i:2">FlashAttention</li>
+                    <li style="--i:3">GEMM</li>
+                    <li style="--i:4">Fused&nbsp;Norm</li>
+                    <li style="--i:5">Fused&nbsp;Softmax</li>
+                    <li style="--i:6">Attention&nbsp;Variants</li>
+                    <li style="--i:7">DaVinci&nbsp;Operators</li>
+                    <li style="--i:8">Stencil&nbsp;CUDA</li>
+                    <li style="--i:9" class="expand">FlashAttention-3</li>
                 </ul>
             </div>
 
             <div class="stack-group" data-color="pink">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">03</span>Agent · expanding</h3>
+                    <h3><span class="idx">03</span>LLM Serving · core</h3>
+                </div>
+                <ul class="chips">
+                    <li style="--i:0">vLLM</li>
+                    <li style="--i:1">SGLang</li>
+                    <li style="--i:2">TensorRT-LLM</li>
+                    <li style="--i:3">Continuous&nbsp;Batching</li>
+                    <li style="--i:4">Paged&nbsp;KV&nbsp;Cache</li>
+                    <li style="--i:5">Speculative&nbsp;Decoding</li>
+                    <li style="--i:6">FP8 / INT4</li>
+                    <li style="--i:7">Operator&nbsp;Fusion</li>
+                    <li style="--i:8" class="expand">Disaggregated&nbsp;Serving</li>
+                    <li style="--i:9" class="expand">Multi-modal&nbsp;Inference</li>
+                </ul>
+            </div>
+
+            <div class="stack-group" data-color="amber">
+                <div class="head">
+                    <span class="marker" aria-hidden="true"></span>
+                    <h3><span class="idx">04</span>Distributed Training · expanding</h3>
+                </div>
+                <ul class="chips">
+                    <li style="--i:0">PyTorch</li>
+                    <li style="--i:1">NCCL · HCCL</li>
+                    <li style="--i:2" class="expand">Megatron-LM</li>
+                    <li style="--i:3" class="expand">DeepSpeed</li>
+                    <li style="--i:4" class="expand">ZeRO / FSDP</li>
+                    <li style="--i:5" class="expand">TP / PP / DP</li>
+                    <li style="--i:6" class="expand">EP / SP</li>
+                    <li style="--i:7" class="expand">LoRA / QLoRA</li>
+                    <li style="--i:8" class="expand">RLHF / DPO</li>
+                </ul>
+            </div>
+
+            <div class="stack-group" data-color="purple">
+                <div class="head">
+                    <span class="marker" aria-hidden="true"></span>
+                    <h3><span class="idx">05</span>Agent &amp; RAG · expanding</h3>
                 </div>
                 <ul class="chips">
                     <li style="--i:0">MCP</li>
@@ -1020,57 +1171,28 @@
                     <li style="--i:3">LangGraph</li>
                     <li style="--i:4">Planner / ReAct</li>
                     <li style="--i:5">RAG</li>
-                    <li style="--i:6" class="expand">Agent&nbsp;Eval</li>
-                    <li style="--i:7" class="expand">Long-horizon&nbsp;tasks</li>
-                </ul>
-            </div>
-
-            <div class="stack-group" data-color="amber">
-                <div class="head">
-                    <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">04</span>Training · expanding</h3>
-                </div>
-                <ul class="chips">
-                    <li style="--i:0">PyTorch</li>
-                    <li style="--i:1">HuggingFace</li>
-                    <li style="--i:2" class="expand">Megatron-LM</li>
-                    <li style="--i:3" class="expand">DeepSpeed</li>
-                    <li style="--i:4" class="expand">LoRA / QLoRA</li>
-                    <li style="--i:5" class="expand">RLHF / DPO</li>
-                    <li style="--i:6" class="expand">Data&nbsp;curation</li>
+                    <li style="--i:6" class="expand">Vector&nbsp;DB</li>
+                    <li style="--i:7" class="expand">Reranker</li>
+                    <li style="--i:8" class="expand">Agent&nbsp;Eval</li>
                 </ul>
             </div>
 
             <div class="stack-group" data-color="cyan">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">05</span>Systems &amp; Lang</h3>
+                    <h3><span class="idx">06</span>Systems &amp; Hardware</h3>
                 </div>
                 <ul class="chips">
                     <li style="--i:0">C++</li>
                     <li style="--i:1">Python</li>
                     <li style="--i:2">Linux</li>
-                    <li style="--i:3">Bash</li>
-                    <li style="--i:4">Git</li>
-                    <li style="--i:5">Docker</li>
-                    <li style="--i:6">Kubernetes</li>
-                    <li style="--i:7" class="expand">Go</li>
-                    <li style="--i:8" class="expand">Rust</li>
-                </ul>
-            </div>
-
-            <div class="stack-group" data-color="purple">
-                <div class="head">
-                    <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">06</span>Compilers &amp; Kernels</h3>
-                </div>
-                <ul class="chips">
-                    <li style="--i:0">TVM</li>
-                    <li style="--i:1">ONNX</li>
-                    <li style="--i:2">Stencil&nbsp;CUDA</li>
-                    <li style="--i:3">Custom&nbsp;Ops</li>
-                    <li style="--i:4" class="expand">MLIR</li>
-                    <li style="--i:5" class="expand">JAX / XLA</li>
+                    <li style="--i:3">Docker · K8s</li>
+                    <li style="--i:4">Nsight&nbsp;Systems</li>
+                    <li style="--i:5">Nsight&nbsp;Compute</li>
+                    <li style="--i:6">perf</li>
+                    <li style="--i:7">NVLink / HBM</li>
+                    <li style="--i:8" class="expand">Go</li>
+                    <li style="--i:9" class="expand">Rust</li>
                 </ul>
             </div>
         </div>
@@ -1346,7 +1468,134 @@
 
     function shake() { card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake'); }
 
-    if (openBtn) openBtn.addEventListener('click', openModal);
+    /* ---------------- Live work log streamer ---------------- */
+    (function () {
+        var body = document.getElementById('logbody');
+        var sceneIdText = document.getElementById('scene-id-text');
+        if (!body || !sceneIdText) return;
+
+        var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        var scenes = [
+            {
+                id: '01', name: 'compile · ascend-mlir',
+                lines: [
+                    '<span class="prompt">$</span><span class="val">ascend-mlir</span> compile <span class="dim">model.mlir</span> -O3 --auto-fuse --tile auto',
+                    '<span class="info">[info]</span> passes: canonicalize · fuse · tile · vectorize · schedule',
+                    '<span class="info">[info]</span> ops:    <span class="num">4892</span> → <span class="num">1247</span>  (fused 3645)',
+                    '<span class="info">[info]</span> tile:   M=<span class="num">128</span> N=<span class="num">128</span> K=<span class="num">32</span> · multi-level',
+                    '<span class="ok">[ok]</span>   compile: <span class="num">12.3s</span> · 0 warnings'
+                ]
+            },
+            {
+                id: '02', name: 'serve · llama-3-70b',
+                lines: [
+                    '<span class="prompt">$</span><span class="val">vllm</span> serve llama-3-70b --tp 8 --kv-cache-dtype fp8',
+                    '<span class="info">[info]</span> paged kv-cache: <span class="num">4096</span> blocks × 16',
+                    '<span class="info">[info]</span> continuous batching: max-num-seqs <span class="num">256</span>',
+                    '<span class="info">[info]</span> speculative: eagle-7b · accept rate <span class="num">78%</span>',
+                    '<span class="ok">[ok]</span>   ready: <span class="num">78.2</span> tok/s · MFU <span class="num">52%</span>'
+                ]
+            },
+            {
+                id: '03', name: 'launch · 10k-card cluster',
+                lines: [
+                    '<span class="prompt">$</span><span class="val">launch</span> cluster --nodes 1250 --cards 10000',
+                    '<span class="info">[info]</span> topology: 8 cards/node · HCCL ring',
+                    '<span class="info">[info]</span> parallelism: TP=<span class="num">8</span> · PP=<span class="num">16</span> · DP=<span class="num">78</span>',
+                    '<span class="info">[info]</span> checkpoint resume @ step <span class="num">142000</span>',
+                    '<span class="ok">[ok]</span>   train: <span class="num">0.94</span> s/iter · MFU <span class="num">51%</span>'
+                ]
+            },
+            {
+                id: '04', name: 'profile · nsys / ncu',
+                lines: [
+                    '<span class="prompt">$</span><span class="val">nsys</span> profile ./decode --bench --duration 30s',
+                    '<span class="info">[info]</span> kernel  flash_attn_v3      <span class="num">192</span> TFLOPS',
+                    '<span class="info">[info]</span> kernel  fused_rmsnorm      <span class="num">89%</span> peak BW',
+                    '<span class="info">[info]</span> overlap allreduce/compute  <span class="num">92%</span>',
+                    '<span class="ok">[ok]</span>   trace saved → profile.qdrep'
+                ]
+            },
+            {
+                id: '05', name: 'agent · mcp tools',
+                lines: [
+                    '<span class="prompt">$</span><span class="val">agent</span> run --planner react --tools mcp://*',
+                    '<span class="info">[info]</span> tools registered: <span class="num">14</span> (read · write · exec)',
+                    '<span class="info">[info]</span> step 1: plan → search → read → patch',
+                    '<span class="info">[info]</span> step 2: verify → <span class="num">3</span>/<span class="num">3</span> tests passing',
+                    '<span class="ok">[ok]</span>   task complete: <span class="num">42</span> tool calls · <span class="num">8.1s</span>'
+                ]
+            }
+        ];
+
+        var sceneIdx = 0;
+        var hovered = false;
+        var stopped = false;
+        var container = body.parentElement;
+
+        container.addEventListener('mouseenter', function () { hovered = true;  });
+        container.addEventListener('mouseleave', function () { hovered = false; });
+        document.addEventListener('visibilitychange', function () { stopped = document.hidden; });
+
+        function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+        function setSceneLabel(s) { sceneIdText.textContent = s.id + ' · ' + s.name; }
+
+        async function playScene(s) {
+            setSceneLabel(s);
+            body.classList.remove('fading');
+            body.innerHTML = '';
+            for (var i = 0; i < s.lines.length; i++) {
+                if (stopped) await waitUntilVisible();
+                var div = document.createElement('div');
+                div.className = 'logline';
+                div.innerHTML = s.lines[i];
+                body.appendChild(div);
+                /* eslint-disable no-loop-func */
+                await new Promise(function (r) { requestAnimationFrame(function () { r(); }); });
+                /* eslint-enable */
+                div.classList.add('in');
+                await wait(prefersReduced ? 0 : 360);
+            }
+            var caret = document.createElement('span');
+            caret.className = 'caret';
+            body.appendChild(caret);
+
+            /* Hold the finished scene long enough to read */
+            var holdMs = prefersReduced ? 6500 : 3200;
+            var elapsed = 0;
+            while (elapsed < holdMs) {
+                await wait(150);
+                elapsed += hovered ? 0 : 150;
+            }
+
+            if (!prefersReduced) {
+                body.classList.add('fading');
+                await wait(460);
+            }
+        }
+
+        function waitUntilVisible() {
+            return new Promise(function (resolve) {
+                var iv = setInterval(function () {
+                    if (!document.hidden) { clearInterval(iv); resolve(); }
+                }, 250);
+            });
+        }
+
+        (async function loop() {
+            /* eslint-disable no-constant-condition */
+            while (true) {
+                if (stopped) { await waitUntilVisible(); continue; }
+                await playScene(scenes[sceneIdx]);
+                sceneIdx = (sceneIdx + 1) % scenes.length;
+            }
+            /* eslint-enable */
+        })();
+    })();
+
+        if (openBtn) openBtn.addEventListener('click', openModal);
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', function (e) {
