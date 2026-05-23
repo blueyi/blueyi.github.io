@@ -27,11 +27,13 @@ client-side using the Web Crypto API:
 Because AES-GCM authenticates the ciphertext, a wrong passphrase always
 fails decryption — there is no chance of returning garbage on a bad key.
 
-## Replacing the placeholder resume
+## Updating the encrypted resume
 
-> The repo currently ships a **placeholder** encrypted with passphrase `demo`.
-> You should replace it with your real resume + a real passphrase before
-> sharing the site link with anyone.
+> `assets/resume.enc.json` is the live encrypted resume. It can only be
+> decrypted with the passphrase the site owner shares out-of-band. To
+> rotate the passphrase or update the resume content, repeat the steps
+> below — every encryption uses a fresh random salt + IV, so the new
+> blob fully replaces the old one.
 
 ### Recommended path (plaintext never leaves your machine)
 
@@ -58,17 +60,15 @@ fails decryption — there is no chance of returning garbage on a bad key.
 
 ### Alternative path (CLI, requires Node ≥ 18)
 
-If you'd rather encrypt from a terminal, you can repurpose
-`tools/_encrypt_placeholder.mjs`:
+For an inline one-liner (reads markdown from any file, writes the encrypted
+JSON to any path), see the *Updating the resume (CLI / Node ≥ 18)* section
+in the top-level [`README.md`](../README.md). Be careful with shell history
+if your passphrase is sensitive — prefer reading the passphrase from a file
+or a password manager into a shell variable rather than pasting it inline.
 
-```bash
-RESUME_PASS="your strong passphrase" \
-  node tools/_encrypt_placeholder.mjs ./assets/resume.enc.json
-```
-
-Note: this script embeds the placeholder text. To encrypt your real resume,
-edit the `PLAINTEXT` constant first (or write a tiny variant that reads from
-a file). Be careful with shell history if your passphrase is sensitive.
+`tools/_encrypt_placeholder.mjs` is kept as a reference for regenerating a
+demo / placeholder blob (it embeds a hard-coded placeholder text). It is
+not used at runtime by the site.
 
 ## Security notes
 
