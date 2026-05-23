@@ -380,6 +380,48 @@
             max-width: 740px;
         }
         .section-header .sub .zh { color: var(--fg); }
+        .guide-ref {
+            margin-top: 16px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.025);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 11.5px;
+            color: var(--fg-dim);
+            letter-spacing: 0.04em;
+        }
+        .guide-ref .tag {
+            color: var(--accent-3);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 10.5px;
+        }
+        .guide-ref a {
+            color: var(--fg);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--border);
+            transition: color 0.2s ease, border-color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .guide-ref a:hover {
+            color: var(--accent-2);
+            border-color: var(--accent-2);
+        }
+        .guide-ref a .arrow { color: var(--accent-2); }
+        .guide-ref .layers {
+            color: var(--fg-mute);
+            margin-left: 4px;
+        }
+        @media (max-width: 520px) {
+            .guide-ref .layers { display: none; }
+        }
 
         /* Full-stack journey pipeline */
         .journey {
@@ -1002,6 +1044,14 @@
                 AI Infra · LLM Serving · Agent Systems · GPU / NPU Performance.
                 <span class="zh">From low-level GPU / NPU performance to LLM serving and agent systems — closing the full-stack large-model &amp; AI Infra loop, one release at a time.</span>
             </p>
+            <p class="guide-ref">
+                <span class="tag">mapped to</span>
+                <a href="http://notes.maxwi.com/2025/02/19/ai/ai-infra-fullstack-learning-guide/" target="_blank" rel="noopener">
+                    AI Infra full-stack learning guide
+                    <span class="arrow" aria-hidden="true">↗</span>
+                </a>
+                <span class="layers" aria-hidden="true">L0 · L1 · L2 · L3 · L4 · L5 · L6 + 3 pillars</span>
+            </p>
         </header>
 
         <!-- Full-stack journey pipeline -->
@@ -1085,84 +1135,107 @@
             <div class="stack-group" data-color="purple">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">01</span>AI Compilers &amp; IR · core</h3>
+                    <h3><span class="idx">P1</span>AI Compilers &amp; IR · core</h3>
                 </div>
                 <ul class="chips">
                     <li style="--i:0">LLVM</li>
                     <li style="--i:1">MLIR</li>
                     <li style="--i:2">TVM</li>
                     <li style="--i:3">Triton</li>
-                    <li style="--i:4">Halide</li>
-                    <li style="--i:5">AscendNPU&nbsp;IR</li>
-                    <li style="--i:6">Bisheng</li>
-                    <li style="--i:7">Multi-level&nbsp;Tiling</li>
-                    <li style="--i:8">Auto-tuning</li>
-                    <li style="--i:9">Dynamic&nbsp;Shape</li>
-                    <li style="--i:10" class="expand">XLA</li>
-                    <li style="--i:11" class="expand">IREE</li>
+                    <li style="--i:4">torch.compile</li>
+                    <li style="--i:5">Halide</li>
+                    <li style="--i:6">AscendNPU&nbsp;IR</li>
+                    <li style="--i:7">Bisheng</li>
+                    <li style="--i:8">Multi-level&nbsp;Tiling</li>
+                    <li style="--i:9">Auto-tuning</li>
+                    <li style="--i:10">Dynamic&nbsp;Shape</li>
+                    <li style="--i:11" class="expand">XLA</li>
+                    <li style="--i:12" class="expand">IREE</li>
                 </ul>
             </div>
 
             <div class="stack-group" data-color="cyan">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">02</span>GPU / NPU Kernels · core</h3>
+                    <h3><span class="idx">P2</span>GPU / NPU Kernels · core</h3>
                 </div>
                 <ul class="chips">
                     <li style="--i:0">CUDA</li>
                     <li style="--i:1">CUTLASS</li>
-                    <li style="--i:2">FlashAttention</li>
-                    <li style="--i:3">GEMM</li>
-                    <li style="--i:4">Fused&nbsp;Norm</li>
-                    <li style="--i:5">Fused&nbsp;Softmax</li>
-                    <li style="--i:6">Attention&nbsp;Variants</li>
-                    <li style="--i:7">DaVinci&nbsp;Operators</li>
-                    <li style="--i:8">Stencil&nbsp;CUDA</li>
-                    <li style="--i:9" class="expand">FlashAttention-3</li>
-                </ul>
-            </div>
-
-            <div class="stack-group" data-color="pink">
-                <div class="head">
-                    <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">03</span>LLM Serving · core</h3>
-                </div>
-                <ul class="chips">
-                    <li style="--i:0">vLLM</li>
-                    <li style="--i:1">SGLang</li>
-                    <li style="--i:2">TensorRT-LLM</li>
-                    <li style="--i:3">Continuous&nbsp;Batching</li>
-                    <li style="--i:4">Paged&nbsp;KV&nbsp;Cache</li>
-                    <li style="--i:5">Speculative&nbsp;Decoding</li>
-                    <li style="--i:6">FP8 / INT4</li>
-                    <li style="--i:7">Operator&nbsp;Fusion</li>
-                    <li style="--i:8" class="expand">Disaggregated&nbsp;Serving</li>
-                    <li style="--i:9" class="expand">Multi-modal&nbsp;Inference</li>
+                    <li style="--i:2">cuDNN</li>
+                    <li style="--i:3">FlashAttention</li>
+                    <li style="--i:4">GEMM</li>
+                    <li style="--i:5">Fused&nbsp;Norm</li>
+                    <li style="--i:6">Fused&nbsp;Softmax</li>
+                    <li style="--i:7">Attention&nbsp;Variants</li>
+                    <li style="--i:8">DaVinci&nbsp;Operators</li>
+                    <li style="--i:9">Stencil&nbsp;CUDA</li>
+                    <li style="--i:10" class="expand">FlashAttention-3</li>
                 </ul>
             </div>
 
             <div class="stack-group" data-color="amber">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">04</span>Distributed Training · expanding</h3>
+                    <h3><span class="idx">L3</span>Distributed Training · expanding</h3>
                 </div>
                 <ul class="chips">
                     <li style="--i:0">PyTorch</li>
                     <li style="--i:1">NCCL · HCCL</li>
                     <li style="--i:2" class="expand">Megatron-LM</li>
                     <li style="--i:3" class="expand">DeepSpeed</li>
-                    <li style="--i:4" class="expand">ZeRO / FSDP</li>
+                    <li style="--i:4" class="expand">FSDP / ZeRO</li>
                     <li style="--i:5" class="expand">TP / PP / DP</li>
-                    <li style="--i:6" class="expand">EP / SP</li>
+                    <li style="--i:6" class="expand">CP / EP / SP</li>
                     <li style="--i:7" class="expand">LoRA / QLoRA</li>
                     <li style="--i:8" class="expand">RLHF / DPO</li>
+                </ul>
+            </div>
+
+            <div class="stack-group" data-color="pink">
+                <div class="head">
+                    <span class="marker" aria-hidden="true"></span>
+                    <h3><span class="idx">L4</span>LLM Serving · core</h3>
+                </div>
+                <ul class="chips">
+                    <li style="--i:0">vLLM</li>
+                    <li style="--i:1">SGLang</li>
+                    <li style="--i:2">TensorRT-LLM</li>
+                    <li style="--i:3">Triton&nbsp;Inference&nbsp;Server</li>
+                    <li style="--i:4">TGI</li>
+                    <li style="--i:5">Continuous&nbsp;Batching</li>
+                    <li style="--i:6">Paged&nbsp;KV&nbsp;Cache</li>
+                    <li style="--i:7">Speculative&nbsp;Decoding</li>
+                    <li style="--i:8">FP8 / INT4</li>
+                    <li style="--i:9">Operator&nbsp;Fusion</li>
+                    <li style="--i:10" class="expand">Disaggregated&nbsp;Serving</li>
+                    <li style="--i:11" class="expand">Multi-modal&nbsp;Inference</li>
                 </ul>
             </div>
 
             <div class="stack-group" data-color="purple">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">05</span>Agent &amp; RAG · expanding</h3>
+                    <h3><span class="idx">L2</span>Data &amp; Vector · expanding</h3>
+                </div>
+                <ul class="chips">
+                    <li style="--i:0" class="expand">Spark</li>
+                    <li style="--i:1" class="expand">Delta&nbsp;Lake</li>
+                    <li style="--i:2" class="expand">Iceberg</li>
+                    <li style="--i:3" class="expand">dbt</li>
+                    <li style="--i:4" class="expand">DVC</li>
+                    <li style="--i:5" class="expand">Feast</li>
+                    <li style="--i:6" class="expand">Qdrant</li>
+                    <li style="--i:7" class="expand">Milvus</li>
+                    <li style="--i:8" class="expand">pgvector</li>
+                    <li style="--i:9" class="expand">Hybrid&nbsp;Retrieval</li>
+                </ul>
+            </div>
+
+            <div class="stack-group" data-color="pink">
+                <div class="head">
+                    <span class="marker" aria-hidden="true"></span>
+                    <h3><span class="idx">L6</span>Agent &amp; RAG · expanding</h3>
                 </div>
                 <ul class="chips">
                     <li style="--i:0">MCP</li>
@@ -1171,28 +1244,35 @@
                     <li style="--i:3">LangGraph</li>
                     <li style="--i:4">Planner / ReAct</li>
                     <li style="--i:5">RAG</li>
-                    <li style="--i:6" class="expand">Vector&nbsp;DB</li>
-                    <li style="--i:7" class="expand">Reranker</li>
+                    <li style="--i:6" class="expand">Reranker</li>
+                    <li style="--i:7" class="expand">RAGAS</li>
                     <li style="--i:8" class="expand">Agent&nbsp;Eval</li>
+                    <li style="--i:9" class="expand">FastAPI</li>
                 </ul>
             </div>
 
             <div class="stack-group" data-color="cyan">
                 <div class="head">
                     <span class="marker" aria-hidden="true"></span>
-                    <h3><span class="idx">06</span>Systems &amp; Hardware</h3>
+                    <h3><span class="idx">L1 · L5</span>Compute · MLOps · Observability</h3>
                 </div>
                 <ul class="chips">
-                    <li style="--i:0">C++</li>
-                    <li style="--i:1">Python</li>
-                    <li style="--i:2">Linux</li>
-                    <li style="--i:3">Docker · K8s</li>
-                    <li style="--i:4">Nsight&nbsp;Systems</li>
-                    <li style="--i:5">Nsight&nbsp;Compute</li>
-                    <li style="--i:6">perf</li>
-                    <li style="--i:7">NVLink / HBM</li>
-                    <li style="--i:8" class="expand">Go</li>
-                    <li style="--i:9" class="expand">Rust</li>
+                    <li style="--i:0">Linux</li>
+                    <li style="--i:1">C++</li>
+                    <li style="--i:2">Python</li>
+                    <li style="--i:3">Docker</li>
+                    <li style="--i:4">Kubernetes</li>
+                    <li style="--i:5">NVLink / HBM</li>
+                    <li style="--i:6">Nsight&nbsp;Systems</li>
+                    <li style="--i:7">Nsight&nbsp;Compute</li>
+                    <li style="--i:8">perf</li>
+                    <li style="--i:9" class="expand">Ray</li>
+                    <li style="--i:10" class="expand">KubeFlow</li>
+                    <li style="--i:11" class="expand">Slurm</li>
+                    <li style="--i:12" class="expand">MLflow</li>
+                    <li style="--i:13" class="expand">Prometheus</li>
+                    <li style="--i:14" class="expand">Grafana</li>
+                    <li style="--i:15" class="expand">Kubecost</li>
                 </ul>
             </div>
         </div>
