@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.1">
 <title data-rh="true">极致算子实战案例 (SOTA Kernel) | AI Infra 全栈从入门到精通</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://blueyi.github.io/ai-infra/L2-data-operators-compilers/sota-kernel-flashattention-moe"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="极致算子实战案例 (SOTA Kernel) | AI Infra 全栈从入门到精通"><meta data-rh="true" name="description" content="拆解 FlashAttention 家族（FA-1/2/3）的 tiling + online softmax + 重计算三板斧，量化与 MoE 内核工程，并用 Triton 手写简化 FlashAttention 与 PyTorch SDPA 对数值、对速度。"><meta data-rh="true" property="og:description" content="拆解 FlashAttention 家族（FA-1/2/3）的 tiling + online softmax + 重计算三板斧，量化与 MoE 内核工程，并用 Triton 手写简化 FlashAttention 与 PyTorch SDPA 对数值、对速度。"><link data-rh="true" rel="icon" href="/ai-infra/img/logo.svg"><link data-rh="true" rel="canonical" href="https://blueyi.github.io/ai-infra/L2-data-operators-compilers/sota-kernel-flashattention-moe"><link data-rh="true" rel="alternate" href="https://blueyi.github.io/ai-infra/L2-data-operators-compilers/sota-kernel-flashattention-moe" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://blueyi.github.io/ai-infra/L2-data-operators-compilers/sota-kernel-flashattention-moe" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"L2.5 SOTA Kernel","item":"https://blueyi.github.io/ai-infra/L2-data-operators-compilers/sota-kernel-flashattention-moe"}]}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous"><link rel="stylesheet" href="/ai-infra/assets/css/styles.7fa5c0ef.css">
-<script src="/ai-infra/assets/js/runtime~main.dc113299.js" defer="defer"></script>
+<script src="/ai-infra/assets/js/runtime~main.aacc1fa5.js" defer="defer"></script>
 <script src="/ai-infra/assets/js/main.86d25ead.js" defer="defer"></script>
 </head>
 <body>
@@ -38,7 +38,7 @@
 <p>理解 FlashAttention，必须先理解 GPU 的<strong>存储金字塔</strong>：SRAM 极快但极小（A100 每 SM 约 192KB），HBM 大但慢一个数量级。标准注意力的罪过，是把一张本可以「算完即弃」的 N×N 矩阵，硬生生在这两层之间来回搬。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="21-标准注意力-vs-flashattention-的数据流对比">2.1 标准注意力 vs FlashAttention 的数据流对比<a href="#21-标准注意力-vs-flashattention-的数据流对比" class="hash-link" aria-label="2.1 标准注意力 vs FlashAttention 的数据流对比  的直接链接" title="2.1 标准注意力 vs FlashAttention 的数据流对比的直接链接" translate="no">​</a></h3>
 <!-- -->
-<p><strong>读这张图的关键</strong>：左侧标准路径把 <code>N×N</code> 的 <code>S</code> 和 <code>P</code> 反复写读 HBM——这是 <code>O(N²)</code> 的访存；右侧 FlashAttention 把 Q/K/V 切块搬进 SRAM，在片上把一个行块对应的全部列块算完，<strong>只把最终的 <code>O</code>（N×d）和归一化用的 logsumefxp（N）写回 HBM</strong>，访存降到 <code>O(N)</code>。两者数学结果完全一致。</p>
+<p><strong>读这张图的关键</strong>：左侧标准路径把 <code>N×N</code> 的 <code>S</code> 和 <code>P</code> 反复写读 HBM——这是 <code>O(N²)</code> 的访存；右侧 FlashAttention 把 Q/K/V 切块搬进 SRAM，在片上把一个行块对应的全部列块算完，<strong>只把最终的 <code>O</code>（N×d）和归一化用的 logsumexp（N）写回 HBM</strong>，访存降到 <code>O(N)</code>。两者数学结果完全一致。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="22-online-softmax为什么能不物化整行就归一化">2.2 online softmax：为什么能不物化整行就归一化<a href="#22-online-softmax为什么能不物化整行就归一化" class="hash-link" aria-label="2.2 online softmax：为什么能不物化整行就归一化的直接链接" title="2.2 online softmax：为什么能不物化整行就归一化的直接链接" translate="no">​</a></h3>
 <p>标准 softmax 需要看到一整行的所有分数才能算分母（求 max 防溢出、再求 exp 之和）。FlashAttention 一次只看一个列块，靠<strong>增量更新</strong>做到等价：</p>
 <ul>
@@ -48,7 +48,7 @@
 <li class="">累加本块贡献，更新 <code>ℓ</code> 与 <code>O</code>。</li>
 <li class="">全部列块处理完，<code>O / ℓ</code> 即为该行块的最终注意力输出。</li>
 </ul>
-<p>这套 running max / running sum 递推，就是 FlashAttention 不物化 N×N 的数学地基。</p>
+<p>这套 running max / running sum 递推，就是 FlashAttention 不物化 N×N  的数学地基。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="23-重计算recomputation用算力换显存">2.3 重计算（recomputation）：用算力换显存<a href="#23-重计算recomputation用算力换显存" class="hash-link" aria-label="2.3 重计算（recomputation）：用算力换显存的直接链接" title="2.3 重计算（recomputation）：用算力换显存的直接链接" translate="no">​</a></h3>
 <p>反向传播原本需要前向存下的 <code>N×N</code> 概率矩阵 <code>P</code>——又是 <code>O(N²)</code> 显存。FlashAttention 选择<strong>不存 P，反向时用前向存下的 <code>O(N)</code> 的 logsumexp 重新算 P</strong>。这是经典的<strong>算力换显存</strong>：多花一点 FLOPs 重算，省掉 <code>O(N²)</code> 的激活显存，使长序列训练成为可能。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="24-fa-1--fa-2--fa-3-的演进对照">2.4 FA-1 → FA-2 → FA-3 的演进对照<a href="#24-fa-1--fa-2--fa-3-的演进对照" class="hash-link" aria-label="2.4 FA-1 → FA-2 → FA-3 的演进对照的直接链接" title="2.4 FA-1 → FA-2 → FA-3 的演进对照的直接链接" translate="no">​</a></h3>
