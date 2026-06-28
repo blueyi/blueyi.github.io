@@ -112,7 +112,9 @@ def build_manifest(channel: str, spec: dict):
                 "week": week,
                 "html": f"weeks/{week}.html" if html_exists else None,
                 "data": f"data/{week}.json",
+                "title_date": (doc.get("curated") or {}).get("title_date", week),
                 "window": (doc.get("curated") or {}).get("window", (doc.get("raw") or {}).get("window")),
+                "highlight": ((doc.get("curated") or {}).get("highlights") or [None])[0],
                 "published": html_exists,
             }
             for (week, doc, html_exists) in weeks

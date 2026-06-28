@@ -285,6 +285,23 @@
         .link:hover::after { opacity: 1; }
         .link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+        /* Weekly Feeds — 独占一行的宽卡片，含两个频道的最新一期 */
+        .link.feeds-wide { grid-column: 1 / -1; align-items: stretch; flex-wrap: wrap; }
+        .feeds-wide .feeds-body { display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto; min-width: 0; }
+        .feeds-wide .feeds-head { display: flex; align-items: center; gap: 10px; }
+        .feeds-wide .feeds-chans { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        @media (max-width: 560px) { .feeds-wide .feeds-chans { grid-template-columns: 1fr; } }
+        .feeds-chan {
+            display: block; padding: 10px 12px; border-radius: 10px;
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+            text-decoration: none; color: var(--fg);
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+        .feeds-chan:hover { background: var(--card-hover); border-color: var(--accent); }
+        .feeds-chan .fc-name { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        .feeds-chan .fc-latest { font-size: 12px; color: var(--muted, #8b949e); margin-top: 3px; line-height: 1.45; }
+        .feeds-wide .feeds-foot { font-size: 12px; color: var(--muted, #8b949e); }
+
         .link .icon {
             display: grid;
             place-items: center;
@@ -999,19 +1016,6 @@
                 </span>
             </a>
 
-            <a class="link" href="https://yulong.wang/feeds/" target="_blank" rel="noopener">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
-                </span>
-                <span class="meta">
-                    <span class="label">Weekly Feeds</span>
-                    <span class="sub">yulong.wang/feeds · AI Infra / 具身智能 每周资讯</span>
-                </span>
-                <span class="arrow" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
-                </span>
-            </a>
-
             <a class="link" href="https://github.com/blueyi" target="_blank" rel="noopener">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.35-1.3-1.71-1.3-1.71-1.07-.73.08-.72.08-.72 1.18.08 1.81 1.21 1.81 1.21 1.05 1.81 2.76 1.29 3.43.99.11-.77.41-1.29.75-1.59-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
@@ -1050,6 +1054,30 @@
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
                 </span>
             </button>
+
+            <div class="link feeds-wide" id="feeds-card">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+                </span>
+                <span class="feeds-body">
+                    <span class="feeds-head">
+                        <span class="meta">
+                            <a class="label" href="https://yulong.wang/feeds/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">Weekly Feeds</a>
+                            <span class="sub">每周资讯 · 数据源 HN / arXiv / 产业媒体 / 行情</span>
+                        </span>
+                    </span>
+                    <span class="feeds-chans">
+                        <a class="feeds-chan" href="https://yulong.wang/feeds/ai-infra/" target="_blank" rel="noopener" data-feeds-channel="ai-infra">
+                            <span class="fc-name">📡 AI Infra 每周资讯</span>
+                            <span class="fc-latest" data-feeds-latest>查看最新一期 →</span>
+                        </a>
+                        <a class="feeds-chan" href="https://yulong.wang/feeds/embodied-ai/" target="_blank" rel="noopener" data-feeds-channel="embodied-ai">
+                            <span class="fc-name">🤖 具身智能每周资讯</span>
+                            <span class="fc-latest" data-feeds-latest>查看最新一期 →</span>
+                        </a>
+                    </span>
+                </span>
+            </div>
         </nav>
 
         <a class="scroll-cue" href="#stack" aria-label="Scroll to stack and highlights">
@@ -1375,6 +1403,33 @@
     'use strict';
     var y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
+
+    /* ---------------- Weekly Feeds: 动态填充各频道最新一期 ---------------- */
+    (function () {
+        var card = document.getElementById('feeds-card');
+        if (!card) return;
+        var chans = card.querySelectorAll('[data-feeds-channel]');
+        Array.prototype.forEach.call(chans, function (el) {
+            var ch = el.getAttribute('data-feeds-channel');
+            var slot = el.querySelector('[data-feeds-latest]');
+            if (!slot) return;
+            fetch('/feeds/' + ch + '/manifest.json', { cache: 'no-cache' })
+                .then(function (r) { return r.ok ? r.json() : null; })
+                .then(function (m) {
+                    if (!m || !m.weeks) return;
+                    var pub = m.weeks.filter(function (w) { return w.published; });
+                    if (!pub.length) return;
+                    var w = pub[0];
+                    var label = (w.title_date || w.week || '').replace(/（.*$/, '').trim();
+                    var hl = w.highlight ? (' · ' + w.highlight) : '';
+                    var txt = '最新 ' + label + hl;
+                    if (txt.length > 64) txt = txt.slice(0, 63) + '…';
+                    slot.textContent = txt;
+                    if (w.html) el.setAttribute('href', '/feeds/' + ch + '/' + w.html);
+                })
+                .catch(function () { /* 降级：保留静态“查看最新一期 →” */ });
+        });
+    })();
 
     /* ---------------- Schedule-aware status pill (HKT) ---------------- */
     (function () {
