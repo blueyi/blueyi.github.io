@@ -22,16 +22,20 @@
     <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27375v1" target="_blank" rel="noopener">ABC：完全开源的行为克隆操作栈 + 13 万条遥操作数据集</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">提出 ABC 开源操作栈，核心是 ABC-130K——迄今最大开源遥操作数据集，含 3500 小时、超 13 万 episode。为 VLA/模仿学习提供了稀缺的大规模开放数据基座。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27375v1" target="_blank" rel="noopener">ABC：完全开源行为克隆操作栈 + 13 万条遥操作数据集</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">提出 ABC 全开源操作栈，核心是 ABC-130K——迄今最大开源遥操作数据集，含 3500 小时、超 13 万 episode、195 项任务，并开源硬件、训练与仿真流水线，为 VLA/模仿学习提供稀缺的大规模开放数据基座。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27355v1" target="_blank" rel="noopener">RouterVLA：把 smoke test 变成异构 VLA 选择的监督信号</a></div>
-      <div class="it-sum">机器人团队部署前常对候选 VLA 策略做 smoke test，RouterVLA 复用这些评估 rollout 来监督策略选择，把一次性测试数据转化为可学习的路由信号。</div>
+      <div class="it-sum">机器人团队部署前常对候选 VLA 策略做 smoke test，RouterVLA 用 outcome-disjoint 交叉拟合复用这些 rollout 为每个冻结专家建档，将一次性测试数据转化为可学习的策略路由信号。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27295v1" target="_blank" rel="noopener">LA4VLA：用语言-动作预训练实现「不看也能动」</a></div>
-      <div class="it-sum">指出 VLA 预训练中密集视觉-动作监督会压制语言-动作关联，提出语言-动作预训练路线，提升指令泛化能力。</div>
+      <div class="it-sum">指出 VLA 预训练中密集视觉-动作监督会压制稀疏的语言-动作信号、导致策略依赖视觉捷径，提出语言-动作预训练路线，强化指令对动作执行的条件作用与泛化能力。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27348v1" target="_blank" rel="noopener">敏捷飞行 RL：兼顾性能与泛化的无人机竞速控制</a></div>
+      <div class="it-sum">自主无人机竞速需在持续执行器饱和下做时间最优控制；现有 RL 策略在未见配置下常立即坠机。该工作弥合性能与泛化的差距，提升策略跨环境鲁棒性。</div>
     </li>
     </ul>
   </section>
@@ -40,7 +44,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27344v1" target="_blank" rel="noopener">VibeAct：用振动信号驱动接触丰富的反应式灵巧操作</a></div>
-      <div class="it-sum">灵巧操作依赖快速、局部且常被视觉遮挡的接触事件。VibeAct 用压电麦克风采集振动-声学信号作为高带宽接触感知，弥补纯视觉在 contact-rich 任务中的不足。</div>
+      <div class="it-sum">灵巧操作依赖快速、局部且常被视觉遮挡的接触事件。VibeAct 用压电麦克风采集高带宽振动-声学信号作接触感知，并桥接真实与仿真振动以支持端到端 sim-to-real 灵巧手策略学习。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/06/26/abb-robotics-and-psyonic-use-human-generated-data-to-advance-robotic-dexterity/102851/" target="_blank" rel="noopener">ABB 与 Psyonic 用人类操作数据推进机器人灵巧抓取</a></div>
+      <div class="it-sum">ABB Robotics 携手仿生公司 Psyonic，用人类真实操作数据提升机器人抓取与灵巧度，称改进的手部操作可将工程时间缩短最多 30%。以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/06/26/flexiv-launches-new-adaptive-robots-for-industrial-automation/102857/" target="_blank" rel="noopener">Flexiv 发布面向工业自动化的新「自适应机器人」</a></div>
+      <div class="it-sum">Flexiv 推出 Enlight 机械臂与 Mico 双臂平台，主打更强触觉感知与力控的物理 AI 能力，定位力控机器人的进一步突破。以官方渠道核验。</div>
     </li>
     </ul>
   </section>
@@ -49,7 +61,7 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27353v1" target="_blank" rel="noopener">基于变分神经动力学的持续机器人策略学习</a></div>
-      <div class="it-sum">真实部署中动力学持续变化（风、负载、电量、接触、磨损），而多数控制器只训练一次。该工作用变分神经动力学做持续策略学习，提升对动力学漂移的适应性。</div>
+      <div class="it-sum">真实部署中动力学持续漂移（风、负载、电量、接触、磨损），而多数控制器只训练一次。该工作用变分神经动力学做持续策略学习，让机器人利用部署经验持续提升任务表现。</div>
     </li>
     </ul>
   </section>
@@ -57,12 +69,12 @@
     <h2>4️⃣ 具身模型（世界模型 / 人形策略 / 基础模型）</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27326v1" target="_blank" rel="noopener">世界模型的幻觉是可预测、可预防的</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">生成式世界模型 rollout 视觉流畅却常偏离真实动力学（幻觉）。该工作提出幻觉可预测并给出预防方法，对依赖世界模型做规划/想象的具身系统很关键。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27374v1" target="_blank" rel="noopener">世界动作模型 + 循环生成式回放实现持续模仿学习（REGEN）</a></div>
+      <div class="it-sum">世界动作模型（WAM）不仅预测动作还能生成未来视觉观测。REGEN 基于此合成伪回放轨迹，让机器人策略在不存储原始人类演示的情况下复习旧任务，缓解持续模仿学习的灾难性遗忘。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27374v1" target="_blank" rel="noopener">World Action Models + 循环生成回放实现持续模仿学习</a></div>
-      <div class="it-sum">WAM 不仅预测动作还能生成未来视觉观测；REGEN 利用这一生成能力做循环生成回放，实现抗遗忘的持续模仿学习。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27326v1" target="_blank" rel="noopener">世界模型的幻觉是可预测、可预防的</a></div>
+      <div class="it-sum">生成式世界模型 rollout 常视觉流畅却偏离真实动力学。研究发现幻觉集中于状态-动作空间的低覆盖区，可用轻量数据中心信号同时检测并指导缓解。</div>
     </li>
     </ul>
   </section>
@@ -70,44 +82,69 @@
     <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27317v1" target="_blank" rel="noopener">OctoSense：多模态机器人感知的自监督开源传感平台</a></div>
-      <div class="it-sum">开源传感平台，集成立体 RGB+事件相机、LiDAR、热成像、IMU、RTK-GPS 及本体感知（CAN 总线），并用自监督学习融合多模态——为机器人边缘感知-计算栈提供硬件参考。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27317v1" target="_blank" rel="noopener">OctoSense：面向机器人多模态感知的自监督开源传感平台</a></div>
+      <div class="it-sum">开源传感平台集成立体 RGB+事件相机、LiDAR、热像、IMU、RTK-GPS 及本体感知，发布 59 小时跨环境时间同步驾驶数据，为机器人多模态板载感知提供开源软硬件基座。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/06/26/kawasaki-robotics-showcases-8-axis-physical-ai-robot-and-intelligent-automation-technologies-at-automate-2026/102869/" target="_blank" rel="noopener">Kawasaki 在 Automate 2026 展出 8 轴物理 AI 机器人</a></div>
+      <div class="it-sum">川崎机器人在芝加哥 Automate 2026 展示融合 AI、机器视觉与实时控制的自动化技术，新款 RL030N 8 自由度机型亮相，体现具身实时控制平台的产业进展。以官方渠道核验。</div>
     </li>
     </ul>
   </section>
   <section class="domain" id="manufacturing">
     <h2>6️⃣ 制造 / 产线</h2>
-    <div class="empty">本周该方向公开源未见重大动态。</div>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/06/26/the-small-component-problem-behind-more-reliable-industrial-robots/102832/" target="_blank" rel="noopener">更可靠工业机器人背后的「小元件」难题</a></div>
+      <div class="it-sum">在亚毫米精度、每分钟数百次循环的汽车装配或半导体封装产线上，机器视觉、远程 I/O 与微控制器的供电与小元件可靠性，成为整线稳定性的隐形瓶颈。以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/06/26/automation-is-leaving-the-factory-floor-and-moving-into-the-back-office/102822/" target="_blank" rel="noopener">自动化正走出工厂车间、进入后台办公室</a></div>
+      <div class="it-sum">数十年来自动化主战场在车间、仓库与产线；如今软件自动化正从物理产线扩展到后台业务流程，重塑「自动化」的边界。以官方渠道核验。</div>
+    </li>
+    </ul>
   </section>
   <section class="domain" id="market">
     <h2>7️⃣ 市场 / 产业</h2>
-    <div class="empty">本周该方向公开源未见重大动态。</div>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/video/inside-ces-2026s-physical-ai-takeover/" target="_blank" rel="noopener">CES 2026：物理 AI 全面接管展会</a></div>
+      <div class="it-sum">经历多年聊天机器人与图像生成后，AI 正走出屏幕。CES 2026 被「物理 AI」与机器人主导，从波士顿动力重新设计的 Atlas 人形机器人到 AI 制冰机皆是焦点。以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2025/12/11/1x-struck-a-deal-to-send-its-home-humanoids-to-factories-and-warehouses/" target="_blank" rel="noopener">1X 把「家用」人形机器人送进工厂与仓库</a></div>
+      <div class="it-sum">尽管定位为家用助手，1X 的 Neo 机器人据报达成协议进入工业场景，进军工厂与仓库用例。以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/china-humanoid-robot-marathon" target="_blank" rel="noopener">马拉松夺冠人形机器人背后的秘密</a></div>
+      <div class="it-sum">2026 年 4 月 19 日 Honor Lightning 人形机器人以 50 分 26 秒跑完半马，比人类世界纪录快 7 分钟、较 2025 年最佳机器人成绩快近 2 小时，IEEE Spectrum 揭其技术路线。以官方渠道核验。</div>
+    </li>
+    </ul>
   </section>
   <section class="domain industry" id="industry">
     <h2>📈 产业动态</h2>
     <h3 class="sub-h">上市公司风向</h3>
     <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
-      <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>379.71 USD</td><td class="down">-6.26%</td><td>Optimus 人形机器人量产路线核心标的</td></tr>
-      <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>404.7 USD</td><td class="up">+0.43%</td><td>手术机器人龙头；本周逆势收红</td></tr>
-      <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>41.24 USD</td><td class="up">+2.59%</td><td>仓储自动化机器人；周内上涨</td></tr>
-      <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>6.01 USD</td><td class="down">-11.62%</td><td>末端配送机器人；波动大</td></tr>
-      <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>10.53 USD</td><td class="up">+3.64%</td><td>RPA/自动化；周内上涨</td></tr>
-      <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>192.53 USD</td><td class="down">-7.73%</td><td>机器人算力（Jetson/Isaac）供给方</td></tr>
-      <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>96.0 HKD</td><td class="down">-10.7%</td><td>京东：物流仓储机器人规模化场景</td></tr>
+      <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>379.71 USD</td><td class="down">-6.26%</td><td>Optimus 人形；本周下挫</td></tr>
+      <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>404.7 USD</td><td class="up">+0.43%</td><td>手术机器人</td></tr>
+      <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>41.24 USD</td><td class="up">+2.59%</td><td>仓储机器人</td></tr>
+      <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>6.01 USD</td><td class="down">-11.62%</td><td>配送机器人；本周大跌</td></tr>
+      <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>192.53 USD</td><td class="down">-7.73%</td><td>机器人算力</td></tr>
+      <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>96.0 HKD</td><td class="down">-10.7%</td><td>京东物流机器人；本周大跌</td></tr>
     </tbody></table>
     <h3 class="sub-h">融资与独角兽</h3>
     <ul class="items">
-      <li><div class="it-title"><a href="https://techcrunch.com/" target="_blank" rel="noopener">1X 达成协议：将「家用」人形机器人送入工厂与仓库</a></div><div class="it-sum">1X 把原定家用场景的人形机器人转向工厂/仓库部署，是人形机器人商业化路径的重要信号（产业动态，建议以官方渠道核验）。</div></li>
-      <li><div class="it-title"><span class="badge amt">$20M</span><a href="https://roboticsandautomationnews.com/" target="_blank" rel="noopener">Limitless Labs 融资 2000 万美元，拓展 CNC 编程 AI 平台</a></div><div class="it-sum">面向 CNC 加工编程的 AI 平台获 2000 万美元融资，属制造/产线智能化方向的具身相关投资。</div></li>
-      <li><div class="it-title"><a href="https://roboticsandautomationnews.com/" target="_blank" rel="noopener">Flexiv 发布新一代「自适应机器人」用于工业自动化</a></div><div class="it-sum">Flexiv 推出新自适应机器人，强化力控与柔性装配能力，瞄准工业自动化产线。</div></li>
+      <li><div class="it-title"><span class="badge amt">$20M</span><a href="https://roboticsandautomationnews.com/2026/06/26/limitless-labs-raises-20-million-to-expand-ai-platform-for-cnc-programming-and-precision-manufacturing/102848/" target="_blank" rel="noopener">Limitless Labs 融资 2000 万美元扩张 CNC/精密制造物理 AI 平台</a></div><div class="it-sum">面向 CNC 编程与精密制造的 AI 软件公司 Limitless Labs 完成 2000 万美元 A 轮，由 Dell Technologies Capital 与 Square Peg 共同领投，加速物理 AI 平台在制造业落地。</div></li>
+      <li><div class="it-title"><a href="https://techcrunch.com/2025/12/18/pickle-robot-adds-tesla-veteran-as-first-cfo/" target="_blank" rel="noopener">Pickle Robot 引入特斯拉老将出任首任 CFO</a></div><div class="it-sum">卸货机器人公司 Pickle Robot 任命 Jeff Evanson 为首任 CFO，据报与 UPS 的合作进一步扩大。以官方渠道核验。</div></li>
+      <li><div class="it-title"><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-marketing-robotics-baseten/" target="_blank" rel="noopener">本周融资榜：AI 驱动又一轮巨额交易潮（含机器人）</a></div><div class="it-sum">Crunchbase 统计本周美国最大创业融资多集中于 AI，其次为生物科技，榜单亦涉及机器人方向。以官方渠道核验。</div></li>
     </ul>
   </section>
   <div class="highlights">
     <h2>🌟 本周亮点</h2>
     <ol>
-      <li>开源数据破局：ABC-130K 放出 3500 小时、13 万 episode 遥操作数据集，是本周对 VLA/模仿学习最有分量的开放基座。</li>
-      <li>世界模型可靠性：「世界模型幻觉可预测可预防」给出量化方法，直击生成式世界模型用于具身规划的核心痛点。</li>
-      <li>感知-接触新通道：VibeAct 用振动声学补足视觉遮挡下的灵巧操作；OctoSense 提供多模态机器人感知的开源硬件平台。</li>
+      <li>🔥 ABC-130K：迄今最大开源遥操作数据集（3500 小时 / 13 万 episode / 195 任务）+ 全开源操作栈，为 VLA 与模仿学习提供稀缺的大规模开放数据基座。</li>
+      <li>CES 2026「物理 AI」全面接管展会，叠加 Honor Lightning 人形机器人半马跑进 50 分 26 秒，具身硬件产业热度持续走高。</li>
+      <li>本周行情普遍承压：TSLA -6.26%、NVDA -7.73%、京东(9618.HK) -10.7%、Serve Robotics -11.62%，仅 Symbotic/UiPath/ISRG 小幅上涨。</li>
     </ol>
   </div>
   <div class="wk-nav">
