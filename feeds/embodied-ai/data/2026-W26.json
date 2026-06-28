@@ -1,0 +1,402 @@
+{
+  "channel": "embodied-ai",
+  "week": "2026-W26",
+  "raw": {
+    "channel": "embodied-ai",
+    "week": "2026-W26",
+    "generated_at": "2026-06-28T21:08:24.659536+08:00",
+    "window": {
+      "start": "2026-06-21",
+      "end": "2026-06-28"
+    },
+    "hn": [
+      {
+        "source": "hn",
+        "score": 94,
+        "title": "Hellishly Slow Level 13 Deflate Compression",
+        "url": "https://kirill.korins.ky/articles/hellishly-slow-level-13-deflate-compression/",
+        "hn_url": "https://news.ycombinator.com/item?id=48633839",
+        "domains": [
+          "embodied-chip"
+        ]
+      }
+    ],
+    "arxiv": [
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Scalable Behavior Cloning with Open Data, Training, and Evaluation",
+        "url": "http://arxiv.org/abs/2606.27375v1",
+        "abstract": "We introduce ABC, a fully open-source stack for manipulation with behavior cloning. At its core is ABC-130K: the largest open-source teleoperation dataset to date, featuring 3,500 hours of data spanning over 130K episodes across 195 diverse tasks. Furthermore, we open-source our accessible hardware setup, training infrastructure, and simulation pipeline. We also release 400 hours of sim-teleop dat",
+        "domains": [
+          "vla",
+          "dexterous",
+          "sim2real",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "World Action Models Enable Continual Imitation Learning with Recurrent Generative Replays",
+        "url": "http://arxiv.org/abs/2606.27374v1",
+        "abstract": "Going beyond predicting robot actions, World Action Models (WAMs) can also generate future visual observations. We build on this generative capability to propose Recurrent Generative Replay (REGEN), a continual imitation learning framework that synthesizes pseudo-replay trajectories, enabling a robot policy to rehearse previously learned tasks without storing their original human demonstrations. D",
+        "domains": [
+          "vla",
+          "dexterous",
+          "sim2real",
+          "embodied-model",
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "RouterVLA: Turning Smoke Tests into Supervision for Heterogeneous VLA Selection",
+        "url": "http://arxiv.org/abs/2606.27355v1",
+        "abstract": "We study whether pre-deployment evaluation rollouts can be reused to supervise policy selection. Robot teams routinely smoke test candidate vision-language-action (VLA) policies, then compress those trials into a global winner. RouterVLA evaluates this idea with outcome-disjoint cross-fitting: recorded probes build a profile for each frozen expert, and a separate trial scores the selected expert w",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Continual Robot Policy Learning via Variational Neural Dynamics",
+        "url": "http://arxiv.org/abs/2606.27353v1",
+        "abstract": "Robots deployed in the real world rarely operate under a single fixed dynamics model: wind changes, payloads vary, batteries drain, contacts shift, and hardware wears. Yet most learning-based controllers are trained once and deployed as if learning were complete. This prevents the robot from using deployment experience to further improve task performance. In this work, we propose a continual learn",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Bridging Performance and Generalization in Reinforcement Learning for Agile Flight",
+        "url": "http://arxiv.org/abs/2606.27348v1",
+        "abstract": "Autonomous drone racing is a fundamentally challenging regime for autonomous aerial robots, requiring time-optimal control while operating under persistent actuation saturation. While reinforcement learning (RL) has achieved human-level performance in this domain, current methods fail to generalize; policies trained on specific environments often crash immediately in unseen configurations. This fa",
+        "domains": [
+          "vla",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "VibeAct: Vibration to Actions for Contact-Rich Reactive Robot Dexterity",
+        "url": "http://arxiv.org/abs/2606.27344v1",
+        "abstract": "Dexterous manipulation depends on contact events that are fast, local, and often visually occluded. Piezoelectric microphones offer a compact and high-bandwidth way to sense these interactions, but the resulting vibro-acoustic signals are difficult to simulate faithfully enough for end-to-end sim-to-real policy learning on dexterous robot hands. We propose VibeAct, a framework that bridges real vi",
+        "domains": [
+          "dexterous",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Hallucination in World Models is Predictable and Preventable",
+        "url": "http://arxiv.org/abs/2606.27326v1",
+        "abstract": "Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics. We hypothesize that hallucination concentrates in low-coverage regions of the state-action space, where lightweight data-centric signals can both detect it and guide mitigation. To test this, we int",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "OctoSense: Self-Supervised Learning for Multimodal Robot Perception",
+        "url": "http://arxiv.org/abs/2606.27317v1",
+        "abstract": "We present OctoSense, an open-source sensor platform with stereo RGB and event cameras, LiDAR, a thermal camera, an inertial measurement unit, RTK-corrected global positioning system, and proprioception (CAN bus data from a car, and joint angles for a quadruped robot). The eponymous OctoSense dataset contains 59 hours of time-synchronized driving data across different types of environments at diff",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "LA4VLA: Learning to Act without Seeing via Language-Action Pretraining",
+        "url": "http://arxiv.org/abs/2606.27295v1",
+        "abstract": "Vision-Language-Action (VLA) models are commonly pretrained on robot demonstrations by jointly mapping visual observations and language instructions to actions. However, dense visual-action supervision can dominate the comparatively sparse language-action signal. As a result, policies may rely on visual shortcuts rather than learn how language conditions action execution, making them sensitive to ",
+        "domains": [
+          "vla",
+          "dexterous",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "BOWConnect: Parallel Bayesian Optimization over Windows with Learned Local Cost Maps for Sample-Efficient Kinodynamic Motion Planning",
+        "url": "http://arxiv.org/abs/2606.27292v1",
+        "abstract": "This paper presents BOWConnect, a bidirectional parallel kinodynamic motion planner that addresses three fundamental limitations of existing sampling-based methods: sample inefficiency in high-dimensional state spaces, unreliable cost heuristics under dynamic constraints, and poor performance in narrow passage environments. Unlike classical planners that rely on random control sampling and geometr",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "DanceOPD: On-Policy Generative Field Distillation",
+        "url": "http://arxiv.org/abs/2606.27377v1",
+        "abstract": "Modern image generation demands a single model that unifies diverse capabilities, including text-to-image (T2I), local editing, and global editing. However, these capabilities are rarely naturally aligned and often conflict. For instance, editing tends to degrade T2I performance, while global and local editing interfere with each other. Consequently, effectively composing these capabilities has be",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+        "url": "http://arxiv.org/abs/2606.27369v1",
+        "abstract": "Reinforcement learning with verifiable rewards (RLVR) for training LLMs typically rely on ground-truth answers to assign rewards, limiting their applicability to tasks where the ground-truth solution is unknown. We introduce a \\textbf{R}anking-\\textbf{i}nduced \\textbf{VER}ifiable framework (RiVER) that trains LLMs on score-based optimization tasks without ground-truth solutions, using deterministi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Autoregressive Boltzmann Generators",
+        "url": "http://arxiv.org/abs/2606.27361v1",
+        "abstract": "Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allow rapid generation of uncorrelated equilibrium samples by combining a generative model with exact likelihoods and an importance sampling correction. However, modern BGs predominantly rely on normalizi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+        "url": "http://arxiv.org/abs/2606.27359v1",
+        "abstract": "Many decoding methods for large language models can be understood as shifting probability mass toward outputs that are more likely under the model, either locally at the token level or globally at the sequence level. Therefore, their success depends on a fundamental question: when does sequence probability, that is, the conditional probability of a continuation given a prompt, actually align with ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Error-Conditioned Neural Solvers",
+        "url": "http://arxiv.org/abs/2606.27354v1",
+        "abstract": "Neural surrogate models offer fast approximate mappings from PDE parameters to solutions, but they typically treat solving as a purely statistical task: once trained, they struggle to correct their own constraint violations and extrapolate beyond the training distribution. Recent hybrid methods promote physical correctness by targeting the PDE residual via gradient descent or Gauss--Newton steps, ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching",
+        "url": "http://arxiv.org/abs/2606.27342v1",
+        "abstract": "Entity Matching (EM) is a core operation in the data integration pipeline, where records from different sources are compared to determine whether they refer to the same real-world entity. Recent work has incorporated domain information and low-resource learning techniques to better adapt EM systems to realistic settings. While these approaches have demonstrated strong performance, it remains uncle",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+        "url": "http://arxiv.org/abs/2606.27330v1",
+        "abstract": "Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task planning is essential for decomposing complex tasks into executable actions. While small open source MLLMs are cost efficient and privacy preserving compared with commercial large models, they suffer from weak planning and limited cross website generalization. To address these limitations, we introduce ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Hallucination in World Models is Predictable and Preventable",
+        "url": "http://arxiv.org/abs/2606.27326v1",
+        "abstract": "Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics. We hypothesize that hallucination concentrates in low-coverage regions of the state-action space, where lightweight data-centric signals can both detect it and guide mitigation. To test this, we int",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Beyond the Hard Budget: Sparsity Regularizers for More Interpretable Top-k Sparse Autoencoders",
+        "url": "http://arxiv.org/abs/2606.27321v1",
+        "abstract": "Sparse autoencoders (SAEs) have become a leading tool for interpreting the representations of vision foundation models, decomposing their polysemantic activations into a larger set of sparse, more monosemantic features. The Top-$k$ SAE, a now-standard variant, enforces sparsity architecturally through its activation function, retaining only the $k$ most active latents per input. Because it was des",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Blackwell Approachability and Gradient Equilibrium are Equivalent",
+        "url": "http://arxiv.org/abs/2606.27315v1",
+        "abstract": "Gradient equilibrium (GEQ) is a recently introduced online optimization framework that generalizes first-order stationarity from offline optimization and abstracts problems like online conformal prediction. While GEQ has curious similarities with known online learning frameworks, namely regret minimization, prior work has shown that GEQ error and regret are incomparable objectives, leaving open a ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Autoregressive Boltzmann Generators",
+        "url": "http://arxiv.org/abs/2606.27361v1",
+        "abstract": "Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allow rapid generation of uncorrelated equilibrium samples by combining a generative model with exact likelihoods and an importance sampling correction. However, modern BGs predominantly rely on normalizi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Error-Conditioned Neural Solvers",
+        "url": "http://arxiv.org/abs/2606.27354v1",
+        "abstract": "Neural surrogate models offer fast approximate mappings from PDE parameters to solutions, but they typically treat solving as a purely statistical task: once trained, they struggle to correct their own constraint violations and extrapolate beyond the training distribution. Recent hybrid methods promote physical correctness by targeting the PDE residual via gradient descent or Gauss--Newton steps, ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching",
+        "url": "http://arxiv.org/abs/2606.27342v1",
+        "abstract": "Entity Matching (EM) is a core operation in the data integration pipeline, where records from different sources are compared to determine whether they refer to the same real-world entity. Recent work has incorporated domain information and low-resource learning techniques to better adapt EM systems to realistic settings. While these approaches have demonstrated strong performance, it remains uncle",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Language-Based Digital Twins for Elderly Cognitive Assistance",
+        "url": "http://arxiv.org/abs/2606.27334v1",
+        "abstract": "Digital twins have emerged as a promising paradigm for personalized healthcare, enabling modeling of individual behavior and health trajectories. In cognitive health, early detection of Mild Cognitive Impairment (MCI) remains challenging, where language and conversational patterns serve as non-invasive biomarkers. In this work, we propose a language-based digital twin framework that leverages larg",
+        "domains": [
+          "sim2real",
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+        "url": "http://arxiv.org/abs/2606.27330v1",
+        "abstract": "Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task planning is essential for decomposing complex tasks into executable actions. While small open source MLLMs are cost efficient and privacy preserving compared with commercial large models, they suffer from weak planning and limited cross website generalization. To address these limitations, we introduce ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Beyond the Hard Budget: Sparsity Regularizers for More Interpretable Top-k Sparse Autoencoders",
+        "url": "http://arxiv.org/abs/2606.27321v1",
+        "abstract": "Sparse autoencoders (SAEs) have become a leading tool for interpreting the representations of vision foundation models, decomposing their polysemantic activations into a larger set of sparse, more monosemantic features. The Top-$k$ SAE, a now-standard variant, enforces sparsity architecturally through its activation function, retaining only the $k$ most active latents per input. Because it was des",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "AI Healthcare Chatbots as Information Infrastructure: A Large-Scale Study of User-Reported Breakdowns",
+        "url": "http://arxiv.org/abs/2606.27302v1",
+        "abstract": "AI healthcare chatbots are increasingly used to support health information seeking and self-management, yet their performance and impact on users remains to be studied. This study examines over 15,000 user reviews from 59 AI healthcare chatbot apps to explore how these systems function in everyday informational and emotional contexts. Topic modeling and interpretive analysis identify three recurri",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models",
+        "url": "http://arxiv.org/abs/2606.27288v1",
+        "abstract": "Multi-model LLM systems such as routing, voting, cascades, fusion, and mixture-of-agents are used to beat single-model accuracy. We show that their gain is capped by a quantity the field rarely reports. For any policy whose output is one member model answer, accuracy cannot exceed one minus beta, where beta is the rate at which every model is wrong on the same query. In contrast, the usual diagnos",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Prompt Injection in Automated Résumé Screening with Large Language Models: Single and Multi-Injection Settings",
+        "url": "http://arxiv.org/abs/2606.27287v1",
+        "abstract": "Large language models (LLMs) are increasingly used to screen and rank job applicants, creating incentives for candidates to strategically manipulate algorithmic hiring systems. We study prompt injection in automated résumé screening, defined as subtle self-promotional text that introduces no new qualifications but is designed to influence LLM evaluations. Using controlled experiments, we show that",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Simulation-based inference for rapid Bayesian parameter estimation in epidemiological models: a comparison with MCMC",
+        "url": "http://arxiv.org/abs/2606.27286v1",
+        "abstract": "Mechanistic epidemiological models are widely used to support infectious disease forecasting and public-health decision making. Bayesian calibration of such models is commonly performed using Markov chain Monte Carlo (MCMC), which can become computationally expensive for high-dimensional nonlinear systems and repeated near-real-time analyses. Here, we investigate simulation-based inference (SBI) u",
+        "domains": [
+          "sim2real"
+        ]
+      }
+    ],
+    "errors": [],
+    "counts": {
+      "hn": 1,
+      "arxiv": 30,
+      "errors": 0
+    }
+  },
+  "curated": {
+    "title_date": "2026-W26（06-21 ~ 06-28）",
+    "window": "2026-06-21 ~ 2026-06-28",
+    "domains": [
+      {
+        "id": "vla",
+        "emoji": "1️⃣",
+        "name": "VLA（视觉-语言-动作模型）",
+        "items": [
+          {
+            "title": "ABC：完全开源的行为克隆操作栈 + 13 万条遥操作数据集",
+            "summary": "提出 ABC 开源操作栈，核心是 ABC-130K——迄今最大开源遥操作数据集，含 3500 小时、超 13 万 episode。为 VLA/模仿学习提供了稀缺的大规模开放数据基座。",
+            "url": "http://arxiv.org/abs/2606.27375v1",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "RouterVLA：把 smoke test 变成异构 VLA 选择的监督信号",
+            "summary": "机器人团队部署前常对候选 VLA 策略做 smoke test，RouterVLA 复用这些评估 rollout 来监督策略选择，把一次性测试数据转化为可学习的路由信号。",
+            "url": "http://arxiv.org/abs/2606.27355v1",
+            "source": "arxiv",
+            "hot": false
+          },
+          {
+            "title": "LA4VLA：用语言-动作预训练实现「不看也能动」",
+            "summary": "指出 VLA 预训练中密集视觉-动作监督会压制语言-动作关联，提出语言-动作预训练路线，提升指令泛化能力。",
+            "url": "http://arxiv.org/abs/2606.27295v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "dexterous",
+        "emoji": "2️⃣",
+        "name": "灵巧手 / 灵巧操作",
+        "items": [
+          {
+            "title": "VibeAct：用振动信号驱动接触丰富的反应式灵巧操作",
+            "summary": "灵巧操作依赖快速、局部且常被视觉遮挡的接触事件。VibeAct 用压电麦克风采集振动-声学信号作为高带宽接触感知，弥补纯视觉在 contact-rich 任务中的不足。",
+            "url": "http://arxiv.org/abs/2606.27344v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "sim2real",
+        "emoji": "3️⃣",
+        "name": "sim2real / 仿真到真实",
+        "items": [
+          {
+            "title": "基于变分神经动力学的持续机器人策略学习",
+            "summary": "真实部署中动力学持续变化（风、负载、电量、接触、磨损），而多数控制器只训练一次。该工作用变分神经动力学做持续策略学习，提升对动力学漂移的适应性。",
+            "url": "http://arxiv.org/abs/2606.27353v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "embodied-model",
+        "emoji": "4️⃣",
+        "name": "具身模型（世界模型 / 人形策略 / 基础模型）",
+        "items": [
+          {
+            "title": "世界模型的幻觉是可预测、可预防的",
+            "summary": "生成式世界模型 rollout 视觉流畅却常偏离真实动力学（幻觉）。该工作提出幻觉可预测并给出预防方法，对依赖世界模型做规划/想象的具身系统很关键。",
+            "url": "http://arxiv.org/abs/2606.27326v1",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "World Action Models + 循环生成回放实现持续模仿学习",
+            "summary": "WAM 不仅预测动作还能生成未来视觉观测；REGEN 利用这一生成能力做循环生成回放，实现抗遗忘的持续模仿学习。",
+            "url": "http://arxiv.org/abs/2606.27374v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "embodied-chip",
+        "emoji": "5️⃣",
+        "name": "具身智能芯片（机器人计算 / 边缘 NPU）",
+        "items": [
+          {
+            "title": "OctoSense：多模态机器人感知的自监督开源传感平台",
+            "summary": "开源传感平台，集成立体 RGB+事件相机、LiDAR、热成像、IMU、RTK-GPS 及本体感知（CAN 总线），并用自监督学习融合多模态——为机器人边缘感知-计算栈提供硬件参考。",
+            "url": "http://arxiv.org/abs/2606.27317v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "emoji": "6️⃣",
+        "name": "制造 / 产线",
+        "items": []
+      },
+      {
+        "id": "market",
+        "emoji": "7️⃣",
+        "name": "市场 / 产业",
+        "items": []
+      }
+    ],
+    "highlights": [
+      "开源数据破局：ABC-130K 放出 3500 小时、13 万 episode 遥操作数据集，是本周对 VLA/模仿学习最有分量的开放基座。",
+      "世界模型可靠性：「世界模型幻觉可预测可预防」给出量化方法，直击生成式世界模型用于具身规划的核心痛点。",
+      "感知-接触新通道：VibeAct 用振动声学补足视觉遮挡下的灵巧操作；OctoSense 提供多模态机器人感知的开源硬件平台。"
+    ],
+    "editor_note": "首期人工编辑样板；制造/产线与市场/产业方向本周公开学术源覆盖弱，产业动态以各公司官方渠道为准，未纳入无法核验的传闻。"
+  },
+  "meta": {
+    "edited_by": "manual-sample",
+    "edited_at": "2026-06-28"
+  }
+}

@@ -1,0 +1,57 @@
+channel: ai-infra
+title: AI Infra 每周资讯
+title_en: AI Infra Weekly
+description: AI 基础设施全栈每周资讯 —— 芯片 / 编译器 / 推理 / 数据中心 / 安全 / 自动算子 / 端侧
+# arXiv 主分类（prefetch 抓取 RSS）
+arxiv_categories:
+  - cs.DC   # 分布式/并行/集群
+  - cs.AR   # 体系结构/芯片
+  - cs.PL   # 编程语言/编译器
+  - cs.LG   # 机器学习（看主题）
+# Hacker News 入选分数阈值
+hn_min_score: 60
+# 领域定义（周报按此顺序分栏；id 用于脚本与模板对齐）
+domains:
+  - id: chips
+    emoji: "1️⃣"
+    name: AI 芯片
+    desc: Nvidia / AMD / Intel / 自研芯片 / HBM / 制程 / TSMC / Samsung / SK Hynix
+    keywords: [nvidia, amd, "intel gaudi", tpu, blackwell, rubin, hbm, cowos, tsmc, "samsung foundry", "sk hynix", wafer, lithography, asic, npu, "ascend"]
+  - id: compilers
+    emoji: "2️⃣"
+    name: AI 编译器与框架
+    desc: tinygrad / MLIR / TVM / XLA / Triton / torch.compile / JAX / Mojo
+    keywords: [tinygrad, mlir, tvm, xla, triton, "torch.compile", inductor, jax, mojo, pytorch, cuda, "compiler"]
+  - id: inference-dc
+    emoji: "3️⃣"
+    name: AI 推理优化（数据中心）
+    desc: 量化 / 稀疏化 / KV Cache / Speculative Decoding / MoE / vLLM / TensorRT-LLM / SGLang（面向 H100/B200 集群）
+    keywords: [vllm, sglang, "tensorrt", quantization, fp8, fp4, gptq, awq, "kv cache", "kv-cache", "speculative decoding", moe, "paged attention", pagedattention, "prefix caching", batching]
+  - id: datacenter
+    emoji: "4️⃣"
+    name: 数据中心与基础设施
+    desc: 液冷 / 机架 / 网络(InfiniBand/RoCE) / 存储 / 电力 / 集群 / 超大规模 capex
+    keywords: ["data center", datacenter, "liquid cool", rack, infiniband, rdma, roce, hyperscaler, capex, "gpu cluster", "training cluster"]
+  - id: safety
+    emoji: "5️⃣"
+    name: AI 安全与治理
+    desc: 对齐 / 红队 / 可解释性 / 开源许可 / 出口管制 / 各国政策法规
+    keywords: [alignment, "red team", interpretability, "export control", "ai safety", "ai policy", evals, anthropic, openai, deepmind, governance]
+  - id: embodied-infra
+    emoji: "6️⃣"
+    name: 具身智能（基础设施视角）
+    desc: 机器人算力 / 边缘 NPU / 真机部署的推理系统（仅基础设施视角，纯算法与产业动态见 Embodied AI 频道）
+    keywords: ["robot compute", "humanoid compute", "edge npu robot", "jetson", "orin", "robot inference", "onboard compute"]
+  - id: autokernel
+    emoji: "7️⃣"
+    name: AI 自动算子与代码生成优化
+    desc: AlphaEvolve / FunSearch / AI Kernel 生成 / LLM-driven compiler / 自动调优 / LLM RTL 生成
+    keywords: [alphaevolve, funsearch, "kernel generation", "kernel codegen", "code generation", rtl, "compiler optimization", "auto-tuning", autotuning]
+  - id: edge
+    emoji: "8️⃣"
+    name: 边缘与端侧推理
+    desc: 手机/PC/嵌入式 LLM/VLM 推理 - llama.cpp / MLC-LLM / ExecuTorch / MLX / NPU / 小模型 / 极低比特量化
+    keywords: ["on-device", "on device", "edge ai", "edge inference", "edge llm", tinyml, "mlc-llm", "llama.cpp", llamafile, gguf, ggml, mlx, executorch, "core ml", coreml, tflite, ncnn, mnn, onnxruntime, "onnx runtime", snapdragon, hexagon, "apple neural engine", rk3588, gemma, "gemini nano", smollm, minicpm, bitnet, "1.58", w4a16, "int4 inference"]
+# 去重：命中以下关键词的条目划归 Embodied AI 频道，不收入本频道（除非同时强命中基础设施词）
+exclude_to_channel:
+  embodied-ai: [vla, "vision-language-action", openvla, "pi0", "pi-zero", "diffusion policy", "dexterous", "sim2real", "teleoperation", "world model", "humanoid policy", "manipulation policy"]

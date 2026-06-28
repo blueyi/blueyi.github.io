@@ -1,0 +1,58 @@
+{
+  "channel": "embodied-ai",
+  "title": "具身智能每周资讯",
+  "title_en": "Embodied AI Weekly",
+  "description": "具身智能每周技术进展 —— VLA / 灵巧操作 / sim2real / 具身模型 / 具身芯片 / 制造 / 产业",
+  "domains": [
+    {
+      "id": "vla",
+      "name": "VLA（视觉-语言-动作模型）",
+      "emoji": "1️⃣"
+    },
+    {
+      "id": "dexterous",
+      "name": "灵巧手 / 灵巧操作",
+      "emoji": "2️⃣"
+    },
+    {
+      "id": "sim2real",
+      "name": "sim2real / 仿真到真实",
+      "emoji": "3️⃣"
+    },
+    {
+      "id": "embodied-model",
+      "name": "具身模型（世界模型 / 人形策略 / 基础模型）",
+      "emoji": "4️⃣"
+    },
+    {
+      "id": "embodied-chip",
+      "name": "具身智能芯片（机器人计算 / 边缘 NPU）",
+      "emoji": "5️⃣"
+    },
+    {
+      "id": "manufacturing",
+      "name": "制造 / 产线",
+      "emoji": "6️⃣"
+    },
+    {
+      "id": "market",
+      "name": "市场 / 产业",
+      "emoji": "7️⃣"
+    }
+  ],
+  "arxiv_categories": [
+    "cs.RO",
+    "cs.LG",
+    "cs.AI"
+  ],
+  "hn_min_score": 50,
+  "weeks": [
+    {
+      "week": "2026-W26",
+      "html": "weeks/2026-W26.html",
+      "data": "data/2026-W26.json",
+      "window": "2026-06-21 ~ 2026-06-28",
+      "published": true
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "channel": "ai-infra",
+  "title": "AI Infra 每周资讯",
+  "title_en": "AI Infra Weekly",
+  "description": "AI 基础设施全栈每周资讯 —— 芯片 / 编译器 / 推理 / 数据中心 / 安全 / 自动算子 / 端侧",
+  "domains": [
+    {
+      "id": "chips",
+      "name": "AI 芯片",
+      "emoji": "1️⃣"
+    },
+    {
+      "id": "compilers",
+      "name": "AI 编译器与框架",
+      "emoji": "2️⃣"
+    },
+    {
+      "id": "inference-dc",
+      "name": "AI 推理优化（数据中心）",
+      "emoji": "3️⃣"
+    },
+    {
+      "id": "datacenter",
+      "name": "数据中心与基础设施",
+      "emoji": "4️⃣"
+    },
+    {
+      "id": "safety",
+      "name": "AI 安全与治理",
+      "emoji": "5️⃣"
+    },
+    {
+      "id": "embodied-infra",
+      "name": "具身智能（基础设施视角）",
+      "emoji": "6️⃣"
+    },
+    {
+      "id": "autokernel",
+      "name": "AI 自动算子与代码生成优化",
+      "emoji": "7️⃣"
+    },
+    {
+      "id": "edge",
+      "name": "边缘与端侧推理",
+      "emoji": "8️⃣"
+    }
+  ],
+  "arxiv_categories": [
+    "cs.DC",
+    "cs.AR",
+    "cs.PL",
+    "cs.LG"
+  ],
+  "hn_min_score": 60,
+  "weeks": [
+    {
+      "week": "2026-W26",
+      "html": "weeks/2026-W26.html",
+      "data": "data/2026-W26.json",
+      "window": "2026-06-21 ~ 2026-06-28",
+      "published": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<!-- week.html.tmpl — 单周页结构参考（实际渲染由 _engine/scripts/render_week.py 内联生成）。
+     此文件仅作迁移时的结构文档；改样式改 assets/feeds.css，改结构改 render_week.py。-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{CHANNEL_ZH} · {TITLE_DATE}</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="../../index.html">资讯</a> / <a href="../index.html">{CHANNEL_ZH}</a> / {WEEK}</div>
+  <header class="site"><h1>{CHANNEL_ZH} · {TITLE_DATE}</h1><div class="sub">{CHANNEL_EN} weekly digest</div></header>
+  <div class="meta-bar">
+    <span>覆盖窗口：<b>{WINDOW}</b></span><span>信息源：<b>Hacker News / arXiv</b></span><span>周编号：<b>{WEEK}</b></span>
+  </div>
+  <!-- 对每个领域: <section class="domain" id="{id}"><h2>{emoji} {name}</h2>
+       <ul class="items"><li>...<span class="badge hn|arxiv">..</span><a>title</a> 🔥 <div class="it-sum">summary</div></li></ul>
+       或 items 为空时: <div class="empty">本周该方向公开源未见重大动态。</div> -->
+  <!-- 亮点: <div class="highlights"><h2>🌟 本周亮点</h2><ol><li>..</li></ol></div> -->
+  <div class="wk-nav"><span><a href="../index.html">← 返回全部周报</a></span><span><a href="../../index.html">资讯首页 →</a></span></div>
+  <footer class="site">由 blueyi.github.io/feeds 自动生成</footer>
+</div>
+</body>
+</html>

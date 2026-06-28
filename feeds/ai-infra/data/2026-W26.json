@@ -1,0 +1,698 @@
+{
+  "channel": "ai-infra",
+  "week": "2026-W26",
+  "raw": {
+    "channel": "ai-infra",
+    "week": "2026-W26",
+    "generated_at": "2026-06-28T21:05:33.942107+08:00",
+    "window": {
+      "start": "2026-06-21",
+      "end": "2026-06-28"
+    },
+    "hn": [
+      {
+        "source": "hn",
+        "score": 170,
+        "title": "AMD Strix Halo RDMA Cluster Setup Guide",
+        "url": "https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md",
+        "hn_url": "https://news.ycombinator.com/item?id=48703258",
+        "domains": [
+          "chips",
+          "inference-dc",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 251,
+        "title": "Asian AI startups launch Mythos-like models",
+        "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/",
+        "hn_url": "https://news.ycombinator.com/item?id=48697958",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 772,
+        "title": "DSpark: Speculative decoding accelerates LLM inference [pdf]",
+        "url": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
+        "hn_url": "https://news.ycombinator.com/item?id=48696585",
+        "domains": [
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 1114,
+        "title": "Previewing GPT‑5.6 Sol: a next-generation model",
+        "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+        "hn_url": "https://news.ycombinator.com/item?id=48689028",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 147,
+        "title": "Anatomy of a Failed (Nation-State?) Attack",
+        "url": "https://grack.com/blog/2026/06/25/dissecting-a-failed-nation-state-attack/",
+        "hn_url": "https://news.ycombinator.com/item?id=48694631",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 94,
+        "title": "Hellishly Slow Level 13 Deflate Compression",
+        "url": "https://kirill.korins.ky/articles/hellishly-slow-level-13-deflate-compression/",
+        "hn_url": "https://news.ycombinator.com/item?id=48633839",
+        "domains": [
+          "embodied-infra"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 170,
+        "title": "WordStar: A Writer's Word Processor (1996)",
+        "url": "https://www.sfwriter.com/wordstar.htm",
+        "hn_url": "https://news.ycombinator.com/item?id=48694853",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 176,
+        "title": "OpenAI leans toward waiting until next year for IPO",
+        "url": "https://www.nytimes.com/2026/06/25/technology/openai-ipo-artificial-intelligence.html",
+        "hn_url": "https://news.ycombinator.com/item?id=48678873",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 546,
+        "title": "U.S. allows Anthropic to release Mythos AI to ‘trusted’ US organizations",
+        "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies",
+        "hn_url": "https://news.ycombinator.com/item?id=48692995",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 1164,
+        "title": "U.S. government will decide who gets to use GPT-5.6",
+        "url": "https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/",
+        "hn_url": "https://news.ycombinator.com/item?id=48690101",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 807,
+        "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+        "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+        "hn_url": "https://news.ycombinator.com/item?id=48664814",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 821,
+        "title": "OpenAI unveils its first custom chip, built by Broadcom",
+        "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
+        "hn_url": "https://news.ycombinator.com/item?id=48663324",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 370,
+        "title": "A game where you're an OS and have to manage processes, memory and I/O events",
+        "url": "https://github.com/plbrault/youre-the-os",
+        "hn_url": "https://news.ycombinator.com/item?id=48642474",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 121,
+        "title": "Parallel Parentheses Matching",
+        "url": "https://williamdue.github.io/blog/parallel-parentheses-matching",
+        "hn_url": "https://news.ycombinator.com/item?id=48678623",
+        "domains": [
+          "chips"
+        ]
+      }
+    ],
+    "arxiv": [
+      {
+        "source": "arxiv:cs.DC",
+        "title": "Tilikum: Transaction Fair Ordering on a DAG without Weak Edges",
+        "url": "http://arxiv.org/abs/2606.27250v1",
+        "abstract": "Decentralized Finance (DeFi) applications rely heavily on the order in which transactions are executed, making them susceptible to reordering attacks that enable adversaries to extract Blockchain Extractable Value (BEV). While linear blockchain systems such as Ethereum have inspired extensive research into fair ordering mechanisms, DAG-based consensus protocols have remained largely unprotected de",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "CHAMB-GA: A Containerized HPC Scalable Microservice-Based Framework for Genetic Algorithms",
+        "url": "http://arxiv.org/abs/2606.27217v1",
+        "abstract": "Metaheuristic-based global optimization with embedded, long-running simulations is a computationally expensive process. To support various stages of development and execution, a seamless transition from personal computers to distributed clusters is desired, enabling execution across all computational scales. However, existing tool chains are often characterized by rigidity and hardware-bound const",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "DMuon: Efficient Distributed Muon Training with Near-Adam Overhead",
+        "url": "http://arxiv.org/abs/2606.27153v1",
+        "abstract": "Matrix-orthogonalization-based optimizers, exemplified by Muon, have demonstrated strong convergence behavior across a wide range of modern deep learning workloads. The matrix-aware updates offer a compelling alternative to conventional element-wise optimization, particularly as model architectures continue to grow in scale and heterogeneity. Yet contemporary distributed training infrastructure bu",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "BtrLog: Low-Latency Logging for Cloud Database Systems",
+        "url": "http://arxiv.org/abs/2606.27051v1",
+        "abstract": "Cloud database systems cannot rely on instance-local disks for write-ahead logging (WAL) durability, forcing WAL onto remote storage. Existing options are unsatisfying: remote block storage like EBS is easy to adopt but adds substantial write latency and cost, while object storage offers excellent durability and low storage cost but is impractical for OLTP due to high latency and per-append cost. ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "RolloutPipe: Overlapping Pipelined Rollout and Training in Disaggregated On-Policy LLM Reinforcement Learning",
+        "url": "http://arxiv.org/abs/2606.26997v1",
+        "abstract": "Large language model (LLM) post-training for reasoning increasingly relies on reinforcement learning with verifiable rewards (RLVR), where models learn from ground-truth feedback on mathematical, logical, and scientific tasks. To enable flexible resource allocation and support heterogeneous training setups, modern RLVR systems adopt disaggregated architectures that decouple rollout generation and ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "Simulating Unified Tensor Resharding in heterogeneous AI systems",
+        "url": "http://arxiv.org/abs/2606.26633v1",
+        "abstract": "State-of-the-art AI training simulators assume homogeneous compute and network infrastructure. However, real-world training infrastructure is becoming increasingly heterogeneous since: (a) Model architectures such as multimodal and MoE exploit heterogeneity to improve device utilization, (b) Public cloud platforms often provide limited availability of homogeneous hardware due to fast hardware evol",
+        "domains": [
+          "chips",
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch",
+        "url": "http://arxiv.org/abs/2606.26607v1",
+        "abstract": "Mixture-of-Experts (MoE) architectures scale large language models (LLMs) to hundreds of billions of parameters. Serving a single MoE model requires multiple GPUs operating in parallel, typically through tensor parallelism (TP) or expert parallelism (EP). The optimal choice depends on the number of in-flight requests: TP is faster at low concurrency, whereas EP wins at high concurrency. Production",
+        "domains": [
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "GRAINS: Storage-Aware Algorithm-Architecture Co-Design Enabling High-Performance and Low-Cost Graph-Based Genome Analysis",
+        "url": "http://arxiv.org/abs/2606.26468v1",
+        "abstract": "Graph-based representations of genome sequences have emerged as a powerful approach for representing massive genomic databases in an expressive and efficient way. Despite their benefits, analysis on large-scale genome graphs incurs significant data movement overhead from the storage system due to accessing large amounts of low-reuse data. Processing data directly inside the storage device can be a",
+        "domains": [
+          "inference-dc",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "GPUSparse: GPU-Accelerated Learned Sparse Retrieval with Parallel Inverted Indices",
+        "url": "http://arxiv.org/abs/2606.26441v1",
+        "abstract": "Learned sparse retrieval models such as SPLADE achieve retrieval quality competitive with dense models while preserving the interpretability and exact-match advantages of sparse representations. However, inference-time scoring still relies on CPU-bound inverted index traversal algorithms (WAND, Block-Max WAND), creating a fundamental bottleneck for real-time serving at scale. We present GPUSparse,",
+        "domains": [
+          "chips",
+          "compilers",
+          "datacenter",
+          "safety",
+          "embodied-infra"
+        ]
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "TileMaxSim: IO-Aware GPU MaxSim Scoring with Dimension Tiling and Fused Product Quantization",
+        "url": "http://arxiv.org/abs/2606.26439v1",
+        "abstract": "Multi-vector retrieval models such as ColBERT achieve state-of-the-art accuracy through fine-grained token-level MaxSim scoring, yet existing GPU implementations leave most hardware performance unused. We give a roofline analysis of MaxSim on modern GPUs and identify a severe bandwidth gap: naive implementations reach only 5-18% of peak HBM bandwidth because they materialize the Nq x Nd similarity",
+        "domains": [
+          "chips",
+          "compilers",
+          "inference-dc",
+          "embodied-infra"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "CHIA: An open-source framework for principled, agentic AI-driven hardware/software co-design research",
+        "url": "http://arxiv.org/abs/2606.27350v1",
+        "abstract": "Agentic artificial intelligence shows great promise for radically improving the pace of innovation in hardware/software co-design research across computer architecture, systems, compilers, and VLSI. Thus far, however, applications of AI in these contexts have generally been demonstrated in isolated settings on small-scale problems, due to the difficulty of designing and deploying complex AI-infuse",
+        "domains": [
+          "chips",
+          "compilers",
+          "safety",
+          "autokernel"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "An Instruction Set Architecture for IMPLY-based Memristive Processing-in-Array",
+        "url": "http://arxiv.org/abs/2606.27319v1",
+        "abstract": "The push towards expanded ultra-low-power edge computing necessitates hardware capable of operating under extremely strict energy constraints. Traditional Complementary Metal-Oxide-Semiconductor (CMOS) microcontrollers are fundamentally limited in this domain by the von Neumann bottleneck and by the static power leakage inherent to volatile memory. Memristive In-Memory Computing (IMC) offers a pro",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "Evaluating Architectural Trade-offs in CGRAs: The Impact of Scratchpad Memory and Heterogeneity on Compute-Intensive Kernels",
+        "url": "http://arxiv.org/abs/2606.27240v1",
+        "abstract": "Modern edge computing applications, particularly high-throughput stream processing like Vision Transformers (ViTs), demand massive spatial parallelism and efficient data movement under tight power and area constraints. Coarse-Grained Reconfigurable Architectures (CGRAs) offer a promising paradigm to balance performance, flexibility, and energy efficiency. This paper analyzes the impact of two crit",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "Residual GPU Cache State on Apple M4 Pro",
+        "url": "http://arxiv.org/abs/2606.27098v1",
+        "abstract": "Apple silicon exposes unified CPU-GPU memory, but the cache state left after a completed GPU command is not documented. This paper characterizes that phase boundary on a 14-core Apple M4 Pro. We validate the measurement pipeline against unmodified STREAM 5.10 and BabelStream 5.0, then adapt an 8192-byte system-level-cache occupancy pattern to a synchronized Metal experiment. A GPU kernel touches 0",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "Inverse Design of Compact and Wideband Inverted Doherty Power Amplifiers Using Deep Learning",
+        "url": "http://arxiv.org/abs/2606.27002v1",
+        "abstract": "This paper presents a deep learning-assisted methodology for the inverse synthesis of a compact, wideband inverted Doherty power amplifier (PA). Convolutional neural networks (CNNs) and genetic algorithms (GAs) are jointly employed to generate pixelated Doherty combiner networks that integrate load modulation, impedance matching, power combining, and phase compensation into a single structure. As ",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "SegFold: Accelerating Sparse GEMM with a Fine-Grained Dynamic Dataflow",
+        "url": "http://arxiv.org/abs/2606.26701v1",
+        "abstract": "Generalized sparse matrix-matrix multiplication (SpGEMM) is critical in many domains. Existing CPUs and GPUs, as well as specialized accelerators, rely on static dataflows (e.g., inner product, outer product, Gustavson, etc.). Each static dataflow sacrifices some data reuse opportunities and imposes constraints on load balance. To address this inefficiency, we extend the typical SpGEMM dataflows b",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "GRAINS: Storage-Aware Algorithm-Architecture Co-Design Enabling High-Performance and Low-Cost Graph-Based Genome Analysis",
+        "url": "http://arxiv.org/abs/2606.26468v1",
+        "abstract": "Graph-based representations of genome sequences have emerged as a powerful approach for representing massive genomic databases in an expressive and efficient way. Despite their benefits, analysis on large-scale genome graphs incurs significant data movement overhead from the storage system due to accessing large amounts of low-reuse data. Processing data directly inside the storage device can be a",
+        "domains": [
+          "inference-dc",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "Nanoelectromechanical Systems (NEMS) for Hardware Security in Advanced Packaging",
+        "url": "http://arxiv.org/abs/2606.26426v1",
+        "abstract": "As hardware security threats escalate across semiconductor manufacturing and advanced packaging, there is a growing need for novel physical mechanisms to counter sophisticated attacks such as tampering, counterfeiting, and supply chain infiltration. This paper presents Nanoelectromechanical Systems (NEMS) as an emerging class of hardware security primitives that enable physical assurance, tamper d",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "Query Cost Model Calibration in Confidential Virtual Machines",
+        "url": "http://arxiv.org/abs/2606.26385v1",
+        "abstract": "With the growing adoption of Confidential Computing, running databases in confidential virtual machines (CVMs) such as AMD SEV-SNP has become an attractive way to protect sensitive cloud data with minimal changes to legacy DBMSs. However, analytical queries in such CVMs often suffer substantial overhead, and prior database work has largely stopped at benchmarking these slowdowns rather than optimi",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "SOLAR: AI-Powered Speed-of-Light Performance Analysis",
+        "url": "http://arxiv.org/abs/2606.26383v1",
+        "abstract": "How fast could a deep-learning model run on target hardware, and how far is today's implementation from that limit? These questions are central to software, hardware, and algorithm optimizations. Speed-of-Light (SOL) analysis answers them by computing a workload's theoretical minimum execution time on a given architecture. Yet deriving SOL bounds remains manual, error-prone, and disconnected from ",
+        "domains": [
+          "chips",
+          "compilers"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Beyond Objects",
+        "url": "http://arxiv.org/abs/2606.27258v1",
+        "abstract": "A core principle of object orientation -- that the functionality of a system can be partitioned amongst objects that correspond to individuals in the problem domain -- has influenced how software has been specified, designed and implemented for more than fifty years. Later developments in software engineering sought to build on this principle. But in fact this partitioning is neither natural nor s",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Welterweight Go: Boxing, Structural Subtyping, and Generics (Extended Version)",
+        "url": "http://arxiv.org/abs/2606.27138v1",
+        "abstract": "Go's unique combination of structural subtyping between generics and types with non-uniform runtime representations presents significant challenges for formalising the language. We introduce WG (Welterweight Go), a core model of Go that captures key features excluded by prior work, including underlying types, type unions and type sets, and proposed new features, such as generic methods. We also de",
+        "domains": [
+          "autokernel"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Mostly Automatic Translation of Language Interpreters from C to Safe Rust",
+        "url": "http://arxiv.org/abs/2606.27122v1",
+        "abstract": "Translating C programs to safe Rust is challenging owing to significant differences in typing constraints, ownership, and borrowing rules. Interpreter programs are particularly important targets for such translation, as they often handle untrusted inputs and suffer from memory-related vulnerabilities. We present Reboot, a mostly-automatic technique that translates real-world interpreter programs f",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Formalizing a Many-Sorted Hybrid Polyadic Modal Logic in Lean",
+        "url": "http://arxiv.org/abs/2606.27041v1",
+        "abstract": "We present a Lean formalization of a general hybrid modal logic with many-sorted signatures and polyadic modal operators. The system borrows ideas from both algebraic specification and dynamic logics, and is designed to serve as a uniform axiomatic foundation for specifying and verifying programming languages and security protocols. We expose a DSL for users to define languages and protocols as ma",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Compiler-Driven Approximation Tuning for Hyperdimensional Computing",
+        "url": "http://arxiv.org/abs/2606.26547v1",
+        "abstract": "As Moore's law reaches its physical and economic limits, domain-specific approaches are increasingly employed to accelerate machine learning workloads. Hyperdimensional Computing (HDC) represents one such emerging paradigm, offering an alternative to conventional deep learning techniques. Rooted in cognitive models of computation, HDC is designed bottom-up with hardware efficiency as a first-class",
+        "domains": [
+          "compilers"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Theory-Scale Auto-Formalization of Logics for Computer Science",
+        "url": "http://arxiv.org/abs/2606.26525v1",
+        "abstract": "Auto-formalization is critical for scalable formal verification, but existing progress largely focuses on isolated statements, while theory-scale auto-formalization, which coherently translates hundreds of interdependent definitions, lemmas, and theorems, remains open due to challenges in consistency, faithfulness, scalability, and correctness. In this paper, we introduce LCS-Bench, a stand-alone,",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "An Empirical Study of LLM-Generated Specifications for VeriFast",
+        "url": "http://arxiv.org/abs/2606.26490v1",
+        "abstract": "Static verification tools can assure industrial scale software, but require significant human labor to write specifications. This is particularly true of static verifiers based on separation logic (SL verifiers), which excel at verifying heapmanipulating programs, but require many complex auxiliary specifications to reason about heap structure. Recent work applies large language models (LLMs) to g",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "A Typestate Approach to Purpose-aware Programming",
+        "url": "http://arxiv.org/abs/2606.26386v1",
+        "abstract": "Real-world applications often require verification that sensitive data is being used for their intended purpose. However, existing literature offers limited results regarding compile-time guarantees in this domain. In this paper, we explore the use of typestate to reason about the purpose of data. In typestate, types have a state, which can transition to other states in the style of automata. In o",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Axon: A Synthesizing Superoptimizer for Tensor Programs",
+        "url": "http://arxiv.org/abs/2606.26344v1",
+        "abstract": "Writing high performance kernels for AI accelerators requires deep expertise in tiling, instruction selection, data layout, and operator fusion placing a significant burden on programmers. In this paper, we focus on tile based AI accelerator programs and present Axon, a synthesizing superoptimizer for tensor programs: it uses program synthesis to automatically generate target instructions from sem",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "A Survey of Quantum Programming Languages",
+        "url": "http://arxiv.org/abs/2606.26254v1",
+        "abstract": "Quantum computing has seen multiple recent breakthroughs and is getting closer to demonstrations of an exponential advantage over classical computing for certain problems. Programmers will require high-level, general-purpose, executable programming languages to express quantum solutions clearly and effectively, and the field has already produced a wide variety of such languages. This paper present",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "DanceOPD: On-Policy Generative Field Distillation",
+        "url": "http://arxiv.org/abs/2606.27377v1",
+        "abstract": "Modern image generation demands a single model that unifies diverse capabilities, including text-to-image (T2I), local editing, and global editing. However, these capabilities are rarely naturally aligned and often conflict. For instance, editing tends to degrade T2I performance, while global and local editing interfere with each other. Consequently, effectively composing these capabilities has be",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+        "url": "http://arxiv.org/abs/2606.27369v1",
+        "abstract": "Reinforcement learning with verifiable rewards (RLVR) for training LLMs typically rely on ground-truth answers to assign rewards, limiting their applicability to tasks where the ground-truth solution is unknown. We introduce a \\textbf{R}anking-\\textbf{i}nduced \\textbf{VER}ifiable framework (RiVER) that trains LLMs on score-based optimization tasks without ground-truth solutions, using deterministi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Autoregressive Boltzmann Generators",
+        "url": "http://arxiv.org/abs/2606.27361v1",
+        "abstract": "Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allow rapid generation of uncorrelated equilibrium samples by combining a generative model with exact likelihoods and an importance sampling correction. However, modern BGs predominantly rely on normalizi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+        "url": "http://arxiv.org/abs/2606.27359v1",
+        "abstract": "Many decoding methods for large language models can be understood as shifting probability mass toward outputs that are more likely under the model, either locally at the token level or globally at the sequence level. Therefore, their success depends on a fundamental question: when does sequence probability, that is, the conditional probability of a continuation given a prompt, actually align with ",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Error-Conditioned Neural Solvers",
+        "url": "http://arxiv.org/abs/2606.27354v1",
+        "abstract": "Neural surrogate models offer fast approximate mappings from PDE parameters to solutions, but they typically treat solving as a purely statistical task: once trained, they struggle to correct their own constraint violations and extrapolate beyond the training distribution. Recent hybrid methods promote physical correctness by targeting the PDE residual via gradient descent or Gauss--Newton steps, ",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching",
+        "url": "http://arxiv.org/abs/2606.27342v1",
+        "abstract": "Entity Matching (EM) is a core operation in the data integration pipeline, where records from different sources are compared to determine whether they refer to the same real-world entity. Recent work has incorporated domain information and low-resource learning techniques to better adapt EM systems to realistic settings. While these approaches have demonstrated strong performance, it remains uncle",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+        "url": "http://arxiv.org/abs/2606.27330v1",
+        "abstract": "Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task planning is essential for decomposing complex tasks into executable actions. While small open source MLLMs are cost efficient and privacy preserving compared with commercial large models, they suffer from weak planning and limited cross website generalization. To address these limitations, we introduce ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Beyond the Hard Budget: Sparsity Regularizers for More Interpretable Top-k Sparse Autoencoders",
+        "url": "http://arxiv.org/abs/2606.27321v1",
+        "abstract": "Sparse autoencoders (SAEs) have become a leading tool for interpreting the representations of vision foundation models, decomposing their polysemantic activations into a larger set of sparse, more monosemantic features. The Top-$k$ SAE, a now-standard variant, enforces sparsity architecturally through its activation function, retaining only the $k$ most active latents per input. Because it was des",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Blackwell Approachability and Gradient Equilibrium are Equivalent",
+        "url": "http://arxiv.org/abs/2606.27315v1",
+        "abstract": "Gradient equilibrium (GEQ) is a recently introduced online optimization framework that generalizes first-order stationarity from offline optimization and abstracts problems like online conformal prediction. While GEQ has curious similarities with known online learning frameworks, namely regret minimization, prior work has shown that GEQ error and regret are incomparable objectives, leaving open a ",
+        "domains": [
+          "chips"
+        ]
+      }
+    ],
+    "errors": [],
+    "counts": {
+      "hn": 14,
+      "arxiv": 39,
+      "errors": 0
+    }
+  },
+  "curated": {
+    "title_date": "2026-W26（06-21 ~ 06-28）",
+    "window": "2026-06-21 ~ 2026-06-28",
+    "domains": [
+      {
+        "id": "chips",
+        "emoji": "1️⃣",
+        "name": "AI 芯片",
+        "items": [
+          {
+            "title": "OpenAI 发布首款自研芯片，由博通代工",
+            "summary": "OpenAI 推出首颗定制 AI 芯片，由 Broadcom 设计代工——继 Google TPU、Amazon Trainium 之后，又一家头部 AI 公司走向自研算力，意在降低对 Nvidia 的依赖并优化自家训练/推理成本结构。",
+            "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
+            "source": "hn",
+            "score": 821,
+            "hot": true
+          },
+          {
+            "title": "AMD Strix Halo RDMA 集群搭建指南",
+            "summary": "社区放出在 AMD Strix Halo APU 上配置 RDMA 集群跑 vLLM 的实操指南，展示了非 Nvidia 平台做分布式推理的可行路径，对关注国产/替代算力栈的读者有参考价值。",
+            "url": "https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md",
+            "source": "hn",
+            "score": 170,
+            "hot": false
+          },
+          {
+            "title": "SOLAR：AI 驱动的 Speed-of-Light 性能分析",
+            "summary": "提出用模型预测深度学习负载在目标硬件上的理论性能上限（光速性能），并量化当前实现与上限的差距，是软硬件协同优化中定位瓶颈的有用方法学。",
+            "url": "http://arxiv.org/abs/2606.26383v1",
+            "source": "arxiv",
+            "hot": false
+          },
+          {
+            "title": "SegFold：细粒度动态数据流加速稀疏 GEMM",
+            "summary": "针对 SpGEMM 在 CPU/GPU 及专用加速器上因静态数据流导致的低效，提出细粒度动态数据流架构，对稀疏计算加速器设计有借鉴意义。",
+            "url": "http://arxiv.org/abs/2606.26701v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "compilers",
+        "emoji": "2️⃣",
+        "name": "AI 编译器与框架",
+        "items": [
+          {
+            "title": "CHIA：开源的 Agentic AI 驱动软硬件协同设计框架",
+            "summary": "面向计算机体系结构研究，用 agentic AI 自动化 HW/SW co-design 流程，是「LLM 进入编译/体系结构设计闭环」趋势的最新开源实践。",
+            "url": "http://arxiv.org/abs/2606.27350v1",
+            "source": "arxiv",
+            "hot": false
+          },
+          {
+            "title": "面向超维计算的编译器驱动近似调优",
+            "summary": "在摩尔定律放缓背景下，用编译器自动做近似度调优来加速 ML 负载（超维计算 HDC），体现「编译器承担精度-性能权衡」的方向。",
+            "url": "http://arxiv.org/abs/2606.26547v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "inference-dc",
+        "emoji": "3️⃣",
+        "name": "AI 推理优化（数据中心）",
+        "items": [
+          {
+            "title": "DSpark：投机解码加速 LLM 推理（DeepSeek）",
+            "summary": "DeepSeek 放出 DSpark 论文，用投机解码（speculative decoding）显著加速大模型推理。HN 高热（772 分），是本周推理优化方向最受关注的工程进展。",
+            "url": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
+            "source": "hn",
+            "score": 772,
+            "hot": true
+          },
+          {
+            "title": "Moebius：MoE 模型服务的无缝运行时并行切换",
+            "summary": "MoE 模型服务需多 GPU 协同，Moebius 实现运行时并行策略的无缝切换，提升 MoE 推理的资源弹性与吞吐，是数据中心侧 MoE serving 的实用工作。",
+            "url": "http://arxiv.org/abs/2606.26607v1",
+            "source": "arxiv",
+            "hot": false
+          },
+          {
+            "title": "RolloutPipe：解耦式 On-Policy LLM 后训练中的流水线重叠",
+            "summary": "面向 RLVR 推理后训练，将 rollout 与 training 在解耦架构下流水线重叠，缓解 RL 后训练的吞吐瓶颈，对做 RLHF/RLVR 训练基础设施的团队有价值。",
+            "url": "http://arxiv.org/abs/2606.26997v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "datacenter",
+        "emoji": "4️⃣",
+        "name": "数据中心与基础设施",
+        "items": [
+          {
+            "title": "BtrLog：云数据库的低延迟日志",
+            "summary": "云数据库无法依赖本地盘做 WAL 持久化，被迫写远程存储；BtrLog 针对该场景优化低延迟日志，是大规模云基础设施存储路径优化的代表性工作。",
+            "url": "http://arxiv.org/abs/2606.27051v1",
+            "source": "arxiv",
+            "hot": false
+          },
+          {
+            "title": "异构 AI 系统中统一张量重切分的模拟",
+            "summary": "现有训练模拟器假设算力/网络同构，但真实训练基础设施日益异构；该工作模拟异构系统下的张量 resharding，对大规模训练集群规划有参考。",
+            "url": "http://arxiv.org/abs/2606.26633v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "safety",
+        "emoji": "5️⃣",
+        "name": "AI 安全与治理",
+        "items": [
+          {
+            "title": "美国政府将审定谁能使用 GPT-5.6",
+            "summary": "据华盛顿邮报，OpenAI 称美国政府将参与审核其最新模型 GPT-5.6 的使用者准入。前沿模型出口/准入管制进一步制度化，HN 本周第一热帖（1164 分）。",
+            "url": "https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/",
+            "source": "hn",
+            "score": 1164,
+            "hot": true
+          },
+          {
+            "title": "Anthropic 指控阿里巴巴非法提取 Claude 模型能力",
+            "summary": "路透报道 Anthropic 称阿里巴巴非法蒸馏/提取其 Claude 模型能力。模型能力窃取与跨境治理成为焦点，叠加出口管制，是本周治理主线。",
+            "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+            "source": "hn",
+            "score": 807,
+            "hot": true
+          },
+          {
+            "title": "美国允许 Anthropic 向「受信」美企发布 Mythos 模型",
+            "summary": "Semafor 报道美方批准 Anthropic 向部分受信美国机构发布强力模型 Mythos，叠加随后亚洲创业公司推出对标模型，凸显出口禁令下的供给重构。",
+            "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies",
+            "source": "hn",
+            "score": 546,
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "embodied-infra",
+        "emoji": "6️⃣",
+        "name": "具身智能（基础设施视角）",
+        "items": []
+      },
+      {
+        "id": "autokernel",
+        "emoji": "7️⃣",
+        "name": "AI 自动算子与代码生成优化",
+        "items": [
+          {
+            "title": "CHIA 框架（亦见编译器栏）：AI 自动化软硬件协同",
+            "summary": "用 agentic AI 自动驱动硬件/软件协同设计，与「AI 自动生成/调优算子与硬件」方向高度相关，可视作自动算子生成在体系结构层的延伸。",
+            "url": "http://arxiv.org/abs/2606.27350v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      },
+      {
+        "id": "edge",
+        "emoji": "8️⃣",
+        "name": "边缘与端侧推理",
+        "items": [
+          {
+            "title": "Apple M4 Pro 上 GPU 命令完成后的残留缓存状态",
+            "summary": "Apple silicon 统一内存下，GPU 命令完成后的缓存状态缺乏文档；该工作刻画了这一相位边界，对在 Apple ANE/GPU 上做端侧推理优化与安全分析有参考。",
+            "url": "http://arxiv.org/abs/2606.27098v1",
+            "source": "arxiv",
+            "hot": false
+          },
+          {
+            "title": "面向超低功耗边缘的 IMPLY 忆阻存内计算指令集",
+            "summary": "为极严苛能耗约束的边缘计算设计基于 IMPLY 的忆阻存内处理阵列指令集，代表端侧/边缘极低功耗推理硬件的前沿探索。",
+            "url": "http://arxiv.org/abs/2606.27319v1",
+            "source": "arxiv",
+            "hot": false
+          }
+        ]
+      }
+    ],
+    "highlights": [
+      "算力自研成潮：OpenAI 发布首款博通代工的自研 AI 芯片，头部公司加速摆脱对 Nvidia 的单一依赖。",
+      "治理收紧主线：美政府将审定 GPT-5.6 用户准入、Anthropic 指控阿里非法提取 Claude、Mythos 受限发布——出口管制与模型能力保护成本周最强信号。",
+      "推理优化落地：DeepSeek DSpark 投机解码（HN 772 分）+ Moebius MoE 运行时并行切换，数据中心侧吞吐优化持续推进。"
+    ],
+    "editor_note": "首期由人工编辑作为质量样板；keyword 标签较粗，已按条目实际内容重新归类。"
+  },
+  "meta": {
+    "edited_by": "manual-sample",
+    "edited_at": "2026-06-28"
+  }
+}

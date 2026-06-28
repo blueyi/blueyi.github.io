@@ -1,0 +1,48 @@
+channel: embodied-ai
+title: 具身智能每周资讯
+title_en: Embodied AI Weekly
+description: 具身智能每周技术进展 —— VLA / 灵巧操作 / sim2real / 具身模型 / 具身芯片 / 制造 / 产业
+arxiv_categories:
+  - cs.RO   # 机器人
+  - cs.LG   # 机器学习（策略学习）
+  - cs.AI   # 通用 AI（世界模型等）
+hn_min_score: 50
+domains:
+  - id: vla
+    emoji: "1️⃣"
+    name: VLA（视觉-语言-动作模型）
+    desc: Vision-Language-Action / RT-X / OpenVLA / π0 / RDT / 通用操作策略
+    keywords: [vla, "vision-language-action", "rt-x", "rt-2", openvla, "pi0", "pi-zero", rdt, "foundation policy", "generalist policy", "action model"]
+  - id: dexterous
+    emoji: "2️⃣"
+    name: 灵巧手 / 灵巧操作
+    desc: 灵巧手 / 抓取 / 接触丰富操作 / 触觉 / 双臂协同
+    keywords: ["dexterous", "dexterous hand", grasping, manipulation, "contact-rich", tactile, "bimanual", "in-hand", "fine manipulation"]
+  - id: sim2real
+    emoji: "3️⃣"
+    name: sim2real / 仿真到真实
+    desc: 域随机化 / 仿真器 / 真机迁移 / Isaac / MuJoCo / 数字孪生
+    keywords: [sim2real, "sim-to-real", "domain randomization", isaac, mujoco, "digital twin", simulation, "real-world transfer"]
+  - id: embodied-model
+    emoji: "4️⃣"
+    name: 具身模型（世界模型 / 人形策略 / 基础模型）
+    desc: 世界模型 / 人形机器人策略 / 具身基础模型 / 扩散策略 / 模仿学习
+    keywords: ["world model", "humanoid policy", "embodied foundation", "diffusion policy", "behavior cloning", "imitation learning", "locomotion", "whole-body control", "act policy"]
+  - id: embodied-chip
+    emoji: "5️⃣"
+    name: 具身智能芯片（机器人计算 / 边缘 NPU）
+    desc: 机器人计算平台 / 边缘 NPU / Jetson / 实时控制 SoC（arXiv 覆盖弱，多来自产业渠道）
+    keywords: ["robot compute", "edge npu", jetson, orin, "real-time control", "robot soc", "onboard compute", "compute platform robot"]
+  - id: manufacturing
+    emoji: "6️⃣"
+    name: 制造 / 产线
+    desc: 量产 / 工业部署 / 产线机器人 / 装配 / 物流自动化
+    keywords: ["mass production", "manufacturing robot", "assembly", "industrial deployment", "factory automation", "warehouse robot", "production line"]
+  - id: market
+    emoji: "7️⃣"
+    name: 市场 / 产业
+    desc: 公司动态 / 融资 / 出货 / 商业化（Figure / Tesla Optimus / 宇树 / 智元 / 1X / Physical Intelligence）
+    keywords: [humanoid, "figure ai", figure, optimus, tesla, unitree, "physical intelligence", "1x technologies", agibot, "funding", "shipment", commercialization, robotaxi, waymo]
+# 去重：命中以下纯基础设施关键词的条目划归 AI Infra 频道
+exclude_to_channel:
+  ai-infra: [vllm, sglang, "tensorrt", mlir, tvm, "torch.compile", "data center", hbm, "kv cache", quantization]

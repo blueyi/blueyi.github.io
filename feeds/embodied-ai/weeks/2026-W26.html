@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>具身智能每周资讯 · 2026-W26（06-21 ~ 06-28）</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="../../index.html">资讯</a> / <a href="../index.html">具身智能每周资讯</a> / 2026-W26</div>
+  <header class="site">
+    <h1>具身智能每周资讯 · 2026-W26（06-21 ~ 06-28）</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>覆盖窗口：<b>2026-06-21 ~ 2026-06-28</b></span>
+    <span>信息源：<b>Hacker News / arXiv</b></span>
+    <span>周编号：<b>2026-W26</b></span>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27375v1" target="_blank" rel="noopener">ABC：完全开源的行为克隆操作栈 + 13 万条遥操作数据集</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">提出 ABC 开源操作栈，核心是 ABC-130K——迄今最大开源遥操作数据集，含 3500 小时、超 13 万 episode。为 VLA/模仿学习提供了稀缺的大规模开放数据基座。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27355v1" target="_blank" rel="noopener">RouterVLA：把 smoke test 变成异构 VLA 选择的监督信号</a></div>
+      <div class="it-sum">机器人团队部署前常对候选 VLA 策略做 smoke test，RouterVLA 复用这些评估 rollout 来监督策略选择，把一次性测试数据转化为可学习的路由信号。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27295v1" target="_blank" rel="noopener">LA4VLA：用语言-动作预训练实现「不看也能动」</a></div>
+      <div class="it-sum">指出 VLA 预训练中密集视觉-动作监督会压制语言-动作关联，提出语言-动作预训练路线，提升指令泛化能力。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27344v1" target="_blank" rel="noopener">VibeAct：用振动信号驱动接触丰富的反应式灵巧操作</a></div>
+      <div class="it-sum">灵巧操作依赖快速、局部且常被视觉遮挡的接触事件。VibeAct 用压电麦克风采集振动-声学信号作为高带宽接触感知，弥补纯视觉在 contact-rich 任务中的不足。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27353v1" target="_blank" rel="noopener">基于变分神经动力学的持续机器人策略学习</a></div>
+      <div class="it-sum">真实部署中动力学持续变化（风、负载、电量、接触、磨损），而多数控制器只训练一次。该工作用变分神经动力学做持续策略学习，提升对动力学漂移的适应性。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（世界模型 / 人形策略 / 基础模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27326v1" target="_blank" rel="noopener">世界模型的幻觉是可预测、可预防的</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">生成式世界模型 rollout 视觉流畅却常偏离真实动力学（幻觉）。该工作提出幻觉可预测并给出预防方法，对依赖世界模型做规划/想象的具身系统很关键。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27374v1" target="_blank" rel="noopener">World Action Models + 循环生成回放实现持续模仿学习</a></div>
+      <div class="it-sum">WAM 不仅预测动作还能生成未来视觉观测；REGEN 利用这一生成能力做循环生成回放，实现抗遗忘的持续模仿学习。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27317v1" target="_blank" rel="noopener">OctoSense：多模态机器人感知的自监督开源传感平台</a></div>
+      <div class="it-sum">开源传感平台，集成立体 RGB+事件相机、LiDAR、热成像、IMU、RTK-GPS 及本体感知（CAN 总线），并用自监督学习融合多模态——为机器人边缘感知-计算栈提供硬件参考。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>开源数据破局：ABC-130K 放出 3500 小时、13 万 episode 遥操作数据集，是本周对 VLA/模仿学习最有分量的开放基座。</li>
+      <li>世界模型可靠性：「世界模型幻觉可预测可预防」给出量化方法，直击生成式世界模型用于具身规划的核心痛点。</li>
+      <li>感知-接触新通道：VibeAct 用振动声学补足视觉遮挡下的灵巧操作；OctoSense 提供多模态机器人感知的开源硬件平台。</li>
+    </ol>
+  </div>
+  <div class="wk-nav">
+    <span><a href="../index.html">← 返回全部周报</a></span>
+    <span><a href="../../index.html">资讯首页 →</a></span>
+  </div>
+  <footer class="site">由 blueyi.github.io/feeds 自动生成 · 数据源 HN + arXiv · 站点 master 直发 GitHub Pages</footer>
+</div>
+</body>
+</html>

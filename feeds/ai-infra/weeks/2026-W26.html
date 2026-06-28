@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra 每周资讯 · 2026-W26（06-21 ~ 06-28）</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="../../index.html">资讯</a> / <a href="../index.html">AI Infra 每周资讯</a> / 2026-W26</div>
+  <header class="site">
+    <h1>AI Infra 每周资讯 · 2026-W26（06-21 ~ 06-28）</h1>
+    <div class="sub">AI Infra Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>覆盖窗口：<b>2026-06-21 ~ 2026-06-28</b></span>
+    <span>信息源：<b>Hacker News / arXiv</b></span>
+    <span>周编号：<b>2026-W26</b></span>
+  </div>
+  <section class="domain" id="chips">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">821★</span><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank" rel="noopener">OpenAI 发布首款自研芯片，由博通代工</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">OpenAI 推出首颗定制 AI 芯片，由 Broadcom 设计代工——继 Google TPU、Amazon Trainium 之后，又一家头部 AI 公司走向自研算力，意在降低对 Nvidia 的依赖并优化自家训练/推理成本结构。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">170★</span><a href="https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md" target="_blank" rel="noopener">AMD Strix Halo RDMA 集群搭建指南</a></div>
+      <div class="it-sum">社区放出在 AMD Strix Halo APU 上配置 RDMA 集群跑 vLLM 的实操指南，展示了非 Nvidia 平台做分布式推理的可行路径，对关注国产/替代算力栈的读者有参考价值。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.26383v1" target="_blank" rel="noopener">SOLAR：AI 驱动的 Speed-of-Light 性能分析</a></div>
+      <div class="it-sum">提出用模型预测深度学习负载在目标硬件上的理论性能上限（光速性能），并量化当前实现与上限的差距，是软硬件协同优化中定位瓶颈的有用方法学。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.26701v1" target="_blank" rel="noopener">SegFold：细粒度动态数据流加速稀疏 GEMM</a></div>
+      <div class="it-sum">针对 SpGEMM 在 CPU/GPU 及专用加速器上因静态数据流导致的低效，提出细粒度动态数据流架构，对稀疏计算加速器设计有借鉴意义。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="compilers">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27350v1" target="_blank" rel="noopener">CHIA：开源的 Agentic AI 驱动软硬件协同设计框架</a></div>
+      <div class="it-sum">面向计算机体系结构研究，用 agentic AI 自动化 HW/SW co-design 流程，是「LLM 进入编译/体系结构设计闭环」趋势的最新开源实践。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.26547v1" target="_blank" rel="noopener">面向超维计算的编译器驱动近似调优</a></div>
+      <div class="it-sum">在摩尔定律放缓背景下，用编译器自动做近似度调优来加速 ML 负载（超维计算 HDC），体现「编译器承担精度-性能权衡」的方向。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="inference-dc">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">772★</span><a href="https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf" target="_blank" rel="noopener">DSpark：投机解码加速 LLM 推理（DeepSeek）</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">DeepSeek 放出 DSpark 论文，用投机解码（speculative decoding）显著加速大模型推理。HN 高热（772 分），是本周推理优化方向最受关注的工程进展。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.26607v1" target="_blank" rel="noopener">Moebius：MoE 模型服务的无缝运行时并行切换</a></div>
+      <div class="it-sum">MoE 模型服务需多 GPU 协同，Moebius 实现运行时并行策略的无缝切换，提升 MoE 推理的资源弹性与吞吐，是数据中心侧 MoE serving 的实用工作。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.26997v1" target="_blank" rel="noopener">RolloutPipe：解耦式 On-Policy LLM 后训练中的流水线重叠</a></div>
+      <div class="it-sum">面向 RLVR 推理后训练，将 rollout 与 training 在解耦架构下流水线重叠，缓解 RL 后训练的吞吐瓶颈，对做 RLHF/RLVR 训练基础设施的团队有价值。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="datacenter">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27051v1" target="_blank" rel="noopener">BtrLog：云数据库的低延迟日志</a></div>
+      <div class="it-sum">云数据库无法依赖本地盘做 WAL 持久化，被迫写远程存储；BtrLog 针对该场景优化低延迟日志，是大规模云基础设施存储路径优化的代表性工作。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.26633v1" target="_blank" rel="noopener">异构 AI 系统中统一张量重切分的模拟</a></div>
+      <div class="it-sum">现有训练模拟器假设算力/网络同构，但真实训练基础设施日益异构；该工作模拟异构系统下的张量 resharding，对大规模训练集群规划有参考。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="safety">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">1164★</span><a href="https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/" target="_blank" rel="noopener">美国政府将审定谁能使用 GPT-5.6</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">据华盛顿邮报，OpenAI 称美国政府将参与审核其最新模型 GPT-5.6 的使用者准入。前沿模型出口/准入管制进一步制度化，HN 本周第一热帖（1164 分）。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">807★</span><a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/" target="_blank" rel="noopener">Anthropic 指控阿里巴巴非法提取 Claude 模型能力</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">路透报道 Anthropic 称阿里巴巴非法蒸馏/提取其 Claude 模型能力。模型能力窃取与跨境治理成为焦点，叠加出口管制，是本周治理主线。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">546★</span><a href="https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies" target="_blank" rel="noopener">美国允许 Anthropic 向「受信」美企发布 Mythos 模型</a></div>
+      <div class="it-sum">Semafor 报道美方批准 Anthropic 向部分受信美国机构发布强力模型 Mythos，叠加随后亚洲创业公司推出对标模型，凸显出口禁令下的供给重构。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-infra">
+    <h2>6️⃣ 具身智能（基础设施视角）</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="autokernel">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27350v1" target="_blank" rel="noopener">CHIA 框架（亦见编译器栏）：AI 自动化软硬件协同</a></div>
+      <div class="it-sum">用 agentic AI 自动驱动硬件/软件协同设计，与「AI 自动生成/调优算子与硬件」方向高度相关，可视作自动算子生成在体系结构层的延伸。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="edge">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27098v1" target="_blank" rel="noopener">Apple M4 Pro 上 GPU 命令完成后的残留缓存状态</a></div>
+      <div class="it-sum">Apple silicon 统一内存下，GPU 命令完成后的缓存状态缺乏文档；该工作刻画了这一相位边界，对在 Apple ANE/GPU 上做端侧推理优化与安全分析有参考。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2606.27319v1" target="_blank" rel="noopener">面向超低功耗边缘的 IMPLY 忆阻存内计算指令集</a></div>
+      <div class="it-sum">为极严苛能耗约束的边缘计算设计基于 IMPLY 的忆阻存内处理阵列指令集，代表端侧/边缘极低功耗推理硬件的前沿探索。</div>
+    </li>
+    </ul>
+  </section>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>算力自研成潮：OpenAI 发布首款博通代工的自研 AI 芯片，头部公司加速摆脱对 Nvidia 的单一依赖。</li>
+      <li>治理收紧主线：美政府将审定 GPT-5.6 用户准入、Anthropic 指控阿里非法提取 Claude、Mythos 受限发布——出口管制与模型能力保护成本周最强信号。</li>
+      <li>推理优化落地：DeepSeek DSpark 投机解码（HN 772 分）+ Moebius MoE 运行时并行切换，数据中心侧吞吐优化持续推进。</li>
+    </ol>
+  </div>
+  <div class="wk-nav">
+    <span><a href="../index.html">← 返回全部周报</a></span>
+    <span><a href="../../index.html">资讯首页 →</a></span>
+  </div>
+  <footer class="site">由 blueyi.github.io/feeds 自动生成 · 数据源 HN + arXiv · 站点 master 直发 GitHub Pages</footer>
+</div>
+</body>
+</html>
