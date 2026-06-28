@@ -46,6 +46,16 @@ ul.items > li .it-sum{color:var(--fg); opacity:.92; font-size:14.5px; margin:4px
 .badge.score{background:var(--panel2); color:var(--muted); border:1px solid var(--border)}
 .hot{color:var(--hot); font-weight:700}
 .empty{color:var(--muted); font-style:italic; font-size:14px}
+/* 产业动态板块 */
+section.domain.industry{border-left:3px solid var(--accent); padding-left:14px}
+.sub-h{font-size:15px; margin:16px 0 8px; color:var(--accent)}
+table.stocks{width:100%; border-collapse:collapse; font-size:14px; margin:0 0 6px}
+table.stocks th,table.stocks td{text-align:left; padding:7px 10px; border-bottom:1px solid var(--border)}
+table.stocks th{color:var(--muted); font-weight:600; font-size:12.5px}
+table.stocks td .tk{color:var(--muted); font-size:11.5px; margin-left:4px}
+table.stocks td.up{color:var(--ok); font-weight:700}
+table.stocks td.down{color:var(--hot); font-weight:700}
+.badge.amt{background:var(--ok); color:#06210f}
 .highlights{background:var(--panel2); border:1px solid var(--border);
   border-radius:var(--radius); padding:16px 20px; margin:26px 0}
 .highlights h2{margin:0 0 10px; font-size:18px; color:var(--accent)}

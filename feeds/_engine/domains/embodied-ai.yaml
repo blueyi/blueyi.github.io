@@ -46,3 +46,26 @@ domains:
 # 去重：命中以下纯基础设施关键词的条目划归 AI Infra 频道
 exclude_to_channel:
   ai-infra: [vllm, sglang, "tensorrt", mlir, tvm, "torch.compile", "data center", hbm, "kv cache", quantization]
+
+# RSS 媒体源（机器人/具身产业 + 融资）
+rss_feeds:
+  - {name: "IEEE Spectrum Robotics", kind: media, url: "https://spectrum.ieee.org/feeds/topic/robotics.rss"}
+  - {name: "Robotics & Automation News", kind: media, url: "https://roboticsandautomationnews.com/feed/"}
+  - {name: "TechCrunch Robotics", kind: media, url: "https://techcrunch.com/tag/robotics/feed/"}
+  - {name: "TechCrunch Fundraising", kind: finance, url: "https://techcrunch.com/tag/fundraising/feed/"}
+  - {name: "TechCrunch Venture", kind: finance, url: "https://techcrunch.com/category/venture/feed/"}
+  - {name: "Crunchbase News", kind: finance, url: "https://news.crunchbase.com/feed/"}
+  - {name: "VentureBeat AI", kind: media, url: "https://venturebeat.com/category/ai/feed/"}
+  - {name: "The Verge AI", kind: media, url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"}
+  - {name: "Import AI", kind: analysis, url: "https://importai.substack.com/feed"}
+
+# 上市公司龙头（具身/机器人相关，Yahoo Finance）
+tickers:
+  - {sym: "TSLA", name: "特斯拉(Optimus)"}
+  - {sym: "ISRG", name: "直觉外科(手术机器人)"}
+  - {sym: "ABB",  name: "ABB(工业机器人)"}
+  - {sym: "SYM",  name: "Symbotic(仓储机器人)"}
+  - {sym: "SERV", name: "Serve Robotics(配送)"}
+  - {sym: "PATH", name: "UiPath(自动化)"}
+  - {sym: "NVDA", name: "英伟达(机器人算力)"}
+  - {sym: "9618.HK", name: "京东(物流机器人)"}

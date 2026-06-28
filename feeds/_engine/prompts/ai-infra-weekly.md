@@ -17,6 +17,19 @@
 ## 8 个领域（顺序固定，id 见 domains/ai-infra.yaml）
 1️⃣ AI 芯片 · 2️⃣ AI 编译器与框架 · 3️⃣ AI 推理优化（数据中心） · 4️⃣ 数据中心与基础设施 · 5️⃣ AI 安全与治理 · 6️⃣ 具身智能（基础设施视角） · 7️⃣ AI 自动算子与代码生成优化 · 8️⃣ 边缘与端侧推理
 
+## 信息源（prefetch 注入的 JSON 字段）
+- `hn`：Hacker News 高分帖（score/title/url）
+- `arxiv`：arXiv 论文（title/url/abstract）
+- `rss`：产业媒体/公司官方/融资/分析源条目，每条带 `feed`（来源名）、`kind`（media/official/finance/analysis）、title/url/summary
+- `markets`：上市公司行情（sym/name/price/pct_5d/currency），用于产业动态板块
+- 技术领域（8 类）综合用 hn+arxiv+rss(media/official/analysis)；产业动态板块用 rss(finance) + markets
+
+## 产业动态板块（industry，新增，必填一个）
+新增第 9 个板块「📈 产业动态」，写入 curated 的 `industry` 键，含两部分：
+- `stocks`：从 prefetch 的 markets 里挑 6-10 只龙头，每只 {name,sym,price,pct,currency,note}。price/pct/currency 直接抄 markets 的真实数值**不得改动**；note 是你结合本周 rss 提炼的一句话关键事件（财报/新品/订单/大额 capex），无可靠事件就留空字符串。
+- `funding`：从 rss(kind=finance/media) 里挑**与 AI Infra 真正相关**的融资/并购/估值事件 2-5 条，每条 {title(中文),summary(中文),url(真实),amount(如 "$50M"，没有就 null)}。**绝不编造金额/轮次/投资方**；金额只写 rss 标题/摘要里明确出现的。与 AI Infra 无关的泛融资（消费、生物、气候等）一律剔除。
+- 若本周 markets 全失败且无相关融资，industry 可整体省略（板块自动不显示）。
+
 ## curated 数据契约（写入 data/<week>.json 的 curated 键）
 ```json
 {

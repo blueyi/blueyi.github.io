@@ -191,6 +191,109 @@ def fetch_arxiv(all_re, per_domain, excl_re, cats, per_cat: int = 10) -> list:
     return out
 
 
+def _parse_feed_items(xml: str, limit: int) -> list:
+    """解析 RSS <item> 或 Atom <entry>，返回 [{title,url,summary}]。"""
+    rows = []
+    blocks = re.findall(r"<item[ >].*?</item>", xml, re.S) or re.findall(r"<entry[ >].*?</entry>", xml, re.S)
+    for b in blocks[:limit]:
+        t = re.search(r"<title[^>]*>(.*?)</title>", b, re.S)
+        # link: RSS <link>url</link>; Atom <link href="url"/>
+        l = re.search(r"<link[^>]*>(.*?)</link>", b, re.S)
+        href = re.search(r'<link[^>]*href="([^"]+)"', b)
+        d = re.search(r"<description[^>]*>(.*?)</description>", b, re.S) or \
+            re.search(r"<summary[^>]*>(.*?)</summary>", b, re.S)
+        if not t:
+            continue
+        url = ""
+        if l and l.group(1).strip():
+            url = l.group(1).strip()
+        elif href:
+            url = href.group(1).strip()
+        rows.append({
+            "title": _clean_xml(t.group(1)),
+            "url": url,
+            "summary": _clean_xml(d.group(1))[:300] if d else "",
+        })
+    return rows
+
+
+def fetch_rss(all_re, per_domain, excl_re, feeds, per_feed: int = 12) -> list:
+    """并发抓取 RSS 媒体源；单源超时/失败跳过，不影响整体。
+    media/official/analysis 走关键词过滤；finance(融资源)放宽——
+    融资条目常不含技术关键词，保留交给 agent 判断领域相关性。"""
+    out = []
+    if not feeds:
+        return out
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    def _one(feed):
+        try:
+            xml = http_get(feed["url"], timeout=12)
+            return feed, _parse_feed_items(xml, per_feed), None
+        except Exception as e:
+            return feed, [], f"rss {feed['name']}: {e}"
+
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futs = [ex.submit(_one, f) for f in feeds]
+        for fu in as_completed(futs):
+            feed, rows, err = fu.result()
+            if err:
+                out.append({"_error": err})
+                continue
+            kind = feed.get("kind", "media")
+            for r in rows:
+                text = f"{r['title']} {r.get('summary','')}"
+                domains = tag_domains(text, per_domain)
+                is_finance = (kind == "finance")
+                # 非融资源：必须命中本频道关键词；融资源：放宽（agent 再判定）
+                if not is_finance:
+                    if all_re is None or not all_re.search(text):
+                        continue
+                    if excl_re and excl_re.search(text) and not domains:
+                        continue
+                out.append({
+                    "source": "rss",
+                    "feed": feed["name"],
+                    "kind": kind,
+                    "title": r["title"],
+                    "url": r["url"],
+                    "summary": r.get("summary", ""),
+                    "domains": domains,
+                })
+    return out
+
+
+def fetch_markets(tickers) -> list:
+    """Yahoo Finance chart API 取最新价 + 近5日涨跌幅。无需 key。单只失败跳过。"""
+    out = []
+    if not tickers:
+        return out
+    for tk in tickers:
+        sym = tk["sym"]
+        try:
+            url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}"
+                   f"?interval=1d&range=5d")
+            data = json.loads(http_get(url, timeout=10))
+            res = data["chart"]["result"][0]
+            meta = res.get("meta", {})
+            price = meta.get("regularMarketPrice")
+            closes = [c for c in res["indicators"]["quote"][0].get("close", []) if c is not None]
+            prev = closes[0] if closes else None
+            pct = None
+            if price is not None and prev:
+                pct = round((price - prev) / prev * 100, 2)
+            out.append({
+                "sym": sym,
+                "name": tk.get("name", sym),
+                "price": round(price, 2) if price is not None else None,
+                "pct_5d": pct,
+                "currency": meta.get("currency", ""),
+            })
+        except Exception as e:
+            out.append({"sym": sym, "name": tk.get("name", sym), "_error": str(e)[:80]})
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--channel", required=True, choices=["ai-infra", "embodied-ai"])
@@ -211,6 +314,8 @@ def main():
         "window": {"start": window_start, "end": now.strftime("%Y-%m-%d")},
         "hn": [],
         "arxiv": [],
+        "rss": [],
+        "markets": [],
         "errors": [],
     }
 
@@ -228,7 +333,24 @@ def main():
     except Exception as e:
         raw["errors"].append(f"arxiv outer: {e}")
 
-    raw["counts"] = {"hn": len(raw["hn"]), "arxiv": len(raw["arxiv"]), "errors": len(raw["errors"])}
+    try:
+        rss = fetch_rss(all_re, per_domain, excl_re, spec.get("rss_feeds", []))
+        raw["rss"] = [x for x in rss if "_error" not in x]
+        raw["errors"] += [x["_error"] for x in rss if "_error" in x]
+    except Exception as e:
+        raw["errors"].append(f"rss outer: {e}")
+
+    try:
+        raw["markets"] = fetch_markets(spec.get("tickers", []))
+    except Exception as e:
+        raw["errors"].append(f"markets outer: {e}")
+
+    raw["counts"] = {
+        "hn": len(raw["hn"]), "arxiv": len(raw["arxiv"]),
+        "rss": len(raw["rss"]),
+        "markets": len([m for m in raw["markets"] if "_error" not in m]),
+        "errors": len(raw["errors"]),
+    }
 
     # 写入 data/<week>.json：保留已有 curated 段
     data_path = FEEDS_DIR / args.channel / "data" / f"{week}.json"

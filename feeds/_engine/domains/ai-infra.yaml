@@ -55,3 +55,40 @@ domains:
 # 去重：命中以下关键词的条目划归 Embodied AI 频道，不收入本频道（除非同时强命中基础设施词）
 exclude_to_channel:
   embodied-ai: [vla, "vision-language-action", openvla, "pi0", "pi-zero", "diffusion policy", "dexterous", "sim2real", "teleoperation", "world model", "humanoid policy", "manipulation policy"]
+
+# RSS 媒体源（fetch_rss 抓取；media=产业媒体, official=公司一手, finance=融资/独角兽, analysis=深度分析）
+# 抓回的条目同样过关键词过滤(all_re)与频道去重(exclude)，再由 agent 编辑分类。
+rss_feeds:
+  - {name: "TechCrunch AI", kind: media, url: "https://techcrunch.com/category/artificial-intelligence/feed/"}
+  - {name: "TechCrunch Fundraising", kind: finance, url: "https://techcrunch.com/tag/fundraising/feed/"}
+  - {name: "TechCrunch Venture", kind: finance, url: "https://techcrunch.com/category/venture/feed/"}
+  - {name: "Crunchbase News", kind: finance, url: "https://news.crunchbase.com/feed/"}
+  - {name: "VentureBeat AI", kind: media, url: "https://venturebeat.com/category/ai/feed/"}
+  - {name: "The Verge AI", kind: media, url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"}
+  - {name: "SiliconANGLE", kind: media, url: "https://siliconangle.com/feed/"}
+  - {name: "The Register", kind: media, url: "https://www.theregister.com/headlines.atom"}
+  - {name: "Tom's Hardware", kind: media, url: "https://www.tomshardware.com/feeds/all"}
+  - {name: "SemiEngineering", kind: media, url: "https://semiengineering.com/feed/"}
+  - {name: "EE Times", kind: media, url: "https://www.eetimes.com/feed/"}
+  - {name: "SemiAnalysis", kind: analysis, url: "https://www.semianalysis.com/feed"}
+  - {name: "NVIDIA Blog", kind: official, url: "https://blogs.nvidia.com/feed/"}
+  - {name: "Google AI Blog", kind: official, url: "https://blog.google/technology/ai/rss/"}
+  - {name: "OpenAI News", kind: official, url: "https://openai.com/news/rss.xml"}
+  - {name: "HuggingFace Blog", kind: official, url: "https://huggingface.co/blog/feed.xml"}
+  - {name: "Microsoft Research", kind: official, url: "https://www.microsoft.com/en-us/research/feed/"}
+  - {name: "Import AI", kind: analysis, url: "https://importai.substack.com/feed"}
+
+# 上市公司龙头（fetch_markets 取 Yahoo Finance 最新价 + 周涨跌幅，供「📈 产业动态」板块）
+tickers:
+  - {sym: "NVDA", name: "英伟达"}
+  - {sym: "AMD",  name: "AMD"}
+  - {sym: "AVGO", name: "博通"}
+  - {sym: "TSM",  name: "台积电"}
+  - {sym: "MU",   name: "美光"}
+  - {sym: "ARM",  name: "Arm"}
+  - {sym: "INTC", name: "英特尔"}
+  - {sym: "SMCI", name: "超微SMCI"}
+  - {sym: "MSFT", name: "微软"}
+  - {sym: "GOOGL", name: "谷歌"}
+  - {sym: "AMZN", name: "亚马逊"}
+  - {sym: "ORCL", name: "甲骨文"}

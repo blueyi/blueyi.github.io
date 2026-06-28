@@ -17,8 +17,18 @@
 ## 7 个方向（顺序固定，id 见 domains/embodied-ai.yaml）
 1️⃣ VLA · 2️⃣ 灵巧手/操作 · 3️⃣ sim2real · 4️⃣ 具身模型（世界模型/人形策略/基础模型） · 5️⃣ 具身智能芯片 · 6️⃣ 制造/产线 · 7️⃣ 市场/产业
 
+## 信息源（prefetch 注入字段）
+- `hn`/`arxiv`：同前。`rss`：机器人媒体/融资/分析（带 feed/kind/title/url/summary）。`markets`：具身相关上市公司行情。
+- 7 个方向用 arxiv+hn+rss(media/analysis)；产业动态板块用 rss(finance/media) + markets。
+
+## 产业动态板块（industry，新增）
+写入 curated 的 `industry` 键：
+- `stocks`：从 markets 挑具身/机器人相关龙头（TSLA/ISRG/SYM/SERV/京东等），{name,sym,price,pct,currency,note}，行情数值直接抄 markets 不得改，note 一句话关键事件可留空。
+- `funding`：从 rss 挑**机器人/具身真正相关**的融资/产品/部署事件 2-5 条 {title,summary,url,amount(无则null)}。绝不编造金额；泛 AI/消费类融资剔除。产业类（公司动态/部署）若来自媒体而非确切融资，amount 用 null，summary 注明「以官方渠道核验」。
+- markets 全失败且无相关条目时 industry 可省略。
+
 ## curated 数据契约
-同 ai-infra-weekly.md，唯领域 id/name/emoji 用本频道 7 个方向。
+同 ai-infra-weekly.md（含 industry 键），唯领域 id/name/emoji 用本频道 7 个方向。
 
 ## 执行步骤
 同 ai-infra-weekly.md，但 `--channel embodied-ai`。

@@ -10,8 +10,12 @@
 
 ## 1. 它是怎么工作的
 
+信息源（v2 扩充）：HN + arXiv(RSS+API兜底) + 产业媒体/公司官方/融资/分析 RSS（并发抓取）+ Yahoo Finance 行情。
+源清单与上市公司龙头在 `domains/<channel>.yaml` 的 `rss_feeds:` 和 `tickers:` 块，改源只改 yaml。
+页面除技术领域板块外，新增「📈 产业动态」板块（上市公司风向表 + 融资/独角兽列表），数据走 curated.industry。
+
 ```
-[定时] → prefetch.py 抓最近7天 HN+arXiv（按频道 domains 关键词过滤+分流）
+[定时] → prefetch.py 抓最近7天 HN+arXiv+RSS+行情（按频道 domains 关键词过滤+分流，RSS 并发）
        → 写 <channel>/data/<YYYY-Www>.json 的 raw 段，并把 raw 打到 stdout
 [agent] 读 raw → 按 prompt 规则筛选/分类/中文编辑 → 写回 data 的 curated 段
        → render_week.py 渲染 weeks/<week>.html

@@ -72,6 +72,50 @@ def render_domain(d: dict) -> str:
     return head + body + "  </section>"
 
 
+def render_industry(ind: dict) -> str:
+    """产业动态板块：上市公司风向（表格）+ 融资/独角兽（列表）。ind 为空则返回空串。"""
+    if not ind:
+        return ""
+    stocks = ind.get("stocks") or []
+    funding = ind.get("funding") or []
+    if not stocks and not funding:
+        return ""
+    parts = ['  <section class="domain industry" id="industry">', '    <h2>📈 产业动态</h2>']
+    # 上市公司
+    if stocks:
+        parts.append('    <h3 class="sub-h">上市公司风向</h3>')
+        parts.append('    <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>')
+        for s in stocks:
+            pct = s.get("pct")
+            cls = "up" if (isinstance(pct, (int, float)) and pct >= 0) else "down"
+            pct_str = (f'+{pct}%' if isinstance(pct, (int, float)) and pct >= 0
+                       else (f'{pct}%' if isinstance(pct, (int, float)) else '—'))
+            price = s.get("price")
+            price_str = f'{price} {esc(s.get("currency",""))}'.strip() if price is not None else '—'
+            parts.append(
+                f'      <tr><td>{esc(s.get("name",""))} <span class="tk">{esc(s.get("sym",""))}</span></td>'
+                f'<td>{esc(price_str)}</td><td class="{cls}">{esc(pct_str)}</td>'
+                f'<td>{esc(s.get("note",""))}</td></tr>'
+            )
+        parts.append('    </tbody></table>')
+    # 融资 / 独角兽
+    if funding:
+        parts.append('    <h3 class="sub-h">融资与独角兽</h3>')
+        parts.append('    <ul class="items">')
+        for f in funding:
+            amt = f.get("amount")
+            amt_badge = f'<span class="badge amt">{esc(amt)}</span>' if amt else ''
+            url = esc(f.get("url", "#"))
+            parts.append(
+                '      <li>'
+                f'<div class="it-title">{amt_badge}<a href="{url}" target="_blank" rel="noopener">{esc(f.get("title",""))}</a></div>'
+                f'<div class="it-sum">{esc(f.get("summary",""))}</div></li>'
+            )
+        parts.append('    </ul>')
+    parts.append('  </section>')
+    return "\n".join(parts)
+
+
 def render(channel: str, week: str) -> str:
     data_path = FEEDS_DIR / channel / "data" / f"{week}.json"
     doc = json.loads(data_path.read_text(encoding="utf-8"))
@@ -80,6 +124,7 @@ def render(channel: str, week: str) -> str:
     title_date = cur.get("title_date", week)
     window = cur.get("window", "")
     domains_html = "\n".join(render_domain(d) for d in cur.get("domains", []))
+    industry_html = render_industry(cur.get("industry") or {})
     hl = cur.get("highlights") or []
     hl_html = ""
     if hl:
@@ -107,16 +152,17 @@ def render(channel: str, week: str) -> str:
   </header>
   <div class="meta-bar">
     <span>覆盖窗口：<b>{esc(window)}</b></span>
-    <span>信息源：<b>Hacker News / arXiv</b></span>
+    <span>信息源：<b>HN / arXiv / 产业媒体 / 公司官方 / 融资 / 行情</b></span>
     <span>周编号：<b>{esc(week)}</b></span>
   </div>
 {domains_html}
+{industry_html}
 {hl_html}
   <div class="wk-nav">
     <span><a href="../index.html">← 返回全部周报</a></span>
     <span><a href="../../index.html">资讯首页 →</a></span>
   </div>
-  <footer class="site">由 blueyi.github.io/feeds 自动生成 · 数据源 HN + arXiv · 站点 master 直发 GitHub Pages</footer>
+  <footer class="site">由 blueyi.github.io/feeds 自动生成 · 数据源 HN/arXiv/产业媒体/公司官方/融资/Yahoo Finance 行情 · 站点 master 直发 GitHub Pages</footer>
 </div>
 </body>
 </html>
