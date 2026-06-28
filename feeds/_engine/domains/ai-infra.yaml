@@ -92,3 +92,20 @@ tickers:
   - {sym: "GOOGL", name: "谷歌"}
   - {sym: "AMZN", name: "亚马逊"}
   - {sym: "ORCL", name: "甲骨文"}
+
+# 国内中文媒体 RSS（只保留高信噪比源，剔除广告/软文偏多的钛媒体/爱范儿等；kind=cn_media/cn_finance）
+cn_rss_feeds:
+  - {name: "36氪", kind: cn_media, url: "https://36kr.com/feed"}
+  - {name: "36氪融资快讯", kind: cn_finance, url: "https://36kr.com/feed-newsflash"}
+  - {name: "量子位", kind: cn_media, url: "https://www.qbitai.com/feed"}
+  - {name: "InfoQ中国", kind: cn_media, url: "https://www.infoq.cn/feed"}
+  - {name: "雷锋网", kind: cn_media, url: "https://www.leiphone.com/feed"}
+
+# 国内龙头股（东方财富 push2；secid 1.=沪 0.=深 116.=港股。A股/港股同公司只留港股）
+cn_tickers:
+  - {secid: "116.00981", name: "中芯国际", market: "港股"}
+  - {secid: "116.01347", name: "华虹半导体", market: "港股"}
+  - {secid: "1.688256", name: "寒武纪", market: "A股"}
+  - {secid: "1.688041", name: "海光信息", market: "A股"}
+  - {secid: "0.300308", name: "中际旭创", market: "A股"}
+  - {secid: "0.000977", name: "浪潮信息", market: "A股"}

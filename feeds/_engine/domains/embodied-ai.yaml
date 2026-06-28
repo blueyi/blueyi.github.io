@@ -69,3 +69,19 @@ tickers:
   - {sym: "PATH", name: "UiPath(自动化)"}
   - {sym: "NVDA", name: "英伟达(机器人算力)"}
   - {sym: "9618.HK", name: "京东(物流机器人)"}
+
+# 国内中文媒体 RSS（高信噪比源；机器人/具身在国内媒体覆盖好）
+cn_rss_feeds:
+  - {name: "36氪", kind: cn_media, url: "https://36kr.com/feed"}
+  - {name: "36氪融资快讯", kind: cn_finance, url: "https://36kr.com/feed-newsflash"}
+  - {name: "量子位", kind: cn_media, url: "https://www.qbitai.com/feed"}
+  - {name: "雷锋网", kind: cn_media, url: "https://www.leiphone.com/feed"}
+
+# 国内龙头股（A股/港股同公司只留港股；华为/宇树/智元/银河通用等未上市，归产业文字区不进股票表）
+cn_tickers:
+  - {secid: "116.09880", name: "优必选", market: "港股"}
+  - {secid: "116.09660", name: "地平线机器人", market: "港股"}
+  - {secid: "0.300124", name: "汇川技术", market: "A股"}
+  - {secid: "0.002747", name: "埃斯顿", market: "A股"}
+  - {secid: "1.688017", name: "绿的谐波", market: "A股"}
+  - {secid: "0.002230", name: "科大讯飞", market: "A股"}

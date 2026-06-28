@@ -127,24 +127,37 @@
   </section>
   <section class="domain industry" id="industry">
     <h2>📈 产业动态</h2>
-    <h3 class="sub-h">上市公司风向</h3>
-    <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
-      <tr><td>英伟达 <span class="tk">NVDA</span></td><td>192.53 USD</td><td class="down">-7.73%</td><td>数据中心 GPU 龙头；本周随 AI 板块回调</td></tr>
-      <tr><td>AMD <span class="tk">AMD</span></td><td>521.58 USD</td><td class="down">-5.45%</td><td>MI 系列加速器追赶；Strix Halo 推进边缘</td></tr>
-      <tr><td>博通 <span class="tk">AVGO</span></td><td>365.02 USD</td><td class="down">-6.91%</td><td>定制 ASIC（为 OpenAI 代工自研芯片）</td></tr>
-      <tr><td>台积电 <span class="tk">TSM</span></td><td>432.35 USD</td><td class="down">-7.55%</td><td>先进制程/CoWoS 封装产能核心</td></tr>
-      <tr><td>美光 <span class="tk">MU</span></td><td>1132.33 USD</td><td class="down">-6.53%</td><td>HBM 内存供给关键</td></tr>
-      <tr><td>Arm <span class="tk">ARM</span></td><td>334.27 USD</td><td class="down">-18.01%</td><td>本周回调显著（-18%）；端侧/数据中心 IP</td></tr>
-      <tr><td>超微SMCI <span class="tk">SMCI</span></td><td>30.63 USD</td><td class="down">-13.62%</td><td>AI 服务器整机；波动大</td></tr>
-      <tr><td>甲骨文 <span class="tk">ORCL</span></td><td>148.53 USD</td><td class="down">-15.16%</td><td>云算力扩张；本周回调</td></tr>
-      <tr><td>微软 <span class="tk">MSFT</span></td><td>372.97 USD</td><td class="up">+1.53%</td><td>逆势收红；Azure AI 算力需求强</td></tr>
-      <tr><td>谷歌 <span class="tk">GOOGL</span></td><td>337.39 USD</td><td class="down">-3.51%</td><td>自研 TPU + 云</td></tr>
-    </tbody></table>
+    <details class="stocks-fold">
+      <summary>上市公司风向（16 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>192.53 USD</td><td class="down">-7.73%</td><td>数据中心 GPU 龙头；本周随 AI 板块回调</td></tr>
+        <tr><td>AMD <span class="tk">AMD</span></td><td>521.58 USD</td><td class="down">-5.45%</td><td>MI 系列加速器追赶；Strix Halo 推进边缘</td></tr>
+        <tr><td>博通 <span class="tk">AVGO</span></td><td>365.02 USD</td><td class="down">-6.91%</td><td>定制 ASIC（为 OpenAI 代工自研芯片）</td></tr>
+        <tr><td>台积电 <span class="tk">TSM</span></td><td>432.35 USD</td><td class="down">-7.55%</td><td>先进制程/CoWoS 封装产能核心</td></tr>
+        <tr><td>美光 <span class="tk">MU</span></td><td>1132.33 USD</td><td class="down">-6.53%</td><td>HBM 内存供给关键</td></tr>
+        <tr><td>Arm <span class="tk">ARM</span></td><td>334.27 USD</td><td class="down">-18.01%</td><td>本周回调显著（-18%）；端侧/数据中心 IP</td></tr>
+        <tr><td>超微SMCI <span class="tk">SMCI</span></td><td>30.63 USD</td><td class="down">-13.62%</td><td>AI 服务器整机；波动大</td></tr>
+        <tr><td>甲骨文 <span class="tk">ORCL</span></td><td>148.53 USD</td><td class="down">-15.16%</td><td>云算力扩张；本周回调</td></tr>
+        <tr><td>微软 <span class="tk">MSFT</span></td><td>372.97 USD</td><td class="up">+1.53%</td><td>逆势收红；Azure AI 算力需求强</td></tr>
+        <tr><td>谷歌 <span class="tk">GOOGL</span></td><td>337.39 USD</td><td class="down">-3.51%</td><td>自研 TPU + 云</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>中芯国际 <span class="tk">116.00981 · 港股</span></td><td>80.0 HKD</td><td class="down">-6.98%</td><td>大陆晶圆代工龙头（港股）</td></tr>
+        <tr><td>华虹半导体 <span class="tk">116.01347 · 港股</span></td><td>189.5 HKD</td><td class="down">-1.71%</td><td>特色工艺代工（港股）</td></tr>
+        <tr><td>寒武纪 <span class="tk">1.688256 · A股</span></td><td>1458.0 CNY</td><td class="down">-3.12%</td><td>云端 AI 芯片国产标杆</td></tr>
+        <tr><td>海光信息 <span class="tk">1.688041 · A股</span></td><td>344.9 CNY</td><td class="down">-4.27%</td><td>国产 CPU/DCU</td></tr>
+        <tr><td>中际旭创 <span class="tk">0.300308 · A股</span></td><td>1253.89 CNY</td><td class="down">-5.25%</td><td>光模块（AI 数据中心互联）</td></tr>
+        <tr><td>浪潮信息 <span class="tk">0.000977 · A股</span></td><td>63.89 CNY</td><td class="down">-6.83%</td><td>AI 服务器整机</td></tr>
+      </tbody></table>
+    </details>
     <h3 class="sub-h">融资与独角兽</h3>
     <ul class="items">
-      <li><div class="it-title"><span class="badge amt">$1.1B</span><a href="https://techcrunch.com/2025/09/30/a-year-after-filing-to-ipo-still-private-cerebras/" target="_blank" rel="noopener">Cerebras Systems 再融资 11 亿美元（IPO 前）</a></div><div class="it-sum">晶圆级 AI 芯片独角兽 Cerebras 在申请 IPO 一年后再获 11 亿美元融资，是 AI 算力硬件赛道的标志性事件。</div></li>
-      <li><div class="it-title"><span class="badge amt">$3B</span><a href="https://news.crunchbase.com/venture/menlo-ventures-raise-ai-startup-funding-across/" target="_blank" rel="noopener">Menlo Ventures 募资 30 亿美元 AI 基金</a></div><div class="it-sum">押注 Anthropic 的 Menlo Ventures 募集 30 亿美元新基金，专投 AI 创业公司，反映一级市场对 AI Infra 的持续重注。</div></li>
-      <li><div class="it-title"><span class="badge amt">$50M</span><a href="https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-stress-test-ai-agents/" target="_blank" rel="noopener">Patronus AI 获 5000 万美元</a></div><div class="it-sum">Patronus AI 融资 5000 万美元，构建用于压力测试 AI agent 的「数字世界」，属 AI 评估/可靠性基础设施方向。</div></li>
+      <li><div class="it-title"><span class="badge amt">$1.1B</span><span class="badge region">海外</span><a href="https://techcrunch.com/2025/09/30/a-year-after-filing-to-ipo-still-private-cerebras/" target="_blank" rel="noopener">Cerebras Systems 再融资 11 亿美元（IPO 前）</a></div><div class="it-sum">晶圆级 AI 芯片独角兽 Cerebras 在申请 IPO 一年后再获 11 亿美元融资，是 AI 算力硬件赛道的标志性事件。</div></li>
+      <li><div class="it-title"><span class="badge amt">$3B</span><span class="badge region">海外</span><a href="https://news.crunchbase.com/venture/menlo-ventures-raise-ai-startup-funding-across/" target="_blank" rel="noopener">Menlo Ventures 募资 30 亿美元 AI 基金</a></div><div class="it-sum">押注 Anthropic 的 Menlo Ventures 募集 30 亿美元新基金，专投 AI 创业公司，反映一级市场对 AI Infra 的持续重注。</div></li>
+      <li><div class="it-title"><span class="badge amt">$50M</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-stress-test-ai-agents/" target="_blank" rel="noopener">Patronus AI 获 5000 万美元</a></div><div class="it-sum">Patronus AI 融资 5000 万美元，构建用于压力测试 AI agent 的「数字世界」，属 AI 评估/可靠性基础设施方向。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://36kr.com/" target="_blank" rel="noopener">智元旗下灵巧手公司估值达 10 亿美元，成立 5 个月首季盈利</a></div><div class="it-sum">据 36氪，智元机器人旗下灵巧手业务估值达 10 亿美元、成立仅 5 个月即首季盈利，反映国产灵巧手/机器人零部件商业化提速（未上市，以官方渠道核验）。</div></li>
     </ul>
   </section>
   <div class="highlights">

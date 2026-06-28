@@ -217,10 +217,11 @@ def _parse_feed_items(xml: str, limit: int) -> list:
     return rows
 
 
-def fetch_rss(all_re, per_domain, excl_re, feeds, per_feed: int = 12) -> list:
+def fetch_rss(all_re, per_domain, excl_re, feeds, per_feed: int = 12, cn_mode: bool = False) -> list:
     """并发抓取 RSS 媒体源；单源超时/失败跳过，不影响整体。
     media/official/analysis 走关键词过滤；finance(融资源)放宽——
-    融资条目常不含技术关键词，保留交给 agent 判断领域相关性。"""
+    融资条目常不含技术关键词，保留交给 agent 判断领域相关性。
+    cn_mode=True：中文源，英文关键词过滤不适用，全部保留交 agent 编辑判定。"""
     out = []
     if not feeds:
         return out
@@ -244,15 +245,15 @@ def fetch_rss(all_re, per_domain, excl_re, feeds, per_feed: int = 12) -> list:
             for r in rows:
                 text = f"{r['title']} {r.get('summary','')}"
                 domains = tag_domains(text, per_domain)
-                is_finance = (kind == "finance")
-                # 非融资源：必须命中本频道关键词；融资源：放宽（agent 再判定）
-                if not is_finance:
+                is_finance = (kind in ("finance", "cn_finance"))
+                # 中文源/融资源：放宽（agent 再判定）；其余英文源：关键词过滤 + 频道去重
+                if not cn_mode and not is_finance:
                     if all_re is None or not all_re.search(text):
                         continue
                     if excl_re and excl_re.search(text) and not domains:
                         continue
                 out.append({
-                    "source": "rss",
+                    "source": "cn_rss" if cn_mode else "rss",
                     "feed": feed["name"],
                     "kind": kind,
                     "title": r["title"],
@@ -260,6 +261,39 @@ def fetch_rss(all_re, per_domain, excl_re, feeds, per_feed: int = 12) -> list:
                     "summary": r.get("summary", ""),
                     "domains": domains,
                 })
+    return out
+
+
+def fetch_cn_markets(cn_tickers) -> list:
+    """东方财富 push2 API 取国内龙头股最新价 + 涨跌幅。无需 key。单只失败跳过。
+    f43=价格(×100), f170=涨跌幅(×100), f58=名称, f59=小数位。"""
+    out = []
+    if not cn_tickers:
+        return out
+    for tk in cn_tickers:
+        secid = tk["secid"]
+        try:
+            url = (f"https://push2.eastmoney.com/api/qt/stock/get?secid={secid}"
+                   f"&fields=f43,f57,f58,f59,f169,f170")
+            data = json.loads(http_get(url, timeout=10))
+            d = data.get("data")
+            if not d:
+                out.append({"secid": secid, "name": tk.get("name", secid), "_error": "null data"})
+                continue
+            dec = d.get("f59", 2)
+            div = 10 ** dec if isinstance(dec, int) and dec >= 0 else 100
+            price = d.get("f43")
+            pct = d.get("f170")
+            out.append({
+                "secid": secid,
+                "name": tk.get("name") or d.get("f58", secid),
+                "market": tk.get("market", ""),
+                "price": round(price / div, 2) if isinstance(price, (int, float)) else None,
+                "pct_5d": round(pct / 100, 2) if isinstance(pct, (int, float)) else None,
+                "currency": "HKD" if secid.startswith("116.") else "CNY",
+            })
+        except Exception as e:
+            out.append({"secid": secid, "name": tk.get("name", secid), "_error": str(e)[:80]})
     return out
 
 
@@ -315,7 +349,9 @@ def main():
         "hn": [],
         "arxiv": [],
         "rss": [],
+        "cn_rss": [],
         "markets": [],
+        "cn_markets": [],
         "errors": [],
     }
 
@@ -341,14 +377,27 @@ def main():
         raw["errors"].append(f"rss outer: {e}")
 
     try:
+        cn_rss = fetch_rss(all_re, per_domain, excl_re, spec.get("cn_rss_feeds", []), cn_mode=True)
+        raw["cn_rss"] = [x for x in cn_rss if "_error" not in x]
+        raw["errors"] += [x["_error"] for x in cn_rss if "_error" in x]
+    except Exception as e:
+        raw["errors"].append(f"cn_rss outer: {e}")
+
+    try:
         raw["markets"] = fetch_markets(spec.get("tickers", []))
     except Exception as e:
         raw["errors"].append(f"markets outer: {e}")
 
+    try:
+        raw["cn_markets"] = fetch_cn_markets(spec.get("cn_tickers", []))
+    except Exception as e:
+        raw["errors"].append(f"cn_markets outer: {e}")
+
     raw["counts"] = {
         "hn": len(raw["hn"]), "arxiv": len(raw["arxiv"]),
-        "rss": len(raw["rss"]),
+        "rss": len(raw["rss"]), "cn_rss": len(raw["cn_rss"]),
         "markets": len([m for m in raw["markets"] if "_error" not in m]),
+        "cn_markets": len([m for m in raw["cn_markets"] if "_error" not in m]),
         "errors": len(raw["errors"]),
     }
 

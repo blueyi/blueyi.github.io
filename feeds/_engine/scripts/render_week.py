@@ -72,43 +72,60 @@ def render_domain(d: dict) -> str:
     return head + body + "  </section>"
 
 
+def _stock_table(stocks: list, region_label: str) -> list:
+    """生成一个股票表（含地区小标题）。"""
+    rows = [f'      <div class="stock-region">{esc(region_label)}</div>',
+            '      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>']
+    for s in stocks:
+        pct = s.get("pct")
+        cls = "up" if (isinstance(pct, (int, float)) and pct >= 0) else "down"
+        pct_str = (f'+{pct}%' if isinstance(pct, (int, float)) and pct >= 0
+                   else (f'{pct}%' if isinstance(pct, (int, float)) else '—'))
+        price = s.get("price")
+        price_str = f'{price} {esc(s.get("currency",""))}'.strip() if price is not None else '—'
+        code = s.get("sym") or s.get("secid", "")
+        mkt = f' · {esc(s.get("market"))}' if s.get("market") else ''
+        rows.append(
+            f'        <tr><td>{esc(s.get("name",""))} <span class="tk">{esc(code)}{mkt}</span></td>'
+            f'<td>{esc(price_str)}</td><td class="{cls}">{esc(pct_str)}</td>'
+            f'<td>{esc(s.get("note",""))}</td></tr>'
+        )
+    rows.append('      </tbody></table>')
+    return rows
+
+
 def render_industry(ind: dict) -> str:
-    """产业动态板块：上市公司风向（表格）+ 融资/独角兽（列表）。ind 为空则返回空串。"""
+    """产业动态板块：上市公司风向（默认折叠，海外+国内分区）+ 融资/独角兽（列表）。"""
     if not ind:
         return ""
-    stocks = ind.get("stocks") or []
+    stocks = ind.get("stocks") or []          # 海外（Yahoo）
+    cn_stocks = ind.get("cn_stocks") or []    # 国内（东财）
     funding = ind.get("funding") or []
-    if not stocks and not funding:
+    if not stocks and not cn_stocks and not funding:
         return ""
     parts = ['  <section class="domain industry" id="industry">', '    <h2>📈 产业动态</h2>']
-    # 上市公司
-    if stocks:
-        parts.append('    <h3 class="sub-h">上市公司风向</h3>')
-        parts.append('    <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>')
-        for s in stocks:
-            pct = s.get("pct")
-            cls = "up" if (isinstance(pct, (int, float)) and pct >= 0) else "down"
-            pct_str = (f'+{pct}%' if isinstance(pct, (int, float)) and pct >= 0
-                       else (f'{pct}%' if isinstance(pct, (int, float)) else '—'))
-            price = s.get("price")
-            price_str = f'{price} {esc(s.get("currency",""))}'.strip() if price is not None else '—'
-            parts.append(
-                f'      <tr><td>{esc(s.get("name",""))} <span class="tk">{esc(s.get("sym",""))}</span></td>'
-                f'<td>{esc(price_str)}</td><td class="{cls}">{esc(pct_str)}</td>'
-                f'<td>{esc(s.get("note",""))}</td></tr>'
-            )
-        parts.append('    </tbody></table>')
-    # 融资 / 独角兽
+    # 上市公司风向 —— 默认折叠，点击展开
+    if stocks or cn_stocks:
+        n = len(stocks) + len(cn_stocks)
+        parts.append('    <details class="stocks-fold">')
+        parts.append(f'      <summary>上市公司风向（{n} 只，点击展开 · 截至最近收盘）</summary>')
+        if stocks:
+            parts += _stock_table(stocks, "🌍 海外")
+        if cn_stocks:
+            parts += _stock_table(cn_stocks, "🇨🇳 国内（A股/港股）")
+        parts.append('    </details>')
+    # 融资 / 独角兽（默认展开）
     if funding:
         parts.append('    <h3 class="sub-h">融资与独角兽</h3>')
         parts.append('    <ul class="items">')
         for f in funding:
             amt = f.get("amount")
             amt_badge = f'<span class="badge amt">{esc(amt)}</span>' if amt else ''
+            reg = f'<span class="badge region">{esc(f.get("region"))}</span>' if f.get("region") else ''
             url = esc(f.get("url", "#"))
             parts.append(
                 '      <li>'
-                f'<div class="it-title">{amt_badge}<a href="{url}" target="_blank" rel="noopener">{esc(f.get("title",""))}</a></div>'
+                f'<div class="it-title">{amt_badge}{reg}<a href="{url}" target="_blank" rel="noopener">{esc(f.get("title",""))}</a></div>'
                 f'<div class="it-sum">{esc(f.get("summary",""))}</div></li>'
             )
         parts.append('    </ul>')

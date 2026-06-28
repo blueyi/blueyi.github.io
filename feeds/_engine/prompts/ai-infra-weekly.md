@@ -20,8 +20,22 @@
 ## 信息源（prefetch 注入的 JSON 字段）
 - `hn`：Hacker News 高分帖（score/title/url）
 - `arxiv`：arXiv 论文（title/url/abstract）
-- `rss`：产业媒体/公司官方/融资/分析源条目，每条带 `feed`（来源名）、`kind`（media/official/finance/analysis）、title/url/summary
-- `markets`：上市公司行情（sym/name/price/pct_5d/currency），用于产业动态板块
+- `rss`：海外产业媒体/公司官方/融资/分析源（feed/kind(media|official|finance|analysis)/title/url/summary）
+- `cn_rss`：国内中文媒体（36氪/量子位/InfoQ/雷锋网 + 36氪融资快讯；kind=cn_media|cn_finance）
+- `markets`：海外上市公司行情；`cn_markets`：国内龙头股（secid/name/market/price/pct_5d/currency）
+- 技术领域用 hn+arxiv+rss+cn_rss(媒体类)；产业动态板块用 finance 类 rss/cn_rss + markets + cn_markets
+
+## 中英文事件去重（必须）
+海外源(hn/rss)与国内源(cn_rss)报道同一事件时，只保留信息更全的一条，摘要可注明“中外多家报道”，不要两条都列。
+
+## 产业动态板块（industry，含国内）
+新增第 9 板块「📈 产业动态」，curated 的 `industry` 键：
+- `stocks`（海外，Yahoo）：6-10 只 {name,sym,price,pct,currency,note}，行情数值抄 markets 不得改。
+- `cn_stocks`（国内，东财）：{name,secid,market,price,pct,currency,note}，数值抄 cn_markets 不得改。
+- `funding`：从 finance/cn_finance + 媒体源挑与 AI Infra 相关的融资/并购/重大产业动态 2-6 条 {title,summary,url,amount(无则null),region("海外"/"国内")}。绝不编造金额。**华为昇腾/壁仞/摩尔线程/燧原等未上市公司动态放这里（amount=null，注明以官方渠道核验），不进 cn_stocks。**
+- 行情默认折叠展示（render 用 details），无需你处理样式。
+
+## 信息源（旧）
 - 技术领域（8 类）综合用 hn+arxiv+rss(media/official/analysis)；产业动态板块用 rss(finance) + markets
 
 ## 产业动态板块（industry，新增，必填一个）
