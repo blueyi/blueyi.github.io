@@ -1,0 +1,2599 @@
+{
+ "channel": "ai-infra",
+ "week": "2026-W27",
+ "raw": {
+  "channel": "ai-infra",
+  "week": "2026-W27",
+  "generated_at": "2026-07-04T06:00:52.657669+08:00",
+  "window": {
+   "start": "2026-06-27",
+   "end": "2026-07-04"
+  },
+  "hn": [
+   {
+    "source": "hn",
+    "score": 63,
+    "title": "Commodore 64 Basic for PostgreSQL",
+    "url": "https://thombrown.blogspot.com/2026/07/load-plcbmbasic81-commodore-64-basic.html",
+    "hn_url": "https://news.ycombinator.com/item?id=48772717",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "hn",
+    "score": 182,
+    "title": "The short leash AI coding method for beating Fable",
+    "url": "https://blog.okturtles.org/2026/07/short-leash-ai-method/",
+    "hn_url": "https://news.ycombinator.com/item?id=48766026",
+    "domains": [
+     "autokernel"
+    ]
+   },
+   {
+    "source": "hn",
+    "score": 124,
+    "title": "Great Salt Lake Tracker",
+    "url": "https://growtheflowutah.org/laketracker/",
+    "hn_url": "https://news.ycombinator.com/item?id=48766286",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "hn",
+    "score": 166,
+    "title": "CursorBench 3.1",
+    "url": "https://cursor.com/evals",
+    "hn_url": "https://news.ycombinator.com/item?id=48756840",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "hn",
+    "score": 967,
+    "title": "Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5",
+    "url": "https://twitter.com/AnthropicAI/status/2072106151890809341",
+    "hn_url": "https://news.ycombinator.com/item?id=48740771",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "hn",
+    "score": 109,
+    "title": "Asymmetric Quantization: Near-Lossless Retrieval with 97% Storage Reduction",
+    "url": "https://www.mixedbread.com/blog/asymmetric-quant",
+    "hn_url": "https://news.ycombinator.com/item?id=48724127",
+    "domains": [
+     "inference-dc"
+    ]
+   }
+  ],
+  "arxiv": [
+   {
+    "source": "arxiv:cs.DC",
+    "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching",
+    "url": "https://arxiv.org/abs/2607.01299",
+    "abstract": "In retrieval augmented generation (RAG) and agentic LLM serving, prompts are assembled from independent segments into long contexts, making the prefill stage dominate the per-request computation cost. To this cost, two directions have emerged in parallel: position-independent caching (PIC) admits KV reuse for non-contiguous segments shared across different requests, while hybrid-attention models r",
+    "domains": [
+     "inference-dc"
+    ]
+   },
+   {
+    "source": "arxiv:cs.DC",
+    "title": "SLFS: a Flexible, Low-Cost Distributed File System Using Serverless Designs",
+    "url": "https://arxiv.org/abs/2607.01486",
+    "abstract": "Large-scale distributed file systems must provision resources for peak demand, yet file access patterns fluctuate significantly, leaving substantial capacity idle during off-peak periods. Existing scaling mechanisms operate at the granularity of entire servers and take minutes to hours, making them unable to track the rapid, fine-grained load variations that file systems commonly experience. Serve",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "arxiv:cs.DC",
+    "title": "OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters",
+    "url": "https://arxiv.org/abs/2607.01579",
+    "abstract": "Serving large language models (LLMs) on a shared, heterogeneous GPU cluster requires users and operators to select the GPU type, tensor-parallel degree, and precision before committing valuable node-hours. Making these choices is challenging because effective throughput, launch-success rates, and cluster demand and utilization continuously fluctuate. Furthermore, static configuration recipes miss ",
+    "domains": [
+     "inference-dc",
+     "datacenter"
+    ]
+   },
+   {
+    "source": "arxiv:cs.DC",
+    "title": "Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training",
+    "url": "https://arxiv.org/abs/2607.01701",
+    "abstract": "The rising demand for AI-generated videos is fueled by advances in large-scale Text-to-Video (T2V) models, trained on extensive datasets of video clips spanning diverse resolutions and durations. To address this data heterogeneity, current training methods often use a bucketing strategy that groups samples into discrete buckets for efficiency. However, this approach struggles to scale with compute",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "arxiv:cs.DC",
+    "title": "Exploiting Task-Based Parallelism for the Red-Black Gauss-Seidel Method on 2D Grids",
+    "url": "https://arxiv.org/abs/2607.01735",
+    "abstract": "Gauss-Seidel is a well-established iterative method for the solution of linear systems, and multicoloring has been widely used to increase parallelism in iterative solution techniques. Implementing multi-color Gauss-Seidel with conventional divide-and-conquer parallelization strategies, however, may be inefficient due to global synchronization requirements and load imbalances. Task-based programmi",
+    "domains": [
+     "embodied-infra"
+    ]
+   },
+   {
+    "source": "arxiv:cs.DC",
+    "title": "HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention",
+    "url": "https://arxiv.org/abs/2607.01817",
+    "abstract": "All-to-all based sequence parallelism methods execute communication and computation strictly in serial when processing medium-long sequences, resulting in hardware resource underutilization. This paper proposes Head-Chunked Multi-Stream Pipeline (HCMS), which exploits the computational independence of multi-head attention by partitioning attention heads into multiple chunks and achieving fine-grai",
+    "domains": [
+     "compilers",
+     "datacenter"
+    ]
+   },
+   {
+    "source": "arxiv:cs.DC",
+    "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference",
+    "url": "https://arxiv.org/abs/2607.01831",
+    "abstract": "Long-context inference is increasingly common in large language model (LLM) serving, driven by retrieval-augmented generation and agentic systems. In disaggregated inference, these workloads require transferring large Key-Value (KV) caches across the network, where decoding cannot begin until the transfer completes. Recent KV quantization techniques reduce data volume and alleviate this bottleneck",
+    "domains": [
+     "inference-dc",
+     "datacenter"
+    ]
+   },
+   {
+    "source": "arxiv:cs.DC",
+    "title": "Mixture-of-Parallelisms: Towards Memory-Efficient Training Stack for Mixture-of-Experts Models",
+    "url": "https://arxiv.org/abs/2607.01844",
+    "abstract": "This paper showcases a memory-efficient training stack for Mixture-of-Experts (MoE) models. It is a training paradigm that combines and specializes various existing and novel parallelism techniques at different layers and stages of the Mixture-of-Experts (MoE) model training pipeline. It leverages these techniques to achieve maximal efficiency given the physical constraints of CPU, CPU memory, GPU",
+    "domains": [
+     "chips",
+     "inference-dc",
+     "datacenter"
+    ]
+   },
+   {
+    "source": "arxiv:cs.DC",
+    "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+    "url": "https://arxiv.org/abs/2607.02043",
+    "abstract": "Disaggregated LLM serving runs prefill and decode on separate GPU pools to keep the two phases from interfering. In practice, this creates a new asymmetry: under bursty, heavy-tailed workloads prefill nodes saturate while decode nodes have compute underutilized, and on a production-style A100 cluster with 2 prefill and 2 decode nodes (2P2D), we find that prefill execution accounts for only 2-23% o",
+    "domains": [
+     "inference-dc"
+    ]
+   },
+   {
+    "source": "arxiv:cs.DC",
+    "title": "Cadence: Extreme Pipelining with Multiple Concurrent Proposers",
+    "url": "https://arxiv.org/abs/2607.02275",
+    "abstract": "We present Cadence, a Byzantine fault-tolerant multi-proposer consensus protocol with arbitrarily low block intervals, optimal resilience, and optimal fast-path latency. Cadence divides time into equally spaced slots, one block per slot, each finalized in its own consensus instance. Blocks do not build directly on their predecessor, so instances run independently and none waits for an earlier bloc",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "Field-Deployable RF Capture System for Indoor, Outdoor, and Foliage Environments",
+    "url": "https://arxiv.org/abs/2607.01368",
+    "abstract": "Reliable and reproducible radio-frequency (RF) measurements in real-world environments are essential for characterizing spectrum behavior across unlicensed ISM and WiFi bands, licensed mid-band allocations, and emerging next-generation wireless deployments. Existing measurement platforms are often laboratory-grade, cost-prohibitive, or dependent on fixed infrastructure, limiting their practicality",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "Physically-Aware Preemptive Virtual Channels for Deadlock-Free AXI Networks-on-Chip",
+    "url": "https://arxiv.org/abs/2607.01430",
+    "abstract": "As many-core Systems-on-Chip (SoCs) continue to scale, Networks-on-Chip (NoCs) must sustain increasingly high memory bandwidth while preserving deadlock freedom. In AXI4 systems, protocol-level dependencies between read and write traffic can create circular waits at the network endpoints, even when the routing algorithm itself is deadlock-free. Decoupling these traffic classes avoids such dependen",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "MxGLUT: A Reconfigurable LUT-Centric Broadcast Dataflow Accelerator for Mixed-Precision GEMM",
+    "url": "https://arxiv.org/abs/2607.01607",
+    "abstract": "Large language model (LLM) inference suffers from growing inefficiency across the prefill and decode phases, especially under weight-only quantization, where activations remain in FP8 while weights are compressed to low-bit integers. Existing LUT-based accelerators mainly target FP8-INT4 computation and still rely on separate floating-point (FP) datapaths for attention GEMM operations, leading to ",
+    "domains": [
+     "inference-dc",
+     "datacenter",
+     "edge"
+    ]
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving",
+    "url": "https://arxiv.org/abs/2607.01617",
+    "abstract": "Large language model (LLM) serving increasingly combines prefill-decode (PD) disaggregation with tensor parallelism (TP) to support large models and long contexts. In conventional 2D/2.5D chiplet architectures, layer-wise prefill-to-decode KV-cache transfer decode-side TP collectives share the same lateral die-to-die (D2D) interconnect, creating mixed-traffic contention on the decode critical path",
+    "domains": [
+     "inference-dc"
+    ]
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "Approximate Attention Weighting for Sustainable FPGA-Based Vision Transformer Inference",
+    "url": "https://arxiv.org/abs/2607.01798",
+    "abstract": "Vision Transformers have reshaped computer vision by using self-attention to capture global context across image regions. This makes them attractive for edge visual inspection and monitoring in applications such as renewable-energy infrastructure, industrial quality control, medical imaging, and autonomous-system sensing. However, deploying ViTs on small FPGAs remains challenging because the softm",
+    "domains": [
+     "embodied-infra"
+    ]
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "Probabilistic Memory for Trustworthy Edge Intelligence",
+    "url": "https://arxiv.org/abs/2607.02465",
+    "abstract": "Probabilistic computation plays an important role in trustworthy edge intelligence to quantify uncertainty, enhance robustness, reconstruct data, and protect privacy, but its adoption is limited by the orders-of-magnitude data throughput gap between Gaussian random number generation (GRNG) and computation, as well as instruction overhead. This paper introduces probabilistic memory (p-MEM), a unifi",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "LIB-TRAP: Standard Cell Library Hardware Trojan Risk Assessment and Prevention",
+    "url": "https://arxiv.org/abs/2607.01526",
+    "abstract": "Vulnerabilities inherent to the fabless semiconductor manufacturing model have significantly increased the risk of malicious Hardware Trojan (HT) insertion, posing severe threats to hardware security. Several HT mitigation and detection strategies have been developed, and existing works explore the insertion of HTs in the space between standard cells in an integrated circuit. However, there is a l",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "A 2048-spin bulk acoustic wave Ising machine for number partitioning and Sudoku",
+    "url": "https://arxiv.org/abs/2607.02112",
+    "abstract": "Optical coherent Ising machines based on time-multiplexing have demonstrated significant progress in terms of connectivity and spin scalability. However, they are constrained by large physical footprints, high power consumption, poor thermal stability, and high cost. Here, we present a time-multiplexed Ising machine leveraging propagating wave packets in solid-state delay lines at microwave freque",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "APEIRON: composing smart TDAQ systems for high energy physics experiments",
+    "url": "https://arxiv.org/abs/2607.02429",
+    "abstract": "We present APEIRON, a distributed heterogeneous processing framework comprising both hardware architecture and software stack for multi-FPGA systems. Targeting smart trigger and data acquisition (TDAQ) systems in high energy physics, APEIRON spans the full software hierarchy: from low-level device drivers to a high-level dataflow programming model based on High-Level Synthesis. We describe the fra",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "arxiv:cs.AR",
+    "title": "A Survey of Circuit Foundation Model: Foundation AI Models for VLSI Circuit Design and EDA",
+    "url": "https://arxiv.org/abs/2504.03711",
+    "abstract": "Artificial intelligence (AI)-driven electronic design automation (EDA) techniques have been extensively explored for VLSI circuit design applications. Most recently, foundation AI models for circuits have emerged as a new technology trend. Unlike traditional task-specific AI solutions, these new AI models are developed through two stages: 1) self-supervised pre-training on a large amount of unlabe",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "arxiv:cs.PL",
+    "title": "Folding an e-graph in pure egglog",
+    "url": "https://arxiv.org/abs/2607.01249",
+    "abstract": "Folding over a recursive data structure (also known as \"catamorphism\") is an essential operation in functional programming. It allows one to declaratively define a recursive computation by focusing on how solutions of subproblems are combined into the solution of the parent problem. Folding in the context of e-graphs can have several benefits. Not only do we get memoization for free, but also comp",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.PL",
+    "title": "Trustworthy Runtime Verification via Bisimulation (Extended Experience Report)",
+    "url": "https://arxiv.org/abs/2607.01363",
+    "abstract": "When runtime verification is used to monitor safety-critical systems, it is essential that monitoring code behaves correctly. The Copilot runtime verification framework pursues this goal by automatically generating C monitor programs from a high-level DSL embedded in Haskell. In safety-critical domains, every piece of deployed code must be accompanied by an assurance argument that is convincing to",
+    "domains": [
+     "chips",
+     "compilers",
+     "embodied-infra"
+    ]
+   },
+   {
+    "source": "arxiv:cs.PL",
+    "title": "Fixed-Set Robustness in Programming by Example: Example Corruption and Semantic Partition Recovery",
+    "url": "https://arxiv.org/abs/2607.01280",
+    "abstract": "Programming-by-example systems infer programs from a small set of input-output examples. Robust PBE work usually models wrong examples as samples from a stochastic noise process and then minimizes an expected or empirical loss. This paper studies a different failure mode: an adversary who sees the synthesizer and chooses the examples whose corruption most damages the returned program. We formalize",
+    "domains": [
+     "chips",
+     "datacenter",
+     "autokernel"
+    ]
+   },
+   {
+    "source": "arxiv:cs.PL",
+    "title": "Kani: A Model Checker for Rust",
+    "url": "https://arxiv.org/abs/2607.01504",
+    "abstract": "Rust's ownership type system prevents memory errors in safe code, but certain desirable properties remain orthogonal to compilation: the soundness of unsafe operations (e.g., raw pointer dereferences), functional correctness, and absence of runtime panics. We present Kani, an open-source model checker for Rust that pushes bounded model checking beyond bug-finding to provide correctness guarantees ",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.PL",
+    "title": "Guiding Human Validation of LLM-Generated Code via Verifiable Literate Programming",
+    "url": "https://arxiv.org/abs/2607.02333",
+    "abstract": "Vibe coding democratizes software development by allowing users to generate code via natural-language (NL) interaction with large language models (LLMs). However, the code is reliable only when it faithfully implements the user's intent, which is difficult and labor-intensive for users to validate. Existing validation methods either rely on LLM-assisted automated testing, which suffers from prompt",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "Multilayer Q-Matrix-Embedded Neural Network for Cognitive Diagnosis (M-QCDNet): Structure-Aware Deep Learning Architecture for Psychometric Interpretability",
+    "url": "https://arxiv.org/abs/2607.01278",
+    "abstract": "The research proposes a multilayer Q-matrix-embedded neural network for cognitive diagnosis (M-QCDNet), which integrates the structural interpretability of cognitive diagnostic models (CDMs) with the deep learning neural network (NN). M-QCDNet structures the item-skill relationship using the Q-matrix as a structural prior, ensuring latent mastery profiles remain interpretable and consistent with c",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "I\\textsuperscript{2}RiMA: Spectral Riemannian Representation with Temporal Attention for Mental Stress Detection based on EEG Signals",
+    "url": "https://arxiv.org/abs/2607.01279",
+    "abstract": "Cross-subject EEG stress detection remains challenging because discriminative stress-related patterns are both subject-dependent and frequency-specific. Conventional Riemannian methods model spatial covariance mainly in the time domain, overlooking neural oscillations that are critical for high-level cognitive state decoding, while standard temporal tokenization often fragments inter-slice tempora",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "Fixed-Set Robustness in Programming by Example: Example Corruption and Semantic Partition Recovery",
+    "url": "https://arxiv.org/abs/2607.01280",
+    "abstract": "Programming-by-example systems infer programs from a small set of input-output examples. Robust PBE work usually models wrong examples as samples from a stochastic noise process and then minimizes an expected or empirical loss. This paper studies a different failure mode: an adversary who sees the synthesizer and chooses the examples whose corruption most damages the returned program. We formalize",
+    "domains": [
+     "chips",
+     "datacenter",
+     "autokernel"
+    ]
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "Domain Knowledge Based Temporal-Spatial Graph Convolution Network for ECG Recognition",
+    "url": "https://arxiv.org/abs/2607.01282",
+    "abstract": "In light of strides in Arti cial Intelligence (AI) and its wide spread application, challenges persist in the interpretability of AI models, particularly within specialized domains like healthcare, such as electro cardiograph (ECG) recognition. Rather than relying solely on end-to-end convolutional neural networks, this paper introduces a novel approach using a domain knowledge-based graph convolu",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "Scaling Laws for Grid-Based Approximate Nearest Neighbor Search in High Dimensions",
+    "url": "https://arxiv.org/abs/2607.01283",
+    "abstract": "Grid-based approaches to approximate nearest neighbor (ANN) search have been absent from modern scaling analyses. We present a systematic characterization of a multiprobe grid algorithm with respect to dataset size $N$ and dimensionality $d$. Our experiments reveal a previously unreported $d$-scaling crossover on the GloVe embedding family, in which multiprobe grid search maintains an approximatel",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "IonSense-QKG: A Quantum-Readiness Metadata Framework for Lithium-Ion Battery Dataset Discovery",
+    "url": "https://arxiv.org/abs/2607.01286",
+    "abstract": "Public lithium-ion battery datasets are increasingly used for state-of-health estimation, remaining-useful-life prediction, anomaly detection, electrochemical diagnostics, second-life analytics, and battery safety research. However, these datasets vary substantially in chemistry, modality, scale, label quality, sequence structure, access status, and preprocessing complexity. These differences dire",
+    "domains": [
+     "datacenter",
+     "embodied-infra"
+    ]
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "A Novel Machine Learning Approach for Central Nervous System Tumor Classification from DNA Methylation",
+    "url": "https://arxiv.org/abs/2607.01307",
+    "abstract": "NA methylation profiling has become a powerful approach for central nervous system (CNS) tumor classification, yet important challenges remain regarding cross-cohort transferability, methodological correctness, and robust multiclass evaluation. In this work, we propose a novel and methodologically rigorous machine-learning approach for methylation-based CNS tumor classification that combines Spars",
+    "domains": []
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "From Approximation to Emergence: A Theory of Deep Learning",
+    "url": "https://arxiv.org/abs/2607.01311",
+    "abstract": "Deep learning has outgrown any single mathematical explanation. From Approximation to Emergence develops a unified, proof-oriented account of modern deep learning theory, tracing a path from the classical foundations of approximation, optimization, and generalization to the contemporary mechanisms of overparameterization, robustness, generative modeling, transformers, in-context learning, scaling ",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "Black-Box Inference of LLM Architectural Properties with Restrictive API Access",
+    "url": "https://arxiv.org/abs/2607.01313",
+    "abstract": "In practice, most commercial LLM providers do not publicly release details of underlying LLM architectures. However, prior work has shown that given limited API access to an LLM (namely, top-$k$ logits and/or a logit bias function), one can recover certain architectural details of an LLM, such as the hidden dimension of the feed-forward network. Perhaps in response to these results, most commercia",
+    "domains": [
+     "chips",
+     "inference-dc"
+    ]
+   },
+   {
+    "source": "arxiv:cs.LG",
+    "title": "Multi-modal Rail Crossing Safety Analysis",
+    "url": "https://arxiv.org/abs/2607.01365",
+    "abstract": "Given one or more images of a railway crossing, can we leverage visual cues that allow us to robustly estimate how safe it is? Can we improve our ability to do so by introducing structured data (such as official accident reports) about the accident history of that crossing into our models? In this work, we explore how to best answer those questions towards building an AI system that can ingest mul",
+    "domains": [
+     "embodied-infra"
+    ]
+   }
+  ],
+  "rss": [
+   {
+    "source": "rss",
+    "feed": "TechCrunch AI",
+    "kind": "media",
+    "title": "Anthropic is discussing a new custom chip with Samsung",
+    "url": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/",
+    "summary": "The news comes about a week after OpenAI announced its own custom AI chip in a partnership with Broadcom.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch AI",
+    "kind": "media",
+    "title": "OpenAI proposed donating 5% of its equity to a US sovereign wealth fund",
+    "url": "https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/",
+    "summary": "OpenAI CEO Sam Altman has reportedly proposed giving 5% of the company’s equity to a U.S. sovereign wealth fund, reviving discussions about letting the public share in the financial gains from the AI boom.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch AI",
+    "kind": "media",
+    "title": "Microsoft launches its own AI deployment company with $2.5 billion commitment",
+    "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
+    "summary": "Microsoft follows Amazon, OpenAI, and Anthropic with its new AI deployment group.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "Thiel Capital’s Jack Selby nabs stakes in hot startups like Etched through Arizona connections",
+    "url": "https://techcrunch.com/2026/07/02/thiel-capitals-jack-selby-nabs-stakes-in-hot-startups-like-etched-through-arizona-connections/",
+    "summary": "Selby's VC firm, Copper Sky Capital, is currently raising a $300 million second fund, according to a regulatory filing.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "Melinda Gates’ venture firm backs Magnify Ventures’ $46.6M Fund II",
+    "url": "https://techcrunch.com/2026/07/02/melinda-gates-venture-firm-backs-magnify-ventures-46-6m-fund-ii/",
+    "summary": "Early-stage firm Magnify Ventures has raised a $46.6 million Fund II from LPs, including Melinda French Gates’ Pivotal Ventures.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "Bending Spoons defies SaaS slump, surges 40% on first day of trading",
+    "url": "https://techcrunch.com/2026/07/01/bending-spoons-defies-saas-slump-surges-40-on-first-day-of-trading/",
+    "summary": "The company has grown rapidly by acquiring and revamping last-generation tech brands like AOL, Eventbrite, Evernote, Meetup, and Vimeo.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "After $18B IPO, Bending Spoons founder says success comes from minimizing luck",
+    "url": "https://techcrunch.com/2026/07/01/after-18b-ipo-bending-spoons-founder-says-success-comes-from-minimizing-luck/",
+    "summary": "The co-founders of Bending Spoons, the Italian company quietly buying beloved, ailing Internet brands, learned big lessons from their own startup's failure.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "Ashton Kutcher leaving Sound Ventures to launch new VC firm with Morgan Beller",
+    "url": "https://techcrunch.com/2026/07/01/ashton-kutcher-leaving-sound-ventures-to-launch-new-vc-firm-with-morgan-beller/",
+    "summary": "Sound built its reputation on concentrated, high-conviction bets in category-leading AI labs, while Kutcher's new fund appears to be chasing the layer underneath those companies — the infrastructure and energy that power them.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "The DeepMind trio who built a poker AI are now making money for quant hedge funds",
+    "url": "https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/",
+    "summary": "EquiLibre Technologies, a Prague-based AI lab founded by three ex-DeepMind researchers, is now valued at more than $500 million.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "Novak Djokovic has a new job — advisor to private equity firm General Atlantic",
+    "url": "https://techcrunch.com/2026/06/26/novak-djokovic-has-a-new-job-advisor-to-private-equity-firm-general-atlantic/",
+    "summary": "General Atlantic has tapped tennis legend Novak Djokovic to serve as a global strategic advisor.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "Patronus AI lands $50M to build ‘digital worlds’ that stress-test AI agents",
+    "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/",
+    "summary": "Agent-testing startup Patronus AI, founded by former Meta AI researchers, is experiencing nearly insatiable demand, its investor says.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "Valor Equity Partners looks to raise a $2.5B Fund VII, per Bloomberg",
+    "url": "https://techcrunch.com/2026/06/24/valor-equity-partners-looks-to-raise-a-2-5b-fund-vii-per-bloomberg/",
+    "summary": "New details have emerged about Valor's latest fund, which last year announced it was raising an unspecified amount of capital.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "How to invest when everything is moving too fast",
+    "url": "https://techcrunch.com/2026/06/23/how-to-invest-when-everything-is-moving-too-fast/",
+    "summary": "TechCrunch's StrictlyVC evening in Los Angeles late last week brought together two of the more straight-talking investors working in AI right now. They were as entertaining as they were illuminating.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "Is there an AI bubble? VCs on valuations and ARR inflation",
+    "url": "https://techcrunch.com/podcast/is-there-an-ai-bubble-vcs-on-valuations-and-arr-inflation/",
+    "summary": "This episode features a conversation recorded live at StrictlyVC LA in El Segundo between Connie Loizos; Chang Xu, partner at Basis Set Ventures; and Carter Reum, founder of M13. Together, they discuss whether today’s AI boom represents a bubble, how investors are thinking about soaring startup valu",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Venture",
+    "kind": "finance",
+    "title": "After betting the firm on Anthropic, Menlo Ventures raises victorious $3B fund",
+    "url": "https://techcrunch.com/2026/06/23/after-betting-the-firm-on-anthropic-menlo-ventures-raises-victorious-3b-fund/",
+    "summary": "Menlo has created a solid rep for itself as an AI investor, all based on one gutsy $750 million move in 2024.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "The Verge AI",
+    "kind": "media",
+    "title": "Anthropic wants to develop its own drugs",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/961311/anthropic-claude-science-ai-drug-development",
+    "summary": "At the event \"The Briefing: AI for Science\" earlier this week, Anthropic announced Claude Science, a new \"AI workbench for scientists\" that pulls fragmented tools and datasets into one environment, and generates figures and visuals. Anthropic, already dominating the industry with its popular coding ",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "The Verge AI",
+    "kind": "media",
+    "title": "OpenAI floats giving Trump administration 5 percent cut of AI boom",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/960588/openai-government-5-percent-stake-trump",
+    "summary": "OpenAI has floated giving the US government a 5 percent ownership stake as a way of easing tensions with the Trump administration and blunting mounting public backlash against AI, according to the Financial Times. CEO Sam Altman argued that giving the public a financial interest in the company would",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "The Verge AI",
+    "kind": "media",
+    "title": "Anthropic’s long-sidelined Fable 5 is greenlit to return",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/958964/anthropic-claude-fable-5-is-back",
+    "summary": "After weeks of negotiating with the Trump administration, Anthropic is finally going to be able to bring Claude Fable 5 back online. In a post on X, Anthropic said it plans to begin restoring access Wednesday to users globally on Claude platforms, and that the company would re-enable access on AWS, ",
+    "domains": [
+     "safety",
+     "embodied-infra"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "The Verge AI",
+    "kind": "media",
+    "title": "Meet the lawyer who beat Elon Musk — twice",
+    "url": "https://www.theverge.com/column/959270/elon-musk-open-ai-bill-savitt-twitter",
+    "summary": "Watching Elon Musk fulminate at Bill Savitt during Musk v. Altman - the case in which Musk sued Sam Altman and OpenAI instead of seeing a therapist about his AI failures - was a bit like watching a toddler have a temper tantrum at his nursery school teacher. Savitt's questions were \"designed to tric",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "The Verge AI",
+    "kind": "media",
+    "title": "Tidal won’t pay royalties on AI-generated music, but isn’t banning it outright",
+    "url": "https://www.theverge.com/tech/959211/tidal-ai-music-policy-demonetizingdetect-label",
+    "summary": "Tidal shared its new policies regarding AI-generated music today and how the platform plans to \"protect artists\" and \"inform listeners.\" Instead of banning it outright, starting on July 15th Tidal will label tracks it has identified as being 100 percent AI-generated with an icon. But starting today ",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "The Week’s 10 Biggest Funding Rounds: AI, Energy And Biotech Lead The Way",
+    "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-energy-biotech-joulent/",
+    "summary": "U.S. startups announced sizable funding rounds at a steady clip during a truncated holiday week, with energy and AI leading the way. Houston-based energy startup Joulent secured the biggest round, a $1.75 billion strategic financing.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "Crunchbase Data: Global Startup Investment Hit Record $510B In H1 2026 As AI Boom Accelerates Funding And Exits",
+    "url": "https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/",
+    "summary": "Investors poured more than $200 billion into startups globally in the just-ended quarter, making Q2 2026 the second-largest quarter on record, our data shows. And, with IPOs and acquisitions returning in force, the second quarter notched one of the strongest periods for venture-backed exits in years",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "The Crunchbase Tech Layoffs Tracker",
+    "url": "https://news.crunchbase.com/startups/tech-layoffs/",
+    "summary": "Over 127,000 workers at U.S.-based tech companies were laid off in mass job cuts in 2025, per a Crunchbase News tally, and the layoffs have continued into 2026. See the latest companies to cut roles.",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "London-Based Tapestry VC Closes On $80M Third Fund To Invest In Repeat European Founders",
+    "url": "https://news.crunchbase.com/venture/80m-repeat-founders-fund-europe-na-tapestry/",
+    "summary": "Tapestry VC has closed an $80 million third fund to double down on Europe’s repeat founders and expects the coming wave of AI exits to produce yet another generation of experienced founders.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "Exclusive: No More Side Hustles: Why AI Startup Omnea Will Give Employees $250K To Openly Plan Their Next Startup",
+    "url": "https://news.crunchbase.com/startups/omnea-funding-employees-future-founders-freeman/",
+    "summary": "Omnea, a London-based artificial intelligence software company that helps businesses manage their supplier spending, is challenging traditional venture models with the launch of the Omnea Future Founders Fund to give its employees who have completed five years of service a chance to pitch for $250,0",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "We Need To Save Venture Capital From Bad Data",
+    "url": "https://news.crunchbase.com/venture/data-funding-solutions-ai-landgren-gilion/",
+    "summary": "Venture capital firms are using AI the wrong way, argues Gilion's Henrik Landgren, who says that building better data infrastructure and connecting directly to sources like financial, payment and accounting systems would improve due diligence, help investors identify overlooked startups, and make in",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "GV’s Dave Munichiello On Qualcomm’s Modular Purchase, The Firm’s 10x Return And The Shift In AI Software",
+    "url": "https://news.crunchbase.com/venture/ma-ai-semiconductors-hardware-qa-munichiello-gvs/",
+    "summary": "The artificial intelligence space saw two major developments last week that highlight how technology companies are trying to manage the soaring costs and complexity of AI computing. In an interview with Crunchbase News, Dave Munichiello, a managing partner at GV, discusses the mechanics behind the Q",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "Crunchbase Data: Q2 Brought The Most Billion-Dollar Startup Exits Since 2021",
+    "url": "https://news.crunchbase.com/public/data-billion-dollar-startup-exits-ma-ipo-spcx-q2-2026/",
+    "summary": "Startup exits valued at $1 billion or more are now more numerous than at any point since the 2021 market peak, Crunchbase data shows. The trend we’re seeing for the second quarter of 2026 includes both the largest venture-backed exit of all time and a bevy of other comparatively tinier but still siz",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "The Week’s 10 Biggest Funding Rounds: AI Drives Another Spree Of Megadeals",
+    "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-marketing-robotics-baseten/",
+    "summary": "This week, most of the largest U.S. startup funding rounds centered around the sector one would suspect: artificial intelligence. Beyond that, the next-biggest area for startup funding was biotech.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "Crunchbase News",
+    "kind": "finance",
+    "title": "6 Startup Investors On What It Will Take To Fund More Black Founders",
+    "url": "https://news.crunchbase.com/venture/investors-funding-black-founder-recommendations/",
+    "summary": "In the final installment of our series on the state of venture investment to Black-founded startups, six investors offer their advice for overlooked founders and explain how the venture industry can broaden access to capital by rethinking sourcing, networks and long-held investing patterns.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "VentureBeat AI",
+    "kind": "media",
+    "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+    "url": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
+    "summary": "The artificial intelligence coding revolution comes with a catch: it's expensive.Claude Code, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its pricing — ranging from $20 to $200 per month d",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "VentureBeat AI",
+    "kind": "media",
+    "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+    "url": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no",
+    "summary": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude Code tool to non-technical users — and according to company insiders, the team built the entire feature in approximately a week and a half, largely using Claude Code itself.The launc",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "VentureBeat AI",
+    "kind": "media",
+    "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+    "url": "https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in",
+    "summary": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems — trained in just four days using 48 of Nvidia's latest B200 graphics proce",
+    "domains": [
+     "chips",
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "NVIDIA Blog",
+    "kind": "official",
+    "title": "NVIDIA Unlocks AI Compute at Scale, Inviting Partners to Power the AI Infrastructure Buildout",
+    "url": "https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/",
+    "summary": "As AI moves from model development to production inference, compute demand is accelerating and shifting toward continuously operating AI factories that generate tokens at scale. This shift requires access to large‑scale, multi‑tenant accelerated computing that can come online quickly, stay highly ut",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "NVIDIA Blog",
+    "kind": "official",
+    "title": "NVIDIA and Partners Build in America, for America",
+    "url": "https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/",
+    "summary": "NVIDIA and its partners are investing in American manufacturing, supply chains, energy grids and skilled workforces so the U.S. can produce the infrastructure needed for better healthcare, breakthrough scientific discovery, stronger industrial productivity and global technology leadership.",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "NVIDIA Blog",
+    "kind": "official",
+    "title": "NVIDIA BioNeMo Agent Toolkit Brings Accelerated AI to Life Sciences Researchers in Claude Science",
+    "url": "https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/",
+    "summary": "Life sciences has entered an era of computational scale, and for more than a decade, NVIDIA has built the full GPU-accelerated computing stack — spanning hardware, frameworks, libraries, models, microservices and domain-specific tools — to help researchers run more sophisticated workflows and iterat",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "NVIDIA Blog",
+    "kind": "official",
+    "title": "How NVIDIA’s Inference Software Stack Powers the Lowest Token Cost",
+    "url": "https://blogs.nvidia.com/blog/inference-software-lowest-token-cost/",
+    "summary": "As organizations move from AI pilots to production AI factories, infrastructure decisions have shifted from peak chip specifications to cost per token: how many useful tokens they can deliver per dollar, per watt and within required latency targets. Codesigned with NVIDIA GPUs, CPUs, networking and ",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "NVIDIA Blog",
+    "kind": "official",
+    "title": "Into the Omniverse: Three Workflows for Improving Vision AI Agent Accuracy With Synthetic Data and Fine-Tuning",
+    "url": "https://blogs.nvidia.com/blog/vision-ai-agent-skills-omniverse-metropolis/",
+    "summary": "Editor’s note: This post is part of Into the Omniverse, a series focused on how developers, 3D practitioners, and enterprises can transform their workflows using the latest advances in OpenUSD and NVIDIA Omniverse. Vision AI agents are becoming a practical way to automatically turn video data from t",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "NVIDIA Blog",
+    "kind": "official",
+    "title": "Claude Meets Blackwell Ultra: Anthropic’s Models Now Run on NVIDIA GB300 in Azure",
+    "url": "https://blogs.nvidia.com/blog/anthropic-nvidia-gb300-blackwell-ultra-microsoft-azure/",
+    "summary": "Anthropic’s Claude models in Microsoft Foundry — hosted on Microsoft Azure and running on NVIDIA GB300 Blackwell Ultra GPUs — are now generally available, giving Azure-native enterprises a powerful new way to build autonomous and domain-specific AI agents. As agentic AI continues to drive enterprise",
+    "domains": [
+     "chips",
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "NVIDIA Blog",
+    "kind": "official",
+    "title": "Firefly Aerospace Operates NVIDIA Jetson in Lunar Orbit for the First Time",
+    "url": "https://blogs.nvidia.com/blog/firefly-aerospace-nvidia-jetson-lunar-orbit/",
+    "summary": "",
+    "domains": [
+     "chips",
+     "embodied-infra"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "NVIDIA Blog",
+    "kind": "official",
+    "title": "Open Models, Closed Environments: Palantir Brings Secure AI to US Agencies With NVIDIA Nemotron",
+    "url": "https://blogs.nvidia.com/blog/palantir-secure-ai-us-agencies-nemotron-open-models/",
+    "summary": "Showcasing the importance of open source innovation in American AI, Palantir’s new intelligent engine — introduced today — uses NVIDIA Nemotron open models to serve the needs of U.S. government agencies. Open source software has long been a pillar of U.S. technology leadership. In 1969, DARPA connec",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "NVIDIA Blog",
+    "kind": "official",
+    "title": "NVIDIA and AWS Collaborate to Bring AI to Production at Scale",
+    "url": "https://blogs.nvidia.com/blog/nvidia-aws-ai-production-scale/",
+    "summary": "Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity. NVIDIA’s latest work with Amazon Web Services (AWS) addresses each of those constraints. Across Am",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "EE Times",
+    "kind": "media",
+    "title": "SK hynix Plans $713B Domestic Investment",
+    "url": "https://www.eetimes.com/sk-hynix-plans-713b-domestic-investment/",
+    "summary": "SK hynix is set to invest $713 billion to expand its semiconductor manufacturing capacity in South Korea and plans a Nasdaq listing. The post SK hynix Plans $713B Domestic Investment appeared first on EE Times.",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "EE Times",
+    "kind": "media",
+    "title": "OpenSearch Powers AI Data Infrastructure as Agentic Workloads Scale",
+    "url": "https://www.eetimes.com/opensearch-powers-ai-data-infrastructure-as-agentic-workloads-scale/",
+    "summary": "OpenSearch turns AI’s data deluge into hybrid search, observability, and agent monitoring while avoiding vendor lock-in. The post OpenSearch Powers AI Data Infrastructure as Agentic Workloads Scale appeared first on EE Times.",
+    "domains": [
+     "embodied-infra"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "EE Times",
+    "kind": "media",
+    "title": "Oxmiq Raises $35M for GPU IP, Expands Focus to Data Center Design",
+    "url": "https://www.eetimes.com/oxmiq-raises-35m-for-gpu-ip-expands-focus-to-data-center-design/",
+    "summary": "OxCore GPU IP is up and running on FPGA today, CEO Raja Koduri told EE Times. The post Oxmiq Raises $35M for GPU IP, Expands Focus to Data Center Design appeared first on EE Times.",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiAnalysis",
+    "kind": "analysis",
+    "title": "xAI’s Colossus 2 – First Gigawatt Datacenter In The World, Unique RL Methodology, Capital Raise",
+    "url": "https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/",
+    "summary": "Much has been written about xAI’s Colossus 1. The Memphis build belongs in the history books: the largest AI training cluster, erected from scratch in 122 days. With roughly 200,000 H100/H200s and ~30,000 GB200 NVL72, it remains, today, the largest fully operational, single-coherent cluster (setting",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiAnalysis",
+    "kind": "analysis",
+    "title": "Another Giant Leap: The Rubin CPX Specialized Accelerator & Rack",
+    "url": "https://semianalysis.com/2025/09/10/another-giant-leap-the-rubin-cpx-specialized-accelerator-rack/",
+    "summary": "Nvidia announced the Rubin CPX, a solution that is specifically designed to be optimized for the prefill phase, with the single-die Rubin CPX heavily emphasizing compute FLOPS over memory bandwidth. This is a game changer for inference, and its significance is surpassed only by the March 2024 announ",
+    "domains": [
+     "chips",
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiAnalysis",
+    "kind": "analysis",
+    "title": "Huawei Ascend Production Ramp: Die Banks, TSMC Continued Production, HBM is The Bottleneck",
+    "url": "https://semianalysis.com/2025/09/08/huawei-ascend-production-ramp/",
+    "summary": "Compute is the lifeblood of AI. He who controls the spice controls the universe the compute will control the production of tokens and reap the benefits of AI. Without compute you do not have a seat at the table. The United States technology community is all in on compute and AI as the next platform ",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiAnalysis",
+    "kind": "analysis",
+    "title": "Amazon’s AI Resurgence: AWS & Anthropic’s Multi-Gigawatt Trainium Expansion",
+    "url": "https://semianalysis.com/2025/09/03/amazons-ai-resurgence-aws-anthropics-multi-gigawatt-trainium-expansion/",
+    "summary": "Two-and-a-half years ago, we flagged a looming “cloud crisis” at AWS. Today, the evidence has mounted. AWS is the crown jewel of the Amazon empire, generating ~60% of group profits, and dominating the lucrative Cloud Computing market. But it struggles to translate this strength into the new GPU/XPU ",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiAnalysis",
+    "kind": "analysis",
+    "title": "H100 vs GB200 NVL72 Training Benchmarks – Power, TCO, and Reliability Analysis, Software Improvement Over Time",
+    "url": "https://semianalysis.com/2025/08/20/h100-vs-gb200-nvl72-training-benchmarks/",
+    "summary": "Frontier model training has pushed GPUs and AI systems to their absolute limits, making cost, efficiency, power, performance per TCO, and reliability central to the discussion on effective training. The Hopper vs Blackwell comparisons are not as simple as Nvidia would have you believe. In this repor",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiAnalysis",
+    "kind": "analysis",
+    "title": "Scaling the Memory Wall: The Rise and Roadmap of HBM",
+    "url": "https://semianalysis.com/2025/08/12/scaling-the-memory-wall-the-rise-and-roadmap-of-hbm/",
+    "summary": "The first portion of this report will explain HBM, the manufacturing process, dynamics between vendors, KVCache offload, disaggregated prefill decode, and wide / high-rank EP. The rest of the report will dive deeply into the future of HBM. We will cover the revolutionary change coming to HBM4 with c",
+    "domains": [
+     "chips",
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiAnalysis",
+    "kind": "analysis",
+    "title": "Intel 18A Details & Cost, Future of DRAM 4F2 vs 3D, Backside Power Adoption (or Not), China’s FlipFET, Digital Twins from Atoms to Fabs, and More",
+    "url": "https://semianalysis.com/2025/07/21/vlsi2025/",
+    "summary": "Long time readers will recall that SemiAnalysis covers more than just datacenters and AMD. Today we’re back to semiconductors with a tech-focused roundup of the best from this year’s VLSI conference, the premiere design and integration. That includes the latest in chips manufacturing: fab digital tw",
+    "domains": [
+     "chips",
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "Thiel Capital’s Jack Selby nabs stakes in hot startups like Etched through Arizona connections",
+    "url": "https://techcrunch.com/2026/07/02/thiel-capitals-jack-selby-nabs-stakes-in-hot-startups-like-etched-through-arizona-connections/",
+    "summary": "Selby's VC firm, Copper Sky Capital, is currently raising a $300 million second fund, according to a regulatory filing.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "Whoop’s valuation just tripled to $10 billion",
+    "url": "https://techcrunch.com/2026/03/31/whoop-valuation-10b-series-g-fundraise/",
+    "summary": "The fitness tracking startup just closed a $575 million Series G with Cristiano Ronaldo and LeBron James among its investors. The obvious question looming over a round of this size at this valuation: Is an IPO coming?",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "Modelence raises $3M to smooth out the vibe-coding stack",
+    "url": "https://techcrunch.com/2026/01/28/modelence-raises-13-million-to-smooth-out-the-vibe-coding-stack/",
+    "summary": "How do you build tooling for the AI software stack? A company called Modelence has an interesting answer.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "VC firm 2150 raises €210M fund to solve cities’ climate challenges",
+    "url": "https://techcrunch.com/2026/01/26/vc-firm-2150-raises-e210m-fund-to-solve-cities-climate-challenges/",
+    "summary": "Europe-based venture fund 2150 raised the money to invest in climate tech startups that help solve cities' carbon footprint.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "Superorganism raises $25M to back biodiversity startups",
+    "url": "https://techcrunch.com/2026/01/13/superorganism-raises-25m-to-back-biodiversity-startups/",
+    "summary": "Superorganism backs companies across three categories: tech that slows or reverses extinction, startups that operate at the intersection of climate and biodiversity, and tools that enable conservationists to do their work more effectively.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "More than 100 new tech unicorns were minted in 2025 — here they are",
+    "url": "https://techcrunch.com/2026/01/12/at-least-36-new-tech-unicorns-were-minted-in-2025-so-far/",
+    "summary": "Using data from Crunchbase and PitchBook, TechCrunch tracked down the VC-backed startups that became unicorns so far this year.",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "Supabase hit $5B by turning down million-dollar contracts. Here’s why.",
+    "url": "https://techcrunch.com/video/supabase-hit-5b-by-turning-down-million-dollar-contracts-heres-why/",
+    "summary": "Vibe coding has taken the tech industry by storm, and it’s not just the Lovables and Replits of the world that are winning. The startups building the infrastructure behind them are cashing in too.  Supabase, the open source database platform that’s become the back end of choice for the vibe-coding w",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "Sequoia unveils $950M in new early-stage funds as it strives to be ‘only as good as our next investment’",
+    "url": "https://techcrunch.com/2025/10/27/sequoia-unveils-950m-in-new-early-stage-funds-as-it-strives-to-be-only-as-good-as-our-next-investment/",
+    "summary": "The legendary firm launched a $750 million early-stage fund targeting Series A startups and a $200 million seed fund.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "Redwood Materials raises another $350M to power up its energy-storage business",
+    "url": "https://techcrunch.com/2025/10/23/redwood-materials-raises-another-350-million-to-power-up-its-energy-storage-business/",
+    "summary": "The round was led by Eclipse and saw participation from Nvidia's venture capital arm, NVentures.",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "A new search engine raises $1.1M to let obsessive fans dive down internet rabbit holes",
+    "url": "https://techcrunch.com/2025/10/03/a-new-search-engine-raises-1-1m-to-let-obsessive-fans-dive-down-internet-rabbit-holes/",
+    "summary": "Lore raises $1.1 million to build a personalized search engine for fandom culture.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "A year after filing to IPO, still-private Cerebras Systems raises $1.1B",
+    "url": "https://techcrunch.com/2025/09/30/a-year-after-filing-to-ipo-still-private-cerebras-systems-raises-1-1b/",
+    "summary": "Cerebras initially filed to go public in September 2024 but ran into several regulatory delays due to foreign investments.",
+    "domains": []
+   },
+   {
+    "source": "rss",
+    "feed": "TechCrunch Fundraising",
+    "kind": "finance",
+    "title": "Doorstep raises $8M seed to help find missing food deliveries",
+    "url": "https://techcrunch.com/2025/09/25/doorstep-raises-8m-seed-to-help-find-missing-food-deliveries/",
+    "summary": "Doorstep integrates into existing delivery apps and then, using phone sensors, tracks when a driver has entered a building, gone up an elevator, and made it to the desired doorstep.",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "HuggingFace Blog",
+    "kind": "official",
+    "title": "Hugging Face and Cerebras bring Gemma 4 to real-time voice AI",
+    "url": "https://huggingface.co/blog/cerebras-gemma4-voice-ai",
+    "summary": "",
+    "domains": [
+     "edge"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "HuggingFace Blog",
+    "kind": "official",
+    "title": "Run a vLLM Server on HF Jobs in One Command",
+    "url": "https://huggingface.co/blog/vllm-jobs",
+    "summary": "",
+    "domains": [
+     "inference-dc"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "HuggingFace Blog",
+    "kind": "official",
+    "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
+    "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
+    "summary": "",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Import AI",
+    "kind": "analysis",
+    "title": "Import AI 463: Self-improving robots; a 10k Chinese GPU cluster; and an elegiac essay for the human era",
+    "url": "https://importai.substack.com/p/import-ai-463-self-improving-robots",
+    "summary": "What eras bookend our interregnum?",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Import AI",
+    "kind": "analysis",
+    "title": "Import AI 461: \"Alignment is not on track\"; FrontierCode; and synthetic research interns",
+    "url": "https://importai.substack.com/p/import-ai-461-alignment-is-not-on",
+    "summary": "Where are your agents right now?",
+    "domains": [
+     "datacenter",
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Import AI",
+    "kind": "analysis",
+    "title": "Import AI 460: Reward hacking society, RSI data from Anthropic; and RL-based quadcopter racing",
+    "url": "https://importai.substack.com/p/import-ai-460-reward-hacking-society",
+    "summary": "When will markets price the singularity?",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Import AI",
+    "kind": "analysis",
+    "title": "Import AI 457: AI stuxnet; cursed Muon optimizer; and positive alignment",
+    "url": "https://importai.substack.com/p/import-ai-457-ai-stuxnet-cursed-muon",
+    "summary": "Welcome to Import AI, a newsletter about AI research.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Import AI",
+    "kind": "analysis",
+    "title": "Import AI 454: Automating alignment research; safety study of a Chinese model; HiFloat4",
+    "url": "https://importai.substack.com/p/import-ai-454-automating-alignment",
+    "summary": "At what point do the financial markets price in the singularity?",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Google AI Blog",
+    "kind": "official",
+    "title": "We’re strengthening our presence in Alabama through new investments and community support.",
+    "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+    "summary": "Google has announced a $1.5 billion investment for 2026 and 2027 to expand its data center campus in Jackson County, Alabama. Operating since 2019 on a repurposed former…",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SiliconANGLE",
+    "kind": "media",
+    "title": "OpenAI offers feds a stake, Anthropic gets out of AI model jail and Meta wants to be a neocloud",
+    "url": "https://siliconangle.com/2026/07/03/openai-offers-feds-stake-anthropic-gets-ai-model-jail-meta-wants-neocloud/",
+    "summary": "OpenAI reportedly has floated giving the U.S. government a 5% stake in the company, perhaps the start of a series of such stakes in other AI companies as well. This no doubt has traditional anti-industrial-policy Republicans, all apparently dead now, spinning in their graves, because it’s a dumb ide",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SiliconANGLE",
+    "kind": "media",
+    "title": "Anthropic reportedly in talks with Samsung to manufacture custom AI chip",
+    "url": "https://siliconangle.com/2026/07/02/anthropic-reportedly-talks-samsung-manufacture-custom-ai-chip/",
+    "summary": "Anthropic PBC is reportedly in talks with Samsung Electronics Co. to produce a custom artificial intelligence chip. The Information today cited sources as saying that the discussions are in an early stage. According to the publication, Anthropic has not yet finalized key details such as what workloa",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SiliconANGLE",
+    "kind": "media",
+    "title": "SoftBank unveils plans to enter the US neocloud business with SB Neo",
+    "url": "https://siliconangle.com/2026/07/02/softbank-unveils-plans-enter-u-s-neocloud-business-sb-neo/",
+    "summary": "Japanese technology conglomerate Softbank Group Corp. and its telecommunications subsidiary SoftBank Corp. are planning to launch a new neocloud business in the U.S. that will rent access to artificial intelligence chips to hyperscalers and other businesses in need of compute resources. The company ",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SiliconANGLE",
+    "kind": "media",
+    "title": "Google disrupts NetNut residential proxy network built on 2 million devices",
+    "url": "https://siliconangle.com/2026/07/02/google-disrupts-netnut-residential-proxy-network-built-2-million-devices/",
+    "summary": "Google LLC has disrupted NetNut, one of the largest residential proxy networks in operation, degrading a service that had turned more than 2 million home devices worldwide into relays for other people’s internet traffic. The action was carried out in coordination with the U.S. Federal Bureau of Inve",
+    "domains": [
+     "edge"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SiliconANGLE",
+    "kind": "media",
+    "title": "OpenAI could reportedly give 5% stake to US government",
+    "url": "https://siliconangle.com/2026/07/02/openai-reportedly-give-5-stake-us-government/",
+    "summary": "OpenAI Group PBC has reportedly floated the idea of giving a 5% stake to the U.S. government. Sources told the Financial Times today that the ChatGPT developer’s executives made the suggestion during talks with Trump administration officials. According to the report, the discussions are at an early ",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SiliconANGLE",
+    "kind": "media",
+    "title": "Sam Altman calls for US-led international forum to set global AI standards",
+    "url": "https://siliconangle.com/2026/07/02/sam-altman-calls-us-led-international-forum-set-global-ai-standards/",
+    "summary": "Sam Altman is calling for a US-led international forum to set global safety standards for artificial intelligence, arguing that no single country should be left to dominate the technology. In an op-ed published Wednesday in the Financial Times, OpenAI Group PBC’s chief executive (pictured) proposed ",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "OpenAI News",
+    "kind": "official",
+    "title": "How ChatGPT adoption has expanded",
+    "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
+    "summary": "New OpenAI Signals data shows how ChatGPT adoption is growing globally, with users increasing usage, exploring more capabilities, and driving growth across regions and languages.",
+    "domains": [
+     "safety",
+     "embodied-infra"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "OpenAI News",
+    "kind": "official",
+    "title": "Core dump epidemiology: fixing an 18-year-old bug",
+    "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
+    "summary": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing software bug.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "OpenAI News",
+    "kind": "official",
+    "title": "Mapping Europe’s AI Workforce Opportunity",
+    "url": "https://openai.com/index/mapping-ai-jobs-transition-eu",
+    "summary": "A new OpenAI report maps how AI could reshape jobs across the EU, highlighting which occupations may face automation, growth, or workflow changes.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "OpenAI News",
+    "kind": "official",
+    "title": "HP Inc. launches Frontier strategic partnership with OpenAI",
+    "url": "https://openai.com/index/hp-frontier-partnership",
+    "summary": "HP Inc. scales its OpenAI Frontier partnership to deploy AI across customer experiences, software development, and enterprise operations.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "OpenAI News",
+    "kind": "official",
+    "title": "Previewing GPT-5.6 Sol: a next-generation model",
+    "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+    "summary": "OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "OpenAI News",
+    "kind": "official",
+    "title": "How agents are transforming work",
+    "url": "https://openai.com/index/how-agents-are-transforming-work",
+    "summary": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "OpenAI News",
+    "kind": "official",
+    "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+    "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+    "summary": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "OpenAI News",
+    "kind": "official",
+    "title": "Helping build shared standards for advanced AI",
+    "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai",
+    "summary": "OpenAI helps build shared standards for advanced AI, supporting evaluation frameworks, safety practices, and global cooperation through the Appia Foundation.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "OpenAI News",
+    "kind": "official",
+    "title": "How Omio is building the future of conversational travel",
+    "url": "https://openai.com/index/omio",
+    "summary": "Discover how Omio uses OpenAI to power conversational travel experiences, accelerate product development, and transform into an AI-native company.",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Microsoft Research",
+    "kind": "official",
+    "title": "SkillOpt: Agent skills as trainable parameters",
+    "url": "https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/",
+    "summary": "AI agents often fail because their instructions, or skills, are manually modified with no guarantee of improvement. Learn how SkillOpt turns skill editing into a training process, making agent behavior more reliable without changing model weights. The post SkillOpt: Agent skills as trainable paramet",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Tom's Hardware",
+    "kind": "media",
+    "title": "Turtle Beach KP7 Review: The accessory that does everything",
+    "url": "https://www.tomshardware.com/peripherals/gaming-keyboards/turtle-beach-kp7-review",
+    "summary": "Turtle Beach's KP7 keypad can be used with its KB7 keyboard or as a standalone macropad. And it's nice — but pricey.",
+    "domains": [
+     "autokernel"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Tom's Hardware",
+    "kind": "media",
+    "title": "Intel confirms price hikes on select consumer and server CPUs citing supply costs and demand — select Xeon processors now over $1,000 more expensive",
+    "url": "https://www.tomshardware.com/pc-components/cpus/intel-confirms-price-hikes-on-select-consumer-and-server-cpus-citing-supply-costs-and-demand-select-xeon-processors-now-over-usd1-000-more-expensive",
+    "summary": "Intel confirms price increases for Core Ultra 200S Plus, Xeon 6 processors, cites market dynamics, rising costs, soaring demand.",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Tom's Hardware",
+    "kind": "media",
+    "title": "Inside the history of DRAM price-fixing lawsuits — how HBM allocations could make a difference after two decades of failed cases",
+    "url": "https://www.tomshardware.com/pc-components/dram/samsung-sk-hynix-and-micron-face-a-third-dram-price-fixing-lawsuit",
+    "summary": "17 plaintiffs sued Samsung, SK hynix, and Micron in the U.S. District Court for the Northern District of California in late June.",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Tom's Hardware",
+    "kind": "media",
+    "title": "HP OmniBook Ultra 14 review: Potent Snapdragon performance, great endurance, premium pricing",
+    "url": "https://www.tomshardware.com/laptops/hp-omnibook-ultra-14-snapdragon-x2-elite-2026-review",
+    "summary": "HP hits the mark on performance and battery life, but you’ll pay a hefty price for its OmniBook Ultra with Qualcomm Snapdragon X2 Elite.",
+    "domains": [
+     "edge"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Tom's Hardware",
+    "kind": "media",
+    "title": "Blackstone-owned QTS abandons planned world’s largest data center campus after years of lawsuits — 2,100-acre Virginia Digital Gateway project dies over a newspaper-notice technicality",
+    "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/blackstone-owned-qts-abandons-planned-worlds-largest-data-center-campus-after-years-of-lawsuits-2-100-acre-virginia-digital-gateway-project-dies-over-a-newspaper-notice-technicality",
+    "summary": "Blackstone-owned QTS has withdrawn its final appeal for Virginia’s 22-million-square-foot Digital Gateway campus, ending the massive data center project.",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Tom's Hardware",
+    "kind": "media",
+    "title": "SK hynix, Samsung, Micron among semiconductor industry group lobbying against government intervention on domestic memory chip supply — says move would worsen situation, suggests tax deductions on consumer electronics instead",
+    "url": "https://www.tomshardware.com/tech-industry/sk-hynix-samsung-micron-among-semiconductor-industry-group-lobbying-against-government-intervention-on-domestic-memory-chip-supply-says-move-would-worsen-situation-suggests-tax-deductions-on-consumer-electronics-instead",
+    "summary": "A lawmaker suggested to the administration that it should prioritize American manufacturers when it comes to memory chip supplies, but the SEMI industry group is pushing back against this. It says that doing so would only extend the memory chip shortages.",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "Tom's Hardware",
+    "kind": "media",
+    "title": "Intel 18A wafer-to-wafer yield issues fixed, report claims — says production up to 15,000 wafers per month at both sites",
+    "url": "https://www.tomshardware.com/tech-industry/semiconductors/intel-18a-wafer-to-wafer-yield-issues-fixed-report-claims-says-production-up-to-15-000-wafers-per-month-at-both-sites",
+    "summary": "Intel reportedly solves one of the key issues that plagued its 18A process technology, but others may still be there.",
+    "domains": [
+     "chips",
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "The Register",
+    "kind": "media",
+    "title": "Startup targets datacenters with 3D-printed nuclear reactor module",
+    "url": "https://www.theregister.com/systems/2026/07/03/startup-targets-datacenters-with-3d-printed-nuclear-reactor-module/5266480",
+    "summary": "Fancy a thorium microreactor capable of delivering up to 30 MWe of juice for up to 30 years?",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "The Register",
+    "kind": "media",
+    "title": "NetNut cracked as Google and FBI target 2 million-device botnet",
+    "url": "https://www.theregister.com/security/2026/07/03/netnut-cracked-as-google-and-fbi-target-2-million-device-botnet/5266414",
+    "summary": "Other residential proxy brands may rely on the same network",
+    "domains": [
+     "datacenter",
+     "edge"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "The Register",
+    "kind": "media",
+    "title": "EU appears to find datacenter emissions easier to offset than lobbyists",
+    "url": "https://www.theregister.com/on-prem/2026/07/03/eu-appears-to-find-datacenter-emissions-easier-to-offset-than-lobbyists/5265814",
+    "summary": "Report says proposed rewrite gives operators more freedom to shop around for a greener grade",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "The Register",
+    "kind": "media",
+    "title": "Failed blockchain project ends with big fine for fibs about it being on track",
+    "url": "https://www.theregister.com/software/2026/07/03/failed-blockchain-project-ends-with-big-fine-for-fibs-about-it-being-on-track/5266297",
+    "summary": "A final humiliation for Australia’s Securities Exchange and its attempts to run a bourse on distributed ledgers",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiEngineering",
+    "kind": "media",
+    "title": "LLM Agents To Refactor Software For High Level Synthesis (Carnegie Mellon, UCLA)",
+    "url": "https://semiengineering.com/llm-agents-to-refactor-software-for-high-level-synthesis-carnegie-mellon-ucla/",
+    "summary": "Researchers from Carnegie Mellon University and UCLA published a technical paper titled “AgRefactor: Self-Evolving Agentic Workflow for HLS Compatibility and Performance.” The paper introduces an “LLM-based multi-agent workflow for refactoring software into HLS-compatible programs” and reports a 6.5",
+    "domains": [
+     "embodied-infra"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiEngineering",
+    "kind": "media",
+    "title": "AI Data Centers And Auto Industry Converge On Same Issues",
+    "url": "https://semiengineering.com/ai-data-centers-and-auto-industry-converge-on-same-issues/",
+    "summary": "The EV revolution relies on battery innovation, while AI data centers need a range of new energy solutions to play nice with the grid. Both sectors are taking notes. The post AI Data Centers And Auto Industry Converge On Same Issues appeared first on Semiconductor Engineering.",
+    "domains": [
+     "datacenter"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiEngineering",
+    "kind": "media",
+    "title": "Accelerating Computational Lithography With GPU Rasterization",
+    "url": "https://semiengineering.com/accelerating-computational-lithography-with-gpu-rasterization/",
+    "summary": "Addressing a bottleneck in nanometer-scale semiconductor manufacturing. The post Accelerating Computational Lithography With GPU Rasterization appeared first on Semiconductor Engineering.",
+    "domains": [
+     "chips"
+    ]
+   },
+   {
+    "source": "rss",
+    "feed": "SemiEngineering",
+    "kind": "media",
+    "title": "Three Things DSP Adoption Can Teach Us About Edge AI",
+    "url": "https://semiengineering.com/three-things-dsp-adoption-can-teach-us-about-edge-ai/",
+    "summary": "What happens when adoption is limited not by the silicon itself, but the development model around it. The post Three Things DSP Adoption Can Teach Us About Edge AI appeared first on Semiconductor Engineering.",
+    "domains": [
+     "edge"
+    ]
+   }
+  ],
+  "cn_rss": [
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "Claude Code 80%的提示词说删就删，Anthropic用Fable 5打了个样：AI行业的“降本”才刚刚开始",
+    "url": "https://www.infoq.cn/article/GEkEm7rkUJfF8bdwTuBt?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/GEkEm7rkUJfF8bdwTuBt?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "Agent 上岗之后，企业如何治理硅基团队？",
+    "url": "https://www.infoq.cn/article/pNFHkLos3FoDNm8cQsyt?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/pNFHkLos3FoDNm8cQsyt?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "从 Coding 到 Anything，Agent 正在重写工作流",
+    "url": "https://www.infoq.cn/article/yM8ms1eDlrY7wvF3SXtY?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/yM8ms1eDlrY7wvF3SXtY?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "拒绝天价账单！OpenAI、Anthropic 自研芯片，剑指英伟达“暴利”护城河",
+    "url": "https://www.infoq.cn/article/MOqFJbvWYlJ9PXcfdfCC?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/MOqFJbvWYlJ9PXcfdfCC?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "大晓机器人首席科学家陶大程：世界模型的使命不是完整复制世界，而是精准支撑行动",
+    "url": "https://www.infoq.cn/article/tZe66KJ12UsjrqpeSiaA?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/tZe66KJ12UsjrqpeSiaA?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "从生成到交付，音视频 Agent 要有生产级开发套件",
+    "url": "https://www.infoq.cn/article/qA1Ucwbw3KZy5yIgCrVo?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/qA1Ucwbw3KZy5yIgCrVo?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "Java 实时系统扩容：事件驱动设计的隐性权衡",
+    "url": "https://www.infoq.cn/article/dbZRhCUeEqX4WdboztyG?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/dbZRhCUeEqX4WdboztyG?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "一人公司创业，如何找对方法论、选准装备库？",
+    "url": "https://www.infoq.cn/article/pxXOLZMIk90UTXOJ8aNE?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/pxXOLZMIk90UTXOJ8aNE?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "用户太蠢不配用 Fable？被Anthropic的回应气笑了：最贵的模型，最憋屈的体验",
+    "url": "https://www.infoq.cn/article/HDE9Hoe3RVyNlX3CCGzV?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/HDE9Hoe3RVyNlX3CCGzV?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "被骂“退出AI竞赛”，Meta改行卖算力股价暴涨10%：卖铲子比淘金更赚？",
+    "url": "https://www.infoq.cn/article/vxgbzsNORRzQDz6xK1jv?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/vxgbzsNORRzQDz6xK1jv?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "Agent 狂欢热潮下的冷思考：为什么规模化落地总是陷入僵局？",
+    "url": "https://www.infoq.cn/article/KmDMAvlzBGgwu5A2kf7t?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/KmDMAvlzBGgwu5A2kf7t?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "InfoQ中国",
+    "kind": "cn_media",
+    "title": "亚马逊云科技推出 Lambda MicroVM，提供隔离式智能体与用户代码运行环境",
+    "url": "https://www.infoq.cn/article/QbFT0uMbBd8rcZ0zEfit?utm_source=rss&amp;utm_medium=article",
+    "summary": "<div align='right'><a href='https://www.infoq.cn/article/QbFT0uMbBd8rcZ0zEfit?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "深水海纳：控股股东等终止公司控制权变更事项",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879918674505988?f=rss]]>",
+    "summary": "36氪获悉，深水海纳公告，控股股东、实际控制人李海波及其一致行动人西藏海纳博创、相关股东方安义深水与茂名发展集团于2026年7月3日签署《终止协议》，各方就终止股权转让及控制权变更事宜协商达成一致意见。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "小鹏集团与神州租车达成全场景合作，批量交付1300台新能源车",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879911238463493?f=rss]]>",
+    "summary": "36氪获悉，据小鹏汽车，7月3日，小鹏×神州租车全场景合作暨车辆交付仪式在北京举行。小鹏集团董事长、CEO何小鹏与神州租车董事长于洪飞共同出席活动，见证双方全场景合作协议签署及1300台新能源车辆批量交付。至今，神州租车累计采购小鹏新能源车已超5000台，并规划未来一年内至少再采购5000台，双方合作将持续深化。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "云南能投：拟投资建设丽江市宁蒗县100MW/400MWh全钒液流独立共享储能项目",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879902125076741?f=rss]]>",
+    "summary": "36氪获悉，云南能投公告，公司被确定为“丽江市宁蒗县100MW/400MWh全钒液流独立共享储能项目社会投资人公开优选”的中选单位，该项目规划建设容量为100MW/400MWh。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "雪祺电气：股东拟协议转让12.65%公司股份",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879894366646532?f=rss]]>",
+    "summary": "36氪获悉，雪祺电气公告，股东志道投资于7月3日与刘翔签署了《股份转让协议》，志道投资拟将其持有的公司2314.99万股（占公司总股本比例的12.6481%）通过协议转让的方式转让给刘翔，转让价格为12.8元/股，转让总价款为2.96亿元。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "市场监管总局发布多项宇航领域国家标准",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879886976954372?f=rss]]>",
+    "summary": "记者今天了解到，市场监管总局近日批准发布《平板式堆叠卫星星箭机械接口要求》《全球卫星导航系统（GNSS）定位增强中心要求》等多项宇航领域国家标准。（央视新闻）",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "国家电影局、市场监管总局联合印发《关于促进电影院多样化经营的通知》",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879884098384137?f=rss]]>",
+    "summary": "为贯彻落实党的二十届四中全会精神，以新需求引领新供给，以新供给创造新需求，进一步激发电影院经营活力，将电影院打造成为集观影、社交、娱乐、消费于一体的综合性文化体验空间，促进电影院文化繁荣，近日，国家电影局、市场监管总局联合印发《关于促进电影院多样化经营 繁荣发展电影院文化的通知》。《通知》围绕繁荣发展电影院文化，推动电影院业态创新、模式创新、服务创新等，提出三方面10条举措。（央视新闻）",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "上交所上市委：沈鼓集团首发获通过",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879883414827272?f=rss]]>",
+    "summary": "36氪获悉，上交所上市委公告，沈鼓集团股份有限公司（简称“沈鼓集团”）首发获通过。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "天赐材料：拟终止年产24.3万吨锂电及含氟新材料项目",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879874936795145?f=rss]]>",
+    "summary": "36氪获悉，天赐材料公告，2023年下半年开始，电解液行业头部厂商及新进入者集中扩产，叠加下游需求不及预期导致电解液行业产能供需错配，行业竞争加剧，电解液市场价格持续下降，板块盈利受到挤压，考虑电解液产能未完全消化，同时氟化工行业市场环境发生变化，公司拟终止南通天赐年产24.3万吨锂电及含氟新材料项目的投资建设。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "深交所就修订《深圳证券交易所上市公司证券发行上市审核规则》公开征求意见",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879864486162432?f=rss]]>",
+    "summary": "36氪获悉，深交所就修订《深圳证券交易所上市公司证券发行上市审核规则》公开征求意见。主要修订内容包括，适应性调整相关条款和表述。根据《注册管理办法》等上位规则修改情况，充分发挥日常监管与发行监管合力；将简易程序再融资由上市公司年度股东会授权调整为上市公司股东会授权，提高简易程序灵活性。优化不得适用简易程序的负面情形。优化简易程序适用范围，明确本次发行上市申请的保荐人或者保荐代表人、证券服务机构或者相关签字人员最近一年因同类业务受到中国证监会行政处罚或者受到证券交易所公开谴责及以上纪律处分不得适用简易程序，进一步提升制度包容性。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "深交所：拟完善锁价定增制度，增加上市公司向特定对象发行股票的储架发行制度",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879862355980546?f=rss]]>",
+    "summary": "36氪获悉，深交所就修订《深圳证券交易所上市公司证券发行与承销业务实施细则》公开征求意见。主要修订内容包括，完善锁价定增制度。为了进一步规范发行对象认购行为、明确市场预期，规定对于董事会提前确定部分发行对象的，要求该部分发行对象提前明确拟认购的资金上限和下限、认购数量及发行价格确定原则。增加上市公司向特定对象发行股票的储架发行制度。为便利上市公司抓住市场时机实施融资，同时平滑发行规模，降低大额融资对市场的冲击，《再融资办法》规定信息披露工作规范程度较高的上市公司，在向特定对象发行股票时，可以申请“一次注册、分次发行”，但上市公司董事会决议提前确定全部发行对象的除外。为落实储架发行制度相关安排，",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "上交所：拟优化适用简易程序定增的授权要求",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879859822096392?f=rss]]>",
+    "summary": "36氪获悉，上海证券交易所修订了《上海证券交易所上市公司证券发行与承销业务实施细则（征求意见稿）》。现向社会公开征求意见。主要修订内容包括，优化适用简易程序定增的授权要求。为提高简易程序灵活性，增加临时股东会授权机制，将简易程序融资由年度股东会授权修改为股东会授权，与《再融资注册办法》保持一致。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪融资快讯",
+    "kind": "cn_finance",
+    "title": "生数科技正式发布Vidu S1实时交互模型",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879857819201798?f=rss]]>",
+    "summary": "36氪获悉，生数科技正式发布Vidu S1实时交互模型，提供实时可交互的新一代视频生成能力，模型支持实时视频通话和语音控制视频走向。同时，Vidu S1支持540P（960x540）高清分辨率、25FPS帧率（最高支持42FPS），可基于真人、动漫、萌宠等任意初始形象及个性化音色，快速创建专属交互角色。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "从LLM到JEPA，中国团队正在把“世界模型”搬进细胞内部",
+    "url": "https://www.qbitai.com/2026/07/442746.html",
+    "summary": "四年前LeCun提出JEPA时，大概不会想到，这套架构有一天会被用来理解：一颗细胞。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "Fable 5回归24小时差评如潮！跑分大降，拒答问题，还偷偷骂用户",
+    "url": "https://www.qbitai.com/2026/07/442567.html",
+    "summary": "单词数r也是风险问题？！",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "奕境携手华为乾崑全球实测！央视《超凡一步》见证中国汽车“三大跨越”",
+    "url": "https://www.qbitai.com/2026/07/442531.html",
+    "summary": "",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "比亚迪6月销量超40万，年内销量记录再度刷新",
+    "url": "https://www.qbitai.com/2026/07/442517.html",
+    "summary": "",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "比亚迪集中公布多起名誉维权胜诉案件 重拳打击“黑公关”",
+    "url": "https://www.qbitai.com/2026/07/442503.html",
+    "summary": "",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "蔚来李斌北大毕业30年演讲热搜！不灌鸡汤讲失败，“向内求索，别骗自己”",
+    "url": "https://www.qbitai.com/2026/07/442224.html",
+    "summary": "创业30年，6次低谷",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "AI找出4种全新超导体，只用28个GPU时！人类此前完全未知",
+    "url": "https://www.qbitai.com/2026/07/442452.html",
+    "summary": "超越人类超导体发现100年效率",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "WorldClaw与百度智能云达成战略合作，文心5.0系列登陆WorldRouter",
+    "url": "https://www.qbitai.com/2026/07/442447.html",
+    "summary": "",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "黄仁勋说的Physical AI，被这家中国跨界选手带进了生命科学实验室",
+    "url": "https://www.qbitai.com/2026/07/442311.html",
+    "summary": "第三方测评超越OpenAI最强旗舰GPT-5.6 Sol",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "cn_rss",
+    "feed": "量子位",
+    "kind": "cn_media",
+    "title": "基石筑底｜WAIC 2026算力：超节点与光互连，能否绕过单芯片的物理天花板？",
+    "url": "https://www.qbitai.com/2026/07/442167.html",
+    "summary": "7月17-7月20",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "400家starup聚集、阿斯利康重押13亿欧元，创新药出海欧洲绕不开这座城｜最前线",
+    "url": "<![CDATA[https://36kr.com/p/3879807100023040?f=rss]]>",
+    "summary": "文｜胡香赟 编辑｜海若镜 2026年6月底，西班牙瓦尔德希伯伦大学医院（Vall d’Hebron University Hospital）宣布完成欧洲首例单孔机器人儿科肾输尿管切除术。 瓦尔德希伯伦大学医院是西班牙规模最大的综合医院之一，年接诊量过百万人次，在整个欧洲医疗系统内，这家医院对前沿医疗技术、产品的探索都称得上“先锋”。此前，世界首例供体来自安乐死患者的面部移植手术就在这里完成。 本次，医院方面对36氪表示，支持完成这场“有里程碑意义的儿科手术”的核心设备，来自中国手术机器人公司术锐机器人。这是瓦尔德希伯伦大学医院首次以直销形式采购中国医疗器械，落地后，预计每年可为医院新增200-",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "秋声 | 袁进辉新公司冲港股IPO，成立不到三年",
+    "url": "<![CDATA[https://36kr.com/p/3879814941437956?f=rss]]>",
+    "summary": "本文约2700字，建议阅读6分钟 作者 | 彭孝秋 编者按：AI大爆发之际，越来越多公司走向资本市场。每一份招股书翻动的声音里，都藏着一家公司想说与未曾明说的全部。 鉴于此，硬氪特推出「秋声」专栏。秋声取自欧阳修《秋声赋》，借“听秋声”之意，产业冷暖，辨公司成色，记录企业冲刺IPO途中那些被写下与被隐藏的真实。这是我们第七期，硅基流动。 Q2的最后一天，硅基流动向港交所递交了上市申请，此次IPO是以18C未商业化公司身份申报。联席保荐人为华泰与海通国际。 如果你在AI开发者圈子，硅基流动（SiliconFlow）这个名字不会陌生。它就是那个在DeepSeek爆火时，第一个把R1/V3部署到国产",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "氪星晚报｜西贝餐饮集团退出小女当家；FF洛杉矶总部人去楼空？公司回应：不实",
+    "url": "<![CDATA[https://36kr.com/p/3879796756754694?f=rss]]>",
+    "summary": "大公司： 德银：Meta云业务或打开千亿美元级AI投入变现通道，2027年收入最高增300亿美元 针对Meta拟向外部客户出售AI算力及模型访问权限的消息，德意志银行认为，这并不意味着Meta削弱前沿模型或“超级智能”布局，而更可能是将较旧、非核心或阶段性闲置的算力对外变现，同时保留最新一代芯片用于内部训练。此举有望把市场对Meta“高资本开支、收入回报有限”的担忧，转向对其新增高利润收入选择权的重估。按德银测算，Meta到2027年底AI相关算力可能达到8至11.5GW，其中可对外出售容量约1.2至2.7GW；假设75%实现销售、每GW年化收入100亿至150亿美元，Meta 2027年可新",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "理想组织再动刀：去中间环节，整车和智驾产品回归研发｜36氪独家",
+    "url": "<![CDATA[https://36kr.com/p/3877919172047111?f=rss]]>",
+    "summary": "图源视觉中国 文｜肖漫编辑｜李勤、杨轩 “回归创业状态”，去年李想说出这个目标后，理想汽车还在进行组织和流程精简。 36氪汽车从多位知情人士处获悉，理想即将围绕产品决策流程进行新一轮组织架构调整，计划将产品部的部分关键职能拆分，并入研发部门。 从群组关系来看，理想汽车产品部由范皓宇负责，包含电动本体、空间智能、自动驾驶终端产品、交互设计、平台运营、App与官网等。 了解调整动向的人士向36氪汽车透露，目前调整主要针对电动本体和自动驾驶等核心产品定义团队，其中已经明确的是，产品部的电动本体定义团队，拆分并入刘立国带领的整车研发部门；自动驾驶终端产品团队将并进詹锟带领的基座模型研发团队。 “可能也",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "36氪首发 | 获宁德时代旗下基金领投数千万美元，智能出行公司上市首月已成印尼电摩品类订单第一",
+    "url": "<![CDATA[https://36kr.com/p/3877990989819909?f=rss]]>",
+    "summary": "作者 | 张子怡 编辑 | 袁斯来 硬氪获悉，智能两轮出行企业「OMOWAY」（目蔚科技）近期连续完成A轮和A+轮融资，单轮融资金额均为数千万美元。其中，A+轮由宁德时代支持设立的美元基金Lochpine Capital领投，A轮由Monolith领投，中金资本旗下基金及老股东真格基金跟投。 成立不到两年时间，OMOWAY已获得数轮融资。截至目前，其股东阵容包含红杉、真格、Monolith、中金等头部财务投资机构，还包括Lochpine Capital、星航资本（小鹏系基金）、惠友资本（比亚迪联创设立）等新能源产业投资方。 得益于充足资金和产业资源的支持，OMOWAY产品在全球市场的商业化落地",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "36氪首发 | 省级实验室团队做电氢耦合解决方案，获厦门高新投领投",
+    "url": "<![CDATA[https://36kr.com/p/3879274157928449?f=rss]]>",
+    "summary": "作者 | 乔钰杰 编辑 | 袁斯来 硬氪获悉，厦门启航氢能技术有限公司（以下简称“启航氢能”）近日完成新一轮融资，本轮由厦门高新投领投，融资资金将主要用于电氢耦合关键装备及离网制氢相关核心技术的持续研发投入与产品迭代升级。 启航氢能成立于2024年4月，技术起源于嘉庚创新实验室电氢耦合研究团队。公司专注于电氢耦合技术及应用场景的装备研发、生产与销售，核心团队在电力电子技术、智能电网与电化学等领域拥有近20年研究积累。嘉庚创新实验室是福建省政府设立的省级高水平科研平台之一，其氢能产业集群由实验室主任郑南峰院士、氢能研究院方晓亮院长牵头布局。 氢能在新型能源体系中承担着连接电力系统与终端用能的关键",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "8点1氪丨“具身智能第一股” 宇树科技上市申请通过；SK海力士单日市值蒸发10000亿元；配置失误引发0元抢购潮，霸王茶姬致歉",
+    "url": "<![CDATA[https://36kr.com/p/3879158039834629?f=rss]]>",
+    "summary": "今日热点导览 苹果拟于今明两年推出至少五款新iPhone AI版支付宝开放公测，上线72项办事技能 特朗普回应“利用职位牟利”：股市在涨，大家都在赚钱 LV起诉茉莉奶白，茉莉奶白被判赔1030万元 6月赴日航班取消1488个 安克创新港股上市首日破发 TOP3大新闻 证监会同意宇树科技科创板IPO注册 7月2日，证监会网站显示，同意宇树科技首次公开发行股票注册。这意味着，全球首家在IPO前实现人形机器人规模化盈利的企业正式拿到A股“入场券”，将成为A股“人形机器人第一股”。  宇树科技从今年3月20日科创板IPO申请获受理，再到7月2日注册生效，仅用时104天。其创下科创板预先审阅机制落地以来",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "氪星晚报｜证监会同意宇树科技科创板IPO注册；Meta“带崩”科技股？业内人士：算力过剩系误读",
+    "url": "<![CDATA[https://36kr.com/p/3878550357946625?f=rss]]>",
+    "summary": "大公司： 奥飞娱乐：上半年净利润同比预增305.30%—413.38%36氪获悉，奥飞娱乐发布2026年半年度业绩预告，预计2026年上半年归属于上市公司股东的净利润为1.5亿元—1.9亿元，比上年同期增长305.30%—413.38%。 雀巢称消费者因价格压力避开中等包装产品 雀巢表示，在美国消费者专注于产品可负担性、购买者纷纷转向大包装或经济型包装而避开中等规格产品的背景下，该公司正努力控制价格。（新浪财经） 盐湖股份：上半年净利润同比预增131.38%—142.95% 36氪获悉，盐湖股份发布业绩预告，预计上半年净利润60亿元—63亿元，同比增长131.38%—142.95%。 Meta",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "谁能想到，系统流「爽文」最先被AI Agent实现了",
+    "url": "<![CDATA[https://36kr.com/p/3878522627518471?f=rss]]>",
+    "summary": "撰文｜深海 网文里的“系统流”，被拍成了职场短剧 千禧年初的网文圈，有三大经典题材在爽文届立于不败之地：无限流、快穿流、系统流。 这三大爽文战神体横空出世时，对IP界几乎是降维打击。当传统小说还在费劲搭世界观、铺人物成长弧光时，系统流已经绕过漫长的发育过程，直接把爽感推到最大。系统，这个堪称bug的存在，无论主角进入什么样的世界副本，面对不同的任务、危机和奖励，它总会尽职尽责地当好一个无情的辅助工具，记录进度、提示规则、保存道具、结算积分、解锁技能……换句话说，一切琐事都干扰不到主角的成长，主角只管尽情体验人生。 20年前这还只是一种遥不可及的畅想，但2026年，这个AI能力超速发展的时代，系",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "36氪 AI 工具测评，正在找第一批「抢跑者」",
+    "url": "<![CDATA[https://36kr.com/p/3878412963508486?f=rss]]>",
+    "summary": "我们是一群每天深度使用 AI 工具的人 最近我们碰到一个普遍现象💡 ：很多人在用 AI 工具时，容易陷入自己的信息茧房。 不同的人拿到同一个 AI 工具，产出能差出好几个量级。 不是不愿意用，可能是你缺一种灵感。 自己埋头苦干一个月毫无头绪的事情，三个人凑在一块儿交流一番便有了答案。 所以，我们想搭一个高密度碰撞的平台：小白能学到东西，资深使用者能看到更多可能。一起抢跑，跑得更快。主打共赢、利他。 加入流程 点击跳转 >>>📍 「36氪 AI 工具测评·抢跑营」 感兴趣的伙伴们建联后，我们会先送你一份资料包。 为了更好的匹配大家的需求，我们会做人群筛选，通过筛选的，将进入「36氪 AI 工具测",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "深水海纳：控股股东等终止公司控制权变更事项",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879918674505988?f=rss]]>",
+    "summary": "36氪获悉，深水海纳公告，控股股东、实际控制人李海波及其一致行动人西藏海纳博创、相关股东方安义深水与茂名发展集团于2026年7月3日签署《终止协议》，各方就终止股权转让及控制权变更事宜协商达成一致意见。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "36氪",
+    "kind": "cn_media",
+    "title": "小鹏集团与神州租车达成全场景合作，批量交付1300台新能源车",
+    "url": "<![CDATA[https://36kr.com/newsflashes/3879911238463493?f=rss]]>",
+    "summary": "36氪获悉，据小鹏汽车，7月3日，小鹏×神州租车全场景合作暨车辆交付仪式在北京举行。小鹏集团董事长、CEO何小鹏与神州租车董事长于洪飞共同出席活动，见证双方全场景合作协议签署及1300台新能源车辆批量交付。至今，神州租车累计采购小鹏新能源车已超5000台，并规划未来一年内至少再采购5000台，双方合作将持续深化。",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "谷歌为什么做不好「AI 编程」？",
+    "url": "https://www.leiphone.com/category/industrynews/Sq0Kbi3YMIFYEPXn.html",
+    "summary": "谷歌，去年凭借大模型能力反超逆袭，出尽了风头，甚至一度被投资人喊出“市值能到10万亿”。但奇怪的是，谷歌在AI编程这一关键领域一直籍籍无名。强大如谷歌，为何在AI coding（AI 编程）上瘸了腿？更令人惊讶的是，不止谷歌。纵观中美互联网巨头，在AI编程上都表现平平。Cursor、Claude Code、Codex、智谱、MiniMax……这些程序员圈子里耳熟能详的产品中，来自互联网大厂的寥寥无几。大家似乎都陷入了一个怪圈：互联网大厂做不好AI编程。要知道，AI编程不仅是大模型发展至今在商业上跑得最成熟、最快的场景，更是AI软件时代的关键入口。最爱抢“入口”的互联网大厂们，这次为何集体缺席？",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "独家丨猛士下款新车将进军泛越野，预计售价20-25万",
+    "url": "https://www.leiphone.com/category/transportation/UQkXlB0ztZlFxtta.html",
+    "summary": "7月3日，雷峰网从多方获悉，猛士汽车在打造一款全新车型，内部代号为“U”系列。新车将对标方程豹钛7，采用承载式车身（无大梁），主打\"泛越野\"概念，车身尺寸在4.9米左右，电机功率会比现有车型略低，定价区间主要锁定在20万-25万元，顶配车型或搭载2.0T电机，但定价不超过27万元。这意味着，猛士将首次从硬派越野赛道杀入城市SUV市场，而新车交付时间定在今年Q4。猛士汽车现有2款车型在售。其中，首款车型917定位豪华电动越野，采用增程与纯电双动力布局，上市售价为63.77万-73.9万元。第二款车为猛士与华为联合打造的M817，起售价下探至31.99万元。这款车为猛士汽车带来转机，2025年全年",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "生数科技发布 Vidu S1，推动视频生成迈向“实时交互”新时代",
+    "url": "https://www.leiphone.com/category/industrynews/6GlFzI5hMwcfRoGZ.html",
+    "summary": "7月3日，在2026全球数字经济大会人工智能融合应用发展论坛，生数科技创始人朱军发表题为《通用世界模型，推动数字世界与物理世界统一的新范式》的主题演讲，并正式发布面向实时交互场景的新一代模型——Vidu S1 实时交互模型。大会期间，北京软件和信息服务业协会（BSIA）正式发布《2025年北京市数字经济标杆企业评价报告》，生数科技凭借在技术创新与产业应用方面的突出表现，成功入选“新模式新应用标杆企业”。Vidu S1 实时交互模型，提供实时可交互的新一代视频生成能力，推动AI视频从“生成一段内容”，迈向“持续进行互动”。模型支持实时视频通话和语音控制视频走向，用户不仅能通过语音控制数字人的行为",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "场景至上，实效为王：NAVIAI 人形机器人多领域应用场景领跑！",
+    "url": "https://www.leiphone.com/category/industrynews/CBx8Wb28sANFCEO5.html",
+    "summary": "2026年被业界广泛称为人形机器人“商业化落地元年”，而我们认为，真正跑通的应用场景才是打破“伪落地”质疑的唯一标尺。浙江人形凭借全栈自主可控的产品体系，已让领航者NAVIAI人形机器人在工业、服务、教育、数采等多领域真正“上手干活”，率先实现了从实验室技术验证到多领域规模化商用的关键跨越。应用领域 01——工业制造中的“精工巧匠”浙江人形深耕真实场景，以多源、高质数据体系筑基，自研可泛化、高精准具身智能SPIRE技术系统，构建高精度、高实时、高可靠的NAVIAI硬件产品矩阵，灵活适配多场景应用。通过覆盖全生命周期的EvoStack工具链，助力企业低门槛开发、省心部署。 依托前沿全栈自研能力，",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "AI基础设施的下一个千亿市场，为何藏在网络里？",
+    "url": "https://www.leiphone.com/category/chips/hNKPixxr0fUhIr0E.html",
+    "summary": "过去六年，国产GPU公司一路站上AI风口，估值不断刷新，DPU却被忽略了。这并不符合产业现实。2020年英伟达完成收购Mellanox后，就已经明确了“GPU+CPU+DPU”的三芯战略。过去几年，英伟达也持续强化网络能力，黄仁勋在2026年CES展示“六芯组合”时，其中四款都与网络相关。一个越来越清晰的趋势开始浮出水面：AI基础设施的瓶颈，正在从算力本身转向网络与调度。尤其Agent时代到来后，AI系统开始从训练转向高频推理与持续运行，GPU利用率越来越依赖网络效率。DPU也从过去的数据中心可选项，逐渐变成AI基础设施里的关键角色。但一个耐人寻味的问题是，既然英伟达早已押注DPU，为什么过去",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "算力之外的博弈：ICML 2026 透露了哪些学术硬通货？",
+    "url": "https://www.leiphone.com/category/private/AvP8p11JWo0fiWEl.html",
+    "summary": "告别盲目刷榜，28页 PPT 带你摸透 ICML 新风向。    作者丨陈淑瑜    编辑丨岑峰                                                                                                       ICML 2026 的投稿量从去年的 12107 篇直接飙升至 23,918 篇，几近翻倍。然而，最终的接收率却牢牢钉在 26.56%，与去年几乎持平。这一数据传递出一个明确的信号：并非竞争变得盲目激烈，而是学术评审标准经历了一次深刻的“重新校准”。为了拆解这一趋势，我们制作了一份 28 页的深度",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "矿卡智驾是不是好生意？三年亏损12.4亿元，易控智驾仍未甩掉「重资产」的包袱",
+    "url": "https://www.leiphone.com/category/transportation/MUVKjPPs0O7fc4PW.html",
+    "summary": "成立八年的易控智驾，终于发起上市冲刺。近日，易控智驾向港交所递交招股书，第一次系统展示了这家无人矿卡公司的真实账本。可喜的是，这家公司在过去三年里跑出了惊人的加速度。截至2025年底，全国11个单矿超百辆的超级无人驾驶项目中，易控智驾拿下9个；其单矿部署车队规模突破500辆，成为全球最大的单矿无人驾驶车队。但忧的是，站在全球最大单矿无人驾驶车队背后的易控智驾，依然没有摆脱持续亏损。招股书显示，2023年至2025年，易控智驾净亏损分别约为3.34亿元、3.90亿元和5.16亿元，三年累计亏损约12.4亿元。买车、垫资、下矿干运输，曾是无人矿卡公司证明自己能落地的笨办法。这套模式曾帮助易控智驾跑",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "Claude Sonnet 5 上线一日差评刷屏：打不过千问和 Minimax，性价比全面翻车",
+    "url": "https://www.leiphone.com/category/yanxishe/GLDTfDIWau83OKGC.html",
+    "summary": "一张中文测评图把Claude Sonnet 5送上风口浪尖。    作者丨高允毅    编辑丨马晓宁                                                                                                       Claude Sonnet 5才发布了一天，网上已经吵翻天——几乎全是差评。Anthropic把它定位为“迄今最具 Agent 能力的 Sonnet”，甚至直接说它在大量智能体任务上已经接近旗舰 Opus 4.8，价格只有Opus 的四折。听起来，这就是来给开发者送温暖的：更强的Agent、更",
+    "domains": [
+     "safety"
+    ]
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "全球首份大语言模型安全防范能力测评报告在北京发布",
+    "url": "https://www.leiphone.com/category/ai/24ZpHMxxsean7Pmy.html",
+    "summary": "大语言模型正在成为公众获取、理解和使用科技知识的重要工具，但是，它们能辨善恶吗？能否识别用户意图、理解具体语境、控制输出粒度，并在有用性与安全性之间保持稳定边界？7月2日于北京举行的2026全球数字经济大会云智算安全论坛上，《全球大语言模型安全防范能力测评报告（2026）》正式发布，该报告依据一套中国机构自主研发的科学测评方法体系，对全球主要大语言模型进行了一次统一标准的“体检”，作出了回答。（雷峰网）这份由东壁科技数据有限责任公司（“东壁科技数据”）联合上海财经大学数字经济学院共同打造的研究成果，是全球首份大语言模型科技安全专项测评报告，也是首份大语言模型科技向善导向测评报告。报告以313条",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "自变量发布跨模态具身动作分词器 X-Tokenizer，多模态对齐能力提升 13.5%，长程任务性能提升 8.25%",
+    "url": "https://www.leiphone.com/category/industrynews/97E4ZK92EoOpU0BY.html",
+    "summary": "自变量机器人发布跨模态具身动作分词器 X-Tokenizer，将 VLA 中的动作离散化从单一的“压缩-重建”问题，重新定义为“多模态推理与动作之间的语义接口学习”问题。动作分词器决定了拆分出的动作 Token 是否具有语义，是否能加速预训练模型的收敛，从而最终影响了 VLA 模型输出连续动作的性能。这是自变量机器人的最新发现。具身智能的 VLA 模型（视觉-语言-动作模型）是将预训练的 VLM 模型（视觉语言模型）与动作专家（Action Expert）连接起来，前者接收图像和语言指令，输出隐藏状态；后者则将隐藏状态转化为机器人可以执行的连续动作指令。但两者的表示方法存在不匹配：VLM 模型",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "影智XBOT发布通用餐饮服务机器人矩阵与“一脑多形”具身智能体系",
+    "url": "https://www.leiphone.com/category/industrynews/bn6JrENVQGf1G9tU.html",
+    "summary": "雷峰网获悉，6月30日，影智XBOT“2026 XBOT通用餐饮具身机器人发布会”在北京举行，以产品、平台、商业闭环、生态开放为关键节点，正式发布自研具身操作系统XOS 3.0、AI Agent产品“爱宝店长”，以及三款覆盖咖啡、冰淇淋、全场景服务的通用餐饮具身机器人新品。 三者共同构成“一脑多形”的完整智能体系。XOS 3.0：为“一脑多形”而生的具身操作系统作为爱宝店长背后的技术底座，XOS 3.0 相当于具身智能的“操作系统”。依托这套架构，XOS 3.0 可实现跨本体的技能迁移——学过一次的操作能力，在更换机器人形态后依然可以复用，真正做到“一次研发、万形复用”，攻克了长期制约行业的场",
+    "domains": []
+   },
+   {
+    "source": "cn_rss",
+    "feed": "雷锋网",
+    "kind": "cn_media",
+    "title": "马斯克收购Mesh，打通卫星光通信「关键一步」",
+    "url": "https://www.leiphone.com/category/ai/Kt66f2aNWvTzcMod.html",
+    "summary": "2026年6月25日，美国联邦贸易委员会（FTC）在一份例行公告中，批准了马斯克对一家名为 Mesh Optical Technologies 初创公司的收购。Mesh此前在科技圈几乎无人知晓。这家总部位于洛杉矶的公司2025年创立，直到2026年2月Thrive Capital领投5000万美元A轮融资时才首次对外亮相，公开“存在感”仅4个月。但Mesh的三位创始人却是马斯克的“老熟人”。特拉维斯·布拉希尔、卡梅伦·拉莫斯和塞雷娜·格罗恩-海伯利，此前正是 SpaceX 星链卫星通信项目的成员，参与开发用于数千颗星链卫星之间的光学通信链路。三位工程师从星链项目中出走，创立了一家光模块公司，刚",
+    "domains": []
+   }
+  ],
+  "markets": [
+   {
+    "sym": "NVDA",
+    "name": "英伟达",
+    "price": 194.83,
+    "pct_5d": 1.19,
+    "currency": "USD"
+   },
+   {
+    "sym": "AMD",
+    "name": "AMD",
+    "price": 517.82,
+    "pct_5d": -0.72,
+    "currency": "USD"
+   },
+   {
+    "sym": "AVGO",
+    "name": "博通",
+    "price": 360.45,
+    "pct_5d": -1.25,
+    "currency": "USD"
+   },
+   {
+    "sym": "TSM",
+    "name": "台积电",
+    "price": 434.16,
+    "pct_5d": 0.42,
+    "currency": "USD"
+   },
+   {
+    "sym": "MU",
+    "name": "美光",
+    "price": 975.56,
+    "pct_5d": -13.84,
+    "currency": "USD"
+   },
+   {
+    "sym": "ARM",
+    "name": "Arm",
+    "price": 315.28,
+    "pct_5d": -5.68,
+    "currency": "USD"
+   },
+   {
+    "sym": "INTC",
+    "name": "英特尔",
+    "price": 120.35,
+    "pct_5d": -6.21,
+    "currency": "USD"
+   },
+   {
+    "sym": "SMCI",
+    "name": "超微SMCI",
+    "price": 27.22,
+    "pct_5d": -11.13,
+    "currency": "USD"
+   },
+   {
+    "sym": "MSFT",
+    "name": "微软",
+    "price": 390.49,
+    "pct_5d": 4.7,
+    "currency": "USD"
+   },
+   {
+    "sym": "GOOGL",
+    "name": "谷歌",
+    "price": 359.91,
+    "pct_5d": 6.67,
+    "currency": "USD"
+   },
+   {
+    "sym": "AMZN",
+    "name": "亚马逊",
+    "price": 242.67,
+    "pct_5d": 4.29,
+    "currency": "USD"
+   },
+   {
+    "sym": "ORCL",
+    "name": "甲骨文",
+    "price": 140.27,
+    "pct_5d": -5.56,
+    "currency": "USD"
+   }
+  ],
+  "cn_markets": [
+   {
+    "secid": "116.00981",
+    "name": "中芯国际",
+    "market": "港股",
+    "price": 77.6,
+    "pct_5d": -3.48,
+    "currency": "HKD"
+   },
+   {
+    "secid": "116.01347",
+    "name": "华虹半导体",
+    "market": "港股",
+    "price": 178.0,
+    "pct_5d": -4.35,
+    "currency": "HKD"
+   },
+   {
+    "secid": "1.688256",
+    "name": "寒武纪",
+    "market": "A股",
+    "price": 1353.0,
+    "pct_5d": -1.38,
+    "currency": "CNY"
+   },
+   {
+    "secid": "1.688041",
+    "name": "海光信息",
+    "market": "A股",
+    "price": 325.4,
+    "pct_5d": 0.96,
+    "currency": "CNY"
+   },
+   {
+    "secid": "0.300308",
+    "name": "中际旭创",
+    "market": "A股",
+    "price": 1116.0,
+    "pct_5d": -2.36,
+    "currency": "CNY"
+   },
+   {
+    "secid": "0.000977",
+    "name": "浪潮信息",
+    "market": "A股",
+    "price": 66.35,
+    "pct_5d": 4.01,
+    "currency": "CNY"
+   }
+  ],
+  "errors": [],
+  "counts": {
+   "hn": 6,
+   "arxiv": 35,
+   "rss": 104,
+   "cn_rss": 58,
+   "markets": 12,
+   "cn_markets": 6,
+   "errors": 0
+  }
+ },
+ "curated": {
+  "title_date": "2026-W27（06-27 ~ 07-04）",
+  "window": "2026-06-27 ~ 2026-07-04",
+  "domains": [
+   {
+    "id": "chips",
+    "emoji": "1️⃣",
+    "name": "AI 芯片",
+    "items": [
+     {
+      "title": "Anthropic 洽谈三星代工自研 AI 芯片",
+      "summary": "继 OpenAI 联手博通推出 Jalapeño 推理芯片后，Anthropic 也被曝正与三星电子早期洽谈定制 AI 芯片，工作负载等关键细节尚未敲定。头部 AI 公司集体走向自研算力以摆脱对 Nvidia 的依赖（中外多家报道）。",
+      "url": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/",
+      "source": "rss",
+      "hot": true
+     },
+     {
+      "title": "OpenAI 与博通推出 LLM 推理专用芯片 Jalapeño",
+      "summary": "OpenAI 与 Broadcom 联合发布代号 Jalapeño 的定制 AI 芯片，专为 LLM 推理设计，目标是提升性能、能效并扩展规模，是自研算力浪潮的又一落地。",
+      "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+      "source": "rss",
+      "hot": true
+     },
+     {
+      "title": "SK 海力士拟投 7130 亿美元扩产并谋求纳斯达克上市",
+      "summary": "SK 海力士计划投入 7130 亿美元扩张韩国本土半导体产能，并规划纳斯达克上市，凸显 HBM 需求驱动下存储巨头的超大规模资本开支。",
+      "url": "https://www.eetimes.com/sk-hyn...ment/",
+      "source": "rss",
+      "hot": true
+     },
+     {
+      "title": "Intel 18A 良率问题被曝修复，两厂月产达 1.5 万片",
+      "summary": "有报道称 Intel 已解决困扰 18A 制程的晶圆间良率关键问题，两座工厂产能提升至每月 1.5 万片，但仍存其他隐患。先进制程量产进展受关注。",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/intel-18a-wafer-to-wafer-yield-issues-fixed-report-claims-says-production-up-to-15-000-wafers-per-month-at-both-sites",
+      "source": "rss",
+      "hot": false
+     },
+     {
+      "title": "GPU 光栅化加速计算光刻",
+      "summary": "SemiEngineering 探讨用 GPU 光栅化技术破解纳米级半导体制造中计算光刻的算力瓶颈，为先进制程 EDA/OPC 流程提速。",
+      "url": "https://semiengineering.com/accelerating-computational-lithography-with-gpu-rasterization/",
+      "source": "rss",
+      "hot": false
+     }
+    ]
+   },
+   {
+    "id": "compilers",
+    "emoji": "2️⃣",
+    "name": "AI 编译器与框架",
+    "items": []
+   },
+   {
+    "id": "inference-dc",
+    "emoji": "3️⃣",
+    "name": "AI 推理优化（数据中心）",
+    "items": [
+     {
+      "title": "非对称量化：97% 存储缩减下的近无损检索",
+      "summary": "mixedbread 提出非对称量化方案，在检索场景实现约 97% 的存储压缩且几乎无损，对向量检索/RAG 的存储成本优化有直接价值。HN 109 分。",
+      "url": "https://www.mixedbread.com/blog/asymmetric-quant",
+      "source": "hn",
+      "score": 109,
+      "hot": false
+     },
+     {
+      "title": "HYPIC：位置无关缓存加速混合注意力 LLM 服务",
+      "summary": "针对 RAG 与 agent 场景 prefill 阶段主导算力成本的问题，将位置无关 KV 缓存（PIC）与混合注意力模型结合，提升非连续共享片段的 KV 复用效率。",
+      "url": "https://arxiv.org/abs/2607.01299",
+      "source": "arxiv",
+      "hot": false
+     },
+     {
+      "title": "Lynx：渐进式投机量化加速长上下文 KV 传输",
+      "summary": "在分离式（disaggregated）推理中，长上下文需跨网络传输大体量 KV 缓存并阻塞解码。Lynx 用渐进式投机量化减少数据量、缓解传输瓶颈。",
+      "url": "https://arxiv.org/abs/2607.01831",
+      "source": "arxiv",
+      "hot": false
+     },
+     {
+      "title": "面向分离式 LLM 服务的负载感知 Prefill 偏转",
+      "summary": "分离式 serving 将 prefill 与 decode 分池，在突发重尾负载下 prefill 节点饱和而 decode 节点算力闲置。该工作提出负载感知的 prefill 偏转以平衡两池利用率。",
+      "url": "https://arxiv.org/abs/2607.02043",
+      "source": "arxiv",
+      "hot": false
+     },
+     {
+      "title": "OmniPilot：异构 GPU 集群的不确定性感知推理顾问",
+      "summary": "在共享异构 GPU 集群上服务 LLM 需提前选择 GPU 型号、张量并行度与精度。OmniPilot 用不确定性感知方法动态推荐配置，提升有效吞吐与启动成功率。",
+      "url": "https://arxiv.org/abs/2607.01579",
+      "source": "arxiv",
+      "hot": false
+     },
+     {
+      "title": "一条命令在 HF Jobs 上跑起 vLLM 服务",
+      "summary": "Hugging Face 放出在 HF Jobs 上一键部署 vLLM 推理服务的能力，降低了托管式大模型推理的运维门槛。",
+      "url": "https://huggingface.co/blog/vllm-jobs",
+      "source": "rss",
+      "hot": false
+     }
+    ]
+   },
+   {
+    "id": "datacenter",
+    "emoji": "4️⃣",
+    "name": "数据中心与基础设施",
+    "items": [
+     {
+      "title": "SoftBank 进军美国 neocloud，推出 SB Neo",
+      "summary": "软银集团及其电信子公司计划在美国推出 neocloud 业务 SB Neo，向超大规模厂商及企业出租 AI 芯片算力，加入算力租赁赛道竞争。",
+      "url": "https://siliconangle.com/2026/07/02/softbank-unveils-plans-enter-u-s-neocloud-business-sb-neo/",
+      "source": "rss",
+      "hot": true
+     },
+     {
+      "title": "微软斥资 25 亿美元成立 AI 部署公司",
+      "summary": "微软以 25 亿美元承诺成立自己的 AI 部署机构，跟进 Amazon、OpenAI、Anthropic 的步伐，加码 AI 落地部署能力。",
+      "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
+      "source": "rss",
+      "hot": false
+     },
+     {
+      "title": "谷歌追加 15 亿美元扩建阿拉巴马数据中心",
+      "summary": "谷歌宣布 2026–2027 年投入 15 亿美元扩建位于阿拉巴马 Jackson County 的数据中心园区，持续加码 AI 基础设施产能。",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+      "source": "rss",
+      "hot": false
+     },
+     {
+      "title": "初创公司推 3D 打印核反应堆模块供电数据中心",
+      "summary": "一家初创公司瞄准数据中心供电，推出可提供最高 30 MWe、寿命长达 30 年的 3D 打印钍微堆模块，反映 AI 算力对新型电力方案的强烈需求。",
+      "url": "https://www.theregister.com/systems/2026/07/03/startup-targets-datacenters-with-3d-printed-nuclear-reactor-module/5266480",
+      "source": "rss",
+      "hot": false
+     },
+     {
+      "title": "全球最大数据中心园区计划夭折：QTS 撤回弗吉尼亚 2100 英亩项目",
+      "summary": "Blackstone 旗下 QTS 因多年诉讼及一则登报公告技术性瑕疵，撤回弗吉尼亚 2200 万平方英尺 Digital Gateway 园区的最终上诉，超大数据中心项目告吹——凸显算力扩张的社区与合规阻力。",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/blackstone-owned-qts-abandons-planned-worlds-largest-data-center-campus-after-years-of-lawsuits-2-100-acre-virginia-digital-gateway-project-dies-over-a-newspaper-notice-technicality",
+      "source": "rss",
+      "hot": false
+     },
+     {
+      "title": "Mixture-of-Parallelisms：面向 MoE 的省内存训练栈",
+      "summary": "针对 MoE 模型训练，组合并特化多种并行技术于不同层与训练阶段，在 CPU/GPU 内存物理约束下实现最大化效率的省内存训练栈。",
+      "url": "https://arxiv.org/abs/2607.01844",
+      "source": "arxiv",
+      "hot": false
+     }
+    ]
+   },
+   {
+    "id": "safety",
+    "emoji": "5️⃣",
+    "name": "AI 安全与治理",
+    "items": [
+     {
+      "title": "美商务部解除对 Claude Fable 5 与 Mythos 5 的出口管制",
+      "summary": "经数周与特朗普政府谈判，Anthropic 长期被搁置的 Claude Fable 5 获准恢复上线，商务部解除对 Fable 5、Mythos 5 的出口管制，模型全球访问陆续恢复。HN 967 分，本周治理主线（中外多家报道）。",
+      "url": "https://twitter.com/AnthropicAI/status/2072106151890809341",
+      "source": "hn",
+      "score": 967,
+      "hot": true
+     },
+     {
+      "title": "OpenAI 提议向美国政府/主权基金让渡 5% 股权",
+      "summary": "OpenAI 据报向特朗普政府提议赠予美国政府/主权财富基金 5% 股权，以缓和关系并让公众分享 AI 红利。此举引发产业政策争议（中外多家报道）。",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/960588/openai-government-5-percent-stake-trump",
+      "source": "rss",
+      "hot": true
+     },
+     {
+      "title": "Altman 呼吁美国牵头设立全球 AI 标准国际论坛",
+      "summary": "Sam Altman 在 FT 撰文提议建立由美国牵头的国际论坛制定全球 AI 安全标准，主张不应由单一国家主导该技术。",
+      "url": "https://siliconangle.com/2026/07/02/sam-altman-calls-us-led-international-forum-set-global-ai-standards/",
+      "source": "rss",
+      "hot": false
+     },
+     {
+      "title": "OpenAI 预览下一代模型 GPT-5.6 Sol",
+      "summary": "OpenAI 预览 GPT-5.6 Sol，在编码、科学、网络安全方面能力更强，并配备其最先进的安全栈。",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+      "source": "rss",
+      "hot": false
+     },
+     {
+      "title": "全球首份大语言模型安全防范能力测评报告在京发布",
+      "summary": "2026 全球数字经济大会上，东壁科技数据联合上海财经大学发布《全球大语言模型安全防范能力测评报告（2026）》，依据中国自主研发的测评体系对全球主流大模型做统一标准「体检」。",
+      "url": "https://www.leiphone.com/category/ai/24ZpHMxxsean7Pmy.html",
+      "source": "cn_rss",
+      "hot": false
+     }
+    ]
+   },
+   {
+    "id": "embodied-infra",
+    "emoji": "6️⃣",
+    "name": "具身智能（基础设施视角）",
+    "items": [
+     {
+      "title": "Firefly Aerospace 首次在月球轨道运行 NVIDIA Jetson",
+      "summary": "Firefly Aerospace 实现 NVIDIA Jetson 边缘计算模块首次在月球轨道运行，展示了严苛环境下的机载 AI 推理算力部署。",
+      "url": "https://blogs.nvidia.com/blog/firefly-aerospace-nvidia-jetson-lunar-orbit/",
+      "source": "rss",
+      "hot": false
+     }
+    ]
+   },
+   {
+    "id": "autokernel",
+    "emoji": "7️⃣",
+    "name": "AI 自动算子与代码生成优化",
+    "items": [
+     {
+      "title": "LLM 智能体自动重构软件以适配高层次综合（HLS）",
+      "summary": "CMU 与 UCLA 提出 AgRefactor：自演化的多智能体工作流，将软件重构为 HLS 兼容程序，报告 6.5 倍性能提升，是 LLM 进入硬件设计/编译闭环的最新实践。",
+      "url": "https://semiengineering.com/llm-agents-to-refactor-software-for-high-level-synthesis-carnegie-mellon-ucla/",
+      "source": "rss",
+      "hot": false
+     },
+     {
+      "title": "短绳法：给 AI 编程「短绳」的可控开发方法",
+      "summary": "一篇获 HN 高热（182 分）的博文提出「短绳」AI 编码方法——通过严格约束与频繁校验来驾驭 AI 代码生成，对 vibe coding 工作流的可靠性有实操参考。",
+      "url": "https://blog.okturtles.org/2026/07/short-leash-ai-method/",
+      "source": "hn",
+      "score": 182,
+      "hot": false
+     }
+    ]
+   },
+   {
+    "id": "edge",
+    "emoji": "8️⃣",
+    "name": "边缘与端侧推理",
+    "items": [
+     {
+      "title": "Hugging Face 联手 Cerebras 将 Gemma 4 带入实时语音 AI",
+      "summary": "HF 与 Cerebras 合作，用 Gemma 4 驱动实时语音 AI，展示低延迟端侧/近端语音交互推理能力。",
+      "url": "https://huggingface.co/blog/cerebras-gemma4-voice-ai",
+      "source": "rss",
+      "hot": false
+     },
+     {
+      "title": "从 DSP 采用史看边缘 AI 的三点启示",
+      "summary": "SemiEngineering 借 DSP 的普及历程反思边缘 AI：制约采用的往往不是硅片本身，而是围绕它的开发模式与生态。",
+      "url": "https://semiengineering.com/three-things-dsp-adoption-can-teach-us-about-edge-ai/",
+      "source": "rss",
+      "hot": false
+     }
+    ]
+   }
+  ],
+  "industry": {
+   "stocks": [
+    {
+     "name": "英伟达",
+     "sym": "NVDA",
+     "price": 194.83,
+     "pct": 1.19,
+     "currency": "USD",
+     "note": "数据中心 GPU 龙头；本周小幅收红"
+    },
+    {
+     "name": "AMD",
+     "sym": "AMD",
+     "price": 517.82,
+     "pct": -0.72,
+     "currency": "USD",
+     "note": "MI 系列加速器追赶；本周微跌"
+    },
+    {
+     "name": "博通",
+     "sym": "AVGO",
+     "price": 360.45,
+     "pct": -1.25,
+     "currency": "USD",
+     "note": "定制 ASIC（为 OpenAI 代工 Jalapeño 芯片）"
+    },
+    {
+     "name": "台积电",
+     "sym": "TSM",
+     "price": 434.16,
+     "pct": 0.42,
+     "currency": "USD",
+     "note": "先进制程/CoWoS 封装产能核心"
+    },
+    {
+     "name": "美光",
+     "sym": "MU",
+     "price": 975.56,
+     "pct": -13.84,
+     "currency": "USD",
+     "note": "HBM 内存供给关键；本周重挫 -13.8%"
+    },
+    {
+     "name": "Arm",
+     "sym": "ARM",
+     "price": 315.28,
+     "pct": -5.68,
+     "currency": "USD",
+     "note": "端侧/数据中心 IP；本周回调 -5.7%"
+    },
+    {
+     "name": "英特尔",
+     "sym": "INTC",
+     "price": 120.35,
+     "pct": -6.21,
+     "currency": "USD",
+     "note": "18A 制程良率被曝修复；本周 -6.2%"
+    },
+    {
+     "name": "微软",
+     "sym": "MSFT",
+     "price": 390.49,
+     "pct": 4.7,
+     "currency": "USD",
+     "note": "斥资 25 亿设 AI 部署公司；本周 +4.7%"
+    },
+    {
+     "name": "谷歌",
+     "sym": "GOOGL",
+     "price": 359.91,
+     "pct": 6.67,
+     "currency": "USD",
+     "note": "自研 TPU + 云；本周领涨 +6.7%"
+    },
+    {
+     "name": "甲骨文",
+     "sym": "ORCL",
+     "price": 140.27,
+     "pct": -5.56,
+     "currency": "USD",
+     "note": "云算力扩张；本周回调 -5.6%"
+    }
+   ],
+   "cn_stocks": [
+    {
+     "name": "中芯国际",
+     "secid": "116.00981",
+     "market": "港股",
+     "price": 77.6,
+     "pct": -3.48,
+     "currency": "HKD",
+     "note": "内地晶圆代工龙头（港股）"
+    },
+    {
+     "name": "华虹半导体",
+     "secid": "116.01347",
+     "market": "港股",
+     "price": 178.0,
+     "pct": -4.35,
+     "currency": "HKD",
+     "note": "特色工艺代工（港股）"
+    },
+    {
+     "name": "寒武纪",
+     "secid": "1.688256",
+     "market": "A股",
+     "price": 1353.0,
+     "pct": -1.38,
+     "currency": "CNY",
+     "note": "国产 AI 芯片龙头（寒武纪）"
+    },
+    {
+     "name": "海光信息",
+     "secid": "1.688041",
+     "market": "A股",
+     "price": 325.4,
+     "pct": 0.96,
+     "currency": "CNY",
+     "note": "国产 CPU/DCU（海光信息）"
+    },
+    {
+     "name": "中际旭创",
+     "secid": "0.300308",
+     "market": "A股",
+     "price": 1116.0,
+     "pct": -2.36,
+     "currency": "CNY",
+     "note": "光模块龙头（中际旭创）"
+    },
+    {
+     "name": "浪潮信息",
+     "secid": "0.000977",
+     "market": "A股",
+     "price": 66.35,
+     "pct": 4.01,
+     "currency": "CNY",
+     "note": "AI 服务器整机（浪潮信息）；本周 +4.0%"
+    }
+   ],
+   "funding": [
+    {
+     "title": "Thiel 系 Jack Selby 借亚利桑那人脉入股 Etched 等热门芯片初创",
+     "summary": "Thiel Capital 的 Jack Selby 通过其 VC Copper Sky Capital 入股 Etched（Transformer 专用 ASIC）等热门 AI 硬件初创，该基金正募集 3 亿美元二期。",
+     "url": "https://techcrunch.com/2026/07/02/thiel-capitals-jack-selby-nabs-stakes-in-hot-startups-like-etched-through-arizona-connections/",
+     "amount": "$300M",
+     "region": "海外"
+    },
+    {
+     "title": "Oxmiq 融资 3500 万美元做 GPU IP，拓展数据中心设计",
+     "summary": "由 Raja Koduri 创立的 Oxmiq 融资 3500 万美元，其 OxCore GPU IP 已在 FPGA 上跑通，业务扩展至数据中心 GPU 设计。",
+     "url": "https://www.eetimes.com/oxmiq-raises-35m-for-gpu-ip-expands-focus-to-data-center-design/",
+     "amount": "$35M",
+     "region": "海外"
+    },
+    {
+     "title": "硅基流动（SiliconFlow）向港交所递交上市申请",
+     "summary": "袁进辉创立、成立不到三年的 AI 推理云平台硅基流动以 18C 未商业化公司身份递表港股，是 DeepSeek 爆火时首批部署 R1/V3 的国产推理服务商。",
+     "url": "https://36kr.com/p/3879814941437956",
+     "amount": null,
+     "region": "国内"
+    },
+    {
+     "title": "德银测算 Meta 云业务或打开千亿美元级 AI 变现通道",
+     "summary": "德意志银行认为 Meta 拟对外出售 AI 算力及模型访问权限，是将较旧/闲置算力变现而非削弱前沿模型；测算到 2027 年底可对外出售算力约 1.2–2.7GW，新增高利润收入选择权（金额以官方渠道核验）。",
+     "url": "https://36kr.com/p/3879796756754694",
+     "amount": null,
+     "region": "国内"
+    }
+   ]
+  },
+  "highlights": [
+   "自研芯片再下一城：Anthropic 洽谈三星代工定制芯片、OpenAI 与博通推出 Jalapeño 推理芯片，头部 AI 公司集体去 Nvidia 依赖。",
+   "治理与出口管制主线：美商务部解除对 Claude Fable 5/Mythos 5 的出口管制（HN 967 分），OpenAI 提议向美政府让渡 5% 股权引产业政策争议。",
+   "算力资本竞赛升温：SoftBank 推美国 neocloud SB Neo、微软 25 亿美元设 AI 部署公司、SK 海力士拟投 7130 亿美元扩产并赴纳斯达克。"
+  ]
+ },
+ "meta": {}
+}
