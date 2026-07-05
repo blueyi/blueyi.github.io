@@ -87,7 +87,11 @@ details.stocks-fold[open]{padding-bottom:12px}
   padding:22px; transition:border-color .15s}
 .chan:hover{border-color:var(--link)}
 .chan h2{margin:0 0 8px; font-size:20px}
+.chan h2 a.chan-title{color:var(--fg); text-decoration:none}
+.chan h2 a.chan-title:hover{color:var(--link)}
 .chan p{color:var(--muted); font-size:14px; margin:0 0 14px}
-.chan .latest{font-size:13px; color:var(--muted)}
+.chan .latest{font-size:13px; color:var(--muted); line-height:1.65}
+.chan .latest a{color:var(--link); text-decoration:none}
+.chan .latest a:hover{text-decoration:underline}
 footer.site{margin-top:50px; padding-top:20px; border-top:1px solid var(--border);
   color:var(--muted); font-size:12.5px; text-align:center}

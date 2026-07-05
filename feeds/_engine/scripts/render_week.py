@@ -24,6 +24,11 @@ import html
 import json
 from pathlib import Path
 
+# 复用 rebuild_index 的 normalize / lint（保持格式与合法性一致）
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parent))
+from rebuild_index import normalize_title_date, normalize_window, lint_html  # noqa: E402
+
 ENGINE_DIR = Path(__file__).resolve().parent.parent
 FEEDS_DIR = ENGINE_DIR.parent
 
@@ -138,8 +143,8 @@ def render(channel: str, week: str) -> str:
     doc = json.loads(data_path.read_text(encoding="utf-8"))
     cur = doc.get("curated") or {}
     zh, en = CHANNEL_TITLES.get(channel, (channel, channel))
-    title_date = cur.get("title_date", week)
-    window = cur.get("window", "")
+    title_date = normalize_title_date(cur.get("title_date", week), week)
+    window = normalize_window(cur.get("window", ""))
     domains_html = "\n".join(render_domain(d) for d in cur.get("domains", []))
     industry_html = render_industry(cur.get("industry") or {})
     hl = cur.get("highlights") or []
@@ -192,6 +197,7 @@ def main():
     ap.add_argument("--week", required=True)
     args = ap.parse_args()
     out_html = render(args.channel, args.week)
+    lint_html(out_html, f'{args.channel}/weeks/{args.week}.html')
     out_path = FEEDS_DIR / args.channel / "weeks" / f"{args.week}.html"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(out_html, encoding="utf-8")

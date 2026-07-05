@@ -10,6 +10,9 @@ rebuild_index.py — 扫描 data/*.json,重建：
 """
 import html
 import json
+import re
+import sys
+from html.parser import HTMLParser
 from pathlib import Path
 
 import yaml
@@ -21,6 +24,87 @@ CHANNELS = ["ai-infra", "embodied-ai"]
 
 def esc(s) -> str:
     return html.escape(str(s if s is not None else ""))
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Format normalization —— agent 写 curated 时格式会飘（全角/半角括号、～/~/→ 等
+# 都出现过），统一在这里 normalize，避免不同周次显示混乱。见 skill pitfall #13。
+# ─────────────────────────────────────────────────────────────────────────────
+
+_DATE_MMDD = r'\d{1,2}-\d{1,2}'
+_DATE_YMD  = r'\d{4}-\d{1,2}-\d{1,2}'
+
+def _normalize_range(text: str) -> str:
+    """把日期范围里的分隔符统一成 ' ~ '，去掉 →、～、  ..、to 等变体。"""
+    if not text:
+        return text
+    # 常见分隔符统一
+    text = re.sub(r'\s*(?:→|➔|➜|—|–|~|～|\.\.|to)\s*', ' ~ ', text)
+    # 多空格压缩
+    text = re.sub(r'\s+~\s+', ' ~ ', text)
+    return text.strip()
+
+def normalize_title_date(td, week: str = "") -> str:
+    """把 title_date 统一成 'YYYY-Www（MM-DD ~ MM-DD）' 格式。
+    容忍以下 agent 常见变体:
+      '2026-W27 (06-28 → 07-05)'   -> '2026-W27（06-28 ~ 07-05）'
+      '2026-W27（06-27 ~ 07-03）'  -> 原样(已合规)
+      '2026-W27'                    -> '2026-W27' (无日期段就保留)
+      '(06-27~07-03)'               -> '{week}（06-27 ~ 07-03）'
+    """
+    if td is None or td == "":
+        return week or ""
+    td = str(td)  # 防御 agent 传了非字符串
+    # 先规范括号内的日期范围
+    def _rep(m):
+        inner = _normalize_range(m.group(1))
+        return f'（{inner}）'
+    # 处理任一种括号
+    td = re.sub(r'[（(]\s*(' + _DATE_YMD + r'|' + _DATE_MMDD + r'[^)）]*?)\s*[)）]', _rep, td)
+    # 若还没有 week 号前缀而是纯日期段,补上
+    if week and not re.match(r'^\s*\d{4}-W\d{2}', td):
+        td = f'{week}{td}' if td.startswith('（') else f'{week} {td}'
+    # 合并 ")(" 之间可能出现的多余空格,并把 " （" 收紧成 "（"
+    td = re.sub(r'\s+（', '（', td)
+    td = re.sub(r'）\s+', '）', td)
+    # 收尾去多余空格
+    return re.sub(r'\s+', ' ', td).strip()
+
+def normalize_window(win) -> str:
+    """把 window 统一成 'YYYY-MM-DD ~ YYYY-MM-DD'。
+    容忍 dict 输入(agent 有时把 raw 里的 {start,end} 结构直接抄进 curated)。
+    """
+    if win is None or win == "":
+        return ""
+    if isinstance(win, dict):
+        s, e = win.get("start", ""), win.get("end", "")
+        win = f'{s} ~ {e}' if s and e else (s or e or "")
+    return _normalize_range(str(win))
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# HTML lint —— 生成后简单校验,防再引入嵌套 <a> 之类的合规问题(见 pitfall #14)。
+# ─────────────────────────────────────────────────────────────────────────────
+class _NestedAnchorChecker(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.depth = 0
+        self.errors = []
+    def handle_starttag(self, tag, attrs):
+        if tag == 'a':
+            self.depth += 1
+            if self.depth > 1:
+                self.errors.append(f'nested <a> at line {self.getpos()[0]}')
+    def handle_endtag(self, tag):
+        if tag == 'a' and self.depth > 0:
+            self.depth -= 1
+
+def lint_html(html_text: str, source: str) -> None:
+    """快速合法性检查,发现问题打印警告(不阻断,但会在 CI 里显眼)。"""
+    ck = _NestedAnchorChecker()
+    ck.feed(html_text)
+    if ck.errors:
+        print(f'[lint warning] {source}: {"; ".join(ck.errors[:3])}', file=sys.stderr)
 
 
 def load_spec(channel: str) -> dict:
@@ -60,12 +144,13 @@ def build_channel_index(channel: str, spec: dict) -> int:
         if not html_exists:
             continue
         cur = doc.get("curated") or {}
-        title_date = cur.get("title_date", week)
+        title_date = normalize_title_date(cur.get("title_date", week), week)
+        window = normalize_window(cur.get("window", ""))
         hl = week_highlight(doc)
         cards.append(
             '    <a class="card" href="weeks/' + esc(week) + '.html">\n'
             f'      <h3>{esc(title_date)}</h3>\n'
-            f'      <div class="when">{esc(week)} · 覆盖 {esc(cur.get("window",""))}</div>\n'
+            f'      <div class="when">{esc(week)} · 覆盖 {esc(window)}</div>\n'
             f'      <div class="hl">{esc(hl)}</div>\n'
             '    </a>'
         )
@@ -93,6 +178,7 @@ def build_channel_index(channel: str, spec: dict) -> int:
 </body>
 </html>
 """
+    lint_html(page, f'{channel}/index.html')
     (FEEDS_DIR / channel / "index.html").write_text(page, encoding="utf-8")
     return len(cards)
 
@@ -112,8 +198,10 @@ def build_manifest(channel: str, spec: dict):
                 "week": week,
                 "html": f"weeks/{week}.html" if html_exists else None,
                 "data": f"data/{week}.json",
-                "title_date": (doc.get("curated") or {}).get("title_date", week),
-                "window": (doc.get("curated") or {}).get("window", (doc.get("raw") or {}).get("window")),
+                "title_date": normalize_title_date((doc.get("curated") or {}).get("title_date", week), week),
+                "window": normalize_window(
+                    (doc.get("curated") or {}).get("window", (doc.get("raw") or {}).get("window", ""))
+                ),
                 "highlight": ((doc.get("curated") or {}).get("highlights") or [None])[0],
                 "published": html_exists,
             }
@@ -134,14 +222,16 @@ def build_site_index(channel_specs: dict):
         latest = []
         for week, doc, _ in weeks[:3]:
             cur = doc.get("curated") or {}
-            latest.append(f'<a href="{esc(channel)}/weeks/{esc(week)}.html">{esc(cur.get("title_date", week))}</a>')
+            td = normalize_title_date(cur.get("title_date", week), week)
+            latest.append(f'<a href="{esc(channel)}/weeks/{esc(week)}.html">{esc(td)}</a>')
         latest_html = " · ".join(latest) if latest else "暂无周报"
+        # 用 <div> 外层 + 内部标题 <a>,避免嵌套 <a> 的非法 HTML(浏览器会把内部 <a> 抽出,破坏 DOM)
         chans.append(
-            f'    <a class="chan" href="{esc(channel)}/index.html">\n'
-            f'      <h2>{esc(zh)}</h2>\n'
+            f'    <div class="chan">\n'
+            f'      <h2><a class="chan-title" href="{esc(channel)}/index.html">{esc(zh)} →</a></h2>\n'
             f'      <p>{esc(desc)}</p>\n'
             f'      <div class="latest">最新：{latest_html}</div>\n'
-            '    </a>'
+            '    </div>'
         )
     chans_html = "\n".join(chans)
     page = f"""<!DOCTYPE html>
@@ -166,6 +256,7 @@ def build_site_index(channel_specs: dict):
 </body>
 </html>
 """
+    lint_html(page, 'feeds/index.html')
     (FEEDS_DIR / "index.html").write_text(page, encoding="utf-8")
 
 
