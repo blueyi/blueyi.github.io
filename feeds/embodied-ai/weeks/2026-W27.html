@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>具身智能每周资讯 · 2026-W27 (06-28 → 07-05)</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="../../index.html">资讯</a> / <a href="../index.html">具身智能每周资讯</a> / 2026-W27</div>
+  <header class="site">
+    <h1>具身智能每周资讯 · 2026-W27 (06-28 → 07-05)</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>覆盖窗口：<b>{&#x27;start&#x27;: &#x27;2026-06-28&#x27;, &#x27;end&#x27;: &#x27;2026-07-05&#x27;}</b></span>
+    <span>信息源：<b>HN / arXiv / 产业媒体 / 公司官方 / 融资 / 行情</b></span>
+    <span>周编号：<b>2026-W27</b></span>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.02503v1" target="_blank" rel="noopener">VT-WAM：融合视觉-触觉的世界动作模型用于接触丰富操作</a></div>
+      <div class="it-sum">针对接触丰富的操作任务,VT-WAM 在动作生成中显式建模触觉形变动力学,而非将触觉信号直接送入动作预测,提升对滑动/压力/摩擦等瞬时线索的响应。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.02501v1" target="_blank" rel="noopener">Embodied.cpp：面向异构机器人的具身 AI 模型可移植推理运行时</a></div>
+      <div class="it-sum">指出当前 VLA/WAM 部署仍散落在各自 Python 栈+胶水代码里,提出统一的机器人侧 C++ 推理运行时,针对边缘异构算力与实时闭环约束设计。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.02466v1" target="_blank" rel="noopener">Learning to Move Before Learning to Do：VLA 的任务无关预训练</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">认为 VLA 的瓶颈是把&quot;如何动&quot;和&quot;做什么&quot;两个学习目标混在一起;先用大规模无标注运动数据预训练&quot;移动能力&quot;,再少量演示对齐语义,降低对昂贵三元组的依赖。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.02417v1" target="_blank" rel="noopener">LIME：从第一视角视频学习意图感知的相机运动</a></div>
+      <div class="it-sum">把&quot;语言条件下的相机运动&quot;作为 VLN/VLA 之外的独立一环,让机器人在动手前先学会&quot;怎么看&quot;——遮挡揭示、观察物体、按用户意图调整视角。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/industrynews/97E4ZK92EoOpU0BY.html" target="_blank" rel="noopener">自变量机器人发布跨模态具身动作分词器 X-Tokenizer</a></div>
+      <div class="it-sum">将 VLA 的动作离散化从&quot;压缩-重建&quot;重定义为&quot;多模态推理与动作的语义接口学习&quot;,官方称多模态对齐提升 13.5%、长程任务提升 8.25%。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.02431v1" target="_blank" rel="noopener">WorldSample：基于世界模型的闭环真机 RL</a></div>
+      <div class="it-sum">针对真机 RL 试错成本高的问题,用世界模型对每次物理 rollout 做多路径扩展,缩小 IL 覆盖不足与真机 RL 昂贵采样之间的鸿沟。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.02403v1" target="_blank" rel="noopener">ACID：用逆动力学检查规划中间态的可实现性</a></div>
+      <div class="it-sum">指出标准 planning cost 只看终态与目标距离,忽略中间态可达性;ACID 用逆动力学一致性作为额外代价,让世界模型规划的轨迹在真实 rollout 中更可执行。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">Proception：Tesla 商业秘密案和解,同步宣布 1100 万美元融资</a></div>
+      <div class="it-sum">机器人手初创 Proception 与 Tesla 就商业秘密诉讼达成和解,并公布 1100 万美元融资,主打&quot;独特路径&quot;采集灵巧手训练数据。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/07/443066.html" target="_blank" rel="noopener">李飞飞团队新论文:Sim2Real 太贵,Real2Sim 才是量大管饱的路径</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">论文主张一段真实视频就能生成&quot;无限训练场景&quot;,把工作流从&quot;仿真-&gt;真实&quot;倒过来,用真实数据反向重建可控仿真环境,降低具身数据成本。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.02496v1" target="_blank" rel="noopener">Controllable Sim Agents with Behavior Latents</a></div>
+      <div class="it-sum">面向自动驾驶的可控仿真智能体框架 CNeVA,学习按可解释轴向调节代理行为,用于复现 edge case 与隔离测试变量。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.02474v1" target="_blank" rel="noopener">QuadRocket:验证火箭级推力矢量控制的四旋翼测试台</a></div>
+      <div class="it-sum">把圆柱体通过万向节挂在四旋翼上构成&quot;飞行倒立摆&quot;,在低成本平台上验证运载火箭类系统的自适应推力矢量控制策略。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（世界模型 / 人形策略 / 基础模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/07/442964.html" target="_blank" rel="noopener">LeCun 团队让世界模型学会持续学习</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">在 JEPA 系世界模型基础上加入持续学习机制,面向具身智能长期部署中的分布漂移问题,官方定位为&quot;迈向持续学习的世界模型&quot;。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.02332v1" target="_blank" rel="noopener">HEFT:面向大负载全尺寸人形的遥操作与窗口式负载课程</a></div>
+      <div class="it-sum">针对全尺寸人形+真实负载场景（惯量大、平衡余量小）,提出特权动作引导+窗口化负载课程,填补现有 teleop 框架多在紧凑平台/无实际负载验证的空白。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/07/442746.html" target="_blank" rel="noopener">从 LLM 到 JEPA:中国团队把&quot;世界模型&quot;搬进细胞内部</a></div>
+      <div class="it-sum">国内团队把 LeCun 提出的 JEPA 架构迁到细胞尺度建模,展示世界模型跨物理/生物尺度的通用性,拓宽具身基础模型的边界。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/chips/hNKPixxr0fUhIr0E.html" target="_blank" rel="noopener">AI 基础设施的下一个千亿市场:为何藏在网络与 DPU 里</a></div>
+      <div class="it-sum">文章指出 Agent 时代 GPU 利用率越来越依赖网络效率,DPU 从数据中心可选项变成 AI 基础设施关键角色;对机器人端&quot;云-边-端&quot;算力协同同样有借鉴意义。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2025/12/11/1x-struck-a-deal-to-send-its-home-humanoids-to-factories-and-warehouses/" target="_blank" rel="noopener">1X 达成协议:&quot;家用&quot;人形 Neo 转向工厂与仓库部署</a></div>
+      <div class="it-sum">尽管 Neo 最初以&quot;居家助手&quot;定位发布,1X 仍与合作方达成协议将其派往工业/仓储场景,反映家庭级人形在 C 端落地节奏之外先走 B 端产线路径。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/industrynews/bn6JrENVQGf1G9tU.html" target="_blank" rel="noopener">影智 XBOT 发布通用餐饮机器人矩阵与&quot;一脑多形&quot;具身智能体系</a></div>
+      <div class="it-sum">发布自研具身操作系统 XOS 3.0、AI Agent&quot;爱宝店长&quot;及三款覆盖咖啡/冰淇淋/全场景的餐饮机器人,主张跨本体技能迁移,&quot;一次研发、万形复用&quot;。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/transportation/MUVKjPPs0O7fc4PW.html" target="_blank" rel="noopener">易控智驾冲刺港股:三年亏损 12.4 亿,拿下 9 个百辆级无人矿卡项目</a></div>
+      <div class="it-sum">招股书披露截至 2025 年底全国 11 个单矿超百辆超级无人驾驶项目中易控智驾拿下 9 个,单矿部署超 500 辆,但重资产模式导致三年累计亏损 12.4 亿元。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/07/02/agibot-debuts-a3-humanoid-robot-in-europe-and-launches-uk-robot-as-a-service-model/103018/" target="_blank" rel="noopener">AGIBOT 在欧洲首秀 A3 人形并推出英国 Robot-as-a-Service</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">智元(AGIBOT)在伦敦举办 UK 合作伙伴大会,首发 A3 人形并推出 RaaS 模式,标志中国具身厂商加速欧洲商业化布局。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/video/inside-ces-2026s-physical-ai-takeover/" target="_blank" rel="noopener">CES 2026:&quot;物理 AI&quot;接管展会,人形与具身成为主角</a></div>
+      <div class="it-sum">TechCrunch 现场报道称在多年 chatbot 与图像生成主导之后,今年 CES 被&quot;物理 AI&quot;和机器人占领——从波士顿动力新版 Atlas 到 AI 冰机全线登场。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/china-humanoid-robot-marathon" target="_blank" rel="noopener">Honor Lightning 人形机器人半马跑出 50 分 26 秒:比 2025 年最好成绩快近 2 小时</a></div>
+      <div class="it-sum">IEEE Spectrum 复盘 4 月中国半马赛事,Honor Lightning 用工程化组合而非单一&quot;魔法技术&quot;打破人形跑步纪录,反映硬件+控制系统协同优化路径的成熟。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://36kr.com/p/3880770270425089?f=rss" target="_blank" rel="noopener">傲鲨 VIATRIX 外骨骼进入户外消费场景</a></div>
+      <div class="it-sum">36氪报道 7 月 4 日阳澄湖徒步活动,傲鲨增程动力外骨骼学习行走姿态在抬腿时施加推力,6 公里徒步接近 city walk 体感,外骨骼从工业向 C 端户外渗透。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（13 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>393.45 USD</td><td class="up">+3.62%</td><td>Optimus 概念延续</td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>426.01 USD</td><td class="up">+5.27%</td><td>医疗机器人龙头</td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>42.74 USD</td><td class="up">+3.64%</td><td>仓储自动化</td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>6.31 USD</td><td class="up">+4.99%</td><td>末端配送</td></tr>
+        <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>11.71 USD</td><td class="up">+11.21%</td><td>本周涨幅居前</td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>194.83 USD</td><td class="up">+1.19%</td><td>机器人算力平台</td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>104.2 HKD</td><td class="up">+8.54%</td><td>物流机器人</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>108.9 HKD</td><td class="up">+17.6%</td><td>本周涨幅居前</td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>4.68 HKD</td><td class="up">+9.09%</td><td>机器人芯片</td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>72.15 CNY</td><td class="up">+5.48%</td><td>运动控制</td></tr>
+        <tr><td>埃斯顿 <span class="tk">0.002747 · A股</span></td><td>44.77 CNY</td><td class="up">+10.0%</td><td>工业机器人</td></tr>
+        <tr><td>绿的谐波 <span class="tk">1.688017 · A股</span></td><td>488.0 CNY</td><td class="up">+18.15%</td><td>谐波减速器,涨幅居前</td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>41.51 CNY</td><td class="up">+1.05%</td><td>具身语音/交互</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">11M USD</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">Proception 完成 1100 万美元融资并与 Tesla 商业秘密诉讼和解</a></div><div class="it-sum">机器人手初创 Proception 主打独特路径采集灵巧手训练数据,同步和解与融资落地。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://36kr.com/p/3882365879005186?f=rss" target="_blank" rel="noopener">忆生科技(TranscEngram)完成数亿元天使轮融资</a></div><div class="it-sum">港大教授创立,主打机器人&quot;感知-预测-交互&quot;闭环大脑+小脑统一系统,投资方含中生制药、浦东创投、张江科投等。金额需以官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://36kr.com/p/3882364132077577?f=rss" target="_blank" rel="noopener">光象科技完成累计数亿元天使轮融资</a></div><div class="it-sum">清华车辆学院与人工智能学院联合孵化的具身智能公司,聚焦物理原生基座模型与工业场景交付,珠海科技产业集团等参与。金额需以官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://36kr.com/p/3882361033322755?f=rss" target="_blank" rel="noopener">影智 XBOT 连续完成两轮共约 5-7 亿元融资</a></div><div class="it-sum">小米前高管唐沐创业的通用餐饮具身机器人公司,A 轮 2 亿由 GPTX 出资,B 轮 3-5 亿由政府基金+美元基金+产业方参与,天使含张小龙/黎万强/林斌等。金额需以官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://techcrunch.com/2025/12/18/pickle-robot-adds-tesla-veteran-as-first-cfo/" target="_blank" rel="noopener">Pickle Robot 招募 Tesla 老将 Jeff Evanson 出任首任 CFO</a></div><div class="it-sum">卡车装卸机器人初创 Pickle Robot 组建首任 CFO,同时被曝与 UPS 合作扩围,产业化进一步加速。</div></li>
+    </ul>
+  </section>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>李飞飞团队新论文力推 Real2Sim 路线:一段真实视频即可生成无限训练场景,回应 Sim2Real 高成本痛点</li>
+      <li>AGIBOT(智元) A3 人形在伦敦首秀并推出英国 Robot-as-a-Service,中国具身厂商加速欧洲落地</li>
+      <li>国内具身赛道融资密集:忆生科技/光象科技/影智 XBOT 单周披露数亿元级天使+A/B 轮,清华/港大系团队集中登场</li>
+    </ol>
+  </div>
+  <div class="wk-nav">
+    <span><a href="../index.html">← 返回全部周报</a></span>
+    <span><a href="../../index.html">资讯首页 →</a></span>
+  </div>
+  <footer class="site">由 blueyi.github.io/feeds 自动生成 · 数据源 HN/arXiv/产业媒体/公司官方/融资/Yahoo Finance 行情 · 站点 master 直发 GitHub Pages</footer>
+</div>
+</body>
+</html>
