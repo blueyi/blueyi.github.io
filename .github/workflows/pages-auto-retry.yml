@@ -1,0 +1,39 @@
+# Auto-retry GitHub Pages deployment on transient failures.
+#
+# WHY: GitHub Pages 默认 workflow ("pages build and deployment", event=dynamic) 的 deploy 步骤
+# 偶尔会因 GitHub 侧瞬态故障返回 "Deployment failed, try again later." 且没有内置重试。
+# 一旦失败,线上就一直停留在上次成功部署的 commit,直到下一次 push 才有机会重跑。
+# 本 workflow 监听该默认 workflow 的完成事件,只在 conclusion=failure 时触发 rerun-failed,
+# 最多重试 2 次(第 1 次瞬态失败几乎必成功;两次都失败则说明是真的部署问题需人工介入)。
+#
+# 安全性:只 rerun **失败** 的作业,不会重复部署已成功的 deployment。
+# 只在 run_attempt<=2 时重试,避免死循环。
+
+name: Pages Auto Retry
+
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+
+permissions:
+  actions: write   # 需要 write 才能 rerun
+
+jobs:
+  rerun-on-failure:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.run_attempt <= 2 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rerun failed Pages deployment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          echo "Pages deployment failed for commit ${HEAD_SHA} (run ${RUN_ID}, attempt ${RUN_ATTEMPT})."
+          echo "Waiting 30s before rerun to avoid immediate re-hit on the same transient outage..."
+          sleep 30
+          echo "Calling: gh run rerun ${RUN_ID} --failed"
+          gh run rerun "${RUN_ID}" --failed
+          echo "Rerun dispatched. New attempt will be ${RUN_ID} attempt $((RUN_ATTEMPT + 1))."
