@@ -172,9 +172,9 @@ def render(channel: str, week: str) -> str:
     <span>信息源：<b>HN / arXiv / 产业媒体 / 公司官方 / 融资 / 行情</b></span>
     <span>周编号：<b>{esc(week)}</b></span>
   </div>
+{hl_html}
 {domains_html}
 {industry_html}
-{hl_html}
   <div class="wk-nav">
     <span><a href="../index.html">← 返回全部周报</a></span>
     <span><a href="../../index.html">资讯首页 →</a></span>
