@@ -1,39 +1,69 @@
 # Auto-retry GitHub Pages deployment on transient failures.
 #
-# WHY: GitHub Pages 默认 workflow ("pages build and deployment", event=dynamic) 的 deploy 步骤
-# 偶尔会因 GitHub 侧瞬态故障返回 "Deployment failed, try again later." 且没有内置重试。
-# 一旦失败,线上就一直停留在上次成功部署的 commit,直到下一次 push 才有机会重跑。
-# 本 workflow 监听该默认 workflow 的完成事件,只在 conclusion=failure 时触发 rerun-failed,
-# 最多重试 2 次(第 1 次瞬态失败几乎必成功;两次都失败则说明是真的部署问题需人工介入)。
+# ── 为什么用 deployment_status 而不是 workflow_run ─────────────────────────────
+# GitHub Pages 的默认 "pages build and deployment" workflow 是 event=dynamic
+# 类型(GitHub 自动注入,不来自仓库 yaml)。workflow_run 触发器对 dynamic 事件触发
+# 的 workflow 覆盖不可靠,实测(2026-07-05)完全不触发。
+# 更可靠的路子是监听 deployment_status 事件——Pages 部署完成会必发这个事件,状态
+# 里的 environment 是 github-pages, state 是 success/failure/error 之一。
+# ─────────────────────────────────────────────────────────────────────────────
 #
-# 安全性:只 rerun **失败** 的作业,不会重复部署已成功的 deployment。
-# 只在 run_attempt<=2 时重试,避免死循环。
+# WHY: actions/deploy-pages@v5 偶发 "Deployment failed, try again later." 且
+# 没有内置重试,一失败就永久失败,线上停在上次成功的 commit 直到下一次 push。
+# 本 workflow 监听 pages 部署 failure/error,自动全量 rerun 该 run 一次。
+#
+# 安全性:
+# - 只 rerun 部署 environment 为 github-pages 的失败事件
+# - 只在 run_attempt<=2 时重试,避免死循环
+# - 用 gh run rerun(全量,不带 --failed)——因为 Pages artifact 保留期短,只 rerun
+#   失败作业时可能因原 artifact 已过期而报 "No artifacts named github-pages"
 
 name: Pages Auto Retry
 
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
+  deployment_status:
 
 permissions:
   actions: write   # 需要 write 才能 rerun
 
 jobs:
   rerun-on-failure:
-    if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.run_attempt <= 2 }}
+    if: >
+      github.event.deployment.environment == 'github-pages' &&
+      contains(fromJSON('["failure", "error"]'), github.event.deployment_status.state)
     runs-on: ubuntu-latest
     steps:
-      - name: Rerun failed Pages deployment
+      - name: Locate failing Pages build workflow run
+        id: locate
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RUN_ID: ${{ github.event.workflow_run.id }}
-          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
-          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.deployment.sha }}
         run: |
-          echo "Pages deployment failed for commit ${HEAD_SHA} (run ${RUN_ID}, attempt ${RUN_ATTEMPT})."
-          echo "Waiting 30s before rerun to avoid immediate re-hit on the same transient outage..."
+          echo "Pages deployment failed at sha=${HEAD_SHA}. Looking up the run..."
+          # 拉最近该 sha 的 pages build workflow run
+          RUN_JSON=$(gh api "repos/${REPO}/actions/runs?head_sha=${HEAD_SHA}&per_page=10")
+          RUN_ID=$(echo "$RUN_JSON" | jq -r '.workflow_runs[] | select(.name=="pages build and deployment") | .id' | head -1)
+          RUN_ATTEMPT=$(echo "$RUN_JSON" | jq -r '.workflow_runs[] | select(.name=="pages build and deployment") | .run_attempt' | head -1)
+          if [ -z "$RUN_ID" ]; then
+            echo "No pages-build run found for sha ${HEAD_SHA} — nothing to rerun."
+            echo "run_id=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Found run_id=${RUN_ID} attempt=${RUN_ATTEMPT}"
+          echo "run_id=${RUN_ID}" >> "$GITHUB_OUTPUT"
+          echo "run_attempt=${RUN_ATTEMPT}" >> "$GITHUB_OUTPUT"
+
+      - name: Rerun failed Pages deployment
+        if: steps.locate.outputs.run_id != '' && fromJSON(steps.locate.outputs.run_attempt || '99') <= 2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ steps.locate.outputs.run_id }}
+          RUN_ATTEMPT: ${{ steps.locate.outputs.run_attempt }}
+        run: |
+          echo "Waiting 30s to avoid immediate re-hit on the same transient outage..."
           sleep 30
-          echo "Calling: gh run rerun ${RUN_ID} --failed"
-          gh run rerun "${RUN_ID}" --failed
-          echo "Rerun dispatched. New attempt will be ${RUN_ID} attempt $((RUN_ATTEMPT + 1))."
+          echo "Calling: gh run rerun ${RUN_ID}"
+          gh run rerun "${RUN_ID}" --repo "${REPO}"
+          echo "Rerun dispatched (attempt $((RUN_ATTEMPT + 1)) coming up)."
