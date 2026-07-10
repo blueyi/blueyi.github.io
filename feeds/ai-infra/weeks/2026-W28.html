@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra 每周资讯 · 2026-W28 2026-07-11</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="../../index.html">资讯</a> / <a href="../index.html">AI Infra 每周资讯</a> / 2026-W28</div>
+  <header class="site">
+    <h1>AI Infra 每周资讯 · 2026-W28 2026-07-11</h1>
+    <div class="sub">AI Infra Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>覆盖窗口：<b>2026-07-04 ~ 2026-07-11</b></span>
+    <span>信息源：<b>HN / arXiv / 产业媒体 / 公司官方 / 融资 / 行情</b></span>
+    <span>周编号：<b>2026-W28</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>OpenAI 一周三连击:GPT-5.6 公众开放 + ChatGPT Work + 关停独立 Atlas 浏览器,agentic 战线转向企业工作流。</li>
+      <li>SK 海力士以 265 亿美元登陆 Nasdaq,创外国公司美国 IPO 纪录;HBM 与 AI 内存产能扩张进入下半场。</li>
+      <li>Apple 起诉 OpenAI 涉嫌通过挖前员工窃取 AI 硬件机密,同期与 Broadcom 敲定 300 亿美元合作,大模型公司与终端巨头的边界战正式打响。</li>
+    </ol>
+  </div>
+  <section class="domain" id="chips">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://siliconangle.com/2026/07/09/memory-chip-giant-sk-hynix-bags-26-5b-blockbuster-u-s-listing/" target="_blank" rel="noopener">SK 海力士登陆纳斯达克募资 265 亿美元 创外国公司美国 IPO 纪录</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">韩国存储芯片巨头 SK 海力士以每份 149 美元 ADR 挂牌 Nasdaq，首日开盘 +14%，募资将主要用于扩建 HBM 产线；同时美方敦促其与三星在美建新晶圆厂。中外多家报道。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">325★</span><a href="https://www.theregister.com/systems/2026/06/29/zuck-saves-meta-bucks-by-reusing-memory-from-old-servers-with-a-custom-cxl-asic/5263483" target="_blank" rel="noopener">Meta 用自研 CXL 桥接芯片在新服务器复用旧 DRAM</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">The Register 披露 Meta 通过定制 CXL ASIC 把老服务器上淘汰的内存插进新一代服务器，缓解 AI 高涨的 DRAM 需求，降低 Capex。HN 325 分。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.eetimes.com/apples-30b-broadcom-deal-signals-expansions-in-ai-u-s-supply-chain/" target="_blank" rel="noopener">Apple 与 Broadcom 敲定 300 亿美元合作 联手做 AI 数据中心芯片</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">EE Times 解读称 Apple 押注 Broadcom 拓展 AI 服务器 XPU 供应链，被视为 Intel 代工/封装的潜在机会，同时推动美国本土制造。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/nvidia-vera-max-single-threaded-cpu-at-scale/" target="_blank" rel="noopener">NVIDIA 推出 Vera：为智能体时代设计的单线程 CPU</a></div>
+      <div class="it-sum">NVIDIA 官方博客介绍新一代 Vera CPU，把最大单线程性能作为一等公民，用来支撑 agentic 系统中处于响应关键路径的推理/编排负载。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://36kr.com/newsflashes/3889784854870537?f=rss" target="_blank" rel="noopener">AMD 将于 7 月 22 日发布 Zen 6 架构 EPYC Venice</a></div>
+      <div class="it-sum">报道称 EPYC Venice 相比 Zen 5 前代性能/能效提升逾 70%，正对准 AI 编排与云主机场景。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.tomshardware.com/tech-industry/semiconductors/japanese-chipmaker-rapidus-to-offer-lower-wafer-pricing-than-tsmc-2nm-class-silicon-to-be-priced-around-usd20-000-on-2027-launch" target="_blank" rel="noopener">Rapidus 2nm 晶圆定价低于台积电 约 2 万美元</a></div>
+      <div class="it-sum">日本 Rapidus 计划 2027 年量产 2nm 制程，报价约 2 万美元/片，试图以价格战与代工政策补贴争夺 AI 高端订单。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.08215" target="_blank" rel="noopener">Ascend 大模型推理实测：MoE / 多模态迁移 CUDA 之外的真实工程代价</a></div>
+      <div class="it-sum">arXiv 上一篇 16 卡华为昇腾 910 + CANN + vLLM-Ascend 部署 LLM-as-a-judge 与多模态服务的田野研究，量化了非 GPU 加速器的实际瓶颈。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.08307" target="_blank" rel="noopener">论文：ML 负载下 NVIDIA GPU 的频率抖动可持续 80ms</a></div>
+      <div class="it-sum">低档 GPU 频率会受 ~80ms 内负载历史强烈影响，挑战 SOTA 的 ML 延迟预测假设。对推理调度器设计有指导意义。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="compilers">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://huggingface.co/blog/torch-attention-profile" target="_blank" rel="noopener">HuggingFace 博客:PyTorch Profiling 第三弹 —— 深入 Attention</a></div>
+      <div class="it-sum">系列第三篇聚焦 Attention 算子在 PyTorch profiler 下的拆解与优化路径,给 kernel 级性能调优提供实操模版。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.08427" target="_blank" rel="noopener">FPGN:用可微分 LUT 重塑 FPGA 神经网络加速</a></div>
+      <div class="it-sum">arXiv 新工作把 FPGA LUT 从数值单元升级为可微分的一等公民,面向纳秒级延迟推理场景。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="inference-dc">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/inference-software-lowest-token-cost/" target="_blank" rel="noopener">NVIDIA 官方:推理软件栈如何压低每 token 成本</a></div>
+      <div class="it-sum">NVIDIA 阐述 GPU+CPU+网络+软件协同设计如何把每美元/每瓦下的可用 token 数最大化,正式把 &quot;AI 工厂&quot; 的关键 KPI 从峰值 FLOPS 转向 tokens/$。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://siliconangle.com/2026/07/10/cache-storage-powers-vast-data-ai-infrastructure-edge-raisesummit/" target="_blank" rel="noopener">VAST Data 押注 KV Cache 存储层 冲进 AI Infra Exabyte 时代</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">随推理规模化与解耦计算兴起,VAST 把 KV Cache 存储做成 &quot;AI 工厂&quot; 的必备数据层,面向 neocloud 客户上量。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.07862" target="_blank" rel="noopener">CTA-Pipelining:面向多 GPU 系统的延迟型空间并行</a></div>
+      <div class="it-sum">arXiv 论文提出把多 GPU 共享内存互联当作紧耦合体系而非高速网,针对 LLM 服务的 latency-bound 模式做时空重排。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://huggingface.co/blog/native-speed-vllm-transformers-backend" target="_blank" rel="noopener">HuggingFace:vLLM 原生适配 Transformers 后端</a></div>
+      <div class="it-sum">官方博客介绍在 vLLM 中直接跑 Transformers modeling 代码,弥合原型-生产鸿沟。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.08565" target="_blank" rel="noopener">SMetric:面向 Agent 服务的会话级 LLM 调度</a></div>
+      <div class="it-sum">论文指出 agent 请求以整段响应为消费单位,应从 per-token 延迟转向 TPS 与会话公平性,并给出新的调度指标。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.infoq.cn/article/ItOOYNuWf6t9KtfgeH7F?utm_source=rss&amp;amp;utm_medium=article" target="_blank" rel="noopener">vLLM 多模态推理优化实践 分享(AICon 深圳)</a></div>
+      <div class="it-sum">InfoQ 整理的 vLLM 团队多模态模型推理落地经验,涉及 KV 分块、图像 embedding 缓存等细节。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="datacenter">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/" target="_blank" rel="noopener">SemiAnalysis:xAI Colossus 2 —— 全球首个 GW 级数据中心与 RL 方法论</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">xAI 继 Memphis 20 万卡 Colossus 1 之后,以史无前例的速度上马千兆瓦级训练集群,并伴随独特 RL 训练方法与新一轮融资。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://36kr.com/newsflashes/3889768614492931?f=rss" target="_blank" rel="noopener">东阳光子公司签下 130-150 亿元算力服务采购大单</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">东莞东阳光云智算与某 C 公司签订 130-150 亿元算力服务合同,负责采购部署高性能算力服务器并以租赁交付,期限 60 个月;凸显国内算力租赁需求。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.theregister.com/on-prem/2026/07/10/ai-driven-datacenter-builds-drive-microsofts-emissions-up-a-quarter-in-one-year/5269924" target="_blank" rel="noopener">微软 AI 数据中心扩张使一年碳排放上升 25%</a></div>
+      <div class="it-sum">The Register 报道微软在推行 AI 的同时,数据中心建设直接推高其温室气体排放约四分之一,引发企业 ESG 与算力扩张矛盾讨论。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.theverge.com/ai-artificial-intelligence/963930/sunrun-distributed-ai-data-center" target="_blank" rel="noopener">Sunrun 试点 &quot;分布式 AI 数据中心&quot;:把算力盒子塞进用户家</a></div>
+      <div class="it-sum">美国太阳能与储能公司 Sunrun 试点付费在用户家中放置 AI 计算节点,利用屋顶光伏和家庭储能为 AI 数据中心分担负载。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/" target="_blank" rel="noopener">Google 追加 15 亿美元扩建阿拉巴马 AI 数据中心园区</a></div>
+      <div class="it-sum">Google 官方博客宣布 2026-2027 在 Jackson County 投入 15 亿美元,继续扩张数据中心与本地社区支持。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.theregister.com/on-prem/2026/07/10/orbital-datacenter-gold-rush-needs-an-environmental-review-fcc-told/5269863" target="_blank" rel="noopener">轨道数据中心热潮催促 FCC 做环境评估</a></div>
+      <div class="it-sum">环保团体呼吁 FCC 在批准百万颗轨道数据中心卫星前先做统一环境审查,以免外层空间被大量空间碎片污染。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.08407" target="_blank" rel="noopener">论文:Fiber Memory —— 用光纤取代部分 DRAM 的超大规模架构设想</a></div>
+      <div class="it-sum">arXiv 提案在 HBM/DRAM 供给紧张背景下,把光纤重新想象为跨机架内存介质,面向生成式 AI 的巨量内存需求。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="safety">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">1513★</span><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener">OpenAI 发布 GPT-5.6 与 ChatGPT Work</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">GPT-5.6 通过白宫审查后面向公众开放,同步推出 agentic 工作模式 ChatGPT Work,可跨应用/文件/网页自动执行,并成为 Microsoft Copilot 首选模型。HN 1513 分。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">224★</span><a href="https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf" target="_blank" rel="noopener">GPT-5.6 Sol Ultra 给出 Cycle Double Cover 猜想证明</a></div>
+      <div class="it-sum">OpenAI 放出一份 PDF 声称 GPT-5.6 Sol Ultra 生成了 CDC 猜想的证明,引发数学界与 AI 安全社区讨论。HN 224 分。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets" target="_blank" rel="noopener">Apple 起诉 OpenAI:指控通过前员工窃取硬件商业机密</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Apple 诉状称 OpenAI 高层组织性地招募并 &quot;辅导&quot; Apple 前雇员携带机密信息跳槽;两家在 AI 硬件领域的竞争白热化。中外多家报道。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.theverge.com/ai-artificial-intelligence/963654/openai-chatgpt-atlas-ai-browser-shut-down-sunset" target="_blank" rel="noopener">OpenAI 关停 Atlas 浏览器 一年不到即下线</a></div>
+      <div class="it-sum">OpenAI 承认独立 AI 浏览器 Atlas 无法与 Chrome/Edge 竞争,将 agentic 浏览能力迁至桌面 App 与 Chrome 扩展,继续投入企业侧智能体。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/" target="_blank" rel="noopener">OpenAI 二号人物 Fidji Simo 因病辞任全职 AGI 负责人</a></div>
+      <div class="it-sum">在 Simo 医疗休假被延长后,她转任兼职顾问;交接期正值 OpenAI 传出 IPO 计划与追赶 Anthropic 企业市场的窗口期。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/industrynews/6YYc1vkNrQVjRHfg.html" target="_blank" rel="noopener">OpenAI 权力洗牌:安全元老 Achiam 离职 白宫政策操盘手 Ball 加盟</a></div>
+      <div class="it-sum">雷锋网观察:首席未来学家 Joshua Achiam 出走,前白宫 AI 政策幕僚 Dean Ball 出任战略未来负责人,理想派安全叙事让位于政商操盘。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">74★</span><a href="https://www.anthropic.com/news/ben-bernanke" target="_blank" rel="noopener">Ben Bernanke 加入 Anthropic 监督信托</a></div>
+      <div class="it-sum">前美联储主席 Bernanke 出任 Anthropic 长期利益信托理事,加强其治理与政策公信力。HN 74 分。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-it-can-read-claudes-thoughts-as-detailed-in-new-research-paper-models-observed-to-have-a-global-workspace-revealing-more-of-what-makes-llms-tick" target="_blank" rel="noopener">Anthropic 论文:Claude 具备类 &quot;全局工作空间&quot; 可读的内部思考</a></div>
+      <div class="it-sum">Anthropic 新研究表明可在 Claude 隐藏状态中识别 &quot;J-space&quot; 结构,类似人类内部工作记忆,为对齐与可解释性提供新入口。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-infra">
+    <h2>6️⃣ 具身智能(基础设施视角)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/hugging-face-lerobot-models-frameworks-open-robotics/" target="_blank" rel="noopener">NVIDIA 与 Hugging Face 为 LeRobot 带来新模型与框架</a></div>
+      <div class="it-sum">两家合作把开源机器人基础模型、仿真、遥操等资源打通,面向 physical AI 提供从数据到 onboard 部署的一体化路径。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="autokernel">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.08339" target="_blank" rel="noopener">TypeProbe:从预训练代码模型中恢复类型表示</a></div>
+      <div class="it-sum">论文通过对齐 Java/Python 平行代码探测隐状态,发现即使无类型语言训练也能自发形成跨语言类型表征,为后续做类型引导的 kernel/编译器代码生成提供基础。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="edge">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/sk-hyn...-air" target="_blank" rel="noopener">SK 海力士与 TetraMem 合作 memristor 存内计算 SoC 面向边缘 AI</a></div>
+      <div class="it-sum">SK 海力士、TetraMem、南加大联合流片一款基于 memristor 的存算一体 SoC,用于边缘设备推理,能效指标初步达标但性能仍待验证。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">188★</span><a href="https://www.macrumors.com/2026/07/06/apple-silicon-exec-explains-mac-mini-ai-demand/" target="_blank" rel="noopener">苹果高管解读:Mac mini AI 需求推动 On-Device 未来</a></div>
+      <div class="it-sum">Apple Silicon 部门负责人罕见讲述 Mac mini 在 AI 场景的火爆背后的 On-Device 战略,进一步押注端侧推理。HN 188 分。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://semiengineering.com/the-expansion-of-lpddr-into-edge-ai-platforms/" target="_blank" rel="noopener">LPDDR 向边缘 AI 平台扩张</a></div>
+      <div class="it-sum">SemiEngineering 分析 LPDDR 从手机延续电池寿命的传统,正好契合端侧实时推理对功耗/带宽的诉求,成为边缘 AI 主流内存。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://huggingface.co/blog/cerebras-gemma4-voice-ai" target="_blank" rel="noopener">Hugging Face 与 Cerebras 把 Gemma 4 带进实时语音</a></div>
+      <div class="it-sum">官方博客宣布通过 Cerebras 推理加速把 Gemma 4 用于低延迟语音 AI,压低端到端语音智能体成本。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（14 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>210.96 USD</td><td class="up">+7.88%</td><td>Nemotron/Vera/AI Factory 组合拳,一周领涨</td></tr>
+        <tr><td>博通 <span class="tk">AVGO</span></td><td>399.97 USD</td><td class="up">+6.97%</td><td>Apple 300 亿美元 AI 芯片合作利好</td></tr>
+        <tr><td>AMD <span class="tk">AMD</span></td><td>557.89 USD</td><td class="up">+1.06%</td><td>月底将发布 Zen 6 EPYC Venice</td></tr>
+        <tr><td>超微 SMCI <span class="tk">SMCI</span></td><td>28.31 USD</td><td class="up">+4.12%</td><td></td></tr>
+        <tr><td>台积电 <span class="tk">TSM</span></td><td>434.11 USD</td><td class="down">-3.91%</td><td>获利回吐;Rapidus 2nm 定价压力</td></tr>
+        <tr><td>英特尔 <span class="tk">INTC</span></td><td>109.84 USD</td><td class="down">-10.11%</td><td>本周最大跌幅,代工业务仍存不确定性</td></tr>
+        <tr><td>微软 <span class="tk">MSFT</span></td><td>385.1 USD</td><td class="down">-0.42%</td><td>GPT-5.6 独家 Copilot 但被曝碳排放骤升 25%</td></tr>
+        <tr><td>甲骨文 <span class="tk">ORCL</span></td><td>140.64 USD</td><td class="down">-2.17%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>浪潮信息 <span class="tk">0.000977 · A股</span></td><td>89.52 CNY</td><td class="up">+4.11%</td><td>算力服务器需求持续</td></tr>
+        <tr><td>海光信息 <span class="tk">1.688041 · A股</span></td><td>353.0 CNY</td><td class="down">-2.88%</td><td></td></tr>
+        <tr><td>中芯国际 <span class="tk">116.00981 · 港股</span></td><td>79.65 HKD</td><td class="down">-4.67%</td><td>市值一度超越贵州茅台后回调</td></tr>
+        <tr><td>华虹半导体 <span class="tk">116.01347 · 港股</span></td><td>185.5 HKD</td><td class="down">-8.08%</td><td></td></tr>
+        <tr><td>中际旭创 <span class="tk">0.300308 · A股</span></td><td>1093.98 CNY</td><td class="down">-8.45%</td><td>光模块获利回吐</td></tr>
+        <tr><td>寒武纪 <span class="tk">1.688256 · A股</span></td><td>1400.0 CNY</td><td class="down">-8.8%</td><td>高位调整</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$392B(H1)</span><span class="badge region">海外</span><a href="https://news.crunchbase.com/venture/na-startup-funding-ma-shattered-records-ai-q2-2026/" target="_blank" rel="noopener">北美上半年创投投资额 3920 亿美元创纪录 AI 是主力</a></div><div class="it-sum">Crunchbase:2026 上半年美加初创融资总额达 3920 亿美元,历史新高,AI 基础设施与网安并列最大领域,单周两笔十亿美元级(SambaNova、Keyfactor)。</div></li>
+      <li><div class="it-title"><span class="badge amt">$800M(累计)</span><span class="badge region">海外</span><a href="https://www.leiphone.com/category/industrynews/fke9ApznCGrLefuE.html" target="_blank" rel="noopener">AI 芯片创业公司 Etched 累计融资近 8 亿美元 估值 50 亿</a></div><div class="it-sum">Etched 造 Transformer 专用芯片 Sohu,拿下 10 亿美元芯片订单,投资方含辛顿、李飞飞、Karpathy、Thiel、Jane Street 与台积电基金。中外多家报道。</div></li>
+      <li><div class="it-title"><span class="badge amt">$1.2B</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/07/08/crypto-vc-firm-paradigm-raises-1-2b-to-invest-in-technical-frontier-startups/" target="_blank" rel="noopener">Paradigm 加密 VC 募集 12 亿美元 转向 AI 与机器人</a></div><div class="it-sum">老牌加密 VC Paradigm 完成 12 亿美元新基金,明确从纯加密投资拓展到 AI/机器人等 &quot;技术前沿&quot; 项目。</div></li>
+      <li><div class="it-title"><span class="badge amt">$20B(估值)</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/07/09/mercor-is-in-talks-for-a-20b-valuation/" target="_blank" rel="noopener">AI 数据标注公司 Mercor 洽谈 200 亿美元估值</a></div><div class="it-sum">为 AI 实验室提供高质量标注/评估服务的 Mercor 传出以 200 亿美元估值融资,较去年 10 月的 100 亿翻倍。</div></li>
+      <li><div class="it-title"><span class="badge amt">$100M</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/" target="_blank" rel="noopener">Nvidia 领投 巴黎 AI 语音公司 Gradium 1 亿美元种子轮</a></div><div class="it-sum">Gradium 拿到 Nvidia 加持的 1 亿美元种子融资,拟在旧金山湾区设立办公室争夺 AI 人才。</div></li>
+      <li><div class="it-title"><span class="badge amt">¥数亿</span><span class="badge region">国内</span><a href="https://36kr.com/p/3889141540370949?f=rss" target="_blank" rel="noopener">北京他山科技完成数亿元 B 轮 押注触觉传感芯片</a></div><div class="it-sum">英伟达全球首家触觉仿真合作伙伴他山科技完成数亿元 B 轮,均胜/奥克斯等产业方跟进,上半年订单超去年四倍,面向机器人/汽车触觉感知。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← 返回全部周报</a></span>
+    <span><a href="../../index.html">资讯首页 →</a></span>
+  </div>
+  <footer class="site">由 blueyi.github.io/feeds 自动生成 · 数据源 HN/arXiv/产业媒体/公司官方/融资/Yahoo Finance 行情 · 站点 master 直发 GitHub Pages</footer>
+</div>
+</body>
+</html>
