@@ -187,7 +187,7 @@ def build_channel_index(channel: str, spec: dict) -> int:
   <div class="card-grid">
 {cards_html}
   </div>
-  <footer class="site">由 blueyi.github.io/feeds 自动生成 · 共 {len([c for c in cards])} 期</footer>
+  <footer class="site"><a class="home-link" href="/">← 返回 yulong.wang 主页</a> · 由 blueyi.github.io/feeds 自动生成 · 共 {len([c for c in cards])} 期</footer>
 </div>
 </body>
 </html>
@@ -298,7 +298,7 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
   <div class="chan-grid">
 {chans_html}
   </div>
-  <footer class="site">由 blueyi.github.io/feeds 自动生成 · 自包含引擎见 _engine/ · master 直发 GitHub Pages</footer>
+  <footer class="site"><a class="home-link" href="/">← 返回 yulong.wang 主页</a> · 由 blueyi.github.io/feeds 自动生成 · 自包含引擎见 _engine/ · master 直发 GitHub Pages</footer>
 </div>
 </body>
 </html>

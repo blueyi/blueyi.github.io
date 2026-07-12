@@ -95,6 +95,10 @@ details.stocks-fold[open]{padding-bottom:12px}
 .chan .latest a:hover{text-decoration:underline}
 footer.site{margin-top:50px; padding-top:20px; border-top:1px solid var(--border);
   color:var(--muted); font-size:12.5px; text-align:center}
+/* 返回主页链接：footer 内色调略比说明文字亮一点，有 hover 反馈；单行不换行避免视觉断裂 */
+footer.site .home-link{color:var(--fg); opacity:.85; text-decoration:none;
+  white-space:nowrap; transition:opacity .15s,color .15s}
+footer.site .home-link:hover{color:var(--link); opacity:1}
 
 /* ─── 总入口页：频道卡片内的近 N 期亮点区块 ─────────────────────────
    与详情页 .highlights 视觉呼应但独立命名，避免污染详情页样式。
