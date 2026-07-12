@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W28</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W28</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W28</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-05 ~ 2026-07-12</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W28</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>DexVerse 发布多任务多本体灵巧操作模块化基准，弥补现有基准在本体覆盖与视觉变化上的不足。</li>
+      <li>国内具身数据采集赛道一年融资 44.7 亿元，近百玩家涌入，商业化路径与盈利模式受关注。</li>
+      <li>英伟达机器人算力概念本周领涨近 8%，RTX Spark 超级芯片真机落地，笔记本可跑 120B 大模型。</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.08639v1" target="_blank" rel="noopener">LingBot-VA 2.0：面向具身的原生视频-动作预训练</a></div>
+      <div class="it-sum">提出为物理环境从零构建的视频-动作基础模型，指出直接复用面向数字内容生成的视频生成模型不适配机器人控制，给出四条核心设计原则。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.08575v1" target="_blank" rel="noopener">FabriVLA：轻量级 VLA 实现精细多任务操作</a></div>
+      <div class="it-sum">以 InternVL3.5 为视觉-语言骨干，配合 flow-matching 动作头与门控自注意力，单阶段联合训练实现精确多任务操作。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.08448v1" target="_blank" rel="noopener">Harness VLA：以记忆引导智能体把冻结 VLA 稳定为可靠操作原语</a></div>
+      <div class="it-sum">针对端到端 VLA 在语义重定向、目标重绑定、空间布局变化等部署扰动下失效的问题，用记忆引导的智能体框架增强鲁棒性。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.08751v1" target="_blank" rel="noopener">DexVerse：多任务多本体灵巧操作模块化基准</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">面向通用灵巧操作策略，覆盖多样交互模式、感知条件与机器人本体，弥补现有基准在任务/数据多样性、本体覆盖与可控视觉变化上的不足。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.08742v1" target="_blank" rel="noopener">ContactMimic：以接触控制实现人形物体交互</a></div>
+      <div class="it-sum">指出仅靠关键点跟踪难以完成坐椅、擦板、推家具等需真实物理接触的任务，提出跟踪部件级二值接触指令与关键点轨迹的学习框架。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/07/448034.html" target="_blank" rel="noopener">98 年生哈工大教授创业，做人形灵巧操作世界模型</a></div>
+      <div class="it-sum">从采集触觉、对齐触觉到使用触觉，切入人形灵巧操作的世界模型方向。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.08724v1" target="_blank" rel="noopener">Latent Memory Palace：将控制中的推理建模为自回归变分推断</a></div>
+      <div class="it-sum">探索把语言模型的自适应推理能力迁移到连续控制策略，弥补直接在语言空间推理缺乏空间理解与精细动作粒度的问题。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/07/10/robodk-unveils-cam-software-that-cuts-robotic-machining-deployment-time-by-up-to-40-percent/103239/" target="_blank" rel="noopener">RoboDK 推出 CAM 软件，机器人加工部署时间缩短最多 40%</a></div>
+      <div class="it-sum">离线编程与仿真软件商 RoboDK 发布 CAM 软件，可直接从 CAD 文件生成机器人加工程序。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（世界模型 / 人形策略 / 基础模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2607.08741v1" target="_blank" rel="noopener">ARDY：面向交互式人类动作生成的自回归扩散混合表征</a></div>
+      <div class="it-sum">针对动画、仿真与人形机器人的实时 3D 人类动作生成，兼顾离线方法的可控性与在线方法的实时推理速度。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/07/447981.html" target="_blank" rel="noopener">英伟达 RTX Spark 真机现身：CPU 与 GPU 焊接一体，笔记本跑 120B 大模型</a></div>
+      <div class="it-sum">黄仁勋在 ComputeX 发布的“超级芯片”已在真机落地，CPU 与 GPU 直接封装一体，为边缘侧大模型推理提供算力。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/07/09/intrinsics-vision-for-physical-ai-building-the-software-defined-factory/103211/" target="_blank" rel="noopener">Intrinsic 的物理 AI 愿景：构建软件定义工厂</a></div>
+      <div class="it-sum">打破工业自动化数十年“为特定任务工程化”的固定模式，探索以软件定义方式提升产线柔性。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/humanoid-robots-japan" target="_blank" rel="noopener">日本曾引领人形机器人，如今能否追上中国？</a></div>
+      <div class="it-sum">东京人形机器人峰会上关于人机关系走向的讨论，折射日本在人形赛道面对中国竞争的处境。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/china-humanoid-robot-marathon" target="_blank" rel="noopener">中国半马机器人夺冠背后的秘密</a></div>
+      <div class="it-sum">2026 年 4 月 Honor Lightning 人形机器人以 50 分 26 秒跑完半马，较人类世界纪录快 7 分钟、较 2025 年最佳机器人成绩快近 2 小时。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/07/447914.html" target="_blank" rel="noopener">近百名玩家涌入具身数据：一年融资 44.7 亿，谁能靠“卖数据”赚钱</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">具身数据采集赛道玩家激增，一年融资 44.7 亿元，中外多家报道其商业模式与盈利难题。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/video/inside-ces-2026s-physical-ai-takeover/" target="_blank" rel="noopener">CES 2026“物理 AI”接管：从新 Atlas 到 AI 制冰机</a></div>
+      <div class="it-sum">AI 走出屏幕，CES 2026 被物理 AI 与机器人主导，波士顿动力全新 Atlas 亮相。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（11 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>210.96 USD</td><td class="up">+7.88%</td><td>机器人算力龙头，周涨近 8%</td></tr>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>407.76 USD</td><td class="down">-2.86%</td><td>Optimus 概念</td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>406.78 USD</td><td class="down">-6.02%</td><td>手术机器人</td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>43.64 USD</td><td class="down">-1.84%</td><td>仓储自动化</td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>5.92 USD</td><td class="down">-8.22%</td><td>配送机器人，周跌逾 8%</td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>110.2 HKD</td><td class="up">+4.45%</td><td>物流机器人</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>85.05 HKD</td><td class="down">-3.02%</td><td>人形机器人</td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>4.42 HKD</td><td class="up">+1.38%</td><td>机器人芯片</td></tr>
+        <tr><td>埃斯顿 <span class="tk">0.002747 · A股</span></td><td>42.78 CNY</td><td class="up">+3.01%</td><td>工业机器人</td></tr>
+        <tr><td>绿的谐波 <span class="tk">1.688017 · A股</span></td><td>405.0 CNY</td><td class="down">-0.75%</td><td>谐波减速器</td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>43.19 CNY</td><td class="up">+1.94%</td><td>AI 语音</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://36kr.com/p/3889516712065799?f=rss" target="_blank" rel="noopener">鹰瞰智翼三个月融三轮，具身智能仿生扑翼机器人</a></div><div class="it-sum">上交大 00 后博士创办，近期完成数千万元 A 轮，由元禾璞华领投，资金用于消费级产品量产备货与流体仿真引擎研发。具体金额以官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge amt">$11M</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">Proception 和解特斯拉商业机密诉讼并宣布 1100 万美元融资</a></div><div class="it-sum">机器人手初创 Proception 以独特方式采集训练数据，攻关机器人灵巧手难题，同时和解与特斯拉的商业机密诉讼。</div></li>
+      <li><div class="it-title"><span class="badge amt">€6.5M</span><span class="badge region">海外</span><a href="https://roboticsandautomationnews.com/2026/07/10/cognibotics-selected-for-e6-5-million-in-eu-accelerator-funding/103230/" target="_blank" rel="noopener">Cognibotics 获欧盟加速器 650 万欧元资助</a></div><div class="it-sum">瑞典深科技机器人公司获欧洲创新委员会加速器混合融资，含 250 万欧元赠款与 400 万欧元股权。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
