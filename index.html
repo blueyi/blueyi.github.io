@@ -1064,19 +1064,19 @@
                     <span class="feeds-head">
                         <span class="meta">
                             <a class="label" href="https://yulong.wang/feeds/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">Weekly Feeds</a>
-                            <span class="sub">每周资讯 · 数据源 HN / arXiv / 产业媒体 / 行情</span>
+                            <span class="sub">Weekly digest · HN / arXiv / industry media / markets</span>
                         </span>
                     </span>
                     <span class="feeds-chans">
-                        <a class="feeds-chan" href="https://yulong.wang/feeds/ai-infra/" target="_blank" rel="noopener" data-feeds-channel="ai-infra" data-feeds-schedule="每周六 06:00 HKT 更新">
-                            <span class="fc-name">📡 AI Infra 每周资讯</span>
-                            <span class="fc-latest" data-feeds-latest>查看最新一期 →</span>
-                            <span class="fc-schedule" data-feeds-schedule-label>每周六 06:00 HKT 更新</span>
+                        <a class="feeds-chan" href="https://yulong.wang/feeds/ai-infra/" target="_blank" rel="noopener" data-feeds-channel="ai-infra" data-feeds-schedule="Updated every Sat 06:00 HKT">
+                            <span class="fc-name">📡 AI Infra Weekly</span>
+                            <span class="fc-latest" data-feeds-latest>View latest issue →</span>
+                            <span class="fc-schedule" data-feeds-schedule-label>Updated every Sat 06:00 HKT</span>
                         </a>
-                        <a class="feeds-chan" href="https://yulong.wang/feeds/embodied-ai/" target="_blank" rel="noopener" data-feeds-channel="embodied-ai" data-feeds-schedule="每周日 22:00 HKT 更新">
-                            <span class="fc-name">🤖 具身智能每周资讯</span>
-                            <span class="fc-latest" data-feeds-latest>查看最新一期 →</span>
-                            <span class="fc-schedule" data-feeds-schedule-label>每周日 22:00 HKT 更新</span>
+                        <a class="feeds-chan" href="https://yulong.wang/feeds/embodied-ai/" target="_blank" rel="noopener" data-feeds-channel="embodied-ai" data-feeds-schedule="Updated every Sun 22:00 HKT">
+                            <span class="fc-name">🤖 Embodied AI Weekly</span>
+                            <span class="fc-latest" data-feeds-latest>View latest issue →</span>
+                            <span class="fc-schedule" data-feeds-schedule-label>Updated every Sun 22:00 HKT</span>
                         </a>
                     </span>
                 </span>
@@ -1425,12 +1425,12 @@
                     var w = pub[0];
                     var label = (w.title_date || w.week || '').replace(/（.*$/, '').trim();
                     var hl = w.highlight ? (' · ' + w.highlight) : '';
-                    var txt = '最新 ' + label + hl;
+                    var txt = 'Latest ' + label + hl;
                     if (txt.length > 64) txt = txt.slice(0, 63) + '…';
                     slot.textContent = txt;
                     if (w.html) el.setAttribute('href', '/feeds/' + ch + '/' + w.html);
                 })
-                .catch(function () { /* 降级：保留静态“查看最新一期 →” */ });
+                .catch(function () { /* 降级：保留静态 "View latest issue →" */ });
         });
     })();
 
