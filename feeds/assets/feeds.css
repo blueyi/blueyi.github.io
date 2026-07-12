@@ -95,3 +95,45 @@ details.stocks-fold[open]{padding-bottom:12px}
 .chan .latest a:hover{text-decoration:underline}
 footer.site{margin-top:50px; padding-top:20px; border-top:1px solid var(--border);
   color:var(--muted); font-size:12.5px; text-align:center}
+
+/* ─── 总入口页：频道卡片内的近 N 期亮点区块 ─────────────────────────
+   与详情页 .highlights 视觉呼应但独立命名，避免污染详情页样式。
+   移动端 (≤640px) 断点与 .chan-grid 一致。
+────────────────────────────────────────────────────────────────── */
+/* 让频道卡内容纵向 flex，chan-footer 可用 margin-top:auto 压到底部
+   使两栏卡片数量不同时底部按钮仍水平对齐 */
+.chan{display:flex; flex-direction:column}
+.chan .chan-desc{color:var(--muted); font-size:14px; margin:0 0 8px; line-height:1.55}
+.chan .chan-schedule{display:inline-block; font-size:11.5px; color:var(--fg); opacity:.85;
+  background:rgba(210,153,34,0.08); border:1px solid rgba(210,153,34,0.25);
+  padding:2px 9px; border-radius:10px; margin:0 0 14px; letter-spacing:.02em}
+.chan-highlights{margin:6px 0 4px}
+.chan-highlights .wk-block{background:var(--panel2); border:1px solid var(--border);
+  border-radius:10px; padding:12px 14px; margin-bottom:10px;
+  border-left:3px solid var(--accent)}
+.chan-highlights .wk-block:last-child{margin-bottom:0}
+.chan-highlights .wk-badge{display:inline-block; font-size:11.5px; font-weight:600;
+  color:var(--accent); background:rgba(210,153,34,0.14);
+  padding:3px 9px; border-radius:10px; text-decoration:none;
+  margin:0 0 8px; letter-spacing:.02em; transition:background .15s}
+.chan-highlights .wk-badge:hover{background:rgba(210,153,34,0.24)}
+.chan-highlights ol{margin:2px 0 0; padding-left:22px}
+.chan-highlights ol li{margin:5px 0; line-height:1.55; font-size:13.5px; color:var(--fg)}
+.chan-highlights .wk-empty{font-size:12.5px; color:var(--muted); font-style:italic}
+.chan-footer{margin:14px 0 0; padding-top:10px; font-size:13px;
+  border-top:1px dashed var(--border);
+  margin-top:auto}  /* 关键：两栏卡片数量不同时按钮仍水平对齐 */
+.chan-footer a{color:var(--link); text-decoration:none}
+.chan-footer a:hover{text-decoration:underline}
+@media(max-width:640px){
+  .chan{padding:16px}
+  .chan h2{font-size:18px}
+  .chan-highlights .wk-block{padding:10px 12px}
+  .chan-highlights ol{padding-left:20px}
+  .chan-highlights ol li{font-size:13px; line-height:1.6; margin:7px 0}
+  .chan .chan-schedule{font-size:11px}
+  /* 移动端单列，margin-top:auto 就不起作用了(每个 chan 独立高度)，无所谓 */
+  /* 增加相邻频道卡片间距以强化区块感 */
+  .chan-grid{gap:14px}
+  .chan-footer{padding:12px 0 4px} /* 触控目标 ≥44px（含 line-height） */
+}

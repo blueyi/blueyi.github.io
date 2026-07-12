@@ -8,6 +8,7 @@ rebuild_index.py — 扫描 data/*.json,重建：
 无参数运行即可重建全部（幂等）。新增周报无需手改任何索引。
 仅用 Python 标准库 + pyyaml。
 """
+import argparse
 import html
 import json
 import re
@@ -20,6 +21,19 @@ import yaml
 ENGINE_DIR = Path(__file__).resolve().parent.parent
 FEEDS_DIR = ENGINE_DIR.parent
 CHANNELS = ["ai-infra", "embodied-ai"]
+
+# 各频道的更新时间（cron 触发时间）—— 用于在总入口页展示，避免用户看到当天未更新以为坏掉了
+# 与 skill/cron 保持一致：AI Infra 周六 06:00 HKT / 具身智能 周日 22:00 HKT
+CHANNEL_SCHEDULES = {
+    "ai-infra": "每周六 06:00 HKT 更新",
+    "embodied-ai": "每周日 22:00 HKT 更新",
+}
+
+# 频道 emoji（复用主页宽卡片风格）
+CHANNEL_EMOJIS = {
+    "ai-infra": "📡",
+    "embodied-ai": "🤖",
+}
 
 
 def esc(s) -> str:
@@ -212,25 +226,58 @@ def build_manifest(channel: str, spec: dict):
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def build_site_index(channel_specs: dict):
+def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_week: int = 3):
+    """渲染 feeds/index.html —— 两频道并排卡片，每卡默认展示近 3 期 × 3 条 highlights。
+
+    参数化目的：未来只需 `python3 rebuild_index.py --recent-weeks 4` 即可调整密度，
+    不需改代码。data 里 highlights 少于要求条数时按实际数量渲染（不会填充空占位）。
+    """
     chans = []
     for channel in CHANNELS:
         spec = channel_specs[channel]
         zh = spec.get("title", channel)
         desc = spec.get("description", "")
-        weeks = [w for w in list_weeks(channel) if w[2]]
-        latest = []
-        for week, doc, _ in weeks[:3]:
+        emoji = CHANNEL_EMOJIS.get(channel, "")
+        schedule = CHANNEL_SCHEDULES.get(channel, "")
+        weeks = [w for w in list_weeks(channel) if w[2]]  # 只取已发布
+
+        # 渲染近 N 期的亮点块
+        wk_blocks = []
+        for week, doc, _ in weeks[:recent_weeks]:
             cur = doc.get("curated") or {}
             td = normalize_title_date(cur.get("title_date", week), week)
-            latest.append(f'<a href="{esc(channel)}/weeks/{esc(week)}.html">{esc(td)}</a>')
-        latest_html = " · ".join(latest) if latest else "暂无周报"
+            # title_date 形如 "2026-W28（07-04 ~ 07-11）" —— 拆开做徽标+副文
+            m = re.match(r"^(\d{4}-W\d{2})[（(]?([^）)]*)?", td)
+            wk_label = m.group(1) if m else week
+            wk_range = m.group(2).strip() if m and m.group(2) else ""
+
+            highlights = (cur.get("highlights") or [])[:highlights_per_week]
+            if not highlights:
+                # 没有 highlights 的一期也保留占位，展示 window
+                hl_html = '        <div class="wk-empty">本期无编辑亮点</div>'
+            else:
+                lis = "\n".join(f"          <li>{esc(h)}</li>" for h in highlights)
+                hl_html = f"        <ol>\n{lis}\n        </ol>"
+
+            wk_blocks.append(
+                f'      <div class="wk-block">\n'
+                f'        <a class="wk-badge" href="{esc(channel)}/weeks/{esc(week)}.html">'
+                f'{esc(wk_label)}{(" · " + esc(wk_range)) if wk_range else ""} →</a>\n'
+                f'{hl_html}\n'
+                f'      </div>'
+            )
+        blocks_html = "\n".join(wk_blocks) if wk_blocks else '      <div class="wk-empty">暂无已发布周报</div>'
+
         # 用 <div> 外层 + 内部标题 <a>,避免嵌套 <a> 的非法 HTML(浏览器会把内部 <a> 抽出,破坏 DOM)
         chans.append(
             f'    <div class="chan">\n'
-            f'      <h2><a class="chan-title" href="{esc(channel)}/index.html">{esc(zh)} →</a></h2>\n'
-            f'      <p>{esc(desc)}</p>\n'
-            f'      <div class="latest">最新：{latest_html}</div>\n'
+            f'      <h2><a class="chan-title" href="{esc(channel)}/index.html">{esc(emoji)} {esc(zh)} →</a></h2>\n'
+            f'      <p class="chan-desc">{esc(desc)}</p>\n'
+            f'      <div class="chan-schedule">{esc(schedule)}</div>\n'
+            f'      <div class="chan-highlights">\n'
+            f'{blocks_html}\n'
+            f'      </div>\n'
+            f'      <div class="chan-footer"><a href="{esc(channel)}/index.html">📚 查看全部期数 →</a></div>\n'
             '    </div>'
         )
     chans_html = "\n".join(chans)
@@ -246,7 +293,7 @@ def build_site_index(channel_specs: dict):
 <div class="wrap">
   <header class="site">
     <h1>📡 最新资讯 Feeds</h1>
-    <div class="sub">每周自动整理的 AI Infra 与具身智能技术资讯 · 数据源 Hacker News + arXiv</div>
+    <div class="sub">每周自动整理的 AI Infra 与具身智能技术资讯 · 数据源 Hacker News / arXiv / 产业媒体 / 行情</div>
   </header>
   <div class="chan-grid">
 {chans_html}
@@ -261,13 +308,20 @@ def build_site_index(channel_specs: dict):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Rebuild feeds site index / channel index / manifests")
+    parser.add_argument("--recent-weeks", type=int, default=3,
+                        help="总入口页每频道展示的最近期数（默认 3）")
+    parser.add_argument("--highlights-per-week", type=int, default=3,
+                        help="总入口页每期展示的亮点条数上限（默认 3）")
+    args = parser.parse_args()
+
     specs = {c: load_spec(c) for c in CHANNELS}
     for c in CHANNELS:
         n = build_channel_index(c, specs[c])
         build_manifest(c, specs[c])
         print(f"[{c}] index rebuilt: {n} published week(s)")
-    build_site_index(specs)
-    print("[site] feeds/index.html rebuilt")
+    build_site_index(specs, recent_weeks=args.recent_weeks, highlights_per_week=args.highlights_per_week)
+    print(f"[site] feeds/index.html rebuilt (recent_weeks={args.recent_weeks}, highlights_per_week={args.highlights_per_week})")
 
 
 if __name__ == "__main__":
