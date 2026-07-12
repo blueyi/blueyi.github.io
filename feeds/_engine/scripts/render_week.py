@@ -143,6 +143,7 @@ def render(channel: str, week: str) -> str:
     doc = json.loads(data_path.read_text(encoding="utf-8"))
     cur = doc.get("curated") or {}
     zh, en = CHANNEL_TITLES.get(channel, (channel, channel))
+    zh = en  # 站点外壳标题统一英文（正文内容仍中文）
     title_date = normalize_title_date(cur.get("title_date", week), week)
     window = normalize_window(cur.get("window", ""))
     domains_html = "\n".join(render_domain(d) for d in cur.get("domains", []))
@@ -173,9 +174,9 @@ def render(channel: str, week: str) -> str:
     <div class="sub">{esc(en)} weekly digest</div>
   </header>
   <div class="meta-bar">
-    <span>覆盖窗口：<b>{esc(window)}</b></span>
-    <span>信息源：<b>HN / arXiv / 产业媒体 / 公司官方 / 融资 / 行情</b></span>
-    <span>周编号：<b>{esc(week)}</b></span>
+    <span>Window: <b>{esc(window)}</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>{esc(week)}</b></span>
   </div>
 {hl_html}
 {domains_html}
@@ -184,7 +185,7 @@ def render(channel: str, week: str) -> str:
     <span><a href="../index.html">← All issues</a></span>
     <span><a href="../../index.html">Feeds home →</a></span>
   </div>
-  <footer class="site"><a class="home-link" href="/">{HOME_SVG}Back to yulong.wang</a> · 由 blueyi.github.io/feeds 自动生成 · 数据源 HN/arXiv/产业媒体/公司官方/融资/Yahoo Finance 行情 · 站点 master 直发 GitHub Pages</footer>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
 </div>
 </body>
 </html>

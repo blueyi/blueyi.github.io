@@ -35,6 +35,12 @@ CHANNEL_EMOJIS = {
     "embodied-ai": "🤖",
 }
 
+# 总入口页频道卡片英文描述（导航区固定 UI，与英文站点外壳一致；周报正文内容仍中文）
+CHANNEL_DESC_EN = {
+    "ai-infra": "Full-stack AI infrastructure — chips / compilers / inference / datacenters / safety / autokernels / edge",
+    "embodied-ai": "Embodied AI progress — VLA / dexterous manipulation / sim2real / embodied models / chips / manufacturing / market",
+}
+
 # 返回主页图标 —— feather 风格描边 home SVG，与主页 index.html 的图标风格一致
 # 取代跳脱的 🏠 emoji，融入暗色极简风。inline 复用于面包屑第一层。
 HOME_SVG = ('<svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
@@ -155,9 +161,9 @@ def week_highlight(doc: dict) -> str:
 
 
 def build_channel_index(channel: str, spec: dict) -> int:
-    zh = spec.get("title", channel)
+    zh = spec.get("title_en", spec.get("title", channel))  # 站点外壳统一英文
     en = spec.get("title_en", channel)
-    desc = spec.get("description", "")
+    desc = CHANNEL_DESC_EN.get(channel, spec.get("description", ""))
     weeks = list_weeks(channel)
     cards = []
     for week, doc, html_exists in weeks:
@@ -170,11 +176,11 @@ def build_channel_index(channel: str, spec: dict) -> int:
         cards.append(
             '    <a class="card" href="weeks/' + esc(week) + '.html">\n'
             f'      <h3>{esc(title_date)}</h3>\n'
-            f'      <div class="when">{esc(week)} · 覆盖 {esc(window)}</div>\n'
+            f'      <div class="when">{esc(week)} · {esc(window)}</div>\n'
             f'      <div class="hl">{esc(hl)}</div>\n'
             '    </a>'
         )
-    cards_html = "\n".join(cards) if cards else '    <div class="empty">暂无已发布周报。</div>'
+    cards_html = "\n".join(cards) if cards else '    <div class="empty">No issues published yet.</div>'
     page = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -188,12 +194,12 @@ def build_channel_index(channel: str, spec: dict) -> int:
   <div class="crumb"><a href="/">{HOME_SVG}Home</a> / <a href="../index.html">Feeds</a> / {esc(zh)}</div>
   <header class="site">
     <h1>{esc(zh)}</h1>
-    <div class="sub">{esc(en)} · {esc(desc)}</div>
+    <div class="sub">{esc(desc)}</div>
   </header>
   <div class="card-grid">
 {cards_html}
   </div>
-  <footer class="site"><a class="home-link" href="/">{HOME_SVG}Back to yulong.wang</a> · 由 blueyi.github.io/feeds 自动生成 · 共 {len([c for c in cards])} 期</footer>
+  <footer class="site">Auto-generated · {len([c for c in cards])} issues</footer>
 </div>
 </body>
 </html>
@@ -241,8 +247,8 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
     chans = []
     for channel in CHANNELS:
         spec = channel_specs[channel]
-        zh = spec.get("title", channel)
-        desc = spec.get("description", "")
+        zh = spec.get("title_en", spec.get("title", channel))
+        desc = CHANNEL_DESC_EN.get(channel, spec.get("description", ""))
         emoji = CHANNEL_EMOJIS.get(channel, "")
         schedule = CHANNEL_SCHEDULES.get(channel, "")
         weeks = [w for w in list_weeks(channel) if w[2]]  # 只取已发布
@@ -260,7 +266,7 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
             highlights = (cur.get("highlights") or [])[:highlights_per_week]
             if not highlights:
                 # 没有 highlights 的一期也保留占位，展示 window
-                hl_html = '        <div class="wk-empty">本期无编辑亮点</div>'
+                hl_html = '        <div class="wk-empty">No highlights this issue</div>'
             else:
                 lis = "\n".join(f"          <li>{esc(h)}</li>" for h in highlights)
                 hl_html = f"        <ol>\n{lis}\n        </ol>"
@@ -272,7 +278,7 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
                 f'{hl_html}\n'
                 f'      </div>'
             )
-        blocks_html = "\n".join(wk_blocks) if wk_blocks else '      <div class="wk-empty">暂无已发布周报</div>'
+        blocks_html = "\n".join(wk_blocks) if wk_blocks else '      <div class="wk-empty">No issues published yet</div>'
 
         # 用 <div> 外层 + 内部标题 <a>,避免嵌套 <a> 的非法 HTML(浏览器会把内部 <a> 抽出,破坏 DOM)
         chans.append(
@@ -292,20 +298,20 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>最新资讯 · Feeds</title>
+<title>Weekly Feeds</title>
 <link rel="stylesheet" href="assets/feeds.css">
 </head>
 <body>
 <div class="wrap">
   <div class="crumb"><a href="/">{HOME_SVG}Home</a> / Feeds</div>
   <header class="site">
-    <h1>📡 最新资讯 Feeds</h1>
-    <div class="sub">每周自动整理的 AI Infra 与具身智能技术资讯 · 数据源 Hacker News / arXiv / 产业媒体 / 行情</div>
+    <h1>📡 Weekly Feeds</h1>
+    <div class="sub">Weekly AI Infra &amp; Embodied AI digest · HN / arXiv / industry media / markets</div>
   </header>
   <div class="chan-grid">
 {chans_html}
   </div>
-  <footer class="site"><a class="home-link" href="/">{HOME_SVG}Back to yulong.wang</a> · 由 blueyi.github.io/feeds 自动生成 · 自包含引擎见 _engine/ · master 直发 GitHub Pages</footer>
+  <footer class="site">Auto-generated · GitHub Pages</footer>
 </div>
 </body>
 </html>
