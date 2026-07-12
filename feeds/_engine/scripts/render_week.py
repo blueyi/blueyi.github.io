@@ -167,7 +167,7 @@ def render(channel: str, week: str) -> str:
 </head>
 <body>
 <div class="wrap">
-  <div class="crumb"><a href="../../index.html">资讯</a> / <a href="../index.html">{esc(zh)}</a> / {esc(week)}</div>
+  <div class="crumb"><a href="/">🏠 主页</a> / <a href="../../index.html">资讯</a> / <a href="../index.html">{esc(zh)}</a> / {esc(week)}</div>
   <header class="site">
     <h1>{esc(zh)} · {esc(title_date)}</h1>
     <div class="sub">{esc(en)} weekly digest</div>

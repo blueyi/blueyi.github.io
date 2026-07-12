@@ -19,7 +19,8 @@ header.site{padding:28px 0 18px; border-bottom:1px solid var(--border); margin-b
 header.site h1{margin:0 0 6px; font-size:26px}
 header.site .sub{color:var(--muted); font-size:14px}
 .crumb{font-size:13px; color:var(--muted); margin-bottom:18px}
-.crumb a{color:var(--muted)}
+.crumb a{color:var(--muted); text-decoration:none; transition:color .15s}
+.crumb a:hover{color:var(--link)}
 .meta-bar{
   background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
   padding:12px 16px; margin:0 0 22px; font-size:13px; color:var(--muted);

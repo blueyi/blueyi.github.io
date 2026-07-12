@@ -179,7 +179,7 @@ def build_channel_index(channel: str, spec: dict) -> int:
 </head>
 <body>
 <div class="wrap">
-  <div class="crumb"><a href="../index.html">资讯</a> / {esc(zh)}</div>
+  <div class="crumb"><a href="/">🏠 主页</a> / <a href="../index.html">资讯</a> / {esc(zh)}</div>
   <header class="site">
     <h1>{esc(zh)}</h1>
     <div class="sub">{esc(en)} · {esc(desc)}</div>
@@ -291,6 +291,7 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
 </head>
 <body>
 <div class="wrap">
+  <div class="crumb"><a href="/">🏠 主页</a> / 资讯</div>
   <header class="site">
     <h1>📡 最新资讯 Feeds</h1>
     <div class="sub">每周自动整理的 AI Infra 与具身智能技术资讯 · 数据源 Hacker News / arXiv / 产业媒体 / 行情</div>
