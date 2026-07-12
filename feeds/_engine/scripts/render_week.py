@@ -27,7 +27,7 @@ from pathlib import Path
 # 复用 rebuild_index 的 normalize / lint（保持格式与合法性一致）
 import sys as _sys
 _sys.path.insert(0, str(Path(__file__).resolve().parent))
-from rebuild_index import normalize_title_date, normalize_window, lint_html  # noqa: E402
+from rebuild_index import normalize_title_date, normalize_window, lint_html, HOME_SVG  # noqa: E402
 
 ENGINE_DIR = Path(__file__).resolve().parent.parent
 FEEDS_DIR = ENGINE_DIR.parent
@@ -167,7 +167,7 @@ def render(channel: str, week: str) -> str:
 </head>
 <body>
 <div class="wrap">
-  <div class="crumb"><a href="/">🏠 主页</a> / <a href="../../index.html">资讯</a> / <a href="../index.html">{esc(zh)}</a> / {esc(week)}</div>
+  <div class="crumb"><a href="/">{HOME_SVG}Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">{esc(en)}</a> / {esc(week)}</div>
   <header class="site">
     <h1>{esc(zh)} · {esc(title_date)}</h1>
     <div class="sub">{esc(en)} weekly digest</div>
@@ -181,10 +181,10 @@ def render(channel: str, week: str) -> str:
 {domains_html}
 {industry_html}
   <div class="wk-nav">
-    <span><a href="../index.html">← 返回全部周报</a></span>
-    <span><a href="../../index.html">资讯首页 →</a></span>
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
   </div>
-  <footer class="site"><a class="home-link" href="/">← 返回 yulong.wang 主页</a> · 由 blueyi.github.io/feeds 自动生成 · 数据源 HN/arXiv/产业媒体/公司官方/融资/Yahoo Finance 行情 · 站点 master 直发 GitHub Pages</footer>
+  <footer class="site"><a class="home-link" href="/">{HOME_SVG}Back to yulong.wang</a> · 由 blueyi.github.io/feeds 自动生成 · 数据源 HN/arXiv/产业媒体/公司官方/融资/Yahoo Finance 行情 · 站点 master 直发 GitHub Pages</footer>
 </div>
 </body>
 </html>

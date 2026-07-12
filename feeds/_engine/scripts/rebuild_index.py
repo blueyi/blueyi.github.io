@@ -25,8 +25,8 @@ CHANNELS = ["ai-infra", "embodied-ai"]
 # 各频道的更新时间（cron 触发时间）—— 用于在总入口页展示，避免用户看到当天未更新以为坏掉了
 # 与 skill/cron 保持一致：AI Infra 周六 06:00 HKT / 具身智能 周日 22:00 HKT
 CHANNEL_SCHEDULES = {
-    "ai-infra": "每周六 06:00 HKT 更新",
-    "embodied-ai": "每周日 22:00 HKT 更新",
+    "ai-infra": "Updated every Sat 06:00 HKT",
+    "embodied-ai": "Updated every Sun 22:00 HKT",
 }
 
 # 频道 emoji（复用主页宽卡片风格）
@@ -34,6 +34,12 @@ CHANNEL_EMOJIS = {
     "ai-infra": "📡",
     "embodied-ai": "🤖",
 }
+
+# 返回主页图标 —— feather 风格描边 home SVG，与主页 index.html 的图标风格一致
+# 取代跳脱的 🏠 emoji，融入暗色极简风。inline 复用于面包屑第一层。
+HOME_SVG = ('<svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+            '<path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>')
 
 
 def esc(s) -> str:
@@ -179,7 +185,7 @@ def build_channel_index(channel: str, spec: dict) -> int:
 </head>
 <body>
 <div class="wrap">
-  <div class="crumb"><a href="/">🏠 主页</a> / <a href="../index.html">资讯</a> / {esc(zh)}</div>
+  <div class="crumb"><a href="/">{HOME_SVG}Home</a> / <a href="../index.html">Feeds</a> / {esc(zh)}</div>
   <header class="site">
     <h1>{esc(zh)}</h1>
     <div class="sub">{esc(en)} · {esc(desc)}</div>
@@ -187,7 +193,7 @@ def build_channel_index(channel: str, spec: dict) -> int:
   <div class="card-grid">
 {cards_html}
   </div>
-  <footer class="site"><a class="home-link" href="/">← 返回 yulong.wang 主页</a> · 由 blueyi.github.io/feeds 自动生成 · 共 {len([c for c in cards])} 期</footer>
+  <footer class="site"><a class="home-link" href="/">{HOME_SVG}Back to yulong.wang</a> · 由 blueyi.github.io/feeds 自动生成 · 共 {len([c for c in cards])} 期</footer>
 </div>
 </body>
 </html>
@@ -277,7 +283,7 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
             f'      <div class="chan-highlights">\n'
             f'{blocks_html}\n'
             f'      </div>\n'
-            f'      <div class="chan-footer"><a href="{esc(channel)}/index.html">📚 查看全部期数 →</a></div>\n'
+            f'      <div class="chan-footer"><a href="{esc(channel)}/index.html">View all issues →</a></div>\n'
             '    </div>'
         )
     chans_html = "\n".join(chans)
@@ -291,7 +297,7 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
 </head>
 <body>
 <div class="wrap">
-  <div class="crumb"><a href="/">🏠 主页</a> / 资讯</div>
+  <div class="crumb"><a href="/">{HOME_SVG}Home</a> / Feeds</div>
   <header class="site">
     <h1>📡 最新资讯 Feeds</h1>
     <div class="sub">每周自动整理的 AI Infra 与具身智能技术资讯 · 数据源 Hacker News / arXiv / 产业媒体 / 行情</div>
@@ -299,7 +305,7 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
   <div class="chan-grid">
 {chans_html}
   </div>
-  <footer class="site"><a class="home-link" href="/">← 返回 yulong.wang 主页</a> · 由 blueyi.github.io/feeds 自动生成 · 自包含引擎见 _engine/ · master 直发 GitHub Pages</footer>
+  <footer class="site"><a class="home-link" href="/">{HOME_SVG}Back to yulong.wang</a> · 由 blueyi.github.io/feeds 自动生成 · 自包含引擎见 _engine/ · master 直发 GitHub Pages</footer>
 </div>
 </body>
 </html>

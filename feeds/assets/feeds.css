@@ -21,6 +21,8 @@ header.site .sub{color:var(--muted); font-size:14px}
 .crumb{font-size:13px; color:var(--muted); margin-bottom:18px}
 .crumb a{color:var(--muted); text-decoration:none; transition:color .15s}
 .crumb a:hover{color:var(--link)}
+/* 内联 home 图标（feather 描边风，取代 🏠 emoji），与文字基线对齐 */
+.home-ico{width:14px; height:14px; vertical-align:-2px; margin-right:4px; display:inline-block}
 .meta-bar{
   background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
   padding:12px 16px; margin:0 0 22px; font-size:13px; color:var(--muted);
@@ -100,6 +102,7 @@ footer.site{margin-top:50px; padding-top:20px; border-top:1px solid var(--border
 footer.site .home-link{color:var(--fg); opacity:.85; text-decoration:none;
   white-space:nowrap; transition:opacity .15s,color .15s}
 footer.site .home-link:hover{color:var(--link); opacity:1}
+footer.site .home-link .home-ico{width:13px; height:13px; vertical-align:-2px; margin-right:4px}
 
 /* ─── 总入口页：频道卡片内的近 N 期亮点区块 ─────────────────────────
    与详情页 .highlights 视觉呼应但独立命名，避免污染详情页样式。
