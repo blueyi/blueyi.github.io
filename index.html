@@ -1423,7 +1423,7 @@
                     var pub = m.weeks.filter(function (w) { return w.published; });
                     if (!pub.length) return;
                     var w = pub[0];
-                    var label = (w.title_date || w.week || '').replace(/（.*$/, '').trim();
+                    var label = (w.week || w.title_date || '').split('·')[0].trim();
                     var hl = w.highlight ? (' · ' + w.highlight) : '';
                     var txt = 'Latest ' + label + hl;
                     if (txt.length > 64) txt = txt.slice(0, 63) + '…';

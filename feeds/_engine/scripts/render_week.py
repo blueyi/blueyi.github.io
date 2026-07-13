@@ -145,7 +145,7 @@ def render(channel: str, week: str) -> str:
     zh, en = CHANNEL_TITLES.get(channel, (channel, channel))
     zh = en  # 站点外壳标题统一英文（正文内容仍中文）
     title_date = normalize_title_date(cur.get("title_date", week), week)
-    window = normalize_window(cur.get("window", ""))
+    window = normalize_window(cur.get("window", ""), week)
     domains_html = "\n".join(render_domain(d) for d in cur.get("domains", []))
     industry_html = render_industry(cur.get("industry") or {})
     hl = cur.get("highlights") or []

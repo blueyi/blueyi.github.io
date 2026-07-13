@@ -57,55 +57,65 @@ def esc(s) -> str:
 # 都出现过），统一在这里 normalize，避免不同周次显示混乱。见 skill pitfall #13。
 # ─────────────────────────────────────────────────────────────────────────────
 
-_DATE_MMDD = r'\d{1,2}-\d{1,2}'
-_DATE_YMD  = r'\d{4}-\d{1,2}-\d{1,2}'
+import datetime as _dt
 
-def _normalize_range(text: str) -> str:
-    """把日期范围里的分隔符统一成 ' ~ '，去掉 →、～、  ..、to 等变体。"""
-    if not text:
-        return text
-    # 常见分隔符统一
-    text = re.sub(r'\s*(?:→|➔|➜|—|–|~|～|\.\.|to)\s*', ' ~ ', text)
-    # 多空格压缩
-    text = re.sub(r'\s+~\s+', ' ~ ', text)
-    return text.strip()
+_WEEK_RE = re.compile(r'(\d{4})-W(\d{1,2})')
+
+def week_range(week: str):
+    """由 ISO 周编号 'YYYY-Www' 推算该周 周一~周日 的 (start_date, end_date)。
+    返回 datetime.date 二元组；无法解析时返回 (None, None)。
+    这是标题/窗口日期范围的**唯一事实源**——不再依赖 agent 手写的 title_date，
+    从根本上杜绝格式与日期飘忽（见 skill 标题统一方案 2026-07-13）。
+    """
+    if not week:
+        return (None, None)
+    m = _WEEK_RE.search(str(week))
+    if not m:
+        return (None, None)
+    year, wk = int(m.group(1)), int(m.group(2))
+    try:
+        start = _dt.date.fromisocalendar(year, wk, 1)  # 周一
+        end = _dt.date.fromisocalendar(year, wk, 7)    # 周日
+    except ValueError:
+        return (None, None)
+    return (start, end)
+
+def _week_id(week: str) -> str:
+    """把任意含周编号的字符串收敛成规范 'YYYY-Www'（两位周号）。"""
+    m = _WEEK_RE.search(str(week or ""))
+    if not m:
+        return str(week or "").strip()
+    return f'{m.group(1)}-W{int(m.group(2)):02d}'
 
 def normalize_title_date(td, week: str = "") -> str:
-    """把 title_date 统一成 'YYYY-Www（MM-DD ~ MM-DD）' 格式。
-    容忍以下 agent 常见变体:
-      '2026-W27 (06-28 → 07-05)'   -> '2026-W27（06-28 ~ 07-05）'
-      '2026-W27（06-27 ~ 07-03）'  -> 原样(已合规)
-      '2026-W27'                    -> '2026-W27' (无日期段就保留)
-      '(06-27~07-03)'               -> '{week}（06-27 ~ 07-03）'
+    """统一标题为 'YYYY-Www · MM-DD ~ MM-DD'（周一~周日，省略年份，靠周号已含年）。
+    完全忽略 agent 手写的 td，只按 week 重算——彻底根治历史各期格式混乱。
+    week 无法解析日期范围时降级为纯周号 'YYYY-Www'。
     """
-    if td is None or td == "":
-        return week or ""
-    td = str(td)  # 防御 agent 传了非字符串
-    # 先规范括号内的日期范围
-    def _rep(m):
-        inner = _normalize_range(m.group(1))
-        return f'（{inner}）'
-    # 处理任一种括号
-    td = re.sub(r'[（(]\s*(' + _DATE_YMD + r'|' + _DATE_MMDD + r'[^)）]*?)\s*[)）]', _rep, td)
-    # 若还没有 week 号前缀而是纯日期段,补上
-    if week and not re.match(r'^\s*\d{4}-W\d{2}', td):
-        td = f'{week}{td}' if td.startswith('（') else f'{week} {td}'
-    # 合并 ")(" 之间可能出现的多余空格,并把 " （" 收紧成 "（"
-    td = re.sub(r'\s+（', '（', td)
-    td = re.sub(r'）\s+', '）', td)
-    # 收尾去多余空格
-    return re.sub(r'\s+', ' ', td).strip()
+    # td 优先取自身若含周号，否则用 week
+    src = td if (td and _WEEK_RE.search(str(td))) else week
+    wid = _week_id(src)
+    start, end = week_range(wid)
+    if start and end:
+        return f'{wid} · {start:%m-%d} ~ {end:%m-%d}'
+    return wid or (week or "")
 
-def normalize_window(win) -> str:
-    """把 window 统一成 'YYYY-MM-DD ~ YYYY-MM-DD'。
-    容忍 dict 输入(agent 有时把 raw 里的 {start,end} 结构直接抄进 curated)。
+def normalize_window(win, week: str = "") -> str:
+    """统一 window 为 'YYYY-MM-DD ~ YYYY-MM-DD'（周一~周日）。
+    优先按 week 重算；week 不可解析时才退回容忍 dict/字符串输入。
     """
+    start, end = week_range(week)
+    if start and end:
+        return f'{start:%Y-%m-%d} ~ {end:%Y-%m-%d}'
+    # 降级：沿用旧的容忍逻辑
     if win is None or win == "":
         return ""
     if isinstance(win, dict):
         s, e = win.get("start", ""), win.get("end", "")
         win = f'{s} ~ {e}' if s and e else (s or e or "")
-    return _normalize_range(str(win))
+    win = str(win)
+    win = re.sub(r'\s*(?:→|➔|➜|—|–|~|～|\.\.|to)\s*', ' ~ ', win)
+    return re.sub(r'\s+~\s+', ' ~ ', win).strip()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -171,12 +181,12 @@ def build_channel_index(channel: str, spec: dict) -> int:
             continue
         cur = doc.get("curated") or {}
         title_date = normalize_title_date(cur.get("title_date", week), week)
-        window = normalize_window(cur.get("window", ""))
+        window = normalize_window(cur.get("window", ""), week)
         hl = week_highlight(doc)
         cards.append(
             '    <a class="card" href="weeks/' + esc(week) + '.html">\n'
             f'      <h3>{esc(title_date)}</h3>\n'
-            f'      <div class="when">{esc(week)} · {esc(window)}</div>\n'
+            f'      <div class="when">{esc(window)}</div>\n'
             f'      <div class="hl">{esc(hl)}</div>\n'
             '    </a>'
         )
@@ -226,7 +236,7 @@ def build_manifest(channel: str, spec: dict):
                 "data": f"data/{week}.json",
                 "title_date": normalize_title_date((doc.get("curated") or {}).get("title_date", week), week),
                 "window": normalize_window(
-                    (doc.get("curated") or {}).get("window", (doc.get("raw") or {}).get("window", ""))
+                    (doc.get("curated") or {}).get("window", (doc.get("raw") or {}).get("window", "")), week
                 ),
                 "highlight": ((doc.get("curated") or {}).get("highlights") or [None])[0],
                 "published": html_exists,
@@ -257,11 +267,10 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
         wk_blocks = []
         for week, doc, _ in weeks[:recent_weeks]:
             cur = doc.get("curated") or {}
-            td = normalize_title_date(cur.get("title_date", week), week)
-            # title_date 形如 "2026-W28（07-04 ~ 07-11）" —— 拆开做徽标+副文
-            m = re.match(r"^(\d{4}-W\d{2})[（(]?([^）)]*)?", td)
-            wk_label = m.group(1) if m else week
-            wk_range = m.group(2).strip() if m and m.group(2) else ""
+            # 标题范围统一由周编号推算（周一~周日，MM-DD），badge 拆成周号 + 日期段
+            wk_label = _week_id(week)
+            _s, _e = week_range(week)
+            wk_range = f'{_s:%m-%d} ~ {_e:%m-%d}' if _s and _e else ""
 
             highlights = (cur.get("highlights") or [])[:highlights_per_week]
             if not highlights:
@@ -271,9 +280,11 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
                 lis = "\n".join(f"          <li>{esc(h)}</li>" for h in highlights)
                 hl_html = f"        <ol>\n{lis}\n        </ol>"
 
+            wk_href = f'{esc(channel)}/weeks/{esc(week)}.html'
             wk_blocks.append(
-                f'      <div class="wk-block">\n'
-                f'        <a class="wk-badge" href="{esc(channel)}/weeks/{esc(week)}.html">'
+                f'      <div class="wk-block" data-href="{wk_href}" role="link" tabindex="0" '
+                f'aria-label="{esc(wk_label)} 周报详情">\n'
+                f'        <a class="wk-badge" href="{wk_href}">'
                 f'{esc(wk_label)}{(" · " + esc(wk_range)) if wk_range else ""} →</a>\n'
                 f'{hl_html}\n'
                 f'      </div>'
@@ -313,6 +324,22 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
   </div>
   <footer class="site">Auto-generated · GitHub Pages</footer>
 </div>
+<script>
+// 每周亮点卡片整块可点击 → 跳转当周周报详情。
+// badge 内的 <a> 保留原生行为；点击卡片其它区域或键盘 Enter/Space 也跳转。
+(function () {{
+  document.querySelectorAll('.wk-block[data-href]').forEach(function (el) {{
+    var go = function () {{ window.location.href = el.getAttribute('data-href'); }};
+    el.addEventListener('click', function (e) {{
+      if (e.target.closest('a')) return; // 点到 badge 链接就走原生
+      go();
+    }});
+    el.addEventListener('keydown', function (e) {{
+      if (e.key === 'Enter' || e.key === ' ') {{ e.preventDefault(); go(); }}
+    }});
+  }});
+}})();
+</script>
 </body>
 </html>
 """
