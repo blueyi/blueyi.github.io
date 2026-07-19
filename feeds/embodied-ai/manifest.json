@@ -48,6 +48,15 @@
   "hn_min_score": 50,
   "weeks": [
     {
+      "week": "2026-W29",
+      "html": "weeks/2026-W29.html",
+      "data": "data/2026-W29.json",
+      "title_date": "2026-W29 · 07-13 ~ 07-19",
+      "window": "2026-07-13 ~ 2026-07-19",
+      "highlight": "RoboTTT 将机器人策略的视觉运动上下文扩展到 8K 步（较 SOTA 高三个数量级）且不增推理延迟，解锁单样本上下文内学习。",
+      "published": true
+    },
+    {
       "week": "2026-W28",
       "html": "weeks/2026-W28.html",
       "data": "data/2026-W28.json",
