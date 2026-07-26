@@ -1,0 +1,1489 @@
+{
+  "channel": "embodied-ai",
+  "week": "2026-W30",
+  "raw": {
+    "channel": "embodied-ai",
+    "week": "2026-W30",
+    "generated_at": "2026-07-26T22:00:57.864332+08:00",
+    "window": {
+      "start": "2026-07-19",
+      "end": "2026-07-26"
+    },
+    "hn": [
+      {
+        "source": "hn",
+        "score": 140,
+        "title": "Unitree As2-W",
+        "url": "https://www.unitree.com/As2-W/",
+        "hn_url": "https://news.ycombinator.com/item?id=49038045",
+        "domains": [
+          "market"
+        ]
+      }
+    ],
+    "arxiv": [
+      {
+        "source": "arxiv:cs.RO",
+        "title": "AXIS: A Growable Community-Driven Data Engine for Scalable Robot Manipulation",
+        "url": "http://arxiv.org/abs/2607.21588v1",
+        "abstract": "Learning effective robot manipulation policies requires diverse, high-quality demonstrations, yet existing data pipelines are often difficult to scale because they rely on specialized hardware, centralized operators, or fixed task suites. We present AXIS, a growable community-driven data engine and benchmark for scalable robot learning, which enables browser-based teleoperation for large-scale dem",
+        "domains": [
+          "vla",
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Scale Up Strategically: Learning Compositional Generalization via Bias-Aware Evaluation and Data Collection for Robotic Manipulation",
+        "url": "http://arxiv.org/abs/2607.21582v1",
+        "abstract": "Compositional generalization is essential for robot to follow diverse instructions. However, pretrained policies are known to take shortcuts, deferring to salient cues rather than grounding language. We introduce a diagnostic framework that localizes this failure to individual \\textit{instruction factors}, \\textit{e.g.,} reusable semantic components such as color, verb, object, size, and spatial a",
+        "domains": [
+          "dexterous",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Beyond Episodic Evaluation: Memory Architectural Bottlenecks in Sequential Embodied Question Answering",
+        "url": "http://arxiv.org/abs/2607.21571v1",
+        "abstract": "Embodied question answering (EQA) is traditionally evaluated under an episodic formulation, where agents solve each task independently and reset internal state between episodes. However, real-world robots operate continuously and must accumulate, retain, and selectively reuse information acquired from prior interactions. Despite this practical requirement, the architectural mechanisms needed to su",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "GS-Agent: Creating 4D Physical Worlds With Generative Simulation",
+        "url": "http://arxiv.org/abs/2607.21522v1",
+        "abstract": "Creating dynamic and physically realistic 4D worlds from natural language descriptions is both fascinating and challenging. Traditional computer graphics methods rely on manual creation, requiring extensive human effort to fine-tune materials, motions, and visual fidelity. Recent advances in generative foundation models have sparked interest in learning to generate such 4D worlds from large-scale ",
+        "domains": [
+          "dexterous",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Compact Latent Coordination for Autonomous Vehicles at Unsignalized Intersections",
+        "url": "http://arxiv.org/abs/2607.21488v1",
+        "abstract": "Coordinating autonomous vehicles at unsignalized intersections remains a critical challenge for multi-agent reinforcement learning (MARL) systems, which typically struggle with combinatorial action spaces, reliance on privileged information, or rigid agent designs. We propose Master-Agent Proto-plan System (MAPS), a hierarchical deep reinforcement learning (DRL) architecture in which a centralized",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "GLAM-SLAM: Real-time Gaussian Large-scale Mapping via Flow Densification and Spatial Decomposition",
+        "url": "http://arxiv.org/abs/2607.21416v1",
+        "abstract": "Existing Gaussian-splatting-based monocular Simultaneous Localization and Mapping (SLAM) systems are either tailored to short sequences, are not real-time, or suffer from prohibitive GPU memory requirements, limiting their applicability in realistic, long-horizon scenarios. To address this, we present GLAM-SLAM, a real-time, decoupled Gaussian-splatting SLAM system designed for large-scale outdoor",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "VoLN: Vision-Only Long-Horizon Navigation---Paradigm, Benchmark, and Method",
+        "url": "http://arxiv.org/abs/2607.21400v1",
+        "abstract": "Vision-and-Language Navigation (VLN) enables embodied agents to follow natural-language instructions. However, route-level instructions commonly encode spatial priors, such as orientation, distance, and layout, that are not explicitly available from onboard sensing at deployment in open, GPS-denied environments. Benchmark performance under such interfaces therefore jointly reflects visual navigati",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Grasp, Handover, Rotate: Bimanual Object Reorientation via Compositional Diffusion and Energy-Based Optimization",
+        "url": "http://arxiv.org/abs/2607.21341v1",
+        "abstract": "Bimanual object reorientation - picking an object, handing it over between two arms, and placing it in a desired target pose - is valuable when direct placement from the initial grasp is infeasible due to collisions, kinematic constraints, or poor final orientation. However, achieving this under multiple competing objectives remains challenging. We introduce BiCompoDiff, a compositional diffusion ",
+        "domains": [
+          "dexterous",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Factorized Spatio-Temporal Convolutions for Human Pose Estimation from Planar Lidar",
+        "url": "http://arxiv.org/abs/2607.21309v1",
+        "abstract": "Localizing nearby humans and estimating their facing direction are key capabilities for safe navigation and socially aware human-robot interaction. Many pose-estimation pipelines target cameras and 3D LiDAR or assume GPU-class compute, whereas service robots are often equipped only with omnidirectional planar LiDARs and modest onboard processors. We address omnidirectional human detection and rela",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "HGeo-TopoMap: Boosting Topological Mapping with Hierarchical Geometric Priors",
+        "url": "http://arxiv.org/abs/2607.21281v1",
+        "abstract": "Topological maps are key outputs of autonomous driving perception systems, delivering essential road information for path planning. They identify instances such as centerlines and traffic signs, along with their connectivity relationships. Due to the lack of explicit markings for centerlines in real-world environments, the detection of centerline instances remains a significant challenge. To tackl",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "3D-Aware VLMs with Implicit and Explicit Geometries",
+        "url": "http://arxiv.org/abs/2607.21595v1",
+        "abstract": "Despite rapid progress, most existing vision-language models (VLMs) built from 2D visual inputs often struggle when handling various 3D tasks that require fine-grained spatial understanding and reasoning. To bridge this gap, we present VLM-IE3D, a unified framework that enhances the 3D spatial awareness of VLMs by equipping them with both implicit and explicit 3D geometries learned from RGB videos",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Expanding Flow Maps",
+        "url": "http://arxiv.org/abs/2607.21585v1",
+        "abstract": "Flow-based generative models have enabled remarkable progress in fast and controllable generation across continuous and discrete state spaces, yet existing parameterizations are constrained to fixed dimensions or fixed sequence lengths. Here, we introduce Expanding Generative Flows (EFlows), which define flows between distributions of increasing dimensionality along an expanding interpolant that g",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Barzilai-Borwein Fails Superlinear Convergence on an Open Set of Quadratics for Every Dimension $n\\geq 4$",
+        "url": "http://arxiv.org/abs/2607.21579v1",
+        "abstract": "Barzilai--Borwein (BB) method has shown strong practical performance in continuous optimization, yet its convergence dynamics remains poorly understood. In particular, a central unresolved question is whether BB converges superlinearly for almost every strictly convex quadratic problem and initialization. We provide a negative answer to this question. Specifically, for every finite dimension $n\\ge",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Synthetic data generation framework for quality control automation in gravure printing",
+        "url": "http://arxiv.org/abs/2607.21577v1",
+        "abstract": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects for automation. However, training robust deep learning models, such as YOLO or Vision Transformers, is heavily hindered b",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
+        "url": "http://arxiv.org/abs/2607.21573v1",
+        "abstract": "Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, existing sufficiency-oriented methods can assign high importance to spurious subsequences that support the prediction without being essential to the model's decision. We introduce \\textbf{TimePNS}, a n",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
+        "url": "http://arxiv.org/abs/2607.21561v1",
+        "abstract": "Molecular property prediction from structure often uses a single representative conformation, even though many molecules exist as conformational ensembles in solution. We introduce EnsembleEGNN, a molecular ensemble foundation model that encodes an ensemble by first encoding each conformer with shared Equivariant Graph Neural Network (EGNN) layers, then pooling the resulting conformer representati",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "MIRROR: Learning from the Other View for Multi-Modal Reasoning",
+        "url": "http://arxiv.org/abs/2607.21552v1",
+        "abstract": "Unlike large language models (LLMs) that exhibit strong reasoning capabilities, vision-language models (VLMs) struggle with visual reasoning, even on geometry problems that admit equivalent text, diagram, and combined diagram+text views. We show that these views often elicit different behaviors: a model may solve a problem from text but fail on the corresponding diagram, or succeed visually while ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "X$^3$-OPD: Distilling Reasoning into Large Audio-Language Models via On-Policy Alignment",
+        "url": "http://arxiv.org/abs/2607.21550v1",
+        "abstract": "While large audio-language models have achieved remarkable progress in auditory perception, they still lag behind text-based large language models in deep logical reasoning, primarily due to the scarcity of high-quality audio reasoning data. To bridge this gap, we propose X$^3$-OPD, a cross-modal on-policy distillation framework that transfers reasoning capabilities from a powerful text teacher to",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Neural solutions of coupled ghost and gluon Dyson--Schwinger equations in Landau gauge",
+        "url": "http://arxiv.org/abs/2607.21548v1",
+        "abstract": "The coupled ghost and gluon Dyson--Schwinger equations (DSEs) of four-dimensional Landau-gauge Yang--Mills (YM) theory are solved with a neural representation trained only from renormalized equation residuals. The neural and fixed-point solutions agree at the percent level and remain stable under changes of initialization, network size, integration grid, and infrared boundary condition. Variations",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "The Boundaries of Automation: A Theory of Persistent Human Participation",
+        "url": "http://arxiv.org/abs/2607.21547v1",
+        "abstract": "The rapid progress of AI has intensified the long-standing pursuit of automation: replacing human participation with algorithms wherever possible. Implicit in this pursuit is the assumption that humans remain in the loop only because current AI systems are not yet sufficiently capable. This paper challenges that assumption. Rather than asking how far automation can extend, we ask where its concept",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "3D-Aware VLMs with Implicit and Explicit Geometries",
+        "url": "http://arxiv.org/abs/2607.21595v1",
+        "abstract": "Despite rapid progress, most existing vision-language models (VLMs) built from 2D visual inputs often struggle when handling various 3D tasks that require fine-grained spatial understanding and reasoning. To bridge this gap, we present VLM-IE3D, a unified framework that enhances the 3D spatial awareness of VLMs by equipping them with both implicit and explicit 3D geometries learned from RGB videos",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "GraphVid: Interactive Graph-Controllable Video Generation",
+        "url": "http://arxiv.org/abs/2607.21580v1",
+        "abstract": "Controllable video generation remains challenging due to the difficulty of specifying precise multi-object interactions using text prompts or motion-control inputs that primarily constrain pixel movement. In practice, trajectory-based control often requires users to draw accurate tracks for multiple objects, which scales poorly with scene complexity and becomes ambiguous under occlusion or overlap",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Barzilai-Borwein Fails Superlinear Convergence on an Open Set of Quadratics for Every Dimension $n\\geq 4$",
+        "url": "http://arxiv.org/abs/2607.21579v1",
+        "abstract": "Barzilai--Borwein (BB) method has shown strong practical performance in continuous optimization, yet its convergence dynamics remains poorly understood. In particular, a central unresolved question is whether BB converges superlinearly for almost every strictly convex quadratic problem and initialization. We provide a negative answer to this question. Specifically, for every finite dimension $n\\ge",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Synthetic data generation framework for quality control automation in gravure printing",
+        "url": "http://arxiv.org/abs/2607.21577v1",
+        "abstract": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects for automation. However, training robust deep learning models, such as YOLO or Vision Transformers, is heavily hindered b",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
+        "url": "http://arxiv.org/abs/2607.21573v1",
+        "abstract": "Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, existing sufficiency-oriented methods can assign high importance to spurious subsequences that support the prediction without being essential to the model's decision. We introduce \\textbf{TimePNS}, a n",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Unsupervised Consensus-Based Anomaly Detection for Spatiotemporal Malaria Incidence in Ghana",
+        "url": "http://arxiv.org/abs/2607.21559v1",
+        "abstract": "A consensus anomaly detection framework was applied to monthly malaria surveillance data from Ghana (2014-2023) to identify atypical transmission patterns. Anomalies were highly structured in space and time. Ashanti and Northern Regions accounted for most recurrent anomalies, with persistent hotspots at Tamale, Kumasi, and Accra. A key finding was the spatial distinction between anomaly burden (cu",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Beyond Sycophancy: Structured Resistance and Compliance in LLM Moral Reasoning",
+        "url": "http://arxiv.org/abs/2607.21558v1",
+        "abstract": "Building socially calibrated large language models, which can learn from others without simply yielding to them, requires more than reducing sycophancy as a one-dimensional failure mode. Models must distinguish when to incorporate others' perspectives from when to maintain a well-grounded moral judgment. We study the broader resistance-compliance process governing this distinction. Across three st",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+        "url": "http://arxiv.org/abs/2607.21557v1",
+        "abstract": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, whose SFT/RL stacks cannot natively express stateful, multi-process harness inference. To address this, we present OpenForg",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Visual Contrastive Self-Distillation",
+        "url": "http://arxiv.org/abs/2607.21556v1",
+        "abstract": "On-policy self-distillation (OPSD) is promising as it removes the external teacher required by on-policy distillation (OPD), yet it still needs asymmetric information between teacher and student to ensure that the self-teacher provides a stronger learning signal than the student. Existing methods create this asymmetry either through privileged answers or visual evidence. We ask whether both can be",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "MIRROR: Learning from the Other View for Multi-Modal Reasoning",
+        "url": "http://arxiv.org/abs/2607.21552v1",
+        "abstract": "Unlike large language models (LLMs) that exhibit strong reasoning capabilities, vision-language models (VLMs) struggle with visual reasoning, even on geometry problems that admit equivalent text, diagram, and combined diagram+text views. We show that these views often elicit different behaviors: a model may solve a problem from text but fail on the corresponding diagram, or succeed visually while ",
+        "domains": []
+      }
+    ],
+    "rss": [
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Elon Musk’s Boring Company reportedly raising funding at a $20 billion valuation",
+        "url": "https://techcrunch.com/2026/07/25/elon-musks-boring-company-reportedly-raising-funding-at-a-20-billion-valuation/",
+        "summary": "Elon Musk's tunneling startup is reportedly in talks for a major new funding round.",
+        "domains": [
+          "embodied-chip",
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Edtech platform raises $4.5M to help teach students how to vibe code",
+        "url": "https://techcrunch.com/2026/07/23/edtech-platform-raises-4-5m-to-help-teach-students-how-to-vibe-code/",
+        "summary": "Imagi announced a $4.5 million seed round, with investors including Brighteye Ventures, Day One Capital, and artist Will.i.am.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Travis Kalanick’s robotics company raises $1.7B, led by a16z",
+        "url": "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/",
+        "summary": "Uber is also investing in Travis Kalanick's company Atoms, which has made gauzy claims about using industrial AI to modernize the world.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Menlo Ventures’ Matt Murphy explains what AI startups founders must do differently",
+        "url": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/",
+        "summary": "Anthropic leaped to a $47 billion revenue run rate by May, compared to $9 billion in 2025. It’s the kind of growth that Menlo Ventures’ Matt Murphy says he’s never seen in 25 years of investing, not in the internet wave, not in mobile, not in the first cloud boom. Menlo led Anthropic’s $500M Series ",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Cascade raises $3.5M to help construction firms find and win projects",
+        "url": "https://techcrunch.com/2026/07/22/cascade-raises-3-5m-to-help-construction-firms-find-and-win-projects/",
+        "summary": "a16z Speedrun, Ada Ventures, and Snowball VC have invested in Cascade's $3.5 million seed round.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Dimension Capital’s $800M third fund shows the intersection of science and compute is booming",
+        "url": "https://techcrunch.com/2026/07/21/dimension-capitals-800m-third-fund-shows-the-intersection-of-science-and-compute-is-booming/",
+        "summary": "The four-year-old firm's latest fund is 60% larger than its second vehicle announced 18 months ago.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Bluecore Energy raises $10M to build portable nuclear reactors on barges",
+        "url": "https://techcrunch.com/2026/07/21/this-uber-alumn-just-raised-a-10m-pre-seed-to-build-portable-nuclear-enegry/",
+        "summary": "Maritime nuclear energy startup Bluecore Energy has raised $10 million in a pre-seed funding round led by Slauson & Co.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Natural raises $30M to reinvent payments for AI agents — and take on Stripe",
+        "url": "https://techcrunch.com/2026/07/20/natural-raises-30m-to-reinvent-payments-for-ai-agents-and-take-on-stripe/",
+        "summary": "The one-year-old startup aims to reinvent financial architecture for autonomous AI transactions.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Inference startup Infinity raises $15M from Touring Capital, OpenAI and Anthropic researchers",
+        "url": "https://techcrunch.com/2026/07/20/inference-startup-infinity-raises-15m-from-touring-capital-openai-and-athropic-researchers/",
+        "summary": "AI infrastructure company Infinity announced Monday a $15 million raise at a $100 million valuation from investors including Touring Capital, Principal VC, and researchers from companies such as OpenAI and Anthropic.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "StrictlyVC returns to New York City September 10 to celebrate a huge year for the city’s startup community",
+        "url": "https://techcrunch.com/2026/07/20/strictlyvc-returns-to-new-york-city-september-10-to-celebrate-a-huge-year-for-the-citys-startup-community/",
+        "summary": "For the first time since 2024, StrictlyVC is coming back to New York City — and we're bringing the kind of access you’d expect from an under-wraps event to the whole startup, VC, and dealmaking community.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Neil Rimer thinks the AI money is coming back out",
+        "url": "https://techcrunch.com/2026/07/17/neil-rimer-thinks-the-ai-money-is-coming-back-out/",
+        "summary": "Neil Rimer, the venture capitalist who co-founded Index Ventures, predicts the historic wealth AI is generating in Silicon Valley will have to be redistributed, voluntarily or involuntarily.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Nuclear startup Valar Atomics in talks to raise new funding at $6B valuation",
+        "url": "https://techcrunch.com/2026/07/17/nuclear-startup-valar-atomics-in-talks-to-raise-new-funding-at-6b-valuation/",
+        "summary": "The potential deal highlights a growing trend of complex, multi-stage funding rounds that mask true entry prices.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Robotics",
+        "kind": "media",
+        "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
+        "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+        "summary": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Week’s 10 Biggest Funding Rounds: Physical AI Startup Atoms Leads In Varied Week For Large Deals",
+        "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-physical-ai-fintech-defense-atoms/",
+        "summary": "Startup investors poured capital into a varied lineup of large rounds this week, targeting sectors including physical AI, biotech, cybersecurity, AI infrastructure and fintech.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "General Catalyst Takes The Lead Over Y Combinator In Backing $5M+ Fintech Deals",
+        "url": "https://news.crunchbase.com/venture/fintech-funder-general-catalyst-leads-deal-count-q2-2026/",
+        "summary": "For the first time in several quarters, General Catalyst in Q2 overtook Y Combinator when it came to participating in the most fintech deals of $5 million or more, per Crunchbase data. The quarter also marked the busiest one for General Catalyst since 2021 in terms of investing in rounds of $5 milli",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Biggest AI Talent Challenge Is Resilience, Not Speed",
+        "url": "https://news.crunchbase.com/ai/biggest-talent-challenge-resilience-vaidya-crafting/",
+        "summary": "Engineering leaders should build highly adaptable, vendor-agnostic infrastructure instead of relying on expensive, unpredictable proprietary hyperscalers, advises guest columnist Sumeet Vaidya, who says the foundational flexibility allows enterprises to safely pair AI agents with human teams while s",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Rise And Rise Of Billion-Dollar-Plus Rounds",
+        "url": "https://news.crunchbase.com/venture/billion-dollar-plus-round-counts-rising-ai-fintech-healthcare-h1-2026/",
+        "summary": "So far this year, 60% of global startup funding across stages — around $320 billion — went to rounds of $1 billion or more, per Crunchbase data, with such rounds instrumental in pushing global funding for the first half of the year to record levels.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Is On-Prem Making A Comeback?",
+        "url": "https://news.crunchbase.com/ai/on-prem-systems-vs-cloud-security-sagie/",
+        "summary": "While cloud migration previously offered unmatched speed and cost efficiency, decision-makers now perceive localized systems as offering superior long-term security. In this guest commentary, strategic adviser Itay Sagie shares three trends he believes are pushing on-prem back into the limelight.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Crunchbase Tech Layoffs Tracker",
+        "url": "https://news.crunchbase.com/startups/tech-layoffs/",
+        "summary": "Over 127,000 workers at U.S.-based tech companies were laid off in mass job cuts in 2025, per a Crunchbase News tally, and the layoffs have continued into 2026. See the latest companies to cut roles.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Led By DeepSeek, 10 Frontier Labs Rush Onto The Crunchbase Unicorn Board In June",
+        "url": "https://news.crunchbase.com/venture/new-unicorn-board-startups-exits-ai-semiconductors-june-2026/",
+        "summary": "A total of 34 companies joined The Crunchbase Unicorn Board in June, altogether adding more than $110 billion in value, with 10 of those companies AI labs, which were collectively valued at $65 billion. Other leading sectors with multiple companies were in robotics and AI infrastructure.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "This Time Is Different: Why AI Is Unlike Any Wave I Have Seen In 40 Years Of Financial Services",
+        "url": "https://news.crunchbase.com/fintech/ai-wave-banking-innovation-morris-qed/",
+        "summary": "AI will fundamentally rewrite the global financial value chain, making marginal operating costs near-zero and creating highly personalized, previously impossible products, argues guest columnist Nigel Morris of QED Investors. He warns that success will depend on whether incumbent banks and fintechs ",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Closing The Series A Gap Is The Next Great Opportunity For Black Founders In The AI Era",
+        "url": "https://news.crunchbase.com/venture/seriesa-seed-gap-underrepresented-founders-ai-norman-green-black-ops/",
+        "summary": "While 2026 has shown encouraging signs, with Black-founded startups raising approximately $643 million by late May, the strongest quarter since mid-2022, the improvement was driven largely by a handful of unusually large financings. James Norman and Sean Green, co-founders of Black Operator Ventures",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Dell Technologies Capital: How To Build A Deep-Tech Startup For A Market That Isn’t Ready Yet And Why AI Won’t Kill SaaS",
+        "url": "https://news.crunchbase.com/ai/saas-deep-tech-startup-qa-docter-dell-technologies-capital/",
+        "summary": "In this interview with Crunchbase News, Daniel Docter, managing director at Dell Technologies Capital, discusses how AI is reshaping SaaS and why he doesn’t believe the business model is headed for extinction, why he thinks distribution may ultimately separate the winners from the losers among AI st",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "VentureBeat AI",
+        "kind": "media",
+        "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
+        "url": "https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud",
+        "summary": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar on marketing, announced Thursday that it raised $100 million in a Series B funding round, as surging demand for artificial intelligence applications exposes the limitations of lega",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Video Friday: An Italian Humanoid Comes to Life",
+        "url": "https://spectrum.ieee.org/video-friday-physical-ai-robotics",
+        "summary": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion.Summer School on Multi-Robot Systems: 29 July–4 August 2",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "This Graduate Student Equips NASA’s Robots With Assembly Skills",
+        "url": "https://spectrum.ieee.org/graduate-student-nasas-robots-assembly",
+        "summary": "Like many engineers, Sarah Downs says she knew she wanted to pursue a STEM career from a young age. As a teenager, she discovered robotics through her Tulsa, Okla., middle school’s First Lego League team, and she fell in love with the field, she says. Downs participated in the international robotics",
+        "domains": [
+          "manufacturing"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "IEEE Honors Robotics Pioneer Toshio Fukuda",
+        "url": "https://spectrum.ieee.org/ieee-honors-toshio-fukuda",
+        "summary": "Toshio Fukuda has been blazing trails for most of his career. He is considered to be one of the most prolific scholars in robotics, writing more than 2,000 research papers and authoring several books on the field. He’s an influential figure thanks to his pioneering work developing biomedical robotic",
+        "domains": [
+          "embodied-chip",
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Japan Pioneered Humanoid Robots—Can It Now Catch China?",
+        "url": "https://spectrum.ieee.org/humanoid-robots-japan",
+        "summary": "“In the future, the relationship between humans and robots will deepen, and the distinction between them will probably disappear.” This prediction, from one of the attendees at the recent Humanoids Summit in Tokyo, might have been unremarkable had it not come directly from an android that was first ",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Thiel Capital’s Jack Selby nabs stakes in hot startups like Etched through Arizona connections",
+        "url": "https://techcrunch.com/2026/07/02/thiel-capitals-jack-selby-nabs-stakes-in-hot-startups-like-etched-through-arizona-connections/",
+        "summary": "Selby's VC firm, Copper Sky Capital, is currently raising a $300 million second fund, according to a regulatory filing.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Whoop’s valuation just tripled to $10 billion",
+        "url": "https://techcrunch.com/2026/03/31/whoop-valuation-10b-series-g-fundraise/",
+        "summary": "The fitness tracking startup just closed a $575 million Series G with Cristiano Ronaldo and LeBron James among its investors. The obvious question looming over a round of this size at this valuation: Is an IPO coming?",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Modelence raises $3M to smooth out the vibe-coding stack",
+        "url": "https://techcrunch.com/2026/01/28/modelence-raises-13-million-to-smooth-out-the-vibe-coding-stack/",
+        "summary": "How do you build tooling for the AI software stack? A company called Modelence has an interesting answer.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "VC firm 2150 raises €210M fund to solve cities’ climate challenges",
+        "url": "https://techcrunch.com/2026/01/26/vc-firm-2150-raises-e210m-fund-to-solve-cities-climate-challenges/",
+        "summary": "Europe-based venture fund 2150 raised the money to invest in climate tech startups that help solve cities' carbon footprint.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Superorganism raises $25M to back biodiversity startups",
+        "url": "https://techcrunch.com/2026/01/13/superorganism-raises-25m-to-back-biodiversity-startups/",
+        "summary": "Superorganism backs companies across three categories: tech that slows or reverses extinction, startups that operate at the intersection of climate and biodiversity, and tools that enable conservationists to do their work more effectively.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "More than 100 new tech unicorns were minted in 2025 — here they are",
+        "url": "https://techcrunch.com/2026/01/12/at-least-36-new-tech-unicorns-were-minted-in-2025-so-far/",
+        "summary": "Using data from Crunchbase and PitchBook, TechCrunch tracked down the VC-backed startups that became unicorns so far this year.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Supabase hit $5B by turning down million-dollar contracts. Here’s why.",
+        "url": "https://techcrunch.com/video/supabase-hit-5b-by-turning-down-million-dollar-contracts-heres-why/",
+        "summary": "Vibe coding has taken the tech industry by storm, and it’s not just the Lovables and Replits of the world that are winning. The startups building the infrastructure behind them are cashing in too.  Supabase, the open source database platform that’s become the back end of choice for the vibe-coding w",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Sequoia unveils $950M in new early-stage funds as it strives to be ‘only as good as our next investment’",
+        "url": "https://techcrunch.com/2025/10/27/sequoia-unveils-950m-in-new-early-stage-funds-as-it-strives-to-be-only-as-good-as-our-next-investment/",
+        "summary": "The legendary firm launched a $750 million early-stage fund targeting Series A startups and a $200 million seed fund.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Redwood Materials raises another $350M to power up its energy-storage business",
+        "url": "https://techcrunch.com/2025/10/23/redwood-materials-raises-another-350-million-to-power-up-its-energy-storage-business/",
+        "summary": "The round was led by Eclipse and saw participation from Nvidia's venture capital arm, NVentures.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "A new search engine raises $1.1M to let obsessive fans dive down internet rabbit holes",
+        "url": "https://techcrunch.com/2025/10/03/a-new-search-engine-raises-1-1m-to-let-obsessive-fans-dive-down-internet-rabbit-holes/",
+        "summary": "Lore raises $1.1 million to build a personalized search engine for fandom culture.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "A year after filing to IPO, still-private Cerebras Systems raises $1.1B",
+        "url": "https://techcrunch.com/2025/09/30/a-year-after-filing-to-ipo-still-private-cerebras-systems-raises-1-1b/",
+        "summary": "Cerebras initially filed to go public in September 2024 but ran into several regulatory delays due to foreign investments.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Doorstep raises $8M seed to help find missing food deliveries",
+        "url": "https://techcrunch.com/2025/09/25/doorstep-raises-8m-seed-to-help-find-missing-food-deliveries/",
+        "summary": "Doorstep integrates into existing delivery apps and then, using phone sensors, tracks when a driver has entered a building, gone up an elevator, and made it to the desired doorstep.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Orania Limited’s 5-Layer Approach to Platform Data Governance",
+        "url": "https://roboticsandautomationnews.com/2026/07/22/platform-data-governance-orania-limited/103600/",
+        "summary": "Data governance is one of those disciplines that most platforms know they need and few feel they’ve actually figured out. The concept is straightforward enough: ensure data is managed properly, protected appropriately, and used in ways consistent with the platform’s obligations to users, partners, a",
+        "domains": [
+          "market"
+        ]
+      }
+    ],
+    "cn_rss": [
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "希音披露聆讯后资料集：2025年营收418亿美元",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912399333676422?f=rss]]>",
+        "summary": "36氪获悉，7月26日，希音（SHEIN）向港交所披露聆讯后资料集。若顺利挂牌，将成为2026年港股最大的跨境电商IPO。2025年，希音实现总收入418亿美元，2023至2025年复合年均增长率达14.2%；2025年同期实现净利润20.6亿美元。截至2025年底，平台服务约2.73亿活跃客户，业务覆盖约160个市场。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "湖北能源：江陵电厂二期项目全面建成投产",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912223423731074?f=rss]]>",
+        "summary": "7月26日，湖北能源公告称，近日，公司江陵二期项目2号机组顺利通过168小时满负荷试运行，正式投入商业运营，标志着江陵二期项目全面建成投产。该项目拟配置2台66万千瓦超超临界二次再热燃煤机组，项目总投资不超过54.65亿元。江陵二期项目由湖北能源全资子公司湖北能源集团江陵发电有限公司控制运营，本项目应用66万千瓦超超临界二次再热技术，主要技术指标先进，符合现代煤电清洁化的发展方向。（界面新闻）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "马斯克警告SpaceX空头风险",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912221918107015?f=rss]]>",
+        "summary": "本周特斯拉由于二季度业绩不及预期，财报发布后的第二天股价大跌约14.5%，市值蒸发了约2145亿美元。而马斯克的另一家太空探索技术公司SpaceX目前距离首次公开募股过去一个多月，股价跌破了发行价，并且押注其股价下跌的投资者还在不断增加。数据显示，目前SpaceX的空头仓位已上升至流通股的约32%。对此，马斯克警告称，长期维持SpaceX大规模空头仓位的机构，“生存概率非常低”。现在市场还在关注的就是SpaceX和特斯拉是否可能合并，对此马斯克在财报会上既没有承认，也没有否认，只是表示两家公司之间的业务重叠会越来越多。目前部分华尔街的分析人士越来越看好两家公司最终将达成交易。（央视财经）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "百利天恒：注射用T-Bren治疗胆道癌III期临床试验完成首例受试者入组",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912220595017093?f=rss]]>",
+        "summary": "7月26日，百利天恒公告称，公司自主研发的创新生物药注射用T-Bren(HER2ADC)在HER2表达的经含铂化疗治疗失败的局部晚期或转移性胆道癌III期随机对照临床试验已完成首例受试者入组。该药物具有同类最佳潜力，目前正在国内外开展19项临床试验，覆盖一线及二线以上HER2阳性乳腺癌、HER2阳性乳腺癌术后辅助、HER2阳性乳腺癌新辅助治疗和HER2低表达乳腺癌、HER2阳性胃或胃食管结合部腺癌、HER2突变的非鳞状非小细胞肺癌和HER2阳性含铂化疗失败胆道癌，以及肺癌、消化道肿瘤、泌尿系统肿瘤和妇科肿瘤等多项适应症。（财联社）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "新点软件：预计上半年净亏损6302.10万元",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912184409396353?f=rss]]>",
+        "summary": "7月26日，新点软件发布中期业绩预告，预计2026年上半年净亏损6302.10万元左右，与上年同期（法定披露数据）相比，亏损将增加 84.39 万元左右。（每日经济新闻）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "*ST元道：公司股票可能因市值低于3亿元被终止上市",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912183328347269?f=rss]]>",
+        "summary": "7月26日，*ST元道(301139.SZ)公告称，7月24日，公司股票收盘价为2.39元/股，收盘市值为2.91亿元，首次出现股票收盘市值低于3亿元。根据规定，若公司出现连续20个交易日的股票收盘市值均低于3亿元，公司股票将被终止上市。（财联社）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "LV因楼盘外立面装饰侵权起诉开发商？法院回应来了",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912182569178500?f=rss]]>",
+        "summary": "7月26日，厦门市湖里区人民法院发布情况通报，网传案情“路易威登公司起诉地产开发商，因楼盘外立面四叶类雕花装饰商标侵权”不属实。经核实，该案系路易威登公司起诉某小区沿街服装店经营者彭某销售侵犯其注册商标的服装，其余被告系因怠于履行管理职责被诉承担相应责任，案件与网传楼盘外立面雕花装饰没有关联。目前该案尚未开庭。（第一财经）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "亿田智能：子公司拟不超20亿元采购服务器及配套设备，为客户提供算力服务",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912181723518084?f=rss]]>",
+        "summary": "7月26日，亿田智能公告称，公司全资子公司甘肃亿算拟向多家供应商采购服务器及配套设备，采购合同总金额预计不超过20亿元。本次采购主要用于为客户提供算力服务，不构成重大资产重组或关联交易。通过此次采购，公司能够加速构建自身的AI算力资源。亿田智能同时提示，公司算力业务尚处于业务拓展初期，公司主营业务仍为集成灶等厨房电器相关业务，整体经营基本面未发生变化。（财联社）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "福特公司召回超56万辆汽车",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912150835680647?f=rss]]>",
+        "summary": "7月26日，据美国媒体报道，美国福特汽车公司近日宣布召回56万5691辆福特“烈马”和“烈马猛禽”汽车，涉及2021至2026款车型。福特公司估计，这些汽车中约有1%的车辆存在发动机舱线束缺陷，可能发生短路，增加起火风险。目前尚未收到与此问题相关的事故或人员伤亡报告。（财联社）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "2026年暑期档电影票房已破55亿元，超去年同期10亿元",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912149968409736?f=rss]]>",
+        "summary": "7月26日，据网络平台数据，截至目前，2026年暑期档电影总票房（含预售）已突破55亿元，超去年暑期档同期10亿元。其中，喜剧动画片《八仙！》上映8天就取得超6亿元票房的优异成绩。喜剧运动题材电影《功夫女足》目前票房已超18.8亿元，暂列年度票房第三位。（央视新闻）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "三部门调拨2.5万件物资支持粤赣湘等地救灾救助工作",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912149644727683?f=rss]]>",
+        "summary": "据央视新闻，7月26日，国家防灾减灾救灾委员会办公室、应急管理部针对台风“红霞”影响，根据广东、江西、湖南等地防汛防台风救灾工作需要，会同国家粮食和物资储备局向三省调拨折叠床、折叠桌凳、毛巾被、夏凉被、家庭应急包等2.5万件中央救灾物资，支持地方妥善做好受灾群众紧急避险转移和安置救助工作。（央视新闻）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪融资快讯",
+        "kind": "cn_finance",
+        "title": "沪市一周新增增持回购计划最高158亿元，年内金额上限776亿元",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912147209983368?f=rss]]>",
+        "summary": "近日，沪市上市公司增持回购浪潮持续涌动，产业资本入市步伐提速。据统计，7月20日～7月26日期间，沪市新增回购计划42家次，金额上限83.86亿元；新增增持计划17家次，金额上限74.57亿元，回购用途涵盖股权激励、员工持股及市值维护等多个方向。拉长时间轴来看，2026年以来，沪市已新增披露回购计划190家次，金额上限合计达555亿元，新增增持计划155家次，金额上限达221亿元。（第一财经）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "硬氪首发 | 复旦教授、前英特尔首席科学家做端侧具身大脑，「眸深智能」完成近亿元Pre-A轮追加融资",
+        "url": "<![CDATA[https://36kr.com/p/3911162147640456?f=rss]]>",
+        "summary": "作者 | 邱晓芬 编辑 | 袁斯来 硬氪获悉，「眸深智能」（Motion Brain）完成近亿元Pre-A轮追加融资，本轮投资方包括中国头部物业服务公司、香港财团、多家上市公司联合打造的产业投资平台瑾悦投资、创合汇资本，以及老股东徐汇资本。 这也是继2026年5月3亿元Pre-A轮之后，「眸深智能」两个月内再次获得投资，此外，该公司Pre-A+轮的近5亿融资也在交割当中。该公司透露，今年上半年以来，「眸深智能」的估值增长超10倍，是业内发展速度最快的具身大脑企业之一。 「眸深智能」成立于2025年1月，定位为全球最懂动作的自进化具身大脑公司，致力于\"给10亿台机器人装原生通用大脑\"。 该公司由",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "从月之暗面出走，他用AI技术帮人找对象，徐新投资 | 涌现新项目",
+        "url": "<![CDATA[https://36kr.com/p/3910880823202948?f=rss]]>",
+        "summary": "文｜温丽虹 编辑｜张雨忻 Kimi K3上线前夕，曾歆勋算了算，离职时放弃的那笔期权的价值，在他离开这段时间涨了10倍。 从月之暗面离职前，曾歆��是Kimi的AI搜索技术负责人。2025年8月，他离职创办“良配科技”，核心产品“良配”，一个AI驱动的婚恋匹配应用，核心逻辑是将AI搜索与匹配能力嫁接到“找人”这件事上，用AI解决婚恋场景中资料采集、智能匹配、沟通辅助三个环节的效率问题。 公司刚创办，曾歆勋就拿到了今日资本徐新200万美元天使投资。他后来才知道，徐新见他前，已经在“AI寻人”这个方向上筛过好几轮。当时徐新在看两个方向，“AI找工作”与“AI找伴侣”。 招聘方向上，她把当时国内数得",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "9点1氪｜宇树科技CEO王兴兴登上《时代》杂志封面；国家反诈中心App可一键检测AI生成痕迹；Claude Opus 5正式发布",
+        "url": "<![CDATA[https://36kr.com/p/3910351337821318?f=rss]]>",
+        "summary": "今日热点导览 小鹏主动召回3.35万辆X9，涉及前空气弹簧安全隐患 微信撤回消息后可删除提示字 怡颗莓莓果线下仍在售，公司称针对近期舆论正准备维权 菲尔兹奖得主雅各布·齐默曼将加入OpenAI 欧盟对谷歌处以8.9亿欧元罚款 TOP3大新闻 宇树科技CEO王兴兴登上《时代》杂志封面 当地时间7月23日，宇树科技创始人兼CEO王兴兴与其载人机甲产品GD01共同登上《时代》杂志封面，标题为《机器人时代来临》。 据悉，距上次中国企业家登上该刊物封面，已过去整整8年。 《时代》杂志评价王兴兴是“AI时代一位非典型的预言者”，“他身材瘦削，戴着眼镜，完全没有许多科技创始人身上那种张扬的傲气。相反，他在谈",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "AnySearch 面向全球推出 “学生与开发者成长计划”",
+        "url": "<![CDATA[https://36kr.com/p/3909565569324163?f=rss]]>",
+        "summary": "7月24日，在 AnySearch 北京开发者沙龙活动现场，AnySearch 创始人兼CEO 薛冠群正式宣布推出“AnySearch 学生与开发者成长计划”（AnySearch Student & Developer Program）。该计划面向全球学生与开发者开放，旨在通过提供开放的 AI 搜索基础设施，支持更多 AI 创造者开展学术研究、开源创新和 AI 应用开发。 图片1 随着 AI 加速演进，AI 应用正在从简单信息交互迈向复杂任务执行，AI Agent 正在成为下一代应用的主流形态。在这一趋势下，实时、高质量的信息获取能力是 AI Agent 看见世界、完成任务的关键基础。然而，对",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "氪星晚报 ｜黄仁勋力挺中国AI开源模型；市场监管总局：深入整治“内卷式”竞争",
+        "url": "<![CDATA[https://36kr.com/p/3909160840451465?f=rss]]>",
+        "summary": "大公司： 字节跳动在中卫成立朔方星河科技公司，注册资本24亿 36氪获悉，天眼查App显示，近日，中卫朔方星河科技有限公司成立，法定代表人为田凯，注册资本24亿人民币，经营范围包括信息技术咨询服务、软件开发、信息系统集成服务、网络设备销售等。股东信息显示，该公司由北京字跳网络技术有限公司全资持股。 周生生、老凤祥等品牌金饰价格集体下调 当地时间7月23日，黄金白银大跌，油价狂飙。现货黄金跌1.96%，报4049美元；现货白银跌3.60%，报57.5967美元/盎司。国际贵金属期货普遍收跌。COMEX黄金期货跌2.4%，报4052.30美元/盎司；COMEX白银期货跌3.99%，报57.90美元",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "你的下一位面试官，可能不是人",
+        "url": "<![CDATA[https://36kr.com/p/3909499179767169?f=rss]]>",
+        "summary": "  谁能保证超级数字员工不是下一个AI落地的窗口   撰文 | 李嘉星 编辑 | 张薇 封面来源 | 元企AI   七月初，秋招开始预热。你投出去的下一份简历，可能不是先被HR看到，而是先被一个AI员工读完。 机器筛简历并不新鲜。真正有意思的是，如果这个AI不只是帮HR筛一下简历，而是像一个新入职的同事一样，被交代一个目标后，自己去找人、沟通、打分、汇报结果呢？ 最近，元企AI推出了第一款产品“超级HR”。它不是一个只解决单点环节的工具，而是试图像一个员工一样接下任务：拆解岗位需求，去招聘平台找人，看你的项目经历，给你打一个匹配分，再把“是否值得继续沟通”的理由交给人类HR。 今年3月底，清华",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "对话曾鸣教授：AI时代，企业竞争的关键是构建智能复利，让AI真正进入业务流程",
+        "url": "<![CDATA[https://36kr.com/p/3909358392988806?f=rss]]>",
+        "summary": "7月17日，2026世界人工智能大会在上海开幕。作为36氪连续第三年深入WAIC现场的重要内容窗口，「氪话未来」直播间也在大会首日同步开启现场对话。曾鸣教授在WAIC现场接受36氪「氪话未来」特邀专访，围绕AI时代企业增长、组织变革、智能复利、AI原生业务以及企业落地路径等话题，分享了他对于人工智能如何重塑商业模式与价值创造方式的观察与判断。 本届WAIC以“智能伙伴，共创未来”为主题。随着人工智能产业进入应用深化阶段，行业关注点正在从模型能力竞争逐步转向应用价值创造。相比过去几年围绕参数规模、模型性能和技术突破的讨论，2026年的AI产业正在更加关注一个核心问题：AI如何真正进入企业业务流程",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "DeepSeek不是理想主义公司，它只是把现实服务于理想",
+        "url": "<![CDATA[https://36kr.com/p/3909084356433025?f=rss]]>",
+        "summary": "  DeepSeek的答案，不是只仰望星空，也不是只脚踏实地，而是用现实问题去支撑一个足够远的目标。     撰文 | 李嘉星 刘辰艺 编辑 | 张薇 头图来源 | DeepSeek 封面来源 | DeepSeek   DeepSeek又一次被推到聚光灯下。  这家公司一度几乎是AI圈最神秘的存在：工程师文化、低调，创始人很少公开露面，团队也不像典型互联网公司那样频繁讲故事、做传播。但过去一年，它几乎每隔一段时间就会成为中文科技圈的中心。模型发布时，它因为低成本和开源刷屏；融资消息传出时，它因为估值和投资方引发讨论；这一次，梁文锋一场近4小时的投资人交流会录音流出，又让外界重新审视这家公司。 ",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "带着AI去前线！36氪逛透WAIC，带你看懂2026全行业AI最真实走向！",
+        "url": "<![CDATA[https://36kr.com/p/3909033052722310?f=rss]]>",
+        "summary": "7月17日至20日，2026世界人工智能大会暨人工智能全球治理高级别会议在上海落下帷幕。黄浦江畔，热浪与人潮一起涌动。本届大会以“智能伙伴，共创未来”为主题，在世博、张江、西岸三地四馆展开。作为年度人工智能产业观察窗口，WAIC 2026留下的关键信号，不在于展陈规模本身，而在于AI叙事的重心变化：技术展示正在退居幕后，真实场景、系统交付与商业价值被推到台前。 这也是36氪“氪话未来”连续第三年走进WAIC现场。过去三年，AI产业经历了从模型竞速到应用试炼的转向。参数、榜单和Demo曾经定义行业热度；到今年，更多企业开始回答一���更具体的问题：AI如何进入业务流程，如何与人协同完成任务，如何",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "8点1氪丨段永平称10年内大概率不会卖泡泡玛特；中国数学家王虹、邓煜获得菲尔兹奖；宜家回应甩卖8处物业：不代表退出中国市场",
+        "url": "<![CDATA[https://36kr.com/p/3908881985901959?f=rss]]>",
+        "summary": "今日热点导览 混元多模态理解负责人胡瀚离职创业，原团队或将聚焦世界模型 极氪回应“海外锁车”事件 客服回应滔搏暴力打折甩卖耐克库存：没有收到降价通知 哈兰德和亚马尔2.2亿欧元身价破纪录 张雪峰女儿再接手三家公司股份 TOP 3 大新闻 段永平：10年内大概率不会卖泡泡玛特 7月23日，段永平在社交媒体平台雪球上发表了他对近期投资操作的最新想法。雪球上有用户向知名投资人段永平提问：“阿段不会要减点泡泡玛特仓位去买马斯克的SpaceX吧？”对此，段永平回应称： 泡泡玛特我才刚开始买啊！我猜10年内大概率是不会卖的。不过，我的水果（苹果）已经比较成熟了，刚刚被call（看涨期权）走了一些，买了t-",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "希音披露聆讯后资料集：2025年营收418亿美元",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912399333676422?f=rss]]>",
+        "summary": "36氪获悉，7月26日，希音（SHEIN）向港交所披露聆讯后资料集。若顺利挂牌，将成为2026年港股最大的跨境电商IPO。2025年，希音实现总收入418亿美元，2023至2025年复合年均增长率达14.2%；2025年同期实现净利润20.6亿美元。截至2025年底，平台服务约2.73亿活跃客户，业务覆盖约160个市场。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "36氪",
+        "kind": "cn_media",
+        "title": "湖北能源：江陵电厂二期项目全面建成投产",
+        "url": "<![CDATA[https://36kr.com/newsflashes/3912223423731074?f=rss]]>",
+        "summary": "7月26日，湖北能源公告称，近日，公司江陵二期项目2号机组顺利通过168小时满负荷试运行，正式投入商业运营，标志着江陵二期项目全面建成投产。该项目拟配置2台66万千瓦超超临界二次再热燃煤机组，项目总投资不超过54.65亿元。江陵二期项目由湖北能源全资子公司湖北能源集团江陵发电有限公司控制运营，本项目应用66万千瓦超超临界二次再热技术，主要技术指标先进，符合现代煤电清洁化的发展方向。（界面新闻）",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "3万小时触觉数据补齐具身智能“手感”！新智具身&复旦报告三连发",
+        "url": "https://www.qbitai.com/2026/07/460962.html",
+        "summary": "项目数据模型均开源",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "100%开源！吴恩达做了个个人桌面Agent",
+        "url": "https://www.qbitai.com/2026/07/460892.html",
+        "summary": "开源、隐私、本地优先、模型无关",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "美国具身也没成熟！PI：中国公司何必总当“中国版XX”｜RSS 2026",
+        "url": "https://www.qbitai.com/2026/07/460542.html",
+        "summary": "这是机器人领域最好的时代",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "半价干翻Fable 5？Opus 5实测炸场，网友：差点从椅子上摔下来",
+        "url": "https://www.qbitai.com/2026/07/460253.html",
+        "summary": "模型变强，Claude Code系统提示词都精简了",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "具身智能的「ChatGPT时刻」还没到，科沃斯先把机器人拆开了",
+        "url": "https://www.qbitai.com/2026/07/460234.html",
+        "summary": "不做人形，抓住真实用户需求",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "北京说Agent已经能造世界，杭州却说它是刚发明的电灯泡",
+        "url": "https://www.qbitai.com/2026/07/460186.html",
+        "summary": "工业圈和学术圈“唱反调”",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "全新统一流式架构，Vivix灵动时刻正式发布首个实时互动模型",
+        "url": "https://www.qbitai.com/2026/07/460174.html",
+        "summary": "单卡突破10000 video tokens/s，Vivix打通实时多模态生成全链路",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "合肥又押中AI独角兽：多模态赛道，3个月融了21亿",
+        "url": "https://www.qbitai.com/2026/07/460154.html",
+        "summary": "跑出原生全模态新路径",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "国产世界模型登顶李飞飞团队榜单！适配国产昇腾算力、代码权重全开源",
+        "url": "https://www.qbitai.com/2026/07/460041.html",
+        "summary": "给它一张图，还你整个世界",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "菲尔兹奖得主王虹，也发过NeurIPS",
+        "url": "https://www.qbitai.com/2026/07/460042.html",
+        "summary": "王虹主页唯一没挂链接的论文",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "数学大佬在前面拓荒，AI研究员在后面捡宝，菲尔兹奖还能拿来破AI「黑盒」？",
+        "url": "https://www.leiphone.com/category/yanxishe/e05vwo1DgZf3HnFZ.html",
+        "summary": "数学界与AI界狠狠联动了    作者丨高允毅    编辑丨马晓宁                                                                                                       级别的纯数学硬成果，已经直接落地到大模型训练一线了。一位小红书作者Z9在翻论文时发现，刚刚刷屏全网的三维挂谷猜想，现在被佛罗里达大学团队搬进了神经网络训练流程，跨界解决大模型的 “黑盒问题”了。他们的论文叫《GeoLAN: Geometric Learning of Latent Explanatory Directions i",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "奇瑞“不客气”了！风云A9打破15万级纯电“潜规则”",
+        "url": "https://www.leiphone.com/category/transportation/JUMeihhqkG3LSj0L.html",
+        "summary": "站在全球2000万辆销售规模的新起点上，奇瑞开始加码纯电路线。7月25日，奇瑞风云品牌首款纯电车型风云A9在成都正式上市，新车定位“长续航智美纯电B级轿跑”，整车尺寸为4836×1896×1489mm，轴距为2900mm，并搭载5项同级独有和4项同级领先核心技术体验，3个不同版本的整体售价区间为10.99万-12.99万元。根据雷峰网了解，从2023年风云序列回归以来，奇瑞已经先后推出插混和增程车型。此次，风云A9上市之后，奇瑞风云序列将正式完成插混、增程、纯电三大动力路线的全覆盖。值得注意的是，这也是奇瑞全球第2000万辆下线车型。作为中国品牌“走出去”的探路者，从2001年试水整车出口中东",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "AI 3D产业路线首次公开讨论：Hi3D闭门会释放哪些新趋势？",
+        "url": "https://www.leiphone.com/category/weiwu/VqgEeeerbpYbQcUF.html",
+        "summary": "深圳，7月23日——Hi3D实体创意生态闭门会在深圳举行。围绕“探索AI驱动的下一代可制造生态”，Hi3D与3D打印硬件、制造、创作者及Maker领域嘉宾共同探讨AI 3D从数字生成走向实体制造的新趋势。这也是数美万物创始人兼CEO任利锋创业后首次代表Hi3D 面向媒体、设备厂商及产业伙伴系统分享Hi3D过去一年的技术进展与产业思考。数美万物联合创始人兼算法负责人贾荣飞也在现场分享了过去一年Hi3D在算法模型优化上，里程碑式的进步。现场，Hi3D公布了即将上线的新一代 Hi3D 3.0 2048³ 模型，定义新一代3D通用大模型SOTA。并首次系统阐述其“实体创意生态”布局：AI 3D正在从单",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "对话星炽动力CTO李达——PULSE架构：如何让具身智能更像人？",
+        "url": "https://www.leiphone.com/category/industrynews/VoghxG89WgJ2E9ZI.html",
+        "summary": "端云协同 + 原生隐私设计，家庭机器人兼顾智能与安全    编辑丨李希                                                                                                       今年关于具身智能的讨论里，有一个问题始终绕不开：机器人进了家门，到底靠什么让人愿意留着它？工厂的逻辑很简单：干得准、跑得稳，得能运行，还能创收。但家庭场景不一样：一个动作失误、一次对意图的理解偏差，用户的心理容错率几乎为零——错一次，机器人就可能就被退货，或者放在角落吃灰。这个现实，让行业分出了两条路。一条路上的公司，继续",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "天立启鸣发布教育AGI白皮书：从答题响应到心智仿真，破解教育“不可能三角”",
+        "url": "https://www.leiphone.com/category/ai/9BvD2TFs3u6gMHPr.html",
+        "summary": " 如今线上题库、网课、自适应习题工具早已普及，但教育行业质量、成本、规模难以兼顾的“不可能三角”依然尚未打破。同一班级里，有的学生一点就通、有的卡在基础概念、有的陷入思维误区，统一授课很难适配所有人；一对一的个性化教育高度依赖优质师资，成本高、难推广。教育AI工具尽管简单易用，但多停留在内容分发、答题响应与习题推荐的表层逻辑，无法看透学生内在心智变化和潜在需求。教育行业亟待从简单的“答题响应”，走向能模拟、读懂学生内心思考过程的“心智仿真”新阶段。在2026第9届世界人工智能大会（WAIC）期间，由天立国际、启鸣达人、天立启鸣AI研究院、AIII人工智能国际研究院，以及北京航空航天大学国际创新",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "30.99万起，岚图追光S预售正式开启，中国品牌在FUV赛道抢得先手！",
+        "url": "https://www.leiphone.com/category/industrynews/3nVbWR1oDzJjmXOH.html",
+        "summary": "【2026年7月24日，武汉】7月24日，在以“人生追光，许我闪耀”为主题的岚图追光S预售发布会上，全球首款科技FUV岚图追光S正式开启预售，预售价30.99万元。预售期间下订，可享免费升级价值20000元的主副驾双零重力座椅，以及免费赠送价值1500元的整车底盘氛围灯。新车采用超跑黄金比例、全系搭载华为乾崑智驾ADS 5四激光雷达方案、全球首批搭载全新鸿蒙座舱5.2，应用旗舰底盘架构和大师底盘调校。发布现场，岚图追光S全球代言人杨洋惊喜亮相，全程深度体验了新车的驾控、四激光感知、自动泊车及语音交互能力，并现场下订成为岚图追光S全球001号车主。岚图追光S是给每一个热爱驾驶、热爱生活的人打造的",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "欧盟3欧元关税落地，卖家在「熬」与「转」间寻找生路",
+        "url": "https://www.leiphone.com/category/industrynews/UcHdRjLCDfn8OOzo.html",
+        "summary": "“现在只能熬过寒冬，留下等待机会。因为一旦退场，以后可能连机会都没有了。”全托管卖家陈涛的这句话，几乎概括了当下欧洲卖家的处境。7月1日，欧盟正式开始对价值不超过150欧元的进口小包征收临时固定关税。与此前市场普遍理解的“每个包裹收3欧元”不同，这笔费用按照包裹内不同的商品税目分别计算。一件衣服、一个玩具和一副耳机，即使装在同一个包裹里，总价只有20欧元，也可能因为对应三个不同税目，被收取9欧元关税。算上关税后，包裹成本将从20欧元升至29欧元，涨幅达到45%。即便包裹里装的都是服装，只要两件商品材质不同、对应不同税号，也可能被收取两笔关税。若商品总价仍为20欧元，加上6欧元关税，成本相当于上",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "直捣企业出海系统性难题，飞书深诺发布Marvy2.0接管决策和执行",
+        "url": "https://www.leiphone.com/category/industrynews/urzkJ71nAWLXBAFT.html",
+        "summary": "2026年7月23日，在第十届全球跨境电商峰会暨2026全球化新品牌AI竞争力大会上，领先的AI全球营销科技平台飞书深诺Meetsocial，正式发布新一代企业级出海营销AgentOS——Marvy 2.0。Marvy 2.0不是又一款AI单点工具，而是一个会思考、会协同、会进化的营销大脑，它定位为“全球AI营销新基建”，致力于让广告增长从“可能性”走向“确定性”。大会现场，飞书深诺Meetsocial也与BytePlus正式达成官方合作伙伴关系，双方完成合作授牌仪式。Marvy 2.0将全面接入BytePlus大模型体系与Seedance音视频生成能力，获得超强技术底座加持。AI渗透率达78",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "自变量登上APEC国际舞台，代表中国具身智能分享服务民生“最佳实践”",
+        "url": "https://www.leiphone.com/category/industrynews/wbuuGeiADHNlBBOR.html",
+        "summary": "7月16日-24日，亚太经合组织（APEC）“2026年数字和人工智能部长会议及数字周”系列活动在四川成都举行。作为部长会议的重要配套活动，工业和信息化部于7月24日上午举办“APEC数智赋能高级别对话”，邀请APEC经济体部长及政府部门、企业、科研机构和国际组织高级别代表参加，围绕“发展人工智能，增进民生福祉”“推动数字转型，赋能千行百业”两大议题展开交流。自变量机器人创始人兼CEO王潜作为全国8位受邀嘉宾之一，在高级别对话上就“发展人工智能，增进民生福祉”发表主题演讲，分享了利用数字和人工智能技术增进民生福祉、赋能千行百业的实践经验。大会还将自变量的机器人进家庭项目列入《亚太地区数智赋能案",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "即梦联合抖音电商、艾菲奖发起 “AI 广告爆改大赛” ，共创经典广告新表达",
+        "url": "https://www.leiphone.com/category/industrynews/vo4S5zqGS1pUhVCr.html",
+        "summary": "7月23日，即梦AI联合抖音电商、艾菲奖共同发起 “AI 广告爆改大赛”，邀请网友围绕经典广告语、经典广告场景和大众记忆中的品牌内容，使用 AI 技术进行创意改编与视频创作，让经典广告焕发全新生命力。艾菲奖是国际上具有影响力的实效营销与广告传播奖项体系之一，每年持续认可和表彰最具实效的品牌，营销机构及代理机构。作为本次大赛官方合作发起方，艾菲奖的加入为赛事增添了专业度与行业影响力。本次大赛由李诞发起，经典广告等您来演本次大赛获得王老吉、旺旺、玛氏、喜之郎、优乐美、溜溜梅、卡姿兰等多个知名品牌授权，聚焦 “经典回忆” 与 “品牌焕新” 两大方向，设置了品牌赛道与公益赛道等五个创作方向。参赛者可围",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "Seed STEM科学家计划启动，邀请100位学者探索AI加速科学发现",
+        "url": "https://www.leiphone.com/category/industrynews/vsowsDM4mNuFGkb5.html",
+        "summary": "7月23日，Seed Edge团队正式发布Seed STEM 科学家计划。该计划拟邀请100位前沿科学领域学者，与Seed 团队一起，围绕真实科研问题展开合作，识别和突破研究级问题，共同探索 AI 加速科学发现的可能性。过去几年，大模型在通用问答、代码、数学推理等任务上取得了显著进展，但在真实科研问题中，仍面临更具复杂度的挑战。在此背景下，Seed Edge团队发起了Seed STEM 科学家计划。据了解，该计划主要关注AI在科学领域的研究，参与该计划的学者将与 Seed 团队一起，共同进行更具创造性的科学探索。该计划对参与学者的研究背景和 AI 使用经验提出了相应期待，希望学者在STEM相关",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "腾讯混元组织架构再升级，合并大语言模型和多模态团队，加速模型研发",
+        "url": "https://www.leiphone.com/category/industrynews/LNHgLirIT5DvYfcV.html",
+        "summary": "7 月 23 日，腾讯宣布混元多模态模型部门与大语言模型部门合并，成立基础模型部，统一由腾讯首席 AI 科学家姚顺雨管理，以进一步提升模型研发和协同效率，探索全模态模型的智能上限。以大语言模型为基础，腾讯混元构建了图像、视频、语音、3D 生成模型等完整的模型矩阵。2026 年以来，腾讯混元模型迭代速度不断加快，与腾讯公司业务的协同也持续增强。7 月正式上线的大语言模型 Hy3，展现出显著强于同尺寸模型且比肩参数规模 2-5 倍的旗舰模型的智能水平，已在 WorkBuddy/CodeBuddy、元宝、Marvis、ima 等多个业务接入，API 已在腾讯云 TokenHub 以及多个海外平台上线",
+        "domains": []
+      }
+    ],
+    "markets": [
+      {
+        "sym": "TSLA",
+        "name": "特斯拉(Optimus)",
+        "price": 313.03,
+        "pct_5d": -15.3,
+        "currency": "USD"
+      },
+      {
+        "sym": "ISRG",
+        "name": "直觉外科(手术机器人)",
+        "price": 337.5,
+        "pct_5d": -4.44,
+        "currency": "USD"
+      },
+      {
+        "sym": "ABB",
+        "name": "ABB(工业机器人)",
+        "_error": "HTTP Error 404: Not Found"
+      },
+      {
+        "sym": "SYM",
+        "name": "Symbotic(仓储机器人)",
+        "price": 40.15,
+        "pct_5d": -1.67,
+        "currency": "USD"
+      },
+      {
+        "sym": "SERV",
+        "name": "Serve Robotics(配送)",
+        "price": 4.81,
+        "pct_5d": -7.32,
+        "currency": "USD"
+      },
+      {
+        "sym": "PATH",
+        "name": "UiPath(自动化)",
+        "price": 10.84,
+        "pct_5d": -10.86,
+        "currency": "USD"
+      },
+      {
+        "sym": "NVDA",
+        "name": "英伟达(机器人算力)",
+        "price": 206.84,
+        "pct_5d": 1.75,
+        "currency": "USD"
+      },
+      {
+        "sym": "9618.HK",
+        "name": "京东(物流机器人)",
+        "price": 118.1,
+        "pct_5d": -1.58,
+        "currency": "HKD"
+      }
+    ],
+    "cn_markets": [
+      {
+        "secid": "116.09880",
+        "name": "优必选",
+        "market": "港股",
+        "price": 78.65,
+        "pct_5d": -4.26,
+        "currency": "HKD"
+      },
+      {
+        "secid": "116.09660",
+        "name": "地平线机器人",
+        "market": "港股",
+        "price": 4.42,
+        "pct_5d": -3.28,
+        "currency": "HKD"
+      },
+      {
+        "secid": "0.300124",
+        "name": "汇川技术",
+        "market": "A股",
+        "price": 59.35,
+        "pct_5d": -4.83,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.002747",
+        "name": "埃斯顿",
+        "market": "A股",
+        "price": 30.04,
+        "pct_5d": -4.06,
+        "currency": "CNY"
+      },
+      {
+        "secid": "1.688017",
+        "name": "绿的谐波",
+        "market": "A股",
+        "price": 295.3,
+        "pct_5d": -4.21,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.002230",
+        "name": "科大讯飞",
+        "market": "A股",
+        "price": 38.88,
+        "pct_5d": -3.98,
+        "currency": "CNY"
+      }
+    ],
+    "errors": [],
+    "counts": {
+      "hn": 1,
+      "arxiv": 30,
+      "rss": 41,
+      "cn_rss": 46,
+      "markets": 7,
+      "cn_markets": 6,
+      "errors": 0
+    }
+  },
+  "curated": {
+    "title_date": "2026-W30 · 07-19 ~ 07-26",
+    "window": "2026-07-19 ~ 2026-07-26",
+    "domains": [
+      {
+        "id": "vla",
+        "emoji": "1️⃣",
+        "name": "VLA（视觉-语言-动作模型）",
+        "items": [
+          {
+            "title": "AXIS：可生长的社区驱动机器人操作数据引擎",
+            "summary": "提出社区驱动的可扩展数据引擎与基准，通过浏览器远程遥操作实现大规模演示采集，摆脱对专用硬件和集中式操作员的依赖。",
+            "url": "http://arxiv.org/abs/2607.21588v1",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "Scale Up Strategically：面向组合泛化的偏差感知评测与数据采集",
+            "summary": "提出诊断框架把预训练操作策略的“走捷径”失败定位到颜色、动词、物体等具体指令因子，并据此指导数据采集提升指令组合泛化。",
+            "url": "http://arxiv.org/abs/2607.21582v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "dexterous",
+        "emoji": "2️⃣",
+        "name": "灵巧手 / 灵巧操作",
+        "items": [
+          {
+            "title": "新智具身&复旦开源 3 万小时触觉数据集",
+            "summary": "3 万小时触觉数据补齐具身智能“手感”，配套报告三连发，项目、数据与模型均开源。",
+            "url": "https://www.qbitai.com/2026/07/460962.html",
+            "source": "cn_rss",
+            "hot": true
+          },
+          {
+            "title": "BiCompoDiff：组合扩散+能量优化实现双臂物体重定向",
+            "summary": "针对“抓取-换手-旋转”的双臂重定向任务，提出组合扩散模型结合能量优化，在碰撞、运动学约束等多目标竞争下求解可行操作序列。",
+            "url": "http://arxiv.org/abs/2607.21341v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "sim2real",
+        "emoji": "3️⃣",
+        "name": "sim2real / 仿真到真实",
+        "items": [
+          {
+            "title": "GS-Agent：用生成式仿真创建 4D 物理世界",
+            "summary": "借助生成式基础模型从自然语言描述自动构建动态且物理真实的 4D 世界，减少传统图形学中材质、运动的手工调校。",
+            "url": "http://arxiv.org/abs/2607.21522v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "embodied-model",
+        "emoji": "4️⃣",
+        "name": "具身模型（世界模型 / 人形策略 / 基础模型）",
+        "items": [
+          {
+            "title": "国产世界模型登顶李飞飞团队榜单，代码权重全开源",
+            "summary": "该世界模型“给一张图还你整个世界”，适配国产昇腾算力，代码与权重全部开源。",
+            "url": "https://www.qbitai.com/2026/07/460041.html",
+            "source": "cn_rss",
+            "hot": true
+          },
+          {
+            "title": "3D-Aware VLMs：融合隐式与显式几何增强 VLM 空间理解",
+            "summary": "VLM-IE3D 从 RGB 视频学习隐式与显式 3D 几何，弥补 2D 输入 VLM 在细粒度空间理解与推理任务上的短板。",
+            "url": "http://arxiv.org/abs/2607.21595v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "超越回合式评测：序列具身问答中的记忆架构瓶颈",
+            "summary": "指出传统 EQA 回合式评测忽略真实机器人需跨任务持续积累与复用信息，系统分析支撑连续运行所需的记忆架构机制。",
+            "url": "http://arxiv.org/abs/2607.21571v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "VoLN：纯视觉长时程导航的范式、基准与方法",
+            "summary": "剥离路线级指令中隐含的方位、距离等空间先验，为开放 GPS 拒止环境下的纯视觉长时程导航建立新基准。",
+            "url": "http://arxiv.org/abs/2607.21400v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "embodied-chip",
+        "emoji": "5️⃣",
+        "name": "具身智能芯片（机器人计算 / 边缘 NPU）",
+        "items": [
+          {
+            "title": "面向平面激光雷达的因子化时空卷积人体姿态估计",
+            "summary": "面向仅配备全向平面 LiDAR 和普通板载处理器的服务机器人，实现轻量级人体检测与朝向估计，兼顾社交导航的实时性与低算力约束。",
+            "url": "http://arxiv.org/abs/2607.21309v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "emoji": "6️⃣",
+        "name": "制造 / 产线",
+        "items": [
+          {
+            "title": "IEEE Spectrum：为 NASA 机器人装配技能的研究生",
+            "summary": "IEEE Spectrum 报道研究生 Sarah Downs 为 NASA 机器人开发装配（assembly）能力的工作。",
+            "url": "https://spectrum.ieee.org/graduate-student-nasas-robots-assembly",
+            "source": "rss"
+          }
+        ]
+      },
+      {
+        "id": "market",
+        "emoji": "7️⃣",
+        "name": "市场 / 产业",
+        "items": [
+          {
+            "title": "宇树发布 As2-W 轮式机器人",
+            "summary": "Unitree 官网上线新品 As2-W，HN 热议（140 分）。",
+            "url": "https://www.unitree.com/As2-W/",
+            "source": "hn",
+            "score": 140,
+            "hot": true
+          },
+          {
+            "title": "宇树 CEO 王兴兴与载人机甲 GD01 登上《时代》封面",
+            "summary": "《时代》以《机器人时代来临》为题报道，距中国企业家上次登该刊封面已 8 年。",
+            "url": "https://36kr.com/p/3910351337821318?f=rss",
+            "source": "cn_rss",
+            "hot": true
+          },
+          {
+            "title": "IEEE Spectrum：日本开创人形机器人，如今能否追上中国？",
+            "summary": "东京人形机器人峰会观察：日本在人形机器人先发，但产业化节奏面临中国竞争压力。",
+            "url": "https://spectrum.ieee.org/humanoid-robots-japan",
+            "source": "rss"
+          },
+          {
+            "title": "PI 观点：美国具身也没成熟，中国公司何必总当“中国版XX”",
+            "summary": "量子位 RSS 2026 现场报道 Physical Intelligence 观点：这是机器人领域最好的时代。",
+            "url": "https://www.qbitai.com/2026/07/460542.html",
+            "source": "cn_rss"
+          },
+          {
+            "title": "科沃斯：具身智能“ChatGPT 时刻”未到，先拆解机器人抓真实需求",
+            "summary": "科沃斯选择不做人形，从真实用户需求出发拆解机器人形态与功能。",
+            "url": "https://www.qbitai.com/2026/07/460234.html",
+            "source": "cn_rss"
+          }
+        ]
+      }
+    ],
+    "industry": {
+      "stocks": [
+        {
+          "name": "特斯拉(Optimus)",
+          "sym": "TSLA",
+          "price": 313.03,
+          "pct": -15.3,
+          "currency": "USD",
+          "note": "Q2 财报不及预期后大跌"
+        },
+        {
+          "name": "英伟达(机器人算力)",
+          "sym": "NVDA",
+          "price": 206.84,
+          "pct": 1.75,
+          "currency": "USD",
+          "note": "机器人算力龙头，本周唯一上涨"
+        },
+        {
+          "name": "直觉外科(手术机器人)",
+          "sym": "ISRG",
+          "price": 337.5,
+          "pct": -4.44,
+          "currency": "USD",
+          "note": "手术机器人"
+        },
+        {
+          "name": "Symbotic(仓储机器人)",
+          "sym": "SYM",
+          "price": 40.15,
+          "pct": -1.67,
+          "currency": "USD",
+          "note": "仓储自动化"
+        },
+        {
+          "name": "Serve Robotics(配送)",
+          "sym": "SERV",
+          "price": 4.81,
+          "pct": -7.32,
+          "currency": "USD",
+          "note": "末端配送"
+        },
+        {
+          "name": "UiPath(自动化)",
+          "sym": "PATH",
+          "price": 10.84,
+          "pct": -10.86,
+          "currency": "USD",
+          "note": "流程自动化"
+        },
+        {
+          "name": "京东(物流机器人)",
+          "sym": "9618.HK",
+          "price": 118.1,
+          "pct": -1.58,
+          "currency": "HKD",
+          "note": "物流机器人"
+        }
+      ],
+      "cn_stocks": [
+        {
+          "name": "优必选",
+          "secid": "116.09880",
+          "market": "港股",
+          "price": 78.65,
+          "pct": -4.26,
+          "currency": "HKD",
+          "note": "人形机器人"
+        },
+        {
+          "name": "地平线机器人",
+          "secid": "116.09660",
+          "market": "港股",
+          "price": 4.42,
+          "pct": -3.28,
+          "currency": "HKD",
+          "note": "智驾/机器人芯片"
+        },
+        {
+          "name": "汇川技术",
+          "secid": "0.300124",
+          "market": "A股",
+          "price": 59.35,
+          "pct": -4.83,
+          "currency": "CNY",
+          "note": "工控/伺服"
+        },
+        {
+          "name": "埃斯顿",
+          "secid": "0.002747",
+          "market": "A股",
+          "price": 30.04,
+          "pct": -4.06,
+          "currency": "CNY",
+          "note": "工业机器人"
+        },
+        {
+          "name": "绿的谐波",
+          "secid": "1.688017",
+          "market": "A股",
+          "price": 295.3,
+          "pct": -4.21,
+          "currency": "CNY",
+          "note": "谐波减速器"
+        },
+        {
+          "name": "科大讯飞",
+          "secid": "0.002230",
+          "market": "A股",
+          "price": 38.88,
+          "pct": -3.98,
+          "currency": "CNY",
+          "note": "AI/语音交互"
+        }
+      ],
+      "funding": [
+        {
+          "title": "Travis Kalanick 机器人公司 Atoms 融资 17 亿美元，a16z 领投",
+          "summary": "Uber 参投，主打工业 AI；Crunchbase 将其列为本周最大“物理 AI”融资（中外多家报道）。",
+          "url": "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/",
+          "amount": "$1.7B",
+          "region": "海外"
+        },
+        {
+          "title": "眸深智能完成近亿元 Pre-A 轮追加融资",
+          "summary": "复旦教授、前英特尔首席科学家创办的端侧具身大脑公司，两个月内再获投资，Pre-A+ 轮近 5 亿元融资交割中（金额以官方渠道核验）。",
+          "url": "https://36kr.com/p/3911162147640456?f=rss",
+          "amount": "近亿元人民币",
+          "region": "国内"
+        },
+        {
+          "title": "自变量机器人登上 APEC 数智赋能高级别对话",
+          "summary": "创始人王潜作为全国 8 位受邀嘉宾之一发表演讲，其机器人进家庭项目列入亚太数智赋能案例（公司动态，以官方渠道核验）。",
+          "url": "https://www.leiphone.com/category/industrynews/wbuuGeiADHNlBBOR.html",
+          "amount": null,
+          "region": "国内"
+        },
+        {
+          "title": "星炽动力 CTO 详解 PULSE 架构：端云协同的家庭机器人大脑",
+          "summary": "雷锋网对话星炽动力 CTO 李达，PULSE 架构以端云协同+原生隐私设计兼顾家庭机器人智能与安全（公司动态，以官方渠道核验）。",
+          "url": "https://www.leiphone.com/category/industrynews/VoghxG89WgJ2E9ZI.html",
+          "amount": null,
+          "region": "国内"
+        }
+      ]
+    },
+    "highlights": [
+      "宇树双热点：新品轮式机器人 As2-W 上线引 HN 热议，CEO 王兴兴携载人机甲 GD01 登《时代》封面",
+      "Travis Kalanick 机器人公司 Atoms 获 a16z 领投 17 亿美元，“物理 AI”成本周最大融资主题",
+      "开源数据潮：AXIS 社区驱动操作数据引擎、新智具身&复旦 3 万小时触觉数据、国产世界模型登顶榜单并全开源"
+    ]
+  },
+  "meta": {}
+}
