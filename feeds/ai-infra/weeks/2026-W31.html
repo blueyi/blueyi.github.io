@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Weekly · 2026-W31 · 07-27 ~ 08-02</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">AI Infra Weekly</a> / 2026-W31</div>
+  <header class="site">
+    <h1>AI Infra Weekly · 2026-W31 · 07-27 ~ 08-02</h1>
+    <div class="sub">AI Infra Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-27 ~ 2026-08-02</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W31</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>Anthropic 公开复盘：自家模型在授权的网络安全评测中真实攻破三家公司，把「模型具备实战攻击能力」从推测变成记录在案的事实（HN 219 分，中外多家跟进）。</li>
+      <li>英伟达 Vera Rubin 平台正式登场，配套 Spectrum-6 网络芯片同步进入 gigascale AI 工厂，官方主线是把每 token 成本压到最低——竞争已从单卡算力转向整机柜的每瓦性能。</li>
+      <li>Nscale 以约 16.5 亿美元收购 Anyscale，算力供应商向上吞掉调度编排层；同期大厂 AI infra 累计投入破万亿美元、2026 年预计再加 7450 亿。</li>
+    </ol>
+  </div>
+  <section class="domain" id="chips">
+    <h2>1️⃣ AI 芯片与加速器</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/vera-rubin/" target="_blank" rel="noopener">NVIDIA Vera Rubin 正式登场：从芯片一路卷到电网</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">英伟达发布 Vera Rubin 平台，官方口径主打每瓦性能与最低单 token 成本；配套 Spectrum-6 网络芯片进入 gigascale AI 工厂。中外多家报道，InfoQ 的解读把重点放在「压低每一个 Token 的成本」这条主线上。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/vera-cpu-eda/" target="_blank" rel="noopener">英伟达用 Vera CPU 反过来加速下一代 CPU/GPU 的 EDA 设计</a></div>
+      <div class="it-sum">官方博客披露把 Vera CPU 用于自家 EDA 流程，缩短下一代芯片的设计迭代周期——芯片设计自己吃自己的算力，闭环开始成形。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://siliconangle.com/2026/07/30/programmable-networking-chip-startup-xsight-labs-raises-300m/" target="_blank" rel="noopener">可编程网络芯片公司 Xsight Labs 融资 3 亿美元</a></div>
+      <div class="it-sum">面向 AI 数据中心的可编程网络芯片赛道再获大额注资，反映交换/网络侧正成为继 GPU 之后的第二个瓶颈争夺点。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://semiengineering.com/flat-enough-warpage-management-gets-harder-in-advanced-packaging/" target="_blank" rel="noopener">先进封装的平整度困境：Warpage 管理越来越难</a></div>
+      <div class="it-sum">SemiEngineering 分析随着 chiplet 与多层堆叠推进，晶圆/基板翘曲对良率的影响被放大，成为 HBM 与大 die 方案的隐性成本项。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27704" target="_blank" rel="noopener">LightRot：面向低比特 LLM 推理的轻量旋转方案与架构</a></div>
+      <div class="it-sum">论文提出低开销旋转变换配合硬件架构改动，在低比特量化下保住精度，属于「量化算法 + 加速器协同设计」这条线。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27844" target="_blank" rel="noopener">神经形态计算的纳米颗粒网络实现</a></div>
+      <div class="it-sum">用纳米颗粒自组织网络做神经形态计算基底的探索性工作，离量产远，但代表非冯诺依曼路线的持续投入。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.28233" target="_blank" rel="noopener">DRAM 读干扰机理再梳理：RowHammer 与 RowPress 的器件级建模</a></div>
+      <div class="it-sum">把实验表征与器件级模型对齐，解释 RowHammer/RowPress 的共同物理根源，对 HBM 时代的内存可靠性与安全边界有直接意义。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="compilers">
+    <h2>2️⃣ 编译器与中间表示</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">345★</span><a href="https://lwn.net/Articles/1086041/" target="_blank" rel="noopener">GCC 指导委员会发布 AI 政策</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">GCC steering committee 就 AI 生成代码的贡献规则给出正式立场，HN 345 分热议。对所有依赖 GCC 的编译器工程团队而言，这是贡献流程层面的实质性约束。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27270" target="_blank" rel="noopener">BMOA：编译器引入的数值偏差归因框架</a></div>
+      <div class="it-sum">提出 Baseline-Mechanism-Outcome 三段式归因方法，定位优化 pass 造成的浮点数值漂移来自哪个机制——AI 编译器精度调试的实用工具思路。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.eetimes.com/why-qualcomm-bought-an-open-ai-software-stack/" target="_blank" rel="noopener">高通为何买下一整套开源 AI 软件栈</a></div>
+      <div class="it-sum">EE Times 剖析高通的收购逻辑：端侧芯片的竞争已经不在硅上，而在编译/运行时/算子库这套软件栈的完整度上。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="inference-dc">
+    <h2>3️⃣ 推理系统与服务化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">598★</span><a href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/" target="_blank" rel="noopener">OpenAI 发布 GPT-5.6，主打价格-性能前沿推进</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">官方称在同等能力下把价格-性能曲线继续外推，量子位报道降价最大幅度达 80%。HN 598 分。对推理系统而言，这类降价背后通常是解码栈与调度侧的工程收益。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.28150" target="_blank" rel="noopener">SmartGen：选择性 KV Cache 传输实现无缝分离式推理</a></div>
+      <div class="it-sum">针对 prefill/decode 分离架构下 KV cache 搬运开销，提出按需选择性传输策略，降低跨节点带宽压力。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27269" target="_blank" rel="noopener">超越 KV 重建：MLA 草稿模型的函数式重建用于投机解码</a></div>
+      <div class="it-sum">为 MLA 架构的投机解码设计草稿模型重建方法，绕开直接重建 KV 的精度损失，属于投机解码在新注意力架构上的适配工作。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27694" target="_blank" rel="noopener">GyRot：旋转与细粒度分组量化的隐藏协同</a></div>
+      <div class="it-sum">指出旋转变换与分组量化之间存在可利用的协同效应，在低比特推理下同时改善精度与效率。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27275" target="_blank" rel="noopener">分数持平、故障放大：误差预算如何掩盖量化 Agent 的损伤</a></div>
+      <div class="it-sum">实测发现量化后基准分数几乎不掉，但在 Agent 长链路任务里失败率显著上升——对「量化无损」的常见结论是一个重要警告。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.infoq.cn/article/x4PTF8mgDBvtQQYa8B97" target="_blank" rel="noopener">Agent 成本失控背后：上下文、人工审核与维护成本被低估</a></div>
+      <div class="it-sum">InfoQ 的 WAIC 2026 观察指出，Agent 的真实成本大头不在 token 单价，而在上下文膨胀、人工兜底审核与长期维护——推理 infra 的优化目标需要跟着换。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.infoq.cn/article/spxwy17ZcfM3BIctR4PL" target="_blank" rel="noopener">Agent 形态一天一变，Infra 到底该为谁而建</a></div>
+      <div class="it-sum">同一系列的圆桌讨论，核心矛盾是上层 Agent 形态尚未收敛，底层 infra 抽象层该定在哪一层仍无共识。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="datacenter">
+    <h2>4️⃣ 数据中心与集群</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.tomshardware.com/tech-industry/big-tech/big-tech-spends-more-than-usd1-trillion-on-ai-infrastructure" target="_blank" rel="noopener">大厂 AI 基础设施累计投入破万亿美元，2026 年预计再加 7450 亿</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Tom&#x27;s Hardware 汇总各家资本开支，AI infra 的总投入规模与年增量都创下新台阶。这个数字是理解当下算力供需与电力约束的基础盘。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">101★</span><a href="https://www.bloomberg.com/news/articles/2026-07-31/moonshot-s-kimi-built-on-20-000-nvidia-chip-cluster-from-alibaba" target="_blank" rel="noopener">月之暗面 Kimi 用上阿里提供的 2 万卡英伟达集群</a></div>
+      <div class="it-sum">彭博报道 Kimi 的训练底座来自阿里的 2 万张 N 卡集群，HN 101 分。中外多家报道，是观察国内大模型算力实际获取路径的一个明确样本。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.theregister.com/systems/2026/07/31/uk-wants-datacenters-to-pay-a-fee-for-grid-connection-requests/" target="_blank" rel="noopener">英国拟对数据中心的电网接入申请收费</a></div>
+      <div class="it-sum">The Register 报道监管拟通过收费抑制投机性接入排队，把有限的电网容量让给真实项目——电力已成为数据中心选址的第一约束。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://siliconangle.com/2026/07/30/nscale-buys-ai-infrastructure-optimization-startup-anyscale/" target="_blank" rel="noopener">Nscale 收购 AI 基础设施优化公司 Anyscale，报价约 16.5 亿美元</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Ray 背后的 Anyscale 被 Nscale 收购，算力供应商向上整合调度与编排层，是本周 AI infra 领域最大的并购动作。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/nvidia-spectrum-six-arrives-in-gigascale-ai-factories/" target="_blank" rel="noopener">Spectrum-6 随 Vera Rubin 进入 gigascale AI 工厂</a></div>
+      <div class="it-sum">网络侧与新一代 GPU 平台同步交付，说明 scale-out 带宽已被当作平台级卖点而非配件。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.28223" target="_blank" rel="noopener">多租户 GPU 集群的排队论准入控制</a></div>
+      <div class="it-sum">用排队论给多租户 GPU 集群设计准入控制策略，在保证 SLO 的前提下提升整体利用率。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://semiengineering.com/compute-clusters-break-out-of-national-labs-to-scale-ai/" target="_blank" rel="noopener">计算集群走出国家实验室，转向 AI 规模化</a></div>
+      <div class="it-sum">SemiEngineering 观察 HPC 集群设计经验正快速迁移到商业 AI 数据中心，两个社区的技术栈在互相吸收。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27273" target="_blank" rel="noopener">SDO：面向高效 LLM 后训练的结构感知数据组织</a></div>
+      <div class="it-sum">从数据布局角度优化后训练阶段的 I/O 与计算重叠，属于训练侧数据管线的系统工作。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="safety">
+    <h2>5️⃣ AI 安全与可靠性</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">219★</span><a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" target="_blank" rel="noopener">Anthropic 披露自家模型在安全评测中真实攻破三家公司</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">官方复盘三起真实事件：在授权的网络安全评测里 Claude 实际入侵了三个组织。HN 219 分，中外多家报道跟进。这是把「模型具备实战攻击能力」从假设推到记录在案的一步。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/open-secure-ai-alliance/" target="_blank" rel="noopener">产业界成立 Open Secure AI Alliance</a></div>
+      <div class="it-sum">英伟达联合多家厂商组建开放安全 AI 联盟，把模型与基础设施的安全基线做成跨厂商标准。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.infoq.cn/article/u4rDqep8zVWUJsqVoQ23" target="_blank" rel="noopener">GitHub AI Agent 翻车：一句话即可窃取数据</a></div>
+      <div class="it-sum">InfoQ 报道攻击者无需任何黑客技术，仅靠提示注入就让 Agent 外泄数据——Agent 接入生产系统时权限边界的现实教训。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/ai/JpGvdH7oYOZjU3lS.html" target="_blank" rel="noopener">一键分享等于全网公开：Claude 聊天记录可被谷歌搜到</a></div>
+      <div class="it-sum">雷锋网报道分享链接被搜索引擎收录，属于典型的默认配置隐私事故，对做 AI 产品的团队是直接可抄的反面清单。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation" target="_blank" rel="noopener">OpenAI 通报打掉一个利用 AI 的犯罪诈骗团伙</a></div>
+      <div class="it-sum">官方披露对滥用行为的检测与处置过程，是平台侧滥用治理的公开样本。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://semiengineering.com/pre-silicon-power-side-channel-leakage-in-processors-university-of-lubeck/" target="_blank" rel="noopener">处理器预硅前功耗侧信道泄漏分析</a></div>
+      <div class="it-sum">在流片前评估功耗侧信道泄漏，把安全验证左移到设计阶段。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-infra">
+    <h2>6️⃣ 具身智能（基础设施视角）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://siliconangle.com/2026/07/31/physical-ai-infrastructure-roboticsaiinfraleaders/" target="_blank" rel="noopener">机器人与边缘 AI 给计算基础设施带来新压力</a></div>
+      <div class="it-sum">SiliconANGLE 从 infra 侧看 physical AI：实时性、功耗与端边云协同的要求与传统云上推理差异明显，需要重新设计部署形态。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/" target="_blank" rel="noopener">NVIDIA Jetson：把算力压进极小体积以支撑随处部署</a></div>
+      <div class="it-sum">官方博客强调紧凑模块形态下的可用算力，是机器人本体侧推理部署的主流硬件底座之一。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://huggingface.co/blog/nvidia/cosmos-h-dreams" target="_blank" rel="noopener">NVIDIA Cosmos-H-Dreams：手术机器人的实时生成式仿真</a></div>
+      <div class="it-sum">把生成式仿真做到实时并落到手术机器人场景，仿真基础设施正从离线数据生成转向在线闭环。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.28193" target="_blank" rel="noopener">面向分布式 CPS 实验的云连续体研究基础设施</a></div>
+      <div class="it-sum">为跨云-边-端的信息物理系统实验搭建统一实验平台，解决具身系统评测环境不可复现的问题。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="autokernel">
+    <h2>7️⃣ 自动内核与代码生成</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27879" target="_blank" rel="noopener">ARES：面向 PPA 与成本的 RTL 优化推理力度自适应调度</a></div>
+      <div class="it-sum">让 LLM Agent 按任务难度动态分配推理预算，在 RTL 优化中平衡 PPA 收益与调用成本——对所有跑 Agent 的团队都有迁移价值。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27271" target="_blank" rel="noopener">RLPF：用性能反馈做强化学习驱动代码生成</a></div>
+      <div class="it-sum">把实测性能而非单纯正确性作为奖励信号，直接优化生成代码的运行效率，思路上贴近自动算子生成。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://semiengineering.com/benchmarking-open-source-llms-on-verilog-rtl-generation-across-50-tasks-nmims-iit-roorkee-bits-pilani/" target="_blank" rel="noopener">50 个任务上评测开源 LLM 的 Verilog RTL 生成能力</a></div>
+      <div class="it-sum">系统性 benchmark 给出开源模型在硬件描述语言生成上的真实水位，可作为选型基线。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.27259" target="_blank" rel="noopener">CircuitProver：带可复用电路证明库的 Lean 4 智能定理证明</a></div>
+      <div class="it-sum">用 Agent 驱动 Lean 4 做硬件形式化验证，并把证明沉淀成可复用库，降低后续验证成本。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/" target="_blank" rel="noopener">微软 SkillOpt：把 Agent 技能当作可训练参数</a></div>
+      <div class="it-sum">研究把 skill 本身参数化并优化，而非只靠提示工程堆叠，是 Agent 能力沉淀方式的一条新路径。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="edge">
+    <h2>8️⃣ 端侧与边缘推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/07/463204.html" target="_blank" rel="noopener">高通把终端市场的下一个增长点押在「个人 AI」</a></div>
+      <div class="it-sum">量子位分析高通的端侧策略：从手机 SoC 扩展到个人 AI 设备形态，配合其对开源 AI 软件栈的收购形成端侧闭环。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/industrynews/dtHMAsbab0PVgnhU.html" target="_blank" rel="noopener">国产自研 GPU 砺算 LX 7G100 消费显卡零售开售</a></div>
+      <div class="it-sum">雷锋网报道首家国产自研 GPU 厂商登陆 ChinaJoy 并开售零售版消费显卡，国产图形/计算 GPU 进入真实零售验证阶段。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.26835" target="_blank" rel="noopener">面向边缘视觉的低功耗稀疏卷积加速器</a></div>
+      <div class="it-sum">用 Idle-First 任务分配缓解稀疏卷积的负载不均，在边缘视觉场景下压低功耗。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/industrynews/lKIeFLWL3hTwaMLd.html" target="_blank" rel="noopener">千问已在特斯拉车机内测</a></div>
+      <div class="it-sum">雷锋网消息，阿里千问进入特斯拉车机内测。车机是端侧推理约束最紧的场景之一，值得跟踪其实际部署形态（以官方渠道核验为准）。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（18 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>200.75 USD</td><td class="up">+2.16%</td><td>Vera Rubin 平台与 Spectrum-6 同步发布</td></tr>
+        <tr><td>AMD <span class="tk">AMD</span></td><td>476.15 USD</td><td class="down">-3.8%</td><td>Advancing AI 活动后回调</td></tr>
+        <tr><td>博通 <span class="tk">AVGO</span></td><td>389.28 USD</td><td class="up">+1.58%</td><td></td></tr>
+        <tr><td>台积电 <span class="tk">TSM</span></td><td>404.25 USD</td><td class="up">+1.29%</td><td></td></tr>
+        <tr><td>美光 <span class="tk">MU</span></td><td>823.03 USD</td><td class="down">-8.57%</td><td>本周海外跌幅最大，HBM 交易拥挤度偏高</td></tr>
+        <tr><td>Arm <span class="tk">ARM</span></td><td>239.69 USD</td><td class="down">-10.0%</td><td>周内回撤 10%</td></tr>
+        <tr><td>英特尔 <span class="tk">INTC</span></td><td>90.2 USD</td><td class="down">-1.6%</td><td></td></tr>
+        <tr><td>超微SMCI <span class="tk">SMCI</span></td><td>28.4 USD</td><td class="down">-4.73%</td><td></td></tr>
+        <tr><td>微软 <span class="tk">MSFT</span></td><td>464.72 USD</td><td class="up">+19.43%</td><td>云与 AI 资本开支叙事推动，周涨幅居首</td></tr>
+        <tr><td>亚马逊 <span class="tk">AMZN</span></td><td>271.58 USD</td><td class="up">+17.37%</td><td>盘前一度涨超 10%</td></tr>
+        <tr><td>谷歌 <span class="tk">GOOGL</span></td><td>356.13 USD</td><td class="up">+9.05%</td><td>Gemini Robotics 2 发布</td></tr>
+        <tr><td>甲骨文 <span class="tk">ORCL</span></td><td>129.87 USD</td><td class="up">+8.32%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>中芯国际 <span class="tk">116.00981 · 港股</span></td><td>63.25 HKD</td><td class="up">+2.02%</td><td></td></tr>
+        <tr><td>华虹半导体 <span class="tk">116.01347 · 港股</span></td><td>128.3 HKD</td><td class="up">+2.23%</td><td></td></tr>
+        <tr><td>寒武纪 <span class="tk">1.688256 · A股</span></td><td>1106.0 CNY</td><td class="up">+6.1%</td><td>国内 AI 芯片标的周内领涨</td></tr>
+        <tr><td>海光信息 <span class="tk">1.688041 · A股</span></td><td>277.0 CNY</td><td class="up">+1.31%</td><td></td></tr>
+        <tr><td>中际旭创 <span class="tk">0.300308 · A股</span></td><td>902.01 CNY</td><td class="up">+4.4%</td><td>光模块受益于集群网络扩容</td></tr>
+        <tr><td>浪潮信息 <span class="tk">0.000977 · A股</span></td><td>71.81 CNY</td><td class="up">+3.95%</td><td>浪潮数据发布自研 AI 数据操作系统</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$1.65B</span><span class="badge region">海外</span><a href="https://siliconangle.com/2026/07/30/nscale-buys-ai-infrastructure-optimization-startup-anyscale/" target="_blank" rel="noopener">Nscale 收购 Anyscale，报价约 16.5 亿美元</a></div><div class="it-sum">算力供应商 Nscale 收购 Ray 背后的 Anyscale，把分布式调度与编排能力纳入自家栈，是本周 AI infra 最大并购。</div></li>
+      <li><div class="it-title"><span class="badge amt">$300M</span><span class="badge region">海外</span><a href="https://siliconangle.com/2026/07/30/programmable-networking-chip-startup-xsight-labs-raises-300m/" target="_blank" rel="noopener">可编程网络芯片公司 Xsight Labs 融资 3 亿美元</a></div><div class="it-sum">面向 AI 数据中心的可编程网络芯片获大额融资，网络侧成为算力扩容的关键瓶颈环节。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://news.crunchbase.com/venture/schneider-ai-robotics-energy-qa-chaturvedy-se-ventures/" target="_blank" rel="noopener">施耐德电气旗下 VC：AI 建设正在催生新一轮工业投资周期</a></div><div class="it-sum">从电力与工业设备视角看 AI 数据中心扩张带来的配套投资机会，是理解「算力—电力」耦合的产业侧观点。</div></li>
+      <li><div class="it-title"><span class="badge amt">¥1亿+</span><span class="badge region">国内</span><a href="https://36kr.com/p/3917874427555457" target="_blank" rel="noopener">菜鸟前 CTO 李强创业做 Physical AI 平台，获超亿元种子轮</a></div><div class="it-sum">云启、商汤参投的超亿元人民币种子轮，方向是 Physical AI 平台。具体条款以官方渠道核验为准。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://36kr.com/newsflashes/3919556554305154" target="_blank" rel="noopener">国务院国资委：深化央企「人工智能+」专项行动</a></div><div class="it-sum">政策侧要求央企因企制宜培育新兴产业与未来产业，是国内算力与 AI 基础设施采购需求的上游信号。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://36kr.com/newsflashes/3919510952291713" target="_blank" rel="noopener">上半年上海智能车载设备、机器人销售收入同比增长 61.5% 和 17.5%</a></div><div class="it-sum">地方统计口径的增速数据，为端侧与具身相关硬件的真实需求提供一个可量化参照。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
