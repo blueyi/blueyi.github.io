@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Weekly · 2026-W32 · 08-03 ~ 08-09</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">AI Infra Weekly</a> / 2026-W32</div>
+  <header class="site">
+    <h1>AI Infra Weekly · 2026-W32 · 08-03 ~ 08-09</h1>
+    <div class="sub">AI Infra Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-03 ~ 2026-08-09</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W32</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>AMD 收购 Taalas（HN 870 分），将特定模型直接硬化到硅中的推理路线进入头部厂商布局；通用 GPU 与专用 ASIC 的组合竞争会更明确。</li>
+      <li>OpenAI 为 Astra 关键网络能力发布更严格的安全门槛并暂停相关内部活动，前沿模型的网络安全评估正在从原则讨论进入产品发布控制。</li>
+      <li>SK 海力士批准约 383 亿美元建设两座存储器 fab；与此同时 AWS 已因 Agentic AI 需求收紧内部 EC2 用量，算力紧张正向 HBM、CPU 和电力侧扩散。</li>
+    </ol>
+  </div>
+  <section class="domain" id="chips">
+    <h2>1️⃣ AI 芯片与加速器</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">870★</span><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener">AMD 收购 Taalas，押注将模型硬化到硅中的推理路线</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">AMD 宣布收购 Taalas；后者主张将特定模型直接蚀刻进芯片，以获得更高的推理性能。HN 870 分热议，意味着通用 GPU 之外的专用推理 ASIC 路线获得头部厂商押注。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://siliconangle.com/2026/08/07/sk-hyn...fabs/" target="_blank" rel="noopener">SK 海力士批准逾 383 亿美元建设两座存储器晶圆厂</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">SK 海力士董事会批准 54 万亿韩元的两座新 fab 建设计划。HBM 与数据中心存储供给扩张正在从产品周期进入重资产产能建设阶段。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/vera-cpu-eda/" target="_blank" rel="noopener">NVIDIA 以 Vera CPU 加速下一代 CPU/GPU 的 EDA</a></div>
+      <div class="it-sum">NVIDIA 与 Cadence、Synopsys 合作，优化 Vera CPU 上的关键 EDA 应用。AI 芯片设计本身正成为高性能计算和软硬件协同优化的重要负载。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.05965" target="_blank" rel="noopener">自动综合异构、分层、作用域一致性协议</a></div>
+      <div class="it-sum">论文提出自动生成连接不同集群级与全局级一致性协议的 shim，针对 CXL、AMBA CHI 等异构共享内存系统中手工设计容易出错的问题。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="compilers">
+    <h2>2️⃣ 编译器与中间表示</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.05451" target="_blank" rel="noopener">Let it Flow：异步数据流的形式化验证编译框架</a></div>
+      <div class="it-sum">论文面向空间数据流架构，提供经形式化验证的编译框架；重点解决分布式、动态调度算子在并行性和数据局部性之间的正确性保证。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.05855" target="_blank" rel="noopener">RepoOMP：面向成熟代码库的依赖感知 OpenMP 自动并行化</a></div>
+      <div class="it-sum">通过缩减并检索决定循环合法性与收益的跨文件上下文，减少规则工具的保守性和 Agent 检索失准问题。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2603.00378" target="_blank" rel="noopener">OBASE：对象级地址空间工程改善内存分层</a></div>
+      <div class="it-sum">论文指出按对象大小而非热度分配会让冷热数据混在同一页，从而浪费 DRAM；方案通过对象级地址空间布局改进内存 tiering。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="inference-dc">
+    <h2>3️⃣ 推理系统与服务化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">139★</span><a href="https://www.aleksagordic.com/blog/vllm" target="_blank" rel="noopener">vLLM 高吞吐推理系统的架构拆解</a></div>
+      <div class="it-sum">对 vLLM 调度、PagedAttention、连续批处理等组成做系统性剖析。HN 139 分，适合作为评估高吞吐 LLM 服务栈的工程参考。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.06007" target="_blank" rel="noopener">TensorCast：为 LLM 基础设施补上张量管理层</a></div>
+      <div class="it-sum">论文将模型权重加载、KV cache 和 checkpoint 同步等分散机制抽象为跨分布式组件共享的持久张量管理问题，试图统一执行、网络和存储之间的数据路径。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.05483" target="_blank" rel="noopener">PLoRA：用近数据处理改造千级 LoRA 适配器服务</a></div>
+      <div class="it-sum">针对多 LoRA 部署中适配器频繁经 PCIe 从 CPU 内存调入的问题，提出 NDP 增强的池化内存系统，目标是降低海量适配器的服务成本。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.06188" target="_blank" rel="noopener">实时将 LLM 推理路由到最清洁电网</a></div>
+      <div class="it-sum">论文在多区域 GPU 测试床验证按边际碳排放率路由请求；无需改模型或硬件，调度层即可利用地区与时段的电网差异降低排放。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="datacenter">
+    <h2>4️⃣ 数据中心与集群</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.tomshardware.com/pc-components/cpus/amazon-cracks-down-on-cpu-waste-among-engineers-as-agentic-ai-crunch-intensifies-cpu-demand-makes-low-utilization-ec2-instances-a-hot-commodity" target="_blank" rel="noopener">AWS 因 Agentic AI 算力需求收紧内部 EC2 使用</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">报道称 AWS 正要求工程团队降低低利用率 EC2 使用，以优先满足外部客户的 CPU 容量需求。Agent 工作负载正在把资源紧张从 GPU 扩散到通用 CPU。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.05944" target="_blank" rel="noopener">B300 双节点 16 卡全参数微调的现场运维报告</a></div>
+      <div class="it-sum">报告记录 Qwen3-32B 在两节点、16 张 NVIDIA B300 上以 FSDP/ZeRO-3 全参微调的遥测排障与加固经验，包含新硬件上的负面结果与实测数据。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.05408" target="_blank" rel="noopener">应用故障率如何侵蚀超算与 AI 训练效率</a></div>
+      <div class="it-sum">论文提出评估 Exascale 级科学计算机和大规模 AI 训练安装的 uptime 效率框架，强调异构应用的失败率会显著改变有效算力。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.theverge.com/podcast/971855/ai-data-center-backlash-protests-florida-bipartisan" target="_blank" rel="noopener">数据中心建设的社区阻力正在跨政治阵营扩大</a></div>
+      <div class="it-sum">The Verge 讨论美国地方对 AI 数据中心能耗、土地与电网压力的反弹。选址和社会许可已成为扩容计划的实际基础设施约束。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="safety">
+    <h2>5️⃣ AI 安全与可靠性</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">126★</span><a href="https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/" target="_blank" rel="noopener">OpenAI 暂停 Astra 相关内部活动，收紧关键网络能力防护</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">OpenAI 发布 Astra 的初步网络安全评估，并宣布在安全标准与控制措施达标前暂停相关内部活动。HN 126 分，前沿模型的网络能力治理进入更明确的发布门槛阶段。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.theregister.com/security/2026/08/07/mit-boffins-tontou-attack-slips-through-spectre-defenses-on-intel-and-amd-cpus/5284081" target="_blank" rel="noopener">TONTOU 攻击绕过 Intel 与 AMD 的 Spectre 防御</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">MIT 研究人员展示计时器中断可重新打开分支预测器投毒窗口，并给出 Zen 2 可用 exploit。共享云和 AI 基础设施仍需跟进微架构隔离边界。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.05300" target="_blank" rel="noopener">eMicro：以 eBPF 实现微服务多跳实时访问控制</a></div>
+      <div class="it-sum">论文针对每一跳都合法但整条调用路径违反安全意图的多跳攻击，提出在 eBPF 上执行的实时路径级访问控制机制。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/open-secure-ai-alliance/" target="_blank" rel="noopener">NVIDIA 参与成立开放安全 AI 联盟</a></div>
+      <div class="it-sum">NVIDIA 博客介绍 Open Secure AI Alliance，聚焦把开源生态中的 AI 安全与安全工程协作组织化，覆盖关键软件与基础设施依赖。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-infra">
+    <h2>6️⃣ 具身智能（基础设施视角）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://huggingface.co/blog/nvidia/cosmos-h-dreams" target="_blank" rel="noopener">NVIDIA Cosmos-H-Dreams 用实时生成仿真服务手术机器人</a></div>
+      <div class="it-sum">NVIDIA 发布的案例将实时生成式仿真用于手术机器人，关注点是为物理 AI 提供可扩展的仿真数据和闭环基础设施，而非机器人策略本身。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/" target="_blank" rel="noopener">Jetson：面向紧凑空间的本地 AI 部署</a></div>
+      <div class="it-sum">NVIDIA 介绍 Jetson 在小型设备中的 AI 计算部署形态。机器人本体侧的功耗、体积与实时推理约束仍使嵌入式加速模块成为关键基础设施。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="autokernel">
+    <h2>7️⃣ 自动内核与代码生成</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="edge">
+    <h2>8️⃣ 端侧与边缘推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.05303" target="_blank" rel="noopener">EdgeXpert：MoE 与投机解码结合的端侧 LLM 推理设备</a></div>
+      <div class="it-sum">论文瞄准端侧大模型中 FFN 外部内存访问瓶颈，结合 MoE 的稀疏激活与投机解码减少解码阶段和内存流量。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/08/468324.html" target="_blank" rel="noopener">阿里推出 CosyVoice Studio AI 语音平台</a></div>
+      <div class="it-sum">量子位报道 CosyVoice Studio 将语义理解融入语音能力，提供听、说、创一体化服务。语音模型的产品化正在把端云协同与低延迟交互推向更多应用场景。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（16 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>223.96 USD</td><td class="up">+8.38%</td><td></td></tr>
+        <tr><td>AMD <span class="tk">AMD</span></td><td>483.36 USD</td><td class="down">-0.26%</td><td>收购 Taalas，强化专用推理芯片布局</td></tr>
+        <tr><td>博通 <span class="tk">AVGO</span></td><td>427.76 USD</td><td class="up">+9.06%</td><td></td></tr>
+        <tr><td>台积电 <span class="tk">TSM</span></td><td>420.04 USD</td><td class="up">+3.43%</td><td></td></tr>
+        <tr><td>美光 <span class="tk">MU</span></td><td>877.57 USD</td><td class="up">+5.8%</td><td></td></tr>
+        <tr><td>Arm <span class="tk">ARM</span></td><td>282.57 USD</td><td class="up">+18.2%</td><td>本周海外样本涨幅居首</td></tr>
+        <tr><td>英特尔 <span class="tk">INTC</span></td><td>101.65 USD</td><td class="up">+11.7%</td><td></td></tr>
+        <tr><td>微软 <span class="tk">MSFT</span></td><td>499.99 USD</td><td class="up">+2.53%</td><td></td></tr>
+        <tr><td>谷歌 <span class="tk">GOOGL</span></td><td>354.3 USD</td><td class="down">-5.14%</td><td>DeepMind 管理层调整受市场关注</td></tr>
+        <tr><td>甲骨文 <span class="tk">ORCL</span></td><td>147.02 USD</td><td class="up">+3.64%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>中芯国际 <span class="tk">116.00981 · 港股</span></td><td>66.9 HKD</td><td class="up">+2.37%</td><td></td></tr>
+        <tr><td>华虹半导体 <span class="tk">116.01347 · 港股</span></td><td>141.2 HKD</td><td class="up">+3.29%</td><td></td></tr>
+        <tr><td>寒武纪 <span class="tk">1.688256 · A股</span></td><td>1199.93 CNY</td><td class="up">+2.72%</td><td></td></tr>
+        <tr><td>海光信息 <span class="tk">1.688041 · A股</span></td><td>295.75 CNY</td><td class="up">+1.61%</td><td></td></tr>
+        <tr><td>中际旭创 <span class="tk">0.300308 · A股</span></td><td>919.87 CNY</td><td class="down">-3.68%</td><td></td></tr>
+        <tr><td>浪潮信息 <span class="tk">0.000977 · A股</span></td><td>77.99 CNY</td><td class="up">+1.56%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://siliconangle.com/2026/08/06/amd-acquires-taalas-hardwire-ai-models-silicon/" target="_blank" rel="noopener">AMD 收购推理芯片创业公司 Taalas</a></div><div class="it-sum">AMD 宣布收购将模型硬化进硅的推理芯片公司 Taalas，交易金额未披露。这是头部 GPU 厂商通过并购补齐专用推理路线的产业动作。</div></li>
+      <li><div class="it-title"><span class="badge amt">$38.3B</span><span class="badge region">海外</span><a href="https://siliconangle.com/2026/08/07/sk-hyn...fabs/" target="_blank" rel="noopener">SK 海力士批准 54 万亿韩元建设两座存储器晶圆厂</a></div><div class="it-sum">SK 海力士批准约 383 亿美元的两座新 fab 投资，直接面向数据中心存储供给扩张；具体建设进度仍需以公司后续披露为准。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>

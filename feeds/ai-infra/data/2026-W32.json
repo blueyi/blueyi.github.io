@@ -1,0 +1,2285 @@
+{
+  "channel": "ai-infra",
+  "week": "2026-W32",
+  "raw": {
+    "channel": "ai-infra",
+    "week": "2026-W32",
+    "generated_at": "2026-08-08T06:00:37.361376+08:00",
+    "window": {
+      "start": "2026-08-01",
+      "end": "2026-08-08"
+    },
+    "hn": [
+      {
+        "source": "hn",
+        "score": 126,
+        "title": "Responding to the next frontier of critical cyber capabilities",
+        "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+        "hn_url": "https://news.ycombinator.com/item?id=49213029",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 215,
+        "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
+        "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/",
+        "hn_url": "https://news.ycombinator.com/item?id=49208535",
+        "domains": [
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 870,
+        "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
+        "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
+        "hn_url": "https://news.ycombinator.com/item?id=49201970",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 299,
+        "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
+        "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
+        "hn_url": "https://news.ycombinator.com/item?id=49184355",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 139,
+        "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System (2025)",
+        "url": "https://www.aleksagordic.com/blog/vllm",
+        "hn_url": "https://news.ycombinator.com/item?id=49202852",
+        "domains": [
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 106,
+        "title": "Can you reverse engineer an ASIC?",
+        "url": "https://blog.janestreet.com/can-you-reverse-engineer-an-asic/",
+        "hn_url": "https://news.ycombinator.com/item?id=49200933",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 307,
+        "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
+        "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+        "hn_url": "https://news.ycombinator.com/item?id=49199357",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 846,
+        "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "hn_url": "https://news.ycombinator.com/item?id=49184755",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 117,
+        "title": "Let's all meet up in the Y2K",
+        "url": "https://blog.gingerbeardman.com/2026/08/06/lets-all-meet-up-in-the-y2k/",
+        "hn_url": "https://news.ycombinator.com/item?id=49193314",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 107,
+        "title": "Rubin Observatory's first LSST Camera release: 500k galaxies in the COSMOS field",
+        "url": "https://rubinobservatory.org/news/rubin-new-window-cosmos-field",
+        "hn_url": "https://news.ycombinator.com/item?id=49183079",
+        "domains": [
+          "chips"
+        ]
+      }
+    ],
+    "arxiv": [
+      {
+        "source": "arxiv:cs.DC",
+        "title": "Hierarchical Server Architecture for Agentic Science",
+        "url": "https://arxiv.org/abs/2608.05332",
+        "abstract": "Agentic science is transforming the landscape of computational work, extending to scientific pipelines and workload managers. The workloads require specialized hardware within and across institutions. If assessing workload needs against environments is required for scheduling, automated discovery of resources is an essential step. In this paper, we present a hierarchical, dynamic architecture and ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "Application Failures and Machine Computational Efficiency",
+        "url": "https://arxiv.org/abs/2608.05408",
+        "abstract": "We present a framework for evaluating uptime efficiency of Exascale-class scientific computers when application failure rates are appreciable. This is the situation that confronts current leadership-class scientific computing platforms and large AI training installations. What distinguishes scientific computing platforms is the heterogeneity of their applications. We argue that this diversity requ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "Serverless platform driven CPU loadbalancing",
+        "url": "https://arxiv.org/abs/2608.05633",
+        "abstract": "Serverless platforms maintain a global view of function invocations and resource utilization, yet existing systems largely restrict CPU scheduling decisions to the operating system scheduler. This paper presents a serverless platform-driven CPU load balancing framework that enables the control plane to directly influence CPU scheduling through a custom Linux scheduler built on SchedExt(SCX). The p",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "RepoOMP: Repository-Aware Hotspot OpenMP Parallelization via Dependency-Aware Context Reduction",
+        "url": "https://arxiv.org/abs/2608.05855",
+        "abstract": "OpenMP parallelization of hotspots in mature repositories remains difficult because loop safety and optimization payoff often depend on non-local evidence. Rule-based tools under-parallelize when legality is not locally provable, while agent-based approaches become unstable when retrieval misses decisive dependencies or includes irrelevant code. We present RepoOMP, a hybrid framework that recovers",
+        "domains": [
+          "edge"
+        ]
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "Operating Multi-Node Full Fine-Tuning on NVIDIA B300: A Field Report on Telemetry-Based Triage, Negative Results, and Operational Hardening",
+        "url": "https://arxiv.org/abs/2608.05944",
+        "abstract": "We report operational experience full-fine-tuning a 32.76B-parameter dense model (Qwen3-32B) on 16 x NVIDIA B300 (two nodes, FSDP / ZeRO-3) -- among the first published field accounts on this accelerator. We claim no new algorithm. The individual mechanisms we use are established practice; our contribution is the integrated field experience and a set of calibrated measurements on new hardware. Con",
+        "domains": [
+          "chips",
+          "compilers"
+        ]
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure",
+        "url": "https://arxiv.org/abs/2608.06007",
+        "abstract": "Modern LLM infrastructure increasingly manages tensors not only as computation data, but also as persistent states shared across distributed components. Existing systems optimize individual tensor management tasks, such as model weight loading, KV cache management, and checkpoint synchronization, by deeply integrating task-specific mechanisms with execution engines, networks, or storage backends. ",
+        "domains": [
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "Routing LLM Inference to the Cleanest Grid in Real Time",
+        "url": "https://arxiv.org/abs/2608.06188",
+        "abstract": "Large-language-model inference is a fast-growing electricity load whose marginal carbon intensity varies by more than an order of magnitude across grid regions and across the day, making request placement an attractive lever: no retraining, no hardware change. We report a live validation of carbon-aware inference routing on multi-region GPU testbeds driven by marginal operating emissions rate (MOE",
+        "domains": [
+          "chips",
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "eMicro: Real-Time Multi-Hop Access Control for Microservices with eBPF",
+        "url": "https://arxiv.org/abs/2608.05300",
+        "abstract": "Modern cloud applications often comprise thousands of microservices whose interactions form complex request paths. Traditional inter-service access control restricts individual service-to-service requests, but fails to prevent multi-hop attacks, where each hop appears legitimate yet the overall path violates security intent. This gap leaves systems exposed to unauthorized access and data exfiltrat",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "DG-FedReuse: Proxy-Gradient-Gated Cached-Update Reuse with Matched Sparse Uplink Accounting",
+        "url": "https://arxiv.org/abs/2608.05358",
+        "abstract": "Federated learning repeatedly incurs local optimization and model-update transmission. We study DG-FedReuse, a simulator-level mechanism that allows selected clients to contribute age-decayed cached updates when a stochastic head-gradient discrepancy proxy remains below a round-dependent threshold. A hard cache-age limit and minimum fresh-client quota constrain reuse, while fresh updates use an ad",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.DC",
+        "title": "Filtered Vector Search in a Disaggregated Lakehouse: Composing Table-Format Pruning with Per-File ANN",
+        "url": "https://arxiv.org/abs/2608.05441",
+        "abstract": "Approximate nearest-neighbor (ANN) search increasingly runs alongside structured data - \"find the 10 nearest documents where tenant='acme' AND lang='en'\" - yet similarity and filtering are usually bolted together: a specialized vector index for one, a separate filter step for the other. We ask what happens when both live inside an open lakehouse table (Apache Iceberg over Parquet on object storage",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
+        "url": "https://arxiv.org/abs/2608.05303",
+        "abstract": "On-device deployment of Large Language Models (LLMs) has become essential for personalized edge applications. A primary bottleneck is external memory access (EMA) in feed-forward network (FFN) layers. Speculative decoding and mixture-of-experts (MoE) are promising solutions. Speculative decoding reduces the number of decoding stages by generating multiple tokens per stage, and MoE minimizes per-st",
+        "domains": [
+          "inference-dc",
+          "edge"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "PowerScope: ML-based Intra-Cycle Power Estimation",
+        "url": "https://arxiv.org/abs/2608.05339",
+        "abstract": "Power estimation at sub-clock-cycle temporal resolutions is critical for tasks such as power delivery network (PDN) design, dynamic voltage droop analysis, and pre-silicon power side-channel security evaluation. Designers commonly rely on commercial post-layout gate-level power analysis tools for these tasks, but these flows are computationally expensive and scale poorly with design size and workl",
+        "domains": [
+          "autokernel"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving",
+        "url": "https://arxiv.org/abs/2608.05483",
+        "abstract": "Multi-LoRA serving is how one base model becomes thousands of specialized variants, one adapter per user, task, or agent, and the deployments can hold 1000-plus adapters. Serving them is hard because the workload inverts what GPUs provide: terabytes of memory against only tens of TFLOPS, and because every published system stages its adapters from CPU DRAM over PCIe, where each access pays a kernel",
+        "domains": [
+          "inference-dc",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "Zero-Instruction Sensor Reads: Register-Mapped Peripherals and Hardware PWM on a Five-Stage Soft Processor",
+        "url": "https://arxiv.org/abs/2608.05638",
+        "abstract": "We present a case study in application-driven specialization of a five-stage soft processor, evaluated on the inner control loop of a reaction-wheel self-balancing bicycle. Starting from a custom 32-bit RISC core in the MIPS tradition, we specialize the design in two ways. First, two frequently accessed peripheral inputs are mapped directly into architectural register state, written every cycle by",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "An Open-Source Power Measurement Platform for System-Level Semiconductor Testing",
+        "url": "https://arxiv.org/abs/2608.05888",
+        "abstract": "Accurate power measurement is not only essential for evaluating the energy efficiency of modern embedded and semiconductor systems, but power draw is an important proxy during stress testing. Industrial semiconductor test equipment, however, is often expensive and difficult to integrate into flexible experimental workflows. This paper presents a compact and extensible hardware platform for automat",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "Automated Synthesis of Heterogeneous, Hierarchical, Scoped Coherence Protocols",
+        "url": "https://arxiv.org/abs/2608.05965",
+        "abstract": "Processor design is converging on a new model of cache-coherent shared memory characterized by heterogeneity, hierarchy, and scopes. Protocols like CXL or AMBA CHI are used as global protocols to combine multiple clusters, each with its own cluster-level coherence protocols. Manually designing shims to interface between these cluster and global protocols is subtle and error-prone. Automatic synthe",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "Breaking Memory Bottlenecks in Quantum Control Systems for More Precise Experiments and Higher Throughput Computing",
+        "url": "https://arxiv.org/abs/2608.06318",
+        "abstract": "As quantum computing continues to demonstrate promise and attract growing attention, there is an increasing need for more precise experiments to advance the development of quantum devices, as well as higher circuit throughput to validate more domain applications. However, this need is hindered by a memory bottleneck at the quantum control system layer, arising from limited on-chip BRAM capacity an",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "Knowledge-Driven Hybrid SSD Management Enhanced by Fine-Tuned LLMs",
+        "url": "https://arxiv.org/abs/2503.13105",
+        "abstract": "A hybrid Solid-State Drives (SSDs) integrates different modes of flash cells (e.g., single-level cell (SLC) and Quad-Level Cell (QLC)) and enables them to convert between each other, achieving both high performance and storage capacity. However, this hybrid design introduces a significantly larger design space than traditional SSDs with additional design factors such as flash conversion and data m",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization",
+        "url": "https://arxiv.org/abs/2607.28699",
+        "abstract": "KV-cache quantization is validated today by offline benchmark averages; a deployed system cannot tell whether compression is damaging the request it is serving right now. We give it a provably sound runtime meter -- a \"DTrace for KV quantization\": a per-(layer, head, step) upper bound on the total variation between exact and compressed attention. The meter has two tiers: a deterministic band-norm-",
+        "domains": [
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AR",
+        "title": "PG-MDP: Profile-Guided Memory Dependence Prediction for Area-Constrained Cores",
+        "url": "https://arxiv.org/abs/2604.08445",
+        "abstract": "-cross Abstract: Memory Dependence Prediction (MDP) is a speculative technique to predict which stores, if any, a given load will depend on. Area-constrained cores are increasingly relevant in various applications such as energy-efficient or edge systems, and often have limited space for MDP tables. This leads to a high rate of false dependencies as memory independent loads alias with unrelated pr",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Let it Flow: A Formally Verified Compilation Framework for Asynchronous Dataflow",
+        "url": "https://arxiv.org/abs/2608.05451",
+        "abstract": "Dataflow architectures have gained renewed interest due to their balance between power efficiency and performance. In (spatial) dataflow architectures, a program is represented as a set of entirely distributed and dynamically scheduled dataflow operators that communicate through asynchronous channels, which greatly improves data locality and parallelism. However, compiling to dataflow architecture",
+        "domains": [
+          "compilers",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Learning Context-Free Grammars for Grammar-Constrained Decoding via Declarative Agentic Programming with Guarantees",
+        "url": "https://arxiv.org/abs/2608.05493",
+        "abstract": "Language models (LMs) are increasingly used to interact with external services via programs written in domain-specific languages (DSLs). Unfortunately, since DSLs are often low-resource and esoteric, LMs frequently produce syntactically invalid programs in these languages. Grammar-constrained decoding can eliminate such failures, but requires syntactic constraints. These are usually in the form of",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Noise-aware Verification and Synthesis of Quantum Programs",
+        "url": "https://arxiv.org/abs/2608.05807",
+        "abstract": "While most research on quantum programming considers an idealized, noise-free semantics for quantum programs, we reason about quantum programs that are executed on real, noisy hardware. We consider the error models published by quantum hardware vendors to give a hardware-dependent semantics to quantum programs. This work presents a comprehensive study of noise-aware quantum programming, ranging fr",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "PPDL: LLM-Based Flows as Probabilistic Programs",
+        "url": "https://arxiv.org/abs/2608.05234",
+        "abstract": "Building reliable applications that leverage large language models (LLMs) remains a significant challenge. While LLMs offer impressive capabilities across diverse tasks, their outputs often lack accuracy and provide no clear measure of confidence. This uncertainty compounds in flows of multiple calls to LLMs and other tools, making it difficult for developers and end-users to trust the results. Th",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Bit-Precise CHC Satisfiability Using Theory-Modular Reasoning",
+        "url": "https://arxiv.org/abs/2608.05337",
+        "abstract": "Deciding satisfiability of Constrained Horn Clauses (CHCs) modulo the theory of fixed-size bit-vectors ($\\mathcal{T}_B$) is fundamental to bit-precise program verification. However, state-of-the-art CHC-solvers often struggle with $\\mathcal{T}_B$, limiting scalability in bit-precise reasoning. We present Mosaic, a theory-modular framework for deciding satisfiability of CHCs modulo $\\mathcal{T}_B$ ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "PG-MDP: Profile-Guided Memory Dependence Prediction for Area-Constrained Cores",
+        "url": "https://arxiv.org/abs/2604.08445",
+        "abstract": "Memory Dependence Prediction (MDP) is a speculative technique to predict which stores, if any, a given load will depend on. Area-constrained cores are increasingly relevant in various applications such as energy-efficient or edge systems, and often have limited space for MDP tables. This leads to a high rate of false dependencies as memory independent loads alias with unrelated predictor entries, ",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution",
+        "url": "https://arxiv.org/abs/2604.17198",
+        "abstract": "Sparse tensor algebra is challenging to efficiently parallelize due to the irregular, data-dependent, and potentially skewed structure of sparse computation. We propose the first partitioning algorithm that provably load balances the computation of any sparse tensor algebra expression across parallel execution units. Our algorithm generalizes parallel merging algorithms to any number of operands, ",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.PL",
+        "title": "OBASE: Object-Based Address-Space Engineering to Improve Memory Tiering",
+        "url": "https://arxiv.org/abs/2603.00378",
+        "abstract": "-cross Abstract: Hardware and OS mechanisms for memory tiering are widely deployed, yet datacenters still overprovision DRAM. The root cause is hotness fragmentation: allocators place objects by size rather than access pattern, so hot and cold objects become interleaved within the same pages. A single hot object marks its page as active, trapping surrounding cold data in expensive DRAM. Our analys",
+        "domains": [
+          "compilers",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "MS-MLB: An Open Machine Learning Benchmark for Blood-Based MS Classification",
+        "url": "https://arxiv.org/abs/2608.05196",
+        "abstract": "Multiple sclerosis (MS) is diagnosed through clinical assessment, magnetic resonance imaging, laboratory evidence when appropriate, and exclusion of better explanations. Blood RNA expression data may contain disease associated immune signal, but a blood RNA classifier cannot be treated as a replacement for clinical diagnosis. This paper presents MS-MLB (Multiple Sclerosis Machine Learning Benchmar",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "When Do Corrective Features Help? An Agent for Corrective Feature Discovery on Black-Box Forecasters",
+        "url": "https://arxiv.org/abs/2608.05207",
+        "abstract": "Frozen pretrained forecasters often fail in structured, recurring ways that are costly to repair through fine-tuning. We study corrective feature discovery: mining interpretable features of a frozen forecaster's residual to drive a lightweight post-hoc corrector. Prior automated feature engineering models the data-generating process; corrective features instead model the model-failure process. We ",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "PPDL: LLM-Based Flows as Probabilistic Programs",
+        "url": "https://arxiv.org/abs/2608.05234",
+        "abstract": "Building reliable applications that leverage large language models (LLMs) remains a significant challenge. While LLMs offer impressive capabilities across diverse tasks, their outputs often lack accuracy and provide no clear measure of confidence. This uncertainty compounds in flows of multiple calls to LLMs and other tools, making it difficult for developers and end-users to trust the results. Th",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Decoupling Perception from Description: Computation-Grounded Representation Alignment between Multivariate Time Series and Language",
+        "url": "https://arxiv.org/abs/2608.05238",
+        "abstract": "Training multimodal models to align time series with language runs into a self-supervision trap. The usual recipe asks an LLM to read a series and write a description, so label quality is capped by the perceptual skill the model is supposed to learn. The data can never teach more than the labeler already knows. A second gap makes this worse: most datasets use a single variable, but the patterns th",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Disentangling 3D Modeling from Spatial Reasoning",
+        "url": "https://arxiv.org/abs/2608.05242",
+        "abstract": "In this work, we explore an alternative paradigm for spatial reasoning by explicitly disentangling 3D perception from reasoning, rather than jointly acquiring implicit 3D perception and reasoning through large-scale training. Our key observation is that modern perception models excel at estimating continuous 3D geometry, whereas large language models (LLMs) are particularly effective at compositio",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Marginal Matching Does Not License Factorized Sampling: Auditing Conditional Style Leakage in Factorized Generative Models",
+        "url": "https://arxiv.org/abs/2608.05243",
+        "abstract": "Factorized generative models commonly regularize a latent style variable z_s by matching its marginal distribution to a fixed Gaussian prior and interpret this as evidence that the style representation is independent of class information. We show that this interpretation is incorrect. Matching only the marginal distribution places no constraint on the class-conditional distributions, allowing the ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "PRISM: Priority-aware Rubric Internalization via Structured Multimodal Data Synthesis",
+        "url": "https://arxiv.org/abs/2608.05249",
+        "abstract": "Real-world multimodal instructions often bundle multiple requirements with unequal importance, yet most multimodal training data still reduce instruction following to answering one self-contained question. We study this gap through \\textbf{rubric comprehension}, which casts the model not as a generator measured against rubrics but as an \\textbf{executor} that follows them: given an image and a typ",
+        "domains": [
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Beyond Full-Model Rollback: AuroSFT for Adapter-State Multi-Task Fine-Tuning",
+        "url": "https://arxiv.org/abs/2608.05250",
+        "abstract": "Multi-task supervised fine-tuning (SFT) often casts a heterogeneous data mixture as a single optimization problem, even though different tasks may reach their best generalization at different times. msft exposes this mismatch through task-wise roll-out, exclusion, and rollback, but its original formulation materializes the scheduler state as full-model checkpoints, making stage transitions costly ",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Beyond Rotations: AuroOFT for Expressive Quantized Orthogonal Fine-Tuning",
+        "url": "https://arxiv.org/abs/2608.05253",
+        "abstract": "Quantized orthogonal fine-tuning (qoft) enables parameter-efficient adaptation of low-bit language models by learning structured activation rotations before frozen quantized weights. However, its task-specific updates remain constrained to linear orthogonal transformations, limiting input-dependent nonlinear corrections. We introduce AuroOFT, which keeps qoft as a stable quantization-compatible br",
+        "domains": [
+          "chips",
+          "inference-dc"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "An Emerging Retail Portfolio Management Application: Personalized, Tax-Aware Reinforcement Learning with Natural Language Goals",
+        "url": "https://arxiv.org/abs/2608.05255",
+        "abstract": "Retail investors lack access to the kind of personalized, tax-aware portfolio management that institutional clients take for granted -- existing robo-advisors use static, rule-based allocation, and institutional-grade systems require account minimums and technology stacks unavailable to individual investors. We present a fully built, integration-tested application that closes this gap: a FastAPI b",
+        "domains": [
+          "inference-dc"
+        ]
+      }
+    ],
+    "rss": [
+      {
+        "source": "rss",
+        "feed": "TechCrunch AI",
+        "kind": "media",
+        "title": "After Rippling blew millions on AI in months, it built an employee ROI tool",
+        "url": "https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/",
+        "summary": "After its own AI usage wake-up call, Rippling this week unveiled AI Spend Console, a product that tracks individual and team employee AI spending.",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch AI",
+        "kind": "media",
+        "title": "Jill Lepore on the ‘Artificial State’ and why Silicon Valley’s leaders are bad sci-fi readers",
+        "url": "https://techcrunch.com/podcast/jill-lepore-on-the-artificial-state-and-why-silicon-valleys-leaders-are-bad-sci-fi-readers/",
+        "summary": "Historian Jill Lepore has a theory about why tech companies often use soaring language to describe their products — almost as if they’re forming a new government. And whether you’re thinking of Twitter’s old “town hall in your pocket” or Anthropic’s Claude constitution, it’s a theory that doesn’t pa",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch AI",
+        "kind": "media",
+        "title": "New Mexico court orders Meta to pay additional $567M in child safety case",
+        "url": "https://techcrunch.com/2026/08/07/new-mexico-court-orders-meta-to-pay-additional-567m-in-child-safety-case/",
+        "summary": "Meta's total fine has racked up to $942 million in this case.",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch AI",
+        "kind": "media",
+        "title": "OpenAI’s new AI smart speaker will reportedly sell for between $300 and $400",
+        "url": "https://techcrunch.com/2026/08/06/openais-new-ai-smart-speaker-will-reportedly-sell-for-between-300-and-400/",
+        "summary": "Additional details about OpenAI's mysterious new AI device make it sound like a pricey smart speaker.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch AI",
+        "kind": "media",
+        "title": "ChatGPT brings unlimited text chats to free users",
+        "url": "https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/",
+        "summary": "OpenAI said that ChatGPT free and Go users are also getting a new think button for complex queries.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch AI",
+        "kind": "media",
+        "title": "OpenAI says Apple’s own security practices undermine its trade secrets case",
+        "url": "https://techcrunch.com/2026/08/06/openai-says-apples-own-security-practices-undermine-its-trade-secrets-case/",
+        "summary": "Newly filed court exhibits show OpenAI’s legal strategy in Apple’s trade secrets lawsuit: argue that Apple’s own security and offboarding practices — including allowing an Apple manager to access a former engineer’s iCloud account after he left the company —undermine its claims that the allegedly st",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Thiel Capital’s Jack Selby nabs stakes in hot startups like Etched through Arizona connections",
+        "url": "https://techcrunch.com/2026/07/02/thiel-capitals-jack-selby-nabs-stakes-in-hot-startups-like-etched-through-arizona-connections/",
+        "summary": "Selby's VC firm, Copper Sky Capital, is currently raising a $300 million second fund, according to a regulatory filing.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Whoop’s valuation just tripled to $10 billion",
+        "url": "https://techcrunch.com/2026/03/31/whoop-valuation-10b-series-g-fundraise/",
+        "summary": "The fitness tracking startup just closed a $575 million Series G with Cristiano Ronaldo and LeBron James among its investors. The obvious question looming over a round of this size at this valuation: Is an IPO coming?",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Modelence raises $3M to smooth out the vibe-coding stack",
+        "url": "https://techcrunch.com/2026/01/28/modelence-raises-13-million-to-smooth-out-the-vibe-coding-stack/",
+        "summary": "How do you build tooling for the AI software stack? A company called Modelence has an interesting answer.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "VC firm 2150 raises €210M fund to solve cities’ climate challenges",
+        "url": "https://techcrunch.com/2026/01/26/vc-firm-2150-raises-e210m-fund-to-solve-cities-climate-challenges/",
+        "summary": "Europe-based venture fund 2150 raised the money to invest in climate tech startups that help solve cities' carbon footprint.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Superorganism raises $25M to back biodiversity startups",
+        "url": "https://techcrunch.com/2026/01/13/superorganism-raises-25m-to-back-biodiversity-startups/",
+        "summary": "Superorganism backs companies across three categories: tech that slows or reverses extinction, startups that operate at the intersection of climate and biodiversity, and tools that enable conservationists to do their work more effectively.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "More than 100 new tech unicorns were minted in 2025 — here they are",
+        "url": "https://techcrunch.com/2026/01/12/at-least-36-new-tech-unicorns-were-minted-in-2025-so-far/",
+        "summary": "Using data from Crunchbase and PitchBook, TechCrunch tracked down the VC-backed startups that became unicorns so far this year.",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Supabase hit $5B by turning down million-dollar contracts. Here’s why.",
+        "url": "https://techcrunch.com/video/supabase-hit-5b-by-turning-down-million-dollar-contracts-heres-why/",
+        "summary": "Vibe coding has taken the tech industry by storm, and it’s not just the Lovables and Replits of the world that are winning. The startups building the infrastructure behind them are cashing in too.  Supabase, the open source database platform that’s become the back end of choice for the vibe-coding w",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Sequoia unveils $950M in new early-stage funds as it strives to be ‘only as good as our next investment’",
+        "url": "https://techcrunch.com/2025/10/27/sequoia-unveils-950m-in-new-early-stage-funds-as-it-strives-to-be-only-as-good-as-our-next-investment/",
+        "summary": "The legendary firm launched a $750 million early-stage fund targeting Series A startups and a $200 million seed fund.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Redwood Materials raises another $350M to power up its energy-storage business",
+        "url": "https://techcrunch.com/2025/10/23/redwood-materials-raises-another-350-million-to-power-up-its-energy-storage-business/",
+        "summary": "The round was led by Eclipse and saw participation from Nvidia's venture capital arm, NVentures.",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "A new search engine raises $1.1M to let obsessive fans dive down internet rabbit holes",
+        "url": "https://techcrunch.com/2025/10/03/a-new-search-engine-raises-1-1m-to-let-obsessive-fans-dive-down-internet-rabbit-holes/",
+        "summary": "Lore raises $1.1 million to build a personalized search engine for fandom culture.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "A year after filing to IPO, still-private Cerebras Systems raises $1.1B",
+        "url": "https://techcrunch.com/2025/09/30/a-year-after-filing-to-ipo-still-private-cerebras-systems-raises-1-1b/",
+        "summary": "Cerebras initially filed to go public in September 2024 but ran into several regulatory delays due to foreign investments.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Doorstep raises $8M seed to help find missing food deliveries",
+        "url": "https://techcrunch.com/2025/09/25/doorstep-raises-8m-seed-to-help-find-missing-food-deliveries/",
+        "summary": "Doorstep integrates into existing delivery apps and then, using phone sensors, tracks when a driver has entered a building, gone up an elevator, and made it to the desired doorstep.",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Moove raises $250M to become the backbone of the robotaxi industry",
+        "url": "https://techcrunch.com/2026/08/05/moove-raises-250m-to-become-the-backbone-of-the-robotaxi-industry/",
+        "summary": "Moove is scaling up the autonomous vehicle fleet management side of its business and plans to someday own, not just manage, Waymo robotaxis.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "How Lightspeed found its newest hire … via Instagram DM",
+        "url": "https://techcrunch.com/2026/08/05/how-lightspeed-found-its-newest-hire-via-instagram-dm/",
+        "summary": "Lightspeed partners Josh Machiz and Claire Zau stopped by the Equity studio to talk about the strategies behind their growing social media presence and their podcast, Lightwork.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Lightspeed is building its edge on followers, not just funds",
+        "url": "https://techcrunch.com/video/why-lightspeed-is-going-all-in-on-creator-led-venture-capital/",
+        "summary": "Venture firms are turning to creators to build trust with the next generation of founders before a check is ever written. It’s a trend that’s been building with a16z’s acquisition of Erik Torenberg’s Turpentine podcast and OpenAI’s acquisition of TBPN. Lightspeed Venture Partners just made its own n",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Why Lightspeed is going all-in on creator-led venture capital",
+        "url": "https://techcrunch.com/podcast/why-lightspeed-is-going-all-in-on-creator-led-venture-capital/",
+        "summary": "Venture firms are turning to creators to build trust with the next generation of founders before a check is ever written. It’s a trend that’s been building with a16z’s acquisition of Erik Torenberg’s Turpentine podcast and OpenAI’s acquisition of TBPN. Lightspeed Venture Partners just made its own n",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Robinhood to list a fund that lets anyone back Y Combinator startups",
+        "url": "https://techcrunch.com/2026/08/05/robinhood-to-list-a-fund-that-lets-anyone-back-y-combinator-startups/",
+        "summary": "Robinhood's latest financial instrument intends to let any retail investor feel like they, too, can make money by backing Y Combinator startups.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "AI makes weather prediction better. Can WindBorne make it lucrative?",
+        "url": "https://techcrunch.com/2026/08/05/ai-makes-weather-prediction-better-can-windborne-make-it-lucrative/",
+        "summary": "WindBorne Systems has raised a $37 million Series B round to scale its weather balloons and AI forecasts.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Host a Side Event during TechCrunch Founder Summit Week in Boston",
+        "url": "https://techcrunch.com/2026/08/04/host-a-side-event-during-techcrunch-founder-summit-week-in-boston/",
+        "summary": "Want to tap into the energy of 1,100+ startup founders, investors, and tech leaders descending on Boston for the Founder Summit 2026 on June 9? Host your own Side Event during “Founder Summit Week,” happening June 4-10!",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "A Marc Benioff-backed startup thinks AI can solve the AI deployment problem",
+        "url": "https://techcrunch.com/2026/08/03/a-marc-benioff-backed-startup-thinks-ai-can-solve-the-ai-deployment-problem/",
+        "summary": "June emerged from stealth today with a $20 million pre-seed round to make AI adoption simpler.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Inside the London hacker house taking a stand against founder burnout",
+        "url": "https://techcrunch.com/2026/08/01/inside-one-london-founder-house-rewriting-the-founder-house-rules/",
+        "summary": "How one founder house is betting work-life balance can beat burnout .",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Fresh off its Wiz payout, Index Ventures raises $2B across three funds",
+        "url": "https://techcrunch.com/2026/07/31/fresh-off-its-wiz-payout-index-ventures-raises-2b-across-three-funds/",
+        "summary": "The new funding brings Index's total available investing capital to $3.5 billion.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "VC-backed startups commit more fraud, and researchers think they know why",
+        "url": "https://techcrunch.com/2026/07/31/vc-backed-startups-commit-more-fraud-and-researchers-think-they-know-why/",
+        "summary": "New research from the U.K.’s Imperial College and France’s Emlyon Business School mapped out how Silicon Valley founders commit fraud — and the role investors play.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Smallest.ai raises $13M to build ultra-fast voice AI that sounds genuinely human",
+        "url": "https://techcrunch.com/2026/07/31/smallest-ai-raises-13m-to-build-ultra-fast-voice-ai-that-sounds-genuinely-human/",
+        "summary": "The startup is building voice models designed to make AI phone calls pass the Turing test.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Week’s 10 Biggest Funding Rounds: A Big Week For Big Checks",
+        "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-billion-dollar-raises-manufacturing-energy-ai/",
+        "summary": "Startups raised funding rounds with a lot of zeroes at the end this week, with three companies securing financings of $1 billion or more. Additionally, a robust lineup of companies in sectors including AI, e-commerce, cybersecurity, biotech and even mining also announced sizable new rounds.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "No Summer Doldrums For Active Startup Investors In July",
+        "url": "https://news.crunchbase.com/venture/active-startup-investors-july-2026-khosla-yc-coatue-nvda/",
+        "summary": "Active startup investors kept up the pace in July, with familiar names topping the ranks in several metrics including most prolific venture dealmakers, most active lead backers, biggest spenders and highest-volume seed investors.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Return Of The Repeat Founder: Inside YC’s Growing Class Of Second-Timers",
+        "url": "https://news.crunchbase.com/venture/y-combinator-repeat-founders-numbers-grow-epstein-callaway/",
+        "summary": "We analyzed a dataset of repeat founders who have gone through Y Combinator’s cohorts and found some very interesting insights. The dataset, shared with us directly from YC, consisted of 454 repeat founders through the program as well as 935 founder-company records spanning 2005 through 2026. We spo",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Crunchbase Tech Layoffs Tracker",
+        "url": "https://news.crunchbase.com/startups/tech-layoffs/",
+        "summary": "Over 127,000 workers at U.S.-based tech companies were laid off in mass job cuts in 2025, per a Crunchbase News tally, and the layoffs have continued into 2026. See the latest companies to cut roles.",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "‘Nobody Wanted to Give A Former Principal Money’: How An Educator Built An Edtech AI Startup With $63M From VCs",
+        "url": "https://news.crunchbase.com/venture/educator-built-edtech-startup-ai-magicschool-kahn/",
+        "summary": "Founded by an educator fascinated by the educational potential of ChatGPT, MagicSchool AI leads off a series of articles featuring startup founders from non-technical backgrounds who have launched successful venture-backed companies.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Your AI Strategy May Be Destroying Your Exit Value",
+        "url": "https://news.crunchbase.com/ai/strategies-enhancing-exit-value-acquisitions-sagie/",
+        "summary": "While integrating AI into a startup's product strategy is often viewed as a way to enhance valuation, it can inadvertently reduce exit value, argues tech strategic adviser Itay Sagie. In this guest commentary he shares three ways your AI strategy can provide a positive impact on valuation when it be",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "A Record 14 Billion-Dollar Rounds In July Pushed Venture’s Historic Run Higher",
+        "url": "https://news.crunchbase.com/venture/data-billion-dollar-rounds-set-global-funding-record-july-2026/",
+        "summary": "Global venture funding showed no signs of slowing in July. Startup capital totaled $65 billion, up 100% year over year, as the month notched the highest-ever number of billion-dollar venture rounds on record, per Crunchbase data.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Why The Product Manager To CEO Pipeline Is The Underrated Crash Course For Leadership In Tech",
+        "url": "https://news.crunchbase.com/workplace/tech-ceo-leadership-career-path-product-manager/",
+        "summary": "Traditional research on CEO career paths tends to focus on titles such as COO, CFO and divisional president. But the skills developed in product management may be just as relevant, argues Paysend CEO Ben Chisell. In this guest column, he makes the case that aspiring leaders should focus less on coll",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "‘A Rare Land-Grab Moment’: Menlo Ventures’ Matt Murphy On The Next Wave of AI And Putting $3B In New Capital To Work",
+        "url": "https://news.crunchbase.com/venture/menlo-ventures-matt-murphy-anthropic-ai-investment-thesis/",
+        "summary": "We speak with Menlo Ventures' Matt Murphy about why AI is pushing the firm toward larger deals, what it has learned from its Anthropic relationship, and where he sees the next big opportunities.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Week’s 10 Biggest Funding Rounds: Safe Superintelligence And Commonwealth Fusion Lead With Billion-Dollar Deals",
+        "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-safe-superintelligence-commonwealth-fusion/",
+        "summary": "Another week, another bevy of big rounds. The largest round was a reported $5 billion Nvidia-backed financing for foundational AI unicorn Safe Superintelligence, followed by a $1 billion investment in Commonwealth Fusion Systems.",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "The Verge AI",
+        "kind": "media",
+        "title": "OpenAI puts the brakes on a new model because it’s supposedly too powerful",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities",
+        "summary": "OpenAI says it is pausing \"internal activities\" around an in-development AI model, Astra, because it doesn't yet meet new security standards the company is putting in place. The announcement follows its recent disclosure that OpenAI models accidentally hacked Hugging Face. Anthropic and Meta have al",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "The Verge AI",
+        "kind": "media",
+        "title": "What’s behind the Google AI shake-up",
+        "url": "https://www.theverge.com/podcast/976784/google-deepmind-ai-race-vergecast",
+        "summary": "Some of the biggest names on Google's AI team got new jobs this week. In some cases, including for legendary Googler Jeff Dean, those jobs are no longer at Google. Given that Google's models seem to be behind the best of what's coming out of anthropic and OpenAI, is this a sign of Google in […]",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "The Verge AI",
+        "kind": "media",
+        "title": "Jony Ive’s first OpenAI gadget is reportedly a hockey puck-sized smart speaker",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/976431/openai-chatgpt-battery-smart-speaker-rumor",
+        "summary": "The AI device OpenAI is developing with former Apple designer Jony Ive is \"essentially a smart speaker without a display\" that's battery-powered, doughnut-shaped and roughly the size of a hockey puck, according to Bloomberg reporter Mark Gurman. The device, expected to launch in 2027 for a price ove",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "The Verge AI",
+        "kind": "media",
+        "title": "Suno shares plans to combat spammy AI music",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/976289/suno-ai-music-spam-watermark",
+        "summary": "Suno announced plans to implement a new watermarking technology and download policy to limit the spread of spammy AI tracks and increase transparency. In a lengthy blog post, CEO and co-founder Mikey Shulman laid out the company's principles and the next steps for the company as it seeks legitimacy.",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "The Verge AI",
+        "kind": "media",
+        "title": "OpenAI is giving ChatGPT free users unlimited text chats",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/976239/openai-chatgpt-free-go-text-chats",
+        "summary": "OpenAI is making a big change for ChatGPT users on its free and Go tiers: Starting next week, users on those tiers will be able to have unlimited text chats with the chatbot, according to OpenAI. Right now, you may run into rate limits if you do too many text chats on those tiers, but […]",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "The Verge AI",
+        "kind": "media",
+        "title": "SoftBank donated $50 million to Trump’s library months before federal data center deal",
+        "url": "https://www.theverge.com/policy/976138/softbank-trump-library-data-center-ohio",
+        "summary": "SoftBank contributed $50 million to the Trump Presidential Library in January, just months before announcing that it's leasing land from the federal government to build a sprawling data center in Ohio. The Japanese company revealed the timing in response to a June letter from Sen. Elizabeth Warren (",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "The Verge AI",
+        "kind": "media",
+        "title": "The left and right agree on one thing: no data centers",
+        "url": "https://www.theverge.com/podcast/971855/ai-data-center-backlash-protests-florida-bipartisan",
+        "summary": "Today, I’m talking with Gaby Del Valle, a policy reporter here at The Verge, about the growing backlash against AI data centers.  Gaby recently reported a fantastic piece about Hernando County, Florida, where last month the county commission unanimously approved a yearlong moratorium on data center ",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "VentureBeat AI",
+        "kind": "media",
+        "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+        "url": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
+        "summary": "The artificial intelligence coding revolution comes with a catch: it's expensive.Claude Code, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its pricing — ranging from $20 to $200 per month d",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "VentureBeat AI",
+        "kind": "media",
+        "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+        "url": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no",
+        "summary": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude Code tool to non-technical users — and according to company insiders, the team built the entire feature in approximately a week and a half, largely using Claude Code itself.The launc",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "VentureBeat AI",
+        "kind": "media",
+        "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+        "url": "https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in",
+        "summary": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems — trained in just four days using 48 of Nvidia's latest B200 graphics proce",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "EE Times",
+        "kind": "media",
+        "title": "After Seven CEOs in 10 Years, Imagination Is Sticking to Its Strategy",
+        "url": "https://www.eetimes.com/after-seven-ceos-in-10-years-imagination-is-sticking-to-its-strategy/",
+        "summary": "Imagination dumps CPU/NPU dreams, doubles down on GPUs and China under CEO No. 7. The post After Seven CEOs in 10 Years, Imagination Is Sticking to Its Strategy appeared first on EE Times.",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "EE Times",
+        "kind": "media",
+        "title": "ROLEC’s technoPLUS: IP-rated Pole-mount Plastic Enclosures for IoT/IIoT and Factory Automation",
+        "url": "https://www.eetimes.com/rolecs-technoplus-ip-rated-pole-mount-plastic-enclosures-for-iot-iiot-and-factory-automation/",
+        "summary": "IoT/IIoT and factory automation are driving demand for ROLEC’s updated pole-mountable technoPLUS (IP 66, IP 67, IP 69K) plastic enclosures. Electronics designers specify them for ‘close-to-the-process’ devices that must survive dust, moisture and regular washdowns. Compact technoPLUS provides robust",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "EE Times",
+        "kind": "media",
+        "title": "AI Chip Startup Taalas Acquired by AMD",
+        "url": "https://www.eetimes.com/ai-chip-startup-taalas-acquired-by-amd/",
+        "summary": "AMD plans to use Taalas chips alongside its GPUs for AI inference, likely as an LLM decode accelerator. The post AI Chip Startup Taalas Acquired by AMD appeared first on EE Times.",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "EE Times",
+        "kind": "media",
+        "title": "GlobalFoundries’ Growth Makes the Case for a U.S. Photonics Buildout",
+        "url": "https://www.eetimes.com/globalfoundries-growth-makes-the-case-for-a-u-s-photonics-buildout/",
+        "summary": "GlobalFoundries’ data center surge turns U.S. photonics from subsidy pitch to AI bottleneck bet. The post GlobalFoundries’ Growth Makes the Case for a U.S. Photonics Buildout appeared first on EE Times.",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "NVIDIA Blog",
+        "kind": "official",
+        "title": "Into the Omniverse: How Open World Models Push the Frontier of Physical AI",
+        "url": "https://blogs.nvidia.com/blog/open-world-models-physical-ai/",
+        "summary": "In July, NVIDIA joined more than 200 companies and organizations in signing “Open Weights and American AI Leadership,” an open letter arguing that AI leadership will be measured not by any single frontier model but by whether an open ecosystem reaches every sector.",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "NVIDIA Blog",
+        "kind": "official",
+        "title": "NVIDIA and Partners Build in America, for America",
+        "url": "https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/",
+        "summary": "NVIDIA and its partners are investing in American manufacturing, supply chains, energy grids and skilled workforces so the U.S. can produce the infrastructure needed for better healthcare, breakthrough scientific discovery, stronger industrial productivity and global technology leadership.",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "NVIDIA Blog",
+        "kind": "official",
+        "title": "NVIDIA Joins NSF State and Regional AI Hubs Program to Expand AI Research and Education Across the US",
+        "url": "https://blogs.nvidia.com/blog/nsf-state-regional-ai-hub-program/",
+        "summary": "NVIDIA is participating in the U.S. National Science Foundation’s (NSF) State and Regional Artificial Intelligence Infrastructure Hubs program, an effort launching today to expand access to the advanced computing, data, software and expertise needed for AI-enabled research and education. Consistent ",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "NVIDIA Blog",
+        "kind": "official",
+        "title": "NVIDIA Alpamayo 2 Super, the Frontier Open Model for Robotaxis and Autonomous Vehicles, Now Available for Commercial Use",
+        "url": "https://blogs.nvidia.com/blog/alpamayo-2-super-open-model-now-available/",
+        "summary": "For robotaxis and other autonomous vehicles (AVs), the hardest problems aren’t the everyday scenarios. They’re the rare, complex situations that are difficult to anticipate and train for. Handling these long‑tail events takes more than just object detection and motion prediction. AVs must understand",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "NVIDIA Blog",
+        "kind": "official",
+        "title": "Powerful Compute So Compact, It’s Clutch — Build AI Anywhere With NVIDIA Jetson",
+        "url": "https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/",
+        "summary": "As a discerning AI investor who values style and substance, Sarah Guo knows this season’s standout accessory isn’t the latest designer purse — but what’s inside it. In a recent video, Guo, founder of AI-native venture capital firm Conviction and co-host of the AI podcast No Priors, highlighted how t",
+        "domains": [
+          "chips",
+          "embodied-infra"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "NVIDIA Blog",
+        "kind": "official",
+        "title": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
+        "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+        "summary": "Open source software is a critical pillar of the global economy. It underpins cloud computing, financial services, manufacturing, telecommunications, government and internet services by making technology accessible and observable to communities of experts. Cybersecurity is among the top three benefi",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "NVIDIA Blog",
+        "kind": "official",
+        "title": "NVIDIA Harnesses Vera CPU to Speed Up Design of Next-Generation CPUs and GPUs",
+        "url": "https://blogs.nvidia.com/blog/vera-cpu-eda/",
+        "summary": "The complexity of modern chip design continues to grow as engineering teams work to develop increasingly sophisticated CPUs, GPUs and AI systems. To help meet that challenge, NVIDIA is collaborating with industry leaders Cadence and Synopsys to optimize critical electronic design automation (EDA) ap",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "NVIDIA Blog",
+        "kind": "official",
+        "title": "At AI Summit, South Korea Outlines Its AI Future With NVIDIA and Partners",
+        "url": "https://blogs.nvidia.com/blog/ai-summit-korea-partners-and-nvidia/",
+        "summary": "At this week’s AI Summit in San Francisco, South Korean President Jae Myung Lee and some of the country’s top business leaders and researchers are meeting with NVIDIA and ecosystem partners to chart Korea’s AI progress. Building on NVIDIA founder and CEO Jensen Huang’s visit to Korea last month, thi",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "OpenAI News",
+        "kind": "official",
+        "title": "Responding to the next frontier of critical cyber capabilities",
+        "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
+        "summary": "OpenAI is sharing preliminary cybersecurity evaluations for Astra and the steps we’re taking to strengthen safeguards and security controls.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "OpenAI News",
+        "kind": "official",
+        "title": "Working with the American Psychological Association on youth mental health and AI",
+        "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
+        "summary": "OpenAI and the American Psychological Association advance evidence-based guidance, resources, and safeguards for responsible AI use and youth mental health.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "OpenAI News",
+        "kind": "official",
+        "title": "From asking to doing: How the world is putting ChatGPT to work",
+        "url": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
+        "summary": "New OpenAI Signals data shows how people use ChatGPT worldwide, with country-level insights on adoption, usage trends, and evolving behavior.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "OpenAI News",
+        "kind": "official",
+        "title": "Third-party cyber evaluations involving OpenAI models",
+        "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+        "summary": "OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards to strengthen AI model testing and evaluation.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "OpenAI News",
+        "kind": "official",
+        "title": "Apple is getting this wrong",
+        "url": "https://openai.com/index/apple-is-getting-this-wrong",
+        "summary": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "OpenAI News",
+        "kind": "official",
+        "title": "Circles powers telco personalization with OpenAI technology",
+        "url": "https://openai.com/index/circles",
+        "summary": "Circles uses the OpenAI API and Codex to power AI-native telco experiences, increasing ARPU by 22%, reducing churn by 9%, and improving development efficiency.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "OpenAI News",
+        "kind": "official",
+        "title": "Ten advances in mathematics and theoretical computer science",
+        "url": "https://openai.com/index/ten-advances-in-mathematics",
+        "summary": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "OpenAI News",
+        "kind": "official",
+        "title": "Advancing responsible AI across Europe",
+        "url": "https://openai.com/index/advancing-responsible-ai-across-europe",
+        "summary": "OpenAI shares how its safety, security, transparency, and provenance practices support responsible AI governance in Europe. The work will continue as the EU AI Act advances.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SemiAnalysis",
+        "kind": "analysis",
+        "title": "xAI’s Colossus 2 – First Gigawatt Datacenter In The World, Unique RL Methodology, Capital Raise",
+        "url": "https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/",
+        "summary": "Much has been written about xAI’s Colossus 1. The Memphis build belongs in the history books: the largest AI training cluster, erected from scratch in 122 days. With roughly 200,000 H100/H200s and ~30,000 GB200 NVL72, it remains, today, the largest fully operational, single-coherent cluster (setting",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SemiAnalysis",
+        "kind": "analysis",
+        "title": "Another Giant Leap: The Rubin CPX Specialized Accelerator & Rack",
+        "url": "https://semianalysis.com/2025/09/10/another-giant-leap-the-rubin-cpx-specialized-accelerator-rack/",
+        "summary": "Nvidia announced the Rubin CPX, a solution that is specifically designed to be optimized for the prefill phase, with the single-die Rubin CPX heavily emphasizing compute FLOPS over memory bandwidth. This is a game changer for inference, and its significance is surpassed only by the March 2024 announ",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SemiAnalysis",
+        "kind": "analysis",
+        "title": "Huawei Ascend Production Ramp: Die Banks, TSMC Continued Production, HBM is The Bottleneck",
+        "url": "https://semianalysis.com/2025/09/08/huawei-ascend-production-ramp/",
+        "summary": "Compute is the lifeblood of AI. He who controls the spice controls the universe the compute will control the production of tokens and reap the benefits of AI. Without compute you do not have a seat at the table. The United States technology community is all in on compute and AI as the next platform ",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SemiAnalysis",
+        "kind": "analysis",
+        "title": "Amazon’s AI Resurgence: AWS & Anthropic’s Multi-Gigawatt Trainium Expansion",
+        "url": "https://semianalysis.com/2025/09/03/amazons-ai-resurgence-aws-anthropics-multi-gigawatt-trainium-expansion/",
+        "summary": "Two-and-a-half years ago, we flagged a looming “cloud crisis” at AWS. Today, the evidence has mounted. AWS is the crown jewel of the Amazon empire, generating ~60% of group profits, and dominating the lucrative Cloud Computing market. But it struggles to translate this strength into the new GPU/XPU ",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SemiAnalysis",
+        "kind": "analysis",
+        "title": "H100 vs GB200 NVL72 Training Benchmarks – Power, TCO, and Reliability Analysis, Software Improvement Over Time",
+        "url": "https://semianalysis.com/2025/08/20/h100-vs-gb200-nvl72-training-benchmarks/",
+        "summary": "Frontier model training has pushed GPUs and AI systems to their absolute limits, making cost, efficiency, power, performance per TCO, and reliability central to the discussion on effective training. The Hopper vs Blackwell comparisons are not as simple as Nvidia would have you believe. In this repor",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SemiAnalysis",
+        "kind": "analysis",
+        "title": "Scaling the Memory Wall: The Rise and Roadmap of HBM",
+        "url": "https://semianalysis.com/2025/08/12/scaling-the-memory-wall-the-rise-and-roadmap-of-hbm/",
+        "summary": "The first portion of this report will explain HBM, the manufacturing process, dynamics between vendors, KVCache offload, disaggregated prefill decode, and wide / high-rank EP. The rest of the report will dive deeply into the future of HBM. We will cover the revolutionary change coming to HBM4 with c",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SemiAnalysis",
+        "kind": "analysis",
+        "title": "Intel 18A Details & Cost, Future of DRAM 4F2 vs 3D, Backside Power Adoption (or Not), China’s FlipFET, Digital Twins from Atoms to Fabs, and More",
+        "url": "https://semianalysis.com/2025/07/21/vlsi2025/",
+        "summary": "Long time readers will recall that SemiAnalysis covers more than just datacenters and AMD. Today we’re back to semiconductors with a tech-focused roundup of the best from this year’s VLSI conference, the premiere design and integration. That includes the latest in chips manufacturing: fab digital tw",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "HuggingFace Blog",
+        "kind": "official",
+        "title": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+        "summary": "",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Import AI",
+        "kind": "analysis",
+        "title": "Import AI 466: The bitter lesson for robotics, AIs complete week-long programming tasks; and OpenAI's accidental AI hacker",
+        "url": "https://importai.substack.com/p/import-ai-466-the-bitter-lesson-for",
+        "summary": "The warning shots will continue until civilization wakes up",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Import AI",
+        "kind": "analysis",
+        "title": "Import AI 463: Self-improving robots; a 10k Chinese GPU cluster; and an elegiac essay for the human era",
+        "url": "https://importai.substack.com/p/import-ai-463-self-improving-robots",
+        "summary": "What eras bookend our interregnum?",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Import AI",
+        "kind": "analysis",
+        "title": "Import AI 461: \"Alignment is not on track\"; FrontierCode; and synthetic research interns",
+        "url": "https://importai.substack.com/p/import-ai-461-alignment-is-not-on",
+        "summary": "Where are your agents right now?",
+        "domains": [
+          "datacenter",
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Import AI",
+        "kind": "analysis",
+        "title": "Import AI 460: Reward hacking society, RSI data from Anthropic; and RL-based quadcopter racing",
+        "url": "https://importai.substack.com/p/import-ai-460-reward-hacking-society",
+        "summary": "When will markets price the singularity?",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Import AI",
+        "kind": "analysis",
+        "title": "Import AI 457: AI stuxnet; cursed Muon optimizer; and positive alignment",
+        "url": "https://importai.substack.com/p/import-ai-457-ai-stuxnet-cursed-muon",
+        "summary": "Welcome to Import AI, a newsletter about AI research.",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "The Register",
+        "kind": "media",
+        "title": "MIT boffins' TONTOU attack slips through Spectre defenses on Intel and AMD CPUs",
+        "url": "https://www.theregister.com/security/2026/08/07/mit-boffins-tontou-attack-slips-through-spectre-defenses-on-intel-and-amd-cpus/5284081",
+        "summary": "Timer interrupts reopen branch predictor poisoning window, with a working Zen 2 exploit to prove it",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Microsoft Research",
+        "kind": "official",
+        "title": "EvoLib: Turning experience into evolving knowledge",
+        "url": "https://www.microsoft.com/en-us/research/blog/evolib-turning-experience-into-evolving-knowledge/",
+        "summary": "LLMs do not get smarter just by remembering more. EvoLib turns experience into evolving knowledge, taking reusable skills and insights that help models learn and adapt across tasks long after deployment. The post EvoLib: Turning experience into evolving knowledge appeared first on Microsoft Research",
+        "domains": [
+          "edge"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Microsoft Research",
+        "kind": "official",
+        "title": "SkillOpt: Agent skills as trainable parameters",
+        "url": "https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/",
+        "summary": "AI agents often fail because their instructions, or skills, are manually modified with no guarantee of improvement. Learn how SkillOpt turns skill editing into a training process, making agent behavior more reliable without changing model weights. The post SkillOpt: Agent skills as trainable paramet",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SiliconANGLE",
+        "kind": "media",
+        "title": "SK hynix approves $38B+ investment in two new memory fabs",
+        "url": "https://siliconangle.com/2026/08/07/sk-hynix-approves-38b-investment-two-new-memory-fabs/",
+        "summary": "The board of SK hynix Inc., a major data center memory supplier, today approved the construction of two new fabs. The initiative will cost 54 trillion South Korean won, or about $38.3 billion. It’s part of a broader $430 billion investment plan designed to expand SK hynix’s manufacturing capacity. T",
+        "domains": [
+          "chips",
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SiliconANGLE",
+        "kind": "media",
+        "title": "Menlo Security targets real-time AI agent security with MARS platform",
+        "url": "https://siliconangle.com/2026/08/07/prompt-injection-technology-blackhat/",
+        "summary": "As AI agents gain access to enterprise systems and sensitive data, security teams need greater visibility into their actions. Real-time monitoring and policy enforcement are becoming essential as a part of prompt injection technology. With these challenges in mind, Menlo Security Inc. has sought to ",
+        "domains": [
+          "embodied-infra"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SiliconANGLE",
+        "kind": "media",
+        "title": "Report: OpenAI’s upcoming AI speaker will be shaped like a donut and cost around $300",
+        "url": "https://siliconangle.com/2026/08/06/report-openais-upcoming-ai-speaker-will-shaped-like-donut-cost-around-300/",
+        "summary": "More details have emerged from Bloomberg about OpenAI Group PBC’s long-awaited hardware device, which was previously described as an artificial intelligence-enabled speaker that will be a “physical manifestation” of ChatGPT. In its latest report, Bloomberg described the upcoming device as having a “",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SiliconANGLE",
+        "kind": "media",
+        "title": "AMD acquires Taalas to hardwire AI models into silicon",
+        "url": "https://siliconangle.com/2026/08/06/amd-acquires-taalas-hardwire-ai-models-silicon/",
+        "summary": "Advanced Micro Devices Inc. said today it has agreed to buy Taalas Inc., a Toronto startup that hardwires artificial intelligence models directly into silicon, in a deal that pushes the chipmaker deeper into the market for AI inference. Terms were not disclosed. AMD shares rose about 1.5% following ",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Tom's Hardware",
+        "kind": "media",
+        "title": "Amazon cracks down on 'CPU waste' among engineers as agentic AI crunch intensifies — CPU demand makes low-utilization EC2 instances a hot commodity [Updated]",
+        "url": "https://www.tomshardware.com/pc-components/cpus/amazon-cracks-down-on-cpu-waste-among-engineers-as-agentic-ai-crunch-intensifies-cpu-demand-makes-low-utilization-ec2-instances-a-hot-commodity",
+        "summary": "Amazon Web Services is telling engineers to slow down on EC2 usage as it struggles to meet CPU capacity demand for external customers.",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Tom's Hardware",
+        "kind": "media",
+        "title": "Protesters haul a guillotine to city council meeting about a potential AI data center, company rep cornered by protestors — ‘ it no longer felt safe to stay,’ developer escorted out by police",
+        "url": "https://www.tomshardware.com/tech-industry/data-centers/protesters-haul-a-guillotine-to-city-council-meeting-about-a-potential-ai-data-center-company-rep-cornered-by-protestors-it-no-longer-felt-safe-to-stay-developer-escorted-out-by-police",
+        "summary": "Some protesters brought a guillotine to public consultation for a potential data center in Salem, Oregon. Even though this was displayed outside the venue, it was a confrontation between the data center's representatives and some of the community members that led the latter to leave early.",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Tom's Hardware",
+        "kind": "media",
+        "title": "This week on Tom's Hardware Premium: August 7, 2026 — Inside China's lithography efforts, co-packaged optics get a spotlight, and Samsung debuts next-gen memory tech",
+        "url": "https://www.tomshardware.com/tech-industry/this-week-on-toms-hardware-premium-august-7-2026-inside-chinas-lithography-efforts-co-packaged-optics-get-a-spotlight-and-samsung-debuts-next-gen-memory-tech",
+        "summary": "A redesigned Bench tool, inside China's domestic Chipmaking efforts, breaking, and we offer a free technical breakdown of Samsung's latest memory-related announcements.",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Tom's Hardware",
+        "kind": "media",
+        "title": "Nvidia sells RTX 50-series GPUs at MSRP during QuakeCon 2026 — graphics cards sold at launch prices more than a year after release are now considered an attraction",
+        "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-sells-rtx-50-series-gpus-at-msrp-during-quakecon-2026-graphics-cards-sold-at-launch-prices-more-than-a-year-after-release-are-now-considered-an-attraction",
+        "summary": "The Nvidia booth at QuakeCon 2026 is offering Founders Edition GeForce RTX 5090, 5080, and 5070 GPUs at MSRP. Supplies are limited, though, so you should head out ASAP if you want to snag one right now.",
+        "domains": [
+          "chips"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SemiEngineering",
+        "kind": "media",
+        "title": "Model Tracks Bond Front Velocity in Lubrication-Mediated Bonding of Flexible Substrates (imec)",
+        "url": "https://semiengineering.com/model-tracks-bond-front-velocity-for-wafer-and-die-bonding-imec/",
+        "summary": "An imec researcher published a technical paper titled “Bond Front Velocity in Lubrication-Mediated Bonding of Flexible Substrates.” Abstract: “Bonding and assembly processes have started to take the centre-stage in semiconductor manufacturing as they enable three-dimensional (3D) stacking and hetero",
+        "domains": [
+          "datacenter"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "SemiEngineering",
+        "kind": "media",
+        "title": "Chip Industry Week in Review",
+        "url": "https://semiengineering.com/chip-industry-week-in-review-150/",
+        "summary": "SK hynix's $38B new fabs; memory density increases; 2026 chip industry revenue to hit $1.65T; imec metrology roadmap; MIT's self-assembled contacts; new U.S. restrictions; Intel's new training program; NXP to buy Ambarella?; AI sandbox leaks; memory-centric accelerator; entangled photons; CHIPS Act ",
+        "domains": [
+          "chips"
+        ]
+      }
+    ],
+    "cn_rss": [
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "Gartner发布2026中国网络安全技术成熟度曲线，AI安全开始“挤泡沫”",
+        "url": "https://www.infoq.cn/article/zko5GmLUpmxdSwWbkfTI?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/zko5GmLUpmxdSwWbkfTI?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "蚂蚁开源Avernet，为多智能体协作搭建“操作系统”！内部跑通12大业务、任务完成率超90%",
+        "url": "https://www.infoq.cn/article/iNvHOsahsYFYaE9ImZBV?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/iNvHOsahsYFYaE9ImZBV?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "10万人排队、一键出片，AI创作越简单，爆款为什么反而更难做了｜请回答 WAIC 2026",
+        "url": "https://www.infoq.cn/article/qYCvbmxPPLLUdyzCLOoF?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/qYCvbmxPPLLUdyzCLOoF?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "蚂蚁集团开源Avernet：破解多智能体“找不到、对不齐”协作难题",
+        "url": "https://www.infoq.cn/article/B6WtPNGNH0d5LolB1ED2?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/B6WtPNGNH0d5LolB1ED2?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "告别旧 Renderer！.NET MAUI 正式迈向 Handler 架构时代",
+        "url": "https://www.infoq.cn/article/sbMEk7BQoWXRcl5ZFvkD?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/sbMEk7BQoWXRcl5ZFvkD?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "Demo 能跑，项目却落不了地：企业真正缺的是 FDE 能力",
+        "url": "https://www.infoq.cn/article/ZvwSZ2U61Q8uBMerbYD9?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/ZvwSZ2U61Q8uBMerbYD9?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "从回答问题到把事办完，消费Agent还缺什么？飞猪新一代 AI 产品 V10 的一次探索",
+        "url": "https://www.infoq.cn/article/t0wslR8w8H7yeRD2MwO6?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/t0wslR8w8H7yeRD2MwO6?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "黎曼动力携手光轮智能与诺亦腾机器人，推进2026年百万小时具身智能数据建设",
+        "url": "https://www.infoq.cn/article/hI2W3XTUo2GNylxSXDC8?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/hI2W3XTUo2GNylxSXDC8?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "最高节省 85% 成本：微软公布 AI 智能体 LLM 路由方案",
+        "url": "https://www.infoq.cn/article/HQD432MKSXMMR2UUag6P?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/HQD432MKSXMMR2UUag6P?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "DeepSeek要涨价，小扎立马“拼命”：Meta新模型打出更低“骨折价”，只要一点数据税",
+        "url": "https://www.infoq.cn/article/5DEAabOIcvRrEMhAbCyz?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/5DEAabOIcvRrEMhAbCyz?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "HarmonyOS 7（API 26）Beta 2 新特性解读：AI 赋能应用故障分析，助力应用稳定性问题发现、定位与修复",
+        "url": "https://www.infoq.cn/article/FGMkg9BOrQ7vg5ubBp4U?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/FGMkg9BOrQ7vg5ubBp4U?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "InfoQ中国",
+        "kind": "cn_media",
+        "title": "HarmonyOS 7（API 26）Beta 2 新能力解读：平行视界开启大屏多任务新体验",
+        "url": "https://www.infoq.cn/article/d6ypyGIvilRgHz1MJaTR?utm_source=rss&amp;utm_medium=article",
+        "summary": "<div align='right'><a href='https://www.infoq.cn/article/d6ypyGIvilRgHz1MJaTR?utm_source=rss&utm_medium=article'>点击查看原文></a></div>",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "阿里推出国内首个AI语音平台CosyVoice Studio，将语义理解融入语音能力",
+        "url": "https://www.qbitai.com/2026/08/468324.html",
+        "summary": "AI语音“听、说、创”一站式满足",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "AI批量轰炸苹果bug赏金计划，审核团队已下线",
+        "url": "https://www.qbitai.com/2026/08/466738.html",
+        "summary": "",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "openJiuwen发布业界首个企业级分布式蜂群架构，联合邮储成功落地金融生产环境",
+        "url": "https://www.qbitai.com/2026/08/468305.html",
+        "summary": "从「能用」走向「规模化落地」",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "AI圈功能狂卷，付费寥寥，Keep正在试一条新路",
+        "url": "https://www.qbitai.com/2026/08/467878.html",
+        "summary": "AI卷向运动赛道，Keep的新答卷能否跑通？",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "阿里视频大模型Wan3.0开启公测：文档、ppt也能变视频",
+        "url": "https://www.qbitai.com/2026/08/467877.html",
+        "summary": "8月6日，阿里巴巴视频生成大模型Wan 3.0开启公测",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "刚刚，ChatGPT免费版史诗升级！GPT-5.6可以无限白嫖了",
+        "url": "https://www.qbitai.com/2026/08/467879.html",
+        "summary": "Chat优化版",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "蚂蚁集团开源Avernet，让人与智能体像组织一样高效协作",
+        "url": "https://www.qbitai.com/2026/08/467871.html",
+        "summary": "蚂蚁集团正式开源多智能体协作基础设施Avernet，社区版本已上线",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "AI SSD：大模型推理的存储范式转移",
+        "url": "https://www.qbitai.com/2026/08/467840.html",
+        "summary": "算力、网络、内存与存储开始围绕每个Token协同",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "PPIO正式发布“Fusion融合模型”：用十分之一的价格超越顶级模型的智商",
+        "url": "https://www.qbitai.com/2026/08/467834.html",
+        "summary": "",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "智元下架了首席科学家罗剑岚",
+        "url": "https://www.qbitai.com/2026/08/467730.html",
+        "summary": "智元机器人高管生变！",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "赌注十万亿：字节拒绝走蒸馏捷径背后，张一鸣的长期主义有多狠？",
+        "url": "https://www.leiphone.com/category/yanxishe/JR3ppBP5VOxND55d.html",
+        "summary": "张一鸣要的是，下一轮竞争中，Seed模型能力跻身世界第一梯队    作者丨高允毅    编辑丨岑   峰                                                                                                       近日，The Information爆出，在两周前的 Seed 全员会上，张一鸣罕见发声，明确拒绝以蒸馏手段追赶前沿大语言模型。他的态度很坚决：“字节跳动应该愿意为了长远目标牺牲一些短期利益。”最新一期 Artificial Analysis 全球 LLM 排行榜中，月之暗面 Kimi K",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "82 篇论文撑起的判断：IJCAI 凭什么是推理、规划、知识的「第一主场」",
+        "url": "https://www.leiphone.com/category/private/iME7Xg5tMwxIyZqU.html",
+        "summary": "50篇推理加32篇规划，IJCAI里最硬的8%。    作者丨陆毅 陈淑瑜    编辑丨岑峰                                                                                                       “IJCAI/AAAI在推理、规划、知识方面是最顶级的，这几个方向也是AI当下急需的。”2019年，南京大学俞扬教授在一场关于 AI 顶会评级的讨论中写下了这句话。彼时大语言模型尚未爆发，“推理”一词在AI社区远不如今天这般炙手可热。七年过去，当 DeepSeek-R1 用强化学习激发推理链、当 Al",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "美团王莆中：将AI融入家庭健康，助力建设“15分钟医疗圈”",
+        "url": "https://www.leiphone.com/category/industrynews/iGjt6GWE2NRHORMU.html",
+        "summary": "8月7日，2026全球医疗峰会在香港举行。美团核心本地商业CEO王莆中在会上表示，美团将立足医疗资源连接者角色，与行业伙伴共建“15分钟医疗卫生服务圈”。“过去，‘15分钟医疗卫生服务圈’的建设重心主要落在基建层面，但物理基础设施总有边界。”王莆中表示，在医疗健康领域，美团扮演的始终是连接者角色，通过数字化能力和AI技术，让医疗资源更高效地触达需要的人，让服务看得到、到得快、用得好。围绕这一目标，美团构建了广泛的本地化供给与履约网络，打通了“检、医、药、院、养”服务全链条。目前，美团已合作16万家医疗机构、25万家药店，依托数百万骑手及智能调度平台构成的履约网络，累计服务用户已达4.3亿。今年",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "延长20年！上汽集团与通用汽车签署合资续约协议",
+        "url": "https://www.leiphone.com/category/industrynews/n8L9ojfqMPqsvH2u.html",
+        "summary": "2026年8月5日   今天，“共赴新境——上汽通用汽车合资续约签约仪式”在上海世界会客厅举行。上汽集团与通用汽车正式签署合资续约协议，将上汽通用汽车合资期限延长20年至2047年。双方表示，此次合作续约是基于近30年成功合作的基础，在全球汽车产业深刻变革背景下，上汽集团和通用汽车对中国汽车市场长期价值以及对上汽通用汽车转型能力和发展前景投下的一张信心票。双方股东将进一步协同技术研发、供应链与全球市场资源，为上汽通用汽车的智电转型、本土创新、全球化布局与长期健康发展提供持续支持。合作新境：近30年携手，树立汽车产业开放合作的标杆作为1997年上海市政府的“一号工程”和中美之间最大的合资项目之一",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "IJCAI 2026 专访：机器人想学会人类动作，还差一座桥 | GAIR Paper 118",
+        "url": "https://www.leiphone.com/category/private/V2FQ6puH0pDdAKeI.html",
+        "summary": "重新审视人类视频如何赋能机器人学习    作者丨邓哲敏    编辑丨齐铖湧                                                                                                       大模型时代，规模化的数据能带来能力跃迁，这一规律已被反复验证。当这套范式进入机器人领域，问题变得复杂。机器人需要的不仅是大量数据，而且是能够转化为动作能力的数据。人类视频近期成为研究者关注的新来源。它规模巨大、获取成本低、覆盖场景丰富，但它毕竟不是机器人数据，视频里没有机器人动作标签，人类手部运动也无法直接对应机器人的",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "Jeff Dean 创业路演 PPT，惊现 34 位创始人，谷歌系人才占领半壁江山",
+        "url": "https://www.leiphone.com/category/yanxishe/Ga2vGDMkzS2dp4Ew.html",
+        "summary": "杨植麟也是 Jeff Dean PPT 中列出的谷歌系创始人名单中的一位。    作者丨高允毅 郑佳美    编辑丨岑   峰                                                                                                       聚是一团火，散是满天星，这句话用在谷歌当年的核心实验室 Google Brain最合适不过。今早，谷歌传奇人物，首席科学家兼 Google Brain 创始人之一 Jeff Dean官宣离职创业，作为谷歌老人，他已经加入谷歌工作 27 年。据 Jeff 深情回忆，当初",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "汪峰：我现在买衣服，80%都是淘宝",
+        "url": "https://www.leiphone.com/category/industrynews/FqaTMocwsNfeul2p.html",
+        "summary": "日前，汪峰在一档视频采访中提及，孩子爱买奢侈品，他认为这不是他们应该有的消费行为，谈及自身，他说到，“我现在挑衣服只希望合适，买衣服 80% 都是淘宝”。 此言一出，引发不少网友共鸣：“汪峰演我日常购物习惯”。还有网友表示：希望解锁汪峰选款思路学学省钱穿搭术”。也有人想扒汪峰同款店铺，“好奇摇滚风穿搭都是在哪家淘的？” 其实，不只是汪峰爱在淘宝买男装，BLACKPINK、Cortis等KPop明星也曾多次上身淘宝潮牌。此外，内娱女星杨幂、赵露思、白鹿和新锐导演邵艺辉等，也是资深“淘宝女孩”。 淘宝作为国民大消费平台，不仅是“国民衣橱”，也有不少明星私服。HAMCUS、WANGXINGYU、DN",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "阿里视频大模型Wan3.0开启公测：文档、ppt也能变视频",
+        "url": "https://www.leiphone.com/category/industrynews/Wp4SCQ5wu1Lbhtr1.html",
+        "summary": "8月6日，阿里巴巴视频生成大模型Wan 3.0开启公测，在生成时长、万能创作、全能参考以及真实世界还原等维度全面升级：单次可生成30秒视频，完整表达创作意图；在文本、图片、音频、视频四种基础模态之外，首次支持doc、xls、ppt、pdf、md等文档格式输入；力求准确还原真实世界——人物千人千面，每一帧画面既真实、又可信。生成时长的延展是Wan3.0最直观的升级。单段30秒生成让叙事节奏更游刃有余，连续运镜、一镜到底等复杂镜头语言得以充分表达，AI视频从“生成一个镜头”走向“讲述一段完整的故事”。Wan3.0还有智能时长功能，可根据提示词自动推荐合适时长。Wan3.0正从视频生成模型跃迁为信息",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "2个月做到3000单，内贸卖家如何借「轻出海」快速打开跨境生意？",
+        "url": "https://www.leiphone.com/category/industrynews/XnHMK4DKZgEQBCZs.html",
+        "summary": "跨境电商发展到今天，已经很难用一套方法适用于所有人。不同卖家的起点、资源和优势各不相同，尤其是对于拥有成熟供应链的内贸商家而言，与其投入大量资金重新搭建跨境体系，不如选择一条更轻量、更符合自身优势的出海路径。广西南宁的严老板便是典型代表，2013 年他从国内电商入行，在十余年时间里深耕轻小件玩具品类，沉淀下数千款 SKU 的丰富供应链。偶然了解到Shopee轻出海模式后，他很快敲定了入驻计划：不用额外组建海外运营团队，不用前置大额资金投入，这套轻量化方案，恰好契合团队低成本试水跨境的思路。仅两个多月，店铺月单量就稳定在3000单上下。整个扩张周期内，团队并未新增运营人力，也没有追加专项营销预算",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "150.8元/股！宇树科技超百名员工参与IPO「盛宴」，一批90后千万富豪或将诞生；DeepSeek拟上调API服务定价；字节拟训练超5万亿参数大模型",
+        "url": "https://www.leiphone.com/category/zaobao/jTnxUYfadwnDJtNd.html",
+        "summary": "要闻提示1.OpenAI 披露攻击 Hugging Face 前，AI 智能体秘密建立内部留言板2.150.8元/股！宇树科技超百名员工参与IPO“盛宴”，一批90后千万富豪或将诞生3.DeepSeek拟上调API服务定价，预计涨幅较大4.小红书高薪招募AI人才，主导AI社交类产品5.曝字节拟训练超5万亿参数大模型，参数规模超Kimi K36.前小鹏副总裁陈永海加入众擎机器人，担任运营总裁7.王腾回应“SU7 Ultra 泊车异常”：小米汽车已迅速跟进分析，边界场景有 Bug 很正常8.谷歌Gemini换帅，首席科学家Jeff Dean离职创业今日头条OpenAI 披露攻击 Hugging F",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "GPT-Live 底层拆解：OpenAI 如何让 95% 的音频帧不再延迟",
+        "url": "https://www.leiphone.com/category/ai/zYdlF2GT2z5SbNLT.html",
+        "summary": "通过重写 Python、魔改 WebRTC 握手，GPT-Live 让Agent从单向对话进入「实时交互」时代。    作者丨郑佳美    编辑丨岑   峰                                                                                                       在实时语音交互中，延迟是唯一的“死线”。文字回答慢几百毫秒，用户顶多觉得体验不佳；但音频只要卡顿一次，那种“非人”的割裂感就会瞬间摧毁信任。为了解决这个工程顽疾，OpenAI 耗时 6 个月重做了整个语音系统。刚刚，OpenAI 发布了一",
+        "domains": [
+          "safety"
+        ]
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "苏神复盘 Kimi K3：896 个专家背后，藏着哪些关键技术取舍？",
+        "url": "https://www.leiphone.com/category/ai/1krGNVOmEZUQgc9w.html",
+        "summary": "从异常激活到专家拥堵，拆解超大模型训练难点。    作者丨郑佳美    编辑丨岑   峰                                                                                                       这几天，Kimi 研究员、RoPE 提出者苏剑林发布了一篇名为《简单谈谈 K3 的 MoE 和 Attention》的文章，集中讨论了 Kimi K3 在专家架构、训练稳定性、负载均衡和注意力设计上的几项关键取舍。苏神在文章中提到 K3 拥有 2.8 万亿总参数，并配置了 896 个路由专家。但模型不会让",
+        "domains": [
+          "inference-dc"
+        ]
+      }
+    ],
+    "markets": [
+      {
+        "sym": "NVDA",
+        "name": "英伟达",
+        "price": 223.96,
+        "pct_5d": 8.38,
+        "currency": "USD"
+      },
+      {
+        "sym": "AMD",
+        "name": "AMD",
+        "price": 483.36,
+        "pct_5d": -0.26,
+        "currency": "USD"
+      },
+      {
+        "sym": "AVGO",
+        "name": "博通",
+        "price": 427.76,
+        "pct_5d": 9.06,
+        "currency": "USD"
+      },
+      {
+        "sym": "TSM",
+        "name": "台积电",
+        "price": 420.04,
+        "pct_5d": 3.43,
+        "currency": "USD"
+      },
+      {
+        "sym": "MU",
+        "name": "美光",
+        "price": 877.57,
+        "pct_5d": 5.8,
+        "currency": "USD"
+      },
+      {
+        "sym": "ARM",
+        "name": "Arm",
+        "price": 282.57,
+        "pct_5d": 18.2,
+        "currency": "USD"
+      },
+      {
+        "sym": "INTC",
+        "name": "英特尔",
+        "price": 101.65,
+        "pct_5d": 11.7,
+        "currency": "USD"
+      },
+      {
+        "sym": "SMCI",
+        "name": "超微SMCI",
+        "price": 31.13,
+        "pct_5d": 8.69,
+        "currency": "USD"
+      },
+      {
+        "sym": "MSFT",
+        "name": "微软",
+        "price": 499.99,
+        "pct_5d": 2.53,
+        "currency": "USD"
+      },
+      {
+        "sym": "GOOGL",
+        "name": "谷歌",
+        "price": 354.3,
+        "pct_5d": -5.14,
+        "currency": "USD"
+      },
+      {
+        "sym": "AMZN",
+        "name": "亚马逊",
+        "price": 274.48,
+        "pct_5d": -3.36,
+        "currency": "USD"
+      },
+      {
+        "sym": "ORCL",
+        "name": "甲骨文",
+        "price": 147.02,
+        "pct_5d": 3.64,
+        "currency": "USD"
+      }
+    ],
+    "cn_markets": [
+      {
+        "secid": "116.00981",
+        "name": "中芯国际",
+        "market": "港股",
+        "price": 66.9,
+        "pct_5d": 2.37,
+        "currency": "HKD"
+      },
+      {
+        "secid": "116.01347",
+        "name": "华虹半导体",
+        "market": "港股",
+        "price": 141.2,
+        "pct_5d": 3.29,
+        "currency": "HKD"
+      },
+      {
+        "secid": "1.688256",
+        "name": "寒武纪",
+        "market": "A股",
+        "price": 1199.93,
+        "pct_5d": 2.72,
+        "currency": "CNY"
+      },
+      {
+        "secid": "1.688041",
+        "name": "海光信息",
+        "market": "A股",
+        "price": 295.75,
+        "pct_5d": 1.61,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.300308",
+        "name": "中际旭创",
+        "market": "A股",
+        "price": 919.87,
+        "pct_5d": -3.68,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.000977",
+        "name": "浪潮信息",
+        "market": "A股",
+        "price": 77.99,
+        "pct_5d": 1.56,
+        "currency": "CNY"
+      }
+    ],
+    "errors": [],
+    "counts": {
+      "hn": 10,
+      "arxiv": 38,
+      "rss": 96,
+      "cn_rss": 34,
+      "markets": 12,
+      "cn_markets": 6,
+      "errors": 0
+    }
+  },
+  "curated": {
+    "title_date": "2026-W32 · 08-01 ~ 08-08",
+    "window": "2026-08-01 ~ 2026-08-08",
+    "domains": [
+      {
+        "id": "chips",
+        "emoji": "1️⃣",
+        "name": "AI 芯片与加速器",
+        "items": [
+          {
+            "title": "AMD 收购 Taalas，押注将模型硬化到硅中的推理路线",
+            "summary": "AMD 宣布收购 Taalas；后者主张将特定模型直接蚀刻进芯片，以获得更高的推理性能。HN 870 分热议，意味着通用 GPU 之外的专用推理 ASIC 路线获得头部厂商押注。",
+            "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
+            "source": "hn",
+            "score": 870,
+            "hot": true
+          },
+          {
+            "title": "SK 海力士批准逾 383 亿美元建设两座存储器晶圆厂",
+            "summary": "SK 海力士董事会批准 54 万亿韩元的两座新 fab 建设计划。HBM 与数据中心存储供给扩张正在从产品周期进入重资产产能建设阶段。",
+            "url": "https://siliconangle.com/2026/08/07/sk-hyn...fabs/",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "NVIDIA 以 Vera CPU 加速下一代 CPU/GPU 的 EDA",
+            "summary": "NVIDIA 与 Cadence、Synopsys 合作，优化 Vera CPU 上的关键 EDA 应用。AI 芯片设计本身正成为高性能计算和软硬件协同优化的重要负载。",
+            "url": "https://blogs.nvidia.com/blog/vera-cpu-eda/",
+            "source": "rss"
+          },
+          {
+            "title": "自动综合异构、分层、作用域一致性协议",
+            "summary": "论文提出自动生成连接不同集群级与全局级一致性协议的 shim，针对 CXL、AMBA CHI 等异构共享内存系统中手工设计容易出错的问题。",
+            "url": "https://arxiv.org/abs/2608.05965",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "compilers",
+        "emoji": "2️⃣",
+        "name": "编译器与中间表示",
+        "items": [
+          {
+            "title": "Let it Flow：异步数据流的形式化验证编译框架",
+            "summary": "论文面向空间数据流架构，提供经形式化验证的编译框架；重点解决分布式、动态调度算子在并行性和数据局部性之间的正确性保证。",
+            "url": "https://arxiv.org/abs/2608.05451",
+            "source": "arxiv"
+          },
+          {
+            "title": "RepoOMP：面向成熟代码库的依赖感知 OpenMP 自动并行化",
+            "summary": "通过缩减并检索决定循环合法性与收益的跨文件上下文，减少规则工具的保守性和 Agent 检索失准问题。",
+            "url": "https://arxiv.org/abs/2608.05855",
+            "source": "arxiv"
+          },
+          {
+            "title": "OBASE：对象级地址空间工程改善内存分层",
+            "summary": "论文指出按对象大小而非热度分配会让冷热数据混在同一页，从而浪费 DRAM；方案通过对象级地址空间布局改进内存 tiering。",
+            "url": "https://arxiv.org/abs/2603.00378",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "inference-dc",
+        "emoji": "3️⃣",
+        "name": "推理系统与服务化",
+        "items": [
+          {
+            "title": "vLLM 高吞吐推理系统的架构拆解",
+            "summary": "对 vLLM 调度、PagedAttention、连续批处理等组成做系统性剖析。HN 139 分，适合作为评估高吞吐 LLM 服务栈的工程参考。",
+            "url": "https://www.aleksagordic.com/blog/vllm",
+            "source": "hn",
+            "score": 139
+          },
+          {
+            "title": "TensorCast：为 LLM 基础设施补上张量管理层",
+            "summary": "论文将模型权重加载、KV cache 和 checkpoint 同步等分散机制抽象为跨分布式组件共享的持久张量管理问题，试图统一执行、网络和存储之间的数据路径。",
+            "url": "https://arxiv.org/abs/2608.06007",
+            "source": "arxiv"
+          },
+          {
+            "title": "PLoRA：用近数据处理改造千级 LoRA 适配器服务",
+            "summary": "针对多 LoRA 部署中适配器频繁经 PCIe 从 CPU 内存调入的问题，提出 NDP 增强的池化内存系统，目标是降低海量适配器的服务成本。",
+            "url": "https://arxiv.org/abs/2608.05483",
+            "source": "arxiv"
+          },
+          {
+            "title": "实时将 LLM 推理路由到最清洁电网",
+            "summary": "论文在多区域 GPU 测试床验证按边际碳排放率路由请求；无需改模型或硬件，调度层即可利用地区与时段的电网差异降低排放。",
+            "url": "https://arxiv.org/abs/2608.06188",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "datacenter",
+        "emoji": "4️⃣",
+        "name": "数据中心与集群",
+        "items": [
+          {
+            "title": "AWS 因 Agentic AI 算力需求收紧内部 EC2 使用",
+            "summary": "报道称 AWS 正要求工程团队降低低利用率 EC2 使用，以优先满足外部客户的 CPU 容量需求。Agent 工作负载正在把资源紧张从 GPU 扩散到通用 CPU。",
+            "url": "https://www.tomshardware.com/pc-components/cpus/amazon-cracks-down-on-cpu-waste-among-engineers-as-agentic-ai-crunch-intensifies-cpu-demand-makes-low-utilization-ec2-instances-a-hot-commodity",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "B300 双节点 16 卡全参数微调的现场运维报告",
+            "summary": "报告记录 Qwen3-32B 在两节点、16 张 NVIDIA B300 上以 FSDP/ZeRO-3 全参微调的遥测排障与加固经验，包含新硬件上的负面结果与实测数据。",
+            "url": "https://arxiv.org/abs/2608.05944",
+            "source": "arxiv"
+          },
+          {
+            "title": "应用故障率如何侵蚀超算与 AI 训练效率",
+            "summary": "论文提出评估 Exascale 级科学计算机和大规模 AI 训练安装的 uptime 效率框架，强调异构应用的失败率会显著改变有效算力。",
+            "url": "https://arxiv.org/abs/2608.05408",
+            "source": "arxiv"
+          },
+          {
+            "title": "数据中心建设的社区阻力正在跨政治阵营扩大",
+            "summary": "The Verge 讨论美国地方对 AI 数据中心能耗、土地与电网压力的反弹。选址和社会许可已成为扩容计划的实际基础设施约束。",
+            "url": "https://www.theverge.com/podcast/971855/ai-data-center-backlash-protests-florida-bipartisan",
+            "source": "rss"
+          }
+        ]
+      },
+      {
+        "id": "safety",
+        "emoji": "5️⃣",
+        "name": "AI 安全与可靠性",
+        "items": [
+          {
+            "title": "OpenAI 暂停 Astra 相关内部活动，收紧关键网络能力防护",
+            "summary": "OpenAI 发布 Astra 的初步网络安全评估，并宣布在安全标准与控制措施达标前暂停相关内部活动。HN 126 分，前沿模型的网络能力治理进入更明确的发布门槛阶段。",
+            "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+            "source": "hn",
+            "score": 126,
+            "hot": true
+          },
+          {
+            "title": "TONTOU 攻击绕过 Intel 与 AMD 的 Spectre 防御",
+            "summary": "MIT 研究人员展示计时器中断可重新打开分支预测器投毒窗口，并给出 Zen 2 可用 exploit。共享云和 AI 基础设施仍需跟进微架构隔离边界。",
+            "url": "https://www.theregister.com/security/2026/08/07/mit-boffins-tontou-attack-slips-through-spectre-defenses-on-intel-and-amd-cpus/5284081",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "eMicro：以 eBPF 实现微服务多跳实时访问控制",
+            "summary": "论文针对每一跳都合法但整条调用路径违反安全意图的多跳攻击，提出在 eBPF 上执行的实时路径级访问控制机制。",
+            "url": "https://arxiv.org/abs/2608.05300",
+            "source": "arxiv"
+          },
+          {
+            "title": "NVIDIA 参与成立开放安全 AI 联盟",
+            "summary": "NVIDIA 博客介绍 Open Secure AI Alliance，聚焦把开源生态中的 AI 安全与安全工程协作组织化，覆盖关键软件与基础设施依赖。",
+            "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+            "source": "rss"
+          }
+        ]
+      },
+      {
+        "id": "embodied-infra",
+        "emoji": "6️⃣",
+        "name": "具身智能（基础设施视角）",
+        "items": [
+          {
+            "title": "NVIDIA Cosmos-H-Dreams 用实时生成仿真服务手术机器人",
+            "summary": "NVIDIA 发布的案例将实时生成式仿真用于手术机器人，关注点是为物理 AI 提供可扩展的仿真数据和闭环基础设施，而非机器人策略本身。",
+            "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+            "source": "rss"
+          },
+          {
+            "title": "Jetson：面向紧凑空间的本地 AI 部署",
+            "summary": "NVIDIA 介绍 Jetson 在小型设备中的 AI 计算部署形态。机器人本体侧的功耗、体积与实时推理约束仍使嵌入式加速模块成为关键基础设施。",
+            "url": "https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/",
+            "source": "rss"
+          }
+        ]
+      },
+      {
+        "id": "autokernel",
+        "emoji": "7️⃣",
+        "name": "自动内核与代码生成",
+        "items": []
+      },
+      {
+        "id": "edge",
+        "emoji": "8️⃣",
+        "name": "端侧与边缘推理",
+        "items": [
+          {
+            "title": "EdgeXpert：MoE 与投机解码结合的端侧 LLM 推理设备",
+            "summary": "论文瞄准端侧大模型中 FFN 外部内存访问瓶颈，结合 MoE 的稀疏激活与投机解码减少解码阶段和内存流量。",
+            "url": "https://arxiv.org/abs/2608.05303",
+            "source": "arxiv"
+          },
+          {
+            "title": "阿里推出 CosyVoice Studio AI 语音平台",
+            "summary": "量子位报道 CosyVoice Studio 将语义理解融入语音能力，提供听、说、创一体化服务。语音模型的产品化正在把端云协同与低延迟交互推向更多应用场景。",
+            "url": "https://www.qbitai.com/2026/08/468324.html",
+            "source": "cn_rss"
+          }
+        ]
+      }
+    ],
+    "industry": {
+      "stocks": [
+        {
+          "name": "英伟达",
+          "sym": "NVDA",
+          "price": 223.96,
+          "pct": 8.38,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "AMD",
+          "sym": "AMD",
+          "price": 483.36,
+          "pct": -0.26,
+          "currency": "USD",
+          "note": "收购 Taalas，强化专用推理芯片布局"
+        },
+        {
+          "name": "博通",
+          "sym": "AVGO",
+          "price": 427.76,
+          "pct": 9.06,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "台积电",
+          "sym": "TSM",
+          "price": 420.04,
+          "pct": 3.43,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "美光",
+          "sym": "MU",
+          "price": 877.57,
+          "pct": 5.8,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Arm",
+          "sym": "ARM",
+          "price": 282.57,
+          "pct": 18.2,
+          "currency": "USD",
+          "note": "本周海外样本涨幅居首"
+        },
+        {
+          "name": "英特尔",
+          "sym": "INTC",
+          "price": 101.65,
+          "pct": 11.7,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "微软",
+          "sym": "MSFT",
+          "price": 499.99,
+          "pct": 2.53,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "谷歌",
+          "sym": "GOOGL",
+          "price": 354.3,
+          "pct": -5.14,
+          "currency": "USD",
+          "note": "DeepMind 管理层调整受市场关注"
+        },
+        {
+          "name": "甲骨文",
+          "sym": "ORCL",
+          "price": 147.02,
+          "pct": 3.64,
+          "currency": "USD",
+          "note": ""
+        }
+      ],
+      "cn_stocks": [
+        {
+          "name": "中芯国际",
+          "secid": "116.00981",
+          "market": "港股",
+          "price": 66.9,
+          "pct": 2.37,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "华虹半导体",
+          "secid": "116.01347",
+          "market": "港股",
+          "price": 141.2,
+          "pct": 3.29,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "寒武纪",
+          "secid": "1.688256",
+          "market": "A股",
+          "price": 1199.93,
+          "pct": 2.72,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "海光信息",
+          "secid": "1.688041",
+          "market": "A股",
+          "price": 295.75,
+          "pct": 1.61,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "中际旭创",
+          "secid": "0.300308",
+          "market": "A股",
+          "price": 919.87,
+          "pct": -3.68,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "浪潮信息",
+          "secid": "0.000977",
+          "market": "A股",
+          "price": 77.99,
+          "pct": 1.56,
+          "currency": "CNY",
+          "note": ""
+        }
+      ],
+      "funding": [
+        {
+          "title": "AMD 收购推理芯片创业公司 Taalas",
+          "summary": "AMD 宣布收购将模型硬化进硅的推理芯片公司 Taalas，交易金额未披露。这是头部 GPU 厂商通过并购补齐专用推理路线的产业动作。",
+          "url": "https://siliconangle.com/2026/08/06/amd-acquires-taalas-hardwire-ai-models-silicon/",
+          "amount": null,
+          "region": "海外"
+        },
+        {
+          "title": "SK 海力士批准 54 万亿韩元建设两座存储器晶圆厂",
+          "summary": "SK 海力士批准约 383 亿美元的两座新 fab 投资，直接面向数据中心存储供给扩张；具体建设进度仍需以公司后续披露为准。",
+          "url": "https://siliconangle.com/2026/08/07/sk-hyn...fabs/",
+          "amount": "$38.3B",
+          "region": "海外"
+        }
+      ]
+    },
+    "highlights": [
+      "AMD 收购 Taalas（HN 870 分），将特定模型直接硬化到硅中的推理路线进入头部厂商布局；通用 GPU 与专用 ASIC 的组合竞争会更明确。",
+      "OpenAI 为 Astra 关键网络能力发布更严格的安全门槛并暂停相关内部活动，前沿模型的网络安全评估正在从原则讨论进入产品发布控制。",
+      "SK 海力士批准约 383 亿美元建设两座存储器 fab；与此同时 AWS 已因 Agentic AI 需求收紧内部 EC2 用量，算力紧张正向 HBM、CPU 和电力侧扩散。"
+    ]
+  },
+  "meta": {}
+}
