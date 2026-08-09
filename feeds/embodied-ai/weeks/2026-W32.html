@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W32 · 08-03 ~ 08-09</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W32</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W32 · 08-03 ~ 08-09</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-03 ~ 2026-08-09</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W32</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>ω-0把人形机器人移动、平衡与操作统一到潜在预测式世界动作模型中。</li>
+      <li>PIA为宝马E-Drive产线规划46台工业机器人，并将数字孪生用于大规模装配部署。</li>
+      <li>本周产业资本继续关注robotaxi、机器人手部训练数据与人形机器人商业化。</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.06374v1" target="_blank" rel="noopener">DyPES-VLA针对异构机器人统一策略的跨本体操控，学习共享动力学先验，并结合本体特定控制。论文聚焦VLA跨具身迁移中对动力学信息利用不足与人工标注成本高的问题。</a></div>
+      <div class="it-sum">Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations. First, they underuse dynamics priors shared across diverse visual and interaction data, limiting cross-embodiment transfer. Second, they require extensive manual p</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.06154v1" target="_blank" rel="noopener">论文用输入消融检验零样本视觉-语言控制是否真正依赖视觉，而不是被模拟器动力学或保守动作先验“带过”。这为VLA评测中的视觉 grounding 提供了针对性诊断。</a></div>
+      <div class="it-sum">Vision-language models (VLMs) are increasingly used as zero-shot controllers, but successful trajectories do not necessarily show that decisions are grounded in visual input: simulator dynamics and conservative action priors can produce favourable scores without meaningful perception. We investigate this with an input-ablation battery: blind-image controls, repeated identical inputs, lane-axis ref</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.06219v1" target="_blank" rel="noopener">研究面向核工业表面接触任务设计触屏遥操作界面，关注路径与力跟踪、避障及持续操作注意力。</a></div>
+      <div class="it-sum">Intuitive teleoperation interfaces are crucial for the safe and effective operation of robotic manipulators in challenging environments. In the nuclear industry, surface contact tasks such as swab sampling require precise path and force tracking, obstacle avoidance, and sustained operator attention, which conventional joystick interfaces struggle to support effectively. This study designs and eval</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.06210v1" target="_blank" rel="noopener">VIDP从多样示范中学习可变阻抗扩散策略，针对接触丰富操作中固定柔顺性难以适应不同接触约束的问题，显式处理示范里的隐含柔顺变量。</a></div>
+      <div class="it-sum">Contact-rich manipulation requires precise tracking and mechanical compliance, where variable impedance control can improve robustness in task success, whereas static compliance cannot adapt to varying contact constraints. Variable impedance skills can be learned from demonstrations, avoiding complex modeling, but compliance is a hidden variable in force-agnostic kinematic data. While existing met</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.06208v1" target="_blank" rel="noopener">ErgoSurf将遍历控制用于未知表面覆盖，在检查、清洁、打磨等任务中兼顾系统覆盖与稳定接触，并开展sim2real方向验证。</a></div>
+      <div class="it-sum">Contact-centric tasks on surfaces, ranging from inspection and cleaning to sanding and polishing, require robots to systematically cover the surface while maintaining stable contact. Ergodic control generates trajectories that spend time at a location proportional to a desired, task-specific spatial distribution, enabling efficient information gathering and coverage. However, traditional ergodic c</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">灵巧手公司Proception和特斯拉商业秘密诉讼达成和解，并宣布1100万美元融资。报道指出其通过独特方式收集训练数据，解决机器人手部数据难题。</a></div>
+      <div class="it-sum">The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/08/06/pia-automation-to-build-bmw-e-drive-assembly-line-with-46-robots-and-digital-twin-technology/103954/" target="_blank" rel="noopener">PIA Automation将为宝马奥地利Steyr工厂建设E-Drive装配线，方案包含数字孪生、78个加工站、27个机器人单元和46台工业机器人。</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">PIA Automation is developing a highly automated assembly line for E-Drive units at the BMW Group plant in Steyr, Austria. Featuring 78 processing stations, 27 robotic cells and 46 industrial robots across more than 5,600 square meters on two levels, the project ranks among the largest in PIA Automat</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（世界模型 / 人形策略 / 基础模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.06375v1" target="_blank" rel="noopener">ω-0提出潜在预测式世界动作模型，面向人形机器人同时进行移动、姿态调整、平衡维持与物体操作的全身协同任务。</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Humanoid household tasks often require concurrent loco-manipulation, where the robot must move, adjust posture, maintain balance, and manipulate objects as a single coordinated behavior. Yet existing humanoid policies typically decompose locomotion and manipulation, while recent world-action models remain either arm-centric or video-centered. We present $ω$-0, a latent predictive whole-body world-</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.06332v1" target="_blank" rel="noopener">GeniWorld以视觉动作构建可交互世界模型，目标是提升通用机器人策略在复杂未知及分布外环境中的稳健性与动作可控性。</a></div>
+      <div class="it-sum">Generalist robot policies exhibit strong capabilities, but their robustness in complex and unseen environments remains limited. Scaling robot learning and evaluation in diverse real-world environments remains costly and challenging. Action-conditioned world models offer a promising alternative, but they often suffer from limited action controllability and poor generalization to out-of-distribution</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.06221v1" target="_blank" rel="noopener">研究从人类示范学习手写字母轨迹，并评估机器人动作的人类相似性，强调模仿学习对自然协作与信任的意义。</a></div>
+      <div class="it-sum">Learning from demonstration (LfD) provides a developmental framework through which robots can develop motor skills by observing and imitating human dynamics, reducing reliance on explicit programming to teach a skill to a robot. The resulting human-like robot motion is recognised as a key factor in building trust and enabling natural collaboration in human-robot interaction. This paper presents a </div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/private/V2FQ6puH0pDdAKeI.html" target="_blank" rel="noopener">雷锋网专访聚焦人类视频如何赋能机器人学习：视频规模大、场景丰富，但缺少机器人动作标签，人的手部运动也不能直接对应机器人动作。</a></div>
+      <div class="it-sum">重新审视人类视频如何赋能机器人学习    作者丨邓哲敏    编辑丨齐铖湧                                                                                                       大模型时代，规模化的数据能带来能力跃迁，这一规律已被反复验证。当这套范式进入机器人领域，问题变得复杂。机器人需要的不仅是大量数据，而且是能够转化为动作能力的数据。人类视频近期成为研究者关注的新来源。它规模巨大、获取成本低、覆盖场景丰富，但它毕竟不是机器人数据，视频里没有机器人动作标签，人类手部运动也无法直接对应机器人的</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/graduate-student-nasas-robots-assembly" target="_blank" rel="noopener">IEEE Spectrum报道一名研究生为NASA机器人装备装配技能，主题聚焦机器人装配能力与相关研究实践。</a></div>
+      <div class="it-sum">Like many engineers, Sarah Downs says she knew she wanted to pursue a STEM career from a young age. As a teenager, she discovered robotics through her Tulsa, Okla., middle school’s First Lego League team, and she fell in love with the field, she says. Downs participated in the international robotics</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">57★</span><a href="https://github.com/GrammaTech/ddisasm" target="_blank" rel="noopener">GitHub项目ddisasm是Datalog反汇编工具，面向二进制程序分析；虽非机器人专属，但可归入制造与工程软件工具关注。</a></div>
+      <div class="it-sum"></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/08/05/moove-raises-250m-to-become-the-backbone-of-the-robotaxi-industry/" target="_blank" rel="noopener">Moove融资2.5亿美元，计划扩展自动驾驶车队管理业务，并希望未来不仅管理Waymo robotaxi，还能拥有相关车辆。</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Moove is scaling up the autonomous vehicle fleet management side of its business and plans to someday own, not just manage, Waymo robotaxis.</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/humanoid-robots-walden-robotics-toyota" target="_blank" rel="noopener">Walden Robotics与丰田合作推进更注重实际应用的人形机器人，反映产业关注点从单纯追逐人形形态转向可落地目标。</a></div>
+      <div class="it-sum">For a while there, it seemed as though robotics as a whole was stuck in a mad rush towards building humanoid robots mostly because it was very possible (and very lucrative) to do so, even without near-term goals that were necessarily realistic. Some of the magic of those first couple of years of the</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/zaobao/jTnxUYfadwnDJtNd.html" target="_blank" rel="noopener">雷锋网报道称宇树科技超百名员工参与IPO；同篇还提到众擎机器人任命前小鹏副总裁陈永海为运营总裁。公司产品与资本市场动态以官方渠道核验。</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">要闻提示1.OpenAI 披露攻击 Hugging Face 前，AI 智能体秘密建立内部留言板2.150.8元/股！宇树科技超百名员工参与IPO“盛宴”，一批90后千万富豪或将诞生3.DeepSeek拟上调API服务定价，预计涨幅较大4.小红书高薪招募AI人才，主导AI社交类产品5.曝字节拟训练超5万亿参数大模型，参数规模超Kimi K36.前小鹏副总裁陈永海加入众擎机器人，担任运营总裁7.王腾回应“SU7 Ultra 泊车异常”：小米汽车已迅速跟进分析，边界场景有 Bug 很正常8.谷歌Gemini换帅，首席科学家Jeff Dean离职创业今日头条OpenAI 披露攻击 Hugging F</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（13 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>328.58 USD</td><td class="up">+2.02%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>378.81 USD</td><td class="up">+0.91%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>40.18 USD</td><td class="down">-12.37%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>5.08 USD</td><td class="down">-10.0%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>15.05 USD</td><td class="up">+15.33%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>223.96 USD</td><td class="up">+8.38%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>127.5 HKD</td><td class="down">-1.39%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>90.0 HKD</td><td class="up">+3.75%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>5.0 HKD</td><td class="down">-2.91%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>64.6 CNY</td><td class="up">+1.91%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>埃斯顿 <span class="tk">0.002747 · A股</span></td><td>35.13 CNY</td><td class="up">+0.92%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>绿的谐波 <span class="tk">1.688017 · A股</span></td><td>347.76 CNY</td><td class="up">+3.49%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>43.53 CNY</td><td class="down">-0.34%</td><td>本周收盘与5日涨跌数据见表。</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$250M</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/08/05/moove-raises-250m-to-become-the-backbone-of-the-robotaxi-industry/" target="_blank" rel="noopener">Moove融资2.5亿美元，押注robotaxi车队基础设施</a></div><div class="it-sum">Moove宣布融资2.5亿美元，用于扩展自动驾驶车队管理业务，并计划未来拥有Waymo robotaxi。</div></li>
+      <li><div class="it-title"><span class="badge amt">$11M</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">Proception宣布1100万美元融资，专注机器人手部训练数据</a></div><div class="it-sum">Proception在解决与特斯拉的商业秘密诉讼后宣布1100万美元融资，报道指出其通过独特方式采集训练数据。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://roboticsandautomationnews.com/2026/08/06/pia-automation-to-build-bmw-e-drive-assembly-line-with-46-robots-and-digital-twin-technology/103954/" target="_blank" rel="noopener">宝马E-Drive产线引入46台工业机器人与数字孪生</a></div><div class="it-sum">PIA Automation将为宝马Steyr工厂建设包含78个加工站、27个机器人单元和46台工业机器人的E-Drive装配线。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://www.leiphone.com/category/zaobao/jTnxUYfadwnDJtNd.html" target="_blank" rel="noopener">宇树科技员工参与IPO，众擎机器人任命运营总裁</a></div><div class="it-sum">雷锋网报道宇树科技超百名员工参与IPO，并提到前小鹏副总裁陈永海加入众擎机器人担任运营总裁；相关公司动态以官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>

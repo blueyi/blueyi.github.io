@@ -1,0 +1,1326 @@
+{
+  "channel": "embodied-ai",
+  "week": "2026-W32",
+  "raw": {
+    "channel": "embodied-ai",
+    "week": "2026-W32",
+    "generated_at": "2026-08-09T22:00:16.832464+08:00",
+    "window": {
+      "start": "2026-08-02",
+      "end": "2026-08-09"
+    },
+    "hn": [
+      {
+        "source": "hn",
+        "score": 57,
+        "title": "Datalog Disassembly",
+        "url": "https://github.com/GrammaTech/ddisasm",
+        "hn_url": "https://news.ycombinator.com/item?id=49151146",
+        "domains": [
+          "manufacturing"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 114,
+        "title": "Gateway 2000's hilariously bad ads in the 90s (Part II)",
+        "url": "https://buttondown.com/suchbadtechads/archive/gateway-2000-part-2/",
+        "hn_url": "https://news.ycombinator.com/item?id=49221220",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 72,
+        "title": "k-Coloring is Faster than Computing the Chromatic Number",
+        "url": "https://arxiv.org/abs/2607.25973",
+        "hn_url": "https://news.ycombinator.com/item?id=49119508",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 418,
+        "title": "Assembly Hall of Shame",
+        "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
+        "hn_url": "https://news.ycombinator.com/item?id=49214098",
+        "domains": [
+          "manufacturing"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 372,
+        "title": "NASA figured out how to keep its Voyager 2 probe running for another year",
+        "url": "https://www.space.com/space-exploration/voyager/nasa-figured-out-how-to-keep-its-48-year-old-voyager-2-probe-running-for-yet-another-year",
+        "hn_url": "https://news.ycombinator.com/item?id=49218179",
+        "domains": [
+          "market"
+        ]
+      }
+    ],
+    "arxiv": [
+      {
+        "source": "arxiv:cs.RO",
+        "title": "$ω$-0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation",
+        "url": "http://arxiv.org/abs/2608.06375v1",
+        "abstract": "Humanoid household tasks often require concurrent loco-manipulation, where the robot must move, adjust posture, maintain balance, and manipulate objects as a single coordinated behavior. Yet existing humanoid policies typically decompose locomotion and manipulation, while recent world-action models remain either arm-centric or video-centered. We present $ω$-0, a latent predictive whole-body world-",
+        "domains": [
+          "vla",
+          "dexterous",
+          "sim2real",
+          "embodied-model",
+          "market"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation",
+        "url": "http://arxiv.org/abs/2608.06374v1",
+        "abstract": "Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations. First, they underuse dynamics priors shared across diverse visual and interaction data, limiting cross-embodiment transfer. Second, they require extensive manual p",
+        "domains": [
+          "vla",
+          "dexterous",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "A Master-Salve Robot Manipulator for Needle-Based Teleoperation in MRI Chamber",
+        "url": "http://arxiv.org/abs/2608.06354v1",
+        "abstract": "We present a MR safe, master-slave robot manipulator for abdominal interventions in the MRI chamber. A human operated 2+1-DoF master controller manipulator transmits motion and force to a 2+1-DoF slave manipulator via fluid transmission. Jointly, a digital master controller provides multimodal control capability beyond common split axis or mode switchable hybrid human-digital controller configurat",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "GeniWorld: A Generalizable Interactive World Model for Robotic Manipulation via Visual Actions",
+        "url": "http://arxiv.org/abs/2608.06332v1",
+        "abstract": "Generalist robot policies exhibit strong capabilities, but their robustness in complex and unseen environments remains limited. Scaling robot learning and evaluation in diverse real-world environments remains costly and challenging. Action-conditioned world models offer a promising alternative, but they often suffer from limited action controllability and poor generalization to out-of-distribution",
+        "domains": [
+          "dexterous",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Robot Learning from Human Demonstrations: Handwritten Alphabet Trajectories and Human-Likeness Evaluation",
+        "url": "http://arxiv.org/abs/2608.06221v1",
+        "abstract": "Learning from demonstration (LfD) provides a developmental framework through which robots can develop motor skills by observing and imitating human dynamics, reducing reliance on explicit programming to teach a skill to a robot. The resulting human-like robot motion is recognised as a key factor in building trust and enabling natural collaboration in human-robot interaction. This paper presents a ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Design and Evaluation of a Touchscreen-Based Teleoperation Interface for Robotic Manipulators",
+        "url": "http://arxiv.org/abs/2608.06219v1",
+        "abstract": "Intuitive teleoperation interfaces are crucial for the safe and effective operation of robotic manipulators in challenging environments. In the nuclear industry, surface contact tasks such as swab sampling require precise path and force tracking, obstacle avoidance, and sustained operator attention, which conventional joystick interfaces struggle to support effectively. This study designs and eval",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "VIDP: Variable Impedance Diffusion Policy for Compliant Robot Manipulation from Diverse Demonstrations",
+        "url": "http://arxiv.org/abs/2608.06210v1",
+        "abstract": "Contact-rich manipulation requires precise tracking and mechanical compliance, where variable impedance control can improve robustness in task success, whereas static compliance cannot adapt to varying contact constraints. Variable impedance skills can be learned from demonstrations, avoiding complex modeling, but compliance is a hidden variable in force-agnostic kinematic data. While existing met",
+        "domains": [
+          "dexterous",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "ErgoSurf: Ergodic Control for the Coverage of Unknown Surfaces",
+        "url": "http://arxiv.org/abs/2608.06208v1",
+        "abstract": "Contact-centric tasks on surfaces, ranging from inspection and cleaning to sanding and polishing, require robots to systematically cover the surface while maintaining stable contact. Ergodic control generates trajectories that spend time at a location proportional to a desired, task-specific spatial distribution, enabling efficient information gathering and coverage. However, traditional ergodic c",
+        "domains": [
+          "dexterous",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Prior-SG: Task and Prior Driven Region Segmentation for Scene Graphs in Arbitrarily-Structured Environments",
+        "url": "http://arxiv.org/abs/2608.06170v1",
+        "abstract": "Hierarchical 3D scene graphs are a promising representation for high-level spatial reasoning in autonomous mobile platforms. However, existing extraction frameworks typically rely on purely local visual clustering or strict geometric heuristics, such as wall-separated rooms, which fail in open-plan or arbitrarily-structured environments. We propose Prior-SG, a task- and prior-driven framework that",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Visual Grounding in Zero-Shot Vision-Language Control",
+        "url": "http://arxiv.org/abs/2608.06154v1",
+        "abstract": "Vision-language models (VLMs) are increasingly used as zero-shot controllers, but successful trajectories do not necessarily show that decisions are grounded in visual input: simulator dynamics and conservative action priors can produce favourable scores without meaningful perception. We investigate this with an input-ablation battery: blind-image controls, repeated identical inputs, lane-axis ref",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Learning When to Trust via Selective Context Preference Optimization",
+        "url": "http://arxiv.org/abs/2608.06377v1",
+        "abstract": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is worth trusting. We recast the problem as selective trust and introduce MIST, a human-annotated benchma",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
+        "url": "http://arxiv.org/abs/2608.06366v1",
+        "abstract": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language mode",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "An Optimal Agnostic PAC Algorithm",
+        "url": "http://arxiv.org/abs/2608.06363v1",
+        "abstract": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk bound: from an i.i.d.\\ sample of size $n$, for every $0<δ\\le 1/2$, with probability at least $1-δ$, \\[ L(\\widehat h) \\le L^*+ 7\\cdot10^8\\left( \\sqrt{\\frac{L^*(d+\\log(1/δ))}{n}} +\\frac{d+\\log(1/δ)}{n} \\rig",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
+        "url": "http://arxiv.org/abs/2608.06362v1",
+        "abstract": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the state",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks",
+        "url": "http://arxiv.org/abs/2608.06352v1",
+        "abstract": "Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not reveal how a task behaves relative to a given solver setting. In this paper, we present CalibForge, an autonomous terminal-task synthesis system that uses verified solver behavior to revise candidate ",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Scalable estimation of VARMA models",
+        "url": "http://arxiv.org/abs/2608.06340v1",
+        "abstract": "Vector autoregressive moving-average (VARMA) models have long been considered impractical beyond moderate dimensions: the likelihood is non-convex, the parametrization is identified only up to equivalence, and every evaluation costs a pass over the entire series. Yet their moving-average term captures with a few parameters what a pure autoregression matches only with many lags. We introduce an est",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Optimal Rates for Learning with Monotone Adversaries",
+        "url": "http://arxiv.org/abs/2608.06337v1",
+        "abstract": "A monotone adversary observes an i.i.d. labeled sample and appends a finite number of further examples of its choice, every one of them labeled correctly by the target hypothesis. The learner sees a uniform shuffle of the combined sample and is scored on the original distribution. Every example is correctly labeled, but the insertions depend on the clean sample, so the combined sample is not excha",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "RRC: Unlocking Generative Reward Models in LLM Reinforcement Learning via Ranking-Based Reward Construction",
+        "url": "http://arxiv.org/abs/2608.06310v1",
+        "abstract": "Recent advances in reward modeling show a paradigm shift from discriminative reward models to generative reward models. However, despite their strong capabilities in response ranking, generative reward models have not realized their potential in reinforcement learning (RL). Our analysis reveals that this limitation arises from a mismatch between the comparative nature of generative reward modeling",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "HarnessOpt-Bench: Evaluating LLMs at Harness Optimization",
+        "url": "http://arxiv.org/abs/2608.06301v1",
+        "abstract": "As LLMs are increasingly deployed within agentic systems, their capabilities depend not only on the model weights but also on the harness: the prompts, tools, control flow, memory, and orchestration code surrounding them. This makes automated harness optimization -- the iterative and evaluation-guided improvement of a harness by an AI system -- both an important route to improving AI systems and a",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "On-Policy Self-Distillation without Any Supervision",
+        "url": "http://arxiv.org/abs/2608.06296v1",
+        "abstract": "On-policy (Self-)Distillation (OPD / OPSD) has shown strong potential for post-training large language models (LLMs). However, existing methods still rely heavily on external supervision, including ground-truth signals, environmental feedback, or guidance from larger models, and therefore fall short of genuine \"self\"-distillation. In this study, we show that on-policy self-distillation can be achi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Learning When to Trust via Selective Context Preference Optimization",
+        "url": "http://arxiv.org/abs/2608.06377v1",
+        "abstract": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is worth trusting. We recast the problem as selective trust and introduce MIST, a human-annotated benchma",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
+        "url": "http://arxiv.org/abs/2608.06366v1",
+        "abstract": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language mode",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Investigating Artificial Intelligence Digital Sovereignty in Mobile Shopping Apps: A Case Study of Nigeria",
+        "url": "http://arxiv.org/abs/2608.06364v1",
+        "abstract": "The use of e-commerce mobile applications is expanding in Nigeria, creating both opportunities and risks, including fraud and reduced user control over digital technologies, raising concerns about digital sovereignty. This research examines how Artificial Intelligence (AI) in Nigerian mobile applications affects digital sovereignty, examined through platform transparency as a key indicator of user",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "An Optimal Agnostic PAC Algorithm",
+        "url": "http://arxiv.org/abs/2608.06363v1",
+        "abstract": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk bound: from an i.i.d.\\ sample of size $n$, for every $0<δ\\le 1/2$, with probability at least $1-δ$, \\[ L(\\widehat h) \\le L^*+ 7\\cdot10^8\\left( \\sqrt{\\frac{L^*(d+\\log(1/δ))}{n}} +\\frac{d+\\log(1/δ)}{n} \\rig",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
+        "url": "http://arxiv.org/abs/2608.06362v1",
+        "abstract": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the state",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "The Low Frequency Trap: Video Language Models Fail at Simple Event Bookkeeping",
+        "url": "http://arxiv.org/abs/2608.06361v1",
+        "abstract": "Real-world video benchmarks provide broad coverage, but their fixed clips entangle event count, rate, duration, and visual complexity, making failure modes hard to isolate. While existing programmatic benchmarks offer better control, they score only the final answer rather than auditing reported events against executable ground truth. To bridge this gap, we introduce trace-grounded parametric prof",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Resourced Authority A Mechanism-Design Model for Participatory Governance of Deployed AI Agents",
+        "url": "http://arxiv.org/abs/2608.06353v1",
+        "abstract": "We give a formal mechanism design model for the continuous participatory governance of a deployed AI agent. The mechanism is built on the principle that governance should control an AI agent through resource allocation so as to make authorization self enforcing via compute budgets. The mechanism seeks to establish the Safe AI paradigm that compute is an effective governance lever. We situate our w",
+        "domains": [
+          "dexterous",
+          "market"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Challenges in Evaluating Explanation Methods for Static and Evolving Data",
+        "url": "http://arxiv.org/abs/2608.06351v1",
+        "abstract": "This paper addresses the limitations of Explainable Artificial Intelligence (XAI) with respect to insufficient evaluation. They are illustrated through the DetoxAI image recognition system for bias detection and concept unlearning. Then, an example of a human-grounded evaluation of methods for explaining image classification is presented. The paper further explores methods for adapting explanation",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "TRAJDEBUG: Tracing Error Lifecycle to Identify Critical Failures in Long-Horizon Agent Trajectories",
+        "url": "http://arxiv.org/abs/2608.06346v1",
+        "abstract": "LLM-based agentic systems have shown remarkable capabilities in complex domains, while suffering from cascading errors and difficulty in debugging. Critical error detection aims to locate the earliest error step in a failed trajectory that is responsible for the final failure. However, progress faces two main challenges. First, long trajectories make it difficult to identify individual errors, sin",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Tytan: Interactive Neurosymbolic Construction of Analytic Semantic Schemas from Relational Data",
+        "url": "http://arxiv.org/abs/2608.06331v1",
+        "abstract": "From natural-language query interfaces to automated report generation, data analysis tools need a description of the data: the real-world entities it contains, which columns function as measures or identifiers, and how tables connect into units of analysis. Today, this semantic layer is usually written by hand. This is a knowledge-acquisition bottleneck that limits the scalability of analytic syst",
+        "domains": []
+      }
+    ],
+    "rss": [
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "This former notorious red-light district is now one of the world’s top AI hubs",
+        "url": "https://techcrunch.com/2026/08/09/this-former-notorious-red-light-district-is-now-one-of-the-worlds-top-ai-hubs/",
+        "summary": "More than 20 years ago, King's Cross was one of the seediest area's in London. Now it's sprouting something new.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Moove raises $250M to become the backbone of the robotaxi industry",
+        "url": "https://techcrunch.com/2026/08/05/moove-raises-250m-to-become-the-backbone-of-the-robotaxi-industry/",
+        "summary": "Moove is scaling up the autonomous vehicle fleet management side of its business and plans to someday own, not just manage, Waymo robotaxis.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "How Lightspeed found its newest hire … via Instagram DM",
+        "url": "https://techcrunch.com/2026/08/05/how-lightspeed-found-its-newest-hire-via-instagram-dm/",
+        "summary": "Lightspeed partners Josh Machiz and Claire Zau stopped by the Equity studio to talk about the strategies behind their growing social media presence and their podcast, Lightwork.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Lightspeed is building its edge on followers, not just funds",
+        "url": "https://techcrunch.com/video/why-lightspeed-is-going-all-in-on-creator-led-venture-capital/",
+        "summary": "Venture firms are turning to creators to build trust with the next generation of founders before a check is ever written. It’s a trend that’s been building with a16z’s acquisition of Erik Torenberg’s Turpentine podcast and OpenAI’s acquisition of TBPN. Lightspeed Venture Partners just made its own n",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Why Lightspeed is going all-in on creator-led venture capital",
+        "url": "https://techcrunch.com/podcast/why-lightspeed-is-going-all-in-on-creator-led-venture-capital/",
+        "summary": "Venture firms are turning to creators to build trust with the next generation of founders before a check is ever written. It’s a trend that’s been building with a16z’s acquisition of Erik Torenberg’s Turpentine podcast and OpenAI’s acquisition of TBPN. Lightspeed Venture Partners just made its own n",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Robinhood to list a fund that lets anyone back Y Combinator startups",
+        "url": "https://techcrunch.com/2026/08/05/robinhood-to-list-a-fund-that-lets-anyone-back-y-combinator-startups/",
+        "summary": "Robinhood's latest financial instrument intends to let any retail investor feel like they, too, can make money by backing Y Combinator startups.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "AI makes weather prediction better. Can WindBorne make it lucrative?",
+        "url": "https://techcrunch.com/2026/08/05/ai-makes-weather-prediction-better-can-windborne-make-it-lucrative/",
+        "summary": "WindBorne Systems has raised a $37 million Series B round to scale its weather balloons and AI forecasts.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Host a Side Event during TechCrunch Founder Summit Week in Boston",
+        "url": "https://techcrunch.com/2026/08/04/host-a-side-event-during-techcrunch-founder-summit-week-in-boston/",
+        "summary": "Want to tap into the energy of 1,100+ startup founders, investors, and tech leaders descending on Boston for the Founder Summit 2026 on June 9? Host your own Side Event during “Founder Summit Week,” happening June 4-10!",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "A Marc Benioff-backed startup thinks AI can solve the AI deployment problem",
+        "url": "https://techcrunch.com/2026/08/03/a-marc-benioff-backed-startup-thinks-ai-can-solve-the-ai-deployment-problem/",
+        "summary": "June emerged from stealth today with a $20 million pre-seed round to make AI adoption simpler.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Inside the London hacker house taking a stand against founder burnout",
+        "url": "https://techcrunch.com/2026/08/01/inside-one-london-founder-house-rewriting-the-founder-house-rules/",
+        "summary": "How one founder house is betting work-life balance can beat burnout .",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Fresh off its Wiz payout, Index Ventures raises $2B across three funds",
+        "url": "https://techcrunch.com/2026/07/31/fresh-off-its-wiz-payout-index-ventures-raises-2b-across-three-funds/",
+        "summary": "The new funding brings Index's total available investing capital to $3.5 billion.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "VC-backed startups commit more fraud, and researchers think they know why",
+        "url": "https://techcrunch.com/2026/07/31/vc-backed-startups-commit-more-fraud-and-researchers-think-they-know-why/",
+        "summary": "New research from the U.K.’s Imperial College and France’s Emlyon Business School mapped out how Silicon Valley founders commit fraud — and the role investors play.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Robotics",
+        "kind": "media",
+        "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
+        "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+        "summary": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Week’s 10 Biggest Funding Rounds: A Big Week For Big Checks",
+        "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-billion-dollar-raises-manufacturing-energy-ai/",
+        "summary": "Startups raised funding rounds with a lot of zeroes at the end this week, with three companies securing financings of $1 billion or more. Additionally, a robust lineup of companies in sectors including AI, e-commerce, cybersecurity, biotech and even mining also announced sizable new rounds.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "No Summer Doldrums For Active Startup Investors In July",
+        "url": "https://news.crunchbase.com/venture/active-startup-investors-july-2026-khosla-yc-coatue-nvda/",
+        "summary": "Active startup investors kept up the pace in July, with familiar names topping the ranks in several metrics including most prolific venture dealmakers, most active lead backers, biggest spenders and highest-volume seed investors.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Return Of The Repeat Founder: Inside YC’s Growing Class Of Second-Timers",
+        "url": "https://news.crunchbase.com/venture/y-combinator-repeat-founders-numbers-grow-epstein-callaway/",
+        "summary": "We analyzed a dataset of repeat founders who have gone through Y Combinator’s cohorts and found some very interesting insights. The dataset, shared with us directly from YC, consisted of 454 repeat founders through the program as well as 935 founder-company records spanning 2005 through 2026. We spo",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Crunchbase Tech Layoffs Tracker",
+        "url": "https://news.crunchbase.com/startups/tech-layoffs/",
+        "summary": "Over 127,000 workers at U.S.-based tech companies were laid off in mass job cuts in 2025, per a Crunchbase News tally, and the layoffs have continued into 2026. See the latest companies to cut roles.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "‘Nobody Wanted to Give A Former Principal Money’: How An Educator Built An Edtech AI Startup With $63M From VCs",
+        "url": "https://news.crunchbase.com/venture/educator-built-edtech-startup-ai-magicschool-kahn/",
+        "summary": "Founded by an educator fascinated by the educational potential of ChatGPT, MagicSchool AI leads off a series of articles featuring startup founders from non-technical backgrounds who have launched successful venture-backed companies.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Your AI Strategy May Be Destroying Your Exit Value",
+        "url": "https://news.crunchbase.com/ai/strategies-enhancing-exit-value-acquisitions-sagie/",
+        "summary": "While integrating AI into a startup's product strategy is often viewed as a way to enhance valuation, it can inadvertently reduce exit value, argues tech strategic adviser Itay Sagie. In this guest commentary he shares three ways your AI strategy can provide a positive impact on valuation when it be",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "A Record 14 Billion-Dollar Rounds In July Pushed Venture’s Historic Run Higher",
+        "url": "https://news.crunchbase.com/venture/data-billion-dollar-rounds-set-global-funding-record-july-2026/",
+        "summary": "Global venture funding showed no signs of slowing in July. Startup capital totaled $65 billion, up 100% year over year, as the month notched the highest-ever number of billion-dollar venture rounds on record, per Crunchbase data.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Why The Product Manager To CEO Pipeline Is The Underrated Crash Course For Leadership In Tech",
+        "url": "https://news.crunchbase.com/workplace/tech-ceo-leadership-career-path-product-manager/",
+        "summary": "Traditional research on CEO career paths tends to focus on titles such as COO, CFO and divisional president. But the skills developed in product management may be just as relevant, argues Paysend CEO Ben Chisell. In this guest column, he makes the case that aspiring leaders should focus less on coll",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "‘A Rare Land-Grab Moment’: Menlo Ventures’ Matt Murphy On The Next Wave of AI And Putting $3B In New Capital To Work",
+        "url": "https://news.crunchbase.com/venture/menlo-ventures-matt-murphy-anthropic-ai-investment-thesis/",
+        "summary": "We speak with Menlo Ventures' Matt Murphy about why AI is pushing the firm toward larger deals, what it has learned from its Anthropic relationship, and where he sees the next big opportunities.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Week’s 10 Biggest Funding Rounds: Safe Superintelligence And Commonwealth Fusion Lead With Billion-Dollar Deals",
+        "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-safe-superintelligence-commonwealth-fusion/",
+        "summary": "Another week, another bevy of big rounds. The largest round was a reported $5 billion Nvidia-backed financing for foundational AI unicorn Safe Superintelligence, followed by a $1 billion investment in Commonwealth Fusion Systems.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "VentureBeat AI",
+        "kind": "media",
+        "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
+        "url": "https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud",
+        "summary": "Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar on marketing, announced Thursday that it raised $100 million in a Series B funding round, as surging demand for artificial intelligence applications exposes the limitations of lega",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Thiel Capital’s Jack Selby nabs stakes in hot startups like Etched through Arizona connections",
+        "url": "https://techcrunch.com/2026/07/02/thiel-capitals-jack-selby-nabs-stakes-in-hot-startups-like-etched-through-arizona-connections/",
+        "summary": "Selby's VC firm, Copper Sky Capital, is currently raising a $300 million second fund, according to a regulatory filing.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Whoop’s valuation just tripled to $10 billion",
+        "url": "https://techcrunch.com/2026/03/31/whoop-valuation-10b-series-g-fundraise/",
+        "summary": "The fitness tracking startup just closed a $575 million Series G with Cristiano Ronaldo and LeBron James among its investors. The obvious question looming over a round of this size at this valuation: Is an IPO coming?",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Modelence raises $3M to smooth out the vibe-coding stack",
+        "url": "https://techcrunch.com/2026/01/28/modelence-raises-13-million-to-smooth-out-the-vibe-coding-stack/",
+        "summary": "How do you build tooling for the AI software stack? A company called Modelence has an interesting answer.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "VC firm 2150 raises €210M fund to solve cities’ climate challenges",
+        "url": "https://techcrunch.com/2026/01/26/vc-firm-2150-raises-e210m-fund-to-solve-cities-climate-challenges/",
+        "summary": "Europe-based venture fund 2150 raised the money to invest in climate tech startups that help solve cities' carbon footprint.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Superorganism raises $25M to back biodiversity startups",
+        "url": "https://techcrunch.com/2026/01/13/superorganism-raises-25m-to-back-biodiversity-startups/",
+        "summary": "Superorganism backs companies across three categories: tech that slows or reverses extinction, startups that operate at the intersection of climate and biodiversity, and tools that enable conservationists to do their work more effectively.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "More than 100 new tech unicorns were minted in 2025 — here they are",
+        "url": "https://techcrunch.com/2026/01/12/at-least-36-new-tech-unicorns-were-minted-in-2025-so-far/",
+        "summary": "Using data from Crunchbase and PitchBook, TechCrunch tracked down the VC-backed startups that became unicorns so far this year.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Supabase hit $5B by turning down million-dollar contracts. Here’s why.",
+        "url": "https://techcrunch.com/video/supabase-hit-5b-by-turning-down-million-dollar-contracts-heres-why/",
+        "summary": "Vibe coding has taken the tech industry by storm, and it’s not just the Lovables and Replits of the world that are winning. The startups building the infrastructure behind them are cashing in too.  Supabase, the open source database platform that’s become the back end of choice for the vibe-coding w",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Sequoia unveils $950M in new early-stage funds as it strives to be ‘only as good as our next investment’",
+        "url": "https://techcrunch.com/2025/10/27/sequoia-unveils-950m-in-new-early-stage-funds-as-it-strives-to-be-only-as-good-as-our-next-investment/",
+        "summary": "The legendary firm launched a $750 million early-stage fund targeting Series A startups and a $200 million seed fund.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Redwood Materials raises another $350M to power up its energy-storage business",
+        "url": "https://techcrunch.com/2025/10/23/redwood-materials-raises-another-350-million-to-power-up-its-energy-storage-business/",
+        "summary": "The round was led by Eclipse and saw participation from Nvidia's venture capital arm, NVentures.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "A new search engine raises $1.1M to let obsessive fans dive down internet rabbit holes",
+        "url": "https://techcrunch.com/2025/10/03/a-new-search-engine-raises-1-1m-to-let-obsessive-fans-dive-down-internet-rabbit-holes/",
+        "summary": "Lore raises $1.1 million to build a personalized search engine for fandom culture.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "A year after filing to IPO, still-private Cerebras Systems raises $1.1B",
+        "url": "https://techcrunch.com/2025/09/30/a-year-after-filing-to-ipo-still-private-cerebras-systems-raises-1-1b/",
+        "summary": "Cerebras initially filed to go public in September 2024 but ran into several regulatory delays due to foreign investments.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Doorstep raises $8M seed to help find missing food deliveries",
+        "url": "https://techcrunch.com/2025/09/25/doorstep-raises-8m-seed-to-help-find-missing-food-deliveries/",
+        "summary": "Doorstep integrates into existing delivery apps and then, using phone sensors, tracks when a driver has entered a building, gone up an elevator, and made it to the desired doorstep.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Walden Robotics Partners With Toyota on Practical Humanoids",
+        "url": "https://spectrum.ieee.org/humanoid-robots-walden-robotics-toyota",
+        "summary": "For a while there, it seemed as though robotics as a whole was stuck in a mad rush towards building humanoid robots mostly because it was very possible (and very lucrative) to do so, even without near-term goals that were necessarily realistic. Some of the magic of those first couple of years of the",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Video Friday: An Italian Humanoid Comes to Life",
+        "url": "https://spectrum.ieee.org/video-friday-physical-ai-robotics",
+        "summary": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion.Summer School on Multi-Robot Systems: 29 July–4 August 2",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "This Graduate Student Equips NASA’s Robots With Assembly Skills",
+        "url": "https://spectrum.ieee.org/graduate-student-nasas-robots-assembly",
+        "summary": "Like many engineers, Sarah Downs says she knew she wanted to pursue a STEM career from a young age. As a teenager, she discovered robotics through her Tulsa, Okla., middle school’s First Lego League team, and she fell in love with the field, she says. Downs participated in the international robotics",
+        "domains": [
+          "manufacturing"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Unitree targets $9 billion valuation in landmark IPO as humanoid robot race accelerates",
+        "url": "https://roboticsandautomationnews.com/2026/08/07/unitree-targets-9-billion-valuation-in-landmark-ipo-as-humanoid-robot-race-accelerates/104008/",
+        "summary": "Chinese robotics company Unitree has priced its initial public offering at a valuation of approximately $9 billion, becoming the country’s first mainland-listed humanoid robot manufacturer and highlighting growing investor interest in AI-powered robotics despite rising geopolitical tensions. The Han",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "PIA Automation to build BMW E-Drive assembly line with 46 robots and digital twin technology",
+        "url": "https://roboticsandautomationnews.com/2026/08/06/pia-automation-to-build-bmw-e-drive-assembly-line-with-46-robots-and-digital-twin-technology/103954/",
+        "summary": "PIA Automation is developing a highly automated assembly line for E-Drive units at the BMW Group plant in Steyr, Austria. Featuring 78 processing stations, 27 robotic cells and 46 industrial robots across more than 5,600 square meters on two levels, the project ranks among the largest in PIA Automat",
+        "domains": [
+          "sim2real",
+          "manufacturing"
+        ]
+      }
+    ],
+    "cn_rss": [
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "180万刀，连亚马逊都烧不起Claude了",
+        "url": "https://www.qbitai.com/2026/08/469010.html",
+        "summary": "Claude不是我说你，钱真不能这么花",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "GPT-5.6和Fable联手，解决了一道悬了25年的数学难题",
+        "url": "https://www.qbitai.com/2026/08/468913.html",
+        "summary": "作者读博时就在研究，17年后被AI解开了",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "当题库追不上模型，AI开始给自己出题：中国这支团队跑通了数据层RSI",
+        "url": "https://www.qbitai.com/2026/08/468782.html",
+        "summary": "AI参与创造下一代AI",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "Opus 5狂烧6.9亿token做游戏，GPT-5.6用5美元复刻了",
+        "url": "https://www.qbitai.com/2026/08/468766.html",
+        "summary": "据说GPT-5.6很适合拿来做游戏",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "爆料：哈萨比斯原本要和Jeff Dean一起走！",
+        "url": "https://www.qbitai.com/2026/08/468715.html",
+        "summary": "谷歌缓兵之计把人留下",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "奥特曼的ChatGPT育儿大法，捅了马蜂窝",
+        "url": "https://www.qbitai.com/2026/08/468631.html",
+        "summary": "这就有些尴尬了。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "中国NeoLab时刻：EverMind用3篇论文，交出全栈自进化首份答卷",
+        "url": "https://www.qbitai.com/2026/08/468555.html",
+        "summary": "海外团队纷纷下注，NeoLab浪潮狂飙",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "Jeff Dean创业BP曝光，杨植麟也在上面！硅谷VC抢破头送钱",
+        "url": "https://www.qbitai.com/2026/08/468498.html",
+        "summary": "「我，Jeff Dean，打钱」",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "都学坏了！奥特曼亲手封锁最强模型Astra，重蹈Mythos覆辙",
+        "url": "https://www.qbitai.com/2026/08/468462.html",
+        "summary": "唉，赶紧整完快点发布吧。。。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "谷歌急了：AI核心员工全给我搬回硅谷坐班！",
+        "url": "https://www.qbitai.com/2026/08/468398.html",
+        "summary": "再花15亿美元买现成AI编程团队",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "百花奖短剧荣誉单元在京举办，15部作品获颁五项荣",
+        "url": "https://www.leiphone.com/category/industrynews/a3taIEu9XnS15mVJ.html",
+        "summary": "8月9日下午，第38届大众电影百花奖“短剧荣誉单元”在北京举办。活动以“精品化、专业化、正向化”为核心，对过去一年的短剧创作成果进行集中盘点，15部作品分获五项年度荣誉，并推介《食神2026》《将门六姝》《奔头儿》等9部作品。这是百花奖首次将短剧纳入荣誉评价体系。第38届大众电影百花奖“短剧荣誉单元”获奖名单15部短剧分获五项年度荣誉，现实与创新题材受关注本次活动设置“年度人气短剧”“年度创新短剧”“年度优秀系列短剧”“年度影响力短剧”“年度高品质短剧”五项荣誉，分别从大众口碑、创作突破、系列化运营、现实议题表达和制作完成度等维度，对过去一年的短剧作品进行集中盘点。《冒姓琅琊》《傩戏》《宜嫁宜",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "摩尔线程：2026上半年营收17.36亿元，已超2025全年",
+        "url": "https://www.leiphone.com/category/chips/unD456FTBn9p8VyD.html",
+        "summary": "8月9日，国产GPU龙头摩尔线程（688795.SH）发布《2026年半年度报告》。2026年上半年，公司实现营收17.36亿元，同比大幅增长147.42%，已超2025年全年营收；毛利总额达9.89亿元，同比增长103.78%；盈利能力显著改善，归母净利润、归母扣非净利润分别较上年同期亏损收窄95.73%、52.37%，商业化全面提速。 强劲业绩的背后，是摩尔线程持续高强度研发投入构筑的技术底座。报告显示，公司2026上半年研发投入达7.69亿元，同比增长38.16%。2022年以来，公司累计研发投入近59亿元。截至2026年6月30日，公司累计申请专利2167项，其中发明专利申请2049项",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "赌注十万亿：字节拒绝走蒸馏捷径背后，张一鸣的长期主义有多狠？",
+        "url": "https://www.leiphone.com/category/yanxishe/JR3ppBP5VOxND55d.html",
+        "summary": "张一鸣要的是，下一轮竞争中，Seed模型能力跻身世界第一梯队    作者丨高允毅    编辑丨岑   峰                                                                                                       近日，The Information爆出，在两周前的 Seed 全员会上，张一鸣罕见发声，明确拒绝以蒸馏手段追赶前沿大语言模型。他的态度很坚决：“字节跳动应该愿意为了长远目标牺牲一些短期利益。”最新一期 Artificial Analysis 全球 LLM 排行榜中，月之暗面 Kimi K",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "82 篇论文撑起的判断：IJCAI 凭什么是推理、规划、知识的「第一主场」",
+        "url": "https://www.leiphone.com/category/private/iME7Xg5tMwxIyZqU.html",
+        "summary": "50篇推理加32篇规划，IJCAI里最硬的8%。    作者丨陆毅 陈淑瑜    编辑丨岑峰                                                                                                       “IJCAI/AAAI在推理、规划、知识方面是最顶级的，这几个方向也是AI当下急需的。”2019年，南京大学俞扬教授在一场关于 AI 顶会评级的讨论中写下了这句话。彼时大语言模型尚未爆发，“推理”一词在AI社区远不如今天这般炙手可热。七年过去，当 DeepSeek-R1 用强化学习激发推理链、当 Al",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "美团王莆中：将AI融入家庭健康，助力建设“15分钟医疗圈”",
+        "url": "https://www.leiphone.com/category/industrynews/iGjt6GWE2NRHORMU.html",
+        "summary": "8月7日，2026全球医疗峰会在香港举行。美团核心本地商业CEO王莆中在会上表示，美团将立足医疗资源连接者角色，与行业伙伴共建“15分钟医疗卫生服务圈”。“过去，‘15分钟医疗卫生服务圈’的建设重心主要落在基建层面，但物理基础设施总有边界。”王莆中表示，在医疗健康领域，美团扮演的始终是连接者角色，通过数字化能力和AI技术，让医疗资源更高效地触达需要的人，让服务看得到、到得快、用得好。围绕这一目标，美团构建了广泛的本地化供给与履约网络，打通了“检、医、药、院、养”服务全链条。目前，美团已合作16万家医疗机构、25万家药店，依托数百万骑手及智能调度平台构成的履约网络，累计服务用户已达4.3亿。今年",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "延长20年！上汽集团与通用汽车签署合资续约协议",
+        "url": "https://www.leiphone.com/category/industrynews/n8L9ojfqMPqsvH2u.html",
+        "summary": "2026年8月5日   今天，“共赴新境——上汽通用汽车合资续约签约仪式”在上海世界会客厅举行。上汽集团与通用汽车正式签署合资续约协议，将上汽通用汽车合资期限延长20年至2047年。双方表示，此次合作续约是基于近30年成功合作的基础，在全球汽车产业深刻变革背景下，上汽集团和通用汽车对中国汽车市场长期价值以及对上汽通用汽车转型能力和发展前景投下的一张信心票。双方股东将进一步协同技术研发、供应链与全球市场资源，为上汽通用汽车的智电转型、本土创新、全球化布局与长期健康发展提供持续支持。合作新境：近30年携手，树立汽车产业开放合作的标杆作为1997年上海市政府的“一号工程”和中美之间最大的合资项目之一",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "IJCAI 2026 专访：机器人想学会人类动作，还差一座桥 | GAIR Paper 118",
+        "url": "https://www.leiphone.com/category/private/V2FQ6puH0pDdAKeI.html",
+        "summary": "重新审视人类视频如何赋能机器人学习    作者丨邓哲敏    编辑丨齐铖湧                                                                                                       大模型时代，规模化的数据能带来能力跃迁，这一规律已被反复验证。当这套范式进入机器人领域，问题变得复杂。机器人需要的不仅是大量数据，而且是能够转化为动作能力的数据。人类视频近期成为研究者关注的新来源。它规模巨大、获取成本低、覆盖场景丰富，但它毕竟不是机器人数据，视频里没有机器人动作标签，人类手部运动也无法直接对应机器人的",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "Jeff Dean 创业路演 PPT，惊现 34 位创始人，谷歌系人才占领半壁江山",
+        "url": "https://www.leiphone.com/category/yanxishe/Ga2vGDMkzS2dp4Ew.html",
+        "summary": "杨植麟也是 Jeff Dean PPT 中列出的谷歌系创始人名单中的一位。    作者丨高允毅 郑佳美    编辑丨岑   峰                                                                                                       聚是一团火，散是满天星，这句话用在谷歌当年的核心实验室 Google Brain最合适不过。今早，谷歌传奇人物，首席科学家兼 Google Brain 创始人之一 Jeff Dean官宣离职创业，作为谷歌老人，他已经加入谷歌工作 27 年。据 Jeff 深情回忆，当初",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "汪峰：我现在买衣服，80%都是淘宝",
+        "url": "https://www.leiphone.com/category/industrynews/FqaTMocwsNfeul2p.html",
+        "summary": "日前，汪峰在一档视频采访中提及，孩子爱买奢侈品，他认为这不是他们应该有的消费行为，谈及自身，他说到，“我现在挑衣服只希望合适，买衣服 80% 都是淘宝”。 此言一出，引发不少网友共鸣：“汪峰演我日常购物习惯”。还有网友表示：希望解锁汪峰选款思路学学省钱穿搭术”。也有人想扒汪峰同款店铺，“好奇摇滚风穿搭都是在哪家淘的？” 其实，不只是汪峰爱在淘宝买男装，BLACKPINK、Cortis等KPop明星也曾多次上身淘宝潮牌。此外，内娱女星杨幂、赵露思、白鹿和新锐导演邵艺辉等，也是资深“淘宝女孩”。 淘宝作为国民大消费平台，不仅是“国民衣橱”，也有不少明星私服。HAMCUS、WANGXINGYU、DN",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "阿里视频大模型Wan3.0开启公测：文档、ppt也能变视频",
+        "url": "https://www.leiphone.com/category/industrynews/Wp4SCQ5wu1Lbhtr1.html",
+        "summary": "8月6日，阿里巴巴视频生成大模型Wan 3.0开启公测，在生成时长、万能创作、全能参考以及真实世界还原等维度全面升级：单次可生成30秒视频，完整表达创作意图；在文本、图片、音频、视频四种基础模态之外，首次支持doc、xls、ppt、pdf、md等文档格式输入；力求准确还原真实世界——人物千人千面，每一帧画面既真实、又可信。生成时长的延展是Wan3.0最直观的升级。单段30秒生成让叙事节奏更游刃有余，连续运镜、一镜到底等复杂镜头语言得以充分表达，AI视频从“生成一个镜头”走向“讲述一段完整的故事”。Wan3.0还有智能时长功能，可根据提示词自动推荐合适时长。Wan3.0正从视频生成模型跃迁为信息",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "2个月做到3000单，内贸卖家如何借「轻出海」快速打开跨境生意？",
+        "url": "https://www.leiphone.com/category/industrynews/XnHMK4DKZgEQBCZs.html",
+        "summary": "跨境电商发展到今天，已经很难用一套方法适用于所有人。不同卖家的起点、资源和优势各不相同，尤其是对于拥有成熟供应链的内贸商家而言，与其投入大量资金重新搭建跨境体系，不如选择一条更轻量、更符合自身优势的出海路径。广西南宁的严老板便是典型代表，2013 年他从国内电商入行，在十余年时间里深耕轻小件玩具品类，沉淀下数千款 SKU 的丰富供应链。偶然了解到Shopee轻出海模式后，他很快敲定了入驻计划：不用额外组建海外运营团队，不用前置大额资金投入，这套轻量化方案，恰好契合团队低成本试水跨境的思路。仅两个多月，店铺月单量就稳定在3000单上下。整个扩张周期内，团队并未新增运营人力，也没有追加专项营销预算",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "150.8元/股！宇树科技超百名员工参与IPO「盛宴」，一批90后千万富豪或将诞生；DeepSeek拟上调API服务定价；字节拟训练超5万亿参数大模型",
+        "url": "https://www.leiphone.com/category/zaobao/jTnxUYfadwnDJtNd.html",
+        "summary": "要闻提示1.OpenAI 披露攻击 Hugging Face 前，AI 智能体秘密建立内部留言板2.150.8元/股！宇树科技超百名员工参与IPO“盛宴”，一批90后千万富豪或将诞生3.DeepSeek拟上调API服务定价，预计涨幅较大4.小红书高薪招募AI人才，主导AI社交类产品5.曝字节拟训练超5万亿参数大模型，参数规模超Kimi K36.前小鹏副总裁陈永海加入众擎机器人，担任运营总裁7.王腾回应“SU7 Ultra 泊车异常”：小米汽车已迅速跟进分析，边界场景有 Bug 很正常8.谷歌Gemini换帅，首席科学家Jeff Dean离职创业今日头条OpenAI 披露攻击 Hugging F",
+        "domains": []
+      }
+    ],
+    "markets": [
+      {
+        "sym": "TSLA",
+        "name": "特斯拉(Optimus)",
+        "price": 328.58,
+        "pct_5d": 2.02,
+        "currency": "USD"
+      },
+      {
+        "sym": "ISRG",
+        "name": "直觉外科(手术机器人)",
+        "price": 378.81,
+        "pct_5d": 0.91,
+        "currency": "USD"
+      },
+      {
+        "sym": "ABB",
+        "name": "ABB(工业机器人)",
+        "_error": "HTTP Error 404: Not Found"
+      },
+      {
+        "sym": "SYM",
+        "name": "Symbotic(仓储机器人)",
+        "price": 40.18,
+        "pct_5d": -12.37,
+        "currency": "USD"
+      },
+      {
+        "sym": "SERV",
+        "name": "Serve Robotics(配送)",
+        "price": 5.08,
+        "pct_5d": -10.0,
+        "currency": "USD"
+      },
+      {
+        "sym": "PATH",
+        "name": "UiPath(自动化)",
+        "price": 15.05,
+        "pct_5d": 15.33,
+        "currency": "USD"
+      },
+      {
+        "sym": "NVDA",
+        "name": "英伟达(机器人算力)",
+        "price": 223.96,
+        "pct_5d": 8.38,
+        "currency": "USD"
+      },
+      {
+        "sym": "9618.HK",
+        "name": "京东(物流机器人)",
+        "price": 127.5,
+        "pct_5d": -1.39,
+        "currency": "HKD"
+      }
+    ],
+    "cn_markets": [
+      {
+        "secid": "116.09880",
+        "name": "优必选",
+        "market": "港股",
+        "price": 90.0,
+        "pct_5d": 3.75,
+        "currency": "HKD"
+      },
+      {
+        "secid": "116.09660",
+        "name": "地平线机器人",
+        "market": "港股",
+        "price": 5.0,
+        "pct_5d": -2.91,
+        "currency": "HKD"
+      },
+      {
+        "secid": "0.300124",
+        "name": "汇川技术",
+        "market": "A股",
+        "price": 64.6,
+        "pct_5d": 1.91,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.002747",
+        "name": "埃斯顿",
+        "market": "A股",
+        "price": 35.13,
+        "pct_5d": 0.92,
+        "currency": "CNY"
+      },
+      {
+        "secid": "1.688017",
+        "name": "绿的谐波",
+        "market": "A股",
+        "price": 347.76,
+        "pct_5d": 3.49,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.002230",
+        "name": "科大讯飞",
+        "market": "A股",
+        "price": 43.53,
+        "pct_5d": -0.34,
+        "currency": "CNY"
+      }
+    ],
+    "errors": [],
+    "counts": {
+      "hn": 5,
+      "arxiv": 30,
+      "rss": 41,
+      "cn_rss": 22,
+      "markets": 7,
+      "cn_markets": 6,
+      "errors": 0
+    }
+  },
+  "curated": {
+    "title_date": "2026-W32 · 08-02 ~ 08-09",
+    "window": "2026-08-02 ~ 2026-08-09",
+    "domains": [
+      {
+        "id": "vla",
+        "emoji": "1️⃣",
+        "name": "VLA（视觉-语言-动作模型）",
+        "items": [
+          {
+            "title": "DyPES-VLA针对异构机器人统一策略的跨本体操控，学习共享动力学先验，并结合本体特定控制。论文聚焦VLA跨具身迁移中对动力学信息利用不足与人工标注成本高的问题。",
+            "summary": "Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations. First, they underuse dynamics priors shared across diverse visual and interaction data, limiting cross-embodiment transfer. Second, they require extensive manual p",
+            "url": "http://arxiv.org/abs/2608.06374v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "论文用输入消融检验零样本视觉-语言控制是否真正依赖视觉，而不是被模拟器动力学或保守动作先验“带过”。这为VLA评测中的视觉 grounding 提供了针对性诊断。",
+            "summary": "Vision-language models (VLMs) are increasingly used as zero-shot controllers, but successful trajectories do not necessarily show that decisions are grounded in visual input: simulator dynamics and conservative action priors can produce favourable scores without meaningful perception. We investigate this with an input-ablation battery: blind-image controls, repeated identical inputs, lane-axis ref",
+            "url": "http://arxiv.org/abs/2608.06154v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "研究面向核工业表面接触任务设计触屏遥操作界面，关注路径与力跟踪、避障及持续操作注意力。",
+            "summary": "Intuitive teleoperation interfaces are crucial for the safe and effective operation of robotic manipulators in challenging environments. In the nuclear industry, surface contact tasks such as swab sampling require precise path and force tracking, obstacle avoidance, and sustained operator attention, which conventional joystick interfaces struggle to support effectively. This study designs and eval",
+            "url": "http://arxiv.org/abs/2608.06219v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "dexterous",
+        "emoji": "2️⃣",
+        "name": "灵巧手 / 灵巧操作",
+        "items": [
+          {
+            "title": "VIDP从多样示范中学习可变阻抗扩散策略，针对接触丰富操作中固定柔顺性难以适应不同接触约束的问题，显式处理示范里的隐含柔顺变量。",
+            "summary": "Contact-rich manipulation requires precise tracking and mechanical compliance, where variable impedance control can improve robustness in task success, whereas static compliance cannot adapt to varying contact constraints. Variable impedance skills can be learned from demonstrations, avoiding complex modeling, but compliance is a hidden variable in force-agnostic kinematic data. While existing met",
+            "url": "http://arxiv.org/abs/2608.06210v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "ErgoSurf将遍历控制用于未知表面覆盖，在检查、清洁、打磨等任务中兼顾系统覆盖与稳定接触，并开展sim2real方向验证。",
+            "summary": "Contact-centric tasks on surfaces, ranging from inspection and cleaning to sanding and polishing, require robots to systematically cover the surface while maintaining stable contact. Ergodic control generates trajectories that spend time at a location proportional to a desired, task-specific spatial distribution, enabling efficient information gathering and coverage. However, traditional ergodic c",
+            "url": "http://arxiv.org/abs/2608.06208v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "灵巧手公司Proception和特斯拉商业秘密诉讼达成和解，并宣布1100万美元融资。报道指出其通过独特方式收集训练数据，解决机器人手部数据难题。",
+            "summary": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
+            "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+            "source": "rss"
+          }
+        ]
+      },
+      {
+        "id": "sim2real",
+        "emoji": "3️⃣",
+        "name": "sim2real / 仿真到真实",
+        "items": [
+          {
+            "title": "PIA Automation将为宝马奥地利Steyr工厂建设E-Drive装配线，方案包含数字孪生、78个加工站、27个机器人单元和46台工业机器人。",
+            "summary": "PIA Automation is developing a highly automated assembly line for E-Drive units at the BMW Group plant in Steyr, Austria. Featuring 78 processing stations, 27 robotic cells and 46 industrial robots across more than 5,600 square meters on two levels, the project ranks among the largest in PIA Automat",
+            "url": "https://roboticsandautomationnews.com/2026/08/06/pia-automation-to-build-bmw-e-drive-assembly-line-with-46-robots-and-digital-twin-technology/103954/",
+            "source": "rss",
+            "hot": true
+          }
+        ]
+      },
+      {
+        "id": "embodied-model",
+        "emoji": "4️⃣",
+        "name": "具身模型（世界模型 / 人形策略 / 基础模型）",
+        "items": [
+          {
+            "title": "ω-0提出潜在预测式世界动作模型，面向人形机器人同时进行移动、姿态调整、平衡维持与物体操作的全身协同任务。",
+            "summary": "Humanoid household tasks often require concurrent loco-manipulation, where the robot must move, adjust posture, maintain balance, and manipulate objects as a single coordinated behavior. Yet existing humanoid policies typically decompose locomotion and manipulation, while recent world-action models remain either arm-centric or video-centered. We present $ω$-0, a latent predictive whole-body world-",
+            "url": "http://arxiv.org/abs/2608.06375v1",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "GeniWorld以视觉动作构建可交互世界模型，目标是提升通用机器人策略在复杂未知及分布外环境中的稳健性与动作可控性。",
+            "summary": "Generalist robot policies exhibit strong capabilities, but their robustness in complex and unseen environments remains limited. Scaling robot learning and evaluation in diverse real-world environments remains costly and challenging. Action-conditioned world models offer a promising alternative, but they often suffer from limited action controllability and poor generalization to out-of-distribution",
+            "url": "http://arxiv.org/abs/2608.06332v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "研究从人类示范学习手写字母轨迹，并评估机器人动作的人类相似性，强调模仿学习对自然协作与信任的意义。",
+            "summary": "Learning from demonstration (LfD) provides a developmental framework through which robots can develop motor skills by observing and imitating human dynamics, reducing reliance on explicit programming to teach a skill to a robot. The resulting human-like robot motion is recognised as a key factor in building trust and enabling natural collaboration in human-robot interaction. This paper presents a ",
+            "url": "http://arxiv.org/abs/2608.06221v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "雷锋网专访聚焦人类视频如何赋能机器人学习：视频规模大、场景丰富，但缺少机器人动作标签，人的手部运动也不能直接对应机器人动作。",
+            "summary": "重新审视人类视频如何赋能机器人学习    作者丨邓哲敏    编辑丨齐铖湧                                                                                                       大模型时代，规模化的数据能带来能力跃迁，这一规律已被反复验证。当这套范式进入机器人领域，问题变得复杂。机器人需要的不仅是大量数据，而且是能够转化为动作能力的数据。人类视频近期成为研究者关注的新来源。它规模巨大、获取成本低、覆盖场景丰富，但它毕竟不是机器人数据，视频里没有机器人动作标签，人类手部运动也无法直接对应机器人的",
+            "url": "https://www.leiphone.com/category/private/V2FQ6puH0pDdAKeI.html",
+            "source": "cn_rss"
+          }
+        ]
+      },
+      {
+        "id": "embodied-chip",
+        "emoji": "5️⃣",
+        "name": "具身智能芯片（机器人计算 / 边缘 NPU）",
+        "items": []
+      },
+      {
+        "id": "manufacturing",
+        "emoji": "6️⃣",
+        "name": "制造 / 产线",
+        "items": [
+          {
+            "title": "IEEE Spectrum报道一名研究生为NASA机器人装备装配技能，主题聚焦机器人装配能力与相关研究实践。",
+            "summary": "Like many engineers, Sarah Downs says she knew she wanted to pursue a STEM career from a young age. As a teenager, she discovered robotics through her Tulsa, Okla., middle school’s First Lego League team, and she fell in love with the field, she says. Downs participated in the international robotics",
+            "url": "https://spectrum.ieee.org/graduate-student-nasas-robots-assembly",
+            "source": "rss"
+          },
+          {
+            "title": "GitHub项目ddisasm是Datalog反汇编工具，面向二进制程序分析；虽非机器人专属，但可归入制造与工程软件工具关注。",
+            "summary": "",
+            "url": "https://github.com/GrammaTech/ddisasm",
+            "source": "hn",
+            "score": 57
+          }
+        ]
+      },
+      {
+        "id": "market",
+        "emoji": "7️⃣",
+        "name": "市场 / 产业",
+        "items": [
+          {
+            "title": "Moove融资2.5亿美元，计划扩展自动驾驶车队管理业务，并希望未来不仅管理Waymo robotaxi，还能拥有相关车辆。",
+            "summary": "Moove is scaling up the autonomous vehicle fleet management side of its business and plans to someday own, not just manage, Waymo robotaxis.",
+            "url": "https://techcrunch.com/2026/08/05/moove-raises-250m-to-become-the-backbone-of-the-robotaxi-industry/",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "Walden Robotics与丰田合作推进更注重实际应用的人形机器人，反映产业关注点从单纯追逐人形形态转向可落地目标。",
+            "summary": "For a while there, it seemed as though robotics as a whole was stuck in a mad rush towards building humanoid robots mostly because it was very possible (and very lucrative) to do so, even without near-term goals that were necessarily realistic. Some of the magic of those first couple of years of the",
+            "url": "https://spectrum.ieee.org/humanoid-robots-walden-robotics-toyota",
+            "source": "rss"
+          },
+          {
+            "title": "雷锋网报道称宇树科技超百名员工参与IPO；同篇还提到众擎机器人任命前小鹏副总裁陈永海为运营总裁。公司产品与资本市场动态以官方渠道核验。",
+            "summary": "要闻提示1.OpenAI 披露攻击 Hugging Face 前，AI 智能体秘密建立内部留言板2.150.8元/股！宇树科技超百名员工参与IPO“盛宴”，一批90后千万富豪或将诞生3.DeepSeek拟上调API服务定价，预计涨幅较大4.小红书高薪招募AI人才，主导AI社交类产品5.曝字节拟训练超5万亿参数大模型，参数规模超Kimi K36.前小鹏副总裁陈永海加入众擎机器人，担任运营总裁7.王腾回应“SU7 Ultra 泊车异常”：小米汽车已迅速跟进分析，边界场景有 Bug 很正常8.谷歌Gemini换帅，首席科学家Jeff Dean离职创业今日头条OpenAI 披露攻击 Hugging F",
+            "url": "https://www.leiphone.com/category/zaobao/jTnxUYfadwnDJtNd.html",
+            "source": "cn_rss",
+            "hot": true
+          }
+        ]
+      }
+    ],
+    "industry": {
+      "stocks": [
+        {
+          "name": "特斯拉(Optimus)",
+          "sym": "TSLA",
+          "price": 328.58,
+          "pct": 2.02,
+          "currency": "USD",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "直觉外科(手术机器人)",
+          "sym": "ISRG",
+          "price": 378.81,
+          "pct": 0.91,
+          "currency": "USD",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "Symbotic(仓储机器人)",
+          "sym": "SYM",
+          "price": 40.18,
+          "pct": -12.37,
+          "currency": "USD",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "Serve Robotics(配送)",
+          "sym": "SERV",
+          "price": 5.08,
+          "pct": -10.0,
+          "currency": "USD",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "UiPath(自动化)",
+          "sym": "PATH",
+          "price": 15.05,
+          "pct": 15.33,
+          "currency": "USD",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "英伟达(机器人算力)",
+          "sym": "NVDA",
+          "price": 223.96,
+          "pct": 8.38,
+          "currency": "USD",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "京东(物流机器人)",
+          "sym": "9618.HK",
+          "price": 127.5,
+          "pct": -1.39,
+          "currency": "HKD",
+          "note": "本周收盘与5日涨跌数据见表。"
+        }
+      ],
+      "cn_stocks": [
+        {
+          "name": "优必选",
+          "secid": "116.09880",
+          "market": "港股",
+          "price": 90.0,
+          "pct": 3.75,
+          "currency": "HKD",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "地平线机器人",
+          "secid": "116.09660",
+          "market": "港股",
+          "price": 5.0,
+          "pct": -2.91,
+          "currency": "HKD",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "汇川技术",
+          "secid": "0.300124",
+          "market": "A股",
+          "price": 64.6,
+          "pct": 1.91,
+          "currency": "CNY",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "埃斯顿",
+          "secid": "0.002747",
+          "market": "A股",
+          "price": 35.13,
+          "pct": 0.92,
+          "currency": "CNY",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "绿的谐波",
+          "secid": "1.688017",
+          "market": "A股",
+          "price": 347.76,
+          "pct": 3.49,
+          "currency": "CNY",
+          "note": "本周收盘与5日涨跌数据见表。"
+        },
+        {
+          "name": "科大讯飞",
+          "secid": "0.002230",
+          "market": "A股",
+          "price": 43.53,
+          "pct": -0.34,
+          "currency": "CNY",
+          "note": "本周收盘与5日涨跌数据见表。"
+        }
+      ],
+      "funding": [
+        {
+          "title": "Moove融资2.5亿美元，押注robotaxi车队基础设施",
+          "summary": "Moove宣布融资2.5亿美元，用于扩展自动驾驶车队管理业务，并计划未来拥有Waymo robotaxi。",
+          "url": "https://techcrunch.com/2026/08/05/moove-raises-250m-to-become-the-backbone-of-the-robotaxi-industry/",
+          "amount": "$250M",
+          "region": "海外"
+        },
+        {
+          "title": "Proception宣布1100万美元融资，专注机器人手部训练数据",
+          "summary": "Proception在解决与特斯拉的商业秘密诉讼后宣布1100万美元融资，报道指出其通过独特方式采集训练数据。",
+          "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+          "amount": "$11M",
+          "region": "海外"
+        },
+        {
+          "title": "宝马E-Drive产线引入46台工业机器人与数字孪生",
+          "summary": "PIA Automation将为宝马Steyr工厂建设包含78个加工站、27个机器人单元和46台工业机器人的E-Drive装配线。",
+          "url": "https://roboticsandautomationnews.com/2026/08/06/pia-automation-to-build-bmw-e-drive-assembly-line-with-46-robots-and-digital-twin-technology/103954/",
+          "amount": null,
+          "region": "海外"
+        },
+        {
+          "title": "宇树科技员工参与IPO，众擎机器人任命运营总裁",
+          "summary": "雷锋网报道宇树科技超百名员工参与IPO，并提到前小鹏副总裁陈永海加入众擎机器人担任运营总裁；相关公司动态以官方渠道核验。",
+          "url": "https://www.leiphone.com/category/zaobao/jTnxUYfadwnDJtNd.html",
+          "amount": null,
+          "region": "国内"
+        }
+      ]
+    },
+    "highlights": [
+      "ω-0把人形机器人移动、平衡与操作统一到潜在预测式世界动作模型中。",
+      "PIA为宝马E-Drive产线规划46台工业机器人，并将数字孪生用于大规模装配部署。",
+      "本周产业资本继续关注robotaxi、机器人手部训练数据与人形机器人商业化。"
+    ]
+  },
+  "meta": {}
+}
