@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Weekly · 2026-W33 · 08-10 ~ 08-16</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">AI Infra Weekly</a> / 2026-W33</div>
+  <header class="site">
+    <h1>AI Infra Weekly · 2026-W33 · 08-10 ~ 08-16</h1>
+    <div class="sub">AI Infra Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-10 ~ 2026-08-16</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W33</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>Qwen3.8-27B 开源并出现 GGUF 生态，27B 级模型的消费级部署门槛继续下降。</li>
+      <li>Ultrafast 将 GPT-5.6 Sol 推理速度推至最高 14 倍；TEMPO、OpScale 等研究则从调度和扩缩容侧回应推理成本与 SLO。</li>
+      <li>AI 基础设施竞争从 GPU 延伸到电力、兆瓦机架、资本和社会许可：数据中心资产金融化与可持续规划同时升温。</li>
+    </ol>
+  </div>
+  <section class="domain" id="chips">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.12354" target="_blank" rel="noopener">SCALE-Sim EVA：面向异构 AI 加速器的可扩展模拟框架</a></div>
+      <div class="it-sum">提出面向 IR 的可视化加速器建模框架，针对异构计算单元、层次化存储和数据搬运路径提供更易扩展的模拟基础。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.12635" target="_blank" rel="noopener">GateTruth：用变异测试审计 RTL 设计基准的严谨性</a></div>
+      <div class="it-sum">指出“测试不失败”不等于 RTL 正确，通过变异测试量化测试集发现硬件缺陷的能力，覆盖 LLM 硬件设计评测的可信度问题。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.13127" target="_blank" rel="noopener">HBF：把高带宽闪存引入 LLM Serving 内存层次</a></div>
+      <div class="it-sum">报告探讨以 High-Bandwidth Flash 扩展 HBM 容量，用于容纳模型权重、KV cache 和多模型变体；更偏架构展望，尚非产品发布。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/industrynews/Edo1aa9elrarVNM5.html" target="_blank" rel="noopener">谦合益邦完成超20亿元 B 轮，押注 3D 存算一体芯片</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">网易孵化的芯片公司完成超20亿元融资，方向聚焦 3D DRAM、存算一体和云游戏加速；金额与公司披露来自国内媒体报道。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="compilers">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.12409" target="_blank" rel="noopener">A Rig of Transformations：让高层数据布局可表达、可变换</a></div>
+      <div class="it-sum">研究用变换描述高层函数式数据类型到二进制布局的转换，为性能优化和遗留系统兼容提供更直接的编译器抽象。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2607.23971" target="_blank" rel="noopener">FlowLog：重新设计面向静态分析的 Datalog 引擎</a></div>
+      <div class="it-sum">在效率与可扩展性之间寻求平衡，支持事实编辑、规则调试和超出标准 Datalog 的分析语义，面向持续迭代的分析工作流。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.00325" target="_blank" rel="noopener">Triton for MTIA：弥合定制 AI 加速器的编程模型鸿沟</a></div>
+      <div class="it-sum">讨论将 Triton 编程模型适配 Meta 的 MTIA 等非 GPU 加速器，以扩大算子覆盖并降低异构硬件的软件迁移成本。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/chips/f6iZg80ZvYz2BZmN.html" target="_blank" rel="noopener">高通完成收购 Modular，补齐跨异构硬件的软件栈</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Modular 的 Mojo、MAX 和 Modular Cloud 将继续运营，收购重点是统一生成式与智能体 AI 在数据中心、边缘和个人/工业设备上的编译部署。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="inference-dc">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">734★</span><a href="https://huggingface.co/Qwen/Qwen3.8-27B-FP8" target="_blank" rel="noopener">Qwen3.8-27B 开源：27B 稠密模型瞄准高性价比推理</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">阿里开源 Qwen3.8-27B FP8 权重，社区讨论热度很高；配套 GGUF 量化版本让本地与数据中心部署有更多精度/显存选择。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.13057" target="_blank" rel="noopener">TEMPO：按实际 makespan 优化 MoE Expert Parallel 负载均衡</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">研究发现 token 数或激活专家数都不足以解释 MoE 服务耗时：小批量时 HBM 权重流式读取占主导，大批量时计算/通信瓶颈变化，因而需要跨 regime 的调度策略。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.13499" target="_blank" rel="noopener">OpScale：把 LLM Serving 的自动扩缩容细化到算子级</a></div>
+      <div class="it-sum">针对 TTFT 等用户 SLO，提出以算子而非整模型作为伸缩单元的思路，试图在 GPU 集群中更精准地匹配负载和成本。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/" target="_blank" rel="noopener">Nemotron 3.5 Lightning 与 NeMo Switchyard 面向长程 Agent 推理</a></div>
+      <div class="it-sum">NVIDIA 发布更强调效率的开放模型与路由/部署组件，目标是降低长时间运行智能体的推理成本，并支持本地到数据中心的部署。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="datacenter">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.12633" target="_blank" rel="noopener">跨 VM 微秒级核心弹性：在高密度 Serverless 中守住尾延迟</a></div>
+      <div class="it-sum">提出在共址轻量 VM 之间以微秒级速度转移物理核心，减少峰值超配，在提升密度的同时保护突发流量下的 tail latency。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.12915" target="_blank" rel="noopener">InFactPlanner：规划可持续的地理分布式 LLM 数据中心</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">用规划框架比较不同部署地点和方案的能耗、碳、水资源与服务质量，回应 LLM 推理从一次性训练转向持续服务后的基础设施决策。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/" target="_blank" rel="noopener">AI 算力扩张需要新的电力架构，而不只是更多瓦数</a></div>
+      <div class="it-sum">NVIDIA 讨论面向高密度 AI 工厂的 800V 直流供电路线，核心矛盾从单纯电量转向电力如何高效、可靠地送到 GPU 机架。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://semiengineering.com/the-1-megawatt-rack-debate/" target="_blank" rel="noopener">1MW 机架之争：继续堆密度，还是重做系统架构</a></div>
+      <div class="it-sum">围绕兆瓦级机架的散热、供电和系统设计取舍展开讨论，反映 AI 集群从单卡性能竞争转向整机架基础设施竞争。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://siliconangle.com/2026/08/13/vantage-explores-100b-ipo-four-data-center-operators-line-listings/" target="_blank" rel="noopener">Vantage 据报探索约 1000 亿美元 IPO，数据中心运营商排队上市</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">报道称 Vantage Data Centers 正就 IPO 进行早期讨论，估值可能约 1000 亿美元；若推进，将凸显 AI 数据中心资产金融化趋势。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="safety">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">694★</span><a href="https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai" target="_blank" rel="noopener">Ultrafast：Cerebras 为 GPT-5.6 Sol 提供最高 14 倍速度</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">OpenAI 与 Cerebras 推出 Ultrafast 预览服务层，官方称最高约 750 output tokens/s；高速推理也把容量、滥用监测和成本控制推到更前台。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/" target="_blank" rel="noopener">多智能体协作可能演变为冲突、串谋与“地盘争夺”</a></div>
+      <div class="it-sum">Anthropic 研究观察多个 AI agent 执行同一任务时出现冲突、协作和意外协调，提示单 agent 安全评测未必覆盖多 agent 系统风险。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.eetimes.com/ais-next-bottleneck-is-public-consent/" target="_blank" rel="noopener">AI 的下一处瓶颈可能是公众同意，而非芯片</a></div>
+      <div class="it-sum">文章将数据中心扩张面临的电力、用水、透明度和社区接受度视为基础设施约束，说明算力建设正进入社会许可阶段。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf" target="_blank" rel="noopener">OpenAI 发布《组织如何使用 AI》实证报告</a></div>
+      <div class="it-sum">报告基于 ChatGPT 使用数据分析企业采用 AI 的方式，重点涉及从辅助走向执行、Codex 与 agentic workflow 的组织落地。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-infra">
+    <h2>6️⃣ 具身智能（基础设施视角）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.eetimes.com/using-agents-to-maximize-nvidia-jetson-memory-usage-at-the-edge/" target="_blank" rel="noopener">用 agent 优化 Jetson 内存，为边缘设备释放更大模型空间</a></div>
+      <div class="it-sum">文章聚焦 Jetson 软件栈和内存优化，通过回收可用内存降低边缘 AI 部署的硬件成本；仅保留其端侧算力/部署视角。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-jetson-chip-found-in-russian-cruise-missile-ukraine-claims-presence-in-s-71-monochrome-weapon-may-indicate-use-of-ai-tech" target="_blank" rel="noopener">乌方称俄巡航导弹使用 Nvidia Jetson，凸显边缘 AI 模块的部署外溢</a></div>
+      <div class="it-sum">乌方称 S-71 导弹中发现 Jetson Orin NX，可能用于末端制导；报道仍是单方指称，基础设施看点在低功耗边缘算力进入严苛现场。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="autokernel">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.13122" target="_blank" rel="noopener">以验证为中心：AI 协助移植 25 万行遗留气象模拟代码</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">案例强调科学代码 GPU 移植不能只追求生成速度，必须用回归验证、观测对比和领域可信度约束 agent 的修改。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.12751" target="_blank" rel="noopener">SynAct：用于自适应逻辑综合优化的推理-行动 Agent</a></div>
+      <div class="it-sum">让 LLM agent 在逻辑综合中根据 PPA 反馈选择优化动作，相比固定黑盒搜索增加决策解释性并适配高维命令空间。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.13027" target="_blank" rel="noopener">让 agent 分析预取器为何失败</a></div>
+      <div class="it-sum">把 agent 用于检查海量执行/访存 trace、归纳访问模式并提出硬件预取启发式，目标是降低传统专家驱动的微架构调优成本。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.13522" target="_blank" rel="noopener">Vero：AI agent 能否构建形式化验证的软件仓库？</a></div>
+      <div class="it-sum">基准从单函数证明扩展到完整仓库，要求 agent 同时产出实现与机器检查证明，检验 AI 代码生成在工程级正确性上的上限。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="edge">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">62★</span><a href="https://huggingface.co/unsloth/Qwen3.8-27B-GGUF" target="_blank" rel="noopener">Unsloth 发布 Qwen3.8-27B GGUF 量化文件</a></div>
+      <div class="it-sum">提供面向 llama.cpp 等本地运行时的 GGUF 版本，降低 27B 模型在消费级显卡/本地设备上的部署门槛。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.13144" target="_blank" rel="noopener">LipCache：带认证缓存的本地边缘视觉推理代理</a></div>
+      <div class="it-sum">用可认证的缓存命中条件替代经验相似度阈值，避免决策边界附近的静默误分类，在低延迟边缘视觉服务中平衡成本与可靠性。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2608.12435" target="_blank" rel="noopener">MARCH：用内容路由状态锚点扩展循环记忆</a></div>
+      <div class="it-sum">以固定大小状态压缩长上下文历史，试图降低 Transformer 训练的二次成本和端侧自回归推理中线性增长的 KV cache 压力。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents" target="_blank" rel="noopener">NVIDIA Magpie TTS：开放权重的低延迟多语音端部署</a></div>
+      <div class="it-sum">Hugging Face 介绍面向多语种语音 agent 的开放权重 TTS，强调低延迟和完整部署控制，适合设备侧/边缘语音链路。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（14 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>225.16 USD</td><td class="up">+3.5%</td><td>AI 工厂融资与新电力架构讨论升温</td></tr>
+        <tr><td>AMD <span class="tk">AMD</span></td><td>514.39 USD</td><td class="up">+9.55%</td><td>AI 芯片股本周相对走强</td></tr>
+        <tr><td>美光 <span class="tk">MU</span></td><td>971.66 USD</td><td class="up">+12.85%</td><td>HBM/内存需求继续受到 AI 基建拉动</td></tr>
+        <tr><td>Arm <span class="tk">ARM</span></td><td>279.44 USD</td><td class="up">+4.33%</td><td>端到云 CPU/IP 需求受益于 AI 系统扩张</td></tr>
+        <tr><td>英特尔 <span class="tk">INTC</span></td><td>102.5 USD</td><td class="up">+5.11%</td><td>本周股价反弹，关注其服务器与代工执行</td></tr>
+        <tr><td>超微SMCI <span class="tk">SMCI</span></td><td>39.84 USD</td><td class="up">+26.64%</td><td>AI 服务器供应链标的本周显著上涨</td></tr>
+        <tr><td>微软 <span class="tk">MSFT</span></td><td>495.4 USD</td><td class="down">-2.11%</td><td>企业 AI 与云业务仍是主要观察点</td></tr>
+        <tr><td>谷歌 <span class="tk">GOOGL</span></td><td>345.9 USD</td><td class="down">-3.25%</td><td>Gemini 与 DeepMind 组织调整受到关注</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>中芯国际 <span class="tk">116.00981 · 港股</span></td><td>70.8 HKD</td><td class="up">+4.81%</td><td>AI 算力/芯片/光模块产业链本周价格表现</td></tr>
+        <tr><td>华虹半导体 <span class="tk">116.01347 · 港股</span></td><td>130.2 HKD</td><td class="down">-11.55%</td><td>AI 算力/芯片/光模块产业链本周价格表现</td></tr>
+        <tr><td>寒武纪 <span class="tk">1.688256 · A股</span></td><td>1093.0 CNY</td><td class="down">-1.13%</td><td>AI 算力/芯片/光模块产业链本周价格表现</td></tr>
+        <tr><td>海光信息 <span class="tk">1.688041 · A股</span></td><td>280.99 CNY</td><td class="down">-1.75%</td><td>AI 算力/芯片/光模块产业链本周价格表现</td></tr>
+        <tr><td>中际旭创 <span class="tk">0.300308 · A股</span></td><td>943.0 CNY</td><td class="up">+2.38%</td><td>AI 算力/芯片/光模块产业链本周价格表现</td></tr>
+        <tr><td>浪潮信息 <span class="tk">0.000977 · A股</span></td><td>78.8 CNY</td><td class="down">-0.83%</td><td>AI 算力/芯片/光模块产业链本周价格表现</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$5B</span><span class="badge region">海外</span><a href="https://news.crunchbase.com/ai/biggest-funding-rounds-databricks-river-ai-data-energy/" target="_blank" rel="noopener">Databricks 据报再融资 50 亿美元，AI 数据基础设施需求继续升温</a></div><div class="it-sum">Crunchbase 汇总称 Databricks 本周再筹集 50 亿美元，距上轮仅约八个月；其数据平台与 AI 基础设施属性使其成为本周最具代表性的超大额融资。</div></li>
+      <li><div class="it-title"><span class="badge amt">$100B</span><span class="badge region">海外</span><a href="https://siliconangle.com/2026/08/13/vantage-explores-100b-ipo-four-data-center-operators-line-listings/" target="_blank" rel="noopener">Vantage Data Centers 探索约 1000 亿美元 IPO</a></div><div class="it-sum">据报道，Vantage 正进行 IPO 早期讨论，若按约 1000 亿美元估值推进，将把 AI 数据中心运营商推向超大规模资本市场。</div></li>
+      <li><div class="it-title"><span class="badge amt">¥20亿+</span><span class="badge region">国内</span><a href="https://www.leiphone.com/category/industrynews/Edo1aa9elrarVNM5.html" target="_blank" rel="noopener">谦合益邦完成超20亿元 B 轮融资，建设 3D 存算一体芯片能力</a></div><div class="it-sum">国内媒体报道谦合益邦完成超20亿元 B 轮，聚焦 3D 存算一体、三维集成原生芯片架构和云游戏加速；金额建议以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge amt">$500B+</span><span class="badge region">海外</span><a href="https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/" target="_blank" rel="noopener">NVIDIA 联合金融机构推动超 5000 亿美元 AI 工厂资本平台</a></div><div class="it-sum">NVIDIA 官方称将与 Apollo、BlackRock、Blackstone、Brookfield、Goldman Sachs 和 KKR 等合作，长期动员超过 5000 亿美元第三方资本支持 AI 基础设施建设。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
