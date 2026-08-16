@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W33 · 08-10 ~ 08-16</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W33</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W33 · 08-10 ~ 08-16</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-10 ~ 2026-08-16</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W33</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>VLA 可解释性开始进入运行时监控：π₀.₅ 内部表征可解码任务进度信号。</li>
+      <li>动作条件世界模型从“生成逼真”转向“动作忠实”和接触前失败预警。</li>
+      <li>产业侧同步升温：重载轮臂机器人、谐波减速器新品与人形机器人资本事件集中出现。</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13474v1" target="_blank" rel="noopener">从 VLA 表征中解码任务进度</a></div>
+      <div class="it-sum">研究探测 π₀.₅ 的残差流，发现其中可读出归一化剩余时间等任务进度信号，为理解与在线监控通用操作策略提供工具。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13395v1" target="_blank" rel="noopener">FIRE-VLA：用失败信息推动自动驾驶 VLA 自进化</a></div>
+      <div class="it-sum">该方法针对同组轨迹全部失败时相对奖励只能排序、难以指出失败区域之外正确行为的问题，引入失败信息改进策略优化。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13438v1" target="_blank" rel="noopener">ContactGuard：接触发生前监控操作风险</a></div>
+      <div class="it-sum">研究使用动作条件潜在世界模型，在腕部相机视角下提前识别不良接近动作，力求在推错、抓空或滑移发生前干预。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13415v1" target="_blank" rel="noopener">有限预算下的机器人技能“刻意练习”</a></div>
+      <div class="it-sum">Deliberate Practice 在顺序任务和有限练习预算下，计算期望累计回报最优的技能练习分配，并兼顾技能能否在预算内掌握。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13422v1" target="_blank" rel="noopener">动作驱动的无标签视觉关注瓶颈</a></div>
+      <div class="it-sum">方法不依赖凝视、物体类别或可供性标注，而从动作中涌现视觉关注区域，以提升视觉运动策略的数据效率。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13511v1" target="_blank" rel="noopener">浏览器原生的 4D 海洋滑翔机规划测试场</a></div>
+      <div class="it-sum">该数字测试场把选定海域转化为可复现的四维实验环境，降低真实海试中载具、人员与不可重置海况带来的评测门槛。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（世界模型 / 人形策略 / 基础模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13489v1" target="_blank" rel="noopener">DreamX-Phi 1.0：机器人操作的动作条件视频世界模型</a></div>
+      <div class="it-sum">模型根据观测帧、语言指令以及末端位姿和夹爪状态序列预测未来画面，并强调视觉逼真之外还需检验动作忠实性。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13555v1" target="_blank" rel="noopener">HumanTracker：面向人类感知的人形运动跟踪基准</a></div>
+      <div class="it-sum">基准关注传统逐帧运动学误差遗漏的支撑不稳、脚滑和触地时序错误，试图让人形运动跟踪评测更贴近视频中的主观感受。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13448v1" target="_blank" rel="noopener">环境—社会解耦的社交机器人持续学习</a></div>
+      <div class="it-sum">研究让机器人从顺序经验中适应不同环境规范，并将环境因素与社会因素解耦，以减少相似布局下不合时宜的动作。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/industrynews/24fbshcNUNahZuQz.html" target="_blank" rel="noopener">鹿明发布双臂负载 50kg 的轮臂机器人 MOS2</a></div>
+      <div class="it-sum">MOS2 面向工业重载场景，主打 50kg 双臂负载、全向移动、多模态感知与持续作业能力，定位为产业现场的 AI Worker。公司产品指标仍需官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/08/14/schaeffler-unveils-formed-strain-wave-gearboxes-for-humanoid-robots/104157/" target="_blank" rel="noopener">Schaeffler 推出面向人形机器人的成形谐波减速器</a></div>
+      <div class="it-sum">Schaeffler 扩展人形机器人产品组合，将成形应变波齿轮箱推向市场；报道指出减速器是人形机器人执行器的重要成本构成。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/graduate-student-nasas-robots-assembly" target="_blank" rel="noopener">NASA 机器人装配技能研究走向航天任务</a></div>
+      <div class="it-sum">IEEE Spectrum 报道研究人员为 NASA 机器人开发装配能力，聚焦机器人在航天场景中的自主装配应用。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.13396v1" target="_blank" rel="noopener">卷扬驱动连续体手术机器人：设计、建模与感知协同</a></div>
+      <div class="it-sum">论文以驱动—感知协同设计解决紧凑卷扬机构中线缆张力难测的问题，整合结构设计、模型以及形状与力感知。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/08/14/lg-to-unveil-new-nvidia-powered-humanoid-robot-in-early-2027/104173/" target="_blank" rel="noopener">LG 计划 2027 年初发布 Nvidia 技术栈人形机器人</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">报道显示 LG 正开发基于 Nvidia Isaac GR00T 的新一代双足人形机器人，计划于 2027 年第一季度公开亮相；具体进度需以双方官方渠道为准。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/08/14/unitree-ipo-oversubscribed-more-than-5000-times-as-investors-pile-into-humanoid-robotics/104171/" target="_blank" rel="noopener">Unitree IPO 据报获逾 5000 倍认购</a></div>
+      <div class="it-sum">报道表示宇树机器人 IPO 定价为每股 150.8 元，募资约 9 亿美元，认购热度凸显人形机器人资本市场关注；数据需以交易所与公司公告为准。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/humanoid-robots-walden-robotics-toyota" target="_blank" rel="noopener">Walden Robotics 与 Toyota 合作推进实用型人形机器人</a></div>
+      <div class="it-sum">IEEE Spectrum 报道双方合作把重点放在具备近期实际目标的人形机器人上，反映行业从概念展示向可用任务推进。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/08/14/sony-robot-hand-patent-hints-at-renewed-interest-in-humanoid-robotics/104150/" target="_blank" rel="noopener">Sony 机器人手专利披露类人对生拇指设计</a></div>
+      <div class="it-sum">Sony 的美国专利申请展示带类人对生拇指的机器人手，成为其持续研究人形与具身机器人的又一公开信号。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（11 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>342.27 USD</td><td class="up">+3.44%</td><td>Optimus 相关观察标的</td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>394.51 USD</td><td class="up">+0.29%</td><td>手术机器人观察标的</td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>42.7 USD</td><td class="up">+6.46%</td><td>仓储机器人观察标的</td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>4.99 USD</td><td class="up">+1.42%</td><td>配送机器人观察标的</td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>225.16 USD</td><td class="up">+3.5%</td><td>机器人计算观察标的</td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>110.2 HKD</td><td class="down">-15.49%</td><td>物流机器人观察标的</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>90.85 HKD</td><td class="down">-0.06%</td><td>人形机器人观察标的</td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>5.0 HKD</td><td class="down">-0.89%</td><td>机器人计算观察标的</td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>61.2 CNY</td><td class="up">+0.21%</td><td>工业自动化观察标的</td></tr>
+        <tr><td>埃斯顿 <span class="tk">0.002747 · A股</span></td><td>34.75 CNY</td><td class="up">+0.23%</td><td>工业机器人观察标的</td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>41.78 CNY</td><td class="down">-0.43%</td><td>机器人智能观察标的</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">约 9 亿美元</span><span class="badge region">国内</span><a href="https://roboticsandautomationnews.com/2026/08/14/unitree-ipo-oversubscribed-more-than-5000-times-as-investors-pile-into-humanoid-robotics/104171/" target="_blank" rel="noopener">Unitree IPO 据报募资约 9 亿美元</a></div><div class="it-sum">报道显示宇树机器人 IPO 获高倍数认购；金额与认购数据需以交易所及公司官方公告核验。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://www.leiphone.com/category/industrynews/aEyXlap53PQXDDYJ.html" target="_blank" rel="noopener">索塔无界拟在欧洲商超部署逾千台具身机器人</a></div><div class="it-sum">报道披露其与欧洲大型商超集团规划未来三年部署超过千台机器人，并将 4D 世界动作模型用于真实货架场景；部署计划需官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://www.leiphone.com/category/industrynews/24fbshcNUNahZuQz.html" target="_blank" rel="noopener">鹿明推出工业重载轮臂机器人 MOS2</a></div><div class="it-sum">新品主打 50kg 双臂负载和工业持续作业，产品指标与商业交付情况需以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://roboticsandautomationnews.com/2026/08/14/lg-to-unveil-new-nvidia-powered-humanoid-robot-in-early-2027/104173/" target="_blank" rel="noopener">LG 与 Nvidia 推进新一代人形机器人</a></div><div class="it-sum">报道指 LG 计划于 2027 年第一季度公开新机器人，采用 Nvidia Isaac GR00T；发布时间与产品细节需官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
