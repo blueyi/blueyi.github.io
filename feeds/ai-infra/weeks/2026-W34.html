@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Weekly · 2026-W34 · 08-17 ~ 08-23</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">AI Infra Weekly</a> / 2026-W34</div>
+  <header class="site">
+    <h1>AI Infra Weekly · 2026-W34 · 08-17 ~ 08-23</h1>
+    <div class="sub">AI Infra Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-17 ~ 2026-08-23</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W34</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>AI 基础设施融资进一步金融化：NVIDIA 披露目标调动超过 5000 亿美元第三方资本，供电、机架和资产回报成为算力扩张的核心约束。</li>
+      <li>推理系统从单点优化走向运行时协同：CacheRoute、FleetSieve 与 Edge RAG 压缩分别从缓存路由、车队 profiling 和上下文控制降低服务成本。</li>
+      <li>端侧与开发基础设施继续开放化：Mojo 开源、DiffusionGemma 和 125M 本地 MIDI 模型显示，从编译器到专用小模型的部署边界仍在下移。</li>
+    </ol>
+  </div>
+  <section class="domain" id="chips">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19395" target="_blank" rel="noopener">HYDRA：面向混合式 LLM 的异构 Chiplet 设计探索</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">论文针对 Transformer–Mamba 混合模型的异构计算与通信，提出覆盖静态架构和动态运行策略的 Chiplet 设计空间探索框架。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19471" target="_blank" rel="noopener">异构 HBM 系统的多状态可靠性与升级设计</a></div>
+      <div class="it-sum">研究把 HBM 服务能力建模为全带宽、降级带宽和零带宽等多状态，并用阈值剪枝方法进行可靠性与升级方案的精确分析。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19628" target="_blank" rel="noopener">解耦线程与寄存器的 GPU 张量执行模型</a></div>
+      <div class="it-sum">论文重新审视现代 Tensor Core 的操作数供给和线程编排，提出线程—寄存器解耦的执行模型以提升张量计算效率。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.tomshardware.com/tech-industry/semiconductors/lg-enters-chip-packaging-arena-with-laser-direct-imaging-machine-as-tsmcs-cowos-remains-constrained-maskless-machine-is-designed-to-pattern-fine-interconnects-trading-resolution-for-higher-throughput" target="_blank" rel="noopener">LG 以激光直写切入先进封装</a></div>
+      <div class="it-sum">LG 推出用于芯片封装和高密度 PCB 的无掩模激光直写设备，在 CoWoS 产能受限背景下以分辨率换取更高吞吐。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="compilers">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">409★</span><a href="https://www.modular.com/blog/mojo-open-source" target="_blank" rel="noopener">Mojo 正式开源</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Modular 宣布 Mojo 开源，进一步降低开发者参与其面向 AI 与高性能计算语言生态的门槛。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19273" target="_blank" rel="noopener">DSLHyPE：面向 Exascale PDE 引擎的 DSL 内核语言</a></div>
+      <div class="it-sum">DSLHyPE 用 Python 嵌入式 DSL 描述数值方案、用 C/C++ 表达物理项，并将描述降级到 MLIR，面向 ExaHyPE 的可移植高性能内核生成。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19889" target="_blank" rel="noopener">Axon：形状安全且框架无关的 LLM 架构 DSL</a></div>
+      <div class="it-sum">Axon 试图把模型定义从单一框架中抽离，以形状安全和框架无关的 DSL 支持训练与推理实现之间的迁移。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19728" target="_blank" rel="noopener">Hippogriff：统一核心与模块语义的语言</a></div>
+      <div class="it-sum">Hippogriff 以依赖类型和模块级小类型宇宙统一核心语言与模块系统，同时保留一般递归。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="inference-dc">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19677" target="_blank" rel="noopener">CacheRoute：为大规模 LLM 服务规划前缀亲和路由</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">CacheRoute 通过周期性路由计划把高频前缀稳定放到温缓存集合，同时按预期负载分配，试图在前缀复用和服务器过载之间取得平衡。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19535" target="_blank" rel="noopener">Edge RAG 的自适应上下文压缩</a></div>
+      <div class="it-sum">论文将检索上下文压缩纳入运行时控制，针对 prefill、KV 缓存、内存流量、延迟和能耗开销动态裁剪上下文。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19659" target="_blank" rel="noopener">FleetSieve：面向 SLO 的 LLM Fleet 决策关键 profiling</a></div>
+      <div class="it-sum">FleetSieve 只优先测量可能改变最终资源配置的张量并行度与副本组合，减少为 LLM 服务车队做容量规划时的穷举 profiling。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents" target="_blank" rel="noopener">Magpie TTS：开放权重的低延迟多语音代理部署</a></div>
+      <div class="it-sum">NVIDIA 介绍面向多语种语音代理的 Magpie TTS，强调开放权重与完整部署控制，直接对应低延迟语音推理场景。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="datacenter">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">143★</span><a href="https://encore.dev/blog/firecracker-apple-silicon" target="_blank" rel="noopener">Apple Silicon 上重建 Linux MicroVM 栈</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Encore 分享在 Apple Silicon 上重建 Firecracker 等 Linux MicroVM 栈的实践，关注虚拟化、启动和本地开发基础设施。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/" target="_blank" rel="noopener">AI Factory 算力开始成为可投资资产类别</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">NVIDIA 称已与 Apollo、BlackRock、Blackstone、Brookfield、Goldman Sachs 和 KKR 合作，建立面向 AI 基础设施建设的融资平台，目标长期调动超过 5000 亿美元第三方资本。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/" target="_blank" rel="noopener">AI 工厂扩张转向 800V 直流供电架构</a></div>
+      <div class="it-sum">NVIDIA 将高密度 AI 机架的瓶颈归因于供电路径而不只是总瓦数，提出面向更高机架密度和可扩展性的 800V 直流电力架构。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19412" target="_blank" rel="noopener">模型服务的 Lazy Pull：启动更快但成本与故障被延后</a></div>
+      <div class="it-sum">论文在 Kubernetes/KServe 上比较 eStargz/stargz-snapshotter、AWS SOCI 与 eager baseline，指出惰性镜像拉取可能把启动成本和失败语义推迟到首次访问。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/" target="_blank" rel="noopener">Starcloud 为轨道数据中心融资 2.5 亿美元</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">TechCrunch 报道 Starcloud 为轨道数据中心筹得 2.5 亿美元，显示 AI/数据中心基础设施的部署想象继续向太空延伸。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="safety">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities" target="_blank" rel="noopener">OpenAI：在网络安全关键能力时代放缓模型开发节奏</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">OpenAI 表示将加强前沿模型的监测、对齐与安全，并以更谨慎的节奏推进具备网络安全关键能力的模型开发。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://openai.com/index/offering-zero-data-retention-for-frontier-models" target="_blank" rel="noopener">OpenAI 为前沿模型提供零数据保留</a></div>
+      <div class="it-sum">OpenAI 重申符合条件的 API 客户可使用 Zero Data Retention，并预览在不牺牲数据隐私的前提下进行高级安全处理的方案。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19338" target="_blank" rel="noopener">Mechanistic Tomography：面向控制的可解释性测量</a></div>
+      <div class="it-sum">论文把 activation patching、梯度、Hessian-vector product 和子集干预放进共同的测量框架，强调解释性方法对应的访问假设和目标量并不相同。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">369★</span><a href="https://github.com/anthropics/claude-code/issues/6235" target="_blank" rel="noopener">Claude Code 社区请求支持 AGENTS.md</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">该 HN 热议 issue 反映开发者希望用 AGENTS.md 统一代理工作区指令与约束，属于 agent 工程治理和可复现协作基础设施。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-infra">
+    <h2>6️⃣ 具身智能（基础设施视角）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19557" target="_blank" rel="noopener">自动驾驶边缘侧的 deadline-aware 混合关键任务调度</a></div>
+      <div class="it-sum">论文研究自动驾驶将感知任务卸载到 MEC 服务器时的混合关键性调度，重点是安全任务错过 deadline 的风险，而不是一般性能退化。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.eetimes.com/running-local-llms-on-the-arduino-uno-q-board-a-practical-guide/" target="_blank" rel="noopener">Arduino UNO Q 上运行本地 LLM 的实践</a></div>
+      <div class="it-sum">EE Times 以 Arduino UNO Q 为例讨论模型选择、量化、内存约束和真实边缘 AI 用例，提供面向嵌入式设备的本地推理视角。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="autokernel">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.20137" target="_blank" rel="noopener">为编译器优化启用形式化性能与编译时间保证</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">论文提出验证编译器优化 pass 的性能和编译时间属性，而不只验证语义保持，目标是减少启发式搜索导致的慢代码和不可预测编译时间。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19296" target="_blank" rel="noopener">HyperCut：用有向超图和早期过滤加速跨层调度</a></div>
+      <div class="it-sum">HyperCut 针对 tiled accelerator 的跨层调度，在细粒度层内调度完成前提前反馈代价，以提升资源利用率和能效。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2608.19705" target="_blank" rel="noopener">用堆叠集成模型估算异构存储 IP 的 MBIST 开销</a></div>
+      <div class="it-sum">论文使用机器学习提前估计 MBIST 面积与测试时间，为 AI/边缘 SoC 的存储规划提供设计阶段的自动化成本反馈。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/" target="_blank" rel="noopener">SkillOpt：把 Agent 技能优化变成训练过程</a></div>
+      <div class="it-sum">Microsoft Research 提出把代理指令或技能的编辑转化为可训练的优化过程，在不改变模型权重的情况下改善代理行为可靠性。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="edge">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">574★</span><a href="https://simedw.com/2026/08/20/midi-autocomplete/" target="_blank" rel="noopener">125M 模型在设备端自动补全钢琴演奏</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Show HN 项目训练 125M 模型在本地完成 MIDI 钢琴续写，展示端侧模型在专用任务上的可用性和低延迟优势。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">158★</span><a href="https://arxiv.org/abs/2608.00146" target="_blank" rel="noopener">DiffusionGemma 技术报告</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Google 论文介绍 DiffusionGemma，聚焦扩散式语言模型路线，为小模型和端侧生成探索不同于自回归解码的推理路径。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://huggingface.co/blog/allenai/olmoearth-embeddings" target="_blank" rel="noopener">OlmoEarth embeddings 支持自定义 embedding 导出</a></div>
+      <div class="it-sum">Hugging Face 介绍从 OlmoEarth Studio 导出定制 embedding，用于下游分析，适合资源受限环境中的专用表征部署。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.microsoft.com/en-us/research/blog/evolib-turning-experience-into-evolving-knowledge/" target="_blank" rel="noopener">EvoLib：让模型把经验沉淀为可复用知识</a></div>
+      <div class="it-sum">EvoLib 关注部署后的经验积累，通过提炼可复用技能和洞见来帮助模型跨任务适应，而不是简单增加记忆量。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（10 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>214.72 USD</td><td class="down">-4.57%</td><td></td></tr>
+        <tr><td>AMD <span class="tk">AMD</span></td><td>473.25 USD</td><td class="down">-6.47%</td><td></td></tr>
+        <tr><td>博通 <span class="tk">AVGO</span></td><td>368.45 USD</td><td class="down">-6.11%</td><td></td></tr>
+        <tr><td>台积电 <span class="tk">TSM</span></td><td>418.95 USD</td><td class="down">-2.79%</td><td></td></tr>
+        <tr><td>美光 <span class="tk">MU</span></td><td>966.78 USD</td><td class="down">-4.44%</td><td></td></tr>
+        <tr><td>Arm <span class="tk">ARM</span></td><td>243.32 USD</td><td class="down">-10.36%</td><td></td></tr>
+        <tr><td>英特尔 <span class="tk">INTC</span></td><td>90.07 USD</td><td class="down">-12.97%</td><td></td></tr>
+        <tr><td>超微SMCI <span class="tk">SMCI</span></td><td>37.24 USD</td><td class="down">-2.72%</td><td></td></tr>
+        <tr><td>微软 <span class="tk">MSFT</span></td><td>483.24 USD</td><td class="up">+0.6%</td><td></td></tr>
+        <tr><td>谷歌 <span class="tk">GOOGL</span></td><td>344.82 USD</td><td class="up">+0.24%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$250M</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/" target="_blank" rel="noopener">Starcloud 获 2.5 亿美元，推进轨道数据中心</a></div><div class="it-sum">TechCrunch 报道 Starcloud 筹得 2.5 亿美元，用于轨道数据中心方向；该融资属于数据中心基础设施扩张。</div></li>
+      <li><div class="it-title"><span class="badge amt">$500B</span><span class="badge region">海外</span><a href="https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/" target="_blank" rel="noopener">AI 工厂融资平台目标调动超 5000 亿美元资本</a></div><div class="it-sum">NVIDIA 宣布与多家金融机构合作建立独立融资平台，支持 AI 基础设施建设；金额为官方披露的目标规模。</div></li>
+      <li><div class="it-title"><span class="badge amt">$100B</span><span class="badge region">海外</span><a href="https://siliconangle.com/2026/08/20/broadcom-reportedly-seeking-up-to-100b-in-debt-financing-for-ai-chip-deal/" target="_blank" rel="noopener">Broadcom 据报寻求最高 1000 亿美元债务融资支持 AI 芯片交易</a></div><div class="it-sum">SiliconANGLE 引述 Bloomberg 消息称 Broadcom 正寻求最高 1000 亿美元债务融资，可能支持 Anthropic 等公司的 AI 芯片增长；报道金额待交易方官方核验。</div></li>
+      <li><div class="it-title"><span class="badge amt">$47.4B</span><span class="badge region">海外</span><a href="https://news.crunchbase.com/venture/physical-ai-funding-startups-robotics-aerospace-h1-2026/" target="_blank" rel="noopener">物理 AI 上半年融资达 474 亿美元</a></div><div class="it-sum">Crunchbase 汇总称 2026 年上半年物理 AI 获得 521 笔、合计 474 亿美元融资；这是产业动态数据而非单笔融资。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
