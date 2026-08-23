@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W34 · 08-17 ~ 08-23</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W34</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W34 · 08-17 ~ 08-23</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-17 ~ 2026-08-23</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W34</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>DECOWAM 与手术世界—动作建模显示，世界模型正从固定基座扩展到全身移动操作和专业场景。</li>
+      <li>Waymo 公开机器人出租车车载计算架构，定制 5 nm ASIC 的机器学习性能超过 1,000 TOPS。</li>
+      <li>WRC 产业信号转向真实交付：产线复刻、消费级预订和可连续作业成为比拼重点。</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.20284v1" target="_blank" rel="noopener">手术世界—动作模型联合预测视觉与器械轨迹</a></div>
+      <div class="it-sum">研究把未来术野生成与器械轨迹预测合并建模，使手术规划不仅能预演视觉状态，也能在轨迹层面评估动作准确性。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.20111v1" target="_blank" rel="noopener">规划导向端到端自动驾驶综述</a></div>
+      <div class="it-sum">综述梳理端到端驾驶从相机到控制回归，转向结构化表示、轨迹级输出和更真实评测协议的演进，并覆盖统一感知—预测—规划范式。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.20084v1" target="_blank" rel="noopener">证据门控的视觉语言任务与运动规划</a></div>
+      <div class="it-sum">面向部分可观测的长程操作，方法要求子目标先获得环境证据支持，再交给任务与运动规划器，减少依赖不存在或尚未确认物体的计划。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.20251v1" target="_blank" rel="noopener">Video2DoorTraversal：单视频构建门体数字孪生</a></div>
+      <div class="it-sum">框架从一段真实门的视频重建实例对齐、可关节运动且可仿真的门体，再训练轮足移动操作机器人完成推门与穿越，形成 real-to-sim-to-real 流程。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.20043v1" target="_blank" rel="noopener">延迟网络下的双边遥操作直接接触力反馈</a></div>
+      <div class="it-sum">研究面向非线性多自由度机械臂和恒定通信延迟，分析将环境接触力直接反馈给主端时的稳定性与透明度权衡。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（世界模型 / 人形策略 / 基础模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.20114v1" target="_blank" rel="noopener">DECOWAM：解耦式全身世界—动作模型</a></div>
+      <div class="it-sum">模型为足式移动操作分别设置条件接口，显式拆分相机自运动、底盘动作与机械臂动作，以预测全身运动对未来观测和控制的联合影响。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/ai/DtuJryomWlykalLZ.html" target="_blank" rel="noopener">人形机器人自主完成网球对抗演示</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">银河通用在真实网球场展示机器人对时速超过 50 公里的来球进行落点判断、移动与挥拍；相关“首次”等产品能力表述需以官方测试和复现为准。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.19977v1" target="_blank" rel="noopener">四足机器人学习狭窄空间中的动态技能切换</a></div>
+      <div class="it-sum">分层强化学习管线结合模仿学习，使四足机器人把爆发式跳跃与受限空间穿越衔接起来，目标是在窄门等障碍中完成激进运动。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">134★</span><a href="https://waymo.com/blog/2026/08/look-under-our-trunk/" target="_blank" rel="noopener">Waymo 公开新一代车载计算架构</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Waymo 介绍其机器人出租车车载计算系统；中外多家报道提到该架构包含定制 5 nm ASIC，机器学习性能超过 1,000 TOPS。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.19968v1" target="_blank" rel="noopener">PVRA：面向机器人装配的逐点关键点投票</a></div>
+      <div class="it-sum">研究聚焦渐进式装配中的对象中心感知，通过逐点关键点投票处理装配依赖，为自主装配操作提供更针对性的视觉框架。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/persona-ai-humanoid-robot-welding" target="_blank" rel="noopener">船厂焊接成为人形机器人的现实工种试验</a></div>
+      <div class="it-sum">IEEE Spectrum 观察 Persona AI 将船厂焊接选作近期可核算的商业任务，折射人形机器人从展示转向高价值、环境艰苦的工业作业。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/08/477253.html" target="_blank" rel="noopener">优必选以客户产线复刻展示工业落地路径</a></div>
+      <div class="it-sum">报道介绍其在 WRC 将客户产线按 1:1 搬入展区，展示同一具身“大脑”适配工业、商用与家庭场景；实际稳定性和交付规模需官方渠道核验。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/robot/0EXwdtr2oaxj5hv0.html" target="_blank" rel="noopener">启元 Q1、T1 个人机器人开启预订</a></div>
+      <div class="it-sum">上纬新材旗下启元机器人通过小程序和电商渠道开放两款产品预订，并称首发预计于 2026 年 9 月交付；售价、交付和能力需以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/ai/rUNBvF7Iq6C3UtyR.html" target="_blank" rel="noopener">WRC 2026：具身竞争从“大脑”转向可核算运营</a></div>
+      <div class="it-sum">现场观察称厂商的展示重点正从花式 Demo 转向连续稳定作业、场景适配和商业账本，反映行业进入真实交付验证阶段。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://news.crunchbase.com/venture/physical-ai-funding-startups-robotics-aerospace-h1-2026/" target="_blank" rel="noopener">实体 AI 上半年融资显著升温</a></div>
+      <div class="it-sum">Crunchbase 统计称 2026 年上半年全球实体 AI 获得 474 亿美元融资、涉及 521 笔交易，较 2025 年下半年明显增长。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/humanoid-robots-walden-robotics-toyota" target="_blank" rel="noopener">Walden Robotics 与 Toyota 合作推进实用型人形机器人</a></div>
+      <div class="it-sum">IEEE Spectrum 报道双方合作将重点放在具备近期实际用途的人形机器人，延续产业从概念原型向可用任务迁移的趋势。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（11 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>362.86 USD</td><td class="up">+6.94%</td><td>Optimus 相关观察标的</td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>378.81 USD</td><td class="down">-2.95%</td><td>手术机器人观察标的</td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>41.83 USD</td><td class="down">-1.23%</td><td>仓储机器人观察标的</td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>4.98 USD</td><td class="up">+1.63%</td><td>配送机器人观察标的</td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>214.72 USD</td><td class="down">-4.57%</td><td>机器人计算观察标的</td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>115.2 HKD</td><td class="up">+1.95%</td><td>物流机器人观察标的</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>83.9 HKD</td><td class="up">+3.26%</td><td>人形机器人观察标的</td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>4.97 HKD</td><td class="up">+2.47%</td><td>机器人计算观察标的</td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>59.03 CNY</td><td class="down">-0.15%</td><td>工业自动化观察标的</td></tr>
+        <tr><td>绿的谐波 <span class="tk">1.688017 · A股</span></td><td>314.35 CNY</td><td class="up">+1.4%</td><td>机器人减速器观察标的</td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>39.19 CNY</td><td class="down">-1.8%</td><td>机器人智能观察标的</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://www.leiphone.com/category/robot/0EXwdtr2oaxj5hv0.html" target="_blank" rel="noopener">启元 Q1、T1 个人机器人开放预订</a></div><div class="it-sum">报道显示两款产品已进入预订阶段，预计 2026 年 9 月首发发货；产品能力与实际交付需以官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://www.leiphone.com/category/robot/bEBmOtCixChK0hrX.html" target="_blank" rel="noopener">Galileo X 发布“陆行具身系统”</a></div><div class="it-sum">伽利略发布融合轮式、车式与足式能力的 Galileo X，面向室内、户外和复杂地形复合工况；性能与交付需以官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://www.qbitai.com/2026/08/477253.html" target="_blank" rel="noopener">优必选展示客户产线 1:1 复刻方案</a></div><div class="it-sum">公司在 WRC 展示面向真实产线的具身机器人方案，强调端侧部署及跨工业、商用和家庭场景适配；部署效果需以官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://roboticsandautomationnews.com/2026/08/21/logic-robotics-launches-autonomous-pallet-for-rail-to-road-transloading/104370/" target="_blank" rel="noopener">Logic Robotics 推出铁路转公路自主托盘方案</a></div><div class="it-sum">新品以数字孪生操作系统支持多式联运转装自动化；商业部署规模与实际性能需以公司官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
