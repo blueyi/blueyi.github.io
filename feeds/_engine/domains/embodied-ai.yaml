@@ -58,6 +58,8 @@ rss_feeds:
   - {name: "VentureBeat AI", kind: media, url: "https://venturebeat.com/category/ai/feed/"}
   - {name: "The Verge AI", kind: media, url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"}
   - {name: "Import AI", kind: analysis, url: "https://importai.substack.com/feed"}
+  - {name: "ExplainX", kind: analysis, url: "https://explainx.substack.com/feed"}
+  - {name: "TechTimes", kind: media, url: "https://www.techtimes.com/rss/archives/archives.xml"}
 
 # 上市公司龙头（具身/机器人相关，Yahoo Finance）
 tickers:
