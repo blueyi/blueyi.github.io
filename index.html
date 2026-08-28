@@ -1081,6 +1081,25 @@
                     </span>
                 </span>
             </div>
+
+            <div class="link feeds-wide" id="daily-card">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                </span>
+                <span class="feeds-body">
+                    <span class="feeds-head">
+                        <span class="meta">
+                            <a class="label" href="https://yulong.wang/daily/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">Daily Digest</a>
+                            <span class="sub">AI Infra daily news · HN / arXiv / tech blogs / Chinese media / embodied RSS</span>
+                        </span>
+                    </span>
+                    <a class="feeds-chan" href="https://yulong.wang/daily/" target="_blank" rel="noopener" data-daily>
+                        <span class="fc-name">📡 AI Infra Daily</span>
+                        <span class="fc-latest" data-daily-latest>View latest issue →</span>
+                        <span class="fc-schedule" data-daily-schedule-label>Updated every day 08:30 HKT</span>
+                    </a>
+                </span>
+            </div>
         </nav>
 
         <a class="scroll-cue" href="#stack" aria-label="Scroll to stack and highlights">
@@ -1432,6 +1451,30 @@
                 })
                 .catch(function () { /* 降级：保留静态 "View latest issue →" */ });
         });
+    })();
+
+    /* ---------------- Daily Digest: 动态填充最新一期 ---------------- */
+    (function () {
+        var card = document.getElementById('daily-card');
+        if (!card) return;
+        var el = card.querySelector('[data-daily]');
+        var slot = card.querySelector('[data-daily-latest]');
+        if (!el || !slot) return;
+        fetch('/daily/manifest.json', { cache: 'no-cache' })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (m) {
+                if (!m || !m.days) return;
+                var pub = m.days.filter(function (d) { return d.published; });
+                if (!pub.length) return;
+                var d = pub[0];
+                var label = (d.date || d.title_date || '').split(' ')[0];
+                var hl = d.highlight ? (' · ' + d.highlight) : '';
+                var txt = 'Latest ' + label + hl;
+                if (txt.length > 80) txt = txt.slice(0, 79) + '…';
+                slot.textContent = txt;
+                if (d.html) el.setAttribute('href', '/daily/' + d.html);
+            })
+            .catch(function () { /* 降级：保留静态 "View latest issue →" */ });
     })();
 
     /* ---------------- Schedule-aware status pill (HKT) ---------------- */

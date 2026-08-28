@@ -1,0 +1,146 @@
+/* feeds.css — 资讯站共用暗色样式，零外部依赖 */
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --border:#30363d;
+  --fg:#e6edf3; --muted:#8b949e; --link:#58a6ff; --accent:#d29922;
+  --hot:#f85149; --badge-hn:#ff6600; --badge-arxiv:#b31b1b; --ok:#3fb950;
+  --radius:12px; --maxw:880px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.7; font-size:16px;
+}
+a{color:var(--link); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:24px 18px 80px}
+header.site{padding:28px 0 18px; border-bottom:1px solid var(--border); margin-bottom:24px}
+header.site h1{margin:0 0 6px; font-size:26px}
+header.site .sub{color:var(--muted); font-size:14px}
+.crumb{font-size:13px; color:var(--muted); margin-bottom:18px}
+.crumb a{color:var(--muted); text-decoration:none; transition:color .15s}
+.crumb a:hover{color:var(--link)}
+/* 内联 home 图标（feather 描边风，取代 🏠 emoji），与文字基线对齐 */
+.home-ico{width:14px; height:14px; vertical-align:-2px; margin-right:4px; display:inline-block}
+.meta-bar{
+  background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:12px 16px; margin:0 0 22px; font-size:13px; color:var(--muted);
+  display:flex; flex-wrap:wrap; gap:14px;
+}
+.meta-bar b{color:var(--fg)}
+section.domain{margin:0 0 26px}
+section.domain > h2{
+  font-size:19px; margin:0 0 12px; padding-bottom:8px;
+  border-bottom:1px solid var(--border);
+}
+section.domain .desc{color:var(--muted); font-size:13px; margin:-6px 0 12px}
+ul.items{list-style:none; margin:0; padding:0}
+ul.items > li{
+  background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:14px 16px; margin:0 0 12px;
+}
+ul.items > li .it-title{font-size:16px; font-weight:600; margin:0 0 4px}
+ul.items > li .it-sum{color:var(--fg); opacity:.92; font-size:14.5px; margin:4px 0 8px}
+.badge{display:inline-block; font-size:11px; font-weight:700; padding:2px 7px;
+  border-radius:6px; margin-right:8px; vertical-align:middle; color:#fff}
+.badge.hn{background:var(--badge-hn)}
+.badge.arxiv{background:var(--badge-arxiv)}
+.badge.score{background:var(--panel2); color:var(--muted); border:1px solid var(--border)}
+.hot{color:var(--hot); font-weight:700}
+.empty{color:var(--muted); font-style:italic; font-size:14px}
+/* 产业动态板块 */
+section.domain.industry{border-left:3px solid var(--accent); padding-left:14px}
+.sub-h{font-size:15px; margin:16px 0 8px; color:var(--accent)}
+table.stocks{width:100%; border-collapse:collapse; font-size:14px; margin:0 0 6px}
+table.stocks th,table.stocks td{text-align:left; padding:7px 10px; border-bottom:1px solid var(--border)}
+table.stocks th{color:var(--muted); font-weight:600; font-size:12.5px}
+table.stocks td .tk{color:var(--muted); font-size:11.5px; margin-left:4px}
+table.stocks td.up{color:var(--ok); font-weight:700}
+table.stocks td.down{color:var(--hot); font-weight:700}
+.badge.amt{background:var(--ok); color:#06210f}
+.badge.region{background:var(--panel2); color:var(--link); border:1px solid var(--border)}
+/* 股市折叠 */
+details.stocks-fold{margin:6px 0 12px; border:1px solid var(--border); border-radius:var(--radius); background:var(--panel); padding:0 14px}
+details.stocks-fold > summary{cursor:pointer; padding:12px 0; color:var(--accent); font-size:14.5px; font-weight:600; list-style:none; user-select:none}
+details.stocks-fold > summary::-webkit-details-marker{display:none}
+details.stocks-fold > summary::before{content:"▸ "; color:var(--muted)}
+details.stocks-fold[open] > summary::before{content:"▾ "}
+details.stocks-fold[open]{padding-bottom:12px}
+.stock-region{font-size:13px; color:var(--muted); margin:10px 0 4px; font-weight:600}
+.highlights{background:var(--panel2); border:1px solid var(--border);
+  border-radius:var(--radius); padding:16px 20px; margin:18px 0 28px;
+  border-left:3px solid var(--accent)}
+.highlights h2{margin:0 0 10px; font-size:18px; color:var(--accent)}
+.highlights ol{margin:0; padding-left:20px}
+.highlights ol li{margin:6px 0; line-height:1.55}
+.wk-nav{display:flex; justify-content:space-between; margin:30px 0 0;
+  padding-top:18px; border-top:1px solid var(--border); font-size:14px}
+/* 列表页卡片 */
+.card-grid{display:grid; grid-template-columns:1fr; gap:14px}
+.card{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:16px 18px}
+.card h3{margin:0 0 6px; font-size:17px}
+.card .when{color:var(--muted); font-size:13px; margin-bottom:8px}
+.card .hl{font-size:14px; color:var(--fg); opacity:.9}
+/* 总入口频道卡片 */
+.chan-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+@media(max-width:640px){.chan-grid{grid-template-columns:1fr}}
+.chan{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:22px; transition:border-color .15s}
+.chan:hover{border-color:var(--link)}
+.chan h2{margin:0 0 8px; font-size:20px}
+.chan h2 a.chan-title{color:var(--fg); text-decoration:none}
+.chan h2 a.chan-title:hover{color:var(--link)}
+.chan p{color:var(--muted); font-size:14px; margin:0 0 14px}
+.chan .latest{font-size:13px; color:var(--muted); line-height:1.65}
+.chan .latest a{color:var(--link); text-decoration:none}
+.chan .latest a:hover{text-decoration:underline}
+footer.site{margin-top:50px; padding-top:20px; border-top:1px solid var(--border);
+  color:var(--muted); font-size:12.5px; text-align:center}
+
+/* ─── 总入口页：频道卡片内的近 N 期亮点区块 ─────────────────────────
+   与详情页 .highlights 视觉呼应但独立命名，避免污染详情页样式。
+   移动端 (≤640px) 断点与 .chan-grid 一致。
+────────────────────────────────────────────────────────────────── */
+/* 让频道卡内容纵向 flex，chan-footer 可用 margin-top:auto 压到底部
+   使两栏卡片数量不同时底部按钮仍水平对齐 */
+.chan{display:flex; flex-direction:column}
+.chan .chan-desc{color:var(--muted); font-size:14px; margin:0 0 8px; line-height:1.55}
+.chan .chan-schedule{display:inline-block; font-size:11.5px; color:var(--fg); opacity:.85;
+  background:rgba(210,153,34,0.08); border:1px solid rgba(210,153,34,0.25);
+  padding:2px 9px; border-radius:10px; margin:0 0 14px; letter-spacing:.02em}
+.chan-highlights{margin:6px 0 4px}
+.chan-highlights .wk-block{background:var(--panel2); border:1px solid var(--border);
+   border-radius:10px; padding:12px 14px; margin-bottom:10px;
+   border-left:3px solid var(--accent);
+   cursor:pointer; transition:background .15s, border-color .15s, transform .1s}
+.chan-highlights .wk-block:hover{background:var(--panel); border-color:var(--accent)}
+.chan-highlights .wk-block:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.chan-highlights .wk-block:active{transform:translateY(1px)}
+.chan-highlights .wk-block:last-child{margin-bottom:0}
+.chan-highlights .wk-badge{display:inline-block; font-size:11.5px; font-weight:600;
+  color:var(--accent); background:rgba(210,153,34,0.14);
+  padding:3px 9px; border-radius:10px; text-decoration:none;
+  margin:0 0 8px; letter-spacing:.02em; transition:background .15s}
+.chan-highlights .wk-badge:hover{background:rgba(210,153,34,0.24)}
+.chan-highlights ol{margin:2px 0 0; padding-left:22px}
+.chan-highlights ol li{margin:5px 0; line-height:1.55; font-size:13.5px; color:var(--fg)}
+.chan-highlights .wk-empty{font-size:12.5px; color:var(--muted); font-style:italic}
+.chan-footer{margin:14px 0 0; padding-top:10px; font-size:13px;
+  border-top:1px dashed var(--border);
+  margin-top:auto}  /* 关键：两栏卡片数量不同时按钮仍水平对齐 */
+.chan-footer a{color:var(--link); text-decoration:none}
+.chan-footer a:hover{text-decoration:underline}
+@media(max-width:640px){
+  .chan{padding:16px}
+  .chan h2{font-size:18px}
+  .chan-highlights .wk-block{padding:10px 12px}
+  .chan-highlights ol{padding-left:20px}
+  .chan-highlights ol li{font-size:13px; line-height:1.6; margin:7px 0}
+  .chan .chan-schedule{font-size:11px}
+  /* 移动端单列，margin-top:auto 就不起作用了(每个 chan 独立高度)，无所谓 */
+  /* 增加相邻频道卡片间距以强化区块感 */
+  .chan-grid{gap:14px}
+  .chan-footer{padding:12px 0 4px} /* 触控目标 ≥44px（含 line-height） */
+}
