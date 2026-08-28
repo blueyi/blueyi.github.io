@@ -77,6 +77,11 @@ rss_feeds:
   - {name: "HuggingFace Blog", kind: official, url: "https://huggingface.co/blog/feed.xml"}
   - {name: "Microsoft Research", kind: official, url: "https://www.microsoft.com/en-us/research/feed/"}
   - {name: "Import AI", kind: analysis, url: "https://importai.substack.com/feed"}
+  - {name: "Chips and Cheese", kind: analysis, url: "https://chipsandcheese.com/feed"}
+  - {name: "The Next Platform", kind: analysis, url: "https://www.nextplatform.com/feed/"}
+  - {name: "ServeTheHome", kind: media, url: "https://www.servethehome.com/feed/"}
+  - {name: "Blocks & Files", kind: media, url: "https://blocksandfiles.com/feed/"}
+  - {name: "Data Center Dynamics", kind: media, url: "https://www.datacenterdynamics.com/en/rss/"}
 
 # 上市公司龙头（fetch_markets 取 Yahoo Finance 最新价 + 周涨跌幅，供「📈 产业动态」板块）
 tickers:
@@ -94,12 +99,12 @@ tickers:
   - {sym: "ORCL", name: "甲骨文"}
 
 # 国内中文媒体 RSS（只保留高信噪比源，剔除广告/软文偏多的钛媒体/爱范儿等；kind=cn_media/cn_finance）
+# 36氪/36氪融资快讯 已移除：其 feed 返回 HTML 反爬页（0 items），不可用。
 cn_rss_feeds:
-  - {name: "36氪", kind: cn_media, url: "https://36kr.com/feed"}
-  - {name: "36氪融资快讯", kind: cn_finance, url: "https://36kr.com/feed-newsflash"}
   - {name: "量子位", kind: cn_media, url: "https://www.qbitai.com/feed"}
   - {name: "InfoQ中国", kind: cn_media, url: "https://www.infoq.cn/feed"}
   - {name: "雷锋网", kind: cn_media, url: "https://www.leiphone.com/feed"}
+  - {name: "新智元", kind: cn_media, url: "https://www.aiera.com.cn/feed"}
 
 # 国内龙头股（东方财富 push2；secid 1.=沪 0.=深 116.=港股。A股/港股同公司只留港股）
 cn_tickers:
