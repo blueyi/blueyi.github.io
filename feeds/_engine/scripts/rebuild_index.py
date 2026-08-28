@@ -12,6 +12,7 @@ import argparse
 import html
 import json
 import re
+import subprocess
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -317,7 +318,7 @@ def build_site_index(channel_specs: dict, recent_weeks: int = 3, highlights_per_
   <div class="crumb"><a href="/">{HOME_SVG}Home</a> / Feeds</div>
   <header class="site">
     <h1>📡 Weekly Feeds</h1>
-    <div class="sub">Weekly AI Infra &amp; Embodied AI digest · HN / arXiv / industry media / markets</div>
+    <div class="sub">Weekly AI Infra &amp; Embodied AI digest · HN / arXiv / industry media / markets · <a href="/search/">🔍 Search</a></div>
   </header>
   <div class="chan-grid">
 {chans_html}
@@ -362,6 +363,16 @@ def main():
         print(f"[{c}] index rebuilt: {n} published week(s)")
     build_site_index(specs, recent_weeks=args.recent_weeks, highlights_per_week=args.highlights_per_week)
     print(f"[site] feeds/index.html rebuilt (recent_weeks={args.recent_weeks}, highlights_per_week={args.highlights_per_week})")
+    # 重建统一搜索索引（聚合 daily + feeds 历史条目）
+    try:
+        r = subprocess.run([sys.executable, str(FEEDS_DIR.parent / "_engine" / "build_search_index.py")],
+                           capture_output=True, text=True)
+        if r.stdout.strip():
+            print(r.stdout.strip())
+        if r.returncode != 0 and r.stderr.strip():
+            print(f"[search] {r.stderr.strip()}", file=sys.stderr)
+    except Exception as e:
+        print(f"[search] build failed: {e}", file=sys.stderr)
 
 
 if __name__ == "__main__":

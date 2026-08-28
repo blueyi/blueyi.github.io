@@ -5,6 +5,8 @@
 仅用 Python 标准库。
 """
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 ENGINE_DIR = Path(__file__).resolve().parent
@@ -53,7 +55,7 @@ def build_index(days):
   <div class="crumb"><a href="/">{HOME_SVG}Home</a> / Daily</div>
   <header class="site">
     <h1>📡 {esc(TITLE)}</h1>
-    <div class="sub">{esc(DESC)}</div>
+    <div class="sub">{esc(DESC)} · <a href="/search/">🔍 搜索全部资讯</a></div>
   </header>
   <div class="meta-bar">
     <span>Schedule: <b>{esc(SCHEDULE)}</b></span>
@@ -98,6 +100,16 @@ def main():
     n = build_index(days)
     build_manifest(days)
     print(f"[daily] index rebuilt: {n} published day(s)")
+    # 重建统一搜索索引（聚合 daily + feeds 历史条目）
+    try:
+        r = subprocess.run([sys.executable, str(DAILY_DIR.parent / "_engine" / "build_search_index.py")],
+                           capture_output=True, text=True)
+        if r.stdout.strip():
+            print(r.stdout.strip())
+        if r.returncode != 0 and r.stderr.strip():
+            print(f"[search] {r.stderr.strip()}", file=sys.stderr)
+    except Exception as e:
+        print(f"[search] build failed: {e}", file=sys.stderr)
 
 
 if __name__ == "__main__":

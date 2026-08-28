@@ -21,7 +21,7 @@ domains:
     emoji: "2️⃣"
     name: AI 编译器与框架
     desc: tinygrad / MLIR / TVM / XLA / Triton / torch.compile / JAX / Mojo
-    keywords: [tinygrad, mlir, tvm, xla, triton, "torch.compile", inductor, jax, mojo, pytorch, cuda, "compiler"]
+    keywords: [tinygrad, mlir, tvm, xla, triton, "torch.compile", inductor, jax, mojo, pytorch, cuda, "compiler", "compiler-agent", "agent-facing", codegen]
   - id: inference-dc
     emoji: "3️⃣"
     name: AI 推理优化（数据中心）
@@ -46,7 +46,7 @@ domains:
     emoji: "7️⃣"
     name: AI 自动算子与代码生成优化
     desc: AlphaEvolve / FunSearch / AI Kernel 生成 / LLM-driven compiler / 自动调优 / LLM RTL 生成
-    keywords: [alphaevolve, funsearch, "kernel generation", "kernel codegen", "code generation", rtl, "compiler optimization", "auto-tuning", autotuning]
+    keywords: [alphaevolve, funsearch, "kernel generation", "kernel codegen", "code generation", codegen, rtl, "compiler optimization", "auto-tuning", autotuning, cake, "compiler-agent", "agent-facing", "kernel agent", "schedule representation", "tensor program"]
   - id: edge
     emoji: "8️⃣"
     name: 边缘与端侧推理

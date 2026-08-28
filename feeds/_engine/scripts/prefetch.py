@@ -163,7 +163,7 @@ def _arxiv_from_api(cat: str, per_cat: int) -> list:
     return rows
 
 
-def fetch_arxiv(all_re, per_domain, excl_re, cats, per_cat: int = 10) -> list:
+def fetch_arxiv(all_re, per_domain, excl_re, cats, per_cat: int = 15) -> list:
     out = []
     for cat in cats:
         rows = []

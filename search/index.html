@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search · AI Infra News</title>
+<link rel="stylesheet" href="assets/search.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / Search</div>
+  <header class="site">
+    <h1>🔍 Search</h1>
+    <div class="sub">统一搜索 AI Infra 日报 + 周报（AI Infra / 具身智能）历史新闻</div>
+  </header>
+  <div class="search-box">
+    <input type="text" id="q" placeholder="输入关键词（如 CAKE、nvidia、量化、robot、融资…），空格分隔多词" autocomplete="off" autofocus>
+  </div>
+  <div class="filters" id="filters">
+    <button data-f="all" class="active">全部</button>
+    <button data-f="daily">日报</button>
+    <button data-f="weekly">周报</button>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div id="results"><div class="hint">正在加载索引…</div></div>
+  <footer class="site">Search index · GitHub Pages</footer>
+</div>
+<script>
+(function () {
+  'use strict';
+  var idx = null;
+  var curFilter = 'all';
+  var qEl = document.getElementById('q');
+  var statsEl = document.getElementById('stats');
+  var resEl = document.getElementById('results');
+
+  fetch('/search-index.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) { idx = d ? d.entries : []; render(); })
+    .catch(function () { idx = []; render(); });
+
+  qEl.addEventListener('input', render);
+  document.getElementById('filters').addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    curFilter = b.getAttribute('data-f');
+    Array.prototype.forEach.call(this.querySelectorAll('button'), function (x) { x.classList.remove('active'); });
+    b.classList.add('active');
+    render();
+  });
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function reEscape(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  function hl(text, terms) {
+    var s = esc(text);
+    if (!terms.length) return s;
+    var re = new RegExp('(' + terms.map(reEscape).join('|') + ')', 'gi');
+    return s.replace(re, '<mark>$1</mark>');
+  }
+
+  function render() {
+    if (idx === null) {
+      resEl.innerHTML = '<div class="hint">正在加载索引…</div>';
+      statsEl.textContent = '';
+      return;
+    }
+    var query = qEl.value.trim();
+    var terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    var seen = {};
+    var results = [];
+    for (var i = 0; i < idx.length; i++) {
+      var e = idx[i];
+      if (curFilter !== 'all' && e.type !== curFilter) continue;
+      if (terms.length) {
+        var hay = ((e.title || '') + ' ' + (e.summary || '') + ' ' + (e.category || '')).toLowerCase();
+        var ok = true;
+        for (var j = 0; j < terms.length; j++) {
+          if (hay.indexOf(terms[j]) === -1) { ok = false; break; }
+        }
+        if (!ok) continue;
+      } else if (results.length >= 50) {
+        continue;
+      }
+      var key = e.title + '|' + (e.date || e.week);
+      if (seen[key]) continue;
+      seen[key] = 1;
+      results.push(e);
+    }
+    statsEl.textContent = (terms.length ? '匹配 ' : '最近 ') + results.length + ' 条 · 索引共 ' + idx.length + ' 条';
+    if (!results.length) {
+      resEl.innerHTML = '<div class="hint">无匹配结果</div>';
+      return;
+    }
+    var html = '';
+    for (var k = 0; k < results.length; k++) {
+      var e = results[k];
+      var typeBadge = e.type === 'daily'
+        ? '<span class="badge daily">日报</span>'
+        : '<span class="badge weekly">周报</span>';
+      var when = e.date || e.week;
+      html += '<div class="result">'
+        + '<div class="r-meta">' + typeBadge
+        + '<span class="r-cat">' + esc(e.category) + '</span>'
+        + '<span class="r-when">' + esc(when) + '</span>'
+        + '<a class="r-page" href="' + esc(e.page) + '">📄 当期</a>'
+        + '</div>'
+        + '<a class="r-title" href="' + esc(e.url || e.page) + '" target="_blank" rel="noopener">' + hl(e.title, terms) + '</a>'
+        + (e.summary ? '<div class="r-sum">' + hl(e.summary, terms) + '</div>' : '')
+        + '</div>';
+    }
+    resEl.innerHTML = html;
+  }
+})();
+</script>
+</body>
+</html>
