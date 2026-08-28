@@ -2012,6 +2012,12 @@
         "name": "AI 芯片",
         "items": [
           {
+            "title": "规格表 ≠ Kernel：Blackwell Ultra INT8 可用性逐层审计",
+            "summary": "逐层审计 NVIDIA Blackwell Ultra (B300) 的 INT8 W8A8 支持：规格表宣称 FP8:INT8 稠密算力比约 30:1（前代 H200/B200 为 1:1），实测 PTX ISA / CUTLASS / vLLM / SGLang 四层发现 INT8 通路被系统性弱化。",
+            "url": "https://arxiv.org/abs/2608.11693",
+            "source": "arxiv"
+          },
+          {
             "title": "SCALE-Sim EVA：面向异构 AI 加速器的可扩展模拟框架",
             "summary": "提出面向 IR 的可视化加速器建模框架，针对异构计算单元、层次化存储和数据搬运路径提供更易扩展的模拟基础。",
             "url": "https://arxiv.org/abs/2608.12354",
@@ -2201,6 +2207,26 @@
         "emoji": "7️⃣",
         "name": "AI 自动算子与代码生成优化",
         "items": [
+          {
+            "title": "CAKE：面向前沿 Kernel 演进的编译器-Agent 协同设计",
+            "summary": "提出编译器-Agent 协同设计框架 CAKE：agent 直接编写 typed、硬件显式的调度表示 CAKE IR（暴露 warp roles、访存移动、同步与流水线），支持验证、代价建模与局部诊断；harness 自身会演化——反复出现的失败固化为 verifier 规则与 IR 原语。",
+            "url": "https://arxiv.org/abs/2608.12629",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "面向 LLM 生成 GPU Kernel 的 Contract-Grade 验证器",
+            "summary": "指出 LLM 生成 GPU kernel 的高正确率来自单一松散测试（固定 shape 随机输入）；构建 12 道对抗性 gate 的 contract-grade 验证器（多项零容忍），能查出通过常规测试却静默错误的 kernel（NaN/Inf、逐次结果漂移、fp16 累积误差等）。",
+            "url": "https://arxiv.org/abs/2608.12700",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "量化的 Agent 解剖：代码合成 Agentic 工作负载的 VRAM 稳定性",
+            "summary": "对 LangGraph 的 CUDA kernel 合成 agent（AgentK）在 4-bit 量化、单卡 H100 上 1920 条轨迹做峰值 VRAM 实测；闭式解析模型配合两个经验常数即可较准预测峰值显存，为 agentic 代码合成工作负载的资源规划提供依据。",
+            "url": "https://arxiv.org/abs/2608.15117",
+            "source": "arxiv"
+          },
           {
             "title": "以验证为中心：AI 协助移植 25 万行遗留气象模拟代码",
             "summary": "案例强调科学代码 GPU 移植不能只追求生成速度，必须用回归验证、观测对比和领域可信度约束 agent 的修改。",

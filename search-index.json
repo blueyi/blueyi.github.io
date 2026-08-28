@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-29T00:44:20.360127+08:00",
+ "generated_at": "2026-08-29T01:23:45.766993+08:00",
  "entries": [
   {
    "type": "daily",
@@ -3075,6 +3075,28 @@
    "channel": "ai-infra",
    "date": "",
    "week": "2026-W32",
+   "category": "7️⃣ 自动内核与代码生成",
+   "title": "HINT：面向 LLM RTL 生成的可执行硬件意图表示层",
+   "summary": "提出可执行的硬件意图中间表示层 HINT，位于行为规格/可执行 oracle 与 RTL 之间，把 RTL 相关微架构显式化、支持 pre-RTL 检查并给出明确 lowering 义务；7 个算子案例下无需后综合 QoR 精修即产出 contract-compliant 可综合 RTL。",
+   "url": "https://arxiv.org/abs/2608.07625",
+   "page": "/feeds/ai-infra/weeks/2026-W32.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "ai-infra",
+   "date": "",
+   "week": "2026-W32",
+   "category": "7️⃣ 自动内核与代码生成",
+   "title": "SeqFeed：用序列行为反馈改进 Agentic RTL 代码生成",
+   "summary": "针对 agentic RTL 代码生成难以向 agent 传递跨时钟周期时序行为的问题，用「序列行为反馈」替代整段仿真波形，让 agent 理解信号如何随多个时钟周期演化，提升生成 RTL 的正确性。",
+   "url": "https://arxiv.org/abs/2608.16934",
+   "page": "/feeds/ai-infra/weeks/2026-W32.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "ai-infra",
+   "date": "",
+   "week": "2026-W32",
    "category": "8️⃣ 端侧与边缘推理",
    "title": "EdgeXpert：MoE 与投机解码结合的端侧 LLM 推理设备",
    "summary": "论文瞄准端侧大模型中 FFN 外部内存访问瓶颈，结合 MoE 的稀疏激活与投机解码减少解码阶段和内存流量。",
@@ -3113,6 +3135,17 @@
    "summary": "SK 海力士批准约 383 亿美元的两座新 fab 投资，直接面向数据中心存储供给扩张；具体建设进度仍需以公司后续披露为准。",
    "url": "https://siliconangle.com/2026/08/07/sk-hyn...fabs/",
    "page": "/feeds/ai-infra/weeks/2026-W32.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "ai-infra",
+   "date": "",
+   "week": "2026-W33",
+   "category": "1️⃣ AI 芯片",
+   "title": "规格表 ≠ Kernel：Blackwell Ultra INT8 可用性逐层审计",
+   "summary": "逐层审计 NVIDIA Blackwell Ultra (B300) 的 INT8 W8A8 支持：规格表宣称 FP8:INT8 稠密算力比约 30:1（前代 H200/B200 为 1:1），实测 PTX ISA / CUTLASS / vLLM / SGLang 四层发现 INT8 通路被系统性弱化。",
+   "url": "https://arxiv.org/abs/2608.11693",
+   "page": "/feeds/ai-infra/weeks/2026-W33.html"
   },
   {
    "type": "weekly",
@@ -3365,6 +3398,39 @@
    "title": "乌方称俄巡航导弹使用 Nvidia Jetson，凸显边缘 AI 模块的部署外溢",
    "summary": "乌方称 S-71 导弹中发现 Jetson Orin NX，可能用于末端制导；报道仍是单方指称，基础设施看点在低功耗边缘算力进入严苛现场。",
    "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-jetson-chip-found-in-russian-cruise-missile-ukraine-claims-presence-in-s-71-monochrome-weapon-may-indicate-use-of-ai-tech",
+   "page": "/feeds/ai-infra/weeks/2026-W33.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "ai-infra",
+   "date": "",
+   "week": "2026-W33",
+   "category": "7️⃣ AI 自动算子与代码生成优化",
+   "title": "CAKE：面向前沿 Kernel 演进的编译器-Agent 协同设计",
+   "summary": "提出编译器-Agent 协同设计框架 CAKE：agent 直接编写 typed、硬件显式的调度表示 CAKE IR（暴露 warp roles、访存移动、同步与流水线），支持验证、代价建模与局部诊断；harness 自身会演化——反复出现的失败固化为 verifier 规则与 IR 原语。",
+   "url": "https://arxiv.org/abs/2608.12629",
+   "page": "/feeds/ai-infra/weeks/2026-W33.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "ai-infra",
+   "date": "",
+   "week": "2026-W33",
+   "category": "7️⃣ AI 自动算子与代码生成优化",
+   "title": "面向 LLM 生成 GPU Kernel 的 Contract-Grade 验证器",
+   "summary": "指出 LLM 生成 GPU kernel 的高正确率来自单一松散测试（固定 shape 随机输入）；构建 12 道对抗性 gate 的 contract-grade 验证器（多项零容忍），能查出通过常规测试却静默错误的 kernel（NaN/Inf、逐次结果漂移、fp16 累积误差等）。",
+   "url": "https://arxiv.org/abs/2608.12700",
+   "page": "/feeds/ai-infra/weeks/2026-W33.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "ai-infra",
+   "date": "",
+   "week": "2026-W33",
+   "category": "7️⃣ AI 自动算子与代码生成优化",
+   "title": "量化的 Agent 解剖：代码合成 Agentic 工作负载的 VRAM 稳定性",
+   "summary": "对 LangGraph 的 CUDA kernel 合成 agent（AgentK）在 4-bit 量化、单卡 H100 上 1920 条轨迹做峰值 VRAM 实测；闭式解析模型配合两个经验常数即可较准预测峰值显存，为 agentic 代码合成工作负载的资源规划提供依据。",
+   "url": "https://arxiv.org/abs/2608.15117",
    "page": "/feeds/ai-infra/weeks/2026-W33.html"
   },
   {
@@ -3750,6 +3816,17 @@
    "title": "Arduino UNO Q 上运行本地 LLM 的实践",
    "summary": "EE Times 以 Arduino UNO Q 为例讨论模型选择、量化、内存约束和真实边缘 AI 用例，提供面向嵌入式设备的本地推理视角。",
    "url": "https://www.eetimes.com/running-local-llms-on-the-arduino-uno-q-board-a-practical-guide/",
+   "page": "/feeds/ai-infra/weeks/2026-W34.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "ai-infra",
+   "date": "",
+   "week": "2026-W34",
+   "category": "7️⃣ AI 自动算子与代码生成优化",
+   "title": "AI with Authority：从应用代码到流片硅的验证驱动开发",
+   "summary": "报道生成式 AI 反转了机器验证的经济性：一名研究员用消费级 AI 订阅在 5 周内从应用代码经验证的编译器/执行器到一颗流片 RISC-V 处理器，全程无人写 RTL、无人审证明，机器验证成为规模化指挥自主机器的「裁判」。",
+   "url": "https://arxiv.org/abs/2608.21356",
    "page": "/feeds/ai-infra/weeks/2026-W34.html"
   },
   {

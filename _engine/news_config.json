@@ -1,0 +1,500 @@
+{
+  "arxiv_categories": [
+    "cs.DC",
+    "cs.AR",
+    "cs.PL",
+    "cs.LG",
+    "cs.RO"
+  ],
+  "hn_min_score": 60,
+  "categories": [
+    {
+      "id": "chips",
+      "emoji": "1️⃣",
+      "name": "AI 芯片",
+      "keywords": [
+        "nvidia",
+        "amd",
+        "intel gaudi",
+        "tpu",
+        "blackwell",
+        "rubin",
+        "hbm",
+        "cowos",
+        "tsmc",
+        "samsung foundry",
+        "sk hynix",
+        "wafer",
+        "lithography",
+        "asic",
+        "npu",
+        "ascend"
+      ]
+    },
+    {
+      "id": "compilers",
+      "emoji": "2️⃣",
+      "name": "AI 编译器与框架",
+      "keywords": [
+        "tinygrad",
+        "mlir",
+        "tvm",
+        "xla",
+        "triton",
+        "torch.compile",
+        "inductor",
+        "jax",
+        "mojo",
+        "pytorch",
+        "cuda",
+        "compiler",
+        "compiler-agent",
+        "agent-facing",
+        "codegen",
+        "vllm",
+        "sglang",
+        "tensorrt"
+      ]
+    },
+    {
+      "id": "inference-dc",
+      "emoji": "3️⃣",
+      "name": "AI 推理优化（数据中心）",
+      "keywords": [
+        "vllm",
+        "sglang",
+        "tensorrt",
+        "quantization",
+        "fp8",
+        "fp4",
+        "gptq",
+        "awq",
+        "kv cache",
+        "kv-cache",
+        "speculative decoding",
+        "moe",
+        "paged attention",
+        "pagedattention",
+        "prefix caching",
+        "batching",
+        "llm infer",
+        "serving"
+      ]
+    },
+    {
+      "id": "datacenter",
+      "emoji": "4️⃣",
+      "name": "数据中心与基础设施",
+      "keywords": [
+        "data center",
+        "datacenter",
+        "liquid cool",
+        "rack",
+        "infiniband",
+        "rdma",
+        "roce",
+        "hyperscaler",
+        "capex",
+        "gpu cluster",
+        "training cluster",
+        "llm training",
+        "fine-tun",
+        "lora",
+        "qlora",
+        "rlhf"
+      ]
+    },
+    {
+      "id": "safety",
+      "emoji": "5️⃣",
+      "name": "AI 安全与治理",
+      "keywords": [
+        "alignment",
+        "red team",
+        "interpretability",
+        "export control",
+        "ai safety",
+        "ai policy",
+        "evals",
+        "anthropic",
+        "openai",
+        "deepmind",
+        "governance"
+      ]
+    },
+    {
+      "id": "embodied-infra",
+      "emoji": "6️⃣",
+      "name": "具身智能（基础设施视角）",
+      "keywords": [
+        "robot compute",
+        "humanoid compute",
+        "edge npu robot",
+        "jetson",
+        "orin",
+        "robot inference",
+        "onboard compute"
+      ]
+    },
+    {
+      "id": "autokernel",
+      "emoji": "7️⃣",
+      "name": "AI 自动算子与代码生成优化",
+      "keywords": [
+        "alphaevolve",
+        "funsearch",
+        "kernel generation",
+        "kernel codegen",
+        "code generation",
+        "codegen",
+        "rtl",
+        "compiler optimization",
+        "auto-tuning",
+        "autotuning",
+        "cake",
+        "compiler-agent",
+        "agent-facing",
+        "kernel agent",
+        "schedule representation",
+        "tensor program"
+      ]
+    },
+    {
+      "id": "edge",
+      "emoji": "8️⃣",
+      "name": "边缘与端侧推理",
+      "keywords": [
+        "on-device",
+        "on device",
+        "edge ai",
+        "edge inference",
+        "edge llm",
+        "tinyml",
+        "mlc-llm",
+        "llama.cpp",
+        "llamafile",
+        "gguf",
+        "ggml",
+        "mlx",
+        "executorch",
+        "core ml",
+        "coreml",
+        "tflite",
+        "ncnn",
+        "mnn",
+        "onnxruntime",
+        "onnx runtime",
+        "snapdragon",
+        "hexagon",
+        "apple neural engine",
+        "rk3588",
+        "gemma",
+        "gemini nano",
+        "smollm",
+        "minicpm",
+        "bitnet",
+        "1.58",
+        "w4a16",
+        "int4 inference",
+        "tiny ml",
+        "mlc llm",
+        "tensorflow lite",
+        "qualcomm ai",
+        "npu",
+        "ane",
+        "raspberry pi",
+        "jetson",
+        "orin",
+        "rockchip",
+        "phi-3",
+        "phi 3",
+        "phi-4",
+        "phi 4",
+        "smol lm",
+        "tinyllama",
+        "qwen-vl edge",
+        "1.58 bit",
+        "1.58b"
+      ]
+    }
+  ],
+  "cn_keywords": [
+    "芯片",
+    "算力",
+    "英伟达",
+    "nvidia",
+    "昇腾",
+    "寒武纪",
+    "摩尔线程",
+    "壁仞",
+    "昆仑芯",
+    "天数智芯",
+    "燧原",
+    "海光",
+    "龙芯",
+    "hbm",
+    "制程",
+    "光刻",
+    "台积电",
+    "中芯",
+    "晶圆",
+    "封装",
+    "gpu",
+    "tpu",
+    "asic",
+    "数据中心",
+    "液冷",
+    "服务器",
+    "集群",
+    "超算",
+    "网络",
+    "交换机",
+    "光模块",
+    "存储",
+    "大模型",
+    "llm",
+    "推理",
+    "训练",
+    "量化",
+    "蒸馏",
+    "moe",
+    "vllm",
+    "sglang",
+    "tensorrt",
+    "编译器",
+    "算子",
+    "框架",
+    "pytorch",
+    "cuda",
+    "triton",
+    "mlir",
+    "具身",
+    "机器人",
+    "人形",
+    "自动驾驶",
+    "无人",
+    "世界模型",
+    "vla",
+    "智能体",
+    "agent",
+    "多模态",
+    "开源",
+    "融资",
+    "收购",
+    "ipo",
+    "发布",
+    "端侧",
+    "边缘",
+    "npu",
+    "手机芯片",
+    "推理芯片",
+    "训练芯片",
+    "ai芯片"
+  ],
+  "embodied_keywords": [
+    "robot",
+    "humanoid",
+    "vla",
+    "world model",
+    "self-driving",
+    "autonomous",
+    "rt-x",
+    "optimus",
+    "figure ai",
+    "1x",
+    "physical intelligence",
+    "manipulation",
+    "locomotion",
+    "teleoperation",
+    "sim2real",
+    "embodied",
+    "policy learning",
+    "diffusion policy",
+    "behavior cloning",
+    "rt-2",
+    "openvla",
+    "pi-zero",
+    "pi0",
+    "act policy",
+    "rdt",
+    "foundation policy",
+    "vision-language-action",
+    "drone",
+    "uav",
+    "autonomous driving",
+    "waymo",
+    "one-shot learning",
+    "in-context learning",
+    "grasping",
+    "dexterous",
+    "tactile",
+    "bimanual",
+    "warehouse robot",
+    "industrial robot"
+  ],
+  "sources": {
+    "english": [
+      {
+        "name": "SemiAnalysis",
+        "url": "https://www.semianalysis.com/feed",
+        "kind": "analysis"
+      },
+      {
+        "name": "SemiEngineering",
+        "url": "https://semiengineering.com/feed/",
+        "kind": "media"
+      },
+      {
+        "name": "EE Times",
+        "url": "https://www.eetimes.com/feed/",
+        "kind": "media"
+      },
+      {
+        "name": "VentureBeat AI",
+        "url": "https://venturebeat.com/category/ai/feed/",
+        "kind": "media"
+      },
+      {
+        "name": "SiliconANGLE",
+        "url": "https://siliconangle.com/feed/",
+        "kind": "media"
+      },
+      {
+        "name": "The Verge AI",
+        "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+        "kind": "media"
+      },
+      {
+        "name": "NVIDIA Blog",
+        "url": "https://blogs.nvidia.com/feed/",
+        "kind": "official"
+      },
+      {
+        "name": "HuggingFace Blog",
+        "url": "https://huggingface.co/blog/feed.xml",
+        "kind": "official"
+      },
+      {
+        "name": "OpenAI News",
+        "url": "https://openai.com/news/rss.xml",
+        "kind": "official"
+      },
+      {
+        "name": "Google AI Blog",
+        "url": "https://blog.google/technology/ai/rss/",
+        "kind": "official"
+      },
+      {
+        "name": "Import AI",
+        "url": "https://importai.substack.com/feed",
+        "kind": "analysis"
+      },
+      {
+        "name": "The Next Platform",
+        "url": "https://www.nextplatform.com/feed/",
+        "kind": "analysis"
+      },
+      {
+        "name": "ServeTheHome",
+        "url": "https://www.servethehome.com/feed/",
+        "kind": "media"
+      },
+      {
+        "name": "Blocks & Files",
+        "url": "https://blocksandfiles.com/feed/",
+        "kind": "media"
+      },
+      {
+        "name": "Data Center Dynamics",
+        "url": "https://www.datacenterdynamics.com/en/rss/",
+        "kind": "media"
+      },
+      {
+        "name": "The Register",
+        "url": "https://www.theregister.com/headlines.atom",
+        "kind": "media"
+      },
+      {
+        "name": "Tom's Hardware",
+        "url": "https://www.tomshardware.com/feeds/all",
+        "kind": "media"
+      },
+      {
+        "name": "Chips and Cheese",
+        "url": "https://chipsandcheese.com/feed",
+        "kind": "analysis"
+      },
+      {
+        "name": "TechCrunch AI",
+        "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "kind": "media"
+      },
+      {
+        "name": "Microsoft Research",
+        "url": "https://www.microsoft.com/en-us/research/feed/",
+        "kind": "official"
+      }
+    ],
+    "finance": [
+      {
+        "name": "TechCrunch Fundraising",
+        "url": "https://techcrunch.com/tag/fundraising/feed/",
+        "kind": "finance"
+      },
+      {
+        "name": "TechCrunch Venture",
+        "url": "https://techcrunch.com/category/venture/feed/",
+        "kind": "finance"
+      },
+      {
+        "name": "Crunchbase News",
+        "url": "https://news.crunchbase.com/feed/",
+        "kind": "finance"
+      }
+    ],
+    "chinese": [
+      {
+        "name": "量子位",
+        "url": "https://www.qbitai.com/feed",
+        "kind": "cn_media"
+      },
+      {
+        "name": "InfoQ中国",
+        "url": "https://www.infoq.cn/feed",
+        "kind": "cn_media"
+      },
+      {
+        "name": "雷锋网",
+        "url": "https://www.leiphone.com/feed",
+        "kind": "cn_media"
+      },
+      {
+        "name": "新智元",
+        "url": "https://www.aiera.com.cn/feed",
+        "kind": "cn_media"
+      }
+    ],
+    "embodied": [
+      {
+        "name": "IEEE Spectrum Robotics",
+        "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
+        "kind": "media"
+      },
+      {
+        "name": "TechCrunch Robotics",
+        "url": "https://techcrunch.com/tag/robotics/feed/",
+        "kind": "media"
+      },
+      {
+        "name": "Robotics & Automation News",
+        "url": "https://roboticsandautomationnews.com/feed/",
+        "kind": "media"
+      },
+      {
+        "name": "ExplainX",
+        "url": "https://explainx.substack.com/feed",
+        "kind": "media"
+      }
+    ]
+  }
+}

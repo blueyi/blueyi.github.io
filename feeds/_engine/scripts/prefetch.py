@@ -49,6 +49,25 @@ def load_domain_spec(channel: str) -> dict:
         return yaml.safe_load(f)
 
 
+def _apply_shared_config(channel: str, spec: dict) -> dict:
+    """ai-infra 频道：源+关键词统一从 _engine/news_config.json 读取（与日报共用）。
+    领域显示结构(domains 的 id/emoji/name/desc)仍来自本 yaml；关键词/源/arxiv/hn 来自共享配置。
+    embodied-ai 频道：保持原有 yaml 全量配置不动。"""
+    if channel != "ai-infra":
+        return spec
+    cfg_path = FEEDS_DIR.parent / "_engine" / "news_config.json"
+    cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+    cat_kw = {c["id"]: c.get("keywords", []) for c in cfg["categories"]}
+    for d in spec.get("domains", []):
+        if d.get("id") in cat_kw:
+            d["keywords"] = cat_kw[d["id"]]
+    spec["rss_feeds"] = cfg["sources"]["english"] + cfg["sources"]["finance"]
+    spec["cn_rss_feeds"] = cfg["sources"]["chinese"]
+    spec["arxiv_categories"] = cfg["arxiv_categories"]
+    spec["hn_min_score"] = cfg["hn_min_score"]
+    return spec
+
+
 def build_keyword_index(spec: dict):
     """返回 (全频道命中正则, [(domain_id, 编译正则), ...], 排除正则 or None)。"""
     per_domain = []
@@ -335,6 +354,7 @@ def main():
     args = ap.parse_args()
 
     spec = load_domain_spec(args.channel)
+    spec = _apply_shared_config(args.channel, spec)
     all_re, per_domain, excl_re = build_keyword_index(spec)
 
     now = datetime.now(timezone.utc).astimezone()

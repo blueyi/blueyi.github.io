@@ -2097,7 +2097,21 @@
         "id": "autokernel",
         "emoji": "7️⃣",
         "name": "自动内核与代码生成",
-        "items": []
+        "items": [
+          {
+            "title": "HINT：面向 LLM RTL 生成的可执行硬件意图表示层",
+            "summary": "提出可执行的硬件意图中间表示层 HINT，位于行为规格/可执行 oracle 与 RTL 之间，把 RTL 相关微架构显式化、支持 pre-RTL 检查并给出明确 lowering 义务；7 个算子案例下无需后综合 QoR 精修即产出 contract-compliant 可综合 RTL。",
+            "url": "https://arxiv.org/abs/2608.07625",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "SeqFeed：用序列行为反馈改进 Agentic RTL 代码生成",
+            "summary": "针对 agentic RTL 代码生成难以向 agent 传递跨时钟周期时序行为的问题，用「序列行为反馈」替代整段仿真波形，让 agent 理解信号如何随多个时钟周期演化，提升生成 RTL 的正确性。",
+            "url": "https://arxiv.org/abs/2608.16934",
+            "source": "arxiv"
+          }
+        ]
       },
       {
         "id": "edge",

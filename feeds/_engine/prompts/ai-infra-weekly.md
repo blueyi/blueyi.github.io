@@ -11,7 +11,7 @@
 3. 8 个领域全部输出；某领域无料时 items 留空数组（页面会自动显示「本周该方向公开源未见重大动态」）。
 4. 重大新闻（行业拐点 / 产品首发 / 政策落地 / 大额资金 / HN≥200）置 `"hot": true`。
 5. 每条写：简短中文标题 + 1-2 句中文摘要（基于 title/abstract 提炼）+ 真实 url + source(hn/arxiv) + score(若 hn)。
-6. 每领域选最有价值的 2-5 条；arXiv 偏学术、产业类领域素材少则少写。
+6. 每领域选本周最热的 2-5 条（**每周最热 TOP N**）；arXiv 偏学术、产业类领域素材少则少写。
 7. 与具身智能频道**严格不混**：纯 VLA/灵巧操作/sim2real/世界模型算法/人形产业动态归具身频道；本频道第 6 类「具身智能（基础设施视角）」只收机器人**算力/部署/推理系统**视角的条目。
 
 ## 8 个领域（顺序固定，id 见 domains/ai-infra.yaml）
@@ -21,7 +21,7 @@
 - `hn`：Hacker News 高分帖（score/title/url）
 - `arxiv`：arXiv 论文（title/url/abstract）
 - `rss`：海外产业媒体/公司官方/融资/分析源（feed/kind(media|official|finance|analysis)/title/url/summary）
-- `cn_rss`：国内中文媒体（36氪/量子位/InfoQ/雷锋网 + 36氪融资快讯；kind=cn_media|cn_finance）
+- `cn_rss`：国内中文媒体（量子位/InfoQ/雷锋网/新智元；kind=cn_media|cn_finance；源与关键词统一见 `_engine/news_config.json` 共享配置）
 - `markets`：海外上市公司行情；`cn_markets`：国内龙头股（secid/name/market/price/pct_5d/currency）
 - 技术领域用 hn+arxiv+rss+cn_rss(媒体类)；产业动态板块用 finance 类 rss/cn_rss + markets + cn_markets
 

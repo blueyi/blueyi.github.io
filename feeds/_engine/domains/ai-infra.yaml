@@ -2,86 +2,49 @@ channel: ai-infra
 title: AI Infra 每周资讯
 title_en: AI Infra Weekly
 description: AI 基础设施全栈每周资讯 —— 芯片 / 编译器 / 推理 / 数据中心 / 安全 / 自动算子 / 端侧
-# arXiv 主分类（prefetch 抓取 RSS）
-arxiv_categories:
-  - cs.DC   # 分布式/并行/集群
-  - cs.AR   # 体系结构/芯片
-  - cs.PL   # 编程语言/编译器
-  - cs.LG   # 机器学习（看主题）
-# Hacker News 入选分数阈值
+# ── 源 + 关键词统一从 _engine/news_config.json 读取（与日报共用，单一事实源）──
+# 本 yaml 只保留：领域显示结构（id/emoji/name/desc）、频道去重、龙头股清单。
+# 关键词 / rss_feeds / cn_rss_feeds 均在共享配置里。
+# 下面两个字段仅供 manifest 展示（与共享配置一致，别改）：实际抓取用共享配置。
+arxiv_categories: [cs.DC, cs.AR, cs.PL, cs.LG, cs.RO]
 hn_min_score: 60
-# 领域定义（周报按此顺序分栏；id 用于脚本与模板对齐）
 domains:
   - id: chips
     emoji: "1️⃣"
     name: AI 芯片
     desc: Nvidia / AMD / Intel / 自研芯片 / HBM / 制程 / TSMC / Samsung / SK Hynix
-    keywords: [nvidia, amd, "intel gaudi", tpu, blackwell, rubin, hbm, cowos, tsmc, "samsung foundry", "sk hynix", wafer, lithography, asic, npu, "ascend"]
   - id: compilers
     emoji: "2️⃣"
     name: AI 编译器与框架
     desc: tinygrad / MLIR / TVM / XLA / Triton / torch.compile / JAX / Mojo
-    keywords: [tinygrad, mlir, tvm, xla, triton, "torch.compile", inductor, jax, mojo, pytorch, cuda, "compiler", "compiler-agent", "agent-facing", codegen]
   - id: inference-dc
     emoji: "3️⃣"
     name: AI 推理优化（数据中心）
     desc: 量化 / 稀疏化 / KV Cache / Speculative Decoding / MoE / vLLM / TensorRT-LLM / SGLang（面向 H100/B200 集群）
-    keywords: [vllm, sglang, "tensorrt", quantization, fp8, fp4, gptq, awq, "kv cache", "kv-cache", "speculative decoding", moe, "paged attention", pagedattention, "prefix caching", batching]
   - id: datacenter
     emoji: "4️⃣"
     name: 数据中心与基础设施
     desc: 液冷 / 机架 / 网络(InfiniBand/RoCE) / 存储 / 电力 / 集群 / 超大规模 capex
-    keywords: ["data center", datacenter, "liquid cool", rack, infiniband, rdma, roce, hyperscaler, capex, "gpu cluster", "training cluster"]
   - id: safety
     emoji: "5️⃣"
     name: AI 安全与治理
     desc: 对齐 / 红队 / 可解释性 / 开源许可 / 出口管制 / 各国政策法规
-    keywords: [alignment, "red team", interpretability, "export control", "ai safety", "ai policy", evals, anthropic, openai, deepmind, governance]
   - id: embodied-infra
     emoji: "6️⃣"
     name: 具身智能（基础设施视角）
     desc: 机器人算力 / 边缘 NPU / 真机部署的推理系统（仅基础设施视角，纯算法与产业动态见 Embodied AI 频道）
-    keywords: ["robot compute", "humanoid compute", "edge npu robot", "jetson", "orin", "robot inference", "onboard compute"]
   - id: autokernel
     emoji: "7️⃣"
     name: AI 自动算子与代码生成优化
     desc: AlphaEvolve / FunSearch / AI Kernel 生成 / LLM-driven compiler / 自动调优 / LLM RTL 生成
-    keywords: [alphaevolve, funsearch, "kernel generation", "kernel codegen", "code generation", codegen, rtl, "compiler optimization", "auto-tuning", autotuning, cake, "compiler-agent", "agent-facing", "kernel agent", "schedule representation", "tensor program"]
   - id: edge
     emoji: "8️⃣"
     name: 边缘与端侧推理
     desc: 手机/PC/嵌入式 LLM/VLM 推理 - llama.cpp / MLC-LLM / ExecuTorch / MLX / NPU / 小模型 / 极低比特量化
-    keywords: ["on-device", "on device", "edge ai", "edge inference", "edge llm", tinyml, "mlc-llm", "llama.cpp", llamafile, gguf, ggml, mlx, executorch, "core ml", coreml, tflite, ncnn, mnn, onnxruntime, "onnx runtime", snapdragon, hexagon, "apple neural engine", rk3588, gemma, "gemini nano", smollm, minicpm, bitnet, "1.58", w4a16, "int4 inference"]
+
 # 去重：命中以下关键词的条目划归 Embodied AI 频道，不收入本频道（除非同时强命中基础设施词）
 exclude_to_channel:
   embodied-ai: [vla, "vision-language-action", openvla, "pi0", "pi-zero", "diffusion policy", "dexterous", "sim2real", "teleoperation", "world model", "humanoid policy", "manipulation policy"]
-
-# RSS 媒体源（fetch_rss 抓取；media=产业媒体, official=公司一手, finance=融资/独角兽, analysis=深度分析）
-# 抓回的条目同样过关键词过滤(all_re)与频道去重(exclude)，再由 agent 编辑分类。
-rss_feeds:
-  - {name: "TechCrunch AI", kind: media, url: "https://techcrunch.com/category/artificial-intelligence/feed/"}
-  - {name: "TechCrunch Fundraising", kind: finance, url: "https://techcrunch.com/tag/fundraising/feed/"}
-  - {name: "TechCrunch Venture", kind: finance, url: "https://techcrunch.com/category/venture/feed/"}
-  - {name: "Crunchbase News", kind: finance, url: "https://news.crunchbase.com/feed/"}
-  - {name: "VentureBeat AI", kind: media, url: "https://venturebeat.com/category/ai/feed/"}
-  - {name: "The Verge AI", kind: media, url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"}
-  - {name: "SiliconANGLE", kind: media, url: "https://siliconangle.com/feed/"}
-  - {name: "The Register", kind: media, url: "https://www.theregister.com/headlines.atom"}
-  - {name: "Tom's Hardware", kind: media, url: "https://www.tomshardware.com/feeds/all"}
-  - {name: "SemiEngineering", kind: media, url: "https://semiengineering.com/feed/"}
-  - {name: "EE Times", kind: media, url: "https://www.eetimes.com/feed/"}
-  - {name: "SemiAnalysis", kind: analysis, url: "https://www.semianalysis.com/feed"}
-  - {name: "NVIDIA Blog", kind: official, url: "https://blogs.nvidia.com/feed/"}
-  - {name: "Google AI Blog", kind: official, url: "https://blog.google/technology/ai/rss/"}
-  - {name: "OpenAI News", kind: official, url: "https://openai.com/news/rss.xml"}
-  - {name: "HuggingFace Blog", kind: official, url: "https://huggingface.co/blog/feed.xml"}
-  - {name: "Microsoft Research", kind: official, url: "https://www.microsoft.com/en-us/research/feed/"}
-  - {name: "Import AI", kind: analysis, url: "https://importai.substack.com/feed"}
-  - {name: "Chips and Cheese", kind: analysis, url: "https://chipsandcheese.com/feed"}
-  - {name: "The Next Platform", kind: analysis, url: "https://www.nextplatform.com/feed/"}
-  - {name: "ServeTheHome", kind: media, url: "https://www.servethehome.com/feed/"}
-  - {name: "Blocks & Files", kind: media, url: "https://blocksandfiles.com/feed/"}
-  - {name: "Data Center Dynamics", kind: media, url: "https://www.datacenterdynamics.com/en/rss/"}
 
 # 上市公司龙头（fetch_markets 取 Yahoo Finance 最新价 + 周涨跌幅，供「📈 产业动态」板块）
 tickers:
@@ -97,14 +60,6 @@ tickers:
   - {sym: "GOOGL", name: "谷歌"}
   - {sym: "AMZN", name: "亚马逊"}
   - {sym: "ORCL", name: "甲骨文"}
-
-# 国内中文媒体 RSS（只保留高信噪比源，剔除广告/软文偏多的钛媒体/爱范儿等；kind=cn_media/cn_finance）
-# 36氪/36氪融资快讯 已移除：其 feed 返回 HTML 反爬页（0 items），不可用。
-cn_rss_feeds:
-  - {name: "量子位", kind: cn_media, url: "https://www.qbitai.com/feed"}
-  - {name: "InfoQ中国", kind: cn_media, url: "https://www.infoq.cn/feed"}
-  - {name: "雷锋网", kind: cn_media, url: "https://www.leiphone.com/feed"}
-  - {name: "新智元", kind: cn_media, url: "https://www.aiera.com.cn/feed"}
 
 # 国内龙头股（东方财富 push2；secid 1.=沪 0.=深 116.=港股。A股/港股同公司只留港股）
 cn_tickers:
