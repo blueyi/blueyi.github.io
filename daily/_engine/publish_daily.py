@@ -76,9 +76,13 @@ def main():
     if rc != 0:
         print("[daily] git add failed", file=sys.stderr)
         return 1
+    # add 后若无任何实际改动（内容逐字节相同，例如重投递快照），静默退出，不产生空提交
+    rc, _ = run(["git", "diff", "--cached", "--quiet"], REPO_DIR)
+    if rc == 0:
+        return 0
     rc, _ = run(["git", "commit", "-q", "-m", f"daily: {date} AI Infra daily digest"], REPO_DIR)
     if rc != 0:
-        print("[daily] git commit failed (nothing changed?)", file=sys.stderr)
+        print("[daily] git commit failed", file=sys.stderr)
         return 1
     rc, _ = run(["git", "pull", "--rebase", "-q", "origin", "master"], REPO_DIR)
     if rc != 0:
