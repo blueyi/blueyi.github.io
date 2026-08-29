@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-29</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-29</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-29 · 周六</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-27 ~ 2026-08-29</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-29</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>Nvidia 130 亿美元收购 Hugging Face(HN 近 2000 分),若落地将是 AI 软件生态历史性整合,芯片与模型生态深度绑定。</b></li>
+      <li><b>黄仁勋把 CPU 机柜搬上台、Vera CPU 开始出货,推理时代算力从 GPU 单一主导走向 CPU/GPU/LPU 分工。</b></li>
+      <li><b>Anthropic 发布 MHS 硬件标准,继 MCP 之后把「统一协议」逻辑延伸到物理世界,Agent 开始「长出手」。</b></li>
+      <li><b>OpenAI Jalapeño ASIC 与 Google TPUv8 同台亮相 Hot Chips,自研芯片从「补充」变为「标配」。</b></li>
+      <li><b>出口管制再收紧(远程 AI 服务器新规 + Hugging Face 收购传闻),中美算力博弈进入新阶段。</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Nvidia 同意以 130 亿美元收购 Hugging Face](https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8)(HN 1947 分)——今日最炸裂消息,若落地将把模型生态与芯片生态深度绑定。([HN 讨论](https://news.ycombinator.com/item?id=49458161))</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[NVIDIA 首款面向 Agent 的 CPU「Vera」开始大规模出货](https://blogs.nvidia.com/blog/vera-cpu-delivery/)——黄仁勋把 CPU 机柜单独搬上台,宣告推理时代并非所有任务都要进 GPU 机柜。中文视角见[雷锋网:老黄把 CPU 机柜搬上台,一场五年混战开始了](https://www.leiphone.com/category/chips/HXcJQubeLhbCrXOL.html)。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[OpenAI 自研 AI 加速器 ASIC「Jalapeño」首发基准曝光](https://www.eetimes.com/first-benchmarks-revealed-for-jalapeno-openais-clean-sheet-general-purpose-ai-accelerator-asic/)——Hot Chips 2026 上披露从零设计的通用 AI 加速器细节(另有 [ServeTheHome 报道](https://www.servethehome.com/openai-jalapeno-asic-at-hot-chips-2026/))。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Google TPUv8s 训练/推理双产品亮相 Hot Chips 2026](https://www.servethehome.com/googles-tpuv8s-for-training-and-inference-at-hot-chips-2026/)——第八代 TPU 分训练(8t)与推理(8i)两个 SKU。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Hot Chips 2026:Samsung 与 HBM Base Die 的机遇](https://chipsandcheese.com/p/hot-chips-2026-samsung-and-hbm-base)——三星在逻辑节点上制造 HBM base die,打开更多定制空间。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Qualcomm 押注开源 AI 软件打破 Nvidia 锁定](https://www.eetimes.com/qualcomm-bets-open-source-ai-software-can-break-nvidias-lock-in/)——Modular(Mojo/MAX)试图把 AI 软件与芯片选择解耦,给挑战者切入 Nvidia 主导负载的机会。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Hot Chips 2026:CUDA 瞄准 RISC-V](https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc)——Nvidia 研究在 RISC-V 上支持 CUDA,「条款与条件可能适用」,生态层面影响深远。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[MeshReduce-U:编译器引导的 Mesh NoC 不规则神经规约通信削减](https://arxiv.org/abs/2608.26220)(arXiv cs.AR)——利用结合律在路由前消除流量,而非为固定通信图优化布局。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">近两天无重大独立动态(背景:MLIR/TVM/XLA/Triton 方向本周无高分新帖,cs.PL 多为语言理论类论文)。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[VPP:长上下文 LLM 推理中分块 Prefill 的虚拟流水线并行](https://arxiv.org/abs/2608.26523)(arXiv cs.DC)——针对等长 chunk 延迟不均衡(后 chunk 关注更长 KV cache),提出虚拟流水线并行消除气泡。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[多 GPU LLM 推理中的 CPU 引发降速特征刻画](https://arxiv.org/abs/2603.22774)(arXiv cs.AR)——多 GPU 性能下降常非 GPU 饱和,而是 CPU 喂不满;CPU 分配受限时系统显著降速。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Groq 3 LPX 全面投产,NVIDIA 扩展面向 Agent 的 Vera Rubin 推理](https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/)——下一代 Agent 推理不再靠单点芯片突破,而是各层 AI factory 协同。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Quantization-Aware Healing:4-bit 模型反超全精度原版](https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing)(见 8️⃣)——量化作为数据中心与端侧共用的核心手段。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[a16z 成立 11 亿美元「Machine Age」基金,加速 AI 物理基建](https://siliconangle.com/2026/08/28/andreessen-horowitz-raises-1-1b-ai-infrastructure-fund/)——投向芯片、内存、网络设备,优先数据中心设备类初创(另有 [TechCrunch](https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/))。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Neocloud Lambda 发行 10 亿美元债务买更多芯片](https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/)——买 Nvidia 芯片租给微软,AI 基建资本开支持续高涨。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[NVIDIA NVLink Fusion 扩展 NVHBM 定制高带宽内存](https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/)——Agent 与万亿参数负载下,算力/内存/存储/网络需作为统一系统设计。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[德日研究员发明无电冷却技术,或可冷却数据中心](https://www.theregister.com/science/2026/08/28/german-japanese-researchers-invent-electricity-free-tech-that-could-cool-datacenters/5293364/)——液冷之外的另类散热探索。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[两家 AI 巨头(Anthropic 与 OpenAI)吞噬全球 1/3 新增算力,明年逼近一半](https://aiera.com.cn/2026/08/29/other/admin/111096/%e4%b8%a4%e5%ae%b6ai%e5%b7%a8%e5%a4%b4%ef%bc%8c%e5%90%9e%e5%99%ac%e5%85%a8%e7%90%831-3%e6%96%b0%e5%a2%9e%e7%ae%97%e5%8a%9b%ef%bc%81%e6%98%8e%e5%b9%b4%e9%80%bc%e8%bf%91%e4%b8%80%e5%8d%8a/)(新智元)——算力向头部实验室加速集中。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[法官裁定特朗普政府将 Anthropic 列入黑名单违法](https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html)(HN 508 分)——Pentagon 的「供应链风险」标签被判「illegal and baseless」。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[新美国出口管制据报瞄准中国远程 AI 服务器访问](https://www.tomshardware.com/tech-industry/policy/new-us-export-controls-reportedly-target-chinese-access-to-remote-ai-servers-trump-admins-cut-down-ai-diffusion-rule-could-be-shared-with-industry-as-soon-as-september)——收紧 AI 扩散规则封堵远程算力漏洞,或 9 月通报行业。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[OpenAI 披露 Hugging Face 安全事件与后续](https://openai.com/index/hugging-face-incident-and-the-road-ahead/)——在 Nvidia 收购 HF 传闻背景下更显敏感。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[OpenAI、Anthropic、Google 等 100+ 公司联合呼吁防御「失控 AI」](https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/)——警示 AI 网络攻击数月内将大规模扩散。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[NeuronFuzz:安全神经元引导的 LLM 安全评估模糊测试](https://arxiv.org/abs/2608.26222)(arXiv cs.LG)——摆脱「逐条生成目标响应」的高成本红队范式,提供稀疏反馈之外的更高效评估。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Anthropic 发布 MHS(Model Hardware Standard):打通 AI 与物理世界的统一接口](https://www.anthropic.com/news/model-hardware-standard-research-preview)(HN 132 分)——继 MCP 后第二次全行业统一协议,让 Agent 直接操控显微镜等物理设备;中文媒体称「Claude 肉身降临,接管全球设备」([新智元](https://aiera.com.cn/2026/08/29/other/admin/111242/claude%e3%80%8c%e8%82%89%e8%ba%ab%e3%80%8d%e9%99%8d%e4%b8%b4%ef%bc%8c%e6%8e%a5%e7%ae%a1%e5%85%a8%e7%90%83%e8%ae%be%e5%a4%87%ef%bc%81a%e7%a4%be%e7%a5%ad%e5%87%ba%e7%a1%ac%e4%bb%b6%e7%89%88mcp/)、[雷锋网](https://www.leiphone.com/category/yanxishe/N12vFHlsL2JrdKYR.html))。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[General Intuition 拟以 60 亿美元估值融资,Valor/Point72 领投](https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/)——训练通用 AI Agent「在时空中的移动」,切入机器人。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[智元(AGIBOT)人形机器人运动会 18 金登顶](https://aiera.com.cn/2026/08/29/other/admin/111158/%e5%88%9a%e5%88%9a%ef%bc%8c%e6%9c%ba%e5%99%a8%e4%ba%ba%e8%bf%90%e5%8a%a8%e4%bc%9a%e5%86%a0%e5%86%9b%e8%af%9e%e7%94%9f%ef%bc%8118%e9%87%91%e5%8f%8c%e6%a6%9c%e7%ac%ac%e4%b8%80%ef%bc%8c%e4%b9%92%e4%b9%93/)(新智元)——2026 世界人形机器人运动会金牌榜/奖牌榜双第一,乒乓球技震动丁宁。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Kodiak AI 携手 AMD,EPYC 处理器驱动第七代无人卡车平台](https://roboticsandautomationnews.com/2026/08/27/kodiak-ai-and-amd-collaborate-to-advance-computing-power-for-driverless-trucking/104535/)——自动驾驶与芯片的跨界落地。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">arXiv 具身精选:[WALL-SS 世界模型](https://arxiv.org/abs/2608.26239)(next-scale 自回归扩展长程世界模型)、[SOLO 全地形长程人形步态](https://arxiv.org/abs/2608.26583)、[TrapVLA VLA 后门攻击](https://arxiv.org/abs/2608.26578)。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Redwood:AI 两周内从零设计、验证、部署的前沿 AI 加速器](https://arxiv.org/abs/2608.26418)(arXiv cs.AR)——AI 自主设计硬件的激进案例,直面「架构定义先于硅片数年」的时差矛盾。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[LLMs in Digital EDA:从「生成」到「编排」的角色迁移](https://arxiv.org/abs/2608.27184)(arXiv cs.AR)——EDA 中 LLM 定位从替代单点工具转向编排,而非各自为战的孤立助手。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[DataKernelBench:LLM 能否在 GPU 上优化数据库查询?](https://arxiv.org/abs/2608.25061)(arXiv cs.PL)——SQL → 验证过的 PyTorch TorchPlan 程序,补上 LLM 内核基准在数据库风格不规则算子上的空白。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Spec2Vision:合同引导的 AI 生成 CV 流水线交付](https://arxiv.org/abs/2608.26400)(arXiv cs.PL)——让生成代码满足下游评测器强制约束,而非「能跑但不达标」。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Quantization-Aware Healing:4-bit 压缩模型反超全精度原版](https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing)——极低比特量化的范式突破,4-bit 不再是「妥协」。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Ankhdjet:开放 PDK 上掩模编程三值 Compute-in-ROM 的开源编译器](https://arxiv.org/abs/2608.26206)(arXiv cs.AR)——BitNet b1.58 三元量化,权重硬编码进只读掩模,商业芯片 Taalas HC1 已先行验证。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Pruning Binarized Neural Networks:专用框架与全局加权算法](https://arxiv.org/abs/2608.26233)(arXiv cs.LG)——面向 FPGA/微控制器的二值化 + 剪枝组合,突破现有剪枝策略不适用于二值表示的瓶颈。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[为何「连接」成为边缘 AI 的设计决策](https://www.eetimes.com/why-connectivity-has-become-an-edge-ai-design-decision/)——无线链路若卡脖子,边缘 AI 就不智能;计算、安全与 Wi-Fi 7 切换需从第一天一起设计。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-28.html">← 2026-08-28</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
