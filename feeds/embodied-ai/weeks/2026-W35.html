@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W35 · 08-24 ~ 08-30</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W35</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W35 · 08-24 ~ 08-30</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-24 ~ 2026-08-30</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W35</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>跨本体世界模型走热：CLAP 用互联网视频作零样本物理模拟器，Riemann-1.0 以全因果自回归统一视觉、状态与动作。</li>
+      <li>资本向实体 AI 倾斜：a16z 设立 11 亿美元&quot;机器时代&quot;基金，General Intuition 据报道拟以 60 亿美元估值进军机器人。</li>
+      <li>产业转向真实交付：日本启用中型工厂可负担的共享人形训练中心，Walden×丰田、Persona AI 焊接聚焦人形&quot;找工作&quot;。</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27384v1" target="_blank" rel="noopener">FlashVLA：流式动作解码加速异步 VLA 推理</a></div>
+      <div class="it-sum">针对流匹配类 VLA 部署时高延迟、异步执行不稳的瓶颈，提出流式动作解码方案，减少多步迭代对 VLM 上下文的依赖，提升实机推理速度与稳定性。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27079v1" target="_blank" rel="noopener">GRAFT：面向精细操作的在线强化适配</a></div>
+      <div class="it-sum">在预训练 VLA 先验基础上做在线强化适配，解决生物医学等精细任务中依赖细微视角相关线索、任务级奖励难以定位关键区域的问题，学习任务相关的视觉 grounding。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27259v1" target="_blank" rel="noopener">为世界动作模型引入算子结构化潜在转移</a></div>
+      <div class="it-sum">针对现有 WAM 多用 Transformer 做潜空间转移、归纳结构偏弱的问题，提出算子结构化的显式潜在演化，使场景状态在交互下的演化预测更贴合控制需求。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27186v1" target="_blank" rel="noopener">气动软体执行器的任务空间模型控制</a></div>
+      <div class="it-sum">面向软体执行器强非线性、分布式变形与动力学不确定，提出基于非最小坐标离散弹性杆模型的实时动力学模型任务空间反馈与估计框架，改善闭环操作。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27221v1" target="_blank" rel="noopener">张拉整体连续体机器人实现任务自适应形态</a></div>
+      <div class="it-sum">结合连续体机器人的柔顺性与模块可重构，提出张拉整体连续体机器人，可按任务与环境改变形态并支持协作行为，突破刚性模块结构顺应性不足的限制。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27088v1" target="_blank" rel="noopener">主动感知刻画植物胁迫的异质性</a></div>
+      <div class="it-sum">自主机器人平台融合 3D 植物重建、几何分析与运动规划，对叶片做定向叶绿素荧光测量，把主动生理感知引入表型平台，超越单纯图像测量。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27085v1" target="_blank" rel="noopener">异构机器人团队的高效鲁棒本地负载均衡</a></div>
+      <div class="it-sum">面向协同运输的异构机器人集群，提出&quot;接力桶&quot;（bucket brigade）式去中心化任务分担机制，给出负载均衡的理论与实践结果，兼顾效率与鲁棒性。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27271v1" target="_blank" rel="noopener">面向科学产出最大化的海洋自主航行器编队调度</a></div>
+      <div class="it-sum">针对海洋自主航行器（MAV）编队规模化后人工路径与规划复杂度激增，提出混合整数线性规划模型，以最大化科学数据采集价值来自动编排大规模自主编队。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（世界模型 / 人形策略 / 基础模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27406v1" target="_blank" rel="noopener">CLAP：跨本体视频世界模型作零样本物理模拟器</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">提出跨本体动作条件视频生成框架，可在多样化互联网规模视频上训练，突破单一机器人本体限制，把异构视频中的物理信号用于学习可泛化动力学，充当零样本物理模拟器。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27033v1" target="_blank" rel="noopener">Riemann-1.0：面向物理 AI 的具身世界动作模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">全因果自回归世界动作模型，将多视角视觉观测、机器人状态与本体相关动作统一到单一因果自回归序列，把机器人动作与世界演化表示为因果状态转移。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27073v1" target="_blank" rel="noopener">SpatialCrafter：单图世界建模引入生成式 3D 代理</a></div>
+      <div class="it-sum">针对视频扩散做图像到场景生成时条件信号不完整、易产生漂移与 3D 不一致的问题，提出两阶段框架结合生成式 3D 代理，改善长程一致性。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://explainx.substack.com/p/gen-15-brings-one-shot-learning-to" target="_blank" rel="noopener">GEN-1.5 为机器人带来一次学习能力</a></div>
+      <div class="it-sum">外媒报道 GEN-1.5 支持机器人 one-shot 学习，并提及 Reactor 将世界模型转为可交互世界；具体能力与量产状态需以官方渠道核验。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/iot/wSd8yNXuuYwSg9hp.html" target="_blank" rel="noopener">先补上更省电的&quot;神经系统&quot;：类脑计算切入机器人</a></div>
+      <div class="it-sum">WRC2026 圆桌讨论指出，若未来部署数十亿台高度依赖 AI 的人形机器人，现有算力方式的能耗难以支撑；类脑计算正从感知与低层控制切入机器人本体。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27225v1" target="_blank" rel="noopener">STEP：多模态 LLM 支持人机协作的状态感知任务估计与规划</a></div>
+      <div class="it-sum">面向工业场景数据稀缺，利用多模态大模型的上下文学习解读人的动作并生成长程行动计划，通过状态感知的任务估计辅助人机协作、减轻工人负担。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2608.27151v1" target="_blank" rel="noopener">跨机器人拆解阶段的共享模块化夹具布局规划</a></div>
+      <div class="it-sum">针对不规则产品机器人拆解中支撑面、质量分布与载荷随流程变化的问题，提出在完整拆解序列上统一规划支撑的共享模块化夹具布局，避免单一状态布局在后续失效。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.techtimes.com/articles/325878/20260829/japan-opens-shared-humanoid-training-hub-mid-market-factories-can-now-afford.htm" target="_blank" rel="noopener">日本开设中型工厂可负担的共享人形训练中心</a></div>
+      <div class="it-sum">J-HRTI 于 8 月 26 日在千叶启用关东数据工厂，为日本首个纯民营物理 AI 训练基地，五家工业企业共摊遥操作成本，让中型制造商无需巨额投入即可训练人形机器人。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/" target="_blank" rel="noopener">a16z 设立 11 亿美元&quot;机器时代&quot;基金投向 AI 硬件</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">以软件著称的 a16z 成立 11 亿美元 Machine Age 基金，加码 AI 背后的硬件与&quot;物理化建设&quot;，反映资本正向具身与实体 AI 基础设施倾斜。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/" target="_blank" rel="noopener">General Intuition 拟以 60 亿美元估值融资进军机器人</a></div>
+      <div class="it-sum">该公司构建训练通用 AI 智能体在时空中移动的基础模型，据报道正与 Valor、Point72 Ventures、Seven Seven Six 等新投资方洽谈以 60 亿美元投前估值融资并推进机器人方向。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">机器人手公司和解特斯拉商业秘密诉讼并融资 1100 万美元</a></div>
+      <div class="it-sum">创企 Proception 用独特方式采集训练数据攻克机器人&quot;手&quot;这一难题，同时宣布与特斯拉的商业秘密诉讼达成和解并完成 1100 万美元融资。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/humanoid-robots-walden-robotics-toyota" target="_blank" rel="noopener">Walden Robotics 携手丰田做实用人形机器人</a></div>
+      <div class="it-sum">IEEE Spectrum 报道 Walden Robotics 与丰田合作，转向面向近期可落地目标的实用人形机器人，区别于前两年缺乏现实目标的人形热潮。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/persona-ai-humanoid-robot-welding" target="_blank" rel="noopener">焊接是否是人形机器人合适的&quot;第一份工作&quot;</a></div>
+      <div class="it-sum">IEEE Spectrum 报道 Persona AI 专注为人形机器人挑选当前经济可行的岗位（船厂焊接），推动人形从演示视频走向真实就业。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（13 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>348.75 USD</td><td class="down">-0.06%</td><td>Optimus 相关观察标的</td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>372.6 USD</td><td class="down">-0.26%</td><td>手术机器人观察标的</td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>39.88 USD</td><td class="down">-0.39%</td><td>仓储机器人观察标的</td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>5.03 USD</td><td class="up">+7.71%</td><td>配送机器人观察标的</td></tr>
+        <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>18.15 USD</td><td class="up">+9.54%</td><td>自动化观察标的</td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>217.55 USD</td><td class="up">+4.35%</td><td>机器人计算观察标的</td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>110.5 HKD</td><td class="down">-2.47%</td><td>物流机器人观察标的</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>83.5 HKD</td><td class="up">+0.66%</td><td>人形机器人观察标的</td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>4.75 HKD</td><td class="up">+0.0%</td><td>机器人计算观察标的</td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>62.05 CNY</td><td class="down">-0.11%</td><td>工业自动化观察标的</td></tr>
+        <tr><td>埃斯顿 <span class="tk">0.002747 · A股</span></td><td>31.49 CNY</td><td class="down">-1.01%</td><td>工业机器人观察标的</td></tr>
+        <tr><td>绿的谐波 <span class="tk">1.688017 · A股</span></td><td>292.0 CNY</td><td class="down">-2.44%</td><td>机器人减速器观察标的</td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>40.06 CNY</td><td class="up">+0.73%</td><td>机器人智能观察标的</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">11 亿美元</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/" target="_blank" rel="noopener">a16z 设立 11 亿美元&quot;机器时代&quot;基金</a></div><div class="it-sum">以软件为主的 a16z 成立 Machine Age 基金，加码 AI 硬件与物理化建设，投向具身与实体 AI 基础设施。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/" target="_blank" rel="noopener">General Intuition 拟以 60 亿美元估值融资进军机器人</a></div><div class="it-sum">构建训练通用智能体时空移动的基础模型，据报道与 Valor、Point72 Ventures、Seven Seven Six 等洽谈融资；估值与轮次以官方为准。</div></li>
+      <li><div class="it-title"><span class="badge amt">1100 万美元</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">Proception 和解特斯拉商业秘密诉讼并融资 1100 万美元</a></div><div class="it-sum">聚焦机器人&quot;手&quot;训练数据采集的创企，宣布与特斯拉诉讼和解并完成 1100 万美元融资。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://www.leiphone.com/category/industrynews/gE5Am1JMBQG2AjNJ.html" target="_blank" rel="noopener">首家&quot;碰一下&quot;机器人租赁体验店落地上海徐家汇</a></div><div class="it-sum">宇树核心生态伙伴具深科技旗下&quot;机时租&quot;接入支付宝&quot;碰一下&quot;，落地线下机器人快捷租赁与 AI 智能体操控；运营细节以官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
