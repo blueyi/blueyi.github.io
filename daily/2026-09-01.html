@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-09-01</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-09-01</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-09-01 · 周二</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-30 ~ 2026-09-01</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-09-01</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>定制芯片军备竞赛全面开打</b>：OpenAI Jalapeño ASIC 首批基准、Nvidia 35 亿入股联发科、国产寒序 LPU 首秀、华为 Ascend HBM 瓶颈——一天之内四大自研芯片信号密集释放。</li>
+      <li><b>华为系消息密集</b>：SemiAnalysis 深度拆解 Ascend 生产爬坡、范式×华为算力战略合作、华为/ETH/HUST 联合 FLINT HBF 基板,国产算力生态正从「能用」走向「上量」。</li>
+      <li><b>具身智能融资再度引爆</b>：General Intuition 拟 60 亿美元估值、Kalanick 的 Atoms 融 17 亿美元,「工业 AI + 通用具身基础模型」叙事持续吸金。</li>
+      <li><b>AI 造芯片进入实证阶段</b>：Redwood 论文展示 AI 两周从零造出可部署 AI 加速器,叠加 SpaceXAI 3000+ PR 的编码代理生产化,AI 正在反向重构「造 AI」的整条链路。</li>
+      <li><b>治理与版权风险并行升温</b>：ChatGPT 被欧盟按 DSA 监管、索尼/华纳起诉 Anthropic、量化后门论文,「模型越强、约束越紧」的趋势明确。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">华为 Ascend Production Ramp</span><a href="https://semianalysis.com/2025/09/08/huawei-ascend-production-ramp/" target="_blank" rel="noopener">华为 Ascend 生产爬坡深度拆解</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(SemiAnalysis):Die Banks 打法 + TSMC 继续供货,HBM 已成唯一真正瓶颈,直接关系国产算力供应节奏。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Jalapeño 首批基准</span><a href="https://www.eetimes.com/first-benchmarks-revealed-for-jalapeno-openais-clean-sheet-general-purpose-ai-accelerator-asic/" target="_blank" rel="noopener">OpenAI 自研 ASIC「Jalapeño」首批基准曝光</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(EE Times,Hot Chips 2026):从零打造的通用 AI 加速器,Richard Ho 强调「不是复用 GPU,而是为 AI 负载专用设计」。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Nvidia $3.5B MediaTek 布局</span><a href="https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/" target="_blank" rel="noopener">Nvidia 35 亿美元入股联发科</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(TechCrunch AI):押注应对 Big Tech 自研芯片浪潮,强化自身在 AI 基建中的不可替代性。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">国产 LPU 首秀</span><a href="https://aiera.com.cn/2026/09/01/other/admin/111584/%e5%88%9a%e5%88%9a%ef%bc%8c%e5%85%a8%e6%96%b0%e5%9b%bd%e4%ba%a7lpu%e6%8e%a8%e7%90%86%e8%8a%af%e7%89%87%e9%a6%96%e7%a7%80%ef%bc%81/" target="_blank" rel="noopener">国产 LPU 推理芯片首秀</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(新智元):寒序科技发布 4-bit 权重 LPU,主打「不搬权重」的存内/近存推理路线,国产推理芯片再添新玩家。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">范式×华为算力合作</span><a href="https://www.qbitai.com/2026/08/481919.html" target="_blank" rel="noopener">范式与华为达成重磅算力战略合作</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(量子位):成为首批拥抱国产最高端算力底座的 AI 企业,国产算力生态落地加速。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Vera CPU 交付</span><a href="https://blogs.nvidia.com/blog/vera-cpu-delivery/" target="_blank" rel="noopener">NVIDIA Vera CPU 开始出货</a></div>
+      <div class="it-sum">(NVIDIA Blog):面向 Agent 时代的首款 CPU,由 Ian Buck 亲自交付,标志 NVIDIA「CPU+GPU」全栈闭环成型。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">NVLink Fusion + NVHBM</span><a href="https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/" target="_blank" rel="noopener">NVLink Fusion 扩展 NVHBM 定制高带宽内存</a></div>
+      <div class="it-sum">(NVIDIA Blog):算力、内存、网络、存储一体化设计成为下一波 AI 基建主线。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">HBF 基板(华为)</span><a href="https://semiengineering.com/workload-driven-hbf-substrate-for-capacity-scalable-llm-inference-huawei-eth-zurich-hust/" target="_blank" rel="noopener">华为/ETH/HUST 联合发布 FLINT</a></div>
+      <div class="it-sum">面向容量可扩展 LLM 推理的 HBF(High-Bandwidth Flash)基板,缓解「加速器内存容量 &lt; 算力」瓶颈。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">AI 加速器综述</span><a href="https://arxiv.org/abs/2608.28048" target="_blank" rel="noopener">arXiv 综述:LLM 加速器架构与「内存墙」</a></div>
+      <div class="it-sum">(cs.DC/cs.AR):全景梳理 GPU、TPU、Trainium、Groq、Cerebras、FPGA、PIM 与神经形态/光子路线。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">开源软件破锁定</span><a href="https://www.eetimes.com/qualcomm-bets-open-source-ai-software-can-break-nvidias-lock-in/" target="_blank" rel="noopener">Qualcomm 押注开源 AI 软件破 Nvidia 锁定</a></div>
+      <div class="it-sum">(EE Times):Modular(Mojo/MAX)路线意图把 AI 软件栈与硅片解耦,给高通等挑战者反攻 CUDA 生态的机会。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">URIUM 教学编译器</span><a href="https://arxiv.org/abs/2608.28202" target="_blank" rel="noopener">arXiv:URIUM——面向编译器设计实践课的教学语言</a></div>
+      <div class="it-sum">(cs.PL):从词法/语法分析到代码生成逐步构建编译器,可生成 MIPS/Intel/RISC-V 多后端代码。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Cambria</span><a href="https://arxiv.org/abs/2608.27798" target="_blank" rel="noopener">arXiv:Cambria 参数化代数效应资源抽象</a></div>
+      <div class="it-sum">(cs.PL):把 algebraic effects &amp; handlers 扩展到参数化场景,为效应系统与编译后端解耦提供新抽象。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Muon 谱分析</span><a href="https://arxiv.org/abs/2608.27518" target="_blank" rel="noopener">arXiv:Muon 遇上任务干扰</a></div>
+      <div class="it-sum">(cs.LG):从谱视角统一审视持续学习与模型合并,提出基优化器几何是核心变量,而非实现细节。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">TerraceMoE</span><a href="https://arxiv.org/abs/2608.27874" target="_blank" rel="noopener">arXiv:TerraceMoE 层次化 MoE All-to-All 通信成本模型</a></div>
+      <div class="it-sum">(cs.DC):两跳 dispatch 能省慢速互联流量,但引入第二个 collective,用通信调用级成本模型筛选用法权衡。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">推理能耗表征</span><a href="https://arxiv.org/abs/2608.28044" target="_blank" rel="noopener">arXiv:LLM 推理请求/token 能耗分解模型</a></div>
+      <div class="it-sum">(cs.DC):拆解 prefill 固定成本 + 生成长尾成本,指出「平均输出 token 能耗下降」可能掩盖总请求能耗上升的度量陷阱。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Quantization-Aware Healing</span><a href="https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing" target="_blank" rel="noopener">HuggingFace:量化感知「修复」——4-bit 模型反超全精度原版</a></div>
+      <div class="it-sum">把量化误差当作可训练信号「愈合」,为极低比特部署提供新范式。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Uber token 账单</span><a href="https://www.infoq.cn/article/WGj2Jx0K2sbP3dhUXeC5" target="_blank" rel="noopener">Uber AI 软件工厂:智能体请求暴增 9.4 倍,token 账单没涨</a></div>
+      <div class="it-sum">(InfoQ中国):公开 agentic 负载下的成本控制方法,对数据中心推理成本优化有直接借鉴。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">VR NVL72 效率</span><a href="https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/" target="_blank" rel="noopener">NVIDIA Vera Rubin NVL72 每瓦效率 30 倍提升</a></div>
+      <div class="it-sum">(NVIDIA Blog):agentic 负载消耗 15 倍 token 的背景下,以 token/瓦特、每 token 成本重构 AI 工厂经济学。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">DAMP 量化</span><a href="https://arxiv.org/abs/2608.27513" target="_blank" rel="noopener">arXiv:DAMP 衰减感知混合精度递归状态量化</a></div>
+      <div class="it-sum">(cs.LG):针对 Gated DeltaNet/Kimi Delta Attention 的 FP32 递归状态做混合精度量化,压 GPU 显存。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">Colossus 2 吉瓦数据中心</span><a href="https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/" target="_blank" rel="noopener">xAI Colossus 2:全球首个吉瓦级数据中心</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(SemiAnalysis):20 万 H100/H200 + ~3 万 GB200 NVL72 的单一相干集群,配套独特 RL 方法论与资本运作。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">NVSwitch 长期判断</span><a href="https://www.nextplatform.com/connect/2026/08/31/in-the-long-run-nvidia-nvswitch-is-the-infiniband-of-scale-up-ai-networks/5293474" target="_blank" rel="noopener">NVIDIA NVSwitch = Scale-Up 网络的「InfiniBand」</a></div>
+      <div class="it-sum">(The Next Platform):Scale-Up 域网络正成为 AI 工厂的长期主线,类比当年 InfiniBand 之于 HPC。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">a16z Machine Age 基金</span><a href="https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/" target="_blank" rel="noopener">a16z 成立 11 亿美元「Machine Age」基金</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(TechCrunch):专投 AI 物理基建,叠加同期 85 亿美元成长基金,资本向算力硬件侧加速聚集。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">OpenAI 购 Mac</span><a href="https://www.qbitai.com/2026/08/481759.html" target="_blank" rel="noopener">OpenAI 买几万台 Mac 做强化训练</a></div>
+      <div class="it-sum">(量子位):GPU/TPU 搞不定的负载转向 Mac,揭示强化学习在 CPU/统一内存架构上的另类算力供给。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">学习增强缓存</span><a href="https://arxiv.org/abs/2608.27975" target="_blank" rel="noopener">arXiv:学习增强的缓存驱逐启发式</a></div>
+      <div class="it-sum">(cs.DC):把 ML 学习与静态启发式(2Q/S3-FIFO)结合,追求智能缓存的可解释性与鲁棒性,服务系统栈缓存层。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Railway 融资</span><a href="https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud" target="_blank" rel="noopener">Railway 融 1 亿美元挑战 AWS</a></div>
+      <div class="it-sum">(VentureBeat):主打 AI 原生云基础设施,零营销积累 200 万开发者,凸显传统云在 AI 负载下的短板。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">Agent Civilizations</span><a href="https://www.dwarkesh.com/p/openai-huggingface" target="_blank" rel="noopener">「Agent 文明的兴衰」</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 256 分,Dwarkesh×OpenAI/HuggingFace):多智能体社会涌现与治理话题登顶 HN,是今日 AI 讨论最高热帖。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">GPT-6 灰测</span><a href="https://www.qbitai.com/2026/08/481893.html" target="_blank" rel="noopener">「GPT-6」灰测 demo 刷屏,周四发布在即</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(量子位):新一代大模型发布前夜,行业关注度拉满。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ChatGPT 欧盟监管</span><a href="https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa" target="_blank" rel="noopener">ChatGPT 被欧盟认定为「超大型在线搜索引擎」</a></div>
+      <div class="it-sum">(The Verge):将按《数字服务法》(DSA)就未成年人保护、心理健康与非法内容传播担责。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">版权诉讼</span><a href="https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright" target="_blank" rel="noopener">索尼音乐、华纳 Chappell 起诉 Anthropic 版权侵权</a></div>
+      <div class="it-sum">(The Verge):索赔「数万部」受版权作品、每部最高 15 万美元,训练数据版权战再升级。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">量化后门</span><a href="https://arxiv.org/abs/2608.27512" target="_blank" rel="noopener">arXiv:量化触发的大模型后门</a></div>
+      <div class="it-sum">(cs.LG):后训练量化非语义中立,源精度到部署量化的「验证-部署鸿沟」可被植入后门,且跨量化器可迁移。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">FISGuard</span><a href="https://arxiv.org/abs/2608.27836" target="_blank" rel="noopener">arXiv:FISGuard 抵御成员推断攻击</a></div>
+      <div class="it-sum">(cs.DC):面向联邦学习 PEFT,通过固定输入子空间在共享梯度中保护训练样本隐私。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">智能体治理下沉</span><a href="https://siliconangle.com/2026/08/31/ai-infrastructure-governance-shifts-rogue-agents-vmwareexplore/" target="_blank" rel="noopener">「失控智能体」倒逼治理下沉到基础设施</a></div>
+      <div class="it-sum">(SiliconANGLE,VMware Explore):企业把钥匙交给自主 Agent,治理从应用层沉到数据层与运行时。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">General Intuition $6B</span><a href="https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/" target="_blank" rel="noopener">General Intuition 拟以 60 亿美元估值融资</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(TechCrunch Robotics):Valor、Point72 等入局,训练「在时空中运动」的通用智能体基础模型,具身融资再创高。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Atoms $1.7B</span><a href="https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/" target="_blank" rel="noopener">Kalanick 机器人公司 Atoms 融 17 亿美元,a16z 领投</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(TechCrunch Robotics):Uber 亦参投,工业 AI 叙事持续升温。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">滴滴 R2 载客测试</span><a href="https://www.qbitai.com/2026/08/481923.html" target="_blank" rel="noopener">滴滴 Robotaxi R2 开启无人载客测试</a></div>
+      <div class="it-sum">(量子位):新一代车型正式载客,国内自动驾驶商业化再进一步。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">PHR-VLA</span><a href="https://arxiv.org/abs/2608.27609" target="_blank" rel="noopener">arXiv:PHR-VLA 规划时域推理</a></div>
+      <div class="it-sum">(cs.RO):给 VLA 加显式未来任务动态推理,针对细粒度、接触密集操作任务,解决「只看当前观测」的局限。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">DeicticVLA</span><a href="https://arxiv.org/abs/2608.28108" target="_blank" rel="noopener">arXiv:DeicticVLA 统一指令模态</a></div>
+      <div class="it-sum">(cs.RO):把语言指令、视觉-语言指令、纯视觉指示归一化,让 VLA 可靠区分同类别/相似外观的目标。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">VLA 表征重训</span><a href="https://arxiv.org/abs/2608.27550" target="_blank" rel="noopener">arXiv:表征为中心的重训超越数据堆量</a></div>
+      <div class="it-sum">(cs.RO):在固定机器人数据预算下,持续预训练要把有限轨迹转化为可迁移表征,VLA 瓶颈在表征质量而非数据规模。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">触觉是必选项</span><a href="https://www.leiphone.com/category/robot/fzha6bzWq2qyX28O.html" target="_blank" rel="noopener">纬钛机器人 CEO:触觉是具身「when 不是 yes/no」的问题</a></div>
+      <div class="it-sum">(雷锋网):仅靠视觉易到天花板,触觉成灵巧操作必选项。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">银河通用夺冠</span><a href="https://www.leiphone.com/category/ai/U0SX0yIhfMcEsYKm.html" target="_blank" rel="noopener">银河通用无遥操 100% 夺冠</a></div>
+      <div class="it-sum">(雷锋网):复核满分横扫人形机器人运动会场景赛,揭示真机无遥操作三大底层难题。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">Redwood AI 造芯片</span><a href="https://arxiv.org/abs/2608.26418" target="_blank" rel="noopener">Redwood:AI 两周内从零设计、验证并部署的前沿 AI 加速器</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(arXiv cs.AR):架构定义先于硅片数年的时间差被 AI 打破,直指「AI 设计芯片」的 LLM RTL 生成路线。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">SpaceXAI 20 PR 自合</span><a href="https://aiera.com.cn/2026/09/01/other/admin/111557/%e4%b8%80%e8%a7%89%e9%86%92%e6%9d%a520%e4%b8%aapr%e8%87%aa%e5%b7%b1%e5%90%88%e8%bf%9b%e4%ba%86%e4%b8%bb%e5%b9%b2%ef%bc%81spacexai%e5%b7%a5%e7%a8%8b%e5%b8%88%ef%bc%9a%e6%88%91%e5%9f%ba%e6%9c%ac/" target="_blank" rel="noopener">SpaceXAI 工程师:20 个 PR 醒来已自动合入主干</a></div>
+      <div class="it-sum">(新智元):GrokBot 工程师五个月 3000+ PR,8 月目标翻倍,「基本不看代码了」反映 AI 编码代理进入生产主链。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">小红书 Muse</span><a href="https://www.infoq.cn/article/l88X1azz8wfwphDyECoP" target="_blank" rel="noopener">小红书 Muse 的 Agentic 架构实践</a></div>
+      <div class="it-sum">(InfoQ中国):「AI 写代码飞快,交付为何没变快」——拆解 agentic 研发全链路落地瓶颈。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">得物 Harness 实践</span><a href="https://www.infoq.cn/article/sDyQxrWR6zDPJuLX4FA8" target="_blank" rel="noopener">得物推荐 Harness:让 Agent 进入企业研发全链路</a></div>
+      <div class="it-sum">(InfoQ中国):AI Coding 之后如何铺到需求、评审、测试、部署。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Gen-TAS</span><a href="https://arxiv.org/abs/2608.28160" target="_blank" rel="noopener">arXiv:Gen-TAS 生成式 AI 辅助 FPGA-GPP 任务划分</a></div>
+      <div class="it-sum">(cs.AR):用生成式 AI 做软硬件协同任务分配,替代依赖专家经验的设计空间探索。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">Jetson Orin Nano 2</span><a href="https://www.servethehome.com/nvidia-announces-jetson-orin-nano-2-entry-level-edge-board-gets-new-ampere-silicon/" target="_blank" rel="noopener">NVIDIA Jetson Orin Nano 2 发布</a></div>
+      <div class="it-sum">(ServeTheHome):入门级边缘 AI 板卡换新 Ampere SoC,性能翻倍,边缘部署门槛进一步下探。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">本地部署 734 依赖</span><a href="https://www.qbitai.com/2026/08/481372.html" target="_blank" rel="noopener">量子位:AI 本地部署不如官方版的「元凶」找到了——734 个依赖包</a></div>
+      <div class="it-sum">(量子位):推理软件栈的微小差异即可改变输出 token,端侧/本地推理的可复现性成隐忧。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">RVV 1.0 基准</span><a href="https://arxiv.org/abs/2608.28097" target="_blank" rel="noopener">arXiv:RVV 1.0 真实 HPC 性能基准</a></div>
+      <div class="it-sum">(cs.AR/cs.DC):实测 SiFive X280、SpacemiT、T-Head C920v2 等 RISC-V 向量硬件,评估 RISC-V 在边缘/HPC 的可行性。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">SNN FPGA 协同设计</span><a href="https://arxiv.org/abs/2604.22179" target="_blank" rel="noopener">arXiv:低成本神经形态 FPGA 的 SNN 部署软硬件协同设计</a></div>
+      <div class="it-sum">(cs.AR):语义保持的 co-design 打通 PyTorch 式开发到 FPGA 部署的断层。</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-31.html">← 2026-08-31</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
