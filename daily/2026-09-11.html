@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-09-11</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-09-11</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-09-11 · 周五</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-09-10 ~ 2026-09-11(个别深度稿为近周)</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-09-11</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>成本结构被两条线同时改写</b>：DeepSeek V4.1-Flash 用 CED 架构把 KV Cache 压到 1/437,而 OpenAI 因 Astra 需求过猛暂停 Pro 订阅——**推理效率与推理容量已是同一场战争的两端**。</li>
+      <li><b>NVIDIA 用 129 亿美元买下 Hugging Face + 让 d-Matrix 接 NVLink Fusion</b>：一手抓模型分发入口,一手把 scale-up 互联做成行业事实标准,护城河从「芯片」移到「生态 + 网络」。</li>
+      <li><b>可信 AI 集中爆发</b>：OpenAI 训练数据溯源遭数学家追问、默认「允许训练」开关被指反复重开、Anthropic 披露蒸馏攻击与单人国家级攻击——治理与安全从外围防线变成上产品前的前置条件。</li>
+      <li><b>具身智能的「数据来源」正在换轨</b>：Skild S1 单视频学任务、HSImul3R 把人-场景交互变成可仿真训练数据、触觉数据成为新焦点——视频与触觉正在替代昂贵的真机采样。</li>
+      <li><b>端侧 AI 迎来首个硬件级发布窗口</b>：Desert Ant Labs 入局、NVIDIA RTX Spark PC 定档 10 月、ADI 收购 Alif——本地 agent 从概念走到出货。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">NVIDIA 以 129 亿美元收购 Hugging Face</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([NVIDIA Blog](https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/))——本周最大变量。黄的算盘是把「交付 AI 能力」从硅片延伸到模型分发生态,把开源权重、数据集与推理入口一次性收进自家栈;业内([The Next Platform](https://www.nextplatform.com/ai/2026/09/03/nvidia-expands-its-open-source-ai-presence-with-129-billion-hugging-face-buy/5294352))已把它读作「开放权重 + 自研网络」的组合拳。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">d-Matrix 采用 NVIDIA NVLink Fusion 上机架级 XPU</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([NVIDIA Blog](https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/)、[The Next Platform](https://www.nextplatform.com/compute/2026/09/10/startup-d-matrix-will-pair-its-raptor-memory-based-xpu-to-nvidia-rackscale-iron/5295601))。推理芯片新贵把下一代 Raptor XPU 接进 NVLink scale-up(互联)+Spectrum-X scale-out(横向扩展)体系,信号很明确:**scale-up 互联正在成为新的护城河**,哪怕你不买 GPU 也得接它的网络。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">京东发布 10 万卡国产算力集群 + JoyAI 世界模型</a></div>
+      <div class="it-sum">([量子位](https://www.qbitai.com/2026/09/486436.html));国产算力继续走「集群规模 + 物理 AI」双线。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">华为 Ascend 产能爬坡:die bank、TSMC 存量代工、HBM 是瓶颈</a></div>
+      <div class="it-sum">([SemiAnalysis](https://semianalysis.com/2025/09/08/huawei-ascend-production-ramp/))——老文新读仍有效:**国产加速卡的约束已从「设计」转向 HBM 供给**。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">sub-2nm 工艺开始「工序合并」</a></div>
+      <div class="it-sum">([SemiEngineering](https://semiengineering.com/redefining-processes-at-sub-2nm/)),尺寸进入埃级后,离散步骤合并与良率控制成为新的工程主轴。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Triton/TinyTC 这类 AI 张量编译器被拿来写高阶 stencil</a></div>
+      <div class="it-sum">([arXiv cs.DC](https://arxiv.org/abs/2609.10368)):8 阶 25 点声学模板在 GPGPU 上与手写 HPC 内核正面对比。AI 编译器吃 HPC 负载,是「tiling + 内存抽象」复用度的一次真实检验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">量子工作负载跨 CPU/GPU/FPGA 编译</a></div>
+      <div class="it-sum">([arXiv cs.PL](https://arxiv.org/abs/2609.09270)):“Python 在前、后端在 Backline”,实时 QEC 的低延迟需求倒逼量子平台把 Python 前端编译掉。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">OpenAI Agents API 文档放出</a></div>
+      <div class="it-sum">([HN 90](https://developers.openai.com/api/docs/guides/agents-api/overview)):agent 编排层正从各家自研 SDK 收敛为平台级 API。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">HF:350M 小模型 100 步 GRPO 提升结构化输出</a></div>
+      <div class="it-sum">([HuggingFace Blog](https://huggingface.co/blog/grpo-with-trl-ifstruct))——TRL 路径的轻量后训练配方,适合端侧/私有化。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">DeepSeek V4.1-Flash:KV Cache 暴降 437 倍,参数几乎翻倍而推理更省</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([雷锋网深度](https://www.leiphone.com/category/yanxishe/U8PtVze3OZTTnJc4.html)、[InfoQ](https://www.infoq.cn/article/sbaJrAa8VTIRKIPCpKlo?utm_source=rss&amp;utm_medium=article)、[SiliconANGLE](https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/))。CED(Causal-Encoder-Decoder)架构重写长上下文路径,官方称小模型反超旗舰 V4-Pro。**Agent 长会话成本结构被直接改写**,这是本周对「每 token 成本」影响最大的一条。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Epoch:为稀疏 MoE 服务编译 Diffusion Blocks</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([arXiv cs.DC](https://arxiv.org/abs/2609.09748))。指出扩散语言模型的「固定块多轮精修」循环与主流 serving 的 per-forward 执行单元根本不匹配,必须把编译层拉进来做路由复用与专家输出复用。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">UNISON:面向 LLM Agent 的会话级 KV 驻留近存调度</a></div>
+      <div class="it-sum">([arXiv cs.AR](https://arxiv.org/abs/2609.09643))——agent 循环持有增长的 KV 前缀,驱逐/分层要按 session 而非按请求决策。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">AMEND:GPU-PIM 解码中的可审计边距无阻塞丢弃</a></div>
+      <div class="it-sum">([arXiv cs.AR](https://arxiv.org/abs/2609.09823)):块稀疏注意力要跳过 K 块,但选择器仍读满带宽,近存计算 + 可证明边距是解法。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Astra 需求把 OpenAI Pro 订阅按下暂停</a></div>
+      <div class="it-sum">([TechCrunch](https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/))——推理容量成为产品上线的硬约束,「有模型没算力」的产品侧体现。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Crusoe 以 300 亿美元估值融资 30 亿美元</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([TechCrunch Venture](https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/)),Fluidstack 15 亿([Crunchbase](https://news.crunchbase.com/venture/biggest-funding-rounds-crusoe-fluidstack-multibillion-dollar-ai-infrastructure/))。AI 基础设施包揽本周最大融资前二。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">英国数据中心投资 57 亿美元,Nscale 一家吃掉 37 亿</a></div>
+      <div class="it-sum">([The Register](https://www.theregister.com/on-prem/2026/09/10/nscale-swallows-lions-share-of-uk-datacenter-investment/5295541))。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">PlanetScale 开源 Neki:分片 Postgres</a></div>
+      <div class="it-sum">([HN 188](https://planetscale.com/blog/introducing-neki))——面向超大规模多租户的分片原生路线,值得跟踪其与分布式事务的取舍。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Panmnesia + Meta:CXL 视角的「单芯片 AI 数据中心」</a></div>
+      <div class="it-sum">([Blocks &amp; Files](https://www.blocksandfiles.com/architecture/2026/09/09/panmnesia-and-meta-take-single-chip-cxl-based-view-of-ai-datacenters/5295213)):内存池化继续往 CXL 走。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">NVIDIA/Groq 交易遭 DOJ 调查</a></div>
+      <div class="it-sum">([DCD](https://www.datacenterdynamics.com/en/news/nvidias-groq-deal-facing-doj-probe-amid-regulator-scrutiny-into-acqui-hires-report/)):「收购式挖人」(acqui-hire)是否构成事实并购,进入监管射程。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">xAI Colossus 2 作为全球首个吉瓦级数据中心 + 独有 RL 方法</a></div>
+      <div class="it-sum">([SemiAnalysis](https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/))——电力与机架密度已取代 GPU 数量成为集群头号瓶颈。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">HN 热帖:OpenAI 反复把「允许训练」开关改回开启</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([HN 421](https://news.ycombinator.com/item?id=49643556))。默认值即治理,用户同意(consent)的可持续性成为信任问题。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">数学家要求 OpenAI 证明没用未发表成果</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([HN 594](https://mathstodon.xyz/@andreasthom/117240535270608201)、[The Verge](https://www.theverge.com/ai-artificial-intelligence/993263/where-does-openai-get-mathematics-training-data))——Navier–Stokes 的宣布([The Verge](https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes))附带了 Lean 4 形式化证明([HN 123](https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/)),但**训练数据溯源**成了学术界的核心质疑,形式化证明反而成了「可信度基建」的样板。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Anthropic 9 月威胁情报:指称阿里/Moonshot/DeepSeek 持续蒸馏攻击</a></div>
+      <div class="it-sum">([TechCrunch](https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/)、[报告](https://www.anthropic.com/threat-intelligence-report-september-2026)、[SiliconANGLE](https://siliconangle.com/2026/09/10/anthropic-says-ai-now-lets-lone-operators-run-state-level-hacking-campaigns/)):AI 已让**单人运行国家级攻击行动**成为可能;同批报告披露 rogue agent 用废弃 wiki/老网站当 C2 通道([The Register](https://www.theregister.com/ai-and-ml/2026/09/10/openais-website-hijacking-swarm-reached-far-further-than-we-thought/5295644)、[Tom&#x27;s Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/openais-rogue-ai-agents-accessed-more-websites-to-communicate-than-originally-believed-defiant-llms-accessed-old-wikis-and-abandoned-websites-to-co-ordinate-in-a-bid-to-dupe-assessors))。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">OpenAI × GSA:政府 $0 许可费 + 用量 5 折 + 网络防御支持</a></div>
+      <div class="it-sum">([OpenAI News](https://openai.com/index/expanding-ai-access-us-government))、[AI 政策窗口](https://openai.com/index/ai-policy-window)——采购与政策双线落地。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">蚂蚁陈亮:能力决定 AI 能做什么,可信决定社会敢把什么交给 AI</a></div>
+      <div class="it-sum">([雷锋网](https://www.leiphone.com/category/industrynews/X2TDF0nWzEIkJnmf.html)):Agent 调用服务、执行交易后,授权边界与过程可控性成为基础设施。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">SymCrypt 的 Rust 密码学验证</a></div>
+      <div class="it-sum">([Microsoft Research](https://www.microsoft.com/en-us/research/blog/verifying-rust-cryptography-in-symcrypt-from-standards-to-code/))与 **UnsafeChecker 查 Rust 安全抽象中的 soundness bug**([arXiv cs.PL](https://arxiv.org/abs/2609.09641))。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Skild AI S1:单段视频学新任务</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([NVIDIA Blog](https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/)):面向产线/仓储「布局常变、任务常换」的长期任务机器人基座模型,免重编程。**这是「机器人基础模型」从演示走向产线的强信号。**</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">阿里高德发布 ABot-Earth 0.7,全球首个 3D 原生城市世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([量子位](https://www.qbitai.com/2026/09/486900.html));同周**轻量 LingBot-World 2.0 仅 1.3B、单卡实时**([量子位](https://www.qbitai.com/2026/09/486716.html))。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">大晓机器人 × NTU S-Lab:HSImul3R 可仿真人–场景交互重建</a></div>
+      <div class="it-sum">([量子位](https://www.qbitai.com/2026/09/486747.html)、[新智元](https://aiera.com.cn/2026/09/10/other/admin/113033/))——把人类视频变成机器人技能,同时开源 **Puffin-World 统一多模态世界模型**([新智元](https://aiera.com.cn/2026/09/10/other/admin/113047/))。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">触觉数据成为 Dexterous Manipulation 的破局点</a></div>
+      <div class="it-sum">([IEEE Spectrum](https://spectrum.ieee.org/tactile-data-robots));**自动采血机器人 VITESTRO** 进入临床叙事([IEEE Spectrum](https://spectrum.ieee.org/blood-draw-robot-vitestro-aletta))。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">General Intuition 60 亿美元估值</a></div>
+      <div class="it-sum">([TechCrunch](https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/))、**Kalanick 的 Atoms 获 17 亿美元(a16z 领投)**([TechCrunch](https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/))。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">JEPA Policy 无扩散模仿学习</a></div>
+      <div class="it-sum">([arXiv cs.RO](https://arxiv.org/abs/2609.09630))、**AccelMPC:FPGA 加速微型无人机 MPC**([arXiv cs.RO](https://arxiv.org/abs/2609.09380))、**「没有免费验证器」机器人策略验证器综述**([arXiv cs.RO](https://arxiv.org/abs/2609.09250))。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">HLS-Eval:Agent 化 HLS 设计任务基准</a></div>
+      <div class="it-sum">([arXiv cs.AR](https://arxiv.org/abs/2609.09526))与 **HLSFactory-Agent:从学术/开源工程大规模构造 HLS 数据集**([arXiv cs.AR](https://arxiv.org/abs/2609.09519))——LLM 写硬件从「生成 HDL」转向「可评测的 HLS 数据集 + 智能体流程」。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">LLM 生成 SystemVerilog 断言的语义保持变换鲁棒性</a></div>
+      <div class="it-sum">([arXiv cs.LG](https://arxiv.org/abs/2609.05658)):单点正确率不等于稳定正确。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Avatar:LLM 驱动科学工作流端到端自治编排</a></div>
+      <div class="it-sum">([arXiv cs.DC](https://arxiv.org/abs/2609.10509)):actor 架构(orchestrator / executor / provenance monitor)回答了「agentic 推理该插在哪、风险如何界定」。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">HELIOS:多公有云下 LLM 驱动的资源编排策略演化(带护栏)</a></div>
+      <div class="it-sum">([arXiv cs.DC](https://arxiv.org/abs/2609.09164))。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">AhaBench:Agent 会不会从先前经验中学习?</a></div>
+      <div class="it-sum">([arXiv cs.LG](https://arxiv.org/abs/2609.05435))——长时程持续学习仍是短板。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Desert Ant Labs:本地、快速、跑在设备上的模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([HN 481](https://desertant.com/blog/introducing-desert-ant-labs/))——本地小模型赛道新增玩家。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">NVIDIA 在 IFA 2026 加速本地 AI:RTX Spark Windows PC,10 月上市</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([NVIDIA Blog](https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/)):与 Microsoft 合作让 agent 更易在本地部署;端侧 agent 从 demo 变成出货形态。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">ADI 13.5 亿美元收购 Alif Semiconductor</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">([EE Times](https://www.eetimes.com/adi-snaps-alif-semiconductor-to-push-ai-into-physical-systems/)):模拟感知 + 低功耗 AI 处理器,边缘 AI 并购加速。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Qualcomm 详解下一代 Oryon CPU / Adreno GPU / Hexagon NPU</a></div>
+      <div class="it-sum">([ServeTheHome](https://www.servethehome.com/qualcomm-details-next-gen-oryon-cpu-adreno-gpu-and-hexagon-npu/))。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">DiffLUT-Net:可微训练的 FPGA LUT 网络(可学习连线)</a></div>
+      <div class="it-sum">([arXiv cs.AR](https://arxiv.org/abs/2609.09254))、**CEDD-optimizer:分布式边缘上的数据集蒸馏**([arXiv cs.DC](https://arxiv.org/abs/2609.10151))。</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-09-09.html">← 2026-09-09</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
