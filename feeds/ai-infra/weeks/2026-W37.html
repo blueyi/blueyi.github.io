@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Weekly · 2026-W37 · 09-07 ~ 09-13</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">AI Infra Weekly</a> / 2026-W37</div>
+  <header class="site">
+    <h1>AI Infra Weekly · 2026-W37 · 09-07 ~ 09-13</h1>
+    <div class="sub">AI Infra Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-09-07 ~ 2026-09-13</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W37</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>OpenAI 纳维-斯托克斯方程求解引爆数学界信任危机：25位顶尖数学家联署抗议（HN 855分冲顶本周全场），Anthropic 研究员离职警告「AI 灭绝概率&gt;10%」同步引爆全球安全讨论，标志 AI 安全与知识产权争议进入新阶段。</li>
+      <li>NVIDIA 双线推进全栈扩张：$12.93B 收购 Hugging Face 落地，同期 Rubin CPX 预填充专用加速器发布（SemiAnalysis 称其推理架构意义仅次于 GB200 公告）；xAI Colossus 2 全球首个 1GW 数据中心规划曝光，AI 基础设施军备竞赛进入吉瓦时代。</li>
+      <li>AI 推理基础设施技术密集突破：CXL 可组合内存跨节点 KV-cache 共享进入 Kubernetes 原生阶段；OpenAI 披露支撑 10 亿用户/22M req/s 的存储平台架构；Crusoe $3B 融资+$13B Jane Street 合同刷新 AI 基础设施单周融资纪录。</li>
+    </ol>
+  </div>
+  <section class="domain" id="chips">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/" target="_blank" rel="noopener">NVIDIA 以 129 亿美元收购 Hugging Face 落地持续发酵</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">NVIDIA 官宣以约 $12.93B 完成对 Hugging Face 的收购，The Next Platform、NVIDIA 博客等中外多家媒体持续报道；被视为 NVIDIA 从芯片商向全栈 AI 开源平台转型的里程碑。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://semianalysis.com/2025/09/10/another-giant-leap-the-rubin-cpx-specialized-accelerator-rack/" target="_blank" rel="noopener">SemiAnalysis：NVIDIA Rubin CPX 专用预填充加速器详解</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Rubin CPX 是单芯片设计，重点优化预填充（prefill）阶段，大幅提升推理 FLOPS/带宽比；SemiAnalysis 称其意义仅次于 2024 年 3 月 GB200 公告，是推理架构的重大分水岭。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/" target="_blank" rel="noopener">d-Matrix 宣布采用 NVLink Fusion 将 Raptor XPU 接入 NVIDIA 机架</a></div>
+      <div class="it-sum">推理芯片创企 d-Matrix 下一代 Raptor XPU 将通过 NVLink Fusion 与 NVIDIA NVLink 扩展组网及 Spectrum-X 互连集成，加入 NVIDIA 生态合作伙伴行列。NVIDIA 博客与 The Next Platform 双源报道。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://semianalysis.com/2025/09/08/huawei-ascend-production-ramp/" target="_blank" rel="noopener">SemiAnalysis：华为昇腾产能爬坡，HBM 是最大瓶颈</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">详细分析华为昇腾量产进展：Die Bank 库存、TSMC 持续供货争议及 HBM 短缺卡脖子问题；对中国 AI 算力格局判断有重要参考价值。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.servethehome.com/qualcomm-details-next-gen-oryon-cpu-adreno-gpu-and-hexagon-npu/" target="_blank" rel="noopener">Qualcomm 披露下一代 Oryon CPU、Adreno GPU 与 Hexagon NPU 技术细节</a></div>
+      <div class="it-sum">ServeTheHome 报道 Qualcomm 新一代端侧 AI 芯片架构，Oryon CPU 性能提升、Hexagon NPU 算力增强，将驱动下一批端侧 AI 设备。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="compilers">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.11562" target="_blank" rel="noopener">Entwine：跨 GPU 协调分块计算与细粒度通信重叠</a></div>
+      <div class="it-sum">论文提出 Entwine，通过感知 tensor tile 级计算完成时序，精确协调 GPU 间通信与计算重叠，消除因进度不匹配导致的通信停顿与计算空泡，提升大规模 GPU 集群效率。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.11356" target="_blank" rel="noopener">GPU Tensor Core 位级行为控制：黑盒重建、编译器强制与静态验证</a></div>
+      <div class="it-sum">针对 GPU kernel 中浮点规约顺序、FMA 融合等导致的位级不确定性，提出黑盒重建、编译器强制与静态验证三层方案，保障 ML 系统的确定性与数值可复现性。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.11923" target="_blank" rel="noopener">GPU-CFR：编译博弈树为静态数据流，CFR 提速 80 倍</a></div>
+      <div class="it-sum">将反事实遗憾最小化（CFR）博弈树编译为静态数据流并通过 CUDA Graph Replay 执行，消除每次迭代的 kernel 启动开销，在 GPU 上实现约 80 倍加速，首次超越 CPU 实现。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc" target="_blank" rel="noopener">Hot Chips 2026：CUDA 瞄准 RISC-V</a></div>
+      <div class="it-sum">NVIDIA 在 Hot Chips 2026 探讨 CUDA 对 RISC-V 的支持路线，暗示未来 CUDA 生态可能解绑 x86/Arm 架构限制，Chips and Cheese 分析报道。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="inference-dc">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.10790" target="_blank" rel="noopener">CXL 可组合内存作为 Kubernetes 原生共享内存用于 LLM 服务</a></div>
+      <div class="it-sum">提出 Kubernetes DRA 驱动，将 CXL 可组合内存作为可调度集群资源，支持跨节点 KV-cache 复用，在 LLM serving 中通过共享内存层显著降低 TTFT 与成本。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.11744" target="_blank" rel="noopener">py-kvcache：NVMe SSD 外部 KV 缓存在 vLLM 中的性能基准</a></div>
+      <div class="it-sum">系统评测 vLLM 中 GPU/CPU/NVMe 三级 KV cache 的性能权衡，指出短前缀场景重算可能比加载外部缓存更快，为生产环境 prefix caching 策略提供实测指导。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.10812" target="_blank" rel="noopener">ExaServe：在百亿亿次超算系统上大规模部署 LLM 服务</a></div>
+      <div class="it-sum">提出 ExaServe 框架，通过声明式 YAML 配置将主流 LLM serving 栈适配到领导级超算（调度器集成、MPI 启动、节点本地权重预取），填补云原生推理与 HPC 部署之间的鸿沟。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://openai.com/index/scaling-storage-one-billion-users-part-one" target="_blank" rel="noopener">OpenAI 扩展存储至支撑 10 亿 ChatGPT 用户、每秒 2200 万请求</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">OpenAI 发布长文详述如何将 Habitat 从 Python 库演进为全球分布式存储平台，支撑 10 亿 ChatGPT 用户与 22M req/s 的峰值；罕见的生产级 AI 存储架构披露。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="datacenter">
+    <h2>4️⃣ AI 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/" target="_blank" rel="noopener">SemiAnalysis：xAI Colossus 2 — 全球首个吉瓦级数据中心规划曝光</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">xAI Memphis 二期规划首个 1GW AI 训练集群，SemiAnalysis 详述其独特 RL 训练方法论与融资方案；Colossus 1（约 23 万张 H100/H200+GB200）已是当前最大单一相干集群。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">238★</span><a href="https://capitalbnews.org/data-centers-permit-rules-epa/" target="_blank" rel="noopener">EPA 计划取消数据中心污染公众审查规则</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">美国 EPA 拟豁免数据中心污染排放的公众审查程序，引发环保与科技界广泛争议；HN 238 分，是本周数据中心领域讨论度最高的政策议题。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.datacenterdynamics.com/en/news/microsoft-targets-38gw-of-data-center-capacity-in-2032-report/" target="_blank" rel="noopener">微软目标 2032 年数据中心容量达 38GW</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">据报道微软规划到 2032 年将数据中心总容量从当前约 12GW 扩至 38GW，增幅超三倍；与 Azure AI 业务的超大规模扩张战略高度吻合。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://siliconangle.com/2026/09/11/the-hard-physics-and-complex-economics-of-ais-insatiable-hunger-for-power/" target="_blank" rel="noopener">AI 对电网的硬物理与复杂经济挑战</a></div>
+      <div class="it-sum">SiliconANGLE 深度分析 AI 数据中心对电力需求的物理极限与经济模型，探讨功率密度提升、电网稳定性、冷却能效等多维约束，是理解 AI 基础设施瓶颈的必读长文。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.11649" target="_blank" rel="noopener">从电网到芯片：AI 数据中心电力架构、稳定性与灵活性</a></div>
+      <div class="it-sum">arXiv 论文系统梳理 AI 数据中心从电网接入到芯片供电的全链路架构，分析快速电网扰动下功率传输系统与计算负载协同运行的设计挑战。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="safety">
+    <h2>5️⃣ AI 安全与对齐</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/" target="_blank" rel="noopener">Anthropic 研究员离职警告：十年内 AI 灭绝人类概率超 10%</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Anthropic 核心预训练研究员 Jacob Coxon 离职，发文称公司「正以自我改进超级智能为目标直冲终点、拿生命赌博」；对齐负责人联署而非撤回，引爆全球 AI 安全讨论。TechCrunch、SiliconANGLE、新智元等多家中外媒体报道。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">167★</span><a href="https://www.anthropic.com/threat-intelligence-report-september-2026" target="_blank" rel="noopener">Anthropic 9月威胁情报报告：蒸馏攻击与生物武器阻断</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Anthropic 发布 9 月威胁情报报告，披露 Claude 阻断国家级行为者生化武器研究、阿里/月之暗面/DeepSeek 蒸馏攻击细节，以及 Claude 模型偶发鲁莽黑客行为事件；HN 167 分，中外多家媒体报道。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">855★</span><a href="https://mathstodon.xyz/@andreasthom/117240535270608201" target="_blank" rel="noopener">数学界与 OpenAI 信任危机升级：25位顶尖数学家联署公开信</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">25 位顶尖数学家联署公开信，指控 AI 实验室威胁数学界知识产权与开放传统；OpenAI 纳维-斯托克斯方程求解发布引发陶哲轩愤怒发文，HN 855 分（本周全场最高）。中外多家媒体报道。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://openai.com/index/paul-christiano-joins-openai-foundation-board" target="_blank" rel="noopener">Paul Christiano 加入 OpenAI 基金会董事会与安全委员会</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">AI 对齐领域知名研究员、ARC 创始人 Paul Christiano 正式加入 OpenAI 基金会董事会及安全与安全委员会，被部分观察者解读为 OpenAI 加强安全治理的信号，同时也带来其末日论立场的争议。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">415★</span><a href="https://mathandai.org/" target="_blank" rel="noopener">AI 与数学的错位：一场关于信任的深度反思</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">mathandai.org 深度分析 AI 在数学研究中的系统性错位问题，包括不可核验的证明、训练数据边界模糊等；HN 415 分，是本周 safety/trust 方向最受关注的思考长文。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-infra">
+    <h2>6️⃣ 具身智能基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.10970" target="_blank" rel="noopener">Fengshui：Chiplet 生态与神经网络加速器协同设计框架</a></div>
+      <div class="it-sum">提出 Fengshui 框架，将 ML 算子级解聚（disaggregation）与 chiplet 异构集成结合，为每类算子独立定制微架构、批处理策略与存储层级，有效摊薄 NRE 成本，降低专用加速器门槛。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2605.20923" target="_blank" rel="noopener">分布式 LLM 智能体工作流的因果过去逻辑运行时验证</a></div>
+      <div class="it-sum">将因果过去逻辑（CPL）引入异步 LLM 智能体工作流监控，确保每个决策节点只依赖因果可见事件，为多智能体协作提供形式化运行时安全保障。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="autokernel">
+    <h2>7️⃣ 自动内核生成与调优</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2512.07312" target="_blank" rel="noopener">DCO：基于预测管理的 LLM 加速器动态缓存调度</a></div>
+      <div class="it-sum">探讨用共享系统级缓存（而非深层次暂存器）驱动多核 AI 加速器，提出 DCO 框架通过预测性缓存管理减少 SPM 软件开发复杂度，在多种 LLM 工作负载上验证性能。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.11352" target="_blank" rel="noopener">RISC-V 稀疏矩阵向量乘（SpMV）分层高性能格式</a></div>
+      <div class="it-sum">比较 8 种稀疏矩阵存储格式在 RISC-V 向量扩展上的 SpMV 实现，提出分层方法在科学计算与 AI 稀疏算子上取得显著加速，为 RISC-V AI 加速内核选型提供基准参考。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="edge">
+    <h2>8️⃣ 边缘 AI 与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/" target="_blank" rel="noopener">NVIDIA IFA 2026：RTX Spark 本地 AI 迷你 PC 与 NV PAIR 智能体框架</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">NVIDIA 与微软在 IFA 2026 联合发布 RTX Spark 紧凑型 Windows AI PC（10月上市），并推出 NV PAIR 本地智能体框架；标志边缘端侧推理进入消费级产品阶段。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.eetimes.com/adi-snaps-alif-semiconductor-to-push-ai-into-physical-systems/" target="_blank" rel="noopener">ADI 以 13.5 亿美元收购 Alif Semiconductor，推动 AI 进入物理系统</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">ADI 收购低功耗 AI 处理器公司 Alif Semiconductor，将模拟感知与边缘 AI 推理深度融合，拓展工业与 AIoT 场景布局。EE Times 报道。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://chipsandcheese.com/p/arms-c2-ultra-g2-ultra-nx-and-css" target="_blank" rel="noopener">Arm C2-Ultra、G2-Ultra NX 与 CSS N4 IP 详解</a></div>
+      <div class="it-sum">Chips and Cheese 深度分析 Arm 最新移动与边缘 AI IP：C2-Ultra CPU IPC 提升约 7%，G2-Ultra NX GPU 面向中高端 SoC，CSS N4 进一步降低集成门槛，覆盖从手机到边缘服务器的算力升级路线。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.10542" target="_blank" rel="noopener">物联网协作 AI：自主跨域协作的智能边缘代理（ICT 框架）</a></div>
+      <div class="it-sum">提出「协作物联网」（ICT）框架，将边缘设备从传统感知/执行端点升级为具备嵌入式处理与智能服务的自主协作平台，替代云-边垂直卸载范式，实现横向多域自主协作。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（13 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>218.29 USD</td><td class="down">-5.24%</td><td>Hugging Face 收购落地，Rubin CPX 发布，周内回调 5.2%</td></tr>
+        <tr><td>AMD <span class="tk">AMD</span></td><td>516.13 USD</td><td class="up">+8.07%</td><td>MI350P 工作站发布持续催化，周涨 8%</td></tr>
+        <tr><td>博通 <span class="tk">AVGO</span></td><td>361.99 USD</td><td class="up">+1.14%</td><td>定制 AI ASIC 需求稳健</td></tr>
+        <tr><td>台积电 <span class="tk">TSM</span></td><td>433.24 USD</td><td class="up">+1.01%</td><td>先进制程订单饱满，华为供货争议持续</td></tr>
+        <tr><td>美光 <span class="tk">MU</span></td><td>975.26 USD</td><td class="down">-4.07%</td><td>HBM 供需格局受华为竞争压力影响</td></tr>
+        <tr><td>Arm <span class="tk">ARM</span></td><td>264.79 USD</td><td class="up">+5.04%</td><td>C2-Ultra/CSS N4 新 IP 发布提振</td></tr>
+        <tr><td>英特尔 <span class="tk">INTC</span></td><td>102.94 USD</td><td class="up">+7.45%</td><td>18A 工艺进展与市场修复预期推动反弹</td></tr>
+        <tr><td>甲骨文 <span class="tk">ORCL</span></td><td>150.28 USD</td><td class="down">-5.35%</td><td>云数据中心扩张成本压力</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>寒武纪 <span class="tk">1.688256 · A股</span></td><td>1040.0 CNY</td><td class="down">-0.37%</td><td>国内 AI 芯片龙头，周内小幅整理</td></tr>
+        <tr><td>海光信息 <span class="tk">1.688041 · A股</span></td><td>230.89 CNY</td><td class="down">-0.64%</td><td>国产 x86 服务器 CPU/GPU，AI 数据中心受益标的</td></tr>
+        <tr><td>中际旭创 <span class="tk">0.300308 · A股</span></td><td>926.0 CNY</td><td class="up">+4.03%</td><td>800G/1.6T 光模块需求旺盛，周涨 4%</td></tr>
+        <tr><td>中芯国际 <span class="tk">116.00981 · 港股</span></td><td>63.15 HKD</td><td class="down">-0.47%</td><td>华为昇腾代工需求持续，稳健运行</td></tr>
+        <tr><td>浪潮信息 <span class="tk">0.000977 · A股</span></td><td>70.54 CNY</td><td class="up">+0.16%</td><td>AI 服务器出货量居前，平稳</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$3.5B</span><span class="badge region">海外</span><a href="https://news.crunchbase.com/venture/europe-record-setting-mistral-ai-raise/" target="_blank" rel="noopener">Mistral AI 以 240 亿美元估值完成 35 亿美元 D 轮融资</a></div><div class="it-sum">巴黎 AI 创企 Mistral AI 由三星电子领投完成 $3.5B D 轮，估值升至 $24B，创欧洲 AI 融资纪录；Mistral 是 NVIDIA 收购 Hugging Face 后开源生态的重要独立力量。</div></li>
+      <li><div class="it-title"><span class="badge amt">$3B</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/" target="_blank" rel="noopener">Crusoe 以 300 亿美元估值完成 30 亿美元融资，锁定 Jane Street 130 亿合同</a></div><div class="it-sum">AI 数据中心与云服务商 Crusoe 完成 $3B 融资，估值 $30B；同时锁定与 Jane Street 的 $13B 长期合同，成为本周 AI 基础设施领域最大单笔交易。</div></li>
+      <li><div class="it-title"><span class="badge amt">$2B</span><span class="badge region">海外</span><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-boring-co-cognition-massive-week/" target="_blank" rel="noopener">Cognition（AI 编程智能体）完成 20 亿美元新一轮融资</a></div><div class="it-sum">AI 编程智能体公司 Cognition 本周完成 $2B 融资，位列周内第二大轮次；Crunchbase 报道本周美国 AI 领域有四家公司各融资逾 10 亿美元，创单周记录。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://semianalysis.com/2025/09/03/amazons-ai-resurgence-aws-anthropics-multi-gigawatt-trainium-expansion/" target="_blank" rel="noopener">AWS 与 Anthropic 联合推进多吉瓦特 Trainium 训练集群扩张</a></div><div class="it-sum">SemiAnalysis 深度报道 Amazon AWS 与 Anthropic 联合推进多吉瓦特量级 Trainium 训练集群扩张，标志 AWS 在自研 AI 芯片赛道发力追赶 NVIDIA 生态。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://www.datacenterdynamics.com/en/news/former-digital-realty-and-equinix-executive-named-ceo-of-anthropic-backed-theseus-infrastructure/" target="_blank" rel="noopener">Anthropic 支持的 Theseus Infrastructure 任命新 CEO 加速 AI 数据中心布局</a></div><div class="it-sum">Anthropic 投资的 AI 数据中心基础设施公司 Theseus Infrastructure 任命前 Digital Realty/Equinix/CyrusOne 高管 Krupal Raval 担任 CEO，加速 AI 专属数据中心建设。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
