@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W37 · 09-07 ~ 09-13</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W37</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W37 · 09-07 ~ 09-13</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-09-07 ~ 2026-09-13</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W37</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>[端到端VLA] 世界-动作模型（WAM）集中发力：OpenWAM 以模块化方式厘清世界-动作预训练关键设计并开源可规模化模型，GE-Act 2.0 从零预训练实现跨本体零样本操作，端到端具身基础模型的范式持续推进。</li>
+      <li>[控制层·世界模型] 可编程世界模型（90 赞）将显式状态演化与视频生成解耦，用可执行规则与 3D 包围盒维持持久可控环境；SyncWorld 则用视觉标定让世界模型成为零样本模拟器，世界模型正从「想象」走向「可控仿真」。</li>
+      <li>[感知层] SpatialBlock（78 赞）用合成积木堆叠任务锚点式训练 LVLM 的三维空间推理并泛化到真实视觉，指向具身感知层空间智能的可迁移训练范式。</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.07398" target="_blank" rel="noopener">OpenWAM：面向系统化世界-动作模型预训练的开放模块化探索</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">把世界-动作预训练拆解为可组合模块，逐一厘清生成骨干、潜空间、联合去噪、以自我为中心的预训练与协同训练等关键设计原则，产出可规模化的开源模型，在仿真与真机上均有强表现。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.05588" target="_blank" rel="noopener">GE-Act 2.0：从零预训练并规模化的机器人操作世界-动作模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">以控制导向自编码器、单步视觉规划器与逆动力学模型从头训练，配合知识对齐的选择性优化，实现跨本体迁移与零样本分布外操作，覆盖多样技能与条件。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.05324" target="_blank" rel="noopener">RoboSPA：VLA 模型能否突破简单场景与短视野任务？</a></div>
+      <div class="it-sum">大规模机器人操作基准，在逐级加难的任务变体上评估 VLA 的细粒度空间推理与长视野过程规划能力，配套诊断指标，揭示当前模型的能力边界。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.09158" target="_blank" rel="noopener">TANGO：面向杂乱环境的人形全身视觉-语言-动作导航</a></div>
+      <div class="it-sum">仅用仿真数据训练的视觉-语言框架，为人形机器人预测全身关节动作，实现在杂乱室内环境中的避障导航与零样本部署。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.05533" target="_blank" rel="noopener">SimpleMemVLA：为 VLA 提供简单有效的原生视频记忆</a></div>
+      <div class="it-sum">将完整带时间戳的视频历史直接喂入预训练 VLM 骨干，用隐状态驱动流匹配动作头，无需专门记忆模块即可完成长视野操作，性能超过带专用记忆模块的方案。[端到端VLA]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.11775v1" target="_blank" rel="noopener">基于实时雅可比估计的灵巧手在手写字快速学习</a></div>
+      <div class="it-sum">拟人手在手操作接触丰富且高度动态，仿真难以复刻。提出实时雅可比估计方法，绕开大量建模与数据采集，快速学习握笔在手书写这一灵巧前沿任务。[控制层·RL]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.11753v1" target="_blank" rel="noopener">SEED-UMI：人机共享外骨骼实现一对一灵巧示范</a></div>
+      <div class="it-sum">针对接触丰富示范难以忠实迁移到机器人的瓶颈，让人与机器人佩戴同一外骨骼采集配对数据，克服以往仅记录人侧、自由空间标定的开环映射在接触下退化的问题。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.07498" target="_blank" rel="noopener">CosmoH2G：手到夹爪迁移数据集与复杂空间运动操作基线</a></div>
+      <div class="it-sum">两阶段框架先预测稀疏夹爪关键帧再生成连续动作，借助运动学优化抑制漂移，把复杂手部演示迁移到机器人夹爪，并开放配对数据集。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/tactile-data-robots" target="_blank" rel="noopener">机器人正在学会「触觉」：触觉数据竞赛升温</a></div>
+      <div class="it-sum">IEEE Spectrum 报道灵巧操作仍是机器人落地最大障碍之一，触觉或是关键，但高质量触觉数据匮乏一直制约进展，如今学术界与创企正竞相构建新型触觉数据源。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.05594" target="_blank" rel="noopener">SceneMosaic：混合智能体布局演化的高效多样仿真就绪场景生成</a></div>
+      <div class="it-sum">结合学习到的图像先验与视觉-语言智能体，通过局部单元演化与全局组合，高效生成物理有效、多样的室内场景，为仿真训练提供可用环境。[sim2real]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.09155" target="_blank" rel="noopener">SyncWorld：视觉标定让世界模型成为零样本模拟器</a></div>
+      <div class="it-sum">动作条件世界模型借助视觉标定回合学习环境特定的「动作-视觉」映射，在未见机器人设定下实现零样本仿真与测试时策略提升。[控制层·世界模型]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.10540" target="_blank" rel="noopener">可编程世界模型：用可执行规则维持持久可控环境</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">将显式状态演化与视频生成解耦，用可执行程序与 3D 定向包围盒维护全局世界状态并作为时空条件驱动生成渲染器，维持持久、可控的环境。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.07064" target="_blank" rel="noopener">SpatialBlock：用合成积木堆叠任务增强 LVLM 的空间智能</a></div>
+      <div class="it-sum">在合成积木操作任务上训练大视觉语言模型，通过 3D-2D 投影、视角变换与结构组合等锚点式推理提升三维空间推理，并泛化到真实视觉任务。[感知层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.11561" target="_blank" rel="noopener">Memory as Plans：以记忆为基础的规划式世界-动作建模</a></div>
+      <div class="it-sum">面向非马尔可夫的长视野操作，将记忆基础规划与计划条件执行分离，用紧凑的情节段记录与进度校准的动作块，在保持固定推理时延的同时保留细粒度视觉证据。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.01281" target="_blank" rel="noopener">EmbodiedSkills：编排、训练与部署 VLA 智能体的统一框架</a></div>
+      <div class="it-sum">以固定的可执行技能接口对机器人技能执行进行校验与验证，实现闭环具身智能体，底层可适配可在线调整的低层 VLA 策略（如 Qwen3-VL、OpenPI/pi0.5）。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.11553v1" target="_blank" rel="noopener">CAP：基于学习去噪的持续自适应「感知盲」人形运动</a></div>
+      <div class="it-sum">人形复杂地形运动需前视外感知预判障碍，但真实部署中该信号常间歇失效。CAP 用学习去噪统一感知与盲控，避免在两套策略间硬切换。[控制层·RL]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/private/rSWX8JI9JPPBvt0j.html" target="_blank" rel="noopener">吴佳俊 ECCV 2026：用物理重新定义多模态融合</a></div>
+      <div class="it-sum">斯坦福团队在 ECCV「物理环境中的具身多模态推理」专题提出，视觉、听觉、触觉本质是同一组物理属性在不同感官通道上的投影，不堆 Transformer 而以物理建模统一多模态。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/transportation/cgxm7O53FRlftYwO.html" target="_blank" rel="noopener">德赛西威给出舱驾融合「双优」新解法</a></div>
+      <div class="it-sum">舱驾一体把座舱与智驾装进同一颗芯片，有限算力向智驾倾斜易致车机卡顿、SR 掉帧。德赛西威提出兼顾两端的架构方案，缓解共享算力下的资源争抢。[具身芯片·车载SoC]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/transportation/JXhS5Joxp68qFEmE.html" target="_blank" rel="noopener">九识：从一台车到三百城，成为城市治理的「运力底座」</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">九识无人车规模已超 3 万辆、覆盖 300 余城、累计真实运营 2.5 亿公里，宣布战略聚焦物理 AI 赋能城市治理，走「先跑出商业收入、再升级物理 AI」的数据驱动路径。公司数据以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://robohub.org/first-11-vs-11-humanoid-soccer-game-played-at-robocup-2026/" target="_blank" rel="noopener">RoboCup 2026 上演首场 11 对 11 人形足球赛</a></div>
+      <div class="it-sum">RoboCup 2026 创造历史，两支各 11 台人形机器人的队伍首次以完整阵容同场竞技，B-Human（不来梅）对阵 HTWK Robots（莱比锡）。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/video-friday-disaster-response-robots" target="_blank" rel="noopener">Video Friday：人形机器人挑战单杠</a></div>
+      <div class="it-sum">IEEE Spectrum 每周机器人视频精选，本期人形机器人挑战单杠等高动态动作；并预告 9 月 22-23 日首尔 Humanoids Summit 等行业活动。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://robohub.org/when-expressive-humanoid-robots-are-awkward-people-become-wary-new-brain-study/" target="_blank" rel="noopener">脑科学研究：人形机器人表现「别扭」时，人会更警惕</a></div>
+      <div class="it-sum">Robohub 报道一项脑成像研究，人对会犯错、尤其动作别扭的人形机器人更易产生怀疑，为人机信任与人形交互设计提供神经层面证据。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://robohub.org/exploring-the-moon-will-require-rovers-that-can-think-for-themselves-an-upcoming-nasa-mission-will-test-whether-they-can/" target="_blank" rel="noopener">NASA 将测试能自主协作的月面探测车</a></div>
+      <div class="it-sum">NASA 的 CADRE 任务将向月球投放三台小型探测车，仅给一条指令——自行商量如何探索这片地形，检验多机自主协作在真实任务中的可行性。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（13 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>365.44 USD</td><td class="up">+3.21%</td><td>Optimus 观察标的</td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>369.15 USD</td><td class="up">+0.67%</td><td>手术机器人观察标的</td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>42.13 USD</td><td class="down">-1.89%</td><td>仓储机器人观察标的</td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>4.48 USD</td><td class="down">-9.4%</td><td>配送机器人观察标的</td></tr>
+        <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>13.75 USD</td><td class="down">-9.48%</td><td>自动化观察标的</td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>218.29 USD</td><td class="down">-5.24%</td><td>机器人计算观察标的</td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>106.2 HKD</td><td class="down">-2.39%</td><td>物流机器人观察标的</td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>77.95 HKD</td><td class="down">-3.29%</td><td>人形机器人观察标的</td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>4.23 HKD</td><td class="down">-0.47%</td><td>机器人计算观察标的</td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>53.52 CNY</td><td class="down">-1.73%</td><td>运动控制观察标的</td></tr>
+        <tr><td>埃斯顿 <span class="tk">0.002747 · A股</span></td><td>28.89 CNY</td><td class="down">-2.07%</td><td>工业机器人观察标的</td></tr>
+        <tr><td>绿的谐波 <span class="tk">1.688017 · A股</span></td><td>280.66 CNY</td><td class="down">-1.55%</td><td>谐波减速器观察标的</td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>39.15 CNY</td><td class="down">-0.03%</td><td>具身语音交互观察标的</td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$20M</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/09/08/cloudnc-raises-20m-to-automate-manufacturings-most-pressing-bottlenecks/" target="_blank" rel="noopener">CloudNC 融资 2000 万美元，自动化制造业核心瓶颈</a></div><div class="it-sum">英国制造软件创企 CloudNC 完成 2000 万美元 B 轮扩展，累计融资达 1.28 亿美元，聚焦用软件自动化 CNC 等制造产线关键卡点。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://www.leiphone.com/category/transportation/JXhS5Joxp68qFEmE.html" target="_blank" rel="noopener">九识战略升级：物理 AI 赋能城市治理</a></div><div class="it-sum">无人车规模超 3 万辆、覆盖 300 余城、累计运营 2.5 亿公里，进入「数据驱动迭代、商业反哺研发」循环；公司融资与运营数据以官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>

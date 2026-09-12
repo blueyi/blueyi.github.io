@@ -220,6 +220,43 @@ def build_channel_index(channel: str, spec: dict) -> int:
     return len(cards)
 
 
+def build_weeks_index(channel: str, spec: dict):
+    """渲染 feeds/<channel>/weeks/index.html。
+
+    `weeks/` 目录下只有各期 <YYYY-Www>.html，直接访问目录本身（GitHub Pages
+    关闭目录列表）会 404。频道 index.html 已经是完整的往期列表，所以这里生成
+    一个即时重定向页跳到频道首页，并保留可点击兜底链接（禁用 JS/爬虫也能用）。
+    """
+    zh = spec.get("title_en", spec.get("title", channel))
+    page = f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{esc(zh)} · All issues</title>
+<link rel="canonical" href="../">
+<meta http-equiv="refresh" content="0; url=../">
+<link rel="stylesheet" href="../../assets/feeds.css">
+<script>location.replace("../");</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/">{HOME_SVG}Home</a> / <a href="../../index.html">Feeds</a> / <a href="../">{esc(zh)}</a> / All issues</div>
+  <header class="site">
+    <h1>{esc(zh)} · All issues</h1>
+    <div class="sub">Redirecting to the issue list… If nothing happens, <a href="../">open all issues →</a></div>
+  </header>
+</div>
+</body>
+</html>
+"""
+    lint_html(page, f'{channel}/weeks/index.html')
+    weeks_dir = FEEDS_DIR / channel / "weeks"
+    weeks_dir.mkdir(parents=True, exist_ok=True)
+    (weeks_dir / "index.html").write_text(page, encoding="utf-8")
+
+
 def build_manifest(channel: str, spec: dict):
     weeks = list_weeks(channel)
     manifest = {
@@ -359,6 +396,7 @@ def main():
     specs = {c: load_spec(c) for c in CHANNELS}
     for c in CHANNELS:
         n = build_channel_index(c, specs[c])
+        build_weeks_index(c, specs[c])
         build_manifest(c, specs[c])
         print(f"[{c}] index rebuilt: {n} published week(s)")
     build_site_index(specs, recent_weeks=args.recent_weeks, highlights_per_week=args.highlights_per_week)
