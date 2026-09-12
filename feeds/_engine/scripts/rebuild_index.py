@@ -27,7 +27,7 @@ CHANNELS = ["ai-infra", "embodied-ai"]
 # 与 skill/cron 保持一致：AI Infra 周六 06:00 HKT / 具身智能 周日 22:00 HKT
 CHANNEL_SCHEDULES = {
     "ai-infra": "Updated every Sat 06:00 HKT",
-    "embodied-ai": "Updated every Sun 22:00 HKT",
+    "embodied-ai": "Updated every Sat 20:00 HKT",
 }
 
 # 频道 emoji（复用主页宽卡片风格）
