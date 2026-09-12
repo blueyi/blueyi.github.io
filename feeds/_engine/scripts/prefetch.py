@@ -52,6 +52,29 @@ CN_ROBOT_KEYWORDS = [
 ]
 CN_ROBOT_RE = re.compile("|".join(re.escape(k) for k in CN_ROBOT_KEYWORDS), re.I)
 
+# 宽泛中文源(kind=cn_broad)AI-Infra 关键词过滤器：给 ai-infra 频道用。
+# cnBeta/IT之家 等泛科技源充斥手机/显卡游戏评测/消费电子噪音，只保留命中以下
+# 基础设施术语的条目。刻意去掉会撞消费电子的裸词(如裸"显卡""GPU"→游戏卡评测)，
+# 只收 infra 语境下无歧义的强词——宁缺毋滥，cn_broad 只是补盲安全网。
+CN_INFRA_KEYWORDS = [
+    # 芯片 / 算力硬件（避免裸"显卡/GPU"，用集群/训练/数据中心语境强词）
+    "算力", "HBM", "台积电", "中芯国际", "华虹", "寒武纪", "海光", "昇腾", "壁仞", "摩尔线程",
+    "先进制程", "晶圆", "光刻", "存算一体", "GPU集群", "AI芯片", "训练芯片", "推理芯片",
+    "英伟达", "nvidia", "blackwell", "hopper", "cuda",
+    # 编译器 / 框架
+    "编译器", "mlir", "tvm", "triton", "torch.compile", "算子", "自动调优", "编译优化",
+    # 推理 / 训练优化（数据中心）
+    "大模型推理", "推理优化", "推理框架", "投机解码", "vllm", "sglang", "tensorrt",
+    "kv cache", "kv缓存", "moe", "专家并行", "张量并行", "流水线并行", "分布式训练",
+    # 数据中心 / 基础设施
+    "数据中心", "算力中心", "智算中心", "液冷", "infiniband", "超大规模", "机架", "超算",
+    # 安全治理 / 出口管制（infra 相关）
+    "出口管制", "芯片禁令", "算力管制", "先进计算",
+    # 端侧 / 边缘推理
+    "端侧推理", "边缘推理", "npu", "llama.cpp", "端侧大模型", "端侧llm",
+]
+CN_INFRA_RE = re.compile("|".join(re.escape(k) for k in CN_INFRA_KEYWORDS), re.I)
+
 
 def iso_week_id(dt: datetime) -> str:
     y, w, _ = dt.isocalendar()
@@ -257,7 +280,7 @@ def _parse_feed_items(xml: str, limit: int) -> list:
     return rows
 
 
-def fetch_rss(all_re, per_domain, excl_re, feeds, per_feed: int = 12, cn_mode: bool = False) -> list:
+def fetch_rss(all_re, per_domain, excl_re, feeds, per_feed: int = 12, cn_mode: bool = False, broad_re=CN_ROBOT_RE) -> list:
     """并发抓取 RSS 媒体源；单源超时/失败跳过，不影响整体。
     media/official/analysis 走关键词过滤；finance(融资源)放宽——
     融资条目常不含技术关键词，保留交给 agent 判断领域相关性。
@@ -289,7 +312,9 @@ def fetch_rss(all_re, per_domain, excl_re, feeds, per_feed: int = 12, cn_mode: b
                 # cn_broad：泛科技中文源(InfoQ/cnBeta/ITHome 等)，只保留命中机器人/具身
                 # 关键词的条目——覆盖国内龙头本体公司名，确保宇树/智元等动态必被留存。
                 if kind == "cn_broad":
-                    if not CN_ROBOT_RE.search(text):
+                    # 仅按标题过滤：summary 常含"算力/智能座舱"等词，
+                    # 会把车机、消费电子噪音误判为 infra，故不纳入匹配。
+                    if not broad_re.search(r["title"]):
                         continue
                 # 中文垂直源/融资源：放宽（agent 再判定）；其余英文源：关键词过滤 + 频道去重
                 elif not cn_mode and not is_finance:
@@ -499,7 +524,8 @@ def main():
         raw["errors"].append(f"rss outer: {e}")
 
     try:
-        cn_rss = fetch_rss(all_re, per_domain, excl_re, spec.get("cn_rss_feeds", []), cn_mode=True)
+        broad_re = CN_INFRA_RE if args.channel == "ai-infra" else CN_ROBOT_RE
+        cn_rss = fetch_rss(all_re, per_domain, excl_re, spec.get("cn_rss_feeds", []), cn_mode=True, broad_re=broad_re)
         raw["cn_rss"] = [x for x in cn_rss if "_error" not in x]
         raw["errors"] += [x["_error"] for x in cn_rss if "_error" in x]
     except Exception as e:
