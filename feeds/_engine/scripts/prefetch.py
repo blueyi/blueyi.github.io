@@ -316,6 +316,74 @@ def fetch_cn_markets(cn_tickers) -> list:
     return out
 
 
+def fetch_hf_papers(all_re, per_domain, excl_re, days: int = 7, min_upvotes: int = 1) -> list:
+    """抓取 HuggingFace Daily Papers 最近 N 天的论文。
+    API: https://huggingface.co/api/daily_papers?date=YYYY-MM-DD&limit=30
+    无需登录，返回社区精选（已过一轮人工筛选，信噪比远高于 arXiv 原始 RSS）。
+    upvotes 作为热度信号（相当于 HN score）。
+    """
+    from datetime import date, timedelta
+
+    out = []
+    seen_ids: set = set()
+
+    for delta in range(days):
+        day = (date.today() - timedelta(days=delta)).isoformat()
+        try:
+            time.sleep(0.5)  # be polite
+            url = f"https://huggingface.co/api/daily_papers?date={day}&limit=30"
+            raw_bytes = http_get(url, timeout=12)
+            papers = json.loads(raw_bytes)
+        except Exception as e:
+            out.append({"_error": f"hf_papers {day}: {e}"})
+            continue
+
+        if not isinstance(papers, list):
+            continue
+
+        for p in papers:
+            paper = p.get("paper", {})
+            pid = paper.get("id", "")  # arxiv id e.g. "2609.09143"
+            if not pid or pid in seen_ids:
+                continue
+            seen_ids.add(pid)
+
+            upvotes = paper.get("upvotes", 0) or 0
+            if upvotes < min_upvotes:
+                continue
+
+            title = p.get("title") or paper.get("title", "")
+            # 优先用 ai_summary（更简洁），fallback 到 summary
+            abstract = (paper.get("ai_summary") or paper.get("summary") or "")[:400]
+            arxiv_url = f"https://arxiv.org/abs/{pid}"
+
+            text = f"{title} {abstract}"
+            # 关键词过滤（与 arxiv 一致）
+            if all_re and not all_re.search(text):
+                continue
+            domains = tag_domains(text, per_domain)
+            if excl_re and excl_re.search(text) and not domains:
+                continue
+
+            out.append({
+                "source": "hf_papers",
+                "hf_date": day,
+                "upvotes": upvotes,
+                "title": title,
+                "url": arxiv_url,
+                "abstract": abstract,
+                "ai_keywords": paper.get("ai_keywords") or [],
+                "github_repo": paper.get("githubRepo") or "",
+                "domains": domains,
+            })
+
+    # 按 upvotes 降序排列，最热的在前
+    out_items = [x for x in out if "_error" not in x]
+    out_errs  = [x for x in out if "_error" in x]
+    out_items.sort(key=lambda x: x.get("upvotes", 0), reverse=True)
+    return out_errs + out_items
+
+
 def fetch_markets(tickers) -> list:
     """Yahoo Finance chart API 取最新价 + 近5日涨跌幅。无需 key。单只失败跳过。"""
     out = []
@@ -368,6 +436,7 @@ def main():
         "window": {"start": window_start, "end": now.strftime("%Y-%m-%d")},
         "hn": [],
         "arxiv": [],
+        "hf_papers": [],
         "rss": [],
         "cn_rss": [],
         "markets": [],
@@ -388,6 +457,13 @@ def main():
         raw["errors"] += [x["_error"] for x in ax if "_error" in x]
     except Exception as e:
         raw["errors"].append(f"arxiv outer: {e}")
+
+    try:
+        hfp = fetch_hf_papers(all_re, per_domain, excl_re)
+        raw["hf_papers"] = [x for x in hfp if "_error" not in x]
+        raw["errors"] += [x["_error"] for x in hfp if "_error" in x]
+    except Exception as e:
+        raw["errors"].append(f"hf_papers outer: {e}")
 
     try:
         rss = fetch_rss(all_re, per_domain, excl_re, spec.get("rss_feeds", []))
@@ -415,6 +491,7 @@ def main():
 
     raw["counts"] = {
         "hn": len(raw["hn"]), "arxiv": len(raw["arxiv"]),
+        "hf_papers": len(raw["hf_papers"]),
         "rss": len(raw["rss"]), "cn_rss": len(raw["cn_rss"]),
         "markets": len([m for m in raw["markets"] if "_error" not in m]),
         "cn_markets": len([m for m in raw["cn_markets"] if "_error" not in m]),

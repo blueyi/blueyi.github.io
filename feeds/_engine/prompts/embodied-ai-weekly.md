@@ -50,8 +50,14 @@
 - 一篇论文只进一个方向
 
 ## 信息源（prefetch 注入字段）
-- `hn`/`arxiv`：同前，cs.CV 已新增覆盖感知层。`rss`：机器人媒体/融资/分析（带 feed/kind/title/url/summary）。`markets`：具身相关上市公司行情。
-- 7 个方向用 arxiv+hn+rss(media/analysis)；产业动态板块用 rss(finance/media) + markets。
+- `hn`：Hacker News 高分帖，score ≥ 50，已按关键词过滤。
+- `arxiv`：cs.RO/cs.LG/cs.AI/cs.CV 最新论文，cs.CV 覆盖感知层。
+- `hf_papers`：**HuggingFace Daily Papers 过去 7 天社区精选**（无需登录，公开 API）。每条带 `upvotes`（热度信号，等同 HN score）、`ai_keywords`（HF AI 标注）、`github_repo`（有则必看）。信噪比高于 arXiv 原始 RSS，**优先作为热点信号**，摘要用 `ai_summary` 字段（HF 已预处理）。
+- `rss`：机器人媒体/实验室官博/融资（带 feed/kind/title/url/summary）。
+- `cn_rss`：国内中文媒体（量子位/雷锋网/36氪），cn_mode 全量保留交 agent 判定。
+- `markets` / `cn_markets`：具身相关上市公司行情。
+- 7 个方向用 hn+arxiv+hf_papers+rss(media/analysis/official)；产业动态用 rss(finance)+markets。
+- **hf_papers 编辑优先级**：upvotes ≥ 20 的条目优先考虑入选，有 github_repo 的加分，ai_keywords 中含机器人/具身/VLA/manipulation 等词的直接归对应方向。
 
 ## 当前热点追踪方向（编辑选材时重点关注）
 以下研究方向是 2025-2026 年具身 AI 最活跃前沿，优先入选 hot=true：
