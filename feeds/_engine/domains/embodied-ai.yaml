@@ -6,13 +6,18 @@ arxiv_categories:
   - cs.RO   # 机器人
   - cs.LG   # 机器学习（策略学习）
   - cs.AI   # 通用 AI（世界模型等）
+  - cs.CV   # 计算机视觉（感知层：深度估计/3D表示/视觉接地）
 hn_min_score: 50
 domains:
   - id: vla
     emoji: "1️⃣"
     name: VLA（视觉-语言-动作模型）
-    desc: Vision-Language-Action / RT-X / OpenVLA / π0 / RDT / 通用操作策略
-    keywords: [vla, "vision-language-action", "rt-x", "rt-2", openvla, "pi0", "pi-zero", rdt, "foundation policy", "generalist policy", "action model"]
+    desc: Vision-Language-Action / RT-X / OpenVLA / π0 / RDT / GR00T / 通用操作策略 / 端到端具身基础模型
+    # 架构形态：端到端VLA（RT-2/π0/RDT-1B/GR00T）/ 扩散头+VLM骨干（π0/RDT）/ 行为克隆VLA（OpenVLA/RT-1）
+    keywords: [vla, "vision-language-action", "rt-x", "rt-2", openvla, "pi0", "pi-zero", rdt, "foundation policy",
+               "generalist policy", "action model", "flow matching", crossformer, octo, "gr00t", "gr-00t",
+               "robot transformer", "action tokenization", "robovlm", "openvla-oft", "token-based policy",
+               "robot action", "end-to-end robot", "visual robot policy", "multimodal robot"]
   - id: dexterous
     emoji: "2️⃣"
     name: 灵巧手 / 灵巧操作
@@ -25,9 +30,31 @@ domains:
     keywords: [sim2real, "sim-to-real", "domain randomization", isaac, mujoco, "digital twin", simulation, "real-world transfer"]
   - id: embodied-model
     emoji: "4️⃣"
-    name: 具身模型（世界模型 / 人形策略 / 基础模型）
-    desc: 世界模型 / 人形机器人策略 / 具身基础模型 / 扩散策略 / 模仿学习
-    keywords: ["world model", "humanoid policy", "embodied foundation", "diffusion policy", "behavior cloning", "imitation learning", "locomotion", "whole-body control", "act policy"]
+    name: 具身模型（感知/规划/控制三层 × 动作生成方式）
+    desc: |
+      三层分类全覆盖——
+      感知层：3D表示/视觉接地/深度估计/场景理解；
+      规划层：LLM任务分解/Code-as-Policy/SayCan/技能原语/层次策略；
+      控制层(动作生成方式)：行为克隆BC / 扩散策略Diffusion / 世界模型World Model / RL策略；
+      架构形态：端到端VLA / LLM+技能库 / 扩散头+VLM骨干 / 强化学习
+    # VLA 方向（domain vla）聚焦端到端模型本身；本方向收底层能力进展（感知/规划/控制各层突破）
+    keywords: ["world model", "humanoid policy", "embodied foundation", "diffusion policy", "behavior cloning",
+               "imitation learning", "locomotion", "whole-body control", "act policy",
+               # 感知层
+               "visual affordance", "3d representation", "spatial reasoning", "visual grounding robot",
+               "depth robot", "scene understanding robot", "embodied perception",
+               # 规划层
+               "code as policy", "task planning robot", "skill primitive", "hierarchical policy",
+               "saycan", "llm robot planning", "chain-of-thought robot", "tool use robot",
+               # 控制层-扩散/一致性
+               "consistency policy", "flow policy", "score matching robot",
+               # 控制层-世界模型
+               "video prediction robot", "model-based robot", "latent world model",
+               "physical reasoning", "robot imagination",
+               # 控制层-RL
+               "offline rl robot", "online rl robot", "reward shaping robot",
+               # 通用基础模型
+               "robot foundation model", "embodied agent", "generalist robot"]
   - id: embodied-chip
     emoji: "5️⃣"
     name: 具身智能芯片（机器人计算 / 边缘 NPU）
