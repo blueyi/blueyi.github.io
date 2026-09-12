@@ -75,18 +75,29 @@ exclude_to_channel:
   ai-infra: [vllm, sglang, "tensorrt", mlir, tvm, "torch.compile", "data center", hbm, "kv cache", quantization]
 
 # RSS 媒体源（机器人/具身产业 + 融资）
+# 注：所有 URL 均经实测验证可用（2026-09）
 rss_feeds:
-  - {name: "IEEE Spectrum Robotics", kind: media, url: "https://spectrum.ieee.org/feeds/topic/robotics.rss"}
-  - {name: "Robotics & Automation News", kind: media, url: "https://roboticsandautomationnews.com/feed/"}
-  - {name: "TechCrunch Robotics", kind: media, url: "https://techcrunch.com/tag/robotics/feed/"}
+  # === 顶级实验室官方博客（热点论文往往先在这里发布，比 arXiv 早数周）===
+  - {name: "NVIDIA Developer Robotics", kind: official, url: "https://developer.nvidia.com/blog/tag/robotics/feed/"}
+  - {name: "Google DeepMind Research",  kind: official, url: "https://deepmind.google/blog/rss.xml"}
+  # BAIR Blog: 偶发超时(berkeley.edu 出口不稳)，prefetch 已有 timeout 兜底，保留
+  - {name: "BAIR Blog", kind: analysis, url: "https://bair.berkeley.edu/blog/feed.xml"}
+  # === 机器人学术社区新闻（信噪比高）===
+  - {name: "Robohub",   kind: analysis, url: "https://robohub.org/feed/"}
+  - {name: "CMU RI News", kind: analysis, url: "https://www.ri.cmu.edu/news/feed/"}
+  # === 机器人垂直媒体 ===
+  - {name: "IEEE Spectrum Robotics",       kind: media, url: "https://spectrum.ieee.org/feeds/topic/robotics.rss"}
+  - {name: "Robotics & Automation News",   kind: media, url: "https://roboticsandautomationnews.com/feed/"}
+  - {name: "TechCrunch Robotics",          kind: media, url: "https://techcrunch.com/tag/robotics/feed/"}
+  # === 融资/产业 ===
   - {name: "TechCrunch Fundraising", kind: finance, url: "https://techcrunch.com/tag/fundraising/feed/"}
-  - {name: "TechCrunch Venture", kind: finance, url: "https://techcrunch.com/category/venture/feed/"}
-  - {name: "Crunchbase News", kind: finance, url: "https://news.crunchbase.com/feed/"}
-  - {name: "VentureBeat AI", kind: media, url: "https://venturebeat.com/category/ai/feed/"}
-  - {name: "The Verge AI", kind: media, url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"}
-  - {name: "Import AI", kind: analysis, url: "https://importai.substack.com/feed"}
-  - {name: "ExplainX", kind: analysis, url: "https://explainx.substack.com/feed"}
-  - {name: "TechTimes", kind: media, url: "https://www.techtimes.com/rss/archives/archives.xml"}
+  - {name: "TechCrunch Venture",     kind: finance, url: "https://techcrunch.com/category/venture/feed/"}
+  - {name: "Crunchbase News",        kind: finance, url: "https://news.crunchbase.com/feed/"}
+  # === 分析/Newsletter ===
+  - {name: "Import AI",    kind: analysis, url: "https://importai.substack.com/feed"}
+  - {name: "VentureBeat AI", kind: media,  url: "https://venturebeat.com/category/ai/feed/"}
+  # 已移除无效源: HuggingFace Papers(401需登录)、The Robot Report(403)、
+  #   TechTimes(泛科技)、ExplainX(更新不稳)、The Verge AI(具身内容<5%)
 
 # 上市公司龙头（具身/机器人相关，Yahoo Finance）
 tickers:
@@ -99,12 +110,14 @@ tickers:
   - {sym: "NVDA", name: "英伟达(机器人算力)"}
   - {sym: "9618.HK", name: "京东(物流机器人)"}
 
-# 国内中文媒体 RSS（高信噪比源；机器人/具身在国内媒体覆盖好）
+# 国内中文媒体 RSS（经实测验证；机器人/具身在国内媒体覆盖好）
+# 注：机器之心(jiqizhixin.com)和新智元(aisia.com)经测无公开 RSS feed（返回 HTML），
+#     靠 cn_rss 量子位/雷锋网/36氪覆盖国内，重要动态补充走 HN 和产业板块。
 cn_rss_feeds:
-  - {name: "36氪", kind: cn_media, url: "https://36kr.com/feed"}
-  - {name: "36氪融资快讯", kind: cn_finance, url: "https://36kr.com/feed-newsflash"}
   - {name: "量子位", kind: cn_media, url: "https://www.qbitai.com/feed"}
   - {name: "雷锋网", kind: cn_media, url: "https://www.leiphone.com/feed"}
+  - {name: "36氪",   kind: cn_media, url: "https://36kr.com/feed"}
+  # 36氪融资快讯已移除：泛融资噪音高，具身相关<5%
 
 # 国内龙头股（A股/港股同公司只留港股；华为/宇树/智元/银河通用等未上市，归产业文字区不进股票表）
 cn_tickers:
