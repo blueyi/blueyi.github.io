@@ -118,9 +118,19 @@ cn_rss_feeds:
   - {name: "雷锋网", kind: cn_media, url: "https://www.leiphone.com/feed"}
   - {name: "36氪",   kind: cn_media, url: "https://36kr.com/feed"}
   # 36氪融资快讯已移除：泛融资噪音高，具身相关<5%
+  # === 宽泛泛科技中文源(kind=cn_broad)：内容庞杂，prefetch 用 CN_ROBOT_RE 只保留
+  #     命中机器人/具身关键词(含国内龙头本体公司名)的条目，补齐机器之心/新智元无 RSS
+  #     导致的国内本体机器人报道盲区(宇树/智元等)。均经实测 XML 可用(2026-09)。===
+  - {name: "InfoQ中文", kind: cn_broad, url: "https://www.infoq.cn/feed"}
+  - {name: "cnBeta",    kind: cn_broad, url: "https://www.cnbeta.com.tw/backend.php"}
+  - {name: "IT之家",    kind: cn_broad, url: "https://www.ithome.com/rss/"}
 
-# 国内龙头股（A股/港股同公司只留港股；华为/宇树/智元/银河通用等未上市，归产业文字区不进股票表）
+# 国内龙头股（A股/港股同公司只留港股；智元/银河通用等仍未上市，归产业文字区不进股票表）
+# 注：宇树科技 2026-08-19 科创板上市(688836.SH)，A股人形机器人第一股 → 已进股票表。
+#     智元机器人入主上纬新材(688585.SH)取得控股权，但官方否认借壳、不构成重组上市，
+#     智元本体仍未上市 → 归产业文字区，不进股票表(上纬新材主业为新材料，不列入以免误导)。
 cn_tickers:
+  - {secid: "1.688836", name: "宇树科技", market: "A股"}
   - {secid: "116.09880", name: "优必选", market: "港股"}
   - {secid: "116.09660", name: "地平线机器人", market: "港股"}
   - {secid: "0.300124", name: "汇川技术", market: "A股"}

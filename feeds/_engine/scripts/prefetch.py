@@ -31,6 +31,27 @@ UA = {"User-Agent": "Mozilla/5.0 (compatible; blueyi-feeds/1.0)"}
 ENGINE_DIR = Path(__file__).resolve().parent.parent          # feeds/_engine
 FEEDS_DIR = ENGINE_DIR.parent                                # feeds/
 
+# 宽泛中文源(kind=cn_broad)机器人/具身关键词过滤器：泛科技源(InfoQ/cnBeta/ITHome 等)
+# 内容庞杂，只保留命中以下具身/机器人术语的条目，避免灌入大模型/消费电子噪音。
+# 涵盖国内龙头本体公司名（宇树/智元/银河通用等未上市或新上市龙头），确保它们的动态必被留存。
+CN_ROBOT_KEYWORDS = [
+    # 通用具身/机器人术语（去掉 vla/本体/抓取 等裸词——智驾座舱等已借用，避免污染）
+    "机器人", "具身", "人形", "灵巧手", "机械臂", "双足", "四足", "仿生",
+    "遥操作", "sim2real", "仿真到真实", "操作策略",
+    "视觉-语言-动作", "视觉语言动作", "世界模型", "扩散策略", "模仿学习",
+    "具身智能", "具身大模型", "机器狗", "机械狗", "外骨骼", "手术机器人", "工业机器人",
+    "物流机器人", "配送机器人", "仓储机器人", "谐波减速器", "触觉传感",
+    # 国内龙头本体公司（含未上市/新上市，保证动态必留）。
+    # 只收中文全称/无歧义品牌名——英文裸词(figure/booster/kepler/optimus 等常义词)
+    # 在中文泛科技源里易误命中，故不入表；国内报道通常带中文名，够用。
+    "宇树", "unitree", "智元", "银河通用", "星动纪元",
+    "傅利叶", "优必选", "ubtech", "云深处", "逐际动力",
+    "众擎", "加速进化", "松延动力", "乐聚机器人", "帕西尼", "跨维智能",
+    "自变量", "穹彻", "千寻智能", "灵初", "它石智航",
+    "地平线机器人", "特斯拉机器人", "擎朗", "普渡机器人",
+]
+CN_ROBOT_RE = re.compile("|".join(re.escape(k) for k in CN_ROBOT_KEYWORDS), re.I)
+
 
 def iso_week_id(dt: datetime) -> str:
     y, w, _ = dt.isocalendar()
@@ -265,8 +286,13 @@ def fetch_rss(all_re, per_domain, excl_re, feeds, per_feed: int = 12, cn_mode: b
                 text = f"{r['title']} {r.get('summary','')}"
                 domains = tag_domains(text, per_domain)
                 is_finance = (kind in ("finance", "cn_finance"))
-                # 中文源/融资源：放宽（agent 再判定）；其余英文源：关键词过滤 + 频道去重
-                if not cn_mode and not is_finance:
+                # cn_broad：泛科技中文源(InfoQ/cnBeta/ITHome 等)，只保留命中机器人/具身
+                # 关键词的条目——覆盖国内龙头本体公司名，确保宇树/智元等动态必被留存。
+                if kind == "cn_broad":
+                    if not CN_ROBOT_RE.search(text):
+                        continue
+                # 中文垂直源/融资源：放宽（agent 再判定）；其余英文源：关键词过滤 + 频道去重
+                elif not cn_mode and not is_finance:
                     if all_re is None or not all_re.search(text):
                         continue
                     if excl_re and excl_re.search(text) and not domains:
