@@ -72,7 +72,9 @@ def main():
     rebuild_daily.main()
 
     # git add -> commit -> pull --rebase -> push（顺序不可颠倒；分号语义，逐条判码）
-    rc, _ = run(["git", "add", "daily/", "index.html"], REPO_DIR)
+    # search-index.json 由 rebuild_daily -> build_search_index 写在仓库根，必须一并暂存，
+    # 否则它是未暂存改动会让后续 `git pull --rebase` 直接拒绝（cannot pull with rebase: unstaged changes）。
+    rc, _ = run(["git", "add", "daily/", "index.html", "search-index.json"], REPO_DIR)
     if rc != 0:
         print("[daily] git add failed", file=sys.stderr)
         return 1
