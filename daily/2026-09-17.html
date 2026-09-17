@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-09-17</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-09-17</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-09-17 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-09-16 ~ 2026-09-17</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-09-17</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>推理经济性成为唯一主线</b>：Vera Rubin 的 MLPerf 首秀、Emerald AI 的能源联盟、OpenAI 的 Habitat 存储平台,三件事分别从芯片、电力、存储侧回答同一个问题——每瓦能产出多少 token。</li>
+      <li><b>安全治理爆出结构性裂缝</b>：HN 670 分爆料同一家第三方承包方卷入三家实验室的安全丑闻,叠加 Anthropic/OpenAI 的&quot;嵌入式评估员&quot;提案被指无强制力,治理独立性与外包风险被同时推到聚光灯下。</li>
+      <li><b>具身智能的模型与资本双加速</b>：紫东太初 9B 开源拿下空间具身多项第一,General Intuition 冲 60 亿美元估值、Atoms 单轮 17 亿美元,数据侧(ZDTaichu/触觉)与资金侧同步升温。</li>
+      <li><b>端侧从&quot;能跑&quot;转向&quot;能效与可移植性&quot;</b>：1.58-bit ternary、天玑 9600 Pro 的融合计算、INT8 跨平台实测,共同指向同一个未解问题——量化模型能否真正跨硬件迁移。</li>
+      <li><b>编译器与算子生成两条腿走路</b>：语言层有 CUDA-Rust、Exo-GPU 拓宽表达,自动化层有 Ave(数据流不变量)、SpecLens(规约约束)把 LLM 从&quot;写得出&quot;推向&quot;写得对、调得动&quot;。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[NVIDIA Vera Rubin NVL72 首秀 MLPerf Inference v6.1](https://blogs.nvidia.com/blog/vera-rubin-nvl72-mlperf-inference/) — 官方强调系统性能、规模化效率与软件持续优化三个杠杆,把「每瓦 token」直接摆成推理经济性的核心指标。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[芯片从业者拆解 OpenAI 造芯:第一代&quot;小辣椒&quot;9 个月从设计到流片](https://www.leiphone.com/category/chips/FNvnd45qiCTsT6IR.html) — 工程师估算 AI 辅助让前端设计快了约半年,但&quot;量产一代、研发一代、预研一代&quot;被大模型公司压得更紧,全链路落地仍以年计。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Hot Chips 2026:Samsung 的 LPDDR5X 存内计算(PIM)](https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing) — 内存侧算力路线继续推进,和 HBM 的带宽竞赛并行。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[美光发布 512GB DDR5-9200 模组,单条 16W](https://www.tomshardware.com/pc-components/dram/micron-announces-512gb-ddr5-9200-memory-modules-with-16w-power-draw-up-to-12tb-per-server-claims-60-percent-less-energy-intensive-than-four-128gb-modules) — 单服务器最高 12TB,官方称比四条 128GB 省 60% 能耗,密度与能效重新成为内存卖点。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[d-Matrix 加入 NVIDIA NVLink Fusion 平台](https://www.servethehome.com/d-matrix-joins-the-nvidia-nvlink-fusion-platform/) — 下一代 Raptor(存储为中心 XPU)借 NVLink 做 scale-up/out,NVLink 生态继续收编第三方加速器。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[NVIDIA 发布 CUDA-Rust:两条写 GPU Kernel 的路线](https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/) — HN 125 分,GPU 原生 Rust 编程从社区实验进入官方叙事,语言栈边界在移动。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Exo-GPU:面向 Tensor Core 的安全、命令式、用户可调度编程](https://arxiv.org/abs/2609.16389) — 把异步 tensor core / memcpy 指令与 thread-warp-block-cluster 层级显式暴露给性能工程师,兼顾可调度性与安全性。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Ascend 推理加速:窄矩阵乘的向量化实现](https://arxiv.org/abs/2609.16009) — 针对矩阵-向量乘时 Cube 单元闲置、AIV 空转的问题用向量指令重写 MatMul,是昇腾算子优化的典型思路。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[PipeSwift:重审面向 Completion 的大规模 Agentic 服务流水线并行](https://arxiv.org/abs/2609.16491) — 智能体负载从 token 级 SLO 转向完成时间,为 TTFT/TPOT 优化的服务设计必须重做并行策略。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[基元律动 × 无问芯穹签署战略合作](https://www.leiphone.com/category/industrynews/nFBwVeaZsAi37i5Q.html) — 把多模型服务与智能路由,同 Agentic Infra 的训练/推理/RL 效率能力对接,围绕高质量 Token 供给与调度合作。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Agent 的经济账不能只算 Token:阿里 Qoder Cloud Agents](https://www.infoq.cn/article/8leHq71KkbQfo930ptvc) — 云端 Agent 成本里 token 只是一部分,上下文、工具调用与重试的经济性才是大头。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[OpenAI 把 Habitat 做成支撑 10 亿 ChatGPT 用户的全球分布式存储平台](https://openai.com/index/scaling-storage-one-billion-users-part-one) — 22M 请求/秒,从一个 Python 库演化为全球化存储系统,超大模型服务商的存储底座细节少见公开。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Emerald AI、Google、NVIDIA 成立 AI Energy Management Alliance](https://blogs.nvidia.com/blog/ai-energy-management-alliance/) — 把电网侧灵活性直接接进 AI 工厂调度,&quot;megawatts → tokens&quot;在组织层面落地。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[苏格兰议会支持对新建超大规模数据中心的事实性暂停](https://www.datacenterdynamics.com/en/news/scotland-data-center-moratorium/) — 新规划指引发布前不批新项目,欧洲电力与土地约束开始反噬 capex 节奏。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Astera Labs 发布 Leo 2 CXL 内存控制器与 Leo X](https://www.servethehome.com/astera-labs-releases-leo-2-cxl-memory-controllers-and-leo-x-controller-for-rackscale-fabric-attached-memory/) — 支持 CXL 3.2 与 PCIe Gen6,Leo X 把内存扩展直接挂上加速器 fabric,机架级内存池化再进一步。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[DeepShare:面向多租户集群的 assurance 驱动 DL 作业调度](https://arxiv.org/abs/2609.16682) — 用连续租户保障信号统一配额借用、排队、抢占与 GPU 共享,针对&quot;有配额却排队长&quot;的低利用率顽疾。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[一家公司被指同时卷入 OpenAI、Anthropic、Meta 的&quot;黑客&quot;丑闻](https://www.effort.news/irregular) — HN 670 分,前沿实验室的安全事件背后指向同一家第三方承包方,治理链条的外包风险被摆上台面。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Anthropic 与 OpenAI 想让安全评估员&quot;常驻&quot;实验室](https://techcrunch.com/2026/09/16/anthropic-and-openai-want-to-embed-safety-evaluators-will-they-really-be-independent/) — Dario Amodei 援引银行嵌入式监管作先例,但监管专家指出评估员无权叫停训练或发布([IT之家分析](https://www.ithome.com/1/003/354.htm)),独立性仍存疑。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[OpenAI 公布模型失准(model misalignment)上报框架](https://openai.com/index/model-misalignment-reporting-framework) — 附六份异常行为报告,把&quot;发现—调查—披露&quot;流程化。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[蚂蚁开源大模型内生式安全护栏 SingProbe](https://aiera.com.cn/2026/09/16/other/admin/113961/%e8%9a%82%e8%9a%81%e5%bc%80%e6%ba%90%e5%a4%a7%e6%a8%a1%e5%9e%8b%e5%ae%89%e5%85%a8%e6%8a%a4%e6%a0%8fsingprobe%ef%bc%8c%e5%b7%b2%e9%80%82%e9%85%8d29%e4%b8%aa%e4%b8%bb%e6%b5%81%e5%bc%80%e6%ba%90%e6%a8%a1/) — 与生成过程同步运行的安全检测,已适配 29 个主流开源模型并开放评测基准。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[英伟达等巨头&quot;封杀&quot; Claude 最强模型](https://aiera.com.cn/2026/09/16/other/admin/113929/) — Anthropic 的顶级金主集体收回内部访问权限,资本与模型供应商的关系出现裂缝。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[紫东太初开源 ZDTaichu5.0-9B](https://www.qbitai.com/2026/09/490839.html) — 10B 以内通用多模态,空间具身在 9 项测试中 8 项第一(同题 [新智元报道](https://aiera.com.cn/2026/09/17/other/admin/114049/)),国产开源在&quot;物理世界&quot;这条线上抢位。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[General Intuition 以 60 亿美元估值推进融资](https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/) — Valor、Point72、Seven Seven Six 入局,押注&quot;时空运动&quot;基础模型;同期 [Travis Kalanick 的 Atoms 获 17 亿美元、a16z 领投](https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/)。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Digit 5 可能是第一个真正安全的人形机器人&quot;工人&quot;](https://spectrum.ieee.org/humanoid-robot-safety) — 从炫技视频走向经济可行岗位的门槛在哪里,安全设计被视为核心约束。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[World-Action Models for Robot Learning and Control: A Survey](https://arxiv.org/abs/2609.16074) — 把世界模型、视频生成与 VLA 策略串成一条线,系统梳理&quot;动作前先预测未来状态&quot;的技术栈。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[GEN-1.5 把 one-shot 学习带进机器人](https://explainx.substack.com/p/gen-15-brings-one-shot-learning-to) — 同期还涉及维持人体皮肤存活用于 AI 研究、Reactor 把世界模型变成可交互世界。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[机器人开始学会&quot;触摸&quot;](https://spectrum.ieee.org/tactile-data-robots) — 触觉数据缺口正被学术实验室与创业公司填补,灵巧操作的最大瓶颈之一。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Ave:用数据流不变量引导 Agent 做 GPU 优化](https://arxiv.org/abs/2604.18616) — 单元测试与 profiler 只给稀疏的端到端反馈,数据流不变量为 agent 提供&quot;哪项全局优化还没做&quot;的信号。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[SpecLens:用规约派生约束与行为差异生成 Verilog](https://arxiv.org/abs/2609.16729) — RAG/自规划/few-shot 之外换一条&quot;规约约束&quot;路线,直面自然语言到功能正确 RTL 的鸿沟。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[EvoLib:把经验变成可演化的知识](https://www.microsoft.com/en-us/research/blog/evolib-turning-experience-into-evolving-knowledge/) — LLM 不是记得越多越聪明,可复用技能与洞见才是部署后持续适应的关键。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Cognition 单周融资 20 亿美元](https://news.crunchbase.com/venture/biggest-funding-rounds-boring-co-cognition-massive-week/) — 与 The Boring Co. 30 亿、Motive 13 亿同列本周最大额,Coding Agent 资本热度不减。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[全球首个开源 Agent 会话平台发布](https://aiera.com.cn/2026/09/17/other/admin/113979/) — 把 Session 里&quot;做过什么、哪里失败、为何改变方向&quot;变成可共享资产,老板、同事与我共用一个 AI。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Breaking the 1.58-bit Barrier for Ternary LLMs](https://arxiv.org/abs/2609.16338) — HN 115 分,三值 LLM 继续突破极低比特量化的性能天花板,是端侧与专用硬件的高能效路线。</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Perplexity Portable Computer 登陆 Windows,由 NVIDIA RTX 加速](https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/) — 本地版 Agent 在 PC 上规划并执行多步任务,敏感信息不出端。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[高通携手中兴努比亚与豆包手机助手推第五代骁龙 8 至尊版 AI 智能体手机](https://www.qbitai.com/2026/09/490756.html) — NaviX Ultra 主打智能体体验的规模化落地。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[2nm 天玑 9600 Pro:旗舰 SoC 从拼核心转向&quot;融合计算&quot;](https://www.leiphone.com/category/chips/pE0IvGEQtRiAdZcO.html) — 智能体常驻后台持续感知,CPU/GPU/NPU/内存/存储的协同组织比单核峰值更重要。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[Is INT8 Portable?跨平台量化推理实测](https://arxiv.org/abs/2609.16085) — 在 ARM/x86 CPU、独显、Jetson、车规加速器等七类硬件上检验&quot;一次量化、处处加速&quot;,结论并不乐观。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">[TinyGo 同时押注 UEFI、Wasm 与无线通信](https://www.infoq.cn/article/d4hdvQuOU1sbCZESvw4j) — Go 从服务器杀进单片机,端侧固件层的语言竞争升温。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-09-15.html">← 2026-09-15</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
