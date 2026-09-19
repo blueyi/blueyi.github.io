@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W38 · 09-14 ~ 09-20</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W38</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W38 · 09-14 ~ 09-20</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-09-14 ~ 2026-09-20</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W38</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>VLA：LIT 以姿态监督潜在接口约束视觉到动作映射，直击视觉—动作捷径与跨场景泛化问题。[端到端VLA]</li>
+      <li>灵巧操作：DexTouch-WM 将人类触摸数据转化为同时预测 RGB 与双侧触觉动力学的世界模型，降低接触数据采集门槛。[控制层·世界模型]</li>
+      <li>规划：StageGuard 用 agentic distillation 学习长时程任务的阶段切换，减少人工完成信号检查器依赖。[规划层]</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.12641" target="_blank" rel="noopener">LIT：用潜在接口打破视觉—动作捷径</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">先训练姿态条件动作先验，再以姿态监督约束视觉输入的潜在接口，改善机器人基础模型的空间目标泛化；论文同时提供公开代码。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.18487" target="_blank" rel="noopener">ActionPiece：重新思考 VLA 的动作分词</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">针对自回归 VLA 的动作 tokenizer，研究不只用逐点重建误差衡量动作调整是否忠实，为可执行动作表示提供新的评估与设计方向。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.13053" target="_blank" rel="noopener">Dynin-Robotics：全模态统一扩散 VLA</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">用共享轨迹模型统一目标预测、动力学预测和动作生成，并结合联合去噪与测试时扩展提升语言条件机器人控制；论文公开代码。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20776v1" target="_blank" rel="noopener">GeoAAC：按几何轨迹自适应动作分块</a></div>
+      <div class="it-sum">从去噪轨迹中估计几何需求，让动作 chunk 长度随任务阶段变化，在连续性、精度和闭环反馈之间动态取舍。[端到端VLA]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20822v1" target="_blank" rel="noopener">安全约束下的机器人编码智能体</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">让语言模型编写操控程序并在带障碍物的操作任务中接受安全约束评估，直接检验 Code-as-Policy 在真实操控中的碰撞风险。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.12541" target="_blank" rel="noopener">Agent as Policy：智能体直接控制机器人</a></div>
+      <div class="it-sum">通用智能体根据视觉输入编写可执行程序，并依据物理反馈修正动作，覆盖精细操作、柔性物体和双臂毛巾折叠等任务。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20649v1" target="_blank" rel="noopener">DexTouch-WM：从人类触摸学习触觉世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">用可规模化的人类触摸数据训练动作条件世界模型，同时预测未来 RGB 观测与双侧触觉动力学，面向接触丰富的灵巧操作。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20761v1" target="_blank" rel="noopener">Agile-WAM：面向接触操作的触觉世界动作模型</a></div>
+      <div class="it-sum">世界动作模型联合预测未来状态和机器人动作，并针对触觉控制的推理效率与适应性进行改进，服务于接触丰富的操作任务。[控制层·世界模型]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20756v1" target="_blank" rel="noopener">OPTED：用无渲染教师进行端到端驾驶在策略微调</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">针对行为克隆策略闭环部署中的误差累积，采用无渲染教师进行 on-policy 微调，缓解训练分布与真实执行分布的偏移。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20747v1" target="_blank" rel="noopener">MILER：面向非结构化驾驶的语义中层表示</a></div>
+      <div class="it-sum">在非结构化自动驾驶的 sim-to-real 强化学习中引入语义中层表示，试图提升策略面对真实环境分布变化时的迁移稳定性。[控制层·RL]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20680v1" target="_blank" rel="noopener">用合成数据扩展海洋环境感知</a></div>
+      <div class="it-sum">以 OceanSim 为基础，用模拟数据缓解水下真实标注昂贵且难扩展的问题，面向复杂海洋环境的感知训练与迁移。[感知层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20731v1" target="_blank" rel="noopener">水下视觉跟踪的目标专属深度与自适应控制</a></div>
+      <div class="it-sum">通过双目视觉、目标专属深度提取和 Kalman 滤波构建稳定三维相对状态，再结合自适应模型融合预测控制完成 AUV 跟踪。[控制层·BC]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20791v1" target="_blank" rel="noopener">StageGuard：学习长任务阶段转换</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">用 agentic distillation 学习何时终止当前技能并切换到下一子任务，减少对人工设计完成信号检查器的依赖。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20820v1" target="_blank" rel="noopener">Workspace Models：用显著性监督压缩机器人记忆</a></div>
+      <div class="it-sum">从历史事件与动作中提取任务相关信息，避免完整历史带来的伪相关与上下文开销，为长时程操作提供轻量记忆机制。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2609.20817v1" target="_blank" rel="noopener">FAMOS：从稀疏观测前馈建模可动关节</a></div>
+      <div class="it-sum">从稀疏单目观察中同时预测可动部件分割与关节参数，补足机器人理解可交互物体功能结构所需的感知能力。[感知层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.20800" target="_blank" rel="noopener">JEPA-Anything：跨世界学习通用预测模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">提出基于正交预测因子分解的领域无关框架，探索同一学习原则能否支持跨不同系统的世界建模；论文公开代码。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.08230" target="_blank" rel="noopener">ActionSplice：交互式世界模型中的在线动作编辑</a></div>
+      <div class="it-sum">通过反事实状态传输把修订动作插入分块自回归视频世界模型，无需重放已完成评估即可更新后续预测；论文公开代码。[控制层·世界模型]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.13146" target="_blank" rel="noopener">SNAP3D：从单图生成物理有效的装配部件</a></div>
+      <div class="it-sum">通过物理约束处理部件穿透、恢复接触图并优化参数化连接件，以仿真反馈提升单图装配结构的稳定性；论文公开代码。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">Proception 获 1100 万美元并推进机器人手数据采集</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">TechCrunch 报道称，机器人手公司 Proception 在解决 Tesla 商业秘密诉讼后宣布融资 1100 万美元，并以独特方式采集训练数据；具体进展需以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/humanoid-robot-safety" target="_blank" rel="noopener">Digit：面向真实工作的安全性讨论</a></div>
+      <div class="it-sum">IEEE Spectrum 讨论 Agility Robotics 的 Digit 是否可能成为更安全的 humanoid worker，焦点从表演能力转向真实工作场景的安全与经济可行性；以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/tactile-data-robots" target="_blank" rel="noopener">触觉数据正在推动机器人“学会感觉”</a></div>
+      <div class="it-sum">IEEE Spectrum 报道灵巧操作所需的触觉数据正在被实验室和创业公司加速采集，触觉可能成为日常操作规模化的关键能力；以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://robohub.org/first-11-vs-11-humanoid-soccer-game-played-at-robocup-2026/" target="_blank" rel="noopener">RoboCup 2026 首次进行 11 对 11 人形足球赛</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Robohub 报道 RoboCup 2026 出现两支各由 11 台人形机器人组成的完整阵容比赛，展示了群体人形机器人运动的产业与赛事关注度；以官方渠道核验。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（7 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>364.27 USD</td><td class="up">+1.48%</td><td></td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>393.33 USD</td><td class="up">+4.07%</td><td></td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>41.89 USD</td><td class="up">+0.7%</td><td></td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>4.41 USD</td><td class="down">-0.45%</td><td></td></tr>
+        <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>13.39 USD</td><td class="down">-8.66%</td><td></td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>222.27 USD</td><td class="up">+5.36%</td><td></td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>105.0 HKD</td><td class="down">-0.94%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$11M</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">Proception 宣布 1100 万美元融资并聚焦机器人手训练数据</a></div><div class="it-sum">TechCrunch 报道该机器人手公司宣布 1100 万美元融资，并采用新的训练数据采集路径；以官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://spectrum.ieee.org/humanoid-robot-safety" target="_blank" rel="noopener">Digit 面向真实工作场景的安全性与商业化讨论</a></div><div class="it-sum">IEEE Spectrum 将讨论重点放在 humanoid 的工作安全和规模化经济性，而非单纯运动展示；以官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://robohub.org/first-11-vs-11-humanoid-soccer-game-played-at-robocup-2026/" target="_blank" rel="noopener">RoboCup 2026 完成首次 11 对 11 人形足球赛</a></div><div class="it-sum">Robohub 报道完整人形机器人阵容参加比赛，体现群体运动与具身系统集成的公开进展；以官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>

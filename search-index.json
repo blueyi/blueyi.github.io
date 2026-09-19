@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-19T09:00:21.841831+08:00",
+ "generated_at": "2026-09-19T20:05:38.936784+08:00",
  "entries": [
   {
    "type": "daily",
@@ -14223,6 +14223,281 @@
    "summary": "无人车规模超 3 万辆、覆盖 300 余城、累计运营 2.5 亿公里，进入「数据驱动迭代、商业反哺研发」循环；公司融资与运营数据以官方渠道核验。",
    "url": "https://www.leiphone.com/category/transportation/JXhS5Joxp68qFEmE.html",
    "page": "/feeds/embodied-ai/weeks/2026-W37.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "LIT：用潜在接口打破视觉—动作捷径",
+   "summary": "先训练姿态条件动作先验，再以姿态监督约束视觉输入的潜在接口，改善机器人基础模型的空间目标泛化；论文同时提供公开代码。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2609.12641",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "ActionPiece：重新思考 VLA 的动作分词",
+   "summary": "针对自回归 VLA 的动作 tokenizer，研究不只用逐点重建误差衡量动作调整是否忠实，为可执行动作表示提供新的评估与设计方向。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2609.18487",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "Dynin-Robotics：全模态统一扩散 VLA",
+   "summary": "用共享轨迹模型统一目标预测、动力学预测和动作生成，并结合联合去噪与测试时扩展提升语言条件机器人控制；论文公开代码。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2609.13053",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "GeoAAC：按几何轨迹自适应动作分块",
+   "summary": "从去噪轨迹中估计几何需求，让动作 chunk 长度随任务阶段变化，在连续性、精度和闭环反馈之间动态取舍。[端到端VLA]",
+   "url": "http://arxiv.org/abs/2609.20776v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "安全约束下的机器人编码智能体",
+   "summary": "让语言模型编写操控程序并在带障碍物的操作任务中接受安全约束评估，直接检验 Code-as-Policy 在真实操控中的碰撞风险。[规划层]",
+   "url": "http://arxiv.org/abs/2609.20822v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "Agent as Policy：智能体直接控制机器人",
+   "summary": "通用智能体根据视觉输入编写可执行程序，并依据物理反馈修正动作，覆盖精细操作、柔性物体和双臂毛巾折叠等任务。[规划层]",
+   "url": "https://arxiv.org/abs/2609.12541",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "DexTouch-WM：从人类触摸学习触觉世界模型",
+   "summary": "用可规模化的人类触摸数据训练动作条件世界模型，同时预测未来 RGB 观测与双侧触觉动力学，面向接触丰富的灵巧操作。[控制层·世界模型]",
+   "url": "http://arxiv.org/abs/2609.20649v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "Agile-WAM：面向接触操作的触觉世界动作模型",
+   "summary": "世界动作模型联合预测未来状态和机器人动作，并针对触觉控制的推理效率与适应性进行改进，服务于接触丰富的操作任务。[控制层·世界模型]",
+   "url": "http://arxiv.org/abs/2609.20761v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "OPTED：用无渲染教师进行端到端驾驶在策略微调",
+   "summary": "针对行为克隆策略闭环部署中的误差累积，采用无渲染教师进行 on-policy 微调，缓解训练分布与真实执行分布的偏移。[控制层·BC]",
+   "url": "http://arxiv.org/abs/2609.20756v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "MILER：面向非结构化驾驶的语义中层表示",
+   "summary": "在非结构化自动驾驶的 sim-to-real 强化学习中引入语义中层表示，试图提升策略面对真实环境分布变化时的迁移稳定性。[控制层·RL]",
+   "url": "http://arxiv.org/abs/2609.20747v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "用合成数据扩展海洋环境感知",
+   "summary": "以 OceanSim 为基础，用模拟数据缓解水下真实标注昂贵且难扩展的问题，面向复杂海洋环境的感知训练与迁移。[感知层]",
+   "url": "http://arxiv.org/abs/2609.20680v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "水下视觉跟踪的目标专属深度与自适应控制",
+   "summary": "通过双目视觉、目标专属深度提取和 Kalman 滤波构建稳定三维相对状态，再结合自适应模型融合预测控制完成 AUV 跟踪。[控制层·BC]",
+   "url": "http://arxiv.org/abs/2609.20731v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "StageGuard：学习长任务阶段转换",
+   "summary": "用 agentic distillation 学习何时终止当前技能并切换到下一子任务，减少对人工设计完成信号检查器的依赖。[规划层]",
+   "url": "http://arxiv.org/abs/2609.20791v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "Workspace Models：用显著性监督压缩机器人记忆",
+   "summary": "从历史事件与动作中提取任务相关信息，避免完整历史带来的伪相关与上下文开销，为长时程操作提供轻量记忆机制。[控制层·世界模型]",
+   "url": "http://arxiv.org/abs/2609.20820v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "FAMOS：从稀疏观测前馈建模可动关节",
+   "summary": "从稀疏单目观察中同时预测可动部件分割与关节参数，补足机器人理解可交互物体功能结构所需的感知能力。[感知层]",
+   "url": "http://arxiv.org/abs/2609.20817v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "JEPA-Anything：跨世界学习通用预测模型",
+   "summary": "提出基于正交预测因子分解的领域无关框架，探索同一学习原则能否支持跨不同系统的世界建模；论文公开代码。[控制层·世界模型]",
+   "url": "https://arxiv.org/abs/2609.20800",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "ActionSplice：交互式世界模型中的在线动作编辑",
+   "summary": "通过反事实状态传输把修订动作插入分块自回归视频世界模型，无需重放已完成评估即可更新后续预测；论文公开代码。[控制层·世界模型]",
+   "url": "https://arxiv.org/abs/2609.08230",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "6️⃣ 制造 / 产线",
+   "title": "SNAP3D：从单图生成物理有效的装配部件",
+   "summary": "通过物理约束处理部件穿透、恢复接触图并优化参数化连接件，以仿真反馈提升单图装配结构的稳定性；论文公开代码。[感知层]",
+   "url": "https://arxiv.org/abs/2609.13146",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Proception 获 1100 万美元并推进机器人手数据采集",
+   "summary": "TechCrunch 报道称，机器人手公司 Proception 在解决 Tesla 商业秘密诉讼后宣布融资 1100 万美元，并以独特方式采集训练数据；具体进展需以官方渠道核验。",
+   "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Digit：面向真实工作的安全性讨论",
+   "summary": "IEEE Spectrum 讨论 Agility Robotics 的 Digit 是否可能成为更安全的 humanoid worker，焦点从表演能力转向真实工作场景的安全与经济可行性；以官方渠道核验。",
+   "url": "https://spectrum.ieee.org/humanoid-robot-safety",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "触觉数据正在推动机器人“学会感觉”",
+   "summary": "IEEE Spectrum 报道灵巧操作所需的触觉数据正在被实验室和创业公司加速采集，触觉可能成为日常操作规模化的关键能力；以官方渠道核验。",
+   "url": "https://spectrum.ieee.org/tactile-data-robots",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "RoboCup 2026 首次进行 11 对 11 人形足球赛",
+   "summary": "Robohub 报道 RoboCup 2026 出现两支各由 11 台人形机器人组成的完整阵容比赛，展示了群体人形机器人运动的产业与赛事关注度；以官方渠道核验。",
+   "url": "https://robohub.org/first-11-vs-11-humanoid-soccer-game-played-at-robocup-2026/",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "📈 产业动态 · 融资",
+   "title": "Proception 宣布 1100 万美元融资并聚焦机器人手训练数据",
+   "summary": "TechCrunch 报道该机器人手公司宣布 1100 万美元融资，并采用新的训练数据采集路径；以官方渠道核验。",
+   "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "📈 产业动态 · 融资",
+   "title": "Digit 面向真实工作场景的安全性与商业化讨论",
+   "summary": "IEEE Spectrum 将讨论重点放在 humanoid 的工作安全和规模化经济性，而非单纯运动展示；以官方渠道核验。",
+   "url": "https://spectrum.ieee.org/humanoid-robot-safety",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W38",
+   "category": "📈 产业动态 · 融资",
+   "title": "RoboCup 2026 完成首次 11 对 11 人形足球赛",
+   "summary": "Robohub 报道完整人形机器人阵容参加比赛，体现群体运动与具身系统集成的公开进展；以官方渠道核验。",
+   "url": "https://robohub.org/first-11-vs-11-humanoid-soccer-game-played-at-robocup-2026/",
+   "page": "/feeds/embodied-ai/weeks/2026-W38.html"
   }
  ]
 }
