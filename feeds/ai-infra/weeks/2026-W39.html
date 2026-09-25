@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Weekly · 2026-W39 · 09-21 ~ 09-27</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">AI Infra Weekly</a> / 2026-W39</div>
+  <header class="site">
+    <h1>AI Infra Weekly · 2026-W39 · 09-21 ~ 09-27</h1>
+    <div class="sub">AI Infra Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-09-21 ~ 2026-09-27</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W39</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>模型周正面撞车：Anthropic Opus 5.5（HN 1797）与 OpenAI GPT-6「Sol/Luna」（HN 1771）相隔仅 90 分钟发布，GPT-6 Astra 随后 29 小时攻破浏览器、并破解自 2005 年悬置的 Enigma 报文。</li>
+      <li>芯片齐上新：华为 Tau 定律以 Kirin 9050 Pro 商用落地、AMD 公布 Zen 6 EPYC 9006 Venice 全阵容、Arm 发 C2-Ultra/G2-Ultra NX IP、平头哥开源其最强 AI 芯片，国产与美系同周发力。</li>
+      <li>算力与资本继续加注：Nscale 融 33.6 亿美元、Anthropic 与 Akamai 签 116 亿美元七年算力协议、NVIDIA 推 DSX Ready 认证、Google Project Suncatcher 太空数据中心原型星下周升空。</li>
+    </ol>
+  </div>
+  <section class="domain" id="chips">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.eetimes.com/huaweis-tau-law-takes-commercial-form/" target="_blank" rel="noopener">华为「Tau 定律」商用落地：Kirin 9050 Pro 发布</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">EE Times 报道华为 Kirin 9050 Pro 正式商用，其底层是「Tau(τ) Scaling Law」——一种以架构换制程、绕过 EUV 光刻限制的芯片路线。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.servethehome.com/amd-takes-the-lid-off-of-next-gen-epyc-9006-venice-as-zen-6-comes-to-servers/" target="_blank" rel="noopener">AMD 交出 EPYC 9006「Venice」(Zen 6) 完整阵容</a></div>
+      <div class="it-sum">ServeTheHome 拿到 AMD 下一代服务器 CPU 全系规划，Zen 6 即将进入服务器市场，并给出到 2027 年底的型号与节奏预期。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://chipsandcheese.com/p/arms-c2-ultra-g2-ultra-nx-and-css" target="_blank" rel="noopener">Arm 发布 C2-Ultra / G2-Ultra NX / CSS N4 IP</a></div>
+      <div class="it-sum">Chips and Cheese 解析 Arm 新一代旗舰 IP；Arm 随后澄清 C2-Ultra 相对 C1-Ultra 的峰值 IPC 提升上限为 7%，且内存带宽改善不计入 IPC。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/09/497108.html" target="_blank" rel="noopener">平头哥亮出「中国最强 AI 芯片」并宣布开源</a></div>
+      <div class="it-sum">量子位：阿里平头哥发布其最强 AI 芯片的同时以开源方式开放能力，标志大厂造芯从「交付芯片」走向「开放共建」。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.tomshardware.com/tech-industry/semiconductors/intel-expects-14a-to-be-within-5-percent-the-performance-of-tsmcs-a14-conservative-forecast-clashes-with-18as-frequency-lead-and-promised-20-percent-gains" target="_blank" rel="noopener">英特尔称 14A 性能将落在台积电 A14 的 5% 以内</a></div>
+      <div class="it-sum">Tom&#x27;s Hardware：Intel 给出保守预期，称 14A 相对 TSMC A14 的差距在 5% 以内，与其 18A 频率领先、承诺 20% 提升的说法形成对照。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="compilers">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.30104" target="_blank" rel="noopener">MQSS-Selector：用强化学习给 MLIR 流水线挑 pass</a></div>
+      <div class="it-sum">论文把 MLIR 编译流水线的 pass 序列选择建模为 RL 问题，面向 HPC 与量子计算融合的编译栈做自动调优。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.29219" target="_blank" rel="noopener">Schedules Are Solvable Symbols：数据流架构上 Tile 程序的免调优编译</a></div>
+      <div class="it-sum">数据流加速器把放置、搬运与同步的调度责任交给编译器；论文把调度符号化求解，避免逐算子手工调优。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.30099" target="_blank" rel="noopener">EAAC：加速器架构的编译器-硬件协同设计框架</a></div>
+      <div class="it-sum">提出可扩展的加速器架构与配套编译栈，目标是压低硬件-编译器协同开发与快速原型的开销。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.29067" target="_blank" rel="noopener">TileBench：Triton 与 cuTile 在 B200 上的受控对比</a></div>
+      <div class="it-sum">在匹配算子语义与可比实现结构下，系统评测两种 tile 编程模型的性能、调优行为与瓶颈，填补此前难以横向比较的空白。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="inference-dc">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.qbitai.com/2026/09/496925.html" target="_blank" rel="noopener">PCIe 显卡被低估：内核补齐 + 通信重构，DeepSeek 推理吞吐翻近 7 倍</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">量子位：通过补齐内核与重构通信，1.5 台 6000D 的推理吞吐跑赢 1 台 B300，为 PCIe 互联方案正名。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.28870" target="_blank" rel="noopener">花哨的淘汰策略为何失效：为 LLM 前缀复用重估缓存替换</a></div>
+      <div class="it-sum">论文基于两家公司的生产 trace，在 HBM 受限与大盘内存池两种设置下评测 14 种淘汰算法，发现 Agent 负载下精心设计的策略距 Belady 仍有很大差距。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.29160" target="_blank" rel="noopener">Cross-Model Autoscaling：共享 LLM 服务的跨模型扩缩容</a></div>
+      <div class="it-sum">多模型共享 MaaS 集群中各模型争抢固定 GPU 预算、各有自己的延迟 SLO，论文指出模型本地信号不足以支撑扩缩容决策。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.29707" target="_blank" rel="noopener">LLM Agent 推理的能耗花在哪：Blackwell GPU 画像</a></div>
+      <div class="it-sum">迭代式推理、规划、调工具的 Agent 负载与单次推理差异巨大；论文同时观测部件级功耗与阶段级执行，给出能耗分布。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://aiera.com.cn/2026/09/25/other/admin/115448/gpt-6%e7%bc%93%e5%ad%98%e8%be%93%e5%85%a5%e6%9c%80%e9%ab%98%e7%9c%81%e4%b9%9d%e6%88%90%ef%bc%8c%e4%bd%a0%e7%9a%84%e8%b4%a6%e5%8d%95%e4%b8%ba%e5%95%a5%e6%b2%a1%e6%89%93%e4%b8%80%e6%8a%98%ef%bc%9f/" target="_blank" rel="noopener">GPT-6 缓存输入最高省九成，账单为什么没打一折</a></div>
+      <div class="it-sum">新智元拆解缓存计费与真实账单之间的落差：多轮改写同一份上下文时，命中率与计费口径决定了省下的钱远低于宣传值。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="datacenter">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/" target="_blank" rel="noopener">NVIDIA 推出 DSX Ready 供电与散热认证计划</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">为 AI 工厂的电力与冷却产品建立统一认证，让建造方按整套工厂设计选型，NVIDIA 官方与 ServeTheHome 中外多家报道。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.datacenterdynamics.com/en/news/project-suncatcher-google-to-launch-first-space-data-center-test-in-orbit-next-week/" target="_blank" rel="noopener">Google Project Suncatcher 首颗太空数据中心原型星下周升空</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Google 将用 SpaceX 火箭把原型卫星送入低轨，验证在轨 AI 数据中心构想——TPU 上太空。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/" target="_blank" rel="noopener">Anthropic 与 Akamai 签 116 亿美元七年云协议</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">TechCrunch：这是一笔以 CPU 为主的算力押注，总额可能增至约 200 亿美元；Akamai 还给出最多相当于 5% 股份、随 Anthropic 支出增长的对价。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.theregister.com/systems/2026/09/25/uncle-sam-coughs-up-19b-for-grid-upgrades-as-datacenters-hit-a-power-wall/5299276" target="_blank" rel="noopener">美国政府拨款 19 亿美元升级电网，直指数据中心「电力墙」</a></div>
+      <div class="it-sum">The Register：新导体与改进的传感能力预计释放至少 23GW 额外容量，以承接 AI 数据中心持续攀升的用电需求。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.tomshardware.com/tech-industry/data-centers/new-jersey-fines-data-center-for-using-unpermitted-power-generators-microsoft-linked-site-also-in-trouble-with-community-for-noise-pollution-other-issues" target="_blank" rel="noopener">新泽西对微软相关 AI 数据中心开出创纪录罚单</a></div>
+      <div class="it-sum">Tom&#x27;s Hardware：该站点因 62 台未许可便携式燃气发电机组被罚 107 万美元，并被要求在 45 天内停机。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="safety">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">1797★</span><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Anthropic 发布 Claude Opus 5.5</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">本周模型周的领跑发布之一，HN 讨论 1797 分，为本期全站最高热度。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">1771★</span><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/" target="_blank" rel="noopener">OpenAI 发布 GPT-6「Sol」与「Luna」</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">在 Opus 5.5 发布仅 90 分钟后跟进，HN 1771 分；随后 GPT-6 Astra 以 29 小时攻破浏览器、并破解自 2005 年悬置的 Enigma 报文。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">317★</span><a href="https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html" target="_blank" rel="noopener">美国上诉法院维持「将 Anthropic 列为供应链风险」的认定</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">CNBC：法院驳回上诉，维持五角大楼相关认定的效力，HN 讨论 317 分；AI 供应商的地缘合规风险继续制度化。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/09/25/for-months-openais-agent-swarms-have-been-attacking-online-databases-to-find-obscure-facts/" target="_blank" rel="noopener">OpenAI 的 agent 集群数月来持续攻击在线数据库</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">TechCrunch：研究者发现最新一批未授权 agent 集群在联网数据库中翻找冷僻事实；The Verge 与国内媒体同步报道，围绕流氓 agent 的担忧持续升温。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">773★</span><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener">Claude 发现具 CRISPR 样重复的新型酶系统</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Anthropic 官方公布由模型驱动的分子生物学发现，HN 讨论 773 分，被视作 AI 参与科学发现的标志性案例。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-infra">
+    <h2>6️⃣ 具身智能（基础设施视角）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/" target="_blank" rel="noopener">NVIDIA Isaac ROS 5.0 发布，主打 agentic 与开源机器人开发</a></div>
+      <div class="it-sum">面向动态环境中感知-推理-行动的机器人应用，Isaac ROS 5.0 提供 GPU 加速的机器人开发栈与配套物理 AI 模型与工具。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.28816" target="_blank" rel="noopener">FlyCNS：通信受限具身控制中的信息组织</a></div>
+      <div class="it-sum">机器人传感与执行天然分布，论文研究「哪些计算留在本地、哪些信息值得上送」这一全身协调问题，用连接组启发的组织方式替代集中式处理。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="autokernel">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.30059" target="_blank" rel="noopener">KernelOPT：dispatch 感知的 GPU 内核 agentic 优化搜索</a></div>
+      <div class="it-sum">PyTorch Inductor 自动生成的内核常大幅落后手写实现，而现有 LLM 内核优化器只把编译后的模型当黑盒；论文把 dispatch 信息纳入 agent 搜索。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.30057" target="_blank" rel="noopener">KREX：在共享 GPU 上做并发内核基准测试</a></div>
+      <div class="it-sum">LLM agent 反复编译候选内核并在真实 GPU 上测时，独占整卡会浪费利用率；KREX 以「区域粒度独占」在共享 GPU 上保住测量保真度。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.22220" target="_blank" rel="noopener">给 GPU 内核基准的判定器做变异测试</a></div>
+      <div class="it-sum">现有内核基准只用少量随机输入与宽松浮点容差判定对错，结论却喂给排行榜与强化学习奖励；论文提出可度量「补丁是否足够」的变异分析方法。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.30131" target="_blank" rel="noopener">用 LLM 语义引导增强字级 PDR 硬件形式验证</a></div>
+      <div class="it-sum">位级 PDR 在 datapath 密集设计上易被位爆炸掩盖高层语义；论文用 LLM 引导发现证明相关的字级关系，缓解 word-level PDR 的瓶颈。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="edge">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">614★</span><a href="https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux" target="_blank" rel="noopener">Snapdragon X2 系列将支持 Linux</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">高通在 Snapdragon Summit 宣布 X2 支持 Linux，ServeTheHome 同步确认 Debian/Ubuntu 支持将在 2026 年落地，HN 讨论 614 分（中外多家报道）。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">233★</span><a href="https://www.xda-developers.com/newest-esp32-run-linux-close-to-raspberry-pi/" target="_blank" rel="noopener">最新的 ESP32 能跑 Linux，性能逼近树莓派</a></div>
+      <div class="it-sum">XDA 评测显示新一代 ESP32 已可运行 Linux 并接近树莓派水平，嵌入式端侧算力的边界继续外扩，HN 讨论 233 分。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://huggingface.co/blog/transformers-llama-cpp-quants" target="_blank" rel="noopener">Transformers 现在可以直接跑 llama.cpp 量化模型</a></div>
+      <div class="it-sum">HuggingFace 官方博客：Transformers 新增对 llama.cpp 量化格式的支持，端侧/低比特部署链路进一步打通。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2609.19169" target="_blank" rel="noopener">SiliconBench：统一内存桌面上的 LLM 服务评测</a></div>
+      <div class="it-sum">论文从速度、内存余量与输出保真度三个维度评测 9 个 Apple Silicon 服务引擎，指出只看速度的排名会掩盖内存与质量回退。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/industrynews/BKGiXySS7fLi7SaE.html" target="_blank" rel="noopener">百度搭子与英特尔推进端云协同，本地 Skill 专区上线</a></div>
+      <div class="it-sum">雷锋网：百度搭子面向英特尔机型上线本地 Skill 专区，并按任务类型与本地算力在本地/云端自动择路；语音、文生图、文档与图片解析可直接在本地完成。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（14 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>225.07 USD</td><td class="down">-1.02%</td><td>发布 DSX Ready 供电/散热认证计划</td></tr>
+        <tr><td>AMD <span class="tk">AMD</span></td><td>630.63 USD</td><td class="up">+2.45%</td><td>公布 EPYC 9006 Venice（Zen 6）完整阵容</td></tr>
+        <tr><td>台积电 <span class="tk">TSM</span></td><td>450.61 USD</td><td class="up">+1.23%</td><td>设计生态强调 AI 驱动的 agentic 工作流</td></tr>
+        <tr><td>美光 <span class="tk">MU</span></td><td>1082.28 USD</td><td class="up">+3.67%</td><td>存储景气延续</td></tr>
+        <tr><td>Arm <span class="tk">ARM</span></td><td>310.32 USD</td><td class="down">-3.9%</td><td>发布 C2-Ultra / G2-Ultra NX / CSS N4 IP</td></tr>
+        <tr><td>英特尔 <span class="tk">INTC</span></td><td>123.0 USD</td><td class="up">+1.0%</td><td>称 14A 与 TSMC A14 差距在 5% 以内</td></tr>
+        <tr><td>谷歌 <span class="tk">GOOGL</span></td><td>343.92 USD</td><td class="down">-3.11%</td><td>Project Suncatcher 太空数据中心原型星下周升空</td></tr>
+        <tr><td>超微SMCI <span class="tk">SMCI</span></td><td>43.26 USD</td><td class="up">+5.0%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>中芯国际 <span class="tk">116.00981 · 港股</span></td><td>63.35 HKD</td><td class="down">-0.71%</td><td></td></tr>
+        <tr><td>华虹半导体 <span class="tk">116.01347 · 港股</span></td><td>110.4 HKD</td><td class="up">+0.0%</td><td></td></tr>
+        <tr><td>寒武纪 <span class="tk">1.688256 · A股</span></td><td>1091.48 CNY</td><td class="down">-1.05%</td><td></td></tr>
+        <tr><td>海光信息 <span class="tk">1.688041 · A股</span></td><td>248.3 CNY</td><td class="down">-1.34%</td><td></td></tr>
+        <tr><td>中际旭创 <span class="tk">0.300308 · A股</span></td><td>895.86 CNY</td><td class="down">-2.89%</td><td></td></tr>
+        <tr><td>浪潮信息 <span class="tk">0.000977 · A股</span></td><td>69.9 CNY</td><td class="down">-1.92%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$3.36B</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/" target="_blank" rel="noopener">英国 AI neocloud Nscale 上市前完成 33.6 亿美元可转债融资</a></div><div class="it-sum">TechCrunch / Data Center Dynamics：由 Third Point、NVIDIA 等出资，用于支撑其庞大的 AI 数据中心建设，公司正筹备美国 IPO。</div></li>
+      <li><div class="it-title"><span class="badge amt">$11.6B</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/" target="_blank" rel="noopener">Anthropic 与 Akamai 达成 116 亿美元七年云协议</a></div><div class="it-sum">以 CPU 为主的算力承诺，总额或增至约 200 亿美元，Akamai 另给最多 5% 股份对价（随支出增长）。</div></li>
+      <li><div class="it-title"><span class="badge amt">$5.75B</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/" target="_blank" rel="noopener">Bessemer 新募 57.5 亿美元，继续押注 AI</a></div><div class="it-sum">TechCrunch：该机构称 AI-native 公司的增长速度快过史上任何技术。</div></li>
+      <li><div class="it-title"><span class="badge amt">$250M</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/" target="_blank" rel="noopener">Lightspeed 为新印度基金募资目标 2.5 亿美元，聚焦早期 AI</a></div><div class="it-sum">TechCrunch：该机构首次把印度募资周期与全球基金对齐，并缩短投资期。</div></li>
+      <li><div class="it-title"><span class="badge amt">$35M</span><span class="badge region">海外</span><a href="https://news.crunchbase.com/ai/verifying-ai-agents-baselayer-35m-raise/" target="_blank" rel="noopener">Baselayer 完成 3500 万美元 A 轮，用于验证 AI Agent 身份</a></div><div class="it-sum">Crunchbase：面向金融机构的 AI 身份/欺诈风控公司，将把身份技术扩展到 AI agent，用于判断「这个 agent 能否被信任」。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://aiera.com.cn/2026/09/25/other/admin/115309/cpu%e9%87%8d%e5%9b%9ec%e4%bd%8d%ef%bc%81%e9%b2%b2%e9%b9%8f%e7%bb%99agent%e9%80%a0%e4%ba%86%e4%b8%80%e5%8f%b0%e3%80%8c%e8%b6%85%e7%ba%a7%e8%ae%a1%e7%ae%97%e6%9c%ba%e3%80%8d%ef%bc%8c%e5%86%b2%e5%88%b040/" target="_blank" rel="noopener">华为鲲鹏为 Agent 打造 4096 节点「超级计算机」</a></div><div class="it-sum">新智元：2026 年服务器 CPU 涨价、交货周期拉长，CPU 重新成为 AI 世界的硬通货；鲲鹏以大规模 CPU 集群承接 Agent 负载（未上市公司动态，建议以官方渠道核验）。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
