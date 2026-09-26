@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-26T06:05:10.193983+08:00",
+ "generated_at": "2026-09-26T20:07:36.193880+08:00",
  "entries": [
   {
    "type": "daily",
@@ -16335,6 +16335,204 @@
    "summary": "Robohub 报道完整人形机器人阵容参加比赛，体现群体运动与具身系统集成的公开进展；以官方渠道核验。",
    "url": "https://robohub.org/first-11-vs-11-humanoid-soccer-game-played-at-robocup-2026/",
    "page": "/feeds/embodied-ai/weeks/2026-W38.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "自适应 VLA 面向真实部署",
+   "summary": "论文针对 VLA 在硬件磨损、标定误差等测试时分布变化下的脆弱性，研究无需持续现场重标定的自适应部署方法。[端到端VLA]",
+   "url": "http://arxiv.org/abs/2609.30092v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "MeanFlow 加速视觉运动策略学习",
+   "summary": "论文将视觉运动策略的动作生成建模在动作流形上，目标是降低扩散与 Flow Matching 多步数值积分带来的推理开销。[控制层·扩散]",
+   "url": "http://arxiv.org/abs/2609.30127v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "全手灵巧抓取的实时力调节",
+   "summary": "论文面向整只手接触随物体运动和外部扰动动态变化的场景，提出实时力调节框架以维持抓取稳定性。[控制层·BC]",
+   "url": "http://arxiv.org/abs/2609.30082v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "从单次演示自动生成并验证机器人程序",
+   "summary": "RAPID 以一次视觉人类演示为输入，自动生成、验证并迭代优化机器人程序，把编码智能体引入接触丰富的机器人任务。[规划层]",
+   "url": "http://arxiv.org/abs/2609.30249v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "面向运动学约束系统的向量化运动规划",
+   "summary": "ReVAMP 通过重新参数化处理可行空间为测度零集合的约束运动规划问题，并以向量化方式加速规划。[控制层·BC]",
+   "url": "http://arxiv.org/abs/2609.30213v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "AD-WM 用动作判别世界模型支持反事实 MPC",
+   "summary": "AD-WM 不只拟合事实转移，还强调从同一状态区分候选动作的反事实后果，以改善潜空间世界模型中的模型预测控制。[控制层·世界模型]",
+   "url": "http://arxiv.org/abs/2609.30264v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "面向水下 ROV 打捞的跨视角世界模型",
+   "summary": "Underwater C3-JEPA 使用物体中心的多视角预测，在没有接触传感器时，建模接触交互与水动力滞后下任务对象状态的潜空间变化。[控制层·世界模型]",
+   "url": "http://arxiv.org/abs/2609.30214v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "Uranus：面向具身智能的新一代仿真基础设施",
+   "summary": "Uranus 将数据驱动的机器人仿真建立在联合轨迹条件自回归扩散模型上，用于机器人数据生成、策略训练与评测。[控制层·世界模型]",
+   "url": "https://arxiv.org/abs/2609.24815",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "Rolling-WAM 将世界动作模型的想象分摊到连续重规划",
+   "summary": "Rolling-WAM 将联合视频-动作去噪分布到连续重规划周期，减少每轮完整去噪造成的延迟，提升闭环动作更新速度。[控制层·世界模型]",
+   "url": "http://arxiv.org/abs/2609.30247v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "TrackEverything：长时程稠密 3D 点跟踪",
+   "summary": "TrackEverything 用持久化世界坐标中的 3D 场景轨迹表示视频，试图同时覆盖长时程跟踪与稠密点跟踪的需求。[感知层]",
+   "url": "http://arxiv.org/abs/2609.30222v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "通过中间目标改进冻结世界模型规划",
+   "summary": "论文指出，直接以目标图像距离评价短视界结果，可能阻碍那些必须先远离目标才能到达目标的动作；引入中间目标可改善冻结世界模型的动作合成。[规划层]",
+   "url": "http://arxiv.org/abs/2609.30036v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "训练免费行为克隆",
+   "summary": "Behavior Predictive Control 结合动作感知检索与预测控制，在不进行端到端策略训练的情况下合成行为策略，保留演示可追溯性。[控制层·BC]",
+   "url": "http://arxiv.org/abs/2609.30134v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "6️⃣ 制造 / 产线",
+   "title": "智元机器人宣布向长隆交付 2 万台",
+   "summary": "雷锋网报道，智元称其机器人在横琴长隆飞船乐园部署超过 300 台，并将其描述为从发布会展示走向真实客流运营的部署态案例；公司产品与数量需以官方渠道核验。[规划层]",
+   "url": "https://www.leiphone.com/category/robot/23F3DiDtv7Puosqy.html",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "灵巧手公司 Proception 和解诉讼并获 1100 万美元融资",
+   "summary": "TechCrunch 报道，Proception 处理与 Tesla 的商业秘密诉讼，同时宣布获得 1100 万美元融资，方向聚焦机器人手部训练数据。[控制层·BC]",
+   "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Digit 的安全性成为人形机器人商业化焦点",
+   "summary": "IEEE Spectrum 讨论 Digit 作为人形机器人工作者的安全性，指出从演示动作走向经济可行的规模化工作仍需解决安全与部署问题；公司动态需以官方渠道核验。[控制层·BC]",
+   "url": "https://spectrum.ieee.org/humanoid-robot-safety",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "📈 产业动态 · 融资",
+   "title": "灵巧手公司 Proception 和解 Tesla 商业秘密诉讼并获融资",
+   "summary": "TechCrunch 报道 Proception 宣布 1100 万美元融资，方向是机器人手部训练数据。",
+   "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "📈 产业动态 · 融资",
+   "title": "智元机器人向长隆部署超过 300 台机器人",
+   "summary": "雷锋网报道该部署进入真实客流运营场景，部署规模与公司产品动态需以官方渠道核验。",
+   "url": "https://www.leiphone.com/category/robot/23F3DiDtv7Puosqy.html",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W39",
+   "category": "📈 产业动态 · 融资",
+   "title": "Digit 人形机器人安全性与规模化工作讨论",
+   "summary": "IEEE Spectrum 聚焦人形机器人从演示走向经济可行工作时的安全要求，公司产品动态需以官方渠道核验。",
+   "url": "https://spectrum.ieee.org/humanoid-robot-safety",
+   "page": "/feeds/embodied-ai/weeks/2026-W39.html"
   }
  ]
 }
