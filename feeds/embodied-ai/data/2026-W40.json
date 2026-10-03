@@ -1,0 +1,2072 @@
+{
+  "channel": "embodied-ai",
+  "week": "2026-W40",
+  "raw": {
+    "channel": "embodied-ai",
+    "week": "2026-W40",
+    "generated_at": "2026-10-03T20:00:28.073470+08:00",
+    "window": {
+      "start": "2026-09-26",
+      "end": "2026-10-03"
+    },
+    "hn": [
+      {
+        "source": "hn",
+        "score": 82,
+        "title": "F.02 Decommission",
+        "url": "https://www.figure.ai/news/f-02-decommission",
+        "hn_url": "https://news.ycombinator.com/item?id=49932079",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 124,
+        "title": "Ask HN: Who wants to be hired? (October 2026)",
+        "url": "",
+        "hn_url": "https://news.ycombinator.com/item?id=49922568",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 261,
+        "title": "Ask HN: Who is hiring? (October 2026)",
+        "url": "",
+        "hn_url": "https://news.ycombinator.com/item?id=49922569",
+        "domains": [
+          "vla"
+        ]
+      }
+    ],
+    "arxiv": [
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
+        "url": "http://arxiv.org/abs/2610.02204v1",
+        "abstract": "Building reliable robot capabilities across diverse tasks requires substantial human effort to develop and maintain skills, design rewards, and integrate perception with control. We present Reconstruct, Practice, Go Real (RPG), a framework for autonomous improvement of robot execution systems without updating model weights. RPG identifies manipulation capabilities in an offline dataset and constru",
+        "domains": [
+          "dexterous",
+          "sim2real",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "FERPO: Forward Entropy-Regularized Policy Optimization",
+        "url": "http://arxiv.org/abs/2610.02198v1",
+        "abstract": "Several state-of-the-art methods for online reinforcement learning in continuous control improve policies using action gradients of a learned critic. However, critics are typically trained to predict returns, and accurate value predictions do not necessarily yield accurate action derivatives, potentially leading to unreliable policy updates. We propose Forward Entropy-Regularized Policy Optimizati",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation",
+        "url": "http://arxiv.org/abs/2610.02196v1",
+        "abstract": "We study test-time evolution for humanoid loco-manipulation: solving tasks that a controller was never trained for by repurposing its existing skills, improving from its own attempts, and retaining what it learns, without retraining. Our key insight is that a broad controller already holds much of the competence a new task needs, and that this competence becomes accessible through an interface bet",
+        "domains": [
+          "dexterous",
+          "sim2real",
+          "market"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Watch, Infer, Coordinate: Inferring Robot Partner Constraints for Zero-Shot Coordination",
+        "url": "http://arxiv.org/abs/2610.02170v1",
+        "abstract": "Robots operating in the physical world will increasingly need to coordinate with other robots, particularly in manipulation tasks where an object may be too large or heavy for a single robot to carry alone. Physical limitations caused by hardware degradation or actuator faults can restrict the actions a robot can reliably execute, yet these limitations may be unknown to its partner. We study wheth",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication",
+        "url": "http://arxiv.org/abs/2610.02161v1",
+        "abstract": "Vision-language models (VLMs) and vision-language-action models (VLAs) have recently driven rapid progress in general-purpose robots, yet most progress has focused on single-robot settings. Extending these capabilities to multi-robot systems remains challenging because robots must coordinate long-horizon behaviors while maintaining reliable, fine-grained execution. We introduce DuoMind, a distribu",
+        "domains": [
+          "vla",
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "SkeleWAM: Skeleton World-Action Modeling for Efficient Robotic Manipulation",
+        "url": "http://arxiv.org/abs/2610.02120v1",
+        "abstract": "World action models (WAMs) combine robot action generation with future state prediction. Existing WAMs typically predict videos or learned visual latents, which represent interaction geometry only implicitly and may retain appearance information unrelated to control. We introduce SkeleWAM, a compact WAM that represents a manipulation scene as a sparse 3D skeleton composed of robot joints, object c",
+        "domains": [
+          "vla",
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "GlassGuard: Verified Glass Plane Mapping for Robot Navigation",
+        "url": "http://arxiv.org/abs/2610.02110v1",
+        "abstract": "Transparent and specular surfaces pose a serious challenge to LiDAR-based SLAM and navigation because laser returns may pass through glass, leaving collision boundaries absent from the map. Prior work attempts to reconstruct the missing surfaces, but inaccurate obstacle placement can create the opposite failure: contamination of traversable free space. Recognizing this dual requirement, we present",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution",
+        "url": "http://arxiv.org/abs/2610.02089v1",
+        "abstract": "As robotic hardware and learning methods advance, humanoids need tools to perform tasks beyond their inherent physical limits. Successful tool use requires selecting a suitable tool and coordinating manipulation and, when needed, locomotion to complete the task. Existing benchmarks do not jointly evaluate these capabilities on a humanoid. We introduce HumanoidToolBench, an 18-task benchmark spanni",
+        "domains": [
+          "vla",
+          "dexterous",
+          "sim2real",
+          "embodied-model",
+          "market"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "UniWAM: Unified World-Action Model",
+        "url": "http://arxiv.org/abs/2610.02054v1",
+        "abstract": "Vision-language-action models benefit from the understanding and reasoning capabilities of pretrained vision-language models, but action-only supervision provides limited grounding in world dynamics. Conversely, world-action models inherit spatiotemporal priors from video generation models, yet remain limited in semantic understanding and reasoning under distribution shifts. We introduce UniWAM, a",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "H-SPAR: Hydrodynamic-aware Simulation for Particle Transport and Autonomous Robots",
+        "url": "http://arxiv.org/abs/2610.01985v1",
+        "abstract": "Environmental robotic sampling requires considering the dual influence of water currents on robotic motion and particle transport. Existing marine robotics simulators generally model flow, autonomy, and sampling targets separately, limiting joint evaluation of mission cost and sampling performance. H-SPAR integrates spatially and temporally varying velocity fields, Lagrangian particle transport, p",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "BLT*: Informed Belief Localization Trees for Uncertainty-Aware Planning on Digital Twins",
+        "url": "http://arxiv.org/abs/2610.01972v1",
+        "abstract": "We present Informed Belief Localization Trees* (Informed BLT*), a sampling-based belief space planning (BSP) algorithm that scales to large outdoor digital twins with point-cloud observations. We adapt RRT* and Informed RRT* to belief space using the $2$-Wasserstein ($W_2$) metric. Assuming isotropic Gaussian beliefs, sampled belief states can be connected efficiently while accounting for availabl",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Training-Free Diffusion Planning with Analytical Local Scores",
+        "url": "http://arxiv.org/abs/2610.01959v1",
+        "abstract": "Path finding and multi-robot motion planning require trajectories that are smooth, goal-directed, and collision-free in environments with complex geometric constraints. Recent diffusion-based planners have shown that trajectory generation can be cast as iterative denoising which has opened the doors to learning-based approaches that can handle multi-modal trajectory distributions and refine entire",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "TouchTherm: Building Multimodal Digital Twins of Objects for Tactile and Thermal Rendering",
+        "url": "http://arxiv.org/abs/2610.01943v1",
+        "abstract": "Robotic simulation and virtual reality increasingly require object assets that capture not only visual geometry but also the physical cues underlying tactile and thermal interaction. Existing 3D datasets and reconstruction methods primarily represent object-scale geometry and visual appearance, overlooking microscale surface structure for high-fidelity haptic rendering and transient temperature dy",
+        "domains": [
+          "dexterous",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "CLoSeR: Closing the Loop for Long-Context Streaming Reconstruction",
+        "url": "http://arxiv.org/abs/2610.01927v1",
+        "abstract": "Feedforward foundation models have recently shown remarkable 3D reconstruction capabilities. However, existing models exhibit large tracking drift in long-context streaming reconstruction due to error accumulation. In this paper, we revisit loop closure with streaming reconstruction foundation models to enable accurate, drift-free, kilometer-scale reconstruction. Specifically, our method detects l",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Robot Learning on Discrete Surfaces: Theory and Applications",
+        "url": "http://arxiv.org/abs/2610.01910v1",
+        "abstract": "All the objects composing our world are enclosed within surfaces. Yet, most robot learning and motion generation frameworks treat surfaces as constraints ignoring their intrinsic geometry. This gap is acute for polyhedral meshes--the standard output of CAD and 3D reconstruction--whose discrete geometric structure remains unexploited. In this paper, we propose a unified discrete Riemannian framewor",
+        "domains": [
+          "vla",
+          "sim2real",
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Reverse Item Response Theory for Sparsity-Robust Ranking in Fragmented Cancer Drug-Response Matrices",
+        "url": "https://arxiv.org/abs/2610.00002",
+        "abstract": "We introduce reverse Item Response Theory (IRT) to pharmacogenomic drug-response analysis by treating cancer types as latent \"subjects\" with resistance ability and drugs as \"items\" with evasion difficulty. Applied to 242,036 drug sensitivity measurements from the Genomics of Drug Sensitivity in Cancer (GDSC2) database, the model estimates cancer-type-level in-vitro resistance and drug-level broad ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "How Far is Adam from Natural Gradient Descent?",
+        "url": "https://arxiv.org/abs/2610.00004",
+        "abstract": "Adam is the standard optimizer in deep learning, yet its geometric relationship to natural gradient descent (NGD) contains unresolved questions. We study Adam's full update rule, including momentum, as a diagonal empirical Fisher approximation subject to diagonal truncation, empirical label substitution, and temporal lag. Using the scale-invariant $\\gamma(\\Delta\\theta)$ metric, we measure Adam's g",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "FourierQK: Filter Shape, Admissibility and the Leakage-Coverage Law",
+        "url": "https://arxiv.org/abs/2610.00009",
+        "abstract": "Frequency-collapse attention [Zeris, 2026e] achieves large gains over standard dot-product attention by replacing the Q/K dot product with a bandpass-filtered inner product at a learned frequency. A natural follow-up question is: which filter shape works best, and why? We test five hypotheses about filter properties -- DC suppression, Nyquist suppression, bandwidth, centre frequency, and multi-sca",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Integrating Fairness and Explainability in a Multiple Instance Reinforcement Learning System",
+        "url": "https://arxiv.org/abs/2610.00035",
+        "abstract": "Predicting student performance from educational interaction data requires models that are both accurate and sufficiently transparent to support meaningful intervention, while demographic information introduces an additional risk of unfair predictions. This study investigates a multi-objective framework that combines reinforcement learning-based multiple instance learning (RL-MIL), adversarial debi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "SW-KAN: Kolmogorov-Arnold Networks with Stieltjes-Wigert q-Orthogonal Polynomials",
+        "url": "https://arxiv.org/abs/2610.00050",
+        "abstract": "Kolmogorov-Arnold Networks (KANs) represent a paradigmatic shift in deep learning by replacing fixed node activations with learnable univariate functions on edges, offering enhanced interpretability and parameter efficiency. While recent polynomial-based KAN variants have addressed the computational overhead of original B-spline implementations, they introduce a fundamental yet underexplored chall",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "\"very likely\" Means \"uncertain\"? How LLMs Diverge from Humans in Linguistic Uncertainty Quantification",
+        "url": "https://arxiv.org/abs/2610.00083",
+        "abstract": "Humans express uncertainty verbally via markers (e.g., \"possible,\" \"likely\"), yet most LLM uncertainty quantification (UQ) relies on costing likelihood- or consistency-based signals. From a cognitive perspective, accurate verbal uncertainty reflects metacognitive monitoring, representing knowledge boundaries (\"knowing that you don't know\") to support regulation and information seeking. In this pap",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Nous: Learning and Certifying Memory Decisions Before Source Calibration",
+        "url": "https://arxiv.org/abs/2610.00094",
+        "abstract": "Belief-based agent memory needs reliable decisions about current state, yet its evidence may be noisy, copied, or stale. Must a memory calibrate its sources before it can improve its decisions? We separate learning, calibration, and revision certification. On one four-model hidden Markov family, learning an unknown Bayes decision requires Theta(l^-2) records and certifying its improvement over an ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "One Mastery Threshold Does Not Fit All Knowledge Tracing Models",
+        "url": "https://arxiv.org/abs/2610.00095",
+        "abstract": "Tutoring systems use mastery thresholds to decide when students can stop practicing and advance, but the same numerical threshold can lead to very different decisions when the underlying knowledge tracing (KT) model changes. We examine six KT models across four public educational datasets and evaluate 12 thresholds from 0.50 to 0.99 using post-advancement performance, advancement coverage, practic",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Uncertainty-Aware Learning from Multi-Expert Interval Targets",
+        "url": "https://arxiv.org/abs/2610.00102",
+        "abstract": "Many machine learning (ML) applications rely on expert labels, and qualified experts may provide different but plausible interpretations of the same observation. Such variation across expert labels may reflect genuine disagreement or ambiguity rather than annotation error. When individual experts additionally report intervals rather than exact values, the supervision contains two distinct sources ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "The Hidden Costs of 99% Accuracy: A Trustworthiness Audit of the Telco Customer Churn Benchmark",
+        "url": "https://arxiv.org/abs/2610.00118",
+        "abstract": "Customer churn prediction on the IBM Telco Customer Churn benchmark (n = 7,043) routinely reports test accuracies above 95%, with the most cited published study reporting 99.01%. We audit this benchmark for four trustworthiness failures invisible to the accuracy- and F1-centred reporting that dominates the literature. First, pre-split SMOTE inflates churn-class F1 by 13.1 percentage points across ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Generalized Biomedicine Discovery",
+        "url": "https://arxiv.org/abs/2610.00120",
+        "abstract": "In real-world clinical practice, medical images face open-world shifts: (i) long-tailed rare diseases, (ii) subtle lesions dominated by normal anatomy, and (iii) hierarchical taxonomies. Yet most open-world paradigms assume flat, balanced label spaces, leaving these biomedical demands unresolved. We introduce Generalized Biomedicine Discovery (GBD) and a unified benchmark spanning long-tail, anoma",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Classification Based on Association Rules Algorithm for Breast Cancer",
+        "url": "https://arxiv.org/abs/2610.00174",
+        "abstract": "Breast cancer is a significant contributor to female mortality across the world, displaying one of the highest oc currence rates among the various cancer types. In response to the need for early breast cancer detection, researchers have increasingly turned to association rule-based classification as a favored method. Association Rule mining is a data mining approach which offers the benefit of yie",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Four Ways to Grow a Classifier and Why One of Them Cannot Learn",
+        "url": "https://arxiv.org/abs/2610.00180",
+        "abstract": "Constructive classifiers add structure while they train: a level to a tree, a unit to a hidden layer, a split at a leaf. This paper asks what each of four such growth decisions actually buys, measured under one fixed protocol in tree-structured and constructive models, and gives an exact diagnosis and a fix for the one that buys nothing. The diagnosis concerns the most natural way to deepen a soft",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "One Basis to Animate Them All: Gaussian Blendshape Distillation for Real-Time Avatars",
+        "url": "http://arxiv.org/abs/2610.02207v1",
+        "abstract": "3D Gaussian avatars support fast rendering, however, their real-time animation is often challenged by the costly neural inference. We address this bottleneck and show that the animation of pretrained avatar models can be closely approximated by a linear combination of identity-independent blendshapes. Building on this finding, we introduce GALA (Gaussian Animation via Linear Approximation), a dist",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
+        "url": "http://arxiv.org/abs/2610.02206v1",
+        "abstract": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to generate executable commands for real-world cybersecurity tools. This gap is critical because cybersecurity operations rely ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
+        "url": "http://arxiv.org/abs/2610.02204v1",
+        "abstract": "Building reliable robot capabilities across diverse tasks requires substantial human effort to develop and maintain skills, design rewards, and integrate perception with control. We present Reconstruct, Practice, Go Real (RPG), a framework for autonomous improvement of robot execution systems without updating model weights. RPG identifies manipulation capabilities in an offline dataset and constru",
+        "domains": [
+          "dexterous",
+          "sim2real",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research",
+        "url": "http://arxiv.org/abs/2610.02202v1",
+        "abstract": "What makes great scientists great? Even as AI systems start to make progress on open problems, scientists remain far ahead of them at sensing which prior idea, buried in an ever-growing archive of research, a new problem needs. To study this skill, we draw on researchers who know firsthand which earlier work advanced their completed projects, with papers serving as pointers to the ideas within. Us",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "SILSA: Sliding-Window Slice Latents for Topology-Preserving High-Resolution 3D Generation",
+        "url": "http://arxiv.org/abs/2610.02201v1",
+        "abstract": "High-resolution 3D generation increasingly relies on voxel latents and multi-stage pipelines that first predict active structure and then synthesize local geometry. While effective, this design fragments continuous surfaces into many local tokens, inflates generation cost, and often weakens topological consistency for thin or highly connected shapes. We introduce SILSA, a topology-aware 3D generat",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "VISTA: A Visual Harness for Reasoning in an Interactive World",
+        "url": "http://arxiv.org/abs/2610.02200v1",
+        "abstract": "We show that multimodal models possess strong reasoning abilities and that an appropriate harness can unlock their potential to solve tasks across diverse interactive environments. We introduce VISTA, a visual harness that gives a general-purpose multimodal model long-horizon vision. VISTA allows the model to directly perceive the environment through visual observations and maintains a lossless vi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "FERPO: Forward Entropy-Regularized Policy Optimization",
+        "url": "http://arxiv.org/abs/2610.02198v1",
+        "abstract": "Several state-of-the-art methods for online reinforcement learning in continuous control improve policies using action gradients of a learned critic. However, critics are typically trained to predict returns, and accurate value predictions do not necessarily yield accurate action derivatives, potentially leading to unreliable policy updates. We propose Forward Entropy-Regularized Policy Optimizati",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Hierarchical Continuous Diffusion Language Models",
+        "url": "http://arxiv.org/abs/2610.02193v1",
+        "abstract": "Discrete diffusion language models offer a compelling alternative to autoregressive generation for tasks demanding bidirectional reasoning and global constraint satisfaction. Yet they share a structural bottleneck: when decoding in parallel, each token is sampled independently from its marginal, severing the statistical dependencies among the tokens decoded together. Continuous diffusion language ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "DMAD: Distribution Matching as Adversarial Distillation for Fast Visual Generation",
+        "url": "http://arxiv.org/abs/2610.02188v1",
+        "abstract": "Distribution Matching Distillation (DMD) trains a few-step student from the difference between separately estimated target and student scores, so it must keep an auxiliary diffusion model fitted to the student's evolving distribution at extra memory and computation cost. We introduce DMAD, Distribution Matching as Adversarial Distillation, which recasts distribution matching as classification and ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Higher-Order Molecular Grammars for Generative and Foundation Models in Chemistry",
+        "url": "http://arxiv.org/abs/2610.02186v1",
+        "abstract": "Molecular learning models are strongly shaped by their underlying representations. Yet standard sequential and graph formalisms struggle to explicitly encode higher-order topology, such as ring systems and recurring motifs. Existing higher-order representations can capture these structures directly, but they are often computationally demanding and difficult to decode into valid molecules. Here, we",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "SoftServe: A Scalable Quasi-Newton Method for Deep Learning",
+        "url": "http://arxiv.org/abs/2610.02182v1",
+        "abstract": "Quasi-Newton (QN) methods have long been among the most effective methods for large-scale unconstrained convex optimization. Two obstacles have limited their use in deep learning: non-convexity and enormous parameter sizes. We introduce SoftServe, a family of QN methods designed to overcome these obstacles without line searches or ad hoc curvature corrections. SoftServe derives positivedefinite cu",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Generative Cinematographer: Composing Camera and Object Motion in 3D",
+        "url": "http://arxiv.org/abs/2610.02180v1",
+        "abstract": "Current controllable video generation systems often rely on 2D motion trajectories or sparse drag signals for object motion. These controls are ambiguous because the same 2D trajectory can correspond to different 3D motions, especially when the camera and objects move simultaneously. We present Generative Cinematographer (GenCine), a system that lifts a single image into an editable 3D scene scaff",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Watch, Infer, Coordinate: Inferring Robot Partner Constraints for Zero-Shot Coordination",
+        "url": "http://arxiv.org/abs/2610.02170v1",
+        "abstract": "Robots operating in the physical world will increasingly need to coordinate with other robots, particularly in manipulation tasks where an object may be too large or heavy for a single robot to carry alone. Physical limitations caused by hardware degradation or actuator faults can restrict the actions a robot can reliably execute, yet these limitations may be unknown to its partner. We study wheth",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication",
+        "url": "http://arxiv.org/abs/2610.02161v1",
+        "abstract": "Vision-language models (VLMs) and vision-language-action models (VLAs) have recently driven rapid progress in general-purpose robots, yet most progress has focused on single-robot settings. Extending these capabilities to multi-robot systems remains challenging because robots must coordinate long-horizon behaviors while maintaining reliable, fine-grained execution. We introduce DuoMind, a distribu",
+        "domains": [
+          "vla",
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "From Knowledge Access to Source Learning: Developing Source-Specific Competence",
+        "url": "http://arxiv.org/abs/2610.02150v1",
+        "abstract": "Large language model (LLM) agents increasingly rely on persistent external sources to solve sequences of knowledge-intensive tasks. Existing methods improve how source content is accessed and organized, while agent-memory systems preserve reusable knowledge from prior interactions, but repeated use of the same source is still largely treated as repeated access rather than an opportunity to progres",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Moore, Escher, Penrose: A Conformal Golden Braid",
+        "url": "http://arxiv.org/abs/2610.02210v1",
+        "abstract": "I don't think I have ever done anything as peculiar in my life. Among other things, it shows a young man looking with interest at a print on the wall of an exhibition that features himself. How can this be? Perhaps I am not far removed from Einstein's curved universe.'' So wrote M.C. Escher about his 1956 lithograph Print Gallery. Nearly half a century later, a mathematical analysis related its ge",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Sphere Encoder 2",
+        "url": "http://arxiv.org/abs/2610.02208v1",
+        "abstract": "Sphere Encoder is an autoencoder that generates images by decoding random points from a high-dimensional latent sphere. We identify two limitations of the original formulation that reduce its generation quality. First, random points concentrate near the equator relative to the pole on an encoded latent, but the training rotation never reaches this region, leaving a gap that limits one-step generat",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "One Basis to Animate Them All: Gaussian Blendshape Distillation for Real-Time Avatars",
+        "url": "http://arxiv.org/abs/2610.02207v1",
+        "abstract": "3D Gaussian avatars support fast rendering, however, their real-time animation is often challenged by the costly neural inference. We address this bottleneck and show that the animation of pretrained avatar models can be closely approximated by a linear combination of identity-independent blendshapes. Building on this finding, we introduce GALA (Gaussian Animation via Linear Approximation), a dist",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "ROWBench: Do Video Models Render What the Program Specifies?",
+        "url": "http://arxiv.org/abs/2610.02205v1",
+        "abstract": "Programmable world models separate executable dynamics from visual generation, offering a promising foundation for next-generation game engines. However, their visual adherence to explicit rules and interactions remains insufficiently evaluated. Existing benchmarks assess visual quality, controllability, and instruction or physical adherence, but rarely test fidelity to fine-grained, program-speci",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Embedding Prediction Helps Image Generation",
+        "url": "http://arxiv.org/abs/2610.02203v1",
+        "abstract": "In diffusion transformers, a class label or a text prompt is embedded once, and the same condition is reused at every denoising step. We ask whether predicted embeddings can serve as this condition instead. Next-Embedding Predictive Autoregression (NEPA) trains a Transformer to predict the next continuous embedding in a sequence. In generation, the clean image follows the noisy image, so its embed",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "SILSA: Sliding-Window Slice Latents for Topology-Preserving High-Resolution 3D Generation",
+        "url": "http://arxiv.org/abs/2610.02201v1",
+        "abstract": "High-resolution 3D generation increasingly relies on voxel latents and multi-stage pipelines that first predict active structure and then synthesize local geometry. While effective, this design fragments continuous surfaces into many local tokens, inflates generation cost, and often weakens topological consistency for thin or highly connected shapes. We introduce SILSA, a topology-aware 3D generat",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "VISTA: A Visual Harness for Reasoning in an Interactive World",
+        "url": "http://arxiv.org/abs/2610.02200v1",
+        "abstract": "We show that multimodal models possess strong reasoning abilities and that an appropriate harness can unlock their potential to solve tasks across diverse interactive environments. We introduce VISTA, a visual harness that gives a general-purpose multimodal model long-horizon vision. VISTA allows the model to directly perceive the environment through visual observations and maintains a lossless vi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "HiPhy: Hierarchical Alignment for Physically-Plausible Multi-Principle Video Generation",
+        "url": "http://arxiv.org/abs/2610.02197v1",
+        "abstract": "Video generation models have achieved remarkable visual fidelity and have strong potential to become general-purpose world simulators. Despite this progress, they still fail to generate videos which adhere to laws of physics. The problem becomes even more apparent in realistic settings where multiple physical principles must work together within the same video; for example, \"a balloon floating upw",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation",
+        "url": "http://arxiv.org/abs/2610.02196v1",
+        "abstract": "We study test-time evolution for humanoid loco-manipulation: solving tasks that a controller was never trained for by repurposing its existing skills, improving from its own attempts, and retaining what it learns, without retraining. Our key insight is that a broad controller already holds much of the competence a new task needs, and that this competence becomes accessible through an interface bet",
+        "domains": [
+          "dexterous",
+          "sim2real",
+          "market"
+        ]
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "DMAD: Distribution Matching as Adversarial Distillation for Fast Visual Generation",
+        "url": "http://arxiv.org/abs/2610.02188v1",
+        "abstract": "Distribution Matching Distillation (DMD) trains a few-step student from the difference between separately estimated target and student scores, so it must keep an auxiliary diffusion model fitted to the student's evolving distribution at extra memory and computation cost. We introduce DMAD, Distribution Matching as Adversarial Distillation, which recasts distribution matching as classification and ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "OmniSeek: Native Tool Integration for Multi-turn Audio-Visual Reasoning",
+        "url": "http://arxiv.org/abs/2610.02181v1",
+        "abstract": "We present OmniSeek, an agentic framework that transforms an Omni Large Language Model (Omni-LLM) into an active, multi-turn reasoning agent with native tool use. Rather than passively processing an entire audio-visual sequence in a single forward pass, OmniSeek makes evidence acquisition part of the reasoning process: it dynamically decides whether to look or listen, and over which temporal windo",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Generative Cinematographer: Composing Camera and Object Motion in 3D",
+        "url": "http://arxiv.org/abs/2610.02180v1",
+        "abstract": "Current controllable video generation systems often rely on 2D motion trajectories or sparse drag signals for object motion. These controls are ambiguous because the same 2D trajectory can correspond to different 3D motions, especially when the camera and objects move simultaneously. We present Generative Cinematographer (GenCine), a system that lifts a single image into an editable 3D scene scaff",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "World Observer: Joint Actor-Observer Generation for Persistent World Modeling",
+        "url": "http://arxiv.org/abs/2610.02162v1",
+        "abstract": "How can a world model continuously observe regions beyond the actor's current view? Video world models simulate how an environment evolves from an agent's actions, yet remain actor-centric. Once an object leaves the actor's view, they lose direct evidence of its evolution, often failing to preserve its state and dynamics upon re-entry. To address this, we introduce World Observer, which decouples ",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "4Director: Controlling Video World Models with Rigid 3D Geometry",
+        "url": "http://arxiv.org/abs/2610.02160v1",
+        "abstract": "Precise control over camera and object motion is essential for professional video production. Existing methods control objects only coarsely, through image-plane cues that are ambiguous in depth and rotation or through 3D tracks and blobs that lack complete geometry and lose consistency across viewpoint changes. We introduce 4Director, a video world model conditioned on an explicit 4D scene repres",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "MosaiChunk: Compositing Spatio-Temporal Memory for Autoregressive Video Generation",
+        "url": "http://arxiv.org/abs/2610.02153v1",
+        "abstract": "Long-horizon autoregressive video generation is limited by a finite context window. When an object or scene falls out of context, its fine-grained visual details may be lost and difficult to recover upon reappearance. To retain access to such visual details, we introduce MosaiChunk, a spatio-temporal memory mechanism that composes a mosaic of selected historical key-value (KV) entries across space",
+        "domains": []
+      }
+    ],
+    "hf_papers": [
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-30",
+        "upvotes": 123,
+        "title": "What Makes World Action Models Generalize? An Empirical Study of Test-Time Future Modeling",
+        "url": "https://arxiv.org/abs/2609.34981",
+        "abstract": "World action models (WAMs) predict the future alongside actions during training. Due to the heavy computation cost of video denoising, whether the future must still be generated during inference is disputed: Explicit WAMs denoise it into clean frames along with every action chunk, whereas Latent WAMs discard it entirely for acceleration. We find that latent WAMs, despite matching explicit ones on ",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/LeapLabTHU/Simple-WAM",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-29",
+        "upvotes": 106,
+        "title": "Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence",
+        "url": "https://arxiv.org/abs/2609.35432",
+        "abstract": "Vision-language-action (VLA) and world-action (WAM) models map observations and instructions directly to robot actions. This directness ties a policy to training: minor layout or viewpoint changes cause failure, and instructions generalize poorly. The root cause lies in representation: task requirements, conditions, progress, and failure recovery are implicitly encoded in action sequences, making ",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/HexaFuture/PhysicalCoding",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-01",
+        "upvotes": 95,
+        "title": "WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents",
+        "url": "https://arxiv.org/abs/2609.40325",
+        "abstract": "As interactive 3D worlds are increasingly used to study intelligent behavior, it becomes important to develop efficient pipelines for identifying anomalies in these simulated environments, such as floating objects, traversable walls, or objects inconsistent with the surrounding scene. Multimodal AI systems, including vision-language models (VLMs) and vision-language-action models (VLAs), have show",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/UCSB-NLP-Chang/WorldAuditBench",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-30",
+        "upvotes": 72,
+        "title": "LLMs are General Asynchronous Agents",
+        "url": "https://arxiv.org/abs/2609.35427",
+        "abstract": "Modern LLMs are increasingly capable as autonomous agents, but they follow sequential interaction cycles: read, think, reply or call tools, repeat. Many real-world use cases are not sequential: voice assistants, embodied agents, and monitoring systems receive new inputs while they think or perform another task. Modern LLMs address this with specialized architectures for voice interaction and video",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/dvmazur/async_llm",
+        "domains": [
+          "embodied-model",
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-02",
+        "upvotes": 65,
+        "title": "World Observer: Joint Actor-Observer Generation for Persistent World Modeling",
+        "url": "https://arxiv.org/abs/2610.02162",
+        "abstract": "How can a world model continuously observe regions beyond the actor's current view? Video world models simulate how an environment evolves from an agent's actions, yet remain actor-centric. Once an object leaves the actor's view, they lose direct evidence of its evolution, often failing to preserve its state and dynamics upon re-entry. To address this, we introduce World Observer, which decouples ",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/cvlab-kaist/world-observer",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-02",
+        "upvotes": 50,
+        "title": "ROWBench: Do Video Models Render What the Program Specifies?",
+        "url": "https://arxiv.org/abs/2610.02205",
+        "abstract": "Programmable world models separate executable dynamics from visual generation, offering a promising foundation for next-generation game engines. However, their visual adherence to explicit rules and interactions remains insufficiently evaluated. Existing benchmarks assess visual quality, controllability, and instruction or physical adherence, but rarely test fidelity to fine-grained, program-speci",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/AlayaLab/PROWBench",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-02",
+        "upvotes": 43,
+        "title": "AutoGUIWorld: Image Generators as Visual World Models for GUI Agent",
+        "url": "https://arxiv.org/abs/2610.01215",
+        "abstract": "GUI agents require high-quality interaction trajectories to learn how software environments respond to actions, maintain state, and support multi-step workflows. However, the diversity of available trajectories is constrained by the applications, interface states, and workflows accessible in the underlying environments. Expanding this coverage requires deploying increasingly diverse and complex so",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/ImYangC7/AutoGUIWorld",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-30",
+        "upvotes": 41,
+        "title": "WorldAttention: An Efficient Attention Architecture for Interactive Video World Models",
+        "url": "https://arxiv.org/abs/2609.34606",
+        "abstract": "Leveraging the paradigm of autoregressive diffusion, text-conditioned interactive video world models aim to simulate temporally coherent environments guided by textual instructions. While enabling low-latency, long-duration generation is pivotal for embodied AI and simulation-based planning, current frameworks primarily rely on sliding-window mechanisms to bound computational complexity. However, ",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/alibaba-damo-academy/WorldAttention",
+        "domains": [
+          "sim2real",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-29",
+        "upvotes": 40,
+        "title": "Recursive Harness Distillation across Agents for Robot Manipulation",
+        "url": "https://arxiv.org/abs/2609.33378",
+        "abstract": "A central goal in robotics is to enable manipulation across changing tasks and environments. Vision-language-action (VLA) models provide broad manipulation capabilities but can struggle when execution requires diagnosing failures and adapting behavior. Strong agents can discover effective interventions through interaction with these policies. We propose Recursive Harness Distillation to accumulate",
+        "ai_keywords": [],
+        "github_repo": "",
+        "domains": [
+          "vla",
+          "dexterous"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-02",
+        "upvotes": 38,
+        "title": "InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation",
+        "url": "https://arxiv.org/abs/2610.02196",
+        "abstract": "We study test-time evolution for humanoid loco-manipulation: solving tasks that a controller was never trained for by repurposing its existing skills, improving from its own attempts, and retaining what it learns, without retraining. Our key insight is that a broad controller already holds much of the competence a new task needs, and that this competence becomes accessible through an interface bet",
+        "ai_keywords": [],
+        "github_repo": "",
+        "domains": [
+          "dexterous",
+          "market"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-30",
+        "upvotes": 36,
+        "title": "EVO-WAM: Evolving World Action Models through Video-Action Verification",
+        "url": "https://arxiv.org/abs/2609.38057",
+        "abstract": "Improving robot policies on new tasks without collecting additional expert demonstrations remains a central challenge in robot learning. World action models (WAMs) use broad video priors to jointly predict future videos and actions, offering a potential source of supervision for adapting to new tasks. However, generated videos may fail to depict task completion, and even visually successful videos",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/Clausy9/EVO-WAM",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-01",
+        "upvotes": 33,
+        "title": "TERRA: Terrain-Aware Reconstruction, Retargeting and Control for Musculoskeletal Locomotion",
+        "url": "https://arxiv.org/abs/2609.38653",
+        "abstract": "Recent advances in musculoskeletal modeling and reinforcement learning have enabled muscle-actuated agents to reproduce increasingly complex human motions. Yet these capabilities remain largely confined to flat ground, in part because motion datasets rarely include aligned terrain geometry and because retargeting terrain interactions to complex musculoskeletal bodies is challenging. We present TER",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/amathislab/terra",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-02",
+        "upvotes": 31,
+        "title": "Beyond the Current Scene: Event-Referential Grasping with Active View Selection",
+        "url": "https://arxiv.org/abs/2609.39375",
+        "abstract": "A robot that observes people interacting with objects should be able to carry out later requests that refer back to those interactions. Such requests may specify a grasp target by the role it played in a past event rather than by its name or appearance. Moreover, the target may no longer be visible when the robot is asked to act. We present BeyondSCe, a zero-shot robotic grasping system for this e",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/SNU-VGILab/BeyondCSe",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-29",
+        "upvotes": 31,
+        "title": "FlowTool: Controlling Tool Parameter in Image Retouching via Flow Matching",
+        "url": "https://arxiv.org/abs/2609.35673",
+        "abstract": "Tool-based image editing (image retouching) is commonly formulated with autoregressive multimodal large language models (MLLMs) that sequentially generate reasoning, tool selections, and parameter values. In this work, we present a novel approach to tool-based image editing by framing the task as a flow matching problem. We introduce FlowTool, a framework that directly models the distribution of h",
+        "ai_keywords": [],
+        "github_repo": "",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-29",
+        "upvotes": 31,
+        "title": "WorldPlay2: Extending Real-Time Interactive World Models in Control and Horizon",
+        "url": "https://arxiv.org/abs/2609.35560",
+        "abstract": "Interactive world models require responding in real time to versatile controls and maintaining long-horizon consistency. However, modeling heterogeneous controls remains difficult, while explosive contexts and unstable distillation impede achieving both long-horizon consistency and real-time responsiveness. In this paper, we present WorldPlay2, an interactive world model that couples a factorized ",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/WorldPlay2/WorldPlay2",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-01",
+        "upvotes": 30,
+        "title": "Systematically Exploring the Capabilities of GPT-6 Astra as Embodied Policies",
+        "url": "https://arxiv.org/abs/2609.38537",
+        "abstract": "GPT-6 Astra exhibits a remarkable ability to generate numerical robot actions, extending its role beyond high-level planning. To assess Astra's capabilities as general-purpose embodied policies, we conduct comprehensive evaluations across six domains, examining direct control, cooperation with learned policies, and feedback-driven adaptation. In gripper manipulation, Astra can correct task targets",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/anonymous-report-421/GPT-as-Policy",
+        "domains": [
+          "vla",
+          "dexterous",
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-28",
+        "upvotes": 30,
+        "title": "Block Sparse Attention with Log-Linear Complexity",
+        "url": "https://arxiv.org/abs/2609.31093",
+        "abstract": "Scaling language models to long contexts is limited by the quadratic cost of self-attention. Block sparse attention offers an efficient alternative, but selecting the retained blocks remains a bottleneck. Conventional block selection requires scoring all query-block pairs and therefore remains quadratic in sequence length. To address this issue, we propose PISA, a block-sparse attention mechanism ",
+        "ai_keywords": [],
+        "github_repo": "",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-28",
+        "upvotes": 29,
+        "title": "InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data",
+        "url": "https://arxiv.org/abs/2609.31394",
+        "abstract": "World Action Models (WAMs) jointly model visual dynamics and action generation for generalist robot manipulation. A central challenge is to integrate priors from large-scale pretrained models---including visual dynamics, scene semantics, geometry, and motion---into a unified framework for robot action generation. We introduce InternW0-Δ, a unified WAM pretrained on a heterogeneous corpus that outp",
+        "ai_keywords": [],
+        "github_repo": "",
+        "domains": [
+          "vla",
+          "dexterous",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-28",
+        "upvotes": 23,
+        "title": "Tactile-JEPA: Topology-Aware Self-Supervised Representation Learning for Distributed Tactile Sensors",
+        "url": "https://arxiv.org/abs/2609.24385",
+        "abstract": "Tactile sensing is an essential modality for robots performing contact-rich, dexterous manipulation, particularly under visual occlusion. While pre-trained image encoders are standard in robot learning pipelines, tactile encoders are still commonly trained from scratch from raw, noisy signals, which might limit their expressivity. Existing self-supervised learning (SSL) approaches focus predominan",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/E-Kovtun/tactile",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-02",
+        "upvotes": 22,
+        "title": "4Director: Controlling Video World Models with Rigid 3D Geometry",
+        "url": "https://arxiv.org/abs/2610.02160",
+        "abstract": "Precise control over camera and object motion is essential for professional video production. Existing methods control objects only coarsely, through image-plane cues that are ambiguous in depth and rotation or through 3D tracks and blobs that lack complete geometry and lose consistency across viewpoint changes. We introduce 4Director, a video world model conditioned on an explicit 4D scene repres",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/VVeiCao/4Director",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-10-01",
+        "upvotes": 22,
+        "title": "BiasReducer: Adaptive Bias Mitigation for Reward Models",
+        "url": "https://arxiv.org/abs/2609.32720",
+        "abstract": "Reward models score responses from large language models (LLMs) and guide LLM training toward human preferences. However, reward models can favor superficial attributes such as length or confidence, leading LLMs to produce higher-scoring but not more correct responses. Existing mitigation methods either retrain the reward model or apply a fixed correction to one known bias, such as a preference fo",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/olivialiu121/BiasReducer-RM",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-28",
+        "upvotes": 22,
+        "title": "FoMo: Forking Moment in Generative Trajectory as a Perceptual Distance",
+        "url": "https://arxiv.org/abs/2609.25716",
+        "abstract": "Reference-based image quality assessment (IQA) metrics aim to reflect how humans perceive the perceptual distance between a pair of images. To learn how the human visual system (HVS) operates, recent reference-based IQA metrics heavily rely on human-annotated data. Mean opinion score (MOS)-based pointwise scoring, which assigns a scalar quality value per image, is preferable for annotation but is ",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/JHLew/FoMo",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-28",
+        "upvotes": 17,
+        "title": "D-JEPA: A Decision-Aligned Latent World Model",
+        "url": "https://arxiv.org/abs/2609.24749",
+        "abstract": "Latent world models predict the consequences of actions, but accurate prediction does not guarantee that latent distance reflects which candidate will execute successfully. We identify a decision-local prediction gap: among the few futures competing for execution, a candidate predicted closer to the goal can produce a worse realized outcome than an available alternative. We introduce D-JEPA, a dec",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/NEBULIS-Lab/D-JEPA",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-28",
+        "upvotes": 15,
+        "title": "Morphometric Imitation: From Morphology and Contact Aware Hand Retargeting to Sim-to-Real Visuomotor Policy",
+        "url": "https://arxiv.org/abs/2609.28660",
+        "abstract": "Human hand-object interactions (HOIs) provide a rich source of demonstrations for dexterous manipulation, but learning directly from them presents challenges in bridging morphology gaps, ensuring dynamical feasibility, and sim-to-real deployment. We present Morphometric Imitation, a three-stage framework that transforms reconstructed HOIs into zero-shot sim-to-real visuomotor policies. First, morp",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/tsadja/morphometric",
+        "domains": [
+          "dexterous",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-09-28",
+        "upvotes": 9,
+        "title": "VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models",
+        "url": "https://arxiv.org/abs/2609.04355",
+        "abstract": "Pretrained vision-language-action (VLA) models enable broad manipulation but remain unreliable in tasks demanding precision and repeatability. Applying real-world online reinforcement learning (RL) to VLA post-training enables autonomous trial-and-error improvement beyond demonstrations alone, but exposes two bottlenecks: 1) unreliable value signals can induce policy drift; 2) large-VLA overhead c",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/scy-v/VLA-Precision",
+        "domains": [
+          "vla",
+          "dexterous"
+        ]
+      }
+    ],
+    "rss": [
+      {
+        "source": "rss",
+        "feed": "TechCrunch Robotics",
+        "kind": "media",
+        "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
+        "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+        "summary": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Thiel Capital’s Jack Selby nabs stakes in hot startups like Etched through Arizona connections",
+        "url": "https://techcrunch.com/2026/07/02/thiel-capitals-jack-selby-nabs-stakes-in-hot-startups-like-etched-through-arizona-connections/",
+        "summary": "Selby's VC firm, Copper Sky Capital, is currently raising a $300 million second fund, according to a regulatory filing.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Whoop’s valuation just tripled to $10 billion",
+        "url": "https://techcrunch.com/2026/03/31/whoop-valuation-10b-series-g-fundraise/",
+        "summary": "The fitness tracking startup just closed a $575 million Series G with Cristiano Ronaldo and LeBron James among its investors. The obvious question looming over a round of this size at this valuation: Is an IPO coming?",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Modelence raises $3M to smooth out the vibe-coding stack",
+        "url": "https://techcrunch.com/2026/01/28/modelence-raises-13-million-to-smooth-out-the-vibe-coding-stack/",
+        "summary": "How do you build tooling for the AI software stack? A company called Modelence has an interesting answer.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "VC firm 2150 raises €210M fund to solve cities’ climate challenges",
+        "url": "https://techcrunch.com/2026/01/26/vc-firm-2150-raises-e210m-fund-to-solve-cities-climate-challenges/",
+        "summary": "Europe-based venture fund 2150 raised the money to invest in climate tech startups that help solve cities' carbon footprint.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Superorganism raises $25M to back biodiversity startups",
+        "url": "https://techcrunch.com/2026/01/13/superorganism-raises-25m-to-back-biodiversity-startups/",
+        "summary": "Superorganism backs companies across three categories: tech that slows or reverses extinction, startups that operate at the intersection of climate and biodiversity, and tools that enable conservationists to do their work more effectively.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "More than 100 new tech unicorns were minted in 2025 — here they are",
+        "url": "https://techcrunch.com/2026/01/12/at-least-36-new-tech-unicorns-were-minted-in-2025-so-far/",
+        "summary": "Using data from Crunchbase and PitchBook, TechCrunch tracked down the VC-backed startups that became unicorns so far this year.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Supabase hit $5B by turning down million-dollar contracts. Here’s why.",
+        "url": "https://techcrunch.com/video/supabase-hit-5b-by-turning-down-million-dollar-contracts-heres-why/",
+        "summary": "Vibe coding has taken the tech industry by storm, and it’s not just the Lovables and Replits of the world that are winning. The startups building the infrastructure behind them are cashing in too.  Supabase, the open source database platform that’s become the back end of choice for the vibe-coding w",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Sequoia unveils $950M in new early-stage funds as it strives to be ‘only as good as our next investment’",
+        "url": "https://techcrunch.com/2025/10/27/sequoia-unveils-950m-in-new-early-stage-funds-as-it-strives-to-be-only-as-good-as-our-next-investment/",
+        "summary": "The legendary firm launched a $750 million early-stage fund targeting Series A startups and a $200 million seed fund.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Redwood Materials raises another $350M to power up its energy-storage business",
+        "url": "https://techcrunch.com/2025/10/23/redwood-materials-raises-another-350-million-to-power-up-its-energy-storage-business/",
+        "summary": "The round was led by Eclipse and saw participation from Nvidia's venture capital arm, NVentures.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "A new search engine raises $1.1M to let obsessive fans dive down internet rabbit holes",
+        "url": "https://techcrunch.com/2025/10/03/a-new-search-engine-raises-1-1m-to-let-obsessive-fans-dive-down-internet-rabbit-holes/",
+        "summary": "Lore raises $1.1 million to build a personalized search engine for fandom culture.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "A year after filing to IPO, still-private Cerebras Systems raises $1.1B",
+        "url": "https://techcrunch.com/2025/09/30/a-year-after-filing-to-ipo-still-private-cerebras-systems-raises-1-1b/",
+        "summary": "Cerebras initially filed to go public in September 2024 but ran into several regulatory delays due to foreign investments.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Doorstep raises $8M seed to help find missing food deliveries",
+        "url": "https://techcrunch.com/2025/09/25/doorstep-raises-8m-seed-to-help-find-missing-food-deliveries/",
+        "summary": "Doorstep integrates into existing delivery apps and then, using phone sensors, tracks when a driver has entered a building, gone up an elevator, and made it to the desired doorstep.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Affected by layoffs? Don’t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass",
+        "url": "https://techcrunch.com/2026/10/02/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/",
+        "summary": "Your next opportunity could be one conversation away. Get your Expo+ Pass for just $75. Limited to the first 100 qualifying people.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "TechCrunch Disrupt 2026: Blackstone’s Jas Khaira on building the next generation of AI giants",
+        "url": "https://techcrunch.com/2026/10/02/techcrunch-disrupt-2026-blackstones-jas-khaira-on-building-the-next-generation-of-ai-giants/",
+        "summary": "Blackstone's Jas Khaira will take the Builders Stage at TechCrunch Disrupt 2026 on building next-gen AI. Register for your pass and get 50% off a second.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Factory CEO just accused his VC board adviser of spying for Cognition",
+        "url": "https://techcrunch.com/2026/09/30/factory-ceo-just-accused-his-vc-board-advisor-of-spying-for-cognition/",
+        "summary": "VC Chris Degnan and former board adviser to Factory AI has taken a job as chief revenue officer for competitor Cognition -- and everyone is arguing on X about it.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "A Neko Health investor on the $700M bet to scan your whole body",
+        "url": "https://techcrunch.com/podcast/the-investor-behind-neko-healths-700m-bet-on-scanning-your-whole-body/",
+        "summary": "Spotify founder Daniel Ek’s Neko Health raised $700 million to build a business around scanning your body, but it’s not the only company centering its roadmap around a new kind of preventative healthcare. Midjourney is building its own body scanner, while Function Health has also raised significant ",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "3 days left to exhibit: Turn visibility into your next opportunity at TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/09/30/3-days-left-to-exhibit-at-techcrunch-disrupt-2026-2/",
+        "summary": "Three days left to exhibit at TechCrunch Disrupt 2026. Book by October 2 at 11:59 p.m. PT to showcase your startup to 10,000+ founders, investors, operators, and tech leaders.",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Two Google alumni raise $11.3M to back AI startups that enterprises will actually pay for",
+        "url": "https://techcrunch.com/2026/09/30/bag-ventures-sets-its-eyes-deeper-into-the-ai-stack/",
+        "summary": "BAG Ventures announces close of a $11.3M Fund I to invest in all things AI.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "a16z-backed EliseAI raises $350M, doubles valuation to $4B",
+        "url": "https://techcrunch.com/2026/09/29/a16z-backed-eliseai-raises-350m-doubles-valuation-to-4b/",
+        "summary": "EliseAI raises $350M, doubles valuation in a year.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "With Dazzle, Marissa Mayer bets your camera roll has more info on your life than your inbox",
+        "url": "https://techcrunch.com/2026/09/29/with-dazzle-marissa-mayer-bets-your-camera-roll-has-more-info-on-your-life-than-your-inbox/",
+        "summary": "Mayer argues that if a photo is worth a thousand words, your camera roll is worth millions. By analyzing all the photos stored on your phone, Dazzle claims to understand your hobbies, interests, food, and style preferences, how you like to spend their time, and with whom.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Protego Ventures closes debut $125M fund for Israeli defense tech",
+        "url": "https://techcrunch.com/2026/09/29/protego-ventures-closes-debut-125-million-fund-for-israeli-defense-tech/",
+        "summary": "Protego Ventures, the first and largest dedicated defense tech VC in Israel, just completed its final $125 million closing, TechCrunch learned exclusively.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Peak XV ups Surge seed investment ceiling to $5M, unveils 18-startup cohort",
+        "url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+        "summary": "Thirteen of the 18 startups in Peak XV’s latest Surge cohort are targeting global markets, while more than half are based in India.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "MAVI bets on the AI boom creating demand for a new kind of accountant",
+        "url": "https://techcrunch.com/2026/09/28/mavi-bets-on-the-ai-boom-creating-demand-for-a-new-kind-of-accountant/",
+        "summary": "Accounting staffing company MAVI emerges from stealth with $4 million in funding.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Next 5 VCs judging Startup Battlefield 200 contenders at TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/09/28/next-five-vcs-judging-startup-battlefield-200-contenders-at-techcrunch-disrupt-2026/",
+        "summary": "Thousands of applications. Multiple rounds of review. Hundreds of hours spent evaluating startups from around the world. Now comes the part everyone has been waiting for. Register for TechCrunch Disrupt 2026 today.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Week’s 10 Biggest Funding Rounds: Almost All About AI",
+        "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-cyber-real-estate-instinct/",
+        "summary": "This week’s list of the largest U.S. startup funding rounds was pretty much all about AI. That includes the biggest financing — a $1 billion round for Instinct, a developer of AI assistants for everyday tasks — as well as most of the rest of the Top 10.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Your Investors Can Make Or Break Your Startup. Here’s Who Founders Actually Need On Their Cap Table",
+        "url": "https://news.crunchbase.com/venture/startups-choosing-right-investors-dean-black-operator/",
+        "summary": "For startup founders, the goal shouldn’t be assembling a cap table filled with whoever was willing to invest, but rather intentionally constructed around investors who bring different forms of value. Guest author Antonia Dean, a partner at Black Operator Ventures, shares three things founders should",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Nautical And Marine Startups See Stepped-Up Funding",
+        "url": "https://news.crunchbase.com/venture/nautical-marine-startups-funding-grows-defense-robots-clean-energy-saronic/",
+        "summary": "Over the past year, venture backers have poured close to $3 billion into good-sized rounds for marine-related startups in sectors ranging from defense tech to clean energy, per Crunchbase data. Top areas for investment include autonomous sea vessels, water robots, electric watercraft, and ocean data",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Reporter’s Notebook: Europe’s Sovereign AI Push Needs Customers As Well As Capital",
+        "url": "https://news.crunchbase.com/ai/humanx-amsterdam-europe-sovereign-ai-user-push/",
+        "summary": "Crunchbase News Research Lead Gené Teare moderated panels and spoke with leaders building Europe and the Middle East’s AI ecosystems at HumanX in Amsterdam. Here we share a snippet of her conversation with Axelera AI CEO Fabrizio Del Maffeo and AI71 CPTO Mehdi Ghissassi.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Exclusive: Homeward Raises $120M To Help Homeowners Buy And Sell More Quickly As Housing Market Stalls",
+        "url": "https://news.crunchbase.com/real-estate-property-tech/startup-homeward-raises-120m-buy-sell-homes-ai-financing/",
+        "summary": "Homeward, a startup that helps homeowners buy before selling their existing homes or get cash offers for their properties, has raised a $120 million Series D round, Crunchbase News reports exclusively.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The IPO Window Is Opening Selectively; Readiness Will Decide Who Gets Through",
+        "url": "https://news.crunchbase.com/public/ipo-window-opening-readiness-required-williams-datasite/",
+        "summary": "The 2026 IPO market is reopening selectively, favoring large companies that spent the slowdown strengthening their financial reporting, governance and operations, writes guest author Mark Williams, chief revenue officer, enterprise, at Datasite, who explains why that readiness gives businesses optio",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Nuclear Startup Funding Is Up, But The Sector’s Public Markets Take A Bearish Turn",
+        "url": "https://news.crunchbase.com/clean-tech-and-energy/nuclear-startup-funding-up-public-markets-bearish/",
+        "summary": "So far in 2026, investors have poured more than $6 billion into companies focused on developing both fission and fusion nuclear energy technology and infrastructure, per Crunchbase data. That’s far ahead of any comparable period, including last year, the prior record-setter.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Crunchbase Tech Layoffs Tracker",
+        "url": "https://news.crunchbase.com/startups/tech-layoffs/",
+        "summary": "Over 127,000 workers at U.S.-based tech companies were laid off in mass job cuts in 2025, per a Crunchbase News tally, and the layoffs have continued into 2026. See the latest companies to cut roles.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Oura Hits Pause On IPO While Anthropic’s Prospectus Reveals The Cost Of Its AI Ambitions",
+        "url": "https://news.crunchbase.com/public/oura-pauses-ipo-anthropics-ai-openai/",
+        "summary": "Although Oura has postponed its planned offering that could have raised as much as $2.2 billion, Anthropic is still making a move toward the public markets along with AI cloud provider Nscale and other companies lining up potential fourth-quarter listings.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Tiny Health Raises $33M To Explore What Gut Data Can Reveal About Future Health",
+        "url": "https://news.crunchbase.com/venture/tiny-health-33m-microbiome-tests-sew-hoy/",
+        "summary": "Austin-based Tiny Health has raised $33 million in a Series B funding round led by B Capital to help it meet growing demand for its at-home microbiome tests.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Video Friday: Albatross Falls, Spins, Self-Rights, and Sails Away",
+        "url": "https://spectrum.ieee.org/video-friday-bioinspired-robotics",
+        "summary": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion.CoRL 2026: 9–12 November 2026, AUSTINHumanoids 2026: 6–9",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Atlas Robot’s New Hand May Outperform Humanlike Designs",
+        "url": "https://spectrum.ieee.org/robust-robot-hand",
+        "summary": "Today, Boston Dynamics is announcing a redesigned hand for its Atlas robot. The previous generation could do some crazy superhuman things with its three fingers, but it was never intended for mass production in the tens or hundreds of thousands. Switching from research hardware to a scalable product",
+        "domains": [
+          "manufacturing"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Video Friday: Life’s Better With a Little Robot Goose",
+        "url": "https://spectrum.ieee.org/video-friday-goose-household-robots",
+        "summary": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion.IROS 2026: 27 September–1 October 2026, PITTSBURGHCoRL 2",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Video Friday: Two Birotors Make a Quadrotor",
+        "url": "https://spectrum.ieee.org/video-friday-quadrotor-from-birotor",
+        "summary": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion.Humanoids Summit Seoul: 22–23 September 2026, SEOULIROS ",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Digit 5 May Be the First Humanoid Robot Worker That’s Truly Safe",
+        "url": "https://spectrum.ieee.org/humanoid-robot-safety",
+        "summary": "Despite the recent deluge of videos of humanoid robots doing backflips and kung fu, the actual pace of progress towards humanoids that can do economically viable jobs at scale has at times seemed a bit plodding. There are some good reasons for this: A humanoid robot needs to be powerful enough to do",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Video Friday: Humanoid Robot Takes On Monkey Bars",
+        "url": "https://spectrum.ieee.org/video-friday-disaster-response-robots",
+        "summary": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion.Humanoids Summit Seoul: 22–23 September 2026, SEOULIROS ",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Robots Are Learning to Feel",
+        "url": "https://spectrum.ieee.org/tactile-data-robots",
+        "summary": "Dexterous manipulation remains one of the biggest barriers keeping robots from successfully tackling a wide range of everyday tasks. A sense of touch could be the key, but a lack of quality data has held back progress. This is now starting to change as academic labs and startups race to build new ta",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "BAIR Blog",
+        "kind": "analysis",
+        "title": "Gradient-based Planning for World Models at Longer Horizons",
+        "url": "http://bair.berkeley.edu/blog/2026/04/20/grasp/",
+        "summary": "<!-- twitter --> <meta name=\"twitter:title\" content=\"Gradient-based Planning for World Models at Longer Horizons\" /> <meta name=\"twitter:card\" content=\"summary_large_image\" /> <meta name=\"twitter:image\" content=\"https://bair.berkeley.edu/static/blog/grasp/pusht_zoomout.gif\" /> <meta name=\"keywords\" ",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Aseon CEO: ‘The opportunity is to make vehicle servicing as autonomous as driving’",
+        "url": "https://roboticsandautomationnews.com/2026/10/02/aseon-ceo-the-opportunity-is-to-make-vehicle-servicing-as-autonomous-as-driving/105477/",
+        "summary": "The robotaxi industry has spent billions of dollars developing vehicles that can drive without a human behind the wheel. But removing the driver creates another problem: the vehicle may be autonomous on the road, but it still needs people and infrastructure to charge it, clean it, inspect it and kee",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "FMC³ Robotics, Vector, and PEM Motion plan embodied AI joint venture",
+        "url": "https://roboticsandautomationnews.com/2026/10/02/fmc%c2%b3-robotics-vector-and-pem-motion-plan-embodied-ai-joint-venture/105470/",
+        "summary": "At the recent Humanoid Robots Summit 2026 in Stuttgart, Vector Informatik, PEM Motion, and FMC³ Robotics signed a memorandum of understanding at Vector’s headquarters to jointly develop a standardized data infrastructure for industrial embodied AI. The agreement combines the partners’ complementary ",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "IDC data shows Agibot led global humanoid robot shipments in H1 2026",
+        "url": "https://roboticsandautomationnews.com/2026/10/02/idc-data-shows-agibot-led-global-humanoid-robot-shipments-in-h1-2026/105463/",
+        "summary": "Global humanoid robot shipments approached 25,000 units in the first half of 2026, up 432.1 percent year on year, according to the latest market data from International Data Corporation (IDC). Agibot ranked first globally, shipping more than 8,600 humanoid robots during the period and accounting for",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Astribot brings its T1 humanoid robot to North America",
+        "url": "https://roboticsandautomationnews.com/2026/10/02/astribot-brings-its-t1-humanoid-robot-to-north-america/105448/",
+        "summary": "Astribot, a Shenzhen, China-based physical AI company, showcased its T1 humanoid robot to North America for the first time at IROS 2026, which took place from September 27 to October 1 at the David L. Lawrence Convention Center in Pittsburgh, Pennsylvania. The company demonstrated its integrated app",
+        "domains": [
+          "vla",
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Autonomous warehouse robot maker Cyngn achieves ISO 27001 Certification",
+        "url": "https://roboticsandautomationnews.com/2026/10/02/autonomous-warehouse-robot-maker-cyngn-achieves-iso-27001-certification/105445/",
+        "summary": "Autonomous warehouse robot maker Cyngn has achieved ISO/IEC 27001:2022 certification, an internationally recognized standard for information security management systems. ISO 27001 certification demonstrates that Cyngn has implemented an Information Security Management System (ISMS) that meets the re",
+        "domains": [
+          "manufacturing"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Boston Dynamics unveils new four-finger hand for Atlas humanoid robot",
+        "url": "https://roboticsandautomationnews.com/2026/10/02/boston-dynamics-unveils-new-four-finger-hand-for-atlas-humanoid-robot/105440/",
+        "summary": "Boston Dynamics has unveiled a new four-finger hand for its Atlas humanoid robot, designed to combine the dexterity needed for complex manipulation and tool use with the strength and durability required for industrial work. The new hand has 13 degrees of freedom (DOF), including a four-DOF opposable",
+        "domains": [
+          "dexterous",
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robohub",
+        "kind": "analysis",
+        "title": "Robot Talk Episode 164 – Accelerating robot learning, with Michelle Lu",
+        "url": "https://robohub.org/robot-talk-episode-164-accelerating-robot-learning-with-michelle-lu/",
+        "summary": "Claire chatted to Michelle Lu from Vsim Technology about using simulation and artificial intelligence to teach robots new skills. Michelle Lu is co-founder and CEO of Vsim Technology. She was previously a Director of Simulation Technology at NVIDIA, where she and her co-founder created the world’s f",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robohub",
+        "kind": "analysis",
+        "title": "Robotics and automation? Informal reflections on familiar terms",
+        "url": "https://robohub.org/robotics-and-automation-informal-reflections-on-familiar-terms/",
+        "summary": "By Emmet Cole “Robotics and automation” is a pairing heard often around these parts. It puts the “RA” in IEEE RAS, after all. The familiar combination shows up in conference titles, funding calls, and program descriptions. But what is actually meant by the two words? Is robotics a subdomain of autom",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robohub",
+        "kind": "analysis",
+        "title": "What’s coming up at #IROS2026?",
+        "url": "https://robohub.org/whats-coming-up-at-iros2026/",
+        "summary": "The 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026) will be held from 27 September – 1 October in Pittsburgh, USA. The programme includes plenary and keynote talks, workshops, tutorials, forums, competitions, and a debate. Keynote talks The keynote talks will be ",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robohub",
+        "kind": "analysis",
+        "title": "Robotics roadmaps from around the world spotlight of the month: China",
+        "url": "https://robohub.org/robotics-roadmaps-from-around-the-world-spotlight-of-the-month-china/",
+        "summary": "China is targeting the next industrial revolution by doubling down on embodied AI and humanoid robotics, building directly on its vast manufacturing infrastructure. By Ellen H. Rumley and Allison Okamura Beyond the Robot Olympics Chinese robots have quickly entered global public consciousness in rec",
+        "domains": [
+          "market"
+        ]
+      }
+    ],
+    "cn_rss": [
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "DeepSeek扩招！弹性计算团队大量HC，尤其需要资深工程师",
+        "url": "https://www.qbitai.com/2026/10/501381.html",
+        "summary": "岗位JD甩了篇技术报告",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "OpenAI安全团队持续地震！负责人离职，三名员工因泄密被开",
+        "url": "https://www.qbitai.com/2026/10/501368.html",
+        "summary": "又咋啦。。。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "Jev估值100亿美元！创始人Diogo Almeida回答一切",
+        "url": "https://www.qbitai.com/2026/10/500148.html",
+        "summary": "",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "openJiuwen X-Router自演进模型路由技术首发，昇腾亲和，Agent越跑越省，实测减少50+%Token消耗",
+        "url": "https://www.qbitai.com/2026/10/500098.html",
+        "summary": "让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "丘成桐新论文致谢了GPT和Claude",
+        "url": "https://www.qbitai.com/2026/10/499991.html",
+        "summary": "44年前被亲自列入问题清单",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "arXiv最严新规！每人每月最多提交2篇，拒稿不退额度",
+        "url": "https://www.qbitai.com/2026/10/499958.html",
+        "summary": "换区也没用",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "何恺明团队新作：看猫片就能学会ARC挑战",
+        "url": "https://www.qbitai.com/2026/10/499812.html",
+        "summary": "用ImageNet训练encoder",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
+        "url": "https://www.qbitai.com/2026/10/499663.html",
+        "summary": "价格只有Astra一半",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜",
+        "url": "https://www.qbitai.com/2026/09/499654.html",
+        "summary": "千禧年难题的突破，10000个Agent最多占了10%的功劳。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "直播回顾：工业AI的下一个机会在哪？",
+        "url": "https://www.qbitai.com/2026/09/499605.html",
+        "summary": "什么样的AI才适合工业现场？企业真正开始做工业AI时，又该从哪里下手？",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "cnBeta",
+        "kind": "cn_broad",
+        "title": "MIT研发纸薄生物混合机器人，靠活体肌肉细胞划水并响应光线转向",
+        "url": "https://www.cnbeta.com.tw/articles/science/1580574.htm",
+        "summary": "麻省理工学院工程师研发出一种由活体骨骼肌细胞驱动的薄型游泳机器人。它由一片约口香糖大小的柔性水凝胶薄膜和两片鳍状结构组成，肌肉细胞覆盖在鳍片上；研究团队用光刺激肌肉收缩，让鳍片拍动，从而推动机器人在水中前进。研究人员交替照射左右两侧鳍片，还能让它转向，并引导它穿过培养皿里的简单水下迷宫。 阅读全文",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "连败6场遭强制执行 寒武纪前高管无端再提天价索赔 谁最受伤？",
+        "url": "https://www.leiphone.com/category/industrynews/kf23Cq1EQJfpwbcX.html",
+        "summary": "寒武纪9月30日晚间发布公告称，在2025年11月、2026年8月，北京市海淀区人民法院、北京市第一中级人民法院分别做出一审、二审（终审）判决，梁军均败诉。案件走向也进入司法强制执行阶段。不止如此，在双方的股权诉讼纠纷中，梁军已经接连输掉6起诉讼。多起案件共同指向其诉求的核心事实与法律定性，已有司法定论，寒武纪及其相关方的合法权益获得法律支持。梁军方面并不愿正视既定司法结果。就在近期，梁军修改其诉讼请求，调整诉讼金额，企图以劳动纠纷，索取赔偿。从事实层面来看，其本质上仍是围绕同一笔激励股权衍生的重复争议，并无全新的证据与法理支撑。原告方提交诉讼修改请求，几乎是零成本、无限制的。而对上市公司来讲",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "昉擎科技创始人被强制执行 寒武纪股权激励争议尘埃落定",
+        "url": "https://www.leiphone.com/category/chips/6z6p5tEXgSyeu1lf.html",
+        "summary": "寒武纪于2026年9月30日发布《关于离职高管诉讼进展的公告》。从公告内容来看，寒武纪与原高管梁军股权激励纠纷争议基本尘埃落定，梁军连续6次提起诉讼均以败诉收场，且因拒绝配合办理回购手续该案件处于司法强制执行阶段。公告披露内容指出，尽管梁军本次变更诉讼请求提高索赔金额，但对公司日常研发及经营不存在影响。寒武纪表示，已聘请律师团队对梁军诉讼请求进行全面分析、论证，生效判决已经认定：梁军在激励股份限售期内离职的行为，触发了约定的股份回购条款。指定受让人基于回购安排被指定受让案涉合伙份额，符合《持股计划》及相关合伙协议的规定，应属合法有效。基于回购安排，梁军不应享有相应权益。梁军起诉要求赔偿“股权激",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "AI办公进入「上下文战争」，百度如何出牌？",
+        "url": "https://www.leiphone.com/category/industrynews/7q7ZyMuKeWjc1uGz.html",
+        "summary": "上下文，正成为AI办公新的竞争变量。“任何事情都可以成为用户的上下文。”在百度AI Day开放日接受雷峰网采访时，百度集团副总裁、个人超级智能事业群组（PSIG）总裁王颖表示，过往的历史积累、沉淀的文件资产，以及与同事之间的对话，都是上下文的重要组成部分。当AI办公迈入上下文竞争阶段，各家手里的优势也各不相同：有的来自企业协作场景，消息、文档、会议天然沉淀其中；有的来自业务软件，更贴近垂直流程和行业数据；而百度的一张王牌，来自文库和网盘等多年积累的内容资产。对百度而言，这是一座“富矿”——文库和网盘，均已运营十余年。这种优势，让团队在过去几年里并没有跟随ChatBot热潮，而是前瞻性地选择生产",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "DeepSeek 开源算子工具大礼包，联手华为昇腾，手撕 CUDA 绑定！",
+        "url": "https://www.leiphone.com/category/yanxishe/UUIfK7eeFE9Ws1JI.html",
+        "summary": "一套代码能跑遍所有芯片。    作者丨高允毅    编辑丨岑   峰                                                                                                       刚刚，DeepSeek做了一个开源壮举：把给英伟达 GPU 写代码的全套工具链，原样铺到了华为昇腾 950 NPU 上。最核心的算子开发产品 TileLang 官宣原生支持昇腾。不仅如此，连同 DeepGEMM、DeepEP、FlashMLA、TileKernels、DeepSelect 五大核心计算与通信库也同步推出昇腾版",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "Muse爆火，dots入场：Personal Agent开始和互联网平台抢入口",
+        "url": "https://www.leiphone.com/category/yanxishe/Zqcw9XvSO2Ht6FIQ.html",
+        "summary": "Personal Agent，正在成为这一轮 AI 产品竞争里最热的新概念之一。9 月 29 日，OpenAI 发布了可以长期在线的个人 Agent 产品 dots，提出“always-on agents”。更早把这个词推到台前的是 Meta 发布的个人 Agent 产品 Muse，截至 9 月下旬下载量突破 300 万，一度将 ChatGPT 从美国 App Store 免费榜第一的位置上挤下。（雷峰网）Muse 运行在一台独立的云端虚拟电脑里，有自己的浏览器，可以替用户打开网页、填写表格、发邮件、预订旅行；一些耗时更长的任务，即使用户退出 App，它也可以继续在后台执行。扎克伯格举过用 M",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "2000座高速闪充站落成，比亚迪如何扛住国庆车流？",
+        "url": "https://www.leiphone.com/category/transportation/GE7BYDthsIqb4nA8.html",
+        "summary": "作者丨马诗晴编辑丨马广宇在第2000座高速闪充站建成后，比亚迪将迎来第一场大考。几天前，比亚迪宣布第2000座高速闪充站在扬州宝应服务区落成。这意味着在国庆假期，比亚迪高速闪充网络将要面临首次车流集中压力测试。在现场演示中，比亚迪汽车从10%电量充至97%，用时约9分钟。用比亚迪闪充业务总经理王俊保的的话来说：“充电站‘有’和‘好用’是两个概念”，而从其表述来看，比亚迪是后者。当前，节假日补能需求仍在增长。从国家能源局披露的数据来看，今年春节假期，全国高速公路新能源汽车日均充电量达到0.17亿度，而五一期间日均充电量达到了0.19亿度，再创历史新高。 但单车充得快，并不意味着高峰时段排队就短。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "实测 Qwen-3.8 与 GLM-5.3 的 Flash 版：谁能让我提前下班半小时？",
+        "url": "https://www.leiphone.com/category/yanxishe/Dp2FW4Pb6iLUvdhf.html",
+        "summary": "2026 年 8 月 26 日，同一天，Qwen 发布 Qwen3.8-Flash-Next/Qwen3.8-Flash，Z.AI 发布 GLM-5.3-Flash。从名字看，“Flash 模型”代表低价、快速、负责高频调用，更多是旗舰模型的补位产品，但这次两家官方给出的宣传重点，其实已经不再停留在便宜聊天上。（雷峰网）千问云对 Qwen3.8-Flash 的定位直指 1M 长上下文、长文档、完整代码库、复杂对话、编程辅助、工作流编排和视觉理解，并强调它能够接入开发者工具；而智谱对 GLM-5.3-Flash 的描述则更进一步把视觉编程、办公任务、金融研究、文档处理，以及 PPTX、PDF、D",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "从 Codex Harness 开源，看 AI 公司的护城河是什么？",
+        "url": "https://www.leiphone.com/category/yanxishe/HduKYmfhs2SeXQ39.html",
+        "summary": "8 月 19 日，OpenAI 正式开源了 Codex Harness。这家公司名字里的 Open，久违地兑现了一次。（雷峰网）长期深耕 Agent Harness 的开发者群体对该消息的普遍反馈是“振奋”。因为过去只有少数顶尖 Agent 产品掌握的 Harness，现在终于开始向更多开发者和企业开放了。随着 Codex 等最佳实践的开源，Harness 正在经历从“私产”到“公器”的转化，其本身的稀缺性，正在快速下降。这也是 OpenAI 为什么终于“Open”了一回的重要原因。当顶尖 Agent 产品积累的 Harness 方法论不断扩散，Codex 这样的最佳实践也正式开源，开发者便可",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "全网最硬核 OpenClaw 2.0 实测：从 ToC 到 ToB 的试探，Agent 网关能重塑工作流边界吗？",
+        "url": "https://www.leiphone.com/category/yanxishe/7bPyLlZDfncTOw5B.html",
+        "summary": "8 月 31 日，OpenClaw 2.0 正式发布（版本号： v2026.8.1 ），933 位贡献者、569 位首次贡献者、16,962 个 PR 提交。这组数字让它成为近期最受关注的开源 Agent 更新之一。（雷峰网）在过去 230 天里，OpenClaw 曾发布 106 个版本，但在 2.0 到来前已经有近 7 周没有更新了。因此，这一次 OpenClaw 不是给 Agent 多补几个工具，而是把安装、浏览器、云会话、记忆管理、插件、安全、多人协作和恢复能力几乎重新梳理了一遍。因此，一个急需回答的问题是：OpenClaw 2.0 到底是一次声量很大的版本升级，还是把个人 AI Age",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "5500颗光引擎如何撑起4096卡超节点？华为NPO的故事还没讲完",
+        "url": "https://www.leiphone.com/category/chips/kgknicdWxIIoulL9.html",
+        "summary": "华为自研光引擎Hi-ONE的首个落点终于浮出水面——千卡级超节点。不久前的CIOE上，海思已经展示这颗带宽能力高达7.2T的光引擎，并透露Hi-ONE将以NPO（Near-Packaged Optics，近封装光学）形式进入下一代超节点。华为称，这也是全球首个采用NPO的AI智算超节点。为什么是NPO？答案藏在电信号的传输路径上。随着芯片侧高速接口速率不断提升，从电芯片到光引擎的这段电连接越长，信号越容易出现衰减和失真，对信号完整性的挑战也越大。相比传统可插拔光模块还要让高速电信号在PCB板上“长途跋涉”，也不同于CPO（Co-Packaged Optics，共封装光学）将光引擎与主芯片更紧密",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "对比 Codex，免费的 AgnesCode 也能在底层算子优化任务中打得有来有回",
+        "url": "https://www.leiphone.com/category/yanxishe/Du0MZiWR62J4pzzr.html",
+        "summary": " AgnesCode在部分芯片上跑出更高性能，免费模型完成专业级交付。    作者丨吴海明 曹PP    编辑丨李   娜                                                                                                       免费的 AI Coding Agent，能不能和付费 Codex 在真实工程任务里打得有来有回？过去一年，我们已经习惯了让 Coding Agent 写网页、做应用、修 Bug。但这一次，我们想把它往更底层推一步：让 AI 去优化大模型自己运行时使用的算子。所谓“算子”，",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "从海拉鲁到现实世界：视频模型如何理解「变化」",
+        "url": "https://www.leiphone.com/category/yanxishe/NGx4Ckx3MbUWlIs3.html",
+        "summary": "HiDream-O1-Video 的三场世界回应测试。    作者丨Reah    编辑丨李   娜                                                                                                       在《塞尔达传说：旷野之息》中，玩家点燃一片草地，火焰会沿着草叶蔓延，热空气随之升起。此时展开滑翔帆，林克便能借助上升气流离开地面。雷雨中装备金属武器可能招来闪电，降雨又会让攀爬变得困难。海拉鲁并没有追求照片级的视觉拟真，却通过一组稳定、可组合的规则，让玩家感受到一个世界正在持续运行。这种体验的",
+        "domains": []
+      }
+    ],
+    "markets": [
+      {
+        "sym": "TSLA",
+        "name": "特斯拉(Optimus)",
+        "price": 370.59,
+        "pct_5d": 3.68,
+        "currency": "USD"
+      },
+      {
+        "sym": "ISRG",
+        "name": "直觉外科(手术机器人)",
+        "price": 391.95,
+        "pct_5d": -5.51,
+        "currency": "USD"
+      },
+      {
+        "sym": "ABB",
+        "name": "ABB(工业机器人)",
+        "_error": "HTTP Error 404: Not Found"
+      },
+      {
+        "sym": "SYM",
+        "name": "Symbotic(仓储机器人)",
+        "price": 43.28,
+        "pct_5d": 3.05,
+        "currency": "USD"
+      },
+      {
+        "sym": "SERV",
+        "name": "Serve Robotics(配送)",
+        "price": 4.62,
+        "pct_5d": 4.18,
+        "currency": "USD"
+      },
+      {
+        "sym": "PATH",
+        "name": "UiPath(自动化)",
+        "price": 13.12,
+        "pct_5d": 7.63,
+        "currency": "USD"
+      },
+      {
+        "sym": "NVDA",
+        "name": "英伟达(机器人算力)",
+        "price": 233.95,
+        "pct_5d": 2.22,
+        "currency": "USD"
+      },
+      {
+        "sym": "9618.HK",
+        "name": "京东(物流机器人)",
+        "price": 102.9,
+        "pct_5d": -0.77,
+        "currency": "HKD"
+      }
+    ],
+    "cn_markets": [
+      {
+        "secid": "1.688836",
+        "name": "宇树科技",
+        "market": "A股",
+        "price": 450.4,
+        "pct_5d": -0.14,
+        "currency": "CNY"
+      },
+      {
+        "secid": "116.09880",
+        "name": "优必选",
+        "market": "港股",
+        "price": 73.5,
+        "pct_5d": -1.14,
+        "currency": "HKD"
+      },
+      {
+        "secid": "116.09660",
+        "name": "地平线机器人",
+        "market": "港股",
+        "price": 4.05,
+        "pct_5d": -3.11,
+        "currency": "HKD"
+      },
+      {
+        "secid": "0.300124",
+        "name": "汇川技术",
+        "market": "A股",
+        "price": 51.9,
+        "pct_5d": -1.12,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.002747",
+        "name": "埃斯顿",
+        "market": "A股",
+        "price": 28.22,
+        "pct_5d": 0.21,
+        "currency": "CNY"
+      },
+      {
+        "secid": "1.688017",
+        "name": "绿的谐波",
+        "market": "A股",
+        "price": 273.75,
+        "pct_5d": -0.67,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.002230",
+        "name": "科大讯飞",
+        "market": "A股",
+        "price": 37.22,
+        "pct_5d": 0.05,
+        "currency": "CNY"
+      }
+    ],
+    "errors": [
+      "rss VentureBeat AI: HTTP Error 429: Too Many Requests"
+    ],
+    "counts": {
+      "hn": 3,
+      "arxiv": 58,
+      "hf_papers": 25,
+      "rss": 53,
+      "cn_rss": 23,
+      "markets": 7,
+      "cn_markets": 7,
+      "errors": 1
+    }
+  },
+  "curated": {
+    "title_date": "2026-W40",
+    "window": "2026-09-26 ~ 2026-10-03",
+    "domains": [
+      {
+        "id": "vla",
+        "emoji": "1️⃣",
+        "name": "VLA（视觉-语言-动作模型）",
+        "items": [
+          {
+            "title": "What Makes World Action Models Generalize? An Empirical Study of Test-Time Future Modeling",
+            "summary": "比较显式与潜式 WAM 的测试时未来建模：结果表明，推理阶段省略未来视频生成仍可保持竞争力，为 VLA/WAM 的低延迟部署提供了设计依据。[端到端VLA]",
+            "url": "https://arxiv.org/abs/2609.34981",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence",
+            "summary": "将自演化 coding agent 的程序化反馈机制引入物理世界智能，强调把任务条件、进度与失败恢复显式化，以提升 VLA 跨布局和跨指令泛化。[端到端VLA]",
+            "url": "https://arxiv.org/abs/2609.35432",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data",
+            "summary": "提出基于 2 万小时以上开放数据预训练的统一 WAM，把视觉动态、场景语义、几何与动作生成纳入同一框架。[端到端VLA]",
+            "url": "https://arxiv.org/abs/2609.31394",
+            "source": "hf_papers",
+            "hot": true
+          }
+        ]
+      },
+      {
+        "id": "dexterous",
+        "emoji": "2️⃣",
+        "name": "灵巧手 / 灵巧操作",
+        "items": [
+          {
+            "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
+            "summary": "RPG 不更新模型权重，而是从离线数据重构操作能力，在实践阶段自我改进，再迁移到真实执行，降低技能维护和奖励设计成本。[控制层·BC]",
+            "url": "http://arxiv.org/abs/2610.02204v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "Recursive Harness Distillation across Agents for Robot Manipulation",
+            "summary": "利用更强 agent 在交互中发现干预策略，并将有效的失败诊断与恢复过程蒸馏到操作策略中，面向任务变化提升 VLA 的灵巧操作鲁棒性。[规划层]",
+            "url": "https://arxiv.org/abs/2609.33378",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "Beyond the Current Scene: Event-Referential Grasping with Active View Selection",
+            "summary": "BeyondSCe 让机器人根据过去事件中物体扮演的角色定位抓取目标，即使目标当前不可见，也能主动选择视角完成零样本抓取。[感知层]",
+            "url": "https://arxiv.org/abs/2609.39375",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "Robots Are Learning to Feel",
+            "summary": "触觉数据质量与规模正在改善，为遮挡条件下的接触丰富操作提供新的感知信号；具体公司产品和数据规模需以官方渠道核验。[感知层]",
+            "url": "https://spectrum.ieee.org/tactile-data-robots",
+            "source": "rss"
+          }
+        ]
+      },
+      {
+        "id": "sim2real",
+        "emoji": "3️⃣",
+        "name": "sim2real / 仿真到真实",
+        "items": [
+          {
+            "title": "FERPO: Forward Entropy-Regularized Policy Optimization",
+            "summary": "针对 critic 价值准确但动作梯度不可靠的问题，引入前向熵正则化策略优化，改善连续控制中的在线 RL 更新稳定性。[控制层·RL]",
+            "url": "http://arxiv.org/abs/2610.02198v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "Morphometric Imitation: From Morphology and Contact Aware Hand Retargeting to Sim-to-Real Visuomotor Policy",
+            "summary": "通过形态与接触感知的手部动作重定向，把人手物交互重建为可行的仿真策略，并实现零样本 sim-to-real 视觉运动控制。[控制层·BC]",
+            "url": "https://arxiv.org/abs/2609.28660",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "TERRA: Terrain-Aware Reconstruction, Retargeting and Control for Musculoskeletal Locomotion",
+            "summary": "将地形重建、动作重定向与肌肉驱动控制结合，使肌肉骨骼运动学习从平地扩展到复杂地形。[控制层·BC]",
+            "url": "https://arxiv.org/abs/2609.38653",
+            "source": "hf_papers"
+          },
+          {
+            "title": "BLT*: Informed Belief Localization Trees for Uncertainty-Aware Planning on Digital Twins",
+            "summary": "在点云数字孪生上把 RRT* 扩展到带不确定性的 belief space planning，并用 W2 度量高效连接高斯信念状态。[规划层]",
+            "url": "http://arxiv.org/abs/2610.01972v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "embodied-model",
+        "emoji": "4️⃣",
+        "name": "具身模型（感知/规划/控制三层 × 动作生成方式）",
+        "items": [
+          {
+            "title": "InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation",
+            "summary": "通过测试时演化奖励程序复用已有技能，使人形控制器能在未训练任务上从自身尝试中改进并保留所得能力，无需重新训练。[控制层·RL]",
+            "url": "http://arxiv.org/abs/2610.02196v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "SkeleWAM: Skeleton World-Action Modeling for Efficient Robotic Manipulation",
+            "summary": "以机器人关节与物体关键点组成的稀疏 3D skeleton 表示场景，替代外观冗余的视频潜变量，降低世界-动作模型的控制建模成本。[控制层·世界模型]",
+            "url": "http://arxiv.org/abs/2610.02120v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "World Observer: Joint Actor-Observer Generation for Persistent World Modeling",
+            "summary": "将 actor 与 observer 解耦，让世界模型持续观察行动者视野之外的区域，减少物体离开视野后状态和动力学信息丢失。[控制层·世界模型]",
+            "url": "https://arxiv.org/abs/2610.02162",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "D-JEPA: A Decision-Aligned Latent World Model",
+            "summary": "指出潜空间预测准确并不等价于决策正确，提出面向候选执行结果对齐的 latent world model，缩小预测距离与实际成功率之间的决策局部差距。[控制层·世界模型]",
+            "url": "https://arxiv.org/abs/2609.24749",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "Watch, Infer, Coordinate: Inferring Robot Partner Constraints for Zero-Shot Coordination",
+            "summary": "机器人通过观察伙伴行为推断其硬件退化或执行约束，再用于双机器人操作协同，核心是从交互观测到可执行规划的零样本推断。[规划层]",
+            "url": "http://arxiv.org/abs/2610.02170v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "embodied-chip",
+        "emoji": "5️⃣",
+        "name": "具身智能芯片（机器人计算 / 边缘 NPU）",
+        "items": []
+      },
+      {
+        "id": "manufacturing",
+        "emoji": "6️⃣",
+        "name": "制造 / 产线",
+        "items": [
+          {
+            "title": "FMC³ Robotics, Vector, and PEM Motion plan embodied AI joint venture",
+            "summary": "三方计划联合建设工业具身 AI 的标准化数据基础设施，覆盖机器人、汽车工程与运动控制；合作细节和落地进度需以官方渠道核验。",
+            "url": "https://roboticsandautomationnews.com/2026/10/02/fmc%c2%b3-robotics-vector-and-pem-motion-plan-embodied-ai-joint-venture/105470/",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "IDC data shows Agibot led global humanoid robot shipments in H1 2026",
+            "summary": "报道援引 IDC 数据称 2026 年上半年全球人形机器人出货接近 2.5 万台，Agibot 出货超过 8600 台；数据口径需以 IDC 或公司官方发布核验。",
+            "url": "https://roboticsandautomationnews.com/2026/10/02/idc-data-shows-agibot-led-global-humanoid-robot-shipments-in-h1-2026/105463/",
+            "source": "rss",
+            "hot": true
+          }
+        ]
+      },
+      {
+        "id": "market",
+        "emoji": "7️⃣",
+        "name": "市场 / 产业",
+        "items": [
+          {
+            "title": "F.02 Decommission",
+            "summary": "Figure 公布 F.02 退役信息，提供了人形机器人产品迭代、设备生命周期与产业化节奏的一个公开信号；细节以 Figure 官方页面为准。",
+            "url": "https://www.figure.ai/news/f-02-decommission",
+            "source": "hn",
+            "score": 82,
+            "hot": true
+          },
+          {
+            "title": "Boston Dynamics unveils new four-finger hand for Atlas humanoid robot",
+            "summary": "Boston Dynamics 为 Atlas 发布新的四指灵巧手，强调 13 个自由度、工具使用能力与工业耐久性，产品参数和量产计划需以官方渠道核验。",
+            "url": "https://roboticsandautomationnews.com/2026/10/02/boston-dynamics-unveils-new-four-finger-hand-for-atlas-humanoid-robot/105440/",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "Astribot brings its T1 humanoid robot to North America",
+            "summary": "Astribot 在 IROS 2026 首次向北美展示 T1 人形机器人，体现中国具身产品走向海外展示与商业拓展的趋势；产品进展需以公司官方渠道核验。",
+            "url": "https://roboticsandautomationnews.com/2026/10/02/astribot-brings-its-t1-humanoid-robot-to-north-america/105448/",
+            "source": "rss",
+            "hot": true
+          }
+        ]
+      }
+    ],
+    "highlights": [
+      "世界-动作模型开始从“预测未来”转向“只在训练需要时建模未来”：潜式 WAM 的测试时消融为低延迟 VLA 部署提供了直接依据。[端到端VLA]",
+      "RPG 与 InterEvolve 分别从技能重构和奖励程序演化切入，展示了不更新模型权重也能让机器人在新任务上自我改进的路径。[控制层·BC / 控制层·RL]",
+      "SkeleWAM、World Observer 与 D-JEPA 共同推进世界模型：更紧凑的几何表示、更持久的视野外状态，以及与执行决策对齐的潜空间。[控制层·世界模型]"
+    ],
+    "industry": {
+      "stocks": [
+        {
+          "name": "特斯拉(Optimus)",
+          "sym": "TSLA",
+          "price": 370.59,
+          "pct": 3.68,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "直觉外科(手术机器人)",
+          "sym": "ISRG",
+          "price": 391.95,
+          "pct": -5.51,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Symbotic(仓储机器人)",
+          "sym": "SYM",
+          "price": 43.28,
+          "pct": 3.05,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Serve Robotics(配送)",
+          "sym": "SERV",
+          "price": 4.62,
+          "pct": 4.18,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "UiPath(自动化)",
+          "sym": "PATH",
+          "price": 13.12,
+          "pct": 7.63,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "英伟达(机器人算力)",
+          "sym": "NVDA",
+          "price": 233.95,
+          "pct": 2.22,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "京东(物流机器人)",
+          "sym": "9618.HK",
+          "price": 102.9,
+          "pct": -0.77,
+          "currency": "HKD",
+          "note": ""
+        }
+      ],
+      "cn_stocks": [
+        {
+          "name": "宇树科技",
+          "sym": "1.688836",
+          "market": "A股",
+          "price": 450.4,
+          "pct": -0.14,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "优必选",
+          "sym": "116.09880",
+          "market": "港股",
+          "price": 73.5,
+          "pct": -1.14,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "地平线机器人",
+          "sym": "116.09660",
+          "market": "港股",
+          "price": 4.05,
+          "pct": -3.11,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "汇川技术",
+          "sym": "0.300124",
+          "market": "A股",
+          "price": 51.9,
+          "pct": -1.12,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "埃斯顿",
+          "sym": "0.002747",
+          "market": "A股",
+          "price": 28.22,
+          "pct": 0.21,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "绿的谐波",
+          "sym": "1.688017",
+          "market": "A股",
+          "price": 273.75,
+          "pct": -0.67,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "科大讯飞",
+          "sym": "0.002230",
+          "market": "A股",
+          "price": 37.22,
+          "pct": 0.05,
+          "currency": "CNY",
+          "note": ""
+        }
+      ],
+      "funding": [
+        {
+          "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
+          "summary": "Proception 解决与 Tesla 的商业秘密诉讼并宣布融资 1100 万美元，聚焦机器人手部训练数据；具体交易条款以公司官方渠道核验。",
+          "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+          "amount": "$11M"
+        },
+        {
+          "title": "FMC³ Robotics, Vector, and PEM Motion plan embodied AI joint venture",
+          "summary": "三方计划成立具身 AI 合资合作，建设工业场景标准化数据基础设施；非融资事件，合作范围与落地需以官方渠道核验。",
+          "url": "https://roboticsandautomationnews.com/2026/10/02/fmc%c2%b3-robotics-vector-and-pem-motion-plan-embodied-ai-joint-venture/105470/",
+          "amount": null
+        },
+        {
+          "title": "IDC data shows Agibot led global humanoid robot shipments in H1 2026",
+          "summary": "报道援引 IDC 称上半年人形机器人出货快速增长且 Agibot 居前；这是部署/出货动态，数据需以 IDC 或公司官方渠道核验。",
+          "url": "https://roboticsandautomationnews.com/2026/10/02/idc-data-shows-agibot-led-global-humanoid-robot-shipments-in-h1-2026/105463/",
+          "amount": null
+        }
+      ]
+    }
+  },
+  "meta": {}
+}

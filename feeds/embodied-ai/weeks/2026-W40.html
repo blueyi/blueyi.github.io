@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W40 · 09-28 ~ 10-04</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W40</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W40 · 09-28 ~ 10-04</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-09-28 ~ 2026-10-04</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W40</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>世界-动作模型开始从“预测未来”转向“只在训练需要时建模未来”：潜式 WAM 的测试时消融为低延迟 VLA 部署提供了直接依据。[端到端VLA]</li>
+      <li>RPG 与 InterEvolve 分别从技能重构和奖励程序演化切入，展示了不更新模型权重也能让机器人在新任务上自我改进的路径。[控制层·BC / 控制层·RL]</li>
+      <li>SkeleWAM、World Observer 与 D-JEPA 共同推进世界模型：更紧凑的几何表示、更持久的视野外状态，以及与执行决策对齐的潜空间。[控制层·世界模型]</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.34981" target="_blank" rel="noopener">What Makes World Action Models Generalize? An Empirical Study of Test-Time Future Modeling</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">比较显式与潜式 WAM 的测试时未来建模：结果表明，推理阶段省略未来视频生成仍可保持竞争力，为 VLA/WAM 的低延迟部署提供了设计依据。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.35432" target="_blank" rel="noopener">Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">将自演化 coding agent 的程序化反馈机制引入物理世界智能，强调把任务条件、进度与失败恢复显式化，以提升 VLA 跨布局和跨指令泛化。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.31394" target="_blank" rel="noopener">InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">提出基于 2 万小时以上开放数据预训练的统一 WAM，把视觉动态、场景语义、几何与动作生成纳入同一框架。[端到端VLA]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.02204v1" target="_blank" rel="noopener">Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents</a></div>
+      <div class="it-sum">RPG 不更新模型权重，而是从离线数据重构操作能力，在实践阶段自我改进，再迁移到真实执行，降低技能维护和奖励设计成本。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.33378" target="_blank" rel="noopener">Recursive Harness Distillation across Agents for Robot Manipulation</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">利用更强 agent 在交互中发现干预策略，并将有效的失败诊断与恢复过程蒸馏到操作策略中，面向任务变化提升 VLA 的灵巧操作鲁棒性。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.39375" target="_blank" rel="noopener">Beyond the Current Scene: Event-Referential Grasping with Active View Selection</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">BeyondSCe 让机器人根据过去事件中物体扮演的角色定位抓取目标，即使目标当前不可见，也能主动选择视角完成零样本抓取。[感知层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/tactile-data-robots" target="_blank" rel="noopener">Robots Are Learning to Feel</a></div>
+      <div class="it-sum">触觉数据质量与规模正在改善，为遮挡条件下的接触丰富操作提供新的感知信号；具体公司产品和数据规模需以官方渠道核验。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.02198v1" target="_blank" rel="noopener">FERPO: Forward Entropy-Regularized Policy Optimization</a></div>
+      <div class="it-sum">针对 critic 价值准确但动作梯度不可靠的问题，引入前向熵正则化策略优化，改善连续控制中的在线 RL 更新稳定性。[控制层·RL]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.28660" target="_blank" rel="noopener">Morphometric Imitation: From Morphology and Contact Aware Hand Retargeting to Sim-to-Real Visuomotor Policy</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">通过形态与接触感知的手部动作重定向，把人手物交互重建为可行的仿真策略，并实现零样本 sim-to-real 视觉运动控制。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.38653" target="_blank" rel="noopener">TERRA: Terrain-Aware Reconstruction, Retargeting and Control for Musculoskeletal Locomotion</a></div>
+      <div class="it-sum">将地形重建、动作重定向与肌肉驱动控制结合，使肌肉骨骼运动学习从平地扩展到复杂地形。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.01972v1" target="_blank" rel="noopener">BLT*: Informed Belief Localization Trees for Uncertainty-Aware Planning on Digital Twins</a></div>
+      <div class="it-sum">在点云数字孪生上把 RRT* 扩展到带不确定性的 belief space planning，并用 W2 度量高效连接高斯信念状态。[规划层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.02196v1" target="_blank" rel="noopener">InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation</a></div>
+      <div class="it-sum">通过测试时演化奖励程序复用已有技能，使人形控制器能在未训练任务上从自身尝试中改进并保留所得能力，无需重新训练。[控制层·RL]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.02120v1" target="_blank" rel="noopener">SkeleWAM: Skeleton World-Action Modeling for Efficient Robotic Manipulation</a></div>
+      <div class="it-sum">以机器人关节与物体关键点组成的稀疏 3D skeleton 表示场景，替代外观冗余的视频潜变量，降低世界-动作模型的控制建模成本。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.02162" target="_blank" rel="noopener">World Observer: Joint Actor-Observer Generation for Persistent World Modeling</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">将 actor 与 observer 解耦，让世界模型持续观察行动者视野之外的区域，减少物体离开视野后状态和动力学信息丢失。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2609.24749" target="_blank" rel="noopener">D-JEPA: A Decision-Aligned Latent World Model</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">指出潜空间预测准确并不等价于决策正确，提出面向候选执行结果对齐的 latent world model，缩小预测距离与实际成功率之间的决策局部差距。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.02170v1" target="_blank" rel="noopener">Watch, Infer, Coordinate: Inferring Robot Partner Constraints for Zero-Shot Coordination</a></div>
+      <div class="it-sum">机器人通过观察伙伴行为推断其硬件退化或执行约束，再用于双机器人操作协同，核心是从交互观测到可执行规划的零样本推断。[规划层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/02/fmc%c2%b3-robotics-vector-and-pem-motion-plan-embodied-ai-joint-venture/105470/" target="_blank" rel="noopener">FMC³ Robotics, Vector, and PEM Motion plan embodied AI joint venture</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">三方计划联合建设工业具身 AI 的标准化数据基础设施，覆盖机器人、汽车工程与运动控制；合作细节和落地进度需以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/02/idc-data-shows-agibot-led-global-humanoid-robot-shipments-in-h1-2026/105463/" target="_blank" rel="noopener">IDC data shows Agibot led global humanoid robot shipments in H1 2026</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">报道援引 IDC 数据称 2026 年上半年全球人形机器人出货接近 2.5 万台，Agibot 出货超过 8600 台；数据口径需以 IDC 或公司官方发布核验。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">82★</span><a href="https://www.figure.ai/news/f-02-decommission" target="_blank" rel="noopener">F.02 Decommission</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Figure 公布 F.02 退役信息，提供了人形机器人产品迭代、设备生命周期与产业化节奏的一个公开信号；细节以 Figure 官方页面为准。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/02/boston-dynamics-unveils-new-four-finger-hand-for-atlas-humanoid-robot/105440/" target="_blank" rel="noopener">Boston Dynamics unveils new four-finger hand for Atlas humanoid robot</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Boston Dynamics 为 Atlas 发布新的四指灵巧手，强调 13 个自由度、工具使用能力与工业耐久性，产品参数和量产计划需以官方渠道核验。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/02/astribot-brings-its-t1-humanoid-robot-to-north-america/105448/" target="_blank" rel="noopener">Astribot brings its T1 humanoid robot to North America</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Astribot 在 IROS 2026 首次向北美展示 T1 人形机器人，体现中国具身产品走向海外展示与商业拓展的趋势；产品进展需以公司官方渠道核验。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（14 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>370.59 USD</td><td class="up">+3.68%</td><td></td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>391.95 USD</td><td class="down">-5.51%</td><td></td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>43.28 USD</td><td class="up">+3.05%</td><td></td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>4.62 USD</td><td class="up">+4.18%</td><td></td></tr>
+        <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>13.12 USD</td><td class="up">+7.63%</td><td></td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>233.95 USD</td><td class="up">+2.22%</td><td></td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>102.9 HKD</td><td class="down">-0.77%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>宇树科技 <span class="tk">1.688836 · A股</span></td><td>450.4 CNY</td><td class="down">-0.14%</td><td></td></tr>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>73.5 HKD</td><td class="down">-1.14%</td><td></td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>4.05 HKD</td><td class="down">-3.11%</td><td></td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>51.9 CNY</td><td class="down">-1.12%</td><td></td></tr>
+        <tr><td>埃斯顿 <span class="tk">0.002747 · A股</span></td><td>28.22 CNY</td><td class="up">+0.21%</td><td></td></tr>
+        <tr><td>绿的谐波 <span class="tk">1.688017 · A股</span></td><td>273.75 CNY</td><td class="down">-0.67%</td><td></td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>37.22 CNY</td><td class="up">+0.05%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$11M</span><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">Robot hand company settles Tesla trade secret suit and announces $11M raise</a></div><div class="it-sum">Proception 解决与 Tesla 的商业秘密诉讼并宣布融资 1100 万美元，聚焦机器人手部训练数据；具体交易条款以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/02/fmc%c2%b3-robotics-vector-and-pem-motion-plan-embodied-ai-joint-venture/105470/" target="_blank" rel="noopener">FMC³ Robotics, Vector, and PEM Motion plan embodied AI joint venture</a></div><div class="it-sum">三方计划成立具身 AI 合资合作，建设工业场景标准化数据基础设施；非融资事件，合作范围与落地需以官方渠道核验。</div></li>
+      <li><div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/02/idc-data-shows-agibot-led-global-humanoid-robot-shipments-in-h1-2026/105463/" target="_blank" rel="noopener">IDC data shows Agibot led global humanoid robot shipments in H1 2026</a></div><div class="it-sum">报道援引 IDC 称上半年人形机器人出货快速增长且 Agibot 居前；这是部署/出货动态，数据需以 IDC 或公司官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
