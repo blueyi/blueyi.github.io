@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-10-09</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-10-09</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-10-09 · 周五</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-10-08 ~ 2026-10-09</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-10-09</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>资本叙事与算力叙事出现裂缝</b>：OpenAI 年化营收被指比此前信号低 200 亿美元(HN 346 分),叠加其数学成果因不合规被撤回(HN 241 分),&quot;前沿能力 → 变现&quot;的链条第一次被公开证伪式打脸。</li>
+      <li><b>AI 生成数学进入规模化</b>：OpenAI 一次性抛出 722 个数学发现,以 HN 1321 分登顶,AI 自动科研从&quot;演示&quot;变成&quot;批量交付&quot;,同时也把同行评审与学术伦理问题推到台前。</li>
+      <li><b>端侧/本地 AI 一次性收到三重利好</b>：NVIDIA×Microsoft 的 RTX Spark、DGX Spark 64GB、Claude Haiku 5.5 同日出现,桌面与笔电正成为 Agent 的真实运行载体。</li>
+      <li><b>供应链与地缘两条线并行</b>：TSMC 与 GlobalFoundries 的美国封装协议、Micron HBM4 的&quot;15 倍黄金&quot;定价、以及乌克兰无人机命中 Yandex 超算,共同说明算力的物理属性与地缘属性同样脆弱。</li>
+      <li><b>具身智能资金与平台双热</b>：世界模型(Odyssey-3)、新硬件(Atlas 新手机械手)与密集融资(60 亿/17 亿/6000 万美元)同步推进,国内以中东出海与商用车智驾为切口跟进。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">The Register</span><a href="https://www.theregister.com/systems/2026/10/08/tsmc-taps-globalfoundries-to-bolster-us-silicon-interposer-production-in-2b-deal/5302061" target="_blank" rel="noopener">TSMC 联手 GlobalFoundries 在美国扩产硅中介层</a></div>
+      <div class="it-sum">五年协议、价值约 20 亿美元,标志着 CoWoS 先进封装供应链首次引入美国本土代工环节,AI/HPC 加速器产能瓶颈有望释放。[Tom&#x27;s Hardware](https://www.tomshardware.com/tech-industry/semiconductors/globalfoundries-to-produce-silicon-interposers-for-tsmcs-cowos-in-the-us-five-year-agreement-valued-at-usd2-billion) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Chips and Cheese</span><a href="https://chipsandcheese.com/p/nvidias-olympus-core-pushing-server" target="_blank" rel="noopener">NVIDIA 的服务器新核心 &quot;Olympus&quot;</a></div>
+      <div class="it-sum">Chips and Cheese 深度拆解其单线程性能如何突破服务器芯片长期落后于客户端的历史短板。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">The Next Platform</span><a href="https://www.nextplatform.com/store/2026/10/02/microns-numbers-show-why-hbm4-memory-is-worth-15x-its-weight-in-gold/5300701" target="_blank" rel="noopener">HBM4 是半导体最贵的一块肉</a></div>
+      <div class="it-sum">Micron 财报数据揭示 HBM4 单位价值约为等重黄金的 15 倍,存储厂商定价权空前。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">SemiAnalysis</span><a href="https://semianalysis.com/2025/09/08/huawei-ascend-production-ramp/" target="_blank" rel="noopener">华为 Ascend 产能爬坡全景</a></div>
+      <div class="it-sum">SemiAnalysis 指出 die bank、TSMC 继续代工与 HBM 供给是三大变量,其中 HBM 是真正的产能瓶颈。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Qualcomm @ Chips and Cheese</span><a href="https://chipsandcheese.com/p/qualcomms-system-level-architecture" target="_blank" rel="noopener">Arm C2-Ultra / Qualcomm Snapdragon X2 Elite</a></div>
+      <div class="it-sum">前者回应 IPC 口径质疑(最大增幅 7%),后者聚焦笔电 SoC 系统级架构;均在 AI PC 竞争线下持续推进。[Arm @ Chips and Cheese](https://chipsandcheese.com/p/arms-c2-ultra-g2-ultra-nx-and-css) ·</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.PL</span><a href="https://arxiv.org/abs/2610.08962" target="_blank" rel="noopener">Go 死锁自动检测与修复工具 GoDDaR</a></div>
+      <div class="it-sum">针对 goroutine 非确定性调度下的局部死锁,补足 Go 运行时只能捕获全局死锁的空白。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.PL</span><a href="https://arxiv.org/abs/2610.09198" target="_blank" rel="noopener">Rust 异步运行时的模块化活性验证</a></div>
+      <div class="it-sum">首次系统化验证 async runtime 的 liveness(响应性)性质,这一关键基础设施此前少有形式化保障。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">GitHub</span><a href="https://github.com/pingdotgg/ts-rust" target="_blank" rel="noopener">TypeScript 编译器/类型检查/LSP 的 Rust 移植(由 LLM 完成)</a></div>
+      <div class="it-sum">pingdotgg 项目把整个 TS 工具链搬到 Rust,是 LLM 驱动大规模代码迁移的强信号,HN 109 分。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">InfoQ中国</span><a href="https://www.infoq.cn/article/0wk4G4cZwbHgYdeNoQPV?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">海外开源模型重新提速</a></div>
+      <div class="it-sum">被称&quot;美版 DeepSeek&quot;的团队首次交卷,Mistral 同期亮牌,开源权重阵营竞争再度升温。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.PL</span><a href="https://arxiv.org/abs/2610.09005" target="_blank" rel="noopener">低精度数值库的正确性边界</a></div>
+      <div class="it-sum">论文给出&quot;何时双重舍入是正确的&quot;判定,为 AI 加速器专用数值格式的软件模拟与验证提供依据。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.DC</span><a href="https://arxiv.org/abs/2610.09307" target="_blank" rel="noopener">vLLM-Omni 统一多模态服务运行时</a></div>
+      <div class="it-sum">面向文本/音频/图像/视频/动作的混合执行模式(多阶段自回归、扩散、flow-matching),把异构生成负载收敛到一套 serving runtime。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.DC</span><a href="https://arxiv.org/abs/2610.09424" target="_blank" rel="noopener">CoMoE:让 MoE 在消费级 GPU 上跑起来</a></div>
+      <div class="it-sum">针对 Expert Parallelism 强依赖 NVLink 的痛点,提出无需高带宽 P2P 互联的专家路由方案,大幅拉低 MoE 部署成本。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.LG</span><a href="https://arxiv.org/abs/2610.08811" target="_blank" rel="noopener">KVFetch:补上 KV Cache 压缩&quot;缺失的另一半&quot;</a></div>
+      <div class="it-sum">指出既有 eviction/summary/offload 三大家族都以&quot;内容相关性&quot;决策,结构性地忽略了时间维度预取。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">OpenRouter</span><a href="https://openrouter.ai/stepfun/step-5-preview" target="_blank" rel="noopener">StepFun Step 5 Preview 上架 OpenRouter</a></div>
+      <div class="it-sum">1M 上下文的 MoE 模型,[HN 80 分](https://news.ycombinator.com/item?id=50007764)。大上下文 MoE 的推理成本控制成为新战场。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.DC</span><a href="https://arxiv.org/abs/2610.09657" target="_blank" rel="noopener">混合 XPU 卸载训练框架</a></div>
+      <div class="it-sum">针对 ZeRO-Offload 的 GPU 利用率低、通信/计算重叠差问题,给出更灵活的内存卸载与混合算力编排。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">TechCrunch AI</span><a href="https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/" target="_blank" rel="noopener">OpenAI 年化营收比此前信号低 200 亿美元</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">CNBC 报道推翻此前&quot;年化约 700 亿&quot;的口径,直接牵动 Nvidia / Oracle / CoreWeave 的算力订单叙事,[HN 346 分](https://news.ycombinator.com/item?id=50008187)。[CNBC](https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">SemiAnalysis</span><a href="https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/" target="_blank" rel="noopener">xAI Colossus 2:全球首个吉瓦级数据中心</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">SemiAnalysis 拆解其独特 RL 方法论与资本募集结构,单体一致训练集群的规模天花板被再次抬高。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Tom&#x27;s Hardware</span><a href="https://www.tomshardware.com/tech-industry/data-centers/ukrainian-drones-hit-russias-yandex-data-centers-housing-two-top-supercomputers-major-outage-follows-retaliatory-strike" target="_blank" rel="noopener">乌克兰无人机袭击 Yandex 数据中心</a></div>
+      <div class="it-sum">命中存放两台 Nvidia 超算的 Sasovo 机房,引发大规模宕机,俄罗斯 AI 训练能力受创。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Tom&#x27;s Hardware</span><a href="https://www.tomshardware.com/tech-industry/data-centers/finland-orders-google-to-stop-work-on-two-ai-data-centers-over-alleged-deforestation-company-admits-it-has-fallen-short-of-our-own-high-standards-in-this-instance" target="_blank" rel="noopener">芬兰叫停 Google 两座 AI 数据中心</a></div>
+      <div class="it-sum">指其涉嫌毁林、环境评估无法在场地已变更后进行,凸显欧洲数据中心落地的环保合规门槛。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Tom&#x27;s Hardware</span><a href="https://www.tomshardware.com/tech-industry/data-centers/software-could-be-the-easiest-fix-for-hyperscalers-ai-power-squeeze-researchers-say-data-center-demand-is-expected-to-rival-japans-electricity-usage-by-2030" target="_blank" rel="noopener">&quot;软件可能是 AI 电力瓶颈最容易的解&quot;</a></div>
+      <div class="it-sum">研究者主张在堆芯片之外,用调度与&quot;少算/错峰算&quot;来缓解电力压力——到 2030 年数据中心用电量预计逼近整个日本。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">DCD-废热</span><a href="https://www.datacenterdynamics.com/en/news/waste-heat-from-goodman-data-center-in-frankfurt-germany-to-power-district-heating-system/" target="_blank" rel="noopener">CPO 与废热回收</a></div>
+      <div class="it-sum">共封装光学能否成为数据中心网络的&quot;救世主&quot;再引争论;法兰克福 Goodman 数据中心 50MW 废热将接入区域供热。[DCD-CPO](https://www.datacenterdynamics.com/en/analysis/optical-illusion-is-co-packaged-optics-the-savior-the-data-center-industry-has-been-waiting-for/) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">SiliconANGLE</span><a href="https://siliconangle.com/2026/10/08/coreweave-makes-case-open-full-stack-ai-cloud-fullyconnected/" target="_blank" rel="noopener">CoreWeave 力推&quot;开放全栈 AI 云&quot;</a></div>
+      <div class="it-sum">强调差异化不在 GPU 本身,而在配套生产工具、伙伴与工程能力。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">TechCrunch AI</span><a href="https://techcrunch.com/2026/10/08/openais-math-solutions-arent-meeting-the-fields-standards-yet/" target="_blank" rel="noopener">OpenAI 撤回三项数学结果</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">刚公布的数学成果遭同行质疑后撤回,[HN 241 分](https://news.ycombinator.com/item?id=50002650);TechCrunch 亦指出其证明&quot;尚未达到领域标准&quot;。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">SiliconANGLE</span><a href="https://siliconangle.com/2026/10/08/anthropic-launches-critical-infrastructure-program-and-free-oss-scanner-for-open-source/" target="_blank" rel="noopener">Anthropic 免费开源安全扫描 OSS Scanner + 关键基础设施计划</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">把最强模型用于开源项目的周期性漏洞扫描,并向电网/水务等基础设施机构派驻工程师。[The Verge](https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">The Verge</span><a href="https://www.theverge.com/ai-artificial-intelligence/1008100/anthropic-new-usage-policy-abuse-claude" target="_blank" rel="noopener">Anthropic 更新使用政策</a></div>
+      <div class="it-sum">首次明文禁止&quot;持续且恶劣地虐待 Claude&quot;、选举干预、武器开发与监控用途。普通吐槽与批评仍被允许。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">The Verge</span><a href="https://www.theverge.com/ai-artificial-intelligence/1008198/usa-today-openai-copyright-lawsuit" target="_blank" rel="noopener">USA Today 起诉 OpenAI</a></div>
+      <div class="it-sum">指控其复制&quot;数十万篇&quot;文章用于训练,索赔逾 2.5 亿美元,版权诉讼阵营继续扩大。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">IT之家</span><a href="https://www.ithome.com/1/010/760.htm" target="_blank" rel="noopener">被解雇的 OpenAI 安全研究员发公开信</a></div>
+      <div class="it-sum">三名前员工否认&quot;不当处理敏感信息&quot;,警告解雇行为将造成&quot;寒蝉效应&quot;,削弱公司安全文化。[TechCrunch AI](https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">The Register</span><a href="https://www.theregister.com/security/2026/10/08/high-severity-nvidia-bug-could-crash-gpu-monitoring-on-exposed-servers/5302077" target="_blank" rel="noopener">NVIDIA 高危漏洞 CVE-2026-47483</a></div>
+      <div class="it-sum">可致暴露在公网服务器上的 GPU 监控崩溃,已发布修复。</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">Robotics &amp; Automation News</span><a href="https://roboticsandautomationnews.com/2026/10/08/odyssey-launches-world-model-to-control-robots-humanoids-vehicles-and-drones/105756/" target="_blank" rel="noopener">Odyssey 发布 Odyssey-3 世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">号称迄今最强,统一控制机器人、人形、车辆与无人机,是&quot;通用世界模型&quot;路线的重要落子。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">IEEE Spectrum</span><a href="https://spectrum.ieee.org/robust-robot-hand" target="_blank" rel="noopener">Boston Dynamics 为 Atlas 换新手机械设计</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">放弃三指研究型硬件,转向可规模化量产的新代手部,目标数十万套级别,可能优于&quot;仿人手&quot;方案。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">IEEE Spectrum</span><a href="https://spectrum.ieee.org/walking-robotic-hand" target="_blank" rel="noopener">苏黎世联邦理工&quot;无躯干之手&quot;</a></div>
+      <div class="it-sum">把现成机械手改造成能靠指尖行走、并用同一批手指抓取的完全自包含机器人,打破机器人必须&quot;手+臂&quot;的定式。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.RO</span><a href="https://arxiv.org/abs/2610.08970" target="_blank" rel="noopener">HULK:人形全身发力搬运控制</a></div>
+      <div class="it-sum">用 MPC 引导强化学习,解决大重量物体导致重心偏移与上身持续载荷下的平衡与指令跟踪难题。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">MimicX</span><a href="https://arxiv.org/abs/2610.09055" target="_blank" rel="noopener">PhysEvo / MimicX</a></div>
+      <div class="it-sum">前者围绕单一冻结模型做物理递归自我改进(meta-agent 诊断失败并改写工具与技能),后者用执行反馈精化视频驱动的人形动作跟踪。[PhysEvo](https://arxiv.org/abs/2610.08995) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">TC-Mecka</span><a href="https://techcrunch.com/2026/10/07/robot-data-startup-mecka-ai-nabs-60m-from-sequoia/" target="_blank" rel="noopener">融资密集</a></div>
+      <div class="it-sum">General Intuition 以 60 亿美元估值融资(Valor、Point72 领投);Travis Kalanick 的机器人公司 Atoms 融资 17 亿美元(a16z 领投);机器人数据公司 Mecka AI 获红杉 6000 万美元。[TC-General Intuition](https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/) · [TC-Atoms](https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">RAN-Galaxy</span><a href="https://roboticsandautomationnews.com/2026/10/08/galaxy-corporation-stages-16-robot-k-pop-performance-in-new-york/105765/" target="_blank" rel="noopener">国内与落地动态</a></div>
+      <div class="it-sum">蚂蚁集团 Robbyant 与阿拉伯数字经济联盟签约拓展中东具身智能;福田汽车牵手卓驭科技做商用车高阶智驾;正行创新发布全球首个零售物理智能 24/7 服务方案;韩国 Galaxy 在纽约用 16 台人形做 K-pop 同步表演。[Robbyant](https://roboticsandautomationnews.com/2026/10/08/robbyant-and-afde-partner-to-expand-embodied-ai-and-robotics-across-middle-east/105750/) · [IT之家-福田](https://www.ithome.com/1/010/762.htm) · [量子位-正行](https://www.qbitai.com/2026/10/502035.html) ·</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">新智元</span><a href="https://aiera.com.cn/2026/10/08/other/admin/117482/%e5%88%9a%e5%88%9a%ef%bc%8copenai%e5%85%ac%e5%bc%80-722-%e4%b8%aa%e6%95%b0%e5%ad%a6%e5%8f%91%e7%8e%b0%ef%bc%81%e9%9c%8d%e5%a5%87%e7%8c%9c%e6%83%b3%e3%80%81%e9%bb%8e%e6%9b%bczeta%e5%87%bd%e6%95%b0/" target="_blank" rel="noopener">OpenAI 一次性公开 722 个数学发现</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">霍奇猜想、黎曼 zeta 函数等手稿直接灌进 GitHub,[HN &quot;Sharing AI progress in mathematics&quot; 1321 分](https://news.ycombinator.com/item?id=49984923)——AI 自动产出形式化数学成果的规模化拐点。[OpenAI](https://openai.com/index/sharing-ai-progress-in-mathematics/) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.AR</span><a href="https://arxiv.org/abs/2610.10129" target="_blank" rel="noopener">智能体做 EDA 算法探索&quot;变便宜了&quot;</a></div>
+      <div class="it-sum">一师七生的真实试验显示,agent 能构建数学构造、分析工具并落地改进,部分超越人工介入深度。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.AR</span><a href="https://arxiv.org/abs/2610.09447" target="_blank" rel="noopener">BenchmarkAnything:agent 自动构建&quot;可上仿真器&quot;的微架构基准</a></div>
+      <div class="it-sum">直指 SPEC 套件数十年僵化问题,让基准集随架构创新动态生成。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arXiv cs.PL</span><a href="https://arxiv.org/abs/2610.09681" target="_blank" rel="noopener">定理证明的成本优化编排</a></div>
+      <div class="it-sum">以&quot;每美元通过率&quot;替代单纯通过率,让 LLM 生成代码的验证更经济可行。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Doc2Spec</span><a href="https://arxiv.org/abs/2602.04892" target="_blank" rel="noopener">LOCAA / Doc2Spec</a></div>
+      <div class="it-sum">前者用 agent 自动调优有损压缩器(把误差界映射到质量与端到端性能),后者从自然语言语法归纳出形式化编程规范。[LOCAA](https://arxiv.org/abs/2610.10487) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">HuggingFace</span><a href="https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026" target="_blank" rel="noopener">LLM 写 RTL / 搬运编译器继续走热</a></div>
+      <div class="it-sum">TS→Rust 全量移植(HN 109)与 Nemotron 微调在 IOI/IMO 双金奖,说明&quot;LLM 做高难度工程代码&quot;正从实验走向可复现。[TS-Rust](https://github.com/pingdotgg/ts-rust) ·</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">ServeTheHome</span><a href="https://www.servethehome.com/microsoft-launches-surface-laptop-ultra-surface-rtx-spark-dev-box/" target="_blank" rel="noopener">NVIDIA + Microsoft 开启 Windows PC 的 &quot;RTX Spark&quot; 时代</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">黄仁勋与纳德拉同台,围绕&quot;让 AI Agent 跑在本机&quot;共设计软硬件;微软随即发布 Surface Laptop Ultra 与 Surface RTX Spark Dev Box。[NVIDIA Blog](https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/) ·</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">NVIDIA Blog</span><a href="https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/" target="_blank" rel="noopener">NVIDIA DGX Spark 推 64GB 统一内存版</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">面向本地跑越来越能干的开源模型,把&quot;开发机 = 端侧推理载体&quot;做实。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">Anthropic</span><a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Claude Haiku 5.5 发布</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Anthropic 小尺寸模型换代,[HN 1031 分](https://news.ycombinator.com/item?id=49996437);端侧/低延迟场景的性价比基准再次上移。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">The Verge</span><a href="https://www.theverge.com/tech/1007985/google-ai-notetaking-app-transcribe-offline" target="_blank" rel="noopener">Google 端侧离线转录</a></div>
+      <div class="it-sum">实验性应用 AI Edge Foresight 基于 EmbeddingGemma 2,在 macOS 上完全离线转录会议与音频,免费用。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">EE Times</span><a href="https://www.eetimes.com/nvidia-jetson-to-sima-ai-modalix-mlsoc-migration-guide/" target="_blank" rel="noopener">从 NVIDIA Jetson 迁移到 SiMa.ai Modalix MLSoC</a></div>
+      <div class="it-sum">EE Times 给出把 CUDA 栈模型与应用迁往边缘物理 AI 平台的实操框架。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">SiliconANGLE</span><a href="https://siliconangle.com/2026/10/08/liquid-ai-builds-personal-ai-around-device-level-context-fullyconnected/" target="_blank" rel="noopener">端侧个人 AI 的架构 rethink</a></div>
+      <div class="it-sum">Liquid AI 主张围绕&quot;设备级上下文&quot;而非弹性云容量设计模型与 Agent 软件。</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">量子位-STEPX</span><a href="https://www.qbitai.com/2026/10/501915.html" target="_blank" rel="noopener">国内端侧看点</a></div>
+      <div class="it-sum">联想 YOGA Pro 15 搭载 NVIDIA RTX Spark N1X 开启盲约;STEPX Neo&quot;大模型原生智能体手机&quot;定档 10 月 13 日发布。[量子位-联想](https://www.qbitai.com/2026/10/502020.html) ·</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-10-07.html">← 2026-10-07</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
