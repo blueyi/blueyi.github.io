@@ -1,0 +1,463 @@
+{
+  "title_date": "2026-10-10T06:00:56.837622+08:00",
+  "window": {
+    "start": "2026-10-03",
+    "end": "2026-10-10"
+  },
+  "domains": [
+    {
+      "id": 1,
+      "emoji": "1️⃣",
+      "name": "chips",
+      "items": [
+        {
+          "title": "OpenAI annualised revenues $20B less than previously signalled",
+          "summary": "",
+          "url": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
+          "source": "hn",
+          "score": 421,
+          "hot": true
+        },
+        {
+          "title": "Latent-MOPD: Latent Multi-Teacher On-Policy Distillation",
+          "summary": "On-policy distillation (OPD) trains a student on the responses it generates.",
+          "url": "https://arxiv.org/abs/2610.02381",
+          "source": "hf_papers",
+          "score": 70,
+          "hot": false
+        },
+        {
+          "title": "VeriHarness: Scaling Agentic Verification for Long-Horizon Tasks",
+          "summary": "As LLM agents undertake increasingly complex, long-horizon tasks, verifying their outputs becomes increasingly challengi...",
+          "url": "https://arxiv.org/abs/2610.00972",
+          "source": "hf_papers",
+          "score": 59,
+          "hot": false
+        },
+        {
+          "title": "New Contraction Bounds for Multidimensional Asymptotic Consensus in Dynamic Networks",
+          "summary": "This work studies the multidimensional asymptotic agreement problem in dynamic networks. We assume that nodes have $d$-d...",
+          "url": "https://arxiv.org/abs/2610.11805",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "NosRacer: Dynamic Detection of Race Conditions in On-Device Network Operating Systems",
+          "summary": "Commercial on-device network operating systems (NOSes) run complex control planes in production routers and switches, wh...",
+          "url": "https://arxiv.org/abs/2610.11875",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "emoji": "2️⃣",
+      "name": "compilers",
+      "items": [
+        {
+          "title": "Port of the TypeScript compiler, checker and lsp to Rust, by LLM",
+          "summary": "",
+          "url": "https://github.com/pingdotgg/ts-rust",
+          "source": "hn",
+          "score": 112,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "emoji": "3️⃣",
+      "name": "inference-dc",
+      "items": [
+        {
+          "title": "Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter",
+          "summary": "",
+          "url": "https://openrouter.ai/stepfun/step-5-preview",
+          "source": "hn",
+          "score": 141,
+          "hot": false
+        },
+        {
+          "title": "TokenRouter: Efficient Serving System for Token-Level LLM Routing",
+          "summary": "Large language model (LLM) routing distributes inference work across different models, advancing the cost-quality Pareto...",
+          "url": "https://arxiv.org/abs/2610.12242",
+          "source": "hf_papers",
+          "score": 102,
+          "hot": false
+        },
+        {
+          "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+          "summary": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a s...",
+          "url": "https://arxiv.org/abs/2609.38169",
+          "source": "hf_papers",
+          "score": 71,
+          "hot": false
+        },
+        {
+          "title": "TRACE: Rollout-Guided Quantization-Aware Training for FP4 Reinforcement Learning of MoE Language Models",
+          "summary": "Reinforcement learning (RL) for post-training large language models (LLMs) incurs substantial computation and memory ove...",
+          "url": "https://arxiv.org/abs/2610.07767",
+          "source": "hf_papers",
+          "score": 45,
+          "hot": false
+        },
+        {
+          "title": "Zepp: Accelerating Distributed MoE Serving under Relaxed Balance Constraints",
+          "summary": "As Mixture-of-Experts (MoE) models continue to scale, serving them increasingly relies on expert parallelism (EP) across...",
+          "url": "https://arxiv.org/abs/2610.11158",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "emoji": "4️⃣",
+      "name": "datacenter",
+      "items": [
+        {
+          "title": "Tell HN: GitHub refuses to remove cracked copies of my software after a month",
+          "summary": "",
+          "url": "",
+          "source": "hn",
+          "score": 568,
+          "hot": true
+        },
+        {
+          "title": "Yandex Takes a Second Data Center Hit in 48 Hours",
+          "summary": "",
+          "url": "https://united24media.com/war-in-ukraine/yandex-takes-a-second-data-center-hit-in-48-hours-now-its-biggest-russian-site-is-damaged-23277",
+          "source": "hn",
+          "score": 198,
+          "hot": false
+        },
+        {
+          "title": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
+          "summary": "",
+          "url": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306",
+          "source": "hn",
+          "score": 145,
+          "hot": false
+        },
+        {
+          "title": "AgentGarten: Code Worlds for Evolving Agents",
+          "summary": "Interactive virtual worlds allow agents to learn through exploration and interaction. What agents can learn is bounded b...",
+          "url": "https://arxiv.org/abs/2610.12374",
+          "source": "hf_papers",
+          "score": 131,
+          "hot": false
+        },
+        {
+          "title": "Long-WAM: Scaling the Context of World-Action Models",
+          "summary": "Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can...",
+          "url": "https://arxiv.org/abs/2610.10528",
+          "source": "hf_papers",
+          "score": 99,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "emoji": "5️⃣",
+      "name": "safety",
+      "items": [
+        {
+          "title": "Sharing AI progress in mathematics",
+          "summary": "",
+          "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+          "source": "hn",
+          "score": 1334,
+          "hot": true
+        },
+        {
+          "title": "GPT‑6 and Intelligent UI for everyone",
+          "summary": "",
+          "url": "https://openai.com/index/gpt-6-for-everyone/",
+          "source": "hn",
+          "score": 753,
+          "hot": true
+        },
+        {
+          "title": "OpenAI withdraws three mathematical results",
+          "summary": "",
+          "url": "https://twitter.com/danintheory/status/2108065033070789090",
+          "source": "hn",
+          "score": 368,
+          "hot": true
+        },
+        {
+          "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
+          "summary": "",
+          "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
+          "source": "hn",
+          "score": 287,
+          "hot": true
+        },
+        {
+          "title": "OpenAI, the Partition Principle, and Mathematics",
+          "summary": "",
+          "url": "https://karagila.org/2026/openai-pp/",
+          "source": "hn",
+          "score": 193,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "emoji": "6️⃣",
+      "name": "embodied-infra",
+      "items": [
+        {
+          "title": "Anti-patterns in software blogging",
+          "summary": "",
+          "url": "https://refactoringenglish.com/blog/anti-patterns-software-blogging/",
+          "source": "hn",
+          "score": 329,
+          "hot": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "emoji": "8️⃣",
+      "name": "edge",
+      "items": [
+        {
+          "title": "Nobel Peace Prize for 2026 to Navanethem Pillay",
+          "summary": "",
+          "url": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
+          "source": "hn",
+          "score": 410,
+          "hot": true
+        },
+        {
+          "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
+          "summary": "",
+          "url": "https://www.reddit.com/r/ClaudeAI/s/mbe5IY2LF9",
+          "source": "hn",
+          "score": 261,
+          "hot": true
+        },
+        {
+          "title": "A Modular Event-Driven Software Architecture for Open-Source Industrial IoT Edge Gateways",
+          "summary": "Integrating legacy industrial machinery into modern cloud infrastructures poses a significant software engineering chall...",
+          "url": "https://arxiv.org/abs/2610.10544",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Adaptive Multi-Discriminator WGAN Framework for Resource-Constrained Internet of Vehicles Using Reinforcement Learning and Game Theory",
+          "summary": "Managing machine learning workloads as a network service introduces a resource-orchestration problem distinct from conve...",
+          "url": "https://arxiv.org/abs/2610.10926",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "A Modular Event-Driven Software Architecture for Open-Source Industrial IoT Edge Gateways",
+          "summary": "Integrating legacy industrial machinery into modern cloud infrastructures poses a significant software engineering chall...",
+          "url": "https://arxiv.org/abs/2610.10544",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    "Sharing AI progress in mathematics",
+    "GPT‑6 and Intelligent UI for everyone",
+    "Tell HN: GitHub refuses to remove cracked copies of my software after a month"
+  ],
+  "industry": {
+    "stocks": [
+      {
+        "name": "英伟达",
+        "sym": "NVDA",
+        "price": 229.28,
+        "pct": -4.03,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "AMD",
+        "sym": "AMD",
+        "price": 608.1,
+        "pct": -3.74,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "博通",
+        "sym": "AVGO",
+        "price": 361.54,
+        "pct": -0.27,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "台积电",
+        "sym": "TSM",
+        "price": 453.31,
+        "pct": -6.69,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "美光",
+        "sym": "MU",
+        "price": 1029.0,
+        "pct": -3.29,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "Arm",
+        "sym": "ARM",
+        "price": 266.28,
+        "pct": -12.09,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "英特尔",
+        "sym": "INTC",
+        "price": 104.7,
+        "pct": -9.89,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "超微SMCI",
+        "sym": "SMCI",
+        "price": 41.85,
+        "pct": -3.09,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "微软",
+        "sym": "MSFT",
+        "price": 535.07,
+        "pct": 1.88,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "谷歌",
+        "sym": "GOOGL",
+        "price": 351.66,
+        "pct": 1.5,
+        "currency": "USD",
+        "note": ""
+      }
+    ],
+    "cn_stocks": [
+      {
+        "name": "中芯国际",
+        "secid": "116.00981",
+        "market": "港股",
+        "price": 57.65,
+        "pct": 1.5,
+        "currency": "HKD",
+        "note": ""
+      },
+      {
+        "name": "华虹半导体",
+        "secid": "116.01347",
+        "market": "港股",
+        "price": 94.55,
+        "pct": -1.1,
+        "currency": "HKD",
+        "note": ""
+      },
+      {
+        "name": "寒武纪",
+        "secid": "1.688256",
+        "market": "A股",
+        "price": 985.99,
+        "pct": 0.51,
+        "currency": "CNY",
+        "note": ""
+      },
+      {
+        "name": "海光信息",
+        "secid": "1.688041",
+        "market": "A股",
+        "price": 219.59,
+        "pct": -0.43,
+        "currency": "CNY",
+        "note": ""
+      },
+      {
+        "name": "中际旭创",
+        "secid": "0.300308",
+        "market": "A股",
+        "price": 775.29,
+        "pct": -0.98,
+        "currency": "CNY",
+        "note": ""
+      },
+      {
+        "name": "浪潮信息",
+        "secid": "0.000977",
+        "market": "A股",
+        "price": 64.69,
+        "pct": 0.2,
+        "currency": "CNY",
+        "note": ""
+      }
+    ],
+    "funding": [
+      {
+        "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+        "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversigh...",
+        "url": "https://openai.com/index/sophos",
+        "amount": null,
+        "region": "海外"
+      },
+      {
+        "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+        "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
+        "url": "https://openai.com/index/pollo-ai",
+        "amount": null,
+        "region": "海外"
+      },
+      {
+        "title": "Disrupting AI-enabled “false front” operations",
+        "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
+        "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+        "amount": null,
+        "region": "海外"
+      },
+      {
+        "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
+        "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning t...",
+        "url": "https://openai.com/index/radisson",
+        "amount": null,
+        "region": "海外"
+      },
+      {
+        "title": "How Jump Trading is scaling quant research with ChatGPT",
+        "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
+        "url": "https://openai.com/index/jump-trading",
+        "amount": null,
+        "region": "海外"
+      },
+      {
+        "title": "Sharing AI progress in mathematics",
+        "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details...",
+        "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+        "amount": null,
+        "region": "海外"
+      }
+    ]
+  }
+}
