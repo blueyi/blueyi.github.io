@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W41 · 10-05 ~ 10-11</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W41</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W41 · 10-05 ~ 10-11</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-10-05 ~ 2026-10-11</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W41</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>VersaCamVLA 与 VioLA 分别从相机配置泛化和人形全身耦合动作切入，推动端到端 VLA 从固定实验设置走向更复杂部署。[端到端VLA]</li>
+      <li>DreamTrue 将反事实失败样本与动作忠实的视频预测结合，RoboRSI 则把执行反馈沉淀为可复用修复经验，分别推进世界模型与机器人自我改进。[控制层·世界模型 / 规划层]</li>
+      <li>A Balanced Data Diet、USDCraft 与 World Embedding Benchmark 覆盖探索数据、可交互仿真资产和物理表征评测，补齐 sim-to-real 的数据与验证环节。[控制层·RL / 感知层]</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.12451v1" target="_blank" rel="noopener">VersaCamVLA：可配置相机的机器人操作策略</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">将相机集合表示与动作学习解耦，使 VLA 能适应部署时相机数量和位姿变化，直接针对视觉输入配置变化的脆弱性。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.12435v1" target="_blank" rel="noopener">VioLA：从人类数据学习通用人形控制策略</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">面向人形机器人的全身指令跟随，联合处理腿、臂、手指的耦合动作与稀缺示范数据，探索从人类数据学习通用控制策略。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.02054" target="_blank" rel="noopener">UniWAM：统一世界-动作模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">结合视觉语言模型的语义推理能力与视频模型的时空先验，缓解 VLA 在分布变化下理解和动作接地不足的问题。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.10528" target="_blank" rel="noopener">Long-WAM：扩展世界-动作模型上下文</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">研究实时控制约束下如何利用更长视觉历史，指出历史长度本身不等于有效使用，视频基础模型质量决定长上下文收益。[端到端VLA]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.12470v1" target="_blank" rel="noopener">Dex-One2Many：从单个人类示范学习灵巧操作</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">不拘泥于复现单条示范轨迹，而是利用强化学习扩展初始物体姿态、目标姿态和抓取方式，提升单示范操作泛化。[控制层·RL]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.02840" target="_blank" rel="noopener">PointWAM：面向灵巧操作的 3D 世界-动作建模</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">用 3D 表示刻画空间结构与接触几何，将世界动态预测与机器人动作建模结合，针对灵巧操作中的空间和接触约束设计。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.12440v1" target="_blank" rel="noopener">人类数据驱动的生成式神经重定向</a></div>
+      <div class="it-sum">将人手运动重定向到机器人时同时考虑动力学可行性，结合逆运动学、强化学习与采样式 MPC，缩小人机形态差距。[控制层·RL]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.12465v1" target="_blank" rel="noopener">A Balanced Data Diet：缓解大规模机器人 RL 的探索瓶颈</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">研究通过多样化仿真重置与大规模并行探索，减少对任务专用奖励塑形和示范的依赖，面向通用机器人控制扩展 sim-to-real 数据效率。[控制层·RL]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.11322" target="_blank" rel="noopener">USDCraft：面向仿真的可动 3D 资产程序化建模</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">从真实物体恢复几何和关节结构，生成几何可信且可交互的可动资产，服务于 real-to-sim 机器人操作策略训练。[感知层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.03632" target="_blank" rel="noopener">World Embedding Benchmark：世界模型物理表征基准</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">用覆盖流体、固体、动力学和光电磁现象的受控仿真视频，评估视频表示编码物理信息的能力，为世界模型的 sim-to-real 可靠性提供测量工具。[感知层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.07969" target="_blank" rel="noopener">EmbodiedSmith：仿真中的具身数据递归自改进</a></div>
+      <div class="it-sum">把场景生成、任务生成和复杂形态支持纳入仿真数据飞轮，通过递归自改进扩大具身训练与评测数据覆盖。[规划层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.12468v1" target="_blank" rel="noopener">DreamTrue：动作忠实的机器人世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">通过多视角、跨形态建模和反事实后训练，改善动作跟随与失败交互覆盖，目标是生成更符合物理和控制结果的未来视频。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.12424v1" target="_blank" rel="noopener">RoboRSI：复杂真实环境中的机器人自我进化</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">把执行反馈组织为可复用的任务经验，让代码型机器人 agent 根据失败修复程序并沉淀能力，推进从单次修复到技能复用。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.12467v1" target="_blank" rel="noopener">CSF：运动生成器的上下文安全过滤</a></div>
+      <div class="it-sum">根据场景上下文判断同一动作指向物体还是人员，在运动执行前进行安全过滤，补足仅检查文本提示或几何约束的不足。[控制层·RL]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.12386v1" target="_blank" rel="noopener">ARC：机器人基础模型的推理配方</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">表明针对机器人基础模型设计合适的推理流程，可以作为扩大模型、示范和训练规模之外的互补路径，改善零样本任务表现。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.08791" target="_blank" rel="noopener">World Models&#x27; Last Exam in Physics：世界模型物理能力测试</a></div>
+      <div class="it-sum">针对视频世界模型视觉逼真但物理不一致的问题，提出基于测量的物理评估思路，强调从生成观感转向可检验的动力学一致性。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/09/researchers-develop-battery-free-wearable-device-powered-by-human-movement/105783/" target="_blank" rel="noopener">无电池可穿戴设备通过人体运动供能</a></div>
+      <div class="it-sum">研究团队开发由人体运动采能的柔性无电池设备，并用于神经形态感知与学习；面向端侧具身感知的器件方向，具体性能需以原始研究核验。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/08/odyssey-launches-world-model-to-control-robots-humanoids-vehicles-and-drones/105756/" target="_blank" rel="noopener">Odyssey 发布面向多类实体系统的世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">报道 Odyssey 发布 Odyssey-3，定位为控制机器人、人形机器人、车辆和无人机的世界模型；产品能力与落地进展需以公司官方渠道核验。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/08/galaxy-corporation-stages-16-robot-k-pop-performance-in-new-york/105765/" target="_blank" rel="noopener">16 台人形机器人在纽约进行同步 K-pop 表演</a></div>
+      <div class="it-sum">Galaxy Corporation 展示 16 台人形机器人协同表演，体现人形机器人在娱乐展示和多机协同场景中的产业化尝试；细节需以官方渠道核验。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">50★</span><a href="https://qz.com/tesla-full-self-driving-rebranding-europe-assisted-driving-100926" target="_blank" rel="noopener">Tesla 将欧洲 FSD 更名为 Tesla Assisted Driving</a></div>
+      <div class="it-sum">HN 高分帖关注 Tesla 在欧洲将 Full Self-Driving 更名为 Assisted Driving，反映自动驾驶产品命名与监管语境之间的产业变化。[规划层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（14 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>382.7 USD</td><td class="up">+1.05%</td><td></td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>423.96 USD</td><td class="up">+4.3%</td><td></td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>42.63 USD</td><td class="down">-0.56%</td><td></td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>4.35 USD</td><td class="down">-10.86%</td><td></td></tr>
+        <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>13.48 USD</td><td class="up">+2.43%</td><td></td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>229.28 USD</td><td class="down">-4.03%</td><td></td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>105.6 HKD</td><td class="up">+3.12%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>宇树科技 <span class="tk">1.688836 · A股</span></td><td>432.0 CNY</td><td class="up">+0.98%</td><td></td></tr>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>71.75 HKD</td><td class="up">+3.68%</td><td></td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>4.12 HKD</td><td class="up">+4.18%</td><td></td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>50.59 CNY</td><td class="up">+1.48%</td><td></td></tr>
+        <tr><td>埃斯顿 <span class="tk">0.002747 · A股</span></td><td>27.04 CNY</td><td class="up">+0.67%</td><td></td></tr>
+        <tr><td>绿的谐波 <span class="tk">1.688017 · A股</span></td><td>263.76 CNY</td><td class="up">+3.08%</td><td></td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>37.4 CNY</td><td class="up">+1.38%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$60M</span><a href="https://techcrunch.com/2026/10/07/robot-data-startup-mecka-ai-nabs-60m-from-sequoia/" target="_blank" rel="noopener">Robot data startup Mecka AI nabs $60M from Sequoia</a></div><div class="it-sum">机器人数据初创公司 Mecka AI 获得 6000 万美元融资，聚焦采集和分析人类运动数据以训练人形机器人；具体交易条款以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/08/odyssey-launches-world-model-to-control-robots-humanoids-vehicles-and-drones/105756/" target="_blank" rel="noopener">Odyssey launches world model to control robots, humanoids, vehicles and drones</a></div><div class="it-sum">Odyssey 发布面向机器人、人形机器人、车辆和无人机的世界模型产品，属于产业产品动态，能力与部署细节需以官方渠道核验。</div></li>
+      <li><div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/08/galaxy-corporation-stages-16-robot-k-pop-performance-in-new-york/105765/" target="_blank" rel="noopener">Galaxy Corporation stages 16-robot K-pop performance in New York</a></div><div class="it-sum">Galaxy Corporation 在纽约展示 16 台人形机器人同步表演，属于多机协同部署动态，具体产品信息需以官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
