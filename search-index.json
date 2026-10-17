@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T09:00:11.921398+08:00",
+ "generated_at": "2026-10-17T20:42:28.051572+08:00",
  "entries": [
   {
    "type": "daily",
@@ -22572,6 +22572,325 @@
    "summary": "Galaxy Corporation 在纽约展示 16 台人形机器人同步表演，属于多机协同部署动态，具体产品信息需以官方渠道核验。",
    "url": "https://roboticsandautomationnews.com/2026/10/08/galaxy-corporation-stages-16-robot-k-pop-performance-in-new-york/105765/",
    "page": "/feeds/embodied-ai/weeks/2026-W41.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "LeWAM: End-to-End World and Action Modeling with JEPAs",
+   "summary": "LeWAM is an end-to-end joint-embedding predictive architecture that jointly learns latent dynamics and action flow matching for efficient planning and direct control.",
+   "url": "https://arxiv.org/abs/2610.12818",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models",
+   "summary": "VLA-Δ improves robot control by explicitly supervising physical state transitions between current and future observations, achieving strong benchmark and real-world results without added inference cos",
+   "url": "https://arxiv.org/abs/2610.21306",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation",
+   "summary": "We introduce P$^{3}$-WAM, a unified world action model for egocentric dexterous manipulation that learns 3D perception, action-conditioned prediction, and goal-directed planning through three compleme",
+   "url": "http://arxiv.org/abs/2610.22363v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "从“看懂世界”到“预演下一步”：世界模型与 VLA，如何让机器人拥有真正的“具身大脑”？",
+   "summary": "VLA解决“能干”，世界模型解决“想清楚再干”",
+   "url": "https://www.qbitai.com/2026/10/503865.html",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "ETH Zurich scientists turn WUJI robotic hand into self-propelled mobile manipulator",
+   "summary": "Scientists at ETH Zurich have demonstrated how an anthropomorphic robotic hand can use its fingers not only for manipulation but also for locomotion, enabling the hand to crawl, recover from falls and",
+   "url": "https://roboticsandautomationnews.com/2026/10/16/eth-zurich-scientists-turn-wuji-robotic-hand-into-self-propelled-mobile-manipulator/105991/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "TouchScale: 500 Hours of Human Vision and Touch for Visual-Tactile Learning",
+   "summary": "TouchScale is a large-scale, consistently recorded visual-tactile dataset that improves zero-shot contact prediction and robot manipulation performance through scaled pretraining.",
+   "url": "https://arxiv.org/abs/2610.10288",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "Dexterity from Supervised Play",
+   "summary": "How can robots autonomously collect the contact-rich experience needed to learn dexterous manipulation? We present DSP: Dexterity from supervised play, a framework in which a robot learns a play polic",
+   "url": "http://arxiv.org/abs/2610.22340v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "Spark-0: Scaling Spatially Aligned Tactile Pretraining for Robot Dexterous Manipulation",
+   "summary": "Generalist robot policies benefit from large-scale visual pretraining but often struggle with contact-rich dexterous manipulation, where force, compliance, and incipient slip are hard to observe from ",
+   "url": "http://arxiv.org/abs/2610.22342v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "Robot Talk Episode 164 – Accelerating robot learning, with Michelle Lu",
+   "summary": "Claire chatted to Michelle Lu from Vsim Technology about using simulation and artificial intelligence to teach robots new skills. Michelle Lu is co-founder and CEO of Vsim Technology. She was previous",
+   "url": "https://robohub.org/robot-talk-episode-164-accelerating-robot-learning-with-michelle-lu/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "Towards Physically Grounded Articulated 3D Assets: A Multi-Agent Pipeline and Benchmark",
+   "summary": "Artisan introduces a multi-agent pipeline with physical simulation feedback to generate articulated 3D assets that are physically plausible and functionally usable, supported by a unified benchmark ev",
+   "url": "https://arxiv.org/abs/2610.13947",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "Sim-to-Real Reinforcement Learning for Path-Safe Target Reaching in Robotic Harvesting of Hydroponic Lettuce",
+   "summary": "Robotic harvesting requires precise manipulation to ensure accurate positioning of the end-effector, especially in a constraint workspace. This study introduces the Path-Safe Approach Proximal Policy ",
+   "url": "http://arxiv.org/abs/2610.22337v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "CoDA: Co-Evolution of Data Engines and Action Policies",
+   "summary": "Generative simulation can automate robot environment construction, but physically valid environments are not necessarily useful for training. The challenge is to identify environments that address a p",
+   "url": "http://arxiv.org/abs/2610.22362v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "MJev-Spatial: System One Spatial Intelligence via Native Attention Matching",
+   "summary": "MJev-Spatial is a fast multimodal decision model that unifies spatial reasoning tasks into a single-pass classification framework, improving speed and accuracy over autoregressive vision-language mode",
+   "url": "https://arxiv.org/abs/2610.22276",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "Gradient-based Planning for World Models at Longer Horizons",
+   "summary": "<!-- twitter --> <meta name=\"twitter:title\" content=\"Gradient-based Planning for World Models at Longer Horizons\" /> <meta name=\"twitter:card\" content=\"summary_large_image\" /> <meta name=\"twitter:imag",
+   "url": "http://bair.berkeley.edu/blog/2026/04/20/grasp/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
+   "summary": "Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from ph",
+   "url": "http://arxiv.org/abs/2610.22364v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "GreenWAM: A World Foundation Model for Robotics",
+   "summary": "GreenWAM is a unified world foundation model for robotics that uses a shared anatomical action space and joint training to serve as both a predictive world model and a control policy across diverse ro",
+   "url": "https://arxiv.org/abs/2610.18774",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）",
+   "title": "VideoJev: System One Model for Video Understanding and Interaction",
+   "summary": "VideoJev converts video observations into structured decisions by scoring temporal intervals and text options, enabling efficient reusable inference for visual agents.",
+   "url": "https://arxiv.org/abs/2610.18615",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）",
+   "title": "S-Space: Exploring Spatial Workspace in Multimodal Language Models",
+   "summary": "Multimodal language models use an intrinsic linear subspace called S-Space to encode object coordinates, supporting spatial perception, reasoning, and response generation, while also revealing bottlen",
+   "url": "https://arxiv.org/abs/2610.13527",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）",
+   "title": "Neurosymbolic planning using natural language communication for cooperative autonomous vehicles",
+   "summary": "Imagine you are driving toward an intersection. A truck parked on the corner blocks your view of a car speeding toward the intersection from the right. You can’t see it, but the car next to you can. W",
+   "url": "https://robohub.org/neurosymbolic-planning-using-natural-language-communication-for-cooperative-autonomous-vehicles/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）",
+   "title": "Evaluation Awareness Beyond English: Do LLMs Act Differently When Tested in Indic Languages?",
+   "summary": "Large language models (LLMs) can often tell when they are being tested. This ability, known as evaluation awareness, can lead models to act more cautiously during safety evaluations than in real use. ",
+   "url": "http://arxiv.org/abs/2610.22333v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "6️⃣ 制造 / 产线",
+   "title": "Atlas Robot’s New Hand May Outperform Humanlike Designs",
+   "summary": "Today, Boston Dynamics is announcing a redesigned hand for its Atlas robot. The previous generation could do some crazy superhuman things with its three fingers, but it was never intended for mass pro",
+   "url": "https://spectrum.ieee.org/robust-robot-hand",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Tesla Roadster",
+   "summary": "",
+   "url": "https://www.tesla.com/roadster",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Waymo in Toronto",
+   "summary": "",
+   "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives",
+   "summary": "GroundingPI is a 4B grounding foundation model that improves precise object localization and downstream robotic and autonomous driving performance through multimodal pretraining and reinforcement lear",
+   "url": "https://arxiv.org/abs/2609.39601",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
+   "summary": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
+   "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "The Week’s 10 Biggest Funding Rounds: Spending Contracts For Latest AI-Driven Startup Batch",
+   "summary": "Startup investors aren’t exactly hitting pause, but they did scale back on giant rounds this past week, with just two startup financings in the multiple hundreds of millions.",
+   "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-investors-scaled-back-ai-biotech-modal/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Asia’s Startup Funding At Near Record High In Q3, Driven By AI",
+   "summary": "Overall, investors put $38.5 billion into reported seed- through growth-stage financings for Asian startups in Q3, per Crunchbase data. Of that, a majority went to AI-focused companies, echoing the tr",
+   "url": "https://news.crunchbase.com/venture/q3-2026-asia-startup-funding-near-record-ai/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Exclusive: Chariot Raises $10M To Help Consumers Fight Back Against Hidden Fees And Hard-To-Cancel Subscriptions",
+   "summary": "New York-based Chariot Claims has raised $10 million in Series A funding led by Silverton Partners to help consumers pursue claims over alleged privacy violations, hidden fees and subscriptions that a",
+   "url": "https://news.crunchbase.com/ai/legal-tech-chariot-raise-stop-hidden-fees-subscriptions-hang/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W42",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Exclusive: Stella & Dot Founder Raises $5M For Her Next Act, AI Marketing Startup Marklo",
+   "summary": "In this Crunchbase News exclusive, we spoke to Marklo AI founder Jessica Herrin about her solution to the marketing problems she encountered when building earlier startups, and how a group of investor",
+   "url": "https://news.crunchbase.com/venture/founder-raises-5m-next-act-ai-marketing-startup-marklo-herrin/",
+   "page": "/feeds/embodied-ai/weeks/2026-W42.html"
   }
  ]
 }
