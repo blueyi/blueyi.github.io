@@ -1,0 +1,399 @@
+{
+  "title_date": "2026-W43",
+  "window": {
+    "start": "2026-10-17",
+    "end": "2026-10-24"
+  },
+  "domains": [
+    {
+      "id": 1,
+      "emoji": "1️⃣",
+      "name": "chips",
+      "items": [
+        {
+          "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+          "summary": "",
+          "url": "https://github.com/NVIDIA/OpenShell",
+          "source": "hn",
+          "hot": true
+        },
+        {
+          "title": "Into the Unknown: Benchmarking AI agents on open scientific research problems",
+          "summary": "Researchers benchmarked AI agents on open scientific problems by having them draft follow-up papers from unpublished directions, finding that none met expert standards and most contained fabricated claims or contradictory evidence.",
+          "url": "https://arxiv.org/abs/2610.19159",
+          "source": "hf_papers",
+          "hot": false
+        },
+        {
+          "title": "SolarRenderer: Few-Step Generative Reference Rendering",
+          "summary": "SolarRenderer adapts a frozen video backbone with lightweight LoRAs to render realistic videos from diverse structural inputs in four steps or real-time streaming, using frame-aligned training data.",
+          "url": "https://arxiv.org/abs/2610.28630",
+          "source": "hf_papers",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "emoji": "2️⃣",
+      "name": "compilers",
+      "items": [
+        {
+          "title": "The compiler was supposed to end programming too",
+          "summary": "",
+          "url": "https://hrih.si/articles/the-compiler-was-supposed-to-end-programming/",
+          "source": "hn",
+          "hot": false
+        },
+        {
+          "title": "The Reversible Intermediate Language L4, its Type System, and its Bidirectional Small-Step Semantics",
+          "summary": "L4 is a generic, reversible, linearly-typed, low-level language intended as an intermediate language for compiling reversible programming languages to reversible machines. L4 is intended to replace and generalise RSSA, a reversible SSA form. Inspiration is drawn from other low-level reversible languages such as HSSA. In this paper, we define L4 first informally, and then give a formal type system ",
+          "url": "https://arxiv.org/abs/2610.31201",
+          "source": "arxiv:cs.PL",
+          "hot": false
+        },
+        {
+          "title": "TrustedCode: Evaluating Large Language Models for Developing Trusted Code through Automated Program Verification",
+          "summary": "Recent reports, such as \"Who is using AI to code?\", indicate that approximately 30\\% of Python code contributions to GitHub are AI-generated. Given the inherent unreliability of this code, formal verification emerges as a promising approach to establish trust in software correctness. Although leveraging large language models (LLMs) for formal verification has garnered increasing attention, practic",
+          "url": "https://arxiv.org/abs/2610.30432",
+          "source": "arxiv:cs.PL",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "emoji": "3️⃣",
+      "name": "inference-dc",
+      "items": [
+        {
+          "title": "Cache Engineering for Agents",
+          "summary": "AKV introduces cache engineering to manage LLM agent key-value caches without altering trajectories, improving efficiency and accuracy via drop and repos operations with a co-designed serving engine.",
+          "url": "https://arxiv.org/abs/2610.28577",
+          "source": "hf_papers",
+          "hot": false
+        },
+        {
+          "title": "DLite: History-free Speculative Decoding for Agentic AI",
+          "summary": "DLite improves speculative decoding for agentic AI by eliminating historical context maintenance and using target hidden states for local predictions, boosting acceptance length and reducing overhead.",
+          "url": "https://arxiv.org/abs/2610.23787",
+          "source": "hf_papers",
+          "hot": false
+        },
+        {
+          "title": "Meta Expert: Cross-Layer Expert Sharing for Storage- and Retrieval-Efficient MoE",
+          "summary": "Shared meta-experts across layers reduce redundancy and improve efficiency compared to layer-specific local experts in mixture-of-experts models.",
+          "url": "https://arxiv.org/abs/2610.27598",
+          "source": "hf_papers",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "emoji": "4️⃣",
+      "name": "datacenter",
+      "items": [
+        {
+          "title": "Eight Bits of Trust: eMudhra's CA keys cracked in milliseconds",
+          "summary": "",
+          "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+          "source": "hn",
+          "hot": true
+        },
+        {
+          "title": "BizBench: Unveiling Hidden Challenges in Deploying Long-Horizon Agents for Real-World Business",
+          "summary": "BizBench evaluates long-horizon business agents on intermediate execution validity using real-world payment procedures, revealing that frontier models frequently violate constraints despite achieving partial goal success.",
+          "url": "https://arxiv.org/abs/2610.20424",
+          "source": "hf_papers",
+          "hot": false
+        },
+        {
+          "title": "Scaling Parameter-Efficient Fine-Tuning for Brain Encoding",
+          "summary": "Parameter-efficient fine-tuning with low-rank adapters enables efficient adaptation of very large multimodal backbones for brain encoding, improving performance and interpretability while reducing computational cost.",
+          "url": "https://arxiv.org/abs/2610.26802",
+          "source": "hf_papers",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "emoji": "5️⃣",
+      "name": "safety",
+      "items": [
+        {
+          "title": "Ask HN: If the models are so good, why doesn't OpenAI just start 100 companies?",
+          "summary": "",
+          "url": "https://news.ycombinator.com/item?id=50200997",
+          "source": "hn",
+          "hot": true
+        },
+        {
+          "title": "LLMs are making formal software verification feasible at a much larger scale",
+          "summary": "",
+          "url": "https://www.anthropic.com/research/formal-verification",
+          "source": "hn",
+          "hot": true
+        },
+        {
+          "title": "OpenAI CLI",
+          "summary": "",
+          "url": "https://github.com/openai/openai-cli",
+          "source": "hn",
+          "hot": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "emoji": "6️⃣",
+      "name": "embodied-infra",
+      "items": [
+        {
+          "title": "Using LLM for confidence scoring is a bad idea",
+          "summary": "",
+          "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html",
+          "source": "hn",
+          "hot": true
+        },
+        {
+          "title": "HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents",
+          "summary": "HexaShell is a coding agent that controls a dual-arm robot via vision and self-written tools, achieving state-of-the-art results on RoboDojo but struggling with contact-heavy tasks.",
+          "url": "https://arxiv.org/abs/2610.23479",
+          "source": "hf_papers",
+          "hot": false
+        },
+        {
+          "title": "Self-Distilling Future Video Representations for World Action Models",
+          "summary": "World Action Models (WAMs) have emerged as a promising approach to learning generalist robot policies using rich spatiotemporal priors from pre-trained video diffusion models. A recent line of WAMs improves inference efficiency by conditioning a separate action decoder on intermediate future video representations extracted from a single denoising step, avoiding costly iterative denoising required ",
+          "url": "https://arxiv.org/abs/2610.30320",
+          "source": "arxiv:cs.RO",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "emoji": "7️⃣",
+      "name": "autokernel",
+      "items": [
+        {
+          "title": "Docker is weird",
+          "summary": "",
+          "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+          "source": "hn",
+          "hot": true
+        },
+        {
+          "title": "ARES: Adaptive Reasoning-Effort Steering for PPA- and Cost-Aware RTL Optimization with LLM Agents",
+          "summary": "Large language model (LLM) agents optimize the power, performance, and area (PPA) of register-transfer-level (RTL) designs by iterating over edits, synthesis, and PPA analysis, paying a dollar cost for every LLM call. Prior agents report the quality reached without its normalized cost, attribute that quality to an engineered cross-design memory, and hold the reasoning effort of every call fixed. W",
+          "url": "https://arxiv.org/abs/2607.27879",
+          "source": "arxiv:cs.AR",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "emoji": "8️⃣",
+      "name": "edge",
+      "items": [
+        {
+          "title": "Mortality Among People with Attention-Deficit/Hyperactivity Disorder",
+          "summary": "",
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2855472",
+          "source": "hn",
+          "hot": false
+        },
+        {
+          "title": "Gemma-4-26B-A4B with 39-69% less thinking at same accuracy",
+          "summary": "",
+          "url": "https://bottlecapai.com/post/thinkingcap-gemma-4-26b/",
+          "source": "hn",
+          "hot": false
+        },
+        {
+          "title": "Manga2Animate: An Agentic Framework for Faithful Manga Animation with Script and Storyboard Planning",
+          "summary": "Manga2Animate uses paired creator and reviewer agents to build script and storyboard representations from manga panels, yielding more faithful and consistent animations.",
+          "url": "https://arxiv.org/abs/2610.26851",
+          "source": "hf_papers",
+          "hot": false
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+    "Eight Bits of Trust: eMudhra's CA keys cracked in milliseconds",
+    "Ask HN: If the models are so good, why doesn't OpenAI just start 100 companies?"
+  ],
+  "industry": {
+    "stocks": [
+      {
+        "sym": "NVDA",
+        "name": "英伟达",
+        "price": 210.96,
+        "pct_5d": -2.82,
+        "currency": "USD"
+      },
+      {
+        "sym": "AMD",
+        "name": "AMD",
+        "price": 516.79,
+        "pct_5d": -3.95,
+        "currency": "USD"
+      },
+      {
+        "sym": "AVGO",
+        "name": "博通",
+        "price": 321.68,
+        "pct_5d": -3.86,
+        "currency": "USD"
+      },
+      {
+        "sym": "TSM",
+        "name": "台积电",
+        "price": 418.51,
+        "pct_5d": -0.41,
+        "currency": "USD"
+      },
+      {
+        "sym": "MU",
+        "name": "美光",
+        "price": 877.55,
+        "pct_5d": -3.02,
+        "currency": "USD"
+      },
+      {
+        "sym": "ARM",
+        "name": "Arm",
+        "price": 210.33,
+        "pct_5d": -7.77,
+        "currency": "USD"
+      },
+      {
+        "sym": "INTC",
+        "name": "英特尔",
+        "price": 86.96,
+        "pct_5d": -5.51,
+        "currency": "USD"
+      },
+      {
+        "sym": "SMCI",
+        "name": "超微SMCI",
+        "price": 32.94,
+        "pct_5d": 2.62,
+        "currency": "USD"
+      },
+      {
+        "sym": "MSFT",
+        "name": "微软",
+        "price": 524.51,
+        "pct_5d": -1.69,
+        "currency": "USD"
+      },
+      {
+        "sym": "GOOGL",
+        "name": "谷歌",
+        "price": 320.21,
+        "pct_5d": -6.96,
+        "currency": "USD"
+      }
+    ],
+    "cn_stocks": [
+      {
+        "secid": "116.00981",
+        "name": "中芯国际",
+        "market": "港股",
+        "price": 47.06,
+        "pct_5d": 0.47,
+        "currency": "HKD"
+      },
+      {
+        "secid": "116.01347",
+        "name": "华虹半导体",
+        "market": "港股",
+        "price": 67.45,
+        "pct_5d": 1.35,
+        "currency": "HKD"
+      },
+      {
+        "secid": "1.688256",
+        "name": "寒武纪",
+        "market": "A股",
+        "price": 932.2,
+        "pct_5d": 5.46,
+        "currency": "CNY"
+      },
+      {
+        "secid": "1.688041",
+        "name": "海光信息",
+        "market": "A股",
+        "price": 201.1,
+        "pct_5d": 5.28,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.300308",
+        "name": "中际旭创",
+        "market": "A股",
+        "price": 612.63,
+        "pct_5d": 3.82,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.000977",
+        "name": "浪潮信息",
+        "market": "A股",
+        "price": 58.5,
+        "pct_5d": 3.36,
+        "currency": "CNY"
+      }
+    ],
+    "funding": [
+      {
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+        "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
+        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+        "amount": "1 billion",
+        "region": "海外"
+      },
+      {
+        "title": "Using thousands of AI agents to uncover new leads in biological data",
+        "summary": "See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
+        "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+        "amount": null,
+        "region": "海外"
+      },
+      {
+        "title": "Sure, let’s smoosh SpaceX and Tesla together, who cares",
+        "summary": "Oh sure, SpaceX's credit risk is pretty high because it's about to borrow another $40 billion to spend on Nvidia chips, but who cares about that? SpaceX and Tesla have formed special committees to discuss a merger! The degree to which you find this merger compelling likely has to do with the degree ",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
+        "amount": "$40",
+        "region": "海外"
+      },
+      {
+        "title": "xAI’s Colossus 2 – First Gigawatt Datacenter In The World, Unique RL Methodology, Capital Raise",
+        "summary": "Much has been written about xAI’s Colossus 1. The Memphis build belongs in the history books: the largest AI training cluster, erected from scratch in 122 days. With roughly 200,000 H100/H200s and ~30,000 GB200 NVL72, it remains, today, the largest fully operational, single-coherent cluster (setting",
+        "url": "https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/",
+        "amount": null,
+        "region": "海外"
+      },
+      {
+        "title": "In AI, it’s a tale of two diverging investor classes",
+        "summary": "Depending on where you sit as an investor, artificial intelligence still looks like a massive opportunity, or it’s now looking way too risky given growing infrastructure investments and the public’s souring on AI and all the data centers needed to power it. Really, it’s both. This week saw continued",
+        "url": "https://siliconangle.com/2026/10/23/in-ai-its-a-tale-of-two-diverging-investor-classes/",
+        "amount": null,
+        "region": "海外"
+      },
+      {
+        "title": "Report: OpenAI closing on $30B ‘bridge’ funding round to tide it over before IPO",
+        "summary": "Artificial intelligence leader OpenAI Group PBC might have plans to go public in the near future, but it isn’t done with private funding rounds. Indeed, it’s currently believed to be negotiating with investors an additional $30 billion investment that would bring its valuation to a staggering $1.25 ",
+        "url": "https://siliconangle.com/2026/10/22/report-openai-closing-on-30b-bridge-funding-round-to-tide-it-over-before-ipo/",
+        "amount": "$30",
+        "region": "海外"
+      }
+    ]
+  }
+}
