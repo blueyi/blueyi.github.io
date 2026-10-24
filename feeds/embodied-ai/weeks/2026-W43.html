@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W43 · 10-19 ~ 10-25</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W43</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W43 · 10-19 ~ 10-25</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-10-19 ~ 2026-10-25</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W43</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>ScaleNav 用互联网第一视角视频预训练语言条件导航动作，并报告仿真与真机部署结果：[端到端VLA]</li>
+      <li>DONIC 将人类动作示范、行为克隆和按手奖励的 RL 结合，推进未见物体上的通用双臂跟踪：[控制层·RL]</li>
+      <li>Ropedia W0 以运动学表征统一人类与机器人数据，瞄准跨本体的移动操作世界模型：[控制层·世界模型]</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2610.25690" target="_blank" rel="noopener">ScaleNav：互联网视频预训练语言导航动作</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">从互联网第一视角视频学习目标导向视觉动力学，再对齐机器人动作；论文报告其在仿真与真机语言条件局部导航中的结果。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2610.25043" target="_blank" rel="noopener">VLA-Rolling：复用动作尾部降低去噪成本</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">通过自适应去噪预算复用滚动规划中被丢弃的动作尾部，目标是在减少 VLA 推理开销的同时提升控制成功率。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.31569v1" target="_blank" rel="noopener">Echo：动作与任务状态联合去噪</a></div>
+      <div class="it-sum">把任务成功/失败状态信号与动作生成耦合，帮助 VLA 在执行中判断何时停止、恢复或重规划，减少额外细粒度标注依赖。[端到端VLA]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2610.29997" target="_blank" rel="noopener">DONIC：从人类示范学习通用双臂跟踪控制</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">结合多样人类运动数据、示范回收与按手设计的奖励，以 RL 实现无需微调的未见物体双臂跟踪；代码已公开。[控制层·RL]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.31661v1" target="_blank" rel="noopener">OpenTac：可定制、可扩展的 3D 触觉生态</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">提出可规模化部署的电阻式触觉皮肤与完整生态，利用可变形覆盖层把切向载荷转成空间压力分布，面向下游控制与学习。[感知层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.31472v1" target="_blank" rel="noopener">VecTile：低成本柔性三轴力触觉阵列</a></div>
+      <div class="it-sum">6 mm 薄的柔性触觉阵列可测三自由度力，补足常见低成本阵列只能测法向力的限制，服务抓取稳定性和接触修正。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.31617v1" target="_blank" rel="noopener">DiffDreamer：世界模型耦合可微仿真的四旋翼控制</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">面向动态门竞速，把世界模型的未来想象与可微仿真耦合，试图分离环境演化和机器人动力学以抑制模型偏差。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2610.27851" target="_blank" rel="noopener">LaLa-World：自然语言动作的潜空间世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">联合仿真、机器人和视频数据，以语言作为动作接口训练潜世界模型，支持高效模型预测控制与策略初始化；代码已公开。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.31432v1" target="_blank" rel="noopener">跨会话室内导航的稀疏拓扑度量图</a></div>
+      <div class="it-sum">以可通行空间的拓扑连通结构补足易受场景变化影响的局部测量，面向跨会话室内导航的训练免适配引导。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2610.26855" target="_blank" rel="noopener">Ropedia W0：跨本体移动操作世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">用运动学表征统一人类与机器人经验，扩展跨本体移动操作的世界模型，并在多项基准上报告领先结果；代码已公开。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2610.28354" target="_blank" rel="noopener">S-Agent 2.0：带持久场景记忆的空间推理</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">把持续场景记忆、自然语言解释和 3D 感知工具接入通用编码智能体，增强对空间关系的持续推理；代码已公开。[感知层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2610.29560" target="_blank" rel="noopener">SERA：随执行反馈演化的长视野操作规划</a></div>
+      <div class="it-sum">在固定低层 VLA 执行器上增加可编辑 harness，维护任务上下文并按执行反馈更新规划，处理具历史依赖的操作任务。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2610.26844" target="_blank" rel="noopener">AnyGoal：检验世界模型是否超越专家轨迹</a></div>
+      <div class="it-sum">提出评估，考察世界模型能否对熟悉状态与动作的未见组合泛化，为面向规划的动力学组合泛化提供更直接的检验。[控制层·世界模型]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/robot/h4vGHMyQ6b8drzy6.html" target="_blank" rel="noopener">海康机器人发布“存、拣、运”移动机器人方案</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">报道显示其发布面向箱式存拣与搬运配送的单体智能产品及方案升级，覆盖厂内物流全链路；产品能力以公司官方渠道核验。[控制层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.31651v1" target="_blank" rel="noopener">BrickWright：面向可物理装配积木的智能体工具链</a></div>
+      <div class="it-sum">为编码智能体配备装配与物理可行性验证工具，针对漂浮、碰撞、断连等失效生成可实际组装的积木结构。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2610.18604" target="_blank" rel="noopener">LLM2R：将 3D 零件重组建模为序列预测</a></div>
+      <div class="it-sum">用几何 token 和预训练 decoder-only LLM 在单次前向中预测全部零件姿态，面向更可扩展的 3D 装配。[规划层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/23/generative-bionics-to-build-european-physical-ai-data-factory-for-humanoid-robots/106245/" target="_blank" rel="noopener">欧洲 Physical AI 数据工厂计划</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">媒体报道 Generative Bionics 计划建设结合真机训练与数字孪生仿真的人形机器人训练设施，并采用 AMD 计算基础设施；项目细节以公司官方渠道核验。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/robust-robot-hand" target="_blank" rel="noopener">Atlas 新型机器人手瞄准规模化生产</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">IEEE Spectrum 报道 Boston Dynamics 发布重新设计的 Atlas 机器人手，重点从研究硬件转向大规模生产可用性；产品细节以官方渠道核验。[控制层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.cnbeta.com.tw/articles/tech/1583674.htm" target="_blank" rel="noopener">宇树 H2-X 侧空翻失误引发可靠性讨论</a></div>
+      <div class="it-sum">中文媒体报道宇树 H2-X 在活动演示中侧空翻失误，反映高动态人形展示与实际可靠性之间仍需分开评估；事件以公司官方渠道核验。[控制层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（14 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>372.22 USD</td><td class="up">+1.13%</td><td></td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>452.29 USD</td><td class="up">+4.41%</td><td></td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>39.28 USD</td><td class="up">+0.69%</td><td></td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>2.78 USD</td><td class="down">-9.74%</td><td></td></tr>
+        <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>14.13 USD</td><td class="up">+7.7%</td><td></td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>210.96 USD</td><td class="down">-2.82%</td><td></td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>100.0 HKD</td><td class="down">-5.75%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>宇树科技 <span class="tk">1.688836 · A股</span></td><td>624.0 CNY</td><td class="up">+20.0%</td><td></td></tr>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>68.2 HKD</td><td class="up">+6.73%</td><td></td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>3.79 HKD</td><td class="up">+8.14%</td><td></td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>53.5 CNY</td><td class="up">+7.19%</td><td></td></tr>
+        <tr><td>埃斯顿 <span class="tk">0.002747 · A股</span></td><td>29.18 CNY</td><td class="up">+9.99%</td><td></td></tr>
+        <tr><td>绿的谐波 <span class="tk">1.688017 · A股</span></td><td>290.0 CNY</td><td class="up">+12.05%</td><td></td></tr>
+        <tr><td>科大讯飞 <span class="tk">0.002230 · A股</span></td><td>38.2 CNY</td><td class="up">+4.09%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge region">欧洲</span><a href="https://roboticsandautomationnews.com/2026/10/23/generative-bionics-to-build-european-physical-ai-data-factory-for-humanoid-robots/106245/" target="_blank" rel="noopener">欧洲 Physical AI 数据工厂计划</a></div><div class="it-sum">媒体报道 Generative Bionics 计划把真机训练与大规模数字孪生仿真结合；尚非融资披露，具体建设与合作以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">中国</span><a href="https://www.leiphone.com/category/robot/h4vGHMyQ6b8drzy6.html" target="_blank" rel="noopener">海康机器人移动机器人新品发布</a></div><div class="it-sum">媒体报道其更新覆盖存、拣、运场景的厂内物流方案；尚非融资披露，产品规格与部署进展以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">美国</span><a href="https://spectrum.ieee.org/robust-robot-hand" target="_blank" rel="noopener">Atlas 新型机器人手</a></div><div class="it-sum">IEEE Spectrum 报道 Boston Dynamics 发布重新设计的 Atlas 机器人手，定位于可规模化生产；尚非融资披露，产品细节以公司官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
