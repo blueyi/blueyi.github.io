@@ -88,6 +88,19 @@ def main():
         return 1
     rc, sha = run(["git", "rev-parse", "--short", "HEAD"], REPO_DIR)
     print(f"[daily] published {date} -> {sha}  (https://yulong.wang/daily/)")
+    # 部署校验：GitHub Pages 可能需要短暂时间异步完成，这里给 60 秒兜底
+    import subprocess as _sub
+    import time as _time
+    ok = False
+    for _ in range(6):
+        _time.sleep(10)
+        r = _sub.run(["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", f"https://yulong.wang/daily/{date}.html"],
+                     capture_output=True, text=True)
+        if r.stdout.strip() == "200":
+            ok = True
+            break
+    if not ok:
+        print(f"[daily] WARNING: {date}.html not yet 200 after 60s, but commit succeeded", file=sys.stderr)
     return 0
 
 
