@@ -36,7 +36,7 @@ HOME_SVG = ('<svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="curre
 
 _WEEKDAYS_ZH = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 
-_LINK_RE = re.compile(r'\[([^\]]+)\]\(([^)]+)\)\s*$')
+_LINK_RE = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
 _BOLD_RE = re.compile(r'\*\*(.+?)\*\*')
 
 
