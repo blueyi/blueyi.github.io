@@ -34,6 +34,8 @@ HOME_SVG = ('<svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="curre
             'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
             '<path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>')
 
+from urllib.parse import urlparse
+
 _WEEKDAYS_ZH = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 
 _LINK_RE = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
@@ -52,6 +54,11 @@ def weekday_zh(date_str: str) -> str:
         return ""
 
 
+def _strip_outer_bold(s: str) -> str:
+    """去掉包裹在链接外的 **...**，避免被当成标题。"""
+    return re.sub(r'\*+$', '', s).strip()
+
+
 def _parse_item(raw: str) -> dict:
     """解析一条 '- ' bullet -> {title, summary, url, source, hot}"""
     s = raw.strip()
@@ -59,12 +66,20 @@ def _parse_item(raw: str) -> dict:
     if s.startswith("🔥"):
         hot = True
         s = s[1:].lstrip()
-    source, url = "", ""
+    url, source = "", ""
     m = _LINK_RE.search(s)
     if m:
-        source = m.group(1).strip()
         url = m.group(2).strip()
-        s = s[:m.start()].rstrip()
+        # 去掉包裹在链接外的 **...**，避免被当成标题
+        s = _strip_outer_bold(s[:m.start()])
+        if not s:
+            # 链接被 ** 包裹，用链接文本作为标题
+            s = m.group(1).strip()
+        # 从 URL 提取来源域名，作为 badge 显示
+        try:
+            source = urlparse(url).netloc.replace("www.", "")
+        except Exception:
+            source = ""
     title, summary = "", ""
     bm = _BOLD_RE.search(s)
     if bm:
