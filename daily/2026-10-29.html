@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-10-29</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-10-29</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-10-29 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-10-28 ~ 2026-10-29</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-10-29</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>MoE 与混合模型的执行层被重新设计</b>：INC-MoE 把 dispatch/combine 推进交换机,Request-Adaptive Execution 拆掉&quot;一套布局跑所有请求&quot;的静态假设——推理优化的战场正从算子挪到网络与调度。</li>
+      <li><b>基础设施的两端同时收紧</b>：一端是 UEFI 固件级代码执行漏洞威胁绝大多数服务器,另一端是电力、选址与社区反对(德州、密西西比)开始实质阻挡数据中心落地。</li>
+      <li><b>机器人融资与开源同时加速</b>：Q3 全球机器人融资同比 +185%、Neura 与 TUM 的 RoboGym 落地,而人形机器人全套图纸开源 + Physical RSI 便利店真机自进化,说明&quot;数据与工程底座&quot;正取代单点模型指标成为竞争焦点。</li>
+      <li><b>AI 写 kernel 的结论开始刺人</b>：JustGoal 显示只给目标时 AI baseline 已超专家手写 kernel;配合 H100 DSMEM 的物理非理想性研究,人的价值正从&quot;写&quot;转向&quot;定义问题与评估&quot;。</li>
+      <li><b>训练数据合规进入硬风险区</b>：斯坦福教授书籍被用于训练 Claude 的报道(HN 568 分)加上 Anthropic S-1 的风险披露,授权链条将成为模型公司估值的一部分。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">eetimes.com</span><a href="https://www.eetimes.com/sk-hyn...urge/" target="_blank" rel="noopener">SK 海力士 Q3 创纪录:AI 内存需求把多年产能管理模式整个改写</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1584232.htm" target="_blank" rel="noopener">长鑫存储年底前启动 HBM3E 量产</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/microsoft-maia-300-shown-at-ocp-2026/" target="_blank" rel="noopener">微软 Maia 300 现身 OCP 2026:单 tray 4 颗 288GB HBM4、950W</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/aivres-nvidia-vera-rubin-and-hgx-b300-at-ocp-summit-2026/" target="_blank" rel="noopener">Aivres 展出 NVIDIA Vera Rubin 与 HGX B300 平台</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/019/279.htm" target="_blank" rel="noopener">Marvell 拟收购光通信龙头 Lumentum,交易最快下周宣布</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.36499" target="_blank" rel="noopener">ProCerDCL:面向深度学习编译器优化的查询高效黑盒概率验证</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.37200" target="_blank" rel="noopener">PipeLink:GPU kernel 组件的契约式链接</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.36105" target="_blank" rel="noopener">AGDecode:语义属性文法导数,给 LLM 生成代码做强约束解码</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.36798" target="_blank" rel="noopener">Polymorphic First-Class Environments</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.36339" target="_blank" rel="noopener">INC-MoE:把 dispatch/combine 卸载到交换机,与专家计算重叠</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.37432" target="_blank" rel="noopener">Request-Adaptive Execution:混合 LLM(Attention+SSM)不再&quot;一套布局跑所有请求&quot;</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.37230" target="_blank" rel="noopener">TAO:面向 LLM Agentic Serving 的工具感知联合调度</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blocksandfiles.com</span><a href="https://www.blocksandfiles.com/flash/2026/10/26/dapustors-kv-cache-nvme-ssd-offload-explainer/5305417" target="_blank" rel="noopener">DapuStor 解读 KV Cache 卸载到 NVMe SSD</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">aiera.com.cn</span><a href="https://aiera.com.cn/2026/10/28/other/admin/121046/" target="_blank" rel="noopener">成本侧:</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/nvidia/nemotron-transcribe-granary" target="_blank" rel="noopener">工具链:</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arstechnica.com</span><a href="https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/" target="_blank" rel="noopener">UEFI 固件代码执行漏洞威胁全球绝大多数服务器</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/minerva-platform-infrastructure/" target="_blank" rel="noopener">NVIDIA Minerva:给 AI Factory 做端到端可观测性</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/10/23/partner-content-three-physical-walls-are-hitting-ai-datacenter-infrastructure-at-the-same-time-and-the-compound-effects-are-worse/5304697" target="_blank" rel="noopener">电力已是基础设施最大瓶颈:三堵物理墙同时命中</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/tata-communications-to-invest-450m-into-10000km-of-ai-ready-fiber-to-support-data-center-connectivity-in-india/" target="_blank" rel="noopener">Tata Communications 投 4.5 亿美元建 1 万公里 AI-ready 光纤</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theverge.com</span><a href="https://www.theverge.com/ai-artificial-intelligence/1020596/xai-mississippi-neighborhood-data-center-lawsuit" target="_blank" rel="noopener">社会成本侧:</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.36329" target="_blank" rel="noopener">学界视角:</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">stanforddaily.com</span><a href="https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/" target="_blank" rel="noopener">斯坦福校报:Anthropic 用非法获取的斯坦福教授书籍训练 Claude</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/" target="_blank" rel="noopener">Anthropic 在 IPO 前开放 AI 支出可视化工具</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/CxWoiprQltg8YXmwmghd" target="_blank" rel="noopener">当 AI 智能体代表用户行动,企业治理面临哪些新问题</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/YmgmEh686wTClmj3PY8o" target="_blank" rel="noopener">亚马逊云科技开源智能体&quot;决策器&quot;与&quot;安全箱&quot;</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/on-prem/2026/10/28/microsoft-faces-potential-vote-shareholders-curious-about-its-plans-to-tackle-emissions/5305953" target="_blank" rel="noopener">微软因排放承诺面临股东投票压力</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">importai.substack.com</span><a href="https://importai.substack.com/p/import-ai-478-math-for-alignment" target="_blank" rel="noopener">研究侧:</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">deepmind.google</span><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/" target="_blank" rel="noopener">DeepMind 发布 Genie 4:新一代世界模型/世界模拟</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/10/505865.html" target="_blank" rel="noopener">人形机器人全套图纸开源:从关节机械结构一路拆到运动算法,下载即可自造</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/10/505799.html" target="_blank" rel="noopener">Physical RSI 第一站:便利店打工机器人无人在环自进化,物理 AI 飞轮启动</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/10/28/neura-robotics-and-tum-open-e17-million-robogym-and-unveil-new-humanoid/106435/" target="_blank" rel="noopener">Neura Robotics 与 TUM 启用 1700 万欧元 RoboGym(2300㎡),并发布新一代 4NE1 人形</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.crunchbase.com</span><a href="https://news.crunchbase.com/venture/q3-2026-us-china-robotics-startup-funding-jumps-physical-ai-push/" target="_blank" rel="noopener">资本面:</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.36011" target="_blank" rel="noopener">技术侧:</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/" target="_blank" rel="noopener">产业观察:</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.36434" target="_blank" rel="noopener">JustGoal:只给目标,AI baseline 就已经超过专家手写 kernel</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.37466" target="_blank" rel="noopener">Kernel Performance Engineering under Physical Non-Idealities:以 H100 DSMEM 为例</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/hpc/2026/10/26/cadence-nvidia-unveil-new-ai-models-to-put-eda-on-autopilot/5305228" target="_blank" rel="noopener">Cadence 与 NVIDIA 发布新 AI 模型,把 EDA 推上 autopilot</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.36288" target="_blank" rel="noopener">BUSTA:教小模型推理二进制执行,服务资源受限沙箱里的逆向工程</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/building-scientific-understanding-with-academic-communities/" target="_blank" rel="noopener">旁证:</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/" target="_blank" rel="noopener">NVIDIA RTX Spark 笔记本新阵容:Blackwell RTX + Grace 单封装,新增本地模型与 agent 工具</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/asrock-creator-radeon-ai-pro-r9700-review-workstation-inference-amd-style/" target="_blank" rel="noopener">ASRock Creator Radeon AI Pro R9700 评测:32GB 显存、1700 美元的工作站推理卡</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/performance-oryon-qualcomms-little" target="_blank" rel="noopener">高通 Snapdragon X2 Elite 的&quot;性能&quot;Oryon 小核:放弃全大核策略</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">bret.dk</span><a href="https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/" target="_blank" rel="noopener">Raspberry Pi Zero 3W 与 Pi 4 Model A 出现在 device tree 中</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2610.35935" target="_blank" rel="noopener">学术侧:</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-10-27.html">← 2026-10-27</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
