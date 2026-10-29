@@ -83,8 +83,14 @@ def main():
     # git pull --rebase 前保存 unstaged 改动，避免 rebase 因工作区非干净而失败
     run(["git", "stash", "-q", "-u"], REPO_DIR)
     rc, _ = run(["git", "pull", "--rebase", "-q", "origin", "master"], REPO_DIR)
+    run(["git", "stash", "pop", "-q"], REPO_DIR)
     if rc != 0:
         print("[daily] git pull --rebase failed", file=sys.stderr)
+        return 1
+    # git push 到 origin/master
+    rc, _ = run(["git", "push", "-q", "origin", "master"], REPO_DIR)
+    if rc != 0:
+        print("[daily] git push failed", file=sys.stderr)
         return 1
     rc, sha = run(["git", "rev-parse", "--short", "HEAD"], REPO_DIR)
     print(f"[daily] published {date} -> {sha}  (https://yulong.wang/daily/)")
