@@ -1,0 +1,581 @@
+{
+  "title_date": "2026-W44 每周资讯",
+  "window": {
+    "start": "2026-10-24",
+    "end": "2026-10-31"
+  },
+  "domains": [
+    {
+      "id": "chips",
+      "emoji": "1️⃣",
+      "name": "AI 芯片",
+      "items": [
+        {
+          "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+          "summary": "",
+          "url": "https://divagr.com/blog/qwenputer",
+          "source": "hn",
+          "score": 694,
+          "hot": true
+        },
+        {
+          "title": "Alleged Chinese spy had 'close relationship' with Nvidia boss Jensen Huang",
+          "summary": "",
+          "url": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/",
+          "source": "hn",
+          "score": 350,
+          "hot": true
+        },
+        {
+          "title": "Formlabs Studio 1 $699 Resin Printer",
+          "summary": "",
+          "url": "https://formlabs.com/products/form-studio-1-basic-founders-edition/",
+          "source": "hn",
+          "score": 224,
+          "hot": true
+        },
+        {
+          "title": "Grace Blackwell needs a new scheduler: 27% more usable GPUs from the same racks",
+          "summary": "",
+          "url": "https://skypilot.ai/blog/grace-blackwell-needs-a-new-scheduler",
+          "source": "hn",
+          "score": 142,
+          "hot": false
+        },
+        {
+          "title": "Can We Rely on Language Models to Orchestrate Services across the Edge-Cloud Continuum?",
+          "summary": "Service orchestration across the edge--cloud continuum increasingly uses language models (LMs) to translate intents and operational evidence into scheduling, configuration, diagnosis, and remediation ",
+          "url": "http://arxiv.org/abs/2610.40477v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": "compilers",
+      "emoji": "2️⃣",
+      "name": "AI 编译器与框架",
+      "items": [
+        {
+          "title": "Preserving Separation Logic Specifications through Compilation",
+          "summary": "Program specifications in separation logic describe ownership of resources and serve as logical interfaces for local reasoning. Compiler correctness, expressed as semantics preservation, does not by i",
+          "url": "http://arxiv.org/abs/2610.37244v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Executable Archaeology of Programs That Model Programming: Reanimating the Heuristic Compiler (1961) and KBEmacs (1984)",
+          "summary": "Early AI programs were often also theories of how people think, and programs that wrote programs were, in part, theories of how people program. Here we report on the reanimation of two such programs t",
+          "url": "http://arxiv.org/abs/2610.36341v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "An ODE-based Sampler for Discrete Diffusion Models",
+          "summary": "The marginals of a continuous diffusion model can be reproduced by a deterministic ordinary differential equation (ODE), known as the probability flow ODE, which provides a foundation for accelerated ",
+          "url": "http://arxiv.org/abs/2610.40618v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Machine Learning-Based Detection of Mobile Money Scan Messages in Ghana: A Comparative Evaluation of Naive Bayes, Support Vector Machine, and Randon Forest Classifiers",
+          "summary": "Mobile money (MoMo) is Ghana's preferred retail payment channel, recording GHC518.4 billion in transactions in December 2025 and over 26.7 million active accounts (Graphic Online, 2026). This growth h",
+          "url": "http://arxiv.org/abs/2610.40544v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates",
+          "summary": "Safety alignment for Large Language Models is heavily focused on English with limited multilingual representation, particularly damaging low-resource language performance. Related open training datase",
+          "url": "http://arxiv.org/abs/2610.40516v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": "inference-dc",
+      "emoji": "3️⃣",
+      "name": "AI 推理优化（数据中心）",
+      "items": [
+        {
+          "title": "Only Accepted Tokens Count: An Energy Accounting of Speculative Decoding Under Latency Targets",
+          "summary": "Large language model serving is limited by facility power. Energy per token determines how many tokens a datacenter can serve, while a latency target bounds how quickly each user receives them. During",
+          "url": "http://arxiv.org/abs/2610.40287v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "LAMP: LLM-Driven Analog Placement through Adaptive Tool Composition",
+          "summary": "Analog placement requires circuit-specific trade-offs among area, matching, routability, and electrical performance. Balancing these trade-offs through predefined objectives and fixed placement flows ",
+          "url": "http://arxiv.org/abs/2610.39882v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Energy-Efficient FPGA Implementation of an End-to-End Cosine-Domain CNN Using High-Level Synthesis",
+          "summary": "The computational cost of conventional Convolutional Neural Networks (CNNs) limits their deployment in low-power devices for high-speed edge AI applications. This paper presents an end-to-end cosine-d",
+          "url": "http://arxiv.org/abs/2610.39268v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Write Once, Instrument Anywhere: Portable, Sandboxed Tooling with WebAssembly Components",
+          "summary": "Monitoring and debugging deployed software is crucial for scalability, performance, and robustness. Cross-cutting concerns are pervasive across software ecosystems, yet engineers must address them wit",
+          "url": "http://arxiv.org/abs/2610.38682v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Proof Repair and (Co)algebra Equivalences",
+          "summary": "Maintaining formal proofs in response to breaking changes in their dependencies is a major challenge of proof engineering. Proof repair is a kind of proof automation that lessens the burden of this ch",
+          "url": "http://arxiv.org/abs/2610.36669v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": "datacenter",
+      "emoji": "4️⃣",
+      "name": "数据中心与基础设施",
+      "items": [
+        {
+          "title": "Florilegium: Procedural Flowers in LaTeX",
+          "summary": "",
+          "url": "https://github.com/kevinraymond/florilegium",
+          "source": "hn",
+          "score": 167,
+          "hot": false
+        },
+        {
+          "title": "Nearly-Optimal Time-Sample Trade-off in Consensus Dynamics",
+          "summary": "How does the number of sampled opinions affect the time required to reach consensus in distributed consensus dynamics? We study the synchronous $h$-\\textsf{Majority}, in which every node independently",
+          "url": "http://arxiv.org/abs/2610.40562v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Power Adjusting Games Under Block-Dependent Pool Payout Schemes",
+          "summary": "Advanced power adjusting block withholding attacks such as PAW and T-PAW have been analyzed so far under a global-reset version of the proportional scheme (GRP), which is rarely used in practice. In t",
+          "url": "http://arxiv.org/abs/2610.40558v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "AI in the EGI e-infrastructure -- Past experiences and future strategies",
+          "summary": "The EGI Federation has provided federated e-infrastructure services to European and global science for over 15 years. We review EGI's early experiences with AI in the interTwin and iMagine Horizon Eur",
+          "url": "http://arxiv.org/abs/2610.40494v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "SPECTRUM: A Strategic Framework and Technical Blueprint for European Exascale Research Data and Compute Infrastructure",
+          "summary": "The HiLumi LHC, the SKA Observatory and LOFAR 2.0 will take High Energy Physics (HEP) and Radio Astronomy (RA) towards exabyte-scale data within the next decade, beyond the capacity of today's infrast",
+          "url": "http://arxiv.org/abs/2610.40493v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "emoji": "5️⃣",
+      "name": "AI 安全与治理",
+      "items": [
+        {
+          "title": "Anthropic may not secure investment-grade rating after IPO, Blackstone says",
+          "summary": "",
+          "url": "https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+          "source": "hn",
+          "score": 235,
+          "hot": true
+        },
+        {
+          "title": "Sam Altman sympathizes with mathematicians, but says OpenAI’s math onslaught won’t stop",
+          "summary": "After months of bombarding mathematicians with a relentless stream of AI-generated results, OpenAI CEO Sam Altman says he sympathizes with researchers struggling to make sense of it all. But he has no",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview",
+          "source": "rss",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Community safety report and new protections for teens",
+          "summary": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.",
+          "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+          "source": "rss",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Fair use benefits everyone",
+          "summary": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among others, on how fair use supports AI training and innovation.",
+          "url": "https://openai.com/index/fair-use-benefits-everyone",
+          "source": "rss",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "An updated Model Spec for more capable and beneficial AI",
+          "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
+          "url": "https://openai.com/index/updated-model-spec",
+          "source": "rss",
+          "score": null,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": "embodied-infra",
+      "emoji": "6️⃣",
+      "name": "具身智能（基础设施视角}",
+      "items": [
+        {
+          "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+          "summary": "",
+          "url": "https://github.com/SheepSeb/tinyworldformer",
+          "source": "hn",
+          "score": 268,
+          "hot": true
+        },
+        {
+          "title": "Tactus: Tactile & Pose Sensing Glove for Natural Dexterity Data Collection",
+          "summary": "Collecting naturalistic human manipulation demonstrations with accurate contact force and hand pose is essential for robot dexterous manipulation policy and foundational world model learning - yet no ",
+          "url": "http://arxiv.org/abs/2610.39076v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "world2vec: Mechanistic world models through latent dynamics learning",
+          "summary": "World models can achieve strong control performance without faithfully capturing the dynamics of their environment, limiting their potential for mechanistic interpretability and scientific discovery. ",
+          "url": "http://arxiv.org/abs/2610.40637v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Improving Fine-Grained Manipulation through Demonstration Expansion and Execution Design",
+          "summary": "Fine-grained manipulation requires a robot policy to follow instructions, remain robust to visual variations, and translate predicted actions into precise robot control. We present Demonstration Expan",
+          "url": "http://arxiv.org/abs/2610.40430v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "NVIDIA Cosmos Opens New Tools to Train, Evaluate and Deploy World Models",
+          "summary": "To help developers rapidly build world models, which help physical AI systems understand and simulate the real world, NVIDIA has expanded the Cosmos platform with new training tools, simulation checkp",
+          "url": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/",
+          "source": "rss",
+          "score": null,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": "autokernel",
+      "emoji": "7️⃣",
+      "name": "AI 自动算子与代码生成优化",
+      "items": [
+        {
+          "title": "Dobb: Shard-Local Preconditioning in Block-Diagonal Eigenbases",
+          "summary": "Training language models whose parameters and optimizer state exceed a single node's memory requires sharding these tensors across devices. Under tensor parallelism (TP) or fully sharded data parallel",
+          "url": "http://arxiv.org/abs/2610.39412v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "OPERA: OPamp Design by an Expert-Taught Reasoning Agent, from Specifications to Layout",
+          "summary": "Analog flows from specifications to a signed-off layout rarely run without manual iteration. Recent large language model (LLM) agents size circuits with optimizer loops over the device dimensions and ",
+          "url": "http://arxiv.org/abs/2610.39395v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Making it easier for websites to express AI training preferences",
+          "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
+          "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+          "source": "rss",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Who will you learn from in 6 days at TechCrunch Founder Summit? Meet the founders and investors taking the stages",
+          "summary": "Six days from now, on November 4, TechCrunch Founder Summit brings experienced founders, investors, and operators to Boston to share the decisions, mistakes, pivots, and lessons that shaped their comp",
+          "url": "https://techcrunch.com/2026/10/29/who-will-you-learn-from-in-6-days-at-techcrunch-founder-summit-meet-the-founders-and-investors-taking-the-stage/",
+          "source": "rss",
+          "score": null,
+          "hot": false
+        }
+      ]
+    },
+    {
+      "id": "edge",
+      "emoji": "8️⃣",
+      "name": "边缘与端侧推理",
+      "items": [
+        {
+          "title": "I'm so bad at billiards that I ended up in the hyperbolic plane [video]",
+          "summary": "",
+          "url": "https://www.youtube.com/watch?v=kL9BTbIGxLg",
+          "source": "hn",
+          "score": 231,
+          "hot": true
+        },
+        {
+          "title": "Astroterm: A Planetarium for Your Terminal",
+          "summary": "",
+          "url": "https://github.com/da-luce/astroterm",
+          "source": "hn",
+          "score": 226,
+          "hot": true
+        },
+        {
+          "title": "APPlace: Co-Optimizing Device Locations and Access Points for Routing-Aware Analog Placement",
+          "summary": "Analog layout automation remains challenging in Analog/Mixed-Signal circuit design, because parasitics and mismatches introduced during layout strongly affect circuit performance. Placement is especia",
+          "url": "http://arxiv.org/abs/2610.39515v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Countable Nondeterminism in Weighted Programming with an Application to Mechanized Foundations for Probabilistic Program Verification",
+          "summary": "Weighted programming is a framework by Batz et al. for describing mathematical models or optimization problems as imperative programs parametrized over semirings and then analyzing them with program v",
+          "url": "http://arxiv.org/abs/2610.39723v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        },
+        {
+          "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+          "summary": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer det",
+          "url": "http://arxiv.org/abs/2610.40647v1",
+          "source": "arxiv",
+          "score": null,
+          "hot": false
+        }
+      ]
+    }
+  ],
+  "industry": {
+    "stocks": [
+      {
+        "name": "博通",
+        "sym": "AVGO",
+        "price": 326.08,
+        "pct": -0.94,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "台积电",
+        "sym": "TSM",
+        "price": 406.13,
+        "pct": -4.3,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "美光",
+        "sym": "MU",
+        "price": 884.74,
+        "pct": -2.1,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "Arm",
+        "sym": "ARM",
+        "price": 205.97,
+        "pct": -7.78,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "英特尔",
+        "sym": "INTC",
+        "price": 65.76,
+        "pct": -27.31,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "超微SMCI",
+        "sym": "SMCI",
+        "price": 32.95,
+        "pct": 0.8,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "微软",
+        "sym": "MSFT",
+        "price": 521.91,
+        "pct": -2.01,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "谷歌",
+        "sym": "GOOGL",
+        "price": 279.84,
+        "pct": -11.67,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "亚马逊",
+        "sym": "AMZN",
+        "price": 240.35,
+        "pct": -3.51,
+        "currency": "USD",
+        "note": ""
+      },
+      {
+        "name": "甲骨文",
+        "sym": "ORCL",
+        "price": 130.67,
+        "pct": 3.66,
+        "currency": "USD",
+        "note": ""
+      }
+    ],
+    "cn_stocks": [
+      {
+        "name": "中芯国际",
+        "secid": "116.00981",
+        "market": "港股",
+        "price": 42.98,
+        "pct": -4.4,
+        "currency": "HKD",
+        "note": ""
+      },
+      {
+        "name": "华虹半导体",
+        "secid": "116.01347",
+        "market": "港股",
+        "price": 60.7,
+        "pct": -6.04,
+        "currency": "HKD",
+        "note": ""
+      },
+      {
+        "name": "寒武纪",
+        "secid": "1.688256",
+        "market": "A股",
+        "price": 880.0,
+        "pct": -3.61,
+        "currency": "CNY",
+        "note": ""
+      },
+      {
+        "name": "海光信息",
+        "secid": "1.688041",
+        "market": "A股",
+        "price": 170.2,
+        "pct": -8.44,
+        "currency": "CNY",
+        "note": ""
+      },
+      {
+        "name": "中际旭创",
+        "secid": "0.300308",
+        "market": "A股",
+        "price": 553.0,
+        "pct": -4.99,
+        "currency": "CNY",
+        "note": ""
+      },
+      {
+        "name": "浪潮信息",
+        "secid": "0.000977",
+        "market": "A股",
+        "price": 54.18,
+        "pct": -3.56,
+        "currency": "CNY",
+        "note": ""
+      }
+    ],
+    "funding": [
+      {
+        "title": "Retell uses OpenAI models to help power 100M monthly calls",
+        "summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
+        "url": "https://openai.com/index/retell-ai",
+        "amount": "$1.6",
+        "region": "海外"
+      },
+      {
+        "title": "ASRock Creator Radeon AI Pro R9700 Review: Workstation Inference, AMD Style",
+        "summary": "Today we are taking a look at ASRock's high-end Radeon AI inference card for workstations, the Creator Radeon AI Pro R9700. With 32GB of RAM and a $17",
+        "url": "https://www.servethehome.com/asrock-creator-radeon-ai-pro-r9700-review-workstation-inference-amd-style/",
+        "amount": "$1700",
+        "region": "海外"
+      },
+      {
+        "title": "Thiel Capital’s Jack Selby nabs stakes in hot startups like Etched through Arizona connections",
+        "summary": "Selby's VC firm, Copper Sky Capital, is currently raising a $300 million second fund, according to a regulatory filing.",
+        "url": "https://techcrunch.com/2026/07/02/thiel-capitals-jack-selby-nabs-stakes-in-hot-startups-like-etched-through-arizona-connections/",
+        "amount": "$300",
+        "region": "海外"
+      },
+      {
+        "title": "A new search engine raises $1.1M to let obsessive fans dive down internet rabbit holes",
+        "summary": "Lore raises $1.1 million to build a personalized search engine for fandom culture.",
+        "url": "https://techcrunch.com/2025/10/03/a-new-search-engine-raises-1-1m-to-let-obsessive-fans-dive-down-internet-rabbit-holes/",
+        "amount": "$1.1",
+        "region": "海外"
+      },
+      {
+        "title": "Skip the small talk: Make game-changing connections at TechCrunch Founder Summit with Braindate",
+        "summary": "At TechCrunch Founder Summit 2026, happening November 4 at SoWa Power Station in Boston, networking powered by Braindate is designed to make those con",
+        "url": "https://techcrunch.com/2026/10/30/skip-the-small-talk-make-game-changing-connections-at-techcrunch-founder-summit-with-braindate/",
+        "amount": "$100",
+        "region": "海外"
+      },
+      {
+        "title": "OpenAI-backed Thrive Holdings acquires ADT",
+        "summary": "OpenAI-backed Thrive Holdings is buying ADT in a $15.3 billion deal, with plans to bring AI to the home security business.",
+        "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/",
+        "amount": "$15.3",
+        "region": "海外"
+      }
+    ]
+  },
+  "highlights": [
+    {
+      "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+      "summary": "",
+      "url": "https://divagr.com/blog/qwenputer",
+      "domain": "chips"
+    },
+    {
+      "title": "Alleged Chinese spy had 'close relationship' with Nvidia boss Jensen Huang",
+      "summary": "",
+      "url": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/",
+      "domain": "chips"
+    },
+    {
+      "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+      "summary": "",
+      "url": "https://github.com/SheepSeb/tinyworldformer",
+      "domain": "embodied-infra"
+    }
+  ]
+}

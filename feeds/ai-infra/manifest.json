@@ -55,6 +55,33 @@
   "hn_min_score": 60,
   "weeks": [
     {
+      "week": "2026-W44_curated",
+      "html": null,
+      "data": "data/2026-W44_curated.json",
+      "title_date": "2026-W44 · 10-26 ~ 11-01",
+      "window": "2026-10-26 ~ 2026-11-01",
+      "highlight": null,
+      "published": false
+    },
+    {
+      "week": "2026-W44",
+      "html": "weeks/2026-W44.html",
+      "data": "data/2026-W44.json",
+      "title_date": "2026-W44 · 10-26 ~ 11-01",
+      "window": "2026-10-26 ~ 2026-11-01",
+      "highlight": null,
+      "published": true
+    },
+    {
+      "week": "2026-W43_curated",
+      "html": null,
+      "data": "data/2026-W43_curated.json",
+      "title_date": "2026-W43 · 10-19 ~ 10-25",
+      "window": "2026-10-19 ~ 2026-10-25",
+      "highlight": null,
+      "published": false
+    },
+    {
       "week": "2026-W42_curated",
       "html": null,
       "data": "data/2026-W42_curated.json",
@@ -64,22 +91,13 @@
       "published": false
     },
     {
-      "week": "2026-W42",
-      "html": "weeks/2026-W42.html",
-      "data": "data/2026-W42.json",
-      "title_date": "2026-W42 · 10-12 ~ 10-18",
-      "window": "2026-10-12 ~ 2026-10-18",
-      "highlight": null,
-      "published": true
-    },
-    {
-      "week": "2026-W41",
-      "html": "weeks/2026-W41.html",
-      "data": "data/2026-W41.json",
+      "week": "2026-W41_curated",
+      "html": null,
+      "data": "data/2026-W41_curated.json",
       "title_date": "2026-W41 · 10-05 ~ 10-11",
       "window": "2026-10-05 ~ 2026-10-11",
       "highlight": null,
-      "published": true
+      "published": false
     },
     {
       "week": "2026-W40",
