@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-10-31</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-10-31</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-10-31 · 周六</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-10-30 ~ 2026-10-31</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-10-31</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>资本面第一次出现反向信号</b>：Anthropic IPO 文件里的算力采购承诺与现金流缺口,叠加「AI 支出繁荣出现裂缝」的讨论,标志着讨论重心从「能不能买到卡」转向「买来的卡什么时候回本」。</li>
+      <li><b>调度与系统层开始比芯片层更值钱</b>：SkyPilot 用调度换出 27% 可用 GPU,和 InfoQ 的超节点复盘是同一个结论——scale-up 域内的拓扑与调度,已经是可以直接量化的算力增量。</li>
+      <li><b>端侧同一天三件事</b>：Pico 2 W 上跑世界模型、RTX Spark 笔电上跑 agent、Apple 智能以千问入华,「小模型 + 低比特 + 端侧运行时」这条栈正在从实验走向产品。</li>
+      <li><b>模型开始向下吃工具链</b>：Qwenputer 把 ISA 解释器塞进模型、Cadence+Nvidia 让模型写 RTL、Dulo 用 AI 做工程——「AI 生成 AI 的机器」已是本期最集中的一条暗线。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/microsoft-maia-300-shown-at-ocp-2026/" target="_blank" rel="noopener">微软 Maia 300 现身 OCP 2026</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">单 tray 4 颗 288GB HBM4、950W 加速器,自研 ASIC 正式进入 HBM4 时代,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/020/400.htm" target="_blank" rel="noopener">联发科拿下第二家 AI ASIC 大客户</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">预计 2028 年量产并开始贡献营收,第一家客户是谷歌 TPU;台系 ASIC 代设计正在成为超大厂自研芯片的默认产能出口,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/nvidia-veras-system-architecture" target="_blank" rel="noopener">Nvidia Vera 系统架构与 Olympus 核</a></div>
+      <div class="it-sum">Chips and Cheese 拆解 Vera 的带宽设计与 Olympus 服务器核的单线程性能取向,说明服务器 CPU 与加速器的配比正在被重新设计,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">semiengineering.com</span><a href="https://semiengineering.com/chip-industry-week-in-review-162/" target="_blank" rel="noopener">HBM 短缺 + 代工涨价</a></div>
+      <div class="it-sum">SemiEngineering 周报指出 HBM 供应紧张已威胁 AI 扩张节奏,台积电在评估新一轮涨价,先进封装仍是硬瓶颈,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1584494.htm" target="_blank" rel="noopener">苹果市值反超英伟达</a></div>
+      <div class="it-sum">重登全球第一,iPhone 需求强劲叠加 AI 资本开支预期波动是直接原因,(</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">divagr.com</span><a href="https://divagr.com/blog/qwenputer" target="_blank" rel="noopener">Qwenputer:在 Qwen3.5 里跑一个确定性 RISC-V CPU</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 695 分),让模型自己解释并执行指令集语义、结果可复现,是「LLM 充当执行引擎」最激进的一次公开实验,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/hpc/2026/10/26/cadence-nvidia-unveil-new-ai-models-to-put-eda-on-autopilot/5305228" target="_blank" rel="noopener">Cadence 与 Nvidia 联合发布 EDA 专用模型</a></div>
+      <div class="it-sum">把 RTL 生成与验证推向 autopilot;这既是 AI for EDA,也是编译器前端(IR、调度、约束求解)被模型接管的前奏,(</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">近两天无 MLIR / TVM / Triton / torch.compile 的版本级动态;框架层新增能力主要沿上面两条「模型即工具链」路线出现。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/a-primer-on-key-ai-llm-concepts-kv-cache-weights-quantization-and-how-inference-actually-works" target="_blank" rel="noopener">KV Cache / 权重量化 / 推理全流程科普</a></div>
+      <div class="it-sum">Tom&#x27;s Hardware 这篇 primer 把 KV cache 增长、权重量化、prefill 与 decode 两阶段瓶颈讲清楚了,适合当团队内部分享材料,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">eetimes.com</span><a href="https://www.eetimes.com/google-agentic-ai-will-drive-new-demands-on-data-center-cpus/" target="_blank" rel="noopener">Agentic 负载重塑 CPU:GPU 配比</a></div>
+      <div class="it-sum">Google 在 EE Times 指出 agent 工作负载高度突发,等待工具调用时 GPU 侧大量空转、CPU 频繁闲置,数据中心的 CPU 规格与内存带宽需要按 agent 场景重新配,(</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">量化 / 投机解码 / MoE 方向近两天无独立论文或产品发布(arXiv 本日抓取为空)。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">ft.com</span><a href="https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f" target="_blank" rel="noopener">Anthropic 递交 IPO,信用评级或被定为高收益级</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Blackstone 预判其拿不到投资级评级,而招股书 88 项风险、93 页风险因素的核心是「巨额算力采购承诺 vs 尚未匹配的现金流」,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/" target="_blank" rel="noopener">AI 支出繁荣出现裂缝</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">债务融资上升、自由现金流为负、投资人对回报周期开始犹豫,是本周最该盯的宏观信号,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">skypilot.ai</span><a href="https://skypilot.ai/blog/grace-blackwell-needs-a-new-scheduler" target="_blank" rel="noopener">Grace Blackwell 需要新调度器</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">SkyPilot 实测同一机架换调度策略可多榨出 27% 可用 GPU,拓扑感知 + gang scheduling 的收益已经大过不少芯片级优化,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/ZolBIJdvK5Icdqg6FB0X" target="_blank" rel="noopener">超节点一年后,「算力不够就加机器」被改写</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">InfoQ 中文视角复盘 scale-up 域内互联、协议与拓扑取舍,结论是扩容逻辑从堆卡转向堆域,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theverge.com</span><a href="https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission" target="_blank" rel="noopener">Google 首颗数据中心卫星上线</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">在轨 TPU 启动并跑起 Gemma 4,返回第一首太空俳句,太空推理从概念进入「能开机、能推理」阶段,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/minerva-platform-infrastructure/" target="_blank" rel="noopener">NVIDIA 发布 Minerva</a></div>
+      <div class="it-sum">面向 AI factory 的 AIOps 平台,把基础设施与负载 telemetry 汇总后用专用模型做早期故障定位,(</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/helping-websites-express-ai-training-preferences" target="_blank" rel="noopener">OpenAI / Google / 微软 / Anthropic 共同采纳 robots.txt 式训练偏好信号</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">发布方用一条共享信号即可跨多家声明训练偏好,取代逐家配置,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/cyber-crime/2026/10/30/anthropic-that-claude-code-extension-compromise-couldnt-be-us/5306682" target="_blank" rel="noopener">Claude Code 扩展供应链投毒事件</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Anthropic 否认自身被攻破,称是「恶意行为者」针对 Cursor 生态的定向供应链攻击——AI 编码工具已成高价值攻击面,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/how-we-detect-frontier-model-misalignment" target="_blank" rel="noopener">OpenAI 更新 Model Spec</a></div>
+      <div class="it-sum">把可靠判断、尊重人类能动性、忠于意图等五项价值写成可评估条款;同时发布</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nypost.com</span><a href="https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/" target="_blank" rel="noopener">黄仁勋与「中国间谍」传闻</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">NY Post 报道称一名被指为间谍的人士与黄仁勋关系密切(HN 353 分),在出口管制敏感期,这类叙事会直接冲击合规与供应链信任,(</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/agility-robotics-digit-5-redesign" target="_blank" rel="noopener">Agility 发布 Digit 5</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">联合创始人自述「我没想到会造的那台机器人」,定位首个能规模化、经济地真正干活的人形机器人,重心在可靠性与单机成本而非演示,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/academic/oi5NEt93WcuWwFr8.html" target="_blank" rel="noopener">AMD 82 亿美元全股票收购 World Labs</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">李飞飞的空间智能路线被芯片厂商直接买下,世界模型成为对标 Nvidia Cosmos 与机器人栈的战略资产,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/10/506662.html" target="_blank" rel="noopener">清华 + 无问芯穹 + 智元:让机器人互为「老师」</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">从「学习人类」转向「学习机器人同伴」,用同伴交互数据做规模化,是具身数据瓶颈的一条新解法,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/academic/xPVWQgBN3Foj7fo5.html" target="_blank" rel="noopener">全国首个具身仿真数采中心落地杭州</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(影溯):产能公式从「人×小时」变成「环境配置数 × 并行算力」,目标一个月产出全行业两年积累的百万小时量级数据,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/10/30/walmart-expands-symbotic-warehouse-automation-deal-with-6-billion-commitment/106538/" target="_blank" rel="noopener">沃尔玛加码 Symbotic 60 亿美元</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">覆盖 25 个美国区域配送中心,仓储自动化进入按合同规模化复制阶段,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/" target="_blank" rel="noopener">资本与形态两条线</a></div>
+      <div class="it-sum">General Intuition 以 60 亿美元 pre-money 洽谈新融资(空间/时间基础模型),(</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">divagr.com</span><a href="https://divagr.com/blog/qwenputer" target="_blank" rel="noopener">Qwenputer(HN 695)</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">把 RISC-V 指令语义沉进模型推理过程并保证可复现执行,为「模型替代一部分运行时/解释器」给出了极端样本,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/yanxishe/UIbgVZxTjEoMswaE.html" target="_blank" rel="noopener">国产 RSI 的真实水位</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(雷锋网):一天造 300 万沙盒、10 万张卡自己写系统;业内共识是没人敢真动基座权重,但都在改「造 AI 的机器」,Self-Training 已成一级市场关键词,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/hpc/2026/10/26/cadence-nvidia-unveil-new-ai-models-to-put-eda-on-autopilot/5305228" target="_blank" rel="noopener">Cadence + Nvidia 的 EDA autopilot</a></div>
+      <div class="it-sum">LLM 写 RTL、自动生成约束与验证收敛,是「AI 生成硬件」这条线第一次有商用工具链背书,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">siliconangle.com</span><a href="https://siliconangle.com/2026/10/30/google-x-co-founder-sebastian-thrun-raises-130m-for-ai-engineering-startup-dulo/" target="_blank" rel="noopener">Dulo 获 1.3 亿美元</a></div>
+      <div class="it-sum">Sebastian Thrun 的新公司做 AI 工程(用 AI 写工程代码与系统),资本开始为「AI 做工程」单独定价,(</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/SheepSeb/tinyworldformer" target="_blank" rel="noopener">树莓派 Pico 2 W 上跑微型世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 268):在数美元级 MCU 上做游戏世界模型的在线推演,证明极小参数 + 低比特量化在端侧仍有想象空间,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/" target="_blank" rel="noopener">NVIDIA RTX Spark 笔电扩容</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Blackwell RTX + Grace CPU 单封装,新增本地模型与 agent 工具,端侧 agent 首次有官方运行时,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/020/401.htm" target="_blank" rel="noopener">Apple 智能国行落地,接入阿里千问</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">11 月 4 日随 iOS 开发者 Beta 开放测试、12 月随 iOS 27.3 正式推送,Siri、写作工具与视觉智能全走端云协同,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/asrock-creator-radeon-ai-pro-r9700-review-workstation-inference-amd-style/" target="_blank" rel="noopener">ASRock Creator Radeon AI Pro R9700</a></div>
+      <div class="it-sum">32GB 显存、1700 美元的工作站推理卡,本地跑中大型模型开始有明确性价比选项,(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/10/506686.html" target="_blank" rel="noopener">1.3B OXR 拿下 OCR 全球第一</a></div>
+      <div class="it-sum">(量子位):RSI 训出的小模型在解析类任务上超过大模型,端侧文档理解多了一个可选路线,(</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-10-29.html">← 2026-10-29</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
