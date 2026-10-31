@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W44 · 10-26 ~ 11-01</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W44</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W44 · 10-26 ~ 11-01</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-10-26 ~ 2026-11-01</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W44</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>PDRVLA 以轻量物理动力学表征监督未来视觉特征预测，在不进行在线视频生成的前提下增强机器人动作生成：[端到端VLA]</li>
+      <li>Gym-Anything 以数字智能体扩展物理仿真构建，直指高保真机器人训练环境的生产瓶颈：[控制层·世界模型]</li>
+      <li>Genie 4 获 HN 1,041 分关注，代表实时世界模拟向更强真实感与可交互性推进：[控制层·世界模型]</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.37381" target="_blank" rel="noopener">PDRVLA：以物理动力学表征增强动作生成</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">在 VLA 中引入轻量物理动力学模块，以世界模型监督预测未来视觉特征，避免在线视频生成带来的控制时延。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.34356" target="_blank" rel="noopener">RynnVLA-Latent：3D 接地潜动作扩展操作基础模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">从多样视频中导出潜动作预训练大规模机器人策略，并以相机补偿 3D 流等监督提高跨仿真与真机基准的泛化；代码已公开。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.34186" target="_blank" rel="noopener">HuGe：第一视角经验扩展人形通用 VLA</a></div>
+      <div class="it-sum">结合第一视角人类与机器人数据、伪本体感觉状态和视觉适配，面向人形机器人的全身闭环控制；代码已公开。[端到端VLA]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.40646v1" target="_blank" rel="noopener">SwapBot：可换工具与触觉感知的机器人操作</a></div>
+      <div class="it-sum">面向切、刷、放置等接触丰富的日常任务，研究机器人自主更换并使用合适末端工具，结合触觉感知处理多样接触交互。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.40537v1" target="_blank" rel="noopener">DAWN：扩散式对准与拆卸工作流</a></div>
+      <div class="it-sum">以多模态感知和分层扩散框架处理真实世界紧固件拆卸，将精确对准与操作流程统一到自动化工作流中。[控制层·扩散]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.40430v1" target="_blank" rel="noopener">DEED：示范扩展提升精细操作</a></div>
+      <div class="it-sum">通过结构化扩展示范并重新设计执行环节，适配预训练 VLA 到 MetaFine 五项精细操作任务，兼顾视觉变化鲁棒性与精确控制。[控制层·BC]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">1041★</span><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/" target="_blank" rel="noopener">Genie 4：新一代实时世界模拟</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Google DeepMind 发布的世界模型主打实时模拟与更高真实感，HN 获 1,041 分关注；其机器人训练与迁移价值仍需后续公开评测验证。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.40565v1" target="_blank" rel="noopener">Gym-Anything：用数字智能体规模化物理仿真</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">针对高质量机器人仿真依赖专家手工构建、难以扩展的问题，提出借助数字智能体扩展物理模拟覆盖面，为 sim2real 数据飞轮提供路径。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.33966" target="_blank" rel="noopener">InteractiveWorld：可验证的人类物理任务交互环境</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">提供可验证仿真环境与基准，评估多模态模型能否可靠地闭环指导人类完成物理任务；代码已公开。[规划层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.36068" target="_blank" rel="noopener">Rollback：在世界模型中回溯经验改进策略</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">让机器人策略回到过去决策点探索反事实动作，生成细粒度监督，并用真实世界反馈持续修正动力学模型。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.40401v1" target="_blank" rel="noopener">CoAWM：跨本体连续动作世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">学习跨本体、跨执行频率的时空动力学先验，以共享潜函数空间表示机器人动作，并通过两阶段训练支持动作生成。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2610.32965" target="_blank" rel="noopener">RynnUnify：统一具身大脑</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">16B 模型结合视频—语言推理、物理预测和机器人控制，面向长视野具身任务的统一视觉规划与行动建模；代码已公开。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2610.40539v1" target="_blank" rel="noopener">PhysVLMM：面向可动部件的物理信念地图</a></div>
+      <div class="it-sum">在视觉—语言—运动地图中维护门、抽屉等可动部件对拉拽交互的物理信念，供规划器查询和更新。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/31/foundry-robotics-raises-100-million-to-build-americas-first-autonomous-factory-for-assembly/106564/" target="_blank" rel="noopener">Foundry Robotics 获 1 亿美元建设自主装配工厂</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">媒体报道 Foundry Robotics 完成超额认购的 1 亿美元 A 轮，用于建设其称为美国首座自主装配工厂的产线；融资与部署细节以公司官方渠道核验。[控制层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/robust-robot-hand" target="_blank" rel="noopener">Boston Dynamics Atlas 新手面向量产设计</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">IEEE Spectrum 报道 Atlas 采用重新设计的机器人手，重点从研究性能转向可在数万级部署中制造与使用；产品规格以官方渠道核验。[控制层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://news.crunchbase.com/venture/q3-2026-us-china-robotics-startup-funding-jumps-physical-ai-push/" target="_blank" rel="noopener">机器人创业融资：2026 年 Q3 同比增长 185%</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Crunchbase 统计称，2026 年第三季度全球机器人创业融资约 99 亿美元，较 2025 年同期的 43 亿美元增长逾一倍，资金主要流向中美 Physical AI 公司。[市场/产业]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/10/30/bleu-robotics-raises-e5-million-to-scale-humanoid-robot-deployment-in-factories/106554/" target="_blank" rel="noopener">Bleu Robotics 获 500 万欧元推进工厂人形部署</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">媒体报道这家面向工业人形机器人的法国公司完成 500 万欧元 pre-seed，拟扩大工厂部署；融资及部署进度以公司官方渠道核验。[市场/产业]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/" target="_blank" rel="noopener">Dream 获 1,700 万美元构建建筑世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">前 Palantir 高管创办的 Dream 获 a16z 支持，称将用真实物理与建筑规范、逾 1 亿平方英尺许可档案训练施工世界模型；细节以公司官方渠道核验。[控制层·世界模型]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（10 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>399.81 USD</td><td class="up">+2.09%</td><td></td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>432.01 USD</td><td class="down">-4.34%</td><td></td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>37.93 USD</td><td class="up">+0.08%</td><td></td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>2.6 USD</td><td class="down">-1.52%</td><td></td></tr>
+        <tr><td>UiPath(自动化) <span class="tk">PATH</span></td><td>13.73 USD</td><td class="down">-3.99%</td><td></td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>204.64 USD</td><td class="down">-5.26%</td><td></td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>100.4 HKD</td><td class="up">+1.01%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>宇树科技 <span class="tk">1.688836 · A股</span></td><td>647.05 CNY</td><td class="down">-2.32%</td><td></td></tr>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>63.45 HKD</td><td class="down">-2.83%</td><td></td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>55.39 CNY</td><td class="down">-2.45%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$100M</span><span class="badge region">美国</span><a href="https://roboticsandautomationnews.com/2026/10/31/foundry-robotics-raises-100-million-to-build-americas-first-autonomous-factory-for-assembly/106564/" target="_blank" rel="noopener">Foundry Robotics 获 1 亿美元 A 轮</a></div><div class="it-sum">媒体报道其完成超额认购的 1 亿美元 A 轮，用于建设自主装配工厂；融资与建设细节以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge amt">€5M</span><span class="badge region">欧洲</span><a href="https://roboticsandautomationnews.com/2026/10/30/bleu-robotics-raises-e5-million-to-scale-humanoid-robot-deployment-in-factories/106554/" target="_blank" rel="noopener">Bleu Robotics 获 500 万欧元 pre-seed</a></div><div class="it-sum">媒体报道其融资以扩大工业人形机器人的工厂部署；融资与部署进度以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge amt">$17M</span><span class="badge region">美国</span><a href="https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/" target="_blank" rel="noopener">Dream 获 1,700 万美元建设建筑世界模型</a></div><div class="it-sum">媒体报道其获 a16z 支持，拟以真实物理与建筑数据训练施工世界模型；产品与数据范围以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><span class="badge region">全球</span><a href="https://news.crunchbase.com/venture/q3-2026-us-china-robotics-startup-funding-jumps-physical-ai-push/" target="_blank" rel="noopener">2026 年 Q3 全球机器人融资增长 185%</a></div><div class="it-sum">Crunchbase 统计显示，全球机器人创业融资约 99 亿美元，同比高于 2025 年 Q3 的 43 亿美元。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>

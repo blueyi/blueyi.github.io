@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T09:00:59.765242+08:00",
+ "generated_at": "2026-10-31T20:05:42.135271+08:00",
  "entries": [
   {
    "type": "daily",
@@ -26279,6 +26279,248 @@
    "summary": "IEEE Spectrum 报道 Boston Dynamics 发布重新设计的 Atlas 机器人手，定位于可规模化生产；尚非融资披露，产品细节以公司官方渠道核验。",
    "url": "https://spectrum.ieee.org/robust-robot-hand",
    "page": "/feeds/embodied-ai/weeks/2026-W43.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "PDRVLA：以物理动力学表征增强动作生成",
+   "summary": "在 VLA 中引入轻量物理动力学模块，以世界模型监督预测未来视觉特征，避免在线视频生成带来的控制时延。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2610.37381",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "RynnVLA-Latent：3D 接地潜动作扩展操作基础模型",
+   "summary": "从多样视频中导出潜动作预训练大规模机器人策略，并以相机补偿 3D 流等监督提高跨仿真与真机基准的泛化；代码已公开。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2610.34356",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "HuGe：第一视角经验扩展人形通用 VLA",
+   "summary": "结合第一视角人类与机器人数据、伪本体感觉状态和视觉适配，面向人形机器人的全身闭环控制；代码已公开。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2610.34186",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "SwapBot：可换工具与触觉感知的机器人操作",
+   "summary": "面向切、刷、放置等接触丰富的日常任务，研究机器人自主更换并使用合适末端工具，结合触觉感知处理多样接触交互。[控制层·BC]",
+   "url": "http://arxiv.org/abs/2610.40646v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "DAWN：扩散式对准与拆卸工作流",
+   "summary": "以多模态感知和分层扩散框架处理真实世界紧固件拆卸，将精确对准与操作流程统一到自动化工作流中。[控制层·扩散]",
+   "url": "http://arxiv.org/abs/2610.40537v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "DEED：示范扩展提升精细操作",
+   "summary": "通过结构化扩展示范并重新设计执行环节，适配预训练 VLA 到 MetaFine 五项精细操作任务，兼顾视觉变化鲁棒性与精确控制。[控制层·BC]",
+   "url": "http://arxiv.org/abs/2610.40430v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "Genie 4：新一代实时世界模拟",
+   "summary": "Google DeepMind 发布的世界模型主打实时模拟与更高真实感，HN 获 1,041 分关注；其机器人训练与迁移价值仍需后续公开评测验证。[控制层·世界模型]",
+   "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "Gym-Anything：用数字智能体规模化物理仿真",
+   "summary": "针对高质量机器人仿真依赖专家手工构建、难以扩展的问题，提出借助数字智能体扩展物理模拟覆盖面，为 sim2real 数据飞轮提供路径。[控制层·世界模型]",
+   "url": "http://arxiv.org/abs/2610.40565v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "InteractiveWorld：可验证的人类物理任务交互环境",
+   "summary": "提供可验证仿真环境与基准，评估多模态模型能否可靠地闭环指导人类完成物理任务；代码已公开。[规划层]",
+   "url": "https://arxiv.org/abs/2610.33966",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "Rollback：在世界模型中回溯经验改进策略",
+   "summary": "让机器人策略回到过去决策点探索反事实动作，生成细粒度监督，并用真实世界反馈持续修正动力学模型。[控制层·世界模型]",
+   "url": "https://arxiv.org/abs/2610.36068",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "CoAWM：跨本体连续动作世界模型",
+   "summary": "学习跨本体、跨执行频率的时空动力学先验，以共享潜函数空间表示机器人动作，并通过两阶段训练支持动作生成。[控制层·世界模型]",
+   "url": "http://arxiv.org/abs/2610.40401v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "RynnUnify：统一具身大脑",
+   "summary": "16B 模型结合视频—语言推理、物理预测和机器人控制，面向长视野具身任务的统一视觉规划与行动建模；代码已公开。[控制层·世界模型]",
+   "url": "https://arxiv.org/abs/2610.32965",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "PhysVLMM：面向可动部件的物理信念地图",
+   "summary": "在视觉—语言—运动地图中维护门、抽屉等可动部件对拉拽交互的物理信念，供规划器查询和更新。[感知层]",
+   "url": "http://arxiv.org/abs/2610.40539v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "6️⃣ 制造 / 产线",
+   "title": "Foundry Robotics 获 1 亿美元建设自主装配工厂",
+   "summary": "媒体报道 Foundry Robotics 完成超额认购的 1 亿美元 A 轮，用于建设其称为美国首座自主装配工厂的产线；融资与部署细节以公司官方渠道核验。[控制层]",
+   "url": "https://roboticsandautomationnews.com/2026/10/31/foundry-robotics-raises-100-million-to-build-americas-first-autonomous-factory-for-assembly/106564/",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "6️⃣ 制造 / 产线",
+   "title": "Boston Dynamics Atlas 新手面向量产设计",
+   "summary": "IEEE Spectrum 报道 Atlas 采用重新设计的机器人手，重点从研究性能转向可在数万级部署中制造与使用；产品规格以官方渠道核验。[控制层]",
+   "url": "https://spectrum.ieee.org/robust-robot-hand",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "机器人创业融资：2026 年 Q3 同比增长 185%",
+   "summary": "Crunchbase 统计称，2026 年第三季度全球机器人创业融资约 99 亿美元，较 2025 年同期的 43 亿美元增长逾一倍，资金主要流向中美 Physical AI 公司。[市场/产业]",
+   "url": "https://news.crunchbase.com/venture/q3-2026-us-china-robotics-startup-funding-jumps-physical-ai-push/",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Bleu Robotics 获 500 万欧元推进工厂人形部署",
+   "summary": "媒体报道这家面向工业人形机器人的法国公司完成 500 万欧元 pre-seed，拟扩大工厂部署；融资及部署进度以公司官方渠道核验。[市场/产业]",
+   "url": "https://roboticsandautomationnews.com/2026/10/30/bleu-robotics-raises-e5-million-to-scale-humanoid-robot-deployment-in-factories/106554/",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Dream 获 1,700 万美元构建建筑世界模型",
+   "summary": "前 Palantir 高管创办的 Dream 获 a16z 支持，称将用真实物理与建筑规范、逾 1 亿平方英尺许可档案训练施工世界模型；细节以公司官方渠道核验。[控制层·世界模型]",
+   "url": "https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "📈 产业动态 · 融资",
+   "title": "Foundry Robotics 获 1 亿美元 A 轮",
+   "summary": "媒体报道其完成超额认购的 1 亿美元 A 轮，用于建设自主装配工厂；融资与建设细节以公司官方渠道核验。",
+   "url": "https://roboticsandautomationnews.com/2026/10/31/foundry-robotics-raises-100-million-to-build-americas-first-autonomous-factory-for-assembly/106564/",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "📈 产业动态 · 融资",
+   "title": "Bleu Robotics 获 500 万欧元 pre-seed",
+   "summary": "媒体报道其融资以扩大工业人形机器人的工厂部署；融资与部署进度以公司官方渠道核验。",
+   "url": "https://roboticsandautomationnews.com/2026/10/30/bleu-robotics-raises-e5-million-to-scale-humanoid-robot-deployment-in-factories/106554/",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "📈 产业动态 · 融资",
+   "title": "Dream 获 1,700 万美元建设建筑世界模型",
+   "summary": "媒体报道其获 a16z 支持，拟以真实物理与建筑数据训练施工世界模型；产品与数据范围以公司官方渠道核验。",
+   "url": "https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W44",
+   "category": "📈 产业动态 · 融资",
+   "title": "2026 年 Q3 全球机器人融资增长 185%",
+   "summary": "Crunchbase 统计显示，全球机器人创业融资约 99 亿美元，同比高于 2025 年 Q3 的 43 亿美元。",
+   "url": "https://news.crunchbase.com/venture/q3-2026-us-china-robotics-startup-funding-jumps-physical-ai-push/",
+   "page": "/feeds/embodied-ai/weeks/2026-W44.html"
   }
  ]
 }
