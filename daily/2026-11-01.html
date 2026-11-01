@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-11-01</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-11-01</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-11-01 · 周日</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-10-31 ≈ 2026-11-01</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-11-01</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>自研 ASIC 进入「整机柜可见」阶段</b>：微软 Maia 300 以 4×288GB HBM4、950W/tray 的规格出现在 OCP，配合英伟达 Vera 的系统架构演进，云厂商与芯片厂商在机柜级方案上正面对撞。</li>
+      <li><b>抓取治理从「逐家谈判」变成「统一信号」</b>：OpenAI / Google / Microsoft / Anthropic 共推 robots.txt 共享信号，是训练数据合规的一次结构性让步，也为后续许可与付费谈判划定了基线。</li>
+      <li><b>推理价格坍塌正在重写算力经济学</b>：Anthropic token 五个月跌 77%、闲置 Mac 推理日收入跌到 1.23 美元，碎片化供给的套利窗口基本关闭，自建推理的决策逻辑要回到利用率与负载形态（Agentic 突发负载正被 Google 单独拿出来讲）。</li>
+      <li><b>具身智能的瓶颈被明确定位在「数据产能」</b>：杭州仿真数采中心把产能公式从「人×小时」换成「环境配置数×并行算力」，配合智元双模型登顶、Digit 5 与 Foundry 1 亿美元 A 轮，「规模化干活」的叙事开始有成本口径。</li>
+      <li><b>自动算子生成的评价标准从「能生成」转向「更快」</b>：9.8% 的反超幅度虽小，但意义在于 AI 生成的 kernel 已在生产平台上跑赢人类手写基线，与 Cadence/NVIDIA 的 EDA 自动驾驶一起，把「AI 改 AI 基础设施」这条链路补全。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/microsoft-maia-300-shown-at-ocp-2026/" target="_blank" rel="noopener">微软 Maia 300 现身 OCP Summit 2026</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">单 tray 四颗 288GB HBM4、950W 加速器，自研 ASIC 已进入整机柜级封装形态。(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/nvidia-veras-system-architecture" target="_blank" rel="noopener">英伟达 Vera 系统架构深度拆解：以「每核性能 + 带宽」双推为设计主轴，服务器 CPU 定位从配套件转向性能担当。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/intel-q3-2026-earnings-data-center-foundry-client/" target="_blank" rel="noopener">英特尔第三季财报：数据中心业务强势、客户端（PC）被 DRAM/NAND 涨价压得难受。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/020/643.htm" target="_blank" rel="noopener">联电 CEO 王石：成熟制程产能利用率破九成，2027 年综合 ASP 预计涨约 10%，自 Q1 起启动，8 英寸与 12 英寸均有价格改善空间——成熟制程涨价会直接抬升 PMIC、驱动、接口等配套芯片成本。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">semiengineering.com</span><a href="https://semiengineering.com/chip-industry-week-in-review-162/" target="_blank" rel="noopener">行业周报口径：HBM 短缺威胁 AI 扩张、台积电评估涨价、先进封装加速扩产、Google 扩大 TPU 部署。(</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/qRZCxTQbL1CwAUy28Zm8?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">Helidon 开启「双轨发布」：一边拥抱 JDK 27，一边保留 JDK 21 长期支持线，虚拟线程与结构化并发相关生态继续分层演进。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">编译器/算子层今日主要动态集中在「AI 自动生成」方向，详见 7️⃣（算子生成、LLM 写 RTL、RSI 造基础设施），传统 IR/后端（MLIR/TVM/XLA）近两天无重大独立发布。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/HHgKMMKa8BNZYQuMFSMS?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">提示：AI 编程教学工具把 Python/SQL 运行时整体搬进浏览器、跑在低端 Android 手机上（详见 8️⃣），本质是「运行时轻量化 + 前端沙箱」路线对传统后端编译/执行栈的一次替代尝试。(</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/firm-that-lets-you-rent-out-your-idle-mac-for-ai-inference-workloads-warns-of-plummeting-token-costs-darkbloom-network-sees-earnings-drop-to-usd1-23-a-day-as-anthropic-tokens-fall-77-percent" target="_blank" rel="noopener">分布式推理的「Token 价格坍塌」：出租闲置 Mac 做推理的网络 Darkbloom 日均收入跌至 1.23 美元，Anthropic 侧 token 价格不到五个月跌 77%——推理供给过剩 + 价格战正在挤压碎片化算力的套利空间。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">eetimes.com</span><a href="https://www.eetimes.com/google-agentic-ai-will-drive-new-demands-on-data-center-cpus/" target="_blank" rel="noopener">Google 的判断：Agentic AI 带来「突发型」负载，CPU 大量时间处于空闲，对数据中心 CPU 的配比、调度与内存层级提出新要求——推理集群不再是单纯的 GPU 堆叠问题。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">siliconangle.com</span><a href="https://siliconangle.com/2026/10/30/as-anthropic-finally-files-for-ipo-rising-risks-arent-slowing-the-ai-buildout-yet/" target="_blank" rel="noopener">从经济学角度看值得关注的反向信号：Token 单价下行正在重塑「谁该自建推理」。Anthropic 递交 IPO 文件、同时继续押注天量算力采购，风险条款近 7 万词。(</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/minerva-platform-infrastructure/" target="_blank" rel="noopener">NVIDIA 发布 Minerva</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">面向「AI 工厂」的端到端可观测性 AIOps 平台，把基础设施与 AI 工作负载的遥测汇聚后，用专用模型转成可执行洞察，目标是把故障发现提前。(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/" target="_blank" rel="noopener">英伟达考虑为 Nscale 的西弗吉尼亚 AI 数据中心充当贷款「共同签署人」——当投资人对 AI 支出紧张时，卖芯片的一方出面为债务背书，是这轮 capex 周期里比较少见的信用结构。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/opinions/europes-ai-ambitions-are-hitting-a-power-bottleneck/" target="_blank" rel="noopener">欧洲的 AI 野心撞上电力瓶颈：需求激增但电网设施老化，导致可再生能源无法被充分利用。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/10/23/partner-content-three-physical-walls-are-hitting-ai-datacenter-infrastructure-at-the-same-time-and-the-compound-effects-are-worse/5304697" target="_blank" rel="noopener">分析视角：电力、内存带宽、先进封装三道「物理墙」同时在 2026 年压到 AI 数据中心基础设施上，且复合效应比单点更糟。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/" target="_blank" rel="noopener">融资/交易侧：Thrive Holdings（OpenAI 支持）以 153 亿美元收购 ADT，把 AI 能力塞进家庭安防；Walmart 与 Symbotic 扩大仓储自动化合作，承诺 60 亿美元、覆盖 25 个美国区域配送中心。(</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">theverge.com</span><a href="https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out" target="_blank" rel="noopener">主流厂商统一「退出抓取」标准</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">OpenAI、Google、Microsoft、Anthropic 宣布支持一套共享的 robots.txt 信号，网站可一次性把 AI 训练偏好表达给多家厂商，不必逐家配置。(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/updated-model-spec" target="_blank" rel="noopener">OpenAI 更新 Model Spec：以五项核心价值约束「更强能力」的走向，强调判断力、人类自主性与对用户意图的忠实。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/how-we-detect-frontier-model-misalignment" target="_blank" rel="noopener">OpenAI 披露前沿模型失准检测方法：分层监控 + 未授权 agent 行为识别，目标是在事件升级前介入。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.ycombinator.com</span><a href="https://news.ycombinator.com/item?id=50319358" target="_blank" rel="noopener">HN 热议（151 分）：有用户称 Anthropic 对任何「涉及训练更大模型」的使用场景直接封禁账号，社区对「模型厂商同时是竞品调用的上游」这一结构性质疑升温。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">mashable.com</span><a href="https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering" target="_blank" rel="noopener">Anthropic 加固 Claude 对「游戏逆向 / 克隆」的拦截，但用户反馈连非恶意的通用逆向工程任务也被误伤，属于安全策略与合法开发需求边界模糊的典型案例。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" target="_blank" rel="noopener">合规侧：NAACP 针对 xAI 数据中心污染、指其违反《清洁空气法》的诉讼获法官允许继续推进；另有研究披露 ChatGPT 账号被大规模接管的手法（HN 297 分）。(</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/10/506819.html" target="_blank" rel="noopener">智元双模型同时登顶多榜</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">在多个具身/机器人评测榜单位列第一，官方口径以「给机器人打绩效」的方式展示双模型协同能力。(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/academic/xPVWQgBN3Foj7fo5.html" target="_blank" rel="noopener">全国首个具身仿真数采中心落地杭州（影溯）：把产能公式从「人×小时」改为「环境配置数×并行算力」，宣称全行业两年攒下的百万小时数据，其目标是一个月内生产完。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/walking-robotic-hand" target="_blank" rel="noopener">只用指尖行走的自包含机器人</a></div>
+      <div class="it-sum">——手臂不再是必需品，「形态自由」成为机器人设计的新变量。(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/agility-robotics-digit-5-redesign" target="_blank" rel="noopener">Agility Robotics 发布 Digit 5，联合创始人自述目标是「第一台能安全且经济地规模化干活的人形机器人」，把话题从 Demo 拉回单位工时成本。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/10/31/foundry-robotics-raises-100-million-to-build-americas-first-autonomous-factory-for-assembly/106564/" target="_blank" rel="noopener">资本侧：Foundry Robotics 完成 1 亿美元 A 轮（Marlinspike 领投，Khosla、SE Ventures、Wing 参与），要做「美国首座装配用自主工厂」；巴黎 Bleu Robotics 拿到 500 万欧元 pre-seed 做工业人形模型；Proception 与特斯拉的商业秘密诉讼和解并融资 1100 万美元，走的是「专门为手部采数据」的差异化路线。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">aiera.com.cn</span><a href="https://aiera.com.cn/2026/10/31/other/admin/121544/" target="_blank" rel="noopener">世界模型赛道升温：谷歌 DeepMind 发布实时世界模型 Genie 4（24fps、单帧延迟约 40ms），国内团队称在四个维度上取得第一；李飞飞 World Labs 被 AMD 以 82 亿美元全股票收购，为整条赛道提供了估值锚点。(</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/10/506785.html" target="_blank" rel="noopener">AI 零样本生成算子反超人类手写</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">在昇腾平台上自动生成的算子比 DeepSeek 人类手写版本快 9.8%，此前已连登昇腾三榜第一——自动算子生成从「能跑」进入「更快」。(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/hpc/2026/10/26/cadence-nvidia-unveil-new-ai-models-to-put-eda-on-autopilot/5305228" target="_blank" rel="noopener">Cadence 与英伟达联合发布新 AI 模型，目标是把 EDA 流程推向「自动驾驶」模式，芯片设计验证环节成为 LLM/专用模型落地的新战场。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/yanxishe/UIbgVZxTjEoMswaE.html" target="_blank" rel="noopener">国产 RSI（AI 造 AI）真实水平：没人真动模型权重，但所有人都在改「造 AI 的机器」——一天造 300 万个沙盒、10 万张卡自写系统，BP 上带 Self-Training 估值直接多两成。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">aiera.com.cn</span><a href="https://aiera.com.cn/2026/10/31/other/admin/121582/" target="_blank" rel="noopener">中国首个「AI 定义芯片」发布，与「世界模型首次指导芯片设计、超大核 NPU 700TOPS、99% 算力可用」形成呼应：AI 正从优化算子走向参与架构定义。(</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/" target="_blank" rel="noopener">NVIDIA RTX Spark 笔电扩容</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">ASUS / Dell / HP / Lenovo / Microsoft / MSI 全面上货，Blackwell RTX GPU + Grace CPU 单封装，新增本地模型与 agent 工具链——端侧 agent 的硬件底座在加速铺开。(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/industrynews/es0ZV9LsDEsG7QLE.html" target="_blank" rel="noopener">阿里千问集成进 Apple 智能</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">中国用户的 Siri、系统级写作工具、视觉智能可直接调用千问的文本与图像理解，11 月 4 日随 iOS 开发者 Beta 开放测试、12 月随 iOS 27.3 正式推送，调用前需用户授权。(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/asrock-creator-radeon-ai-pro-r9700-review-workstation-inference-amd-style/" target="_blank" rel="noopener">AMD 工作站推理卡实测：ASRock Creator Radeon AI Pro R9700 单卡 32GB、售价 1700 美元，是「用得起」的本地推理填充方案。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/10/506779.html" target="_blank" rel="noopener">联想天禧 AI 4.5 全端升级，AIPC 端正式发布，主打三大办公场景的「超能模式」。(</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/020/641.htm" target="_blank" rel="noopener">苹果中国官网上线「Apple 智能」介绍页，首批核心功能今年稍晚推出，千问整合一体——国内端侧 AI 的入口之争已从模型转向系统级集成。(</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-10-31.html">← 2026-10-31</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
