@@ -55,21 +55,8 @@ def publish(channel, week, source_data):
             unexpected = sorted(set(staged) - set(allowed))
             if unexpected:
                 raise RuntimeError(f"unexpected staged paths: {unexpected}")
-            current_branch = run(["git", "branch", "--show-current"], path).stdout.strip()
             run(["git", "commit", "-m", f"feeds({channel}): {week} weekly"], path)
-            pushed = False
-            push = None
-            for _attempt in range(3):
-                push = run(["git", "push", "origin", "HEAD:master"], path, False)
-                if push.returncode == 0:
-                    pushed = True
-                    break
-                # Another publisher advanced master. Rebase this exact scoped commit and retry.
-                run(["git", "fetch", "origin", "master"], path)
-                run(["git", "rebase", "origin/master"], path)
-            if not pushed:
-                detail = "git push failed" if push is None else (push.stderr or push.stdout or "git push failed").strip()
-                raise RuntimeError(detail)
+            run(["git", "push", "origin", "HEAD:master"], path)
             url = f"https://yulong.wang/feeds/{channel}/weeks/{week}.html"
             for _ in range(18):
                 time.sleep(10)

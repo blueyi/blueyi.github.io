@@ -45,7 +45,7 @@ def main():
             run(["git", "fetch", "origin", "master"], worktree)
             run(["git", "rebase", "origin/master"], worktree)
             publish_script = worktree / "feeds/_engine/scripts/publish_week.py"
-            shutil.copy2(REPO / "feeds/_engine/scripts/publish_week.py", publish_script)
+            shutil.copy2(Path.home() / ".hermes/scripts/feeds_publish_week.py", publish_script)
             cmd = [sys.executable, str(worktree / "feeds/_engine/scripts/prefetch.py"), "--channel", args.channel]
             p = subprocess.run(cmd, cwd=worktree, text=True, capture_output=True)
             sys.stdout.write(p.stdout)
