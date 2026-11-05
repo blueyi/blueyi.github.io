@@ -22,7 +22,7 @@ DAILY_DIR = SCRIPT_PATH.parent.parent
 REPO_DIR = DAILY_DIR.parent
 DATA_DIR = DAILY_DIR / "data"
 SNAPSHOT_GLOB = os.path.expanduser("~/.hermes/cron/output/5b1b9320afe7_*.txt")
-LOCK_PATH = Path(os.path.expanduser("~/.hermes/locks/ai-infra-daily-publish.lock"))
+LOCK_PATH = Path.home() / ".hermes/locks/blueyi-pages-publish.lock"
 
 sys.path.insert(0, str(SCRIPT_PATH.parent))
 import render_daily  # noqa: E402
@@ -69,6 +69,28 @@ def clean_markdown(raw):
     return "\n".join(lines[start:end]).strip() + "\n"
 
 
+def publish_commit(latest, changed_dates):
+    run(["git", "add", "--", "daily/", "search-index.json"], REPO_DIR, check=True)
+    if run(["git", "diff", "--cached", "--quiet"], REPO_DIR).returncode == 0:
+        return run(["git", "rev-parse", "--short", "HEAD"], REPO_DIR, check=True).stdout.strip()
+
+    message = f"daily: publish through {latest} AI Infra daily digest"
+    run(["git", "commit", "-q", "-m", message], REPO_DIR, check=True)
+    pushed = False
+    push = None
+    for _attempt in range(3):
+        push = run(["git", "push", "origin", "HEAD:master"], REPO_DIR)
+        if push.returncode == 0:
+            pushed = True
+            break
+        run(["git", "fetch", "origin", "master"], REPO_DIR, check=True)
+        run(["git", "rebase", "origin/master"], REPO_DIR, check=True)
+    if not pushed:
+        detail = "git push failed" if push is None else (push.stderr or push.stdout or "git push failed").strip()
+        raise RuntimeError(detail)
+    return run(["git", "rev-parse", "--short", "HEAD"], REPO_DIR, check=True).stdout.strip()
+
+
 def worker_main():
     changed_dates = []
     for date, snap_path in snapshots_by_date().items():
@@ -85,15 +107,8 @@ def worker_main():
         return 0
 
     rebuild_daily.main()
-    run(["git", "add", "daily/", "search-index.json"], REPO_DIR, check=True)
-    if run(["git", "diff", "--cached", "--quiet"], REPO_DIR).returncode == 0:
-        return 0
-
     latest = max(changed_dates)
-    message = f"daily: publish through {latest} AI Infra daily digest"
-    run(["git", "commit", "-q", "-m", message], REPO_DIR, check=True)
-    run(["git", "push", "-q", "origin", "HEAD:master"], REPO_DIR, check=True)
-    sha = run(["git", "rev-parse", "--short", "HEAD"], REPO_DIR, check=True).stdout.strip()
+    sha = publish_commit(latest, changed_dates)
 
     url = f"https://yulong.wang/daily/{latest}.html"
     for _ in range(12):
