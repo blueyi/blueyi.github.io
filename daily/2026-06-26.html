@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-06-26</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-06-26</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-06-26 · 周五</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-06-24 ~ 2026-06-26</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-06-26</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>大模型厂商&quot;硬件自研&quot;提速</b>：OpenAI 携博通推出首颗定制芯片(804 分),叠加 Nvidia 45°C 近零耗水液冷(462 分)与 Oxide 3D 机架(278 分),AI 基础设施正从&quot;堆 GPU&quot;转向&quot;软硬一体 + 能耗/用水可持续&quot;。</li>
+      <li><b>模型 IP 之争浮上台面</b>：Anthropic 公开指控阿里巴巴非法提取 Claude 能力(747 分),把&quot;蒸馏/能力窃取&quot;推到法律与中美竞争的聚光灯下,后续监管与诉讼走向值得紧盯。</li>
+      <li><b>世界模型成为通用 Agent 主战场</b>：Qwen-AgentWorld(198 分)与 BFMTrack、长程记忆检索等多篇具身论文共同指向&quot;会建模物理与时序的智能体&quot;。</li>
+      <li><b>&quot;边缘-云协同&quot;被理性祛魅</b>：研究用闭式不等式证明远距离投机解码收益有限,提醒业界谨慎评估分布式推理的真实延迟回报。</li>
+      <li><b>形式化方法与 LLM 双向奔赴</b>：一边用形式理论解读 MLIR、用 ESBMC 升级 PLC 验证,一边用 LLM(SafeGen)自动生成安全断言,编译/验证栈正在&quot;严谨化&quot;与&quot;智能化&quot;两端同时推进。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank" rel="noopener">OpenAI 首款自研芯片由博通代工亮相</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">OpenAI 正式发布与 Broadcom 联合打造的首颗定制 AI 芯片(</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25313" target="_blank" rel="noopener">百万 p-bit 概率计算机问世</a></div>
+      <div class="it-sum">研究者通过 FPGA 组网搭出超越单芯片容量上限的 Ising 机,实现</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25673" target="_blank" rel="noopener">开源端到端硅训练平台 Croc</a></div>
+      <div class="it-sum">面向 AI/机器人/汽车 SoC 人才缺口,</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24934" target="_blank" rel="noopener">云 GPU 拓扑证明原语</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25244" target="_blank" rel="noopener">用形式理论重读 MLIR 编译</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23870" target="_blank" rel="noopener">PLC 形式化验证新框架 ESBMC-PLC+</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24891" target="_blank" rel="noopener">Project Haystack Grid 的类型检查</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25353" target="_blank" rel="noopener">GB 级末级缓存中的常驻式 LLM 推理</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25091" target="_blank" rel="noopener">远距离投机解码的真实收益边界</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25453" target="_blank" rel="noopener">高精度 GEMM 的低精度重构内核 EmuGEMM</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/" target="_blank" rel="noopener">Nvidia 45°C 液冷设计把数据中心耗水量压到近零</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">explorer.oxide.computer</span><a href="https://explorer.oxide.computer/" target="_blank" rel="noopener">Oxide 3D 机架在线导览</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25098" target="_blank" rel="noopener">电网响应式 AI 数据中心新范式</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25082" target="_blank" rel="noopener">MIG 动态重分区下的节能调度</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25099" target="_blank" rel="noopener">拯救 BFT 的&quot;赛跑&quot;机制 Ambulance</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25553" target="_blank" rel="noopener">边缘-云服务放置的神经组合优化</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">reuters.com</span><a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/" target="_blank" rel="noopener">Anthropic 指控阿里巴巴非法提取 Claude 模型能力</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">syracuse.com</span><a href="https://www.syracuse.com/news/2026/06/federal-agents-track-down-syracuse-woman-demand-she-remove-instagram-post-about-ice.html" target="_blank" rel="noopener">联邦执法人员要求删除关于 ICE 的 Instagram 帖文</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.20615" target="_blank" rel="noopener">AI-SDLC 流程的协议语言</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24597" target="_blank" rel="noopener">Qwen-AgentWorld:面向通用 Agent 的语言世界模型</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25056" target="_blank" rel="noopener">行为基础模型的运动追踪 BFMTrack</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25123" target="_blank" rel="noopener">RL 引导的人形全身 MPPI 控制 RGB</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25136" target="_blank" rel="noopener">长程机器人控制中的记忆检索</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25083" target="_blank" rel="noopener">多 IMU 关节刚体的不变卡尔曼滤波</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25111" target="_blank" rel="noopener">自适应多传感器融合 ADM-Fusion</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25134" target="_blank" rel="noopener">多车交互安全的因果参数化 CBF</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25122" target="_blank" rel="noopener">非合作空中障碍的概率轨迹预测 AeroCast</a></div>
+      <div class="it-sum">与 **机器人-监控协同导航 SurveilNav**:</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25296" target="_blank" rel="noopener">LLM 驱动的功能安全断言生成 SafeGen</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2605.10913" target="_blank" rel="noopener">可编程元 Agent 的可逆执行轨迹 Shepherd</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">*(承接第 2 类)* ESBMC-PLC+ 的&quot;LD 支持 + 无界证明&quot;也可视为自动化验证后端的能力扩展。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24900" target="_blank" rel="noopener">设备端神经架构搜索</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24901" target="_blank" rel="noopener">工业级 LLM 持续学习生命周期视角</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">*(背景)* 本批次未见 llama.cpp / MLX / ExecuTorch / BitNet 等纯端侧推理引擎的独立重磅更新,极低比特量化方向暂以上述 NAS / 持续学习论文间接呼应。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-06-25.html">← 2026-06-25</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

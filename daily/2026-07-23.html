@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-07-23</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-07-23</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-07-23 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-21 ~ 2026-07-23</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-07-23</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>治理三连爆</b>：OpenAI × Hugging Face 评测安全事件(HN 1542 分)、ChatGPT 广告平台上线(1053 分)、Anthropic 15 亿美元盗版书和解获批(545 分)同日刷屏——评测供应链安全、对话广告伦理与训练数据定价三条治理线同时收紧。</li>
+      <li><b>GPU 资产定价成谜</b>：&quot;没人知道二手 GPU 集群值多少钱&quot;引发对 AI capex 折旧假设的集体拷问,叠加美国公众对数据中心的 NIMBY 情绪,基建扩张的财务与社会双重约束浮出水面。</li>
+      <li><b>&quot;能编出来&quot;比&quot;纸面最优&quot;更重要</b>：moefs 把工具链可实现性纳入 MoE 并行方案搜索,与 InstantInfer 的冷启动自动机改写一道,代表推理系统研究正从算法转向工程可落地性。</li>
+      <li><b>LLM × 编译器持续升温</b>：MLIR 约束解码、渐进式 RTL 生成、解码期语法精化三篇同日出现,推理期结构化先验正成为低资源代码生成的主流解法。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">daniel.lawrence.lu</span><a href="https://daniel.lawrence.lu/blog/2026-07-15-dgx-spark-as-daily-driver/" target="_blank" rel="noopener">Nvidia DGX Spark 当日常主力机是什么体验</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18650" target="_blank" rel="noopener">非结构化流体力学上片上数据流架构:代码与数据联合分解</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18879" target="_blank" rel="noopener">Mapping Without Graphs:学习缓存一致性流量做任务放置</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18533" target="_blank" rel="noopener">PIP-NTT:面向后量子密码的可扩展内存并行 NTT 加速器</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18254" target="_blank" rel="noopener">面向 MLIR 的 Schema 派生约束解码:免重训跨方言泛化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18765" target="_blank" rel="noopener">带可见性控制的高效流水线高层次综合(HLS)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18949" target="_blank" rel="noopener">Build-Authorized Evidence:不透明调用的失效关闭重写边界</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">LLM 直接生成 RTL 的渐进式规范化方法见第 7️⃣ 类,同样属于&quot;编译器 + 生成式&quot;交叉。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18631" target="_blank" rel="noopener">moefs:感知&quot;可构建性&quot;的 MoE 训练/推理全空间优化器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18957" target="_blank" rel="noopener">InstantInfer:用通信有限自动机加速 LLM 冷启动</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18280" target="_blank" rel="noopener">复合稀疏前沿:静态剪枝 × 动态 token 稀疏的组合压缩</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18541" target="_blank" rel="noopener">是什么决定了 GPU LZ77 绝对偏移格式的解码吞吐</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">ciphertalk.substack.com</span><a href="https://ciphertalk.substack.com/p/nobody-knows-what-a-used-gpu-cluster" target="_blank" rel="noopener">没人知道一个二手 GPU 集群值多少钱</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">redfin.com</span><a href="https://www.redfin.com/news/ai-data-centers-opposition-education-benefit/" target="_blank" rel="noopener">多数美国人对 AI 数据中心说&quot;别建我家后院&quot;</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18929" target="_blank" rel="noopener">一套面向用户的可移植、可复现、可扩展软件生态</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.19102" target="_blank" rel="noopener">Contrast:多维分布式 Trace 对比诊断</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank" rel="noopener">OpenAI 与 Hugging Face 通报模型评测期间的安全事件</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ads.openai.com</span><a href="https://ads.openai.com/" target="_blank" rel="noopener">Advertise in ChatGPT:OpenAI 广告平台上线</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">apnews.com</span><a href="https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63" target="_blank" rel="noopener">法官批准 Anthropic 15 亿美元盗版书训练和解案</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18278" target="_blank" rel="noopener">FALCON-Discover:发现集中的&quot;错误高置信&quot;区域</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18362" target="_blank" rel="noopener">FARO:可行性感知的机器人运动优化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18580" target="_blank" rel="noopener">STeP:用信号时序逻辑(STL)桥接 VLA 与精确指令</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18586" target="_blank" rel="noopener">自动驾驶竞速中实时约束下的 Sim-to-Real 弥合</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18365" target="_blank" rel="noopener">面向四足运动的力矩驱动强化学习</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18519" target="_blank" rel="noopener">用 LLM 渐进式生成可综合 RTL 设计</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18357" target="_blank" rel="noopener">Decode-Time Grammars:按语法片段精化序做约束生成</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18821" target="_blank" rel="noopener">VirtualSet:以类型化本体世界替代 SQL 作为 LLM 生成目标</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18254" target="_blank" rel="noopener">前述</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.19248" target="_blank" rel="noopener">列压缩的灵活稀疏感知 FPGA CNN 加速器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18284" target="_blank" rel="noopener">神经元重要性 × 数据感知低秩分解的语言模型压缩</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18285" target="_blank" rel="noopener">E-SpecFormer:端到端射频频谱监测的边缘高效 Transformer</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.18273" target="_blank" rel="noopener">轻量 SVR 预测 CoAP 重传超时</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-07-21.html">← 2026-07-21</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

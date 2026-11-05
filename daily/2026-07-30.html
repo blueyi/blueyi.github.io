@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-07-30</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-07-30</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-07-30 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-29 ~ 2026-07-30</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-07-30</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>端侧推理成为今日最强热点：Turbo Fieldfare 以“26B 模型、2GB RAM、M 系列 Mac”的组合获得 HN 626 分，模型容量优化正快速逼近新的工程边界。</b></li>
+      <li><b>AI 安全从内容审核深入到代码与密码学：Codex Security 和 Claude 密码弱点研究同时受到高关注，安全能力与双重用途治理将并行升温。</b></li>
+      <li><b>数据中心优化重心继续上移：从单算子稀疏执行到异构动态调度，再到受电力约束的跨地域训练，系统目标已不再只是 GPU 利用率。</b></li>
+      <li><b>自动设计正在进入硬件工程深水区：VPR-Evolve、VClare 和编译器前端缺陷研究分别覆盖算法演化、规格澄清与质量保障，验证体系将决定 LLM 能否真正进入生产级 EDA 流程。</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.26016" target="_blank" rel="noopener">MDTransformer：基于模式复用光子相干交叉阵列的 Transformer 加速器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25504" target="_blank" rel="noopener">面向 Transformer 推理的向量处理器稀疏张量收缩</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25058" target="_blank" rel="noopener">65nm 单多晶硅浮栅模拟存内计算的保持损耗补偿</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25651" target="_blank" rel="noopener">深度学习编译器前端缺陷的 LLM 辅助实证研究</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25498" target="_blank" rel="noopener">DOPS：面向异构平台的动态算子调度</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">docs.imiron.io</span><a href="https://docs.imiron.io/v/0.5.10/en/tour.html" target="_blank" rel="noopener">SpecForge：形式化规格编写平台</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25262" target="_blank" rel="noopener">Type Safety via Hoare Logic with Separation and Pure Types</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25498" target="_blank" rel="noopener">DOPS：超越 Prefill–Decode 解耦的动态算子调度</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22720" target="_blank" rel="noopener">CausalGate：用因果重要性蒸馏进行 Transformer 模块剪枝</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25504" target="_blank" rel="noopener">向量处理器上的稀疏 Transformer 张量收缩</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">fermisense.com</span><a href="https://fermisense.com/when-machines-take-the-wheel/" target="_blank" rel="noopener">低成本 RL 微调的 9B 开源模型在目录审核任务上击败前沿模型</a> <span class="hot">🔥</span></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25650" target="_blank" rel="noopener">PowerScale：利用联邦数据中心电力进行节能型跨地域模型训练</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.24902" target="_blank" rel="noopener">Spanergy：面向微服务的能源感知分布式追踪</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25493" target="_blank" rel="noopener">WASP：可移植的有状态 WebAssembly Serverless 框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25916" target="_blank" rel="noopener">Hermes：通过 Prefix Consensus 降低 BFT 尾延迟</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25358" target="_blank" rel="noopener">QCOEM：量子云的演化式多目标编排</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/openai/codex-security" target="_blank" rel="noopener">Codex Security</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">anthropic.com</span><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses" target="_blank" rel="noopener">Anthropic：使用 Claude 发现密码学弱点</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blog.cryptographyengineering.com</span><a href="https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/" target="_blank" rel="noopener">对 Anthropic 新密码分析结果的评论</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22545" target="_blank" rel="noopener">Semalith v1.4：184M 参数的多轴安全分类器</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">transformer-transformer.github.io</span><a href="https://transformer-transformer.github.io/" target="_blank" rel="noopener">Transformer Transformer：面向运动条件的机器人联合设计统一模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25049" target="_blank" rel="noopener">FIRMGrasp：考虑摩擦波动风险的稳健抓取合成</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25053" target="_blank" rel="noopener">利用环境约束进行机器人运动生成</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25138" target="_blank" rel="noopener">Franka 机械臂的反应式 3D 运动规划</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.24863" target="_blank" rel="noopener">无转向漂移：四轮独立驱动车辆差动扭矩控制</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.24860" target="_blank" rel="noopener">未知湍流中的机器鱼自我中心定点保持</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.24998" target="_blank" rel="noopener">VPR-Evolve：多智能体驱动的 FPGA 布局布线算法演化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.24854" target="_blank" rel="noopener">VClare：处理不完美规格的 LLM Verilog 生成</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25651" target="_blank" rel="noopener">深度学习编译器前端缺陷的 LLM 辅助研究</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22711" target="_blank" rel="noopener">CORVUS：面向 LLM 编码代理的上下文优化与同步</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">fermisense.com</span><a href="https://fermisense.com/when-machines-take-the-wheel/" target="_blank" rel="noopener">500 美元 RL 微调 9B 模型完成高质量目录审核</a> <span class="hot">🔥</span></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/drumih/turbo-fieldfare" target="_blank" rel="noopener">Turbo Fieldfare：在 M 系列 Mac 的 2GB RAM 中运行 Gemma 4 26B</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/VladUZH/qwen-scribe" target="_blank" rel="noopener">Qwen Scribe：Apple Silicon 本地转录与听写</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25493" target="_blank" rel="noopener">WASP：跨边缘—云的有状态 WebAssembly Serverless</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.25058" target="_blank" rel="noopener">模拟存内计算中的保持损耗缓解</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-07-28.html">← 2026-07-28</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

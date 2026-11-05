@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-27</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-27</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-27 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-24 ~ 2026-08-27</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-27</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>Jalapeño</b>：被 SemiAnalysis 评价为&quot;超越 Blackwell&quot;，自研 AI 芯片竞争进入新阶段。</li>
+      <li><b>具身智能融资热潮不减：XPeng IRON（9 亿美元）、General Intuition（60 亿估值）、Kalanick 的 Atoms（17 亿美元）接连落地大额融资。</b></li>
+      <li><b>KV Cache 依旧是数据中心推理优化焦点，Geodesia-KV 与 Elastic KV Cache 从压缩与回收两个角度切入内存瓶颈。</b></li>
+      <li><b>FCC 将移动机器人纳入国安 &quot;Covered List&quot;，具身智能与出口管制出现新的政策交叉信号。</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">newsletter.semianalysis.com</span><a href="https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia" target="_blank" rel="noopener">OpenAI Jalapeño：比 Nvidia Blackwell 更强</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">newsroom.ibm.com</span><a href="https://newsroom.ibm.com/2026-08-24-ibm-unveils-next-generation-dual-architecture-processor-for-ibm-z-and-linuxone" target="_blank" rel="noopener">IBM 发布下一代双架构处理器（IBM Z / LinuxONE）</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23582" target="_blank" rel="noopener">Transformer Accelerator (TFA)：面向 Transformer 推理的宏指令 INT8 硬件芯片</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.24478" target="_blank" rel="noopener">NoC-Out：面向规则化硬件设计的形式化验证片上网络库</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.24391" target="_blank" rel="noopener">IncSFS：C/C++ 增量全稀疏流敏感指针分析</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2506.12202" target="_blank" rel="noopener">Quasar：专为 LLM 代码动作设计的编程语言</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.24644" target="_blank" rel="noopener">面向人与机器智能体的文学化编程环境</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23805" target="_blank" rel="noopener">Memory-Sovereign Inference：超越全常驻的精确输出执行</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23599" target="_blank" rel="noopener">Geodesia-KV：单调等势分配的 KV Cache 压缩</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23658" target="_blank" rel="noopener">Elastic KV Cache：可工作的回收机制</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.24650" target="_blank" rel="noopener">Simthesizer：Agent 驱动的 LLM 服务系统仿真框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23744" target="_blank" rel="noopener">Calibration-Preserving Pruning：以可靠性为契约的压缩</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/tailscale/tailcat" target="_blank" rel="noopener">Tailcat：跑在 Tailscale 数据平面上的 netcat</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.24637" target="_blank" rel="noopener">晶圆级光互连在 LLM MoE 训练中的热调谐开销分析</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23840" target="_blank" rel="noopener">ShardMeter：无猜测的分片与跨地域分布式训练</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.24153" target="_blank" rel="noopener">pigzpp：面向全栈的快速并行可移植压缩</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" target="_blank" rel="noopener">Hugging Face 事件与前行之路</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/fcc-covered-list-mobile-robots" target="_blank" rel="noopener">机器人公司如何看待美国&quot;外来机器人禁令&quot;</a> <span class="hot">🔥</span></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/08/26/xpengs-new-robotics-business-raises-900-million-at-6-3-billion-valuation/104463/" target="_blank" rel="noopener">XPeng 具身业务融资 9 亿美元、估值 63 亿</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/" target="_blank" rel="noopener">General Intuition 以 60 亿美元估值融资，进军机器人</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/" target="_blank" rel="noopener">Kalanick 机器人公司 Atoms 获 a16z 领投 17 亿美元</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23831" target="_blank" rel="noopener">Learning to Act While Waiting：推理延迟下通用机器人策略的 RL 微调</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23863" target="_blank" rel="noopener">DreamLedger：机器人决策回路中世界模型想象的&quot;执行结算信用文件&quot;</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23601" target="_blank" rel="noopener">StateTune：把 LLM 辅助 EDA 调参变为有状态闭环</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23602" target="_blank" rel="noopener">PACT：布线后 Agentic Checkpoint 调优实现 FPGA 时序收敛</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.24307" target="_blank" rel="noopener">加速张量分解的 HPC 方法</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23582" target="_blank" rel="noopener">Transformer Accelerator (TFA)：宏指令 INT8 硬件芯片</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23841" target="_blank" rel="noopener">Pipeline-Native Transformers：带宽高效的 CPU 自回归解码</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.23744" target="_blank" rel="noopener">Calibration-Preserving Pruning</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-26.html">← 2026-08-26</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

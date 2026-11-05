@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-21</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-21</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-21 · 周五</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-19 ~ 2026-08-21</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-21</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>Mojo 正式开源、且 Modular 已被 Qualcomm 收购——AI 编译器/系统语言赛道迎来确定性拐点,高通借此补强端侧软件栈。</b></li>
+      <li><b>端侧推理热度持续:125M 音乐模型爆火(481 分),Intel 也探索&quot;多台 AI PC 流水线并行跑 70B&quot;的分布式边缘推理路径。</b></li>
+      <li><b>OpenAI 就&quot;网络关键能力&quot;模型开发节奏主动发声,叠加 AGENTS.md 标准化呼声,安全治理与生态标准成为本周另一条主线。</b></li>
+      <li><b>RTL 断言生成(形式化+神经符号)与 LLM 轨迹规划(GAPL)双双指向&quot;生成式 AI + 硬核工程验证&quot;的融合趋势。</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19046" target="_blank" rel="noopener">APEX:双稀疏 SNN 推理加速器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18366" target="_blank" rel="noopener">MAGMA:FPGA 在线自适应 GMM 加速器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18170" target="_blank" rel="noopener">CTTE:开源双协议 RISC-V 追踪编码器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18156" target="_blank" rel="noopener">RISC-V 系统的 FPGA 生命周期管理</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">modular.com</span><a href="https://www.modular.com/blog/mojo-open-source" target="_blank" rel="noopener">Mojo 正式开源</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">modular.com</span><a href="https://www.modular.com/blog/modcon-announcements" target="_blank" rel="noopener">Mojo 归入 Qualcomm 并开源发布</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18084" target="_blank" rel="noopener">Compiler-Guided 自适应证明搜索:跨模型协同的定理证明</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18147" target="_blank" rel="noopener">熵约束自适应随机量化(ASQ)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18183" target="_blank" rel="noopener">批量投机 Jacobi Rollout 加速视觉在线策略蒸馏</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18149" target="_blank" rel="noopener">TokenPowerSandbox:能耗感知 LLM Serving 的证据门控筛选</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18390" target="_blank" rel="noopener">SLO-Scaler:不确定性感知的 SLO 驱动自动扩缩容</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18376" target="_blank" rel="noopener">微服务何时真的省电?环境模拟工作流实证</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18751" target="_blank" rel="noopener">联邦环境下数据共享管线的复用</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" target="_blank" rel="noopener">OpenAI:网络关键能力时代下模型开发的节奏控制</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/anthropics/claude-code/issues/6235" target="_blank" rel="noopener">Claude Code 请求支持 AGENTS.md</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18186" target="_blank" rel="noopener">AI 能从医学学到什么?生成式类比与可靠 ML 系统</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18234" target="_blank" rel="noopener">GigaBrain-WBC-0.5:全身控制的行为世界模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18254" target="_blank" rel="noopener">GAPL:LLM 轨迹规划的接地动作-效果策略学习</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18227" target="_blank" rel="noopener">Agentic Robotics 重访 Push-T 操纵任务</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18292" target="_blank" rel="noopener">GuideFetch:辅助机器狗的并发导航与取物</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18270" target="_blank" rel="noopener">机器人手术中可迁移的工具-组织接触检测</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18482" target="_blank" rel="noopener">Coverage-Driven RTL 断言生成:形式化探索 + 神经符号精炼</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18580" target="_blank" rel="noopener">FACET:终端任务合成中保留源意图与可执行状态</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/zachahn/vomit" target="_blank" rel="noopener">Vomit:用独立 LLM 清理 Claude 5 的 token 输出</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18084" target="_blank" rel="noopener">(另见第 2 类</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">simedw.com</span><a href="https://simedw.com/2026/08/20/midi-autocomplete/" target="_blank" rel="noopener">Show HN:125M 模型设备端钢琴自动补全</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00146" target="_blank" rel="noopener">DiffusionGemma 技术报告</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19147" target="_blank" rel="noopener">预编译 Pipeline Shard:Intel AI PC 机群分布式 LLM 推理</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.18160" target="_blank" rel="noopener">MicroPython 与 CircuitPython:Python 对 IoT/机器人的悄然接管</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-20.html">← 2026-08-20</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

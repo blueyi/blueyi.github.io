@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-06</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-06</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-06 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-05 ~ 2026-08-06</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-06</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>Google DeepMind 顶层换血</b>：Demis Hassabis 从 CEO 转为 Chair，Jeff Dean 离开 Google——这是 Google AI 史上最大规模高管变动，可能重塑整个 AI 研究版图。</li>
+      <li><b>内容平台开始区别对待 AI Bot</b>：TIME.com 向 AI crawler 提供特制网页版本并嵌入广告，揭示了 AI 时代内容分发权与版权的全新博弈维度。</li>
+      <li><b>Interpol 敲响 AI 犯罪警钟</b>：非洲超半数网络犯罪已由 AI 驱动，诈骗产业化加速，AI 安全治理从学术议题变成全球执法急务。</li>
+      <li><b>Agentic GPU Kernel 优化登场</b>：KernelBrain 将 LLM Agent 引入 GPU kernel 自动调优，结合 profiler 闭环诊断——AI 写算子的实用化突破。</li>
+      <li><b>人形机器人进工厂的死结</b>：工业人形机器人的安全状态本质上是主动控制态，与现行 ISO 13849-1「断电即安全」假设根本矛盾——这道 Fail-Passive 鸿沟将是规模化部署前必须跨越的门槛。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread" target="_blank" rel="noopener">NVIDIA Vera 白皮书被指存在线程设计缺陷</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03514" target="_blank" rel="noopener">Beyond Peak TOPS/W: 混合数字/模拟/神经形态计算的系统级视角</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03285" target="_blank" rel="noopener">Fovea: 晶圆级芯片物理感知设计空间探索</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02954" target="_blank" rel="noopener">LowRank-SSM: Mamba 低秩加速的 FPGA 软硬件协同设计</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02611" target="_blank" rel="noopener">KernelBrain: Agentic GPU Kernel 自动优化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03537" target="_blank" rel="noopener">ComFuse: 计算密集型与内存密集型算子跨边界融合</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03983" target="_blank" rel="noopener">LLM 能否恢复编译器遗漏的语义优化机会？</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03026" target="_blank" rel="noopener">Pruning-Aware 多集群协同推理框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03229" target="_blank" rel="noopener">Ternary LLM 统一查找表推理：有符号数字 KV Cache</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02884" target="_blank" rel="noopener">CHIARA: 可配置分层 Allreduce</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03156" target="_blank" rel="noopener">Trust-Aware 拓扑学习：对抗环境下动态去中心化联邦学习</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02608" target="_blank" rel="noopener">Separating Intelligence from Inference: 边缘原生 AI 计算标准</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blog.google</span><a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank" rel="noopener">Google DeepMind 重大人事变动：Demis Hassabis 转任 Chair，Jeff Dean 离职</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">vincentschmalbach.com</span><a href="https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/" target="_blank" rel="noopener">TIME 杂志对 AI Bot 提供不同网页版本，内含广告</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">africanews.com</span><a href="https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/" target="_blank" rel="noopener">Interpol：AI 驱动非洲超半数网络犯罪，诈骗激增</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02632" target="_blank" rel="noopener">LLMs Can Annotate Attribution Graphs</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">bloomberg.com</span><a href="https://www.bloomberg.com/news/articles/2026-08-05/microsoft-s-ai-sales-mostly-come-from-openai-disclosures-show" target="_blank" rel="noopener">Microsoft AI 营收主要来自 OpenAI，披露文件显示</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02653" target="_blank" rel="noopener">Light-Loco-Parkour: 多技能蒸馏实现感知全身运动</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02780" target="_blank" rel="noopener">语义触觉反馈提升灵巧遥控操作</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02809" target="_blank" rel="noopener">工业人形机器人功能安全认证：Fail-Passive 鸿沟</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02895" target="_blank" rel="noopener">Contact-Driven Localization: 自由形态自组装结构接触驱动定位</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02811" target="_blank" rel="noopener">还有</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02611" target="_blank" rel="noopener">KernelBrain</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02915" target="_blank" rel="noopener">LACE: LLM 多 Agent 框架实现敏捷 RISC-V 指令扩展</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03588" target="_blank" rel="noopener">GenOS: AI 代码生成的组合式语义鲁棒性证书</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03983" target="_blank" rel="noopener">LLM 恢复编译器遗漏优化</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02608" target="_blank" rel="noopener">Separating Intelligence from Inference: 边缘原生 AI 标准</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.02954" target="_blank" rel="noopener">LowRank-SSM: Mamba 低秩 FPGA 加速</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03229" target="_blank" rel="noopener">统一查找表推理：Ternary LLM 的端侧友好路径</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.03026" target="_blank" rel="noopener">Pruning-Aware 多集群协同推理</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-05.html">← 2026-08-05</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

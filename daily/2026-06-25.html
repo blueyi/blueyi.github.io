@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-06-25</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-06-25</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-06-25 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-06-23 ~ 2026-06-25</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-06-25</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>OpenAI 自研芯片落地(479 分)</b>：模型公司&quot;算力垂直整合&quot;成主旋律,Nvidia 之外的自研硅版图再扩,长期改写 AI 算力供给格局。</li>
+      <li><b>厂商 vs. 政府的治理张力显性化</b>：NSA 失去 Anthropic Mythos 访问权(218 分)+ OpenAI 推 GPT-5.5-Cyber(220 分),前沿模型供应商在国家安全场景中的话语权与双用途风险同步升温。</li>
+      <li><b>基础设施约束前移</b>：Nvidia 45°C 近零耗水液冷(166 分)与 CXL/RDMA 分层内存池,共同指向&quot;水、电、内存搁浅&quot;才是 AI 工厂的真实瓶颈。</li>
+      <li><b>机密计算的推理代价被量化</b>：Blackwell + TDX 下 LLM 服务仍损 13–27% 吞吐,可信执行环境的性能税亟待优化。</li>
+      <li><b>具身智能数据最丰</b>：从跨本体通用策略(SPACE)、GPU 可微 MPC 到 sim2real 可信认证,机器人正加速向&quot;可泛化 + 可验证安全&quot;演进。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank" rel="noopener">OpenAI 发布首款自研芯片,由博通代工</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23704" target="_blank" rel="noopener">PCB-QA:首个面向 LLM 的印刷电路板设计问答数据集</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2602.13825" target="_blank" rel="noopener">CMOS 集成忆阻器驱动触发器电路的实现与性能评估</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blog.racket-lang.org</span><a href="https://blog.racket-lang.org/2026/06/rhombus-v1.0.html" target="_blank" rel="noopener">Rhombus Language 1.0 发布</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23697" target="_blank" rel="noopener">SemChunk-C:面向 C 代码的语义分割</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23870" target="_blank" rel="noopener">ESBMC-PLC+:统一的 IEC 61131-3 形式化验证框架</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23969" target="_blank" rel="noopener">序列化之桥:Blackwell GPU 机密计算下的 LLM 服务性能恢复</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24597" target="_blank" rel="noopener">Qwen-AgentWorld:面向通用智能体的语言世界模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景补充:本窗口数据中心级量化/投机解码/SGLang 等无独立高分新条目,以上两条为最相关进展。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/" target="_blank" rel="noopener">45°C 冷却设计将数据中心用水量降至近零</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24079" target="_blank" rel="noopener">Aquifer:面向 MicroVM 快照的 CXL + RDMA 分层内存池</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24073" target="_blank" rel="noopener">面向 RDMA 的哈希表设计:挑战与机遇</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24412" target="_blank" rel="noopener">BiJuTy:面向 JupyterHub 的 HPC 感知大数据集群生命周期管理工具</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">nytimes.com</span><a href="https://www.nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html" target="_blank" rel="noopener">Anthropic 纠纷致 NSA 失去对 Mythos 工具的访问</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/daybreak-securing-the-world/" target="_blank" rel="noopener">OpenAI DayBreak — GPT-5.5-Cyber</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23754" target="_blank" rel="noopener">Verifiable Foundation Models for Robot Safety(FEARL)</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24049" target="_blank" rel="noopener">SPACE:从跨机器人数据学习走向通用策略</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24039" target="_blank" rel="noopener">TurboMPC:GPU 上快速、可扩展、可微的模型预测控制</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23848" target="_blank" rel="noopener">对抗式姿态正则化(APR)实现拟人化灵巧弹琴</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24078" target="_blank" rel="noopener">MinInter:模仿学习数据增强中最小化轨迹插值</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23759" target="_blank" rel="noopener">VeriPilot:LLM 驱动的 Verilog 调试框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2602.23334" target="_blank" rel="noopener">运行时可重构多精度量化乘法的位级脉动阵列架构</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">跨类提示:本类与第 2 类的 SemChunk-C / ESBMC 系工作部分重叠(LLM × 编译器 × 形式化),此处不再展开。本窗口暂无 AlphaEvolve / FunSearch 类自动算子发现的独立新条目。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">gitlab.com</span><a href="https://gitlab.com/baiyibai/pico-usb-wifi" target="_blank" rel="noopener">Raspberry Pi Pico W 充当 USB Wi-Fi 适配器</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23742" target="_blank" rel="noopener">低功耗模拟神经网络:面向连续控制的可训练非线性连接</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2602.21321" target="_blank" rel="noopener">动态对称点跟踪:应对模拟存内训练的非理想参考</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景补充:本窗口 llama.cpp / MLX / ExecuTorch / BitNet 等主流端侧栈无独立高分新动态,以上以模拟存算与边缘硬件为主。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="index.html">← All days</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

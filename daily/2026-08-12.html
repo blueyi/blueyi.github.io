@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-12</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-12</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-12 · 周三</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-10 ~ 2026-08-12</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-12</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>Needle2 (HN 506)</b>：将 Agentic LLM 压缩到 14MB,标志着端侧自主 Agent 从实验室走向可部署——14MB 足以塞进任何 IoT 设备,RAM 需求断崖下降。</li>
+      <li><b>Mojo 1.0 正式 GA</b>：是 AI 编程语言赛道的里程碑事件:Python 生态 + 系统级性能的组合直接影响未来 AI 框架和编译器的技术选型。</li>
+      <li><b>Nvidia 三线出击</b>：Nemotron 3.5 Lightning 走 MoE+高效推理路线,同时 Stratechery 深度文章揭示其被客户自研芯片&quot;围猎&quot;的战略风险。</li>
+      <li><b>具身智能出现&quot;Agent 化&quot;趋势</b>：从 coding agent 架构迁移到机器人策略改进,暗示软件工程范式正在重塑具身学习管线。</li>
+      <li><b>HINT + FSGen 双双瞄准&quot;LLM 生成硬件&quot;</b>：从 RTL 到加速器架构的端到端 AI 自动生成链路正在成形,芯片设计自动化加速。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">stratechery.com</span><a href="https://stratechery.com/2026/nvidias-risky-business/" target="_blank" rel="noopener">Nvidia&#x27;s Risky Business</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.08496" target="_blank" rel="noopener">ReVolt: 2.5D PIM Chiplet 供电网络电压降控制</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.08761" target="_blank" rel="noopener">Eco-SoC: 能量比例 AI SoC 架构</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.08462" target="_blank" rel="noopener">ARMOR: 压缩节点加速 RTL 仿真</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07896" target="_blank" rel="noopener">Hybrid ASIC-FPAA Fabric</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">modular.com</span><a href="https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here" target="_blank" rel="noopener">Mojo 1.0 正式发布</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.08352" target="_blank" rel="noopener">SimP: 语法-语义统一程序缩减</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4" target="_blank" rel="noopener">Nvidia Nemotron 3.5 Lightning</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.08097" target="_blank" rel="noopener">OasisKV: 超越 HBM 的 KV Cache 扩容</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.08340" target="_blank" rel="noopener">OpRAG: GPU 多阶段 RAG 确定性运行时</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">ElastiCo GPU 弹性编排见 §4。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07971" target="_blank" rel="noopener">ElastiCo: GPU 集群弹性配置与干扰感知编排</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07733" target="_blank" rel="noopener">LGNNIC: SmartNIC 加速大规模 GNN 训练</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.08400" target="_blank" rel="noopener">Cloud-Edge 基础设施复杂性实证研究</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/responsible-ai-infrastructure-texas/" target="_blank" rel="noopener">OpenAI 致德克萨斯州长信</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">ft.com</span><a href="https://www.ft.com/content/e49bdf75-f841-4466-a577-f7aaff8779a0" target="_blank" rel="noopener">OpenAI 伦理负责人入职不足一年离职</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">anthropic.com</span><a href="https://www.anthropic.com/research/riemann-zeta" target="_blank" rel="noopener">Claude 数学能力深度研究:黎曼 Zeta 函数</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blog.sshh.io</span><a href="https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs" target="_blank" rel="noopener">Claude/GPT 知识截止日期与预训练时间线</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07535" target="_blank" rel="noopener">多模态大模型安全态势综述</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07639" target="_blank" rel="noopener">SkillConsist: Agent Skill 不一致检测</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07555" target="_blank" rel="noopener">Agentic Robotics Loop: 机器人策略自主改进</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07558" target="_blank" rel="noopener">Learning Physical Interaction: 触觉与力感知机器人学习综述</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07553" target="_blank" rel="noopener">自动驾驶演示的 Self-Supervised 视觉操作</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07548" target="_blank" rel="noopener">SC²-WM: VLN 自校正世界模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07557" target="_blank" rel="noopener">AeroDPO: 轻量级无人机 DPO 偏好优化导航</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07573" target="_blank" rel="noopener">Projection-Retraction MPPI</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07625" target="_blank" rel="noopener">HINT: LLM 驱动 RTL 生成的硬件意图中间表示</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.09252" target="_blank" rel="noopener">FSGen: 融合稀疏加速器敏捷生成器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.08085" target="_blank" rel="noopener">LLM 引导高性能优化的抽象层与 Prompt 策略效果</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">cactuscompute.com</span><a href="https://cactuscompute.com/needle" target="_blank" rel="noopener">Needle2: 14MB Agentic LLM 手机端运行</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md" target="_blank" rel="noopener">Apple Silicon + macOS 虚拟机:llama.cpp 推理加速</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">Eco-SoC(§1)从芯片架构层面支撑边缘 AI 能量比例运行;Nemotron 3.5 Lightning(§3)可在 RTX 工作站上运行,模糊数据中心与端侧边界。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-11.html">← 2026-08-11</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

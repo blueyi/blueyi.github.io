@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-07-01</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-07-01</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-07-01 · 周三</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-06-29 ~ 2026-07-01</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-07-01</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>内存反垄断诉讼落地</b>：三星/SK 海力士/美光在美因价格操纵被诉(HN 419),叠加数据中心抢购 HBM,AI 硬件成本的定价逻辑正被推上法庭。</li>
+      <li><b>电力从隐忧变账单</b>：Henrico 县 37 座数据中心挤占电网、反要学校节电(HN 388),AI capex 狂飙的社会成本首次以如此具象的方式浮出水面。</li>
+      <li><b>出口管制松动</b>：美商务部解除对 Claude Fable 5/Mythos 5 的出口限制,前沿模型的全球流向与地缘算力格局迎来新变量。</li>
+      <li><b>模型与服务双线演进</b>：LongCat-2.0(1.6T/48B MoE)代表超稀疏大模型继续压低推理成本,而 KernelFlume、Tri-serve、HBM-Not-All-You-Need 则从 attention 弹性、能效、内存异构三个维度重构数据中心推理栈——软硬件协同优化正成为本轮 Infra 竞争的主战场。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">en.sedaily.com</span><a href="https://en.sedaily.com/international/2026/06/29/samsung-sk-hynix-micron-sued-in-us-over-memory-price-fixing" target="_blank" rel="noopener">三星、SK 海力士、美光在美遭起诉,涉内存价格操纵</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.30039" target="_blank" rel="noopener">Mega:22nm 卷积脉冲神经网络加速器,0.375 pJ/SOP</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28542" target="_blank" rel="noopener">KoAT:整数程序自动复杂度与终止性分析</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.29108" target="_blank" rel="noopener">Symbolon:通过学习代码变换做符号执行</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景补充:tinygrad / MLIR / TVM / Triton / Mojo 近两天无重大独立发布,主流框架进入常规迭代期。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">longcat.chat</span><a href="https://longcat.chat/blog/longcat-2.0/" target="_blank" rel="noopener">LongCat-2.0:1.6T 总参 / 48B 激活的大规模 MoE 模型</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.29207" target="_blank" rel="noopener">KernelFlume:面向 Agentic 长上下文解码的弹性 Core-Attention 扩缩</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">vllm.ai</span><a href="https://vllm.ai/blog/2026-06-29-micro-agent-frontier-models" target="_blank" rel="noopener">Micro-Agent:在模型 API 内用协作击败前沿模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.29629" target="_blank" rel="noopener">Tri-serve:能效导向的多模态推理服务</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">404media.co</span><a href="https://www.404media.co/henrico-virginia-datacenter-energy-cost-email/" target="_blank" rel="noopener">坐拥 37 座数据中心的县,反过来要求学校&quot;节约用电&quot;</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.29986" target="_blank" rel="noopener">HBM Is Not All You Need:跨异构内存加速器的高效解耦式 LLM 服务</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.29078" target="_blank" rel="noopener">硬盘可靠性存在厂商差异吗?</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">twitter.com</span><a href="https://twitter.com/AnthropicAI/status/2072106151890809341" target="_blank" rel="noopener">美商务部解除对 Claude Fable 5 与 Mythos 5 的出口管制</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">weblog.rogueamoeba.com</span><a href="https://weblog.rogueamoeba.com/2026/06/26/free-the-icons/" target="_blank" rel="noopener">Free the Icons</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28345" target="_blank" rel="noopener">审计 LLM 治理的社交机器人:文化特定的道德梯度</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28385" target="_blank" rel="noopener">RoboGaze:用结构化视觉-语言分析评测机器人世界模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28529" target="_blank" rel="noopener">The Speedup Paradox:重思具身任务中推理速度-质量的权衡</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28476" target="_blank" rel="noopener">FADA:通过动力学对齐做少样本域适应的人形控制</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28455" target="_blank" rel="noopener">另有</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28409" target="_blank" rel="noopener">证据驱动的 LLM Agent 做 C→可综合 C 转换与验证</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28565" target="_blank" rel="noopener">KernelSight-LM:内核级 LLM 推理模拟器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景补充:AlphaEvolve / FunSearch 类&quot;AI 自动发现算子&quot;近两天无新公开进展,当前热点集中在 LLM 驱动的 HLS/RTL 修复与内核级仿真。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">deepmind.google</span><a href="https://deepmind.google/models/gemini-image/flash-lite/" target="_blank" rel="noopener">Nano Banana 2 Lite(Gemini Image Flash-Lite)</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.30553" target="_blank" rel="noopener">COSM:移动设备上 PIM 与 CPU 并发执行的协同调度框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.29518" target="_blank" rel="noopener">边缘 AI 计算的通用近似收割</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.30382" target="_blank" rel="noopener">RQP:面向 FPGA 神经网络的资源导向量化器剪枝</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">vosen.github.io</span><a href="https://vosen.github.io/ZLUDA/blog/zluda-update-q1q2-2026/" target="_blank" rel="noopener">另:</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-06-30.html">← 2026-06-30</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

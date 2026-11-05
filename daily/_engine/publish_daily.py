@@ -1,113 +1,161 @@
 #!/usr/bin/env python3
-"""
-publish_daily.py — 把 ai-infra-daily-news cron 的最新投递快照发布到 daily/ 站。
-流程：
-1. 找 ~/.hermes/cron/output/5b1b9320afe7_*.txt 最新一份
-2. 从文件名提取日期，剥离头尾得到干净 markdown
-3. 若 data/<date>.md 已存在且内容相同 -> 无变化，静默，无输出，exit 0
-4. 写 data/<date>.md，render + rebuild
-5. git add -> commit -> pull --rebase -> push（顺序不可颠倒；分号语义，逐条判码）
-6. stdout 输出一行摘要（日期 + commit SHA），供 cron 投递
+"""Publish AI Infra daily snapshots through an isolated Git worktree.
+
+The parent process creates a clean worktree from origin/master. The worker then
+backfills every missing/changed snapshot, rebuilds indexes, commits, pushes, and
+verifies the newest page. This keeps unrelated feed jobs and conflicted files in
+the shared checkout from breaking daily publication.
 """
 import glob
 import os
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
+import time
 from pathlib import Path
 
-DAILY_DIR = Path(__file__).resolve().parent.parent
+IS_WORKER = os.environ.get("AI_INFRA_DAILY_WORKER") == "1"
+SCRIPT_PATH = Path(__file__).resolve()
+DAILY_DIR = SCRIPT_PATH.parent.parent
 REPO_DIR = DAILY_DIR.parent
 DATA_DIR = DAILY_DIR / "data"
 SNAPSHOT_GLOB = os.path.expanduser("~/.hermes/cron/output/5b1b9320afe7_*.txt")
+LOCK_PATH = Path(os.path.expanduser("~/.hermes/locks/ai-infra-daily-publish.lock"))
 
-# 确保搜索索引被加入（它是由 rebuild_daily 生成的，必须暂存）
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(SCRIPT_PATH.parent))
 import render_daily  # noqa: E402
 import rebuild_daily  # noqa: E402
 
-def latest_snapshot():
-    files = sorted(glob.glob(SNAPSHOT_GLOB))
-    if not files:
-        return None, None
-    return files[-1], os.path.basename(files[-1])
 
-def clean_markdown(raw: str) -> str:
+def run(cmd, cwd, check=False):
+    p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True)
+    if check and p.returncode != 0:
+        detail = (p.stderr or p.stdout or "unknown error").strip()
+        raise RuntimeError(f"{' '.join(cmd)} failed: {detail}")
+    return p
+
+
+def snapshot_date(path):
+    m = re.search(r"_(\d{8})_", os.path.basename(path)) or re.search(
+        r"(\d{8})", os.path.basename(path)
+    )
+    if not m:
+        return None
+    value = m.group(1)
+    return f"{value[:4]}-{value[4:6]}-{value[6:8]}"
+
+
+def snapshots_by_date():
+    snapshots = {}
+    for path in sorted(glob.glob(SNAPSHOT_GLOB)):
+        date = snapshot_date(path)
+        if date:
+            snapshots[date] = path
+    return snapshots
+
+
+def clean_markdown(raw):
     lines = raw.splitlines()
-    start = next(i for i, l in enumerate(lines) if l.startswith("# "))
-    end = next((i for i, l in enumerate(lines) if l.startswith("To stop or manage this job")), len(lines))
+    try:
+        start = next(i for i, line in enumerate(lines) if line.startswith("# "))
+    except StopIteration as exc:
+        raise ValueError("snapshot has no markdown title") from exc
+    end = next(
+        (i for i, line in enumerate(lines) if line.startswith("To stop or manage this job")),
+        len(lines),
+    )
     return "\n".join(lines[start:end]).strip() + "\n"
 
-def run(cmd, cwd):
-    """运行 shell 命令，返回 (returncode, stdout)。用 list 避免 shell 注入。"""
-    p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True)
-    return p.returncode, (p.stdout or "").strip()
+
+def worker_main():
+    changed_dates = []
+    for date, snap_path in snapshots_by_date().items():
+        clean = clean_markdown(Path(snap_path).read_text(encoding="utf-8"))
+        target = DATA_DIR / f"{date}.md"
+        if target.exists() and target.read_text(encoding="utf-8") == clean:
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(clean, encoding="utf-8")
+        (DAILY_DIR / f"{date}.html").write_text(render_daily.render(date), encoding="utf-8")
+        changed_dates.append(date)
+
+    if not changed_dates:
+        return 0
+
+    rebuild_daily.main()
+    run(["git", "add", "daily/", "search-index.json"], REPO_DIR, check=True)
+    if run(["git", "diff", "--cached", "--quiet"], REPO_DIR).returncode == 0:
+        return 0
+
+    latest = max(changed_dates)
+    message = f"daily: publish through {latest} AI Infra daily digest"
+    run(["git", "commit", "-q", "-m", message], REPO_DIR, check=True)
+    run(["git", "push", "-q", "origin", "HEAD:master"], REPO_DIR, check=True)
+    sha = run(["git", "rev-parse", "--short", "HEAD"], REPO_DIR, check=True).stdout.strip()
+
+    url = f"https://yulong.wang/daily/{latest}.html"
+    for _ in range(12):
+        time.sleep(10)
+        result = run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", url],
+            REPO_DIR,
+        )
+        if result.stdout.strip() == "200":
+            print(f"[daily] published {','.join(changed_dates)} -> {sha} ({url})")
+            return 0
+    print(f"[daily] deployment verification failed for {url}", file=sys.stderr)
+    return 1
+
+
+def parent_main():
+    import fcntl
+
+    LOCK_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with LOCK_PATH.open("w") as lock_file:
+        try:
+            fcntl.flock(lock_file, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            print("[daily] another publish run is active; skipping")
+            return 0
+
+        run(["git", "fetch", "-q", "origin", "master"], REPO_DIR, check=True)
+        worktree = Path(tempfile.mkdtemp(prefix="ai-infra-daily-"))
+        try:
+            run(
+                ["git", "worktree", "add", "-q", "--detach", str(worktree), "origin/master"],
+                REPO_DIR,
+                check=True,
+            )
+            worker_script = worktree / "daily/_engine/publish_daily.py"
+            # Run the exact scheduler version being tested, even before this fix is pushed.
+            shutil.copy2(SCRIPT_PATH, worker_script)
+            env = os.environ.copy()
+            env["AI_INFRA_DAILY_WORKER"] = "1"
+            child = subprocess.run(
+                [sys.executable, str(worker_script)],
+                cwd=worktree,
+                env=env,
+                capture_output=True,
+                text=True,
+            )
+            if child.stdout:
+                sys.stdout.write(child.stdout)
+            if child.stderr:
+                sys.stderr.write(child.stderr)
+            return child.returncode
+        finally:
+            run(["git", "worktree", "remove", "--force", str(worktree)], REPO_DIR)
+            shutil.rmtree(worktree, ignore_errors=True)
+
 
 def main():
-    snap_path, snap_name = latest_snapshot()
-    if not snap_path or not snap_name:
-        print("[daily] no digest snapshot found; nothing to publish", file=sys.stderr)
+    try:
+        return worker_main() if IS_WORKER else parent_main()
+    except Exception as exc:
+        print(f"[daily] {exc}", file=sys.stderr)
         return 1
-    m = re.search(r"_(\d{8})_", snap_name)
-    if not m:
-        m = re.search(r"(\d{8})", snap_name)
-    if not m:
-        print(f"[daily] cannot parse date from snapshot name {snap_name}", file=sys.stderr)
-        return 1
-    date = f"{m.group(1)[:4]}-{m.group(1)[4:6]}-{m.group(1)[6:8]}"
-    clean = clean_markdown(open(snap_path, encoding="utf-8").read())
-
-    target = DATA_DIR / f"{date}.md"
-    if target.exists() and target.read_text(encoding="utf-8") == clean:
-        # 已发布且内容一致 -> 静默，无输出，exit 0
-        return 0
-
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(clean, encoding="utf-8")
-    (DAILY_DIR / f"{date}.html").write_text(render_daily.render(date), encoding="utf-8")
-    rebuild_daily.main()
-
-    # git add -> commit -> pull --rebase -> push（顺序不可颠倒；分号语义，逐条判码）
-    # add 后若无实际改动（内容逐字节相同，例如重投递快照），静默退出，不产生空提交
-    rc, _ = run(["git", "add", "daily/", "index.html", "search-index.json"], REPO_DIR)
-    if rc != 0:
-        print("[daily] git add failed", file=sys.stderr)
-        return 1
-    rc, _ = run(["git", "diff", "--cached", "--quiet"], REPO_DIR)
-    if rc == 0:
-        return 0
-    rc, _ = run(["git", "commit", "-q", "-m", f"daily: {date} AI Infra daily digest"], REPO_DIR)
-    if rc != 0:
-        print("[daily] git commit failed", file=sys.stderr)
-        return 1
-    # git pull --rebase 前保存 unstaged 改动，避免 rebase 因工作区非干净而失败
-    run(["git", "stash", "-q", "-u"], REPO_DIR)
-    rc, _ = run(["git", "pull", "--rebase", "-q", "origin", "master"], REPO_DIR)
-    run(["git", "stash", "pop", "-q"], REPO_DIR)
-    if rc != 0:
-        print("[daily] git pull --rebase failed", file=sys.stderr)
-        return 1
-    # git push 到 origin/master
-    rc, _ = run(["git", "push", "-q", "origin", "master"], REPO_DIR)
-    if rc != 0:
-        print("[daily] git push failed", file=sys.stderr)
-        return 1
-    rc, sha = run(["git", "rev-parse", "--short", "HEAD"], REPO_DIR)
-    print(f"[daily] published {date} -> {sha}  (https://yulong.wang/daily/)")
-    # 部署校验：GitHub Pages 可能需要短暂时间异步完成，这里给 60 秒兜底
-    import subprocess as _sub
-    import time as _time
-    ok = False
-    for _ in range(6):
-        _time.sleep(10)
-        r = _sub.run(["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", f"https://yulong.wang/daily/{date}.html"],
-                     capture_output=True, text=True)
-        if r.stdout.strip() == "200":
-            ok = True
-            break
-    if not ok:
-        print(f"[daily] WARNING: {date}.html not yet 200 after 60s, but commit succeeded", file=sys.stderr)
-    return 0
 
 
 if __name__ == "__main__":

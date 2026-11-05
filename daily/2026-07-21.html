@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-07-21</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-07-21</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-07-21 · 周二</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-19 ~ 2026-07-21</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-07-21</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>小米重磅入局 VLA 基础模型竞赛</b></li>
+      <li><b>前沿实验室经济学之争升温</b>：HN 272 分热帖直指</li>
+      <li><b>推理系统进入&quot;微秒时代&quot;</b></li>
+      <li><b>AI capex 的电力矛盾外溢到法律层面</b>：数据中心输电征地权讨论(HN 166 分)显示,电网扩建与私有产权的冲突正成为 AI 基础设施扩张的社会摩擦点。</li>
+      <li><b>训练效率竞速工程化</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15830" target="_blank" rel="noopener">RTL-Sequencer: 基于序列范式的可扩展 RTL 时序预测</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15782" target="_blank" rel="noopener">Vogls: 面向流片前功耗侧信道分析的快速交互式全时序仿真器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16042" target="_blank" rel="noopener">ECC 降低嵌入式动态存储器(GCRAM)功耗</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2512.03594" target="_blank" rel="noopener">离线强化学习加速详细布线收敛</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2602.18602" target="_blank" rel="noopener">Package Managers à la Carte: 依赖解析的形式化模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15876" target="_blank" rel="noopener">Yarrow: 调和代数效应与基于区域的内存管理</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16061" target="_blank" rel="noopener">双向类型检查:Freezing、Skeletons 与 Ghosts</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16100" target="_blank" rel="noopener">Every Microsecond Matters: GPU 集合通信逼近光速延迟</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15846" target="_blank" rel="noopener">DSTAR: 通过时空冗余消减加速 Diffusion Transformer</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15413" target="_blank" rel="noopener">FSZ: 打破 GPU 有损压缩的预测-吞吐权衡</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15593" target="_blank" rel="noopener">MCP 云端规模化:Scalable LLM Agent Tool Access in the Cloud</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">theconversation.com</span><a href="https://theconversation.com/when-can-a-power-company-take-your-land-for-data-center-infrastructure-284061" target="_blank" rel="noopener">电力公司何时可以为数据中心基础设施征用你的土地?</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15511" target="_blank" rel="noopener">多专家共识机制的 Serverless 自动扩缩容</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15681" target="_blank" rel="noopener">ADASCALE: 动态环境下微服务的自适应扩缩与放置</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16074" target="_blank" rel="noopener">JoyNexus: 面向 VLA 模型的服务化多租户后训练</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">emergingtrajectories.com</span><a href="https://www.emergingtrajectories.com/lh/frontier-lab-economics/" target="_blank" rel="noopener">Kimi K3、Qwen 3.8 与 Anthropic 的(潜在)瓦解</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15313" target="_blank" rel="noopener">量子程序生成必须优先保证有效性而非概率式 Scaling</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15394" target="_blank" rel="noopener">可迁移的阈值化可解释医疗分类框架</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">robotics.xiaomi.com</span><a href="https://robotics.xiaomi.com/xiaomi-robotics-1.html" target="_blank" rel="noopener">Xiaomi-Robotics-1: 以 10 万+小时真实世界轨迹扩展 VLA 模型</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15395" target="_blank" rel="noopener">NeuroCommitSSM: 基于 EEG-EMG-眼动的辅助操作共享自主</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15448" target="_blank" rel="noopener">VTAP Gripper: 指尖感知 + 视触觉主动手掌的灵巧手内操作</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15483" target="_blank" rel="noopener">面向随机结果的风险感知偏好学习</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15422" target="_blank" rel="noopener">软体机器人执行器的可复现硅胶浇注与传感器嵌入工艺</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/Saivineeth147/lora-speedrun" target="_blank" rel="noopener">LoRA Speedrun: 微调技术的公开 wall-clock 排行榜</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16058" target="_blank" rel="noopener">From Patterns to Parsers: FPGA 高效硬件解析器自动生成</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15383" target="_blank" rel="noopener">Gradual C0 等验证器中的 Unfolding 表达式与纯函数渐进验证</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2510.25369" target="_blank" rel="noopener">依赖动态类型的接地算术递归推理</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15951" target="_blank" rel="noopener">在图处理器(IPU)上渲染 3D Gaussians</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15328" target="_blank" rel="noopener">Lazy Arithmetic + 脉动阵列:弥合嵌入式系统的验证鸿沟</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15753" target="_blank" rel="noopener">CoG 引导的权重校正:容错深度神经网络</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15421" target="_blank" rel="noopener">qZACH-ViT: 量化感知的本征可解释医疗影像分类</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-07-18.html">← 2026-07-18</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

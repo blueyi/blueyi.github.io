@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-06-27</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-06-27</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-06-27 · 周六</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-06-24 ~ 2026-06-27</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-06-27</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>政策成为前沿模型分发的硬约束</b>：OpenAI GPT-5.6 Sol 由美国政府审查准入(HN 762/783),Anthropic Mythos 走&quot;受信任伙伴&quot;受控释放(HN 146),前沿模型正式进入国家安全监管框架——这是本周最大的治理拐点。</li>
+      <li><b>OpenAI 首款自研芯片落地</b>：(Broadcom 代工,HN 817):头部模型厂商垂直整合算力栈、降低 Nvidia 依赖的趋势再下一城,AI 芯片格局加速分化。</li>
+      <li><b>Anthropic 指控阿里巴巴非法提取 Claude 能力</b>：(HN 789):模型蒸馏/能力窃取首次升级为跨境 IP 与地缘争端,将进一步收紧出口管制与合规边界。</li>
+      <li><b>数据中心扩张引发选民反弹</b>：(HN 154):电力与用水的社会成本转化为政治压力,超大规模 capex 的&quot;许可经营&quot;时代或将到来。</li>
+      <li><b>系统侧两项工程亮点</b>：Moebius 实现 MoE 服务 TP/EP 运行时无缝切换,Axon 用程序综合自动生成加速器算子——分别代表推理服务与算子自动化的前沿方向。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank" rel="noopener">OpenAI 发布首款自研芯片,由 Broadcom 代工</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26176" target="_blank" rel="noopener">arXiv cs.AR 关注下一代封装与内存技术:</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techpowerup.com</span><a href="https://www.techpowerup.com/348723/amd-readies-full-open-source-hdmi-2-1-support-for-linux" target="_blank" rel="noopener">AMD 即将为 Linux 提供完整开源 HDMI 2.1 支持</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26344" target="_blank" rel="noopener">Axon:面向张量程序的合成式超优化器</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27122" target="_blank" rel="noopener">Mostly Automatic Translation of Language Interpreters from C to Safe Rust</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27138" target="_blank" rel="noopener">Welterweight Go:装箱、结构化子类型与泛型</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26607" target="_blank" rel="noopener">Moebius:运行时无缝切换并行策略的 MoE 服务系统</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26997" target="_blank" rel="noopener">RolloutPipe:解耦式 On-Policy LLM 强化学习中重叠流水化 Rollout 与训练</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27153" target="_blank" rel="noopener">DMuon:近 Adam 开销的高效分布式 Muon 训练</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">newsweek.com</span><a href="https://www.newsweek.com/cost-me-the-election-data-centers-trigger-voter-backlash-12118327" target="_blank" rel="noopener">数据中心建设引发选民反弹</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">explorer.oxide.computer</span><a href="https://explorer.oxide.computer/" target="_blank" rel="noopener">Oxide Computer 3D 机架导览</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26150" target="_blank" rel="noopener">学术前沿:</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">washingtonpost.com</span><a href="https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/" target="_blank" rel="noopener">OpenAI:美国政府将审查谁能使用 GPT-5.6</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">reuters.com</span><a href="https://www.reuters.com/technology/us-releases-anthropic-model-mythos-some-us-companies-semafor-reports-2026-06-26/" target="_blank" rel="noopener">美国允许 Anthropic 向&quot;受信任伙伴&quot;释放 Mythos 模型</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">reuters.com</span><a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/" target="_blank" rel="noopener">Anthropic 称阿里巴巴非法提取 Claude 模型能力</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26185" target="_blank" rel="noopener">学术侧</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26201" target="_blank" rel="noopener">OmniContact:通过接触流串联元技能实现可泛化人形 Loco-Manipulation</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26175" target="_blank" rel="noopener">RMTL:用 VLM 奖励做长程操作的强化微任务学习</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26151" target="_blank" rel="noopener">真机/仿真场景:</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26344" target="_blank" rel="noopener">Axon:面向张量程序的合成式超优化器</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26490" target="_blank" rel="noopener">An Empirical Study of LLM-Generated Specifications for VeriFast</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26547" target="_blank" rel="noopener">Compiler-Driven Approximation Tuning for Hyperdimensional Computing</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27098" target="_blank" rel="noopener">Residual GPU Cache State on Apple M4 Pro</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26137" target="_blank" rel="noopener">Mitigating High-Frequency Geometric Noise in Non-Parametric 1-Bit Sparse</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26177" target="_blank" rel="noopener">端侧 RISC-V 实时硬件方面,</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-06-26.html">← 2026-06-26</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

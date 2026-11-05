@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-25</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-25</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-25 · 周二</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-24 ~ 2026-08-25</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-25</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>前沿模型&quot;叫好不叫座&quot;:FT 报道 Anthropic 最强模型遇冷、廉价工具崛起(HN 762),叠加 OpenAI GPT 5.6 Sol 降价(HN 285),高价旗舰与低成本推理的博弈进入白热化。</b></li>
+      <li><b>微软画图/照片对本地生成输出静默嵌入 GUID 水印(HN 531),内容溯源与隐私边界成为今日最高热话题。</b></li>
+      <li><b>推理优化与芯片双线发力:SPICE(MoE 预取)、BF1(长上下文稀疏注意力)、XPerf(agentic serving 基准)密集刷屏,Hot Chips 上 CUDA 挺进 RISC-V。</b></li>
+      <li><b>具身智能 VLA 走向形式化:Logic-VLA 用 STL 时序逻辑显式约束行为安全,人形机器人起立 RL 进展成对涌现。</b></li>
+      <li><b>AI 硬件自动化再进一步:HIERA、AI with Authority 等显示 LLM 正从内核调优延伸到硅片验证。</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc" target="_blank" rel="noopener">Hot Chips 2026:CUDA Targets RISC-V</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2604.04750" target="_blank" rel="noopener">DeepStack:面向分布式 LLM 推理的 3D DRAM 堆叠加速器协同设计</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20572" target="_blank" rel="noopener">Faults That Fortify:GPU 欠压训练提升 CNN 对抗鲁棒性</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21288" target="_blank" rel="noopener">宽链路 NoC 路由器三模冗余的可靠性与物理设计挑战</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21150" target="_blank" rel="noopener">ICON 集成 Python 动力核心(GT4Py DSL + DaCe)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20497" target="_blank" rel="noopener">Bern2Edge:基于 Bernstein 多项式网络的神经符号编译器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20586" target="_blank" rel="noopener">Fortran &#x27;do concurrent&#x27; 在 GPU 上的可移植性(之二)</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20370" target="_blank" rel="noopener">XPerf:面向 Agentic 工作负载的 LLM 服务系统基准</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21240" target="_blank" rel="noopener">SPICE:MoE 推理加速的投机预取框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20427" target="_blank" rel="noopener">BF1:长上下文 Transformer 的因果对角稀疏注意力改造</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20734" target="_blank" rel="noopener">MEMPOWER:HPC 工作负载的细粒度内存分析与功率管理</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21034" target="_blank" rel="noopener">AI Infrastructure in Space:我们能走多远</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2510.08351" target="_blank" rel="noopener">Fletch:可编程交换机中的文件系统元数据缓存</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">xusheng.dev</span><a href="https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/" target="_blank" rel="noopener">微软画图/照片对本地生成内容静默嵌入 GUID 水印</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ft.com</span><a href="https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245" target="_blank" rel="noopener">Anthropic 最强模型难获用户,廉价工具逆势增长</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">developers.openai.com</span><a href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noopener">OpenAI:GPT 5.6 Sol 降价(至少持续到 11/21)</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">boydkane.com</span><a href="https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines" target="_blank" rel="noopener">LLM 可通过利用推理引擎控制宿主机</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20439" target="_blank" rel="noopener">神经 PDE 算子的&quot;错物理&quot;后门</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20556" target="_blank" rel="noopener">Logic-VLA:时序逻辑条件化的视觉-语言-动作模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20823" target="_blank" rel="noopener">人形机器人自然坐站动作合成(RL,无需示范)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20852" target="_blank" rel="noopener">示范引导的人形机器人在软地面起立(Unitree G1,29-DOF)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20546" target="_blank" rel="noopener">Koala Gripper:夹爪与数据采集装置协同设计</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20784" target="_blank" rel="noopener">模仿学习中的示范&quot;遗忘&quot;再思考</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21157" target="_blank" rel="noopener">HIERA:跨实现空间的 GPU 内核工作负载感知规划</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20725" target="_blank" rel="noopener">Im2win 卷积多精度 GPU CUDA/Tensor Core 支持</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21356" target="_blank" rel="noopener">AI with Authority:从应用到硅片</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20605" target="_blank" rel="noopener">面向 ML 内核的符号化基本块剖析</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20776" target="_blank" rel="noopener">代码翻译技术大规模实证研究</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21223" target="_blank" rel="noopener">事件触发隐式扰动:脉冲 Transformer 零阶微调</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20497" target="_blank" rel="noopener">Bern2Edge(见第 2 类):面向边缘部署的神经符号编译器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20819" target="_blank" rel="noopener">PRICE:边缘计算的定价式资源激励</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">端侧经典路线(llama.cpp / MLC-LLM / ExecuTorch / 极低比特量化)近两天无重大独立动态(背景:本窗口数据集未见相关帖子或论文)。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-22.html">← 2026-08-22</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

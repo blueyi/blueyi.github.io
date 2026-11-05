@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-07-03</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-07-03</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-07-03 · 周五</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-01 ~ 2026-07-03</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-07-03</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>政策地震</b>：美商务部解除 Claude Fable 5 / Mythos 5 出口管制(HN 963 分),叠加 OpenAI 或向美政府让渡 5% 股权的传闻,前沿模型的全球分发与资本治理格局正被同时改写。</li>
+      <li><b>Agent 基础设施成主线</b>：SmoothAgent 的前瞻式上下文工程与&quot;自进化 Agent 的 RL 系统&quot;一前一后,分别攻长时程服务开销与部署后静态化两大顽疾——2026 年的 Infra 战场正从&quot;训练/推理&quot;扩到&quot;Agent 全生命周期&quot;。</li>
+      <li><b>MoE 服务再进化</b>：ELDR 把专家局部性引入 PD 分离解码路由,配合非对称量化 97% 存储压缩,数据中心侧的降本增效仍在快速迭代。</li>
+      <li><b>评测在&quot;去污染&quot;</b>：AlgoBench 与 LLVM-Bench 双双指向&quot;高分≠真能力&quot;,推动代码/编译器 Agent 评测走向更难、更抗泄漏的系统级任务。</li>
+      <li><b>具身智能量大面广</b>：从蝇脑拓扑导航到缆索载荷协同运输,cs.RO 本窗口密集出新,而开源自制扫地机 Oomwoo(HN 453 分)则展示了消费级具身硬件的民主化势头。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00621" target="_blank" rel="noopener">PQC 专用 NTT 加速器新微架构</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00819" target="_blank" rel="noopener">GPU 能效&quot;甜点区&quot;建模</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景:本窗口 Nvidia/AMD/Intel/TSMC/HBM 无独立重大发布。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00563" target="_blank" rel="noopener">块程序的可证明变换</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00824" target="_blank" rel="noopener">实用化区间精化类型</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景:tinygrad / MLIR / TVM / XLA / Triton / Mojo 本窗口无独立重大更新。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00151" target="_blank" rel="noopener">长时程 Agent 服务的上下文工程</a></div>
+      <div class="it-sum">🔥 —</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00466" target="_blank" rel="noopener">MoE 解码路由感知专家局部性</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">mixedbread.com</span><a href="https://www.mixedbread.com/blog/asymmetric-quant" target="_blank" rel="noopener">稀疏检索存储压缩 97%</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00303" target="_blank" rel="noopener">Promise-Future 集群异步同步</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00740" target="_blank" rel="noopener">微服务可用性运行时模型</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00455" target="_blank" rel="noopener">自动扩缩容仿真框架</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">twitter.com</span><a href="https://twitter.com/AnthropicAI/status/2072106151890809341" target="_blank" rel="noopener">美商务部解除 Claude Fable 5 / Mythos 5 出口管制</a></div>
+      <div class="it-sum">🔥 —</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theguardian.com</span><a href="https://www.theguardian.com/technology/2026/jul/02/openai-stake-us-government-ai-sam-altman" target="_blank" rel="noopener">OpenAI 或向美国政府让渡 5% 股权</a></div>
+      <div class="it-sum">🔥 —</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00089" target="_blank" rel="noopener">可解释性可复用性协议</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00020" target="_blank" rel="noopener">空间场景图 VLA 基准</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00022" target="_blank" rel="noopener">何时该个性化家庭物品搜索</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00024" target="_blank" rel="noopener">缆索悬挂载荷协同运输</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00025" target="_blank" rel="noopener">仿蝇脑拓扑的鲁棒导航网络</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">makerspet.com</span><a href="https://makerspet.com/blog/building-an-open-source-robot-vacuum-meet-oomwoo/" target="_blank" rel="noopener">DIY 开源扫地机器人</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.01120" target="_blank" rel="noopener">自进化 Agent 的强化学习系统</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00700" target="_blank" rel="noopener">LLVM 编译器 issue 求解基准</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00062" target="_blank" rel="noopener">算法适应性代码生成基准</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cursor.com</span><a href="https://cursor.com/evals" target="_blank" rel="noopener">CursorBench 3.1</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00621" target="_blank" rel="noopener">PQC 端侧 NTT 加速微架构</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景:本窗口 llama.cpp / MLC-LLM / ExecuTorch / MLX / Core ML / NPU(Hexagon/ANE/Jetson)/ 小模型 / 极低比特量化(BitNet/INT4)无独立重大动态。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-07-02.html">← 2026-07-02</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

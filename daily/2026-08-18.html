@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-18</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-18</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-18 · 周二</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-14 ~ 2026-08-18</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-18</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>Qwen 3.8 27B 以 1423 分霸榜 HN,直接发布 FP8 权重,标志阿里在高效推理落地上的持续发力。</b></li>
+      <li><b>Nvidia 拟缩减对 OpenAI 的 250 亿美元数据中心融资担保(243 分),是 AI 基建 capex 与供需关系的重要拐点信号。</b></li>
+      <li><b>Anthropic 文本水印被 Gruber 以 760 分高帖炮轰,叠加&quot;开源战争&quot;质疑,AI 输出水印与开源生态治理成为今日焦点。</b></li>
+      <li><b>编译与硬件方向密集:无屏障多引擎同步、GPU Offload in Rust、HBF/ReRAM 缓解 LLM 内存墙,共同指向&quot;内存/同步瓶颈&quot;这一主线。</b></li>
+      <li><b>具身方向 cs.RO 论文井喷,VLA、世界模型、灵巧操作与闭环修复成为研究热点。</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">reuters.com</span><a href="https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/" target="_blank" rel="noopener">Nvidia 大幅削减对 OpenAI 数据中心融资担保</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/pc-components/ram/memory-prices-climb-500-percent-in-12-months-up-to-10x-the-lowest-ever-tracked-prices-128gb-of-ddr5-now-usd3-399" target="_blank" rel="noopener">内存价格 12 个月暴涨 500%</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13790" target="_blank" rel="noopener">PPAPlace:面向芯片布局的可微跨阶段目标优化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13868" target="_blank" rel="noopener">面向 LLM 推理的高带宽闪存(HBF):机遇与挑战</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13757" target="_blank" rel="noopener">多引擎 AI 加速器的无屏障同步算法</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13759" target="_blank" rel="noopener">GPU Offload in Rust:可移植、安全、高效</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14471" target="_blank" rel="noopener">常界程序的内存分配优化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14453" target="_blank" rel="noopener">带变体类型的简单类型反向模式自动微分</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/Qwen/Qwen3.8-27B-FP8" target="_blank" rel="noopener">Qwen 3.8 27B(FP8)</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13962" target="_blank" rel="noopener">解聚式 LLM 服务中 MoE 专家的 ReRAM 近内存执行</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14333" target="_blank" rel="noopener">超越容量:高带宽闪存 + 直连 GPU/HBM 通路实现可扩展 MoE 推理</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13668" target="_blank" rel="noopener">线性注意力的&quot;第二擦除方向&quot;</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">reuters.com</span><a href="https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/" target="_blank" rel="noopener">Nvidia 削减 OpenAI 数据中心融资担保</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">turbopuffer.com</span><a href="https://turbopuffer.com/blog/control-plane" target="_blank" rel="noopener">如何每天交付一个数据库</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13824" target="_blank" rel="noopener">平衡工作负载性能与 Slurm 压力:四种 Nextflow 部署策略</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14427" target="_blank" rel="noopener">无服务器计算中大规模工作流放置的整数非线性规划</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">daringfireball.net</span><a href="https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing" target="_blank" rel="noopener">Anthropic 在 Claude 中的&quot;水印&quot;文本掺杂是对写作的扭曲</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">bundeskartellamt.de</span><a href="https://www.bundeskartellamt.de/SharedDocs/Meldung/EN/Pressemitteilungen/2026/08_17_2026_Apple_ATTF.html" target="_blank" rel="noopener">Apple ATT 对自家应用网开一面</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blog.roboflow.com</span><a href="https://blog.roboflow.com/openai-gpt-5-6/" target="_blank" rel="noopener">GPT 5.6 Sol:OpenAI 迄今最强&quot;视觉&quot;模型</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">twitter.com</span><a href="https://twitter.com/TheAhmadOsman/status/2065307070044234186" target="_blank" rel="noopener">Anthropic 对开源 AI 的&quot;战争&quot;</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13924" target="_blank" rel="noopener">BICPO-VLA:面向平滑异步 VLA 控制的行为识别式偏好优化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13678" target="_blank" rel="noopener">hint²:面向推理时线性时序逻辑引导的分层世界模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14028" target="_blank" rel="noopener">AdvDex:从人类演示学习灵巧操作</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13878" target="_blank" rel="noopener">混合交通下自动驾驶的知识-数据双驱动强化学习</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13901" target="_blank" rel="noopener">Onto-EV-WM:本体锚定的世界模型用于物理 AI 故障诊断与闭环修复</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13723" target="_blank" rel="noopener">其余:</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14527" target="_blank" rel="noopener">通过差分故障注入验证 LLM 现代化的科学软件</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.21339" target="_blank" rel="noopener">KBSpec:基于演化领域知识库的 LLM 形式化规约生成</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13566" target="_blank" rel="noopener">别再说&quot;面向基准的优化提升通用编码能力&quot;——需要多样化评估</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13596" target="_blank" rel="noopener">通过激活引导剪枝实现跨尺度免训练知识迁移</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/Qwen/Qwen3.8-27B-FP8" target="_blank" rel="noopener">备注:🔥</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">其余端侧/嵌入式 NPU 与极低比特量化方向近两日无重大独立动态(背景:今日 HN/arXiv 端侧专用物料较少)。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-15.html">← 2026-08-15</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-11</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-11</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-11 · 周二</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-10 ~ 2026-08-11</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-11</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>小模型 + 端侧 Agent 升温</b>：Needle2（14MB）以 130 分登上 HN 热榜，验证了&quot;能在手机上跑的 agentic LLM&quot;正从实验走向产品化，与端侧推理赛道持续火热的趋势共振。</li>
+      <li><b>OpenAI 安全动作密集</b>：同日出现《致德州州长基础设施信》与 GPT 5.6 Cyber 发布，显示 OpenAI 在政策沟通与安全产品化两个维度同步发力，AI 安全从&quot;实验室话题&quot;加速转向&quot;政策+产品双轨并行&quot;。</li>
+      <li><b>LLM 覆盖硬件设计的边界在拓宽</b>：HLSmith（LLM → HLS）与 Agentic Symbolic Execution（LLM → 程序分析）均用 LLM 替代传统专家密集型任务，AI 辅助 EDA / 编译器工具链正在形成新的研究热点。</li>
+      <li><b>具身智能方法论日趋系统化</b>：今日 cs.RO 出现 VLA 模型选择、跨具身泛化、Lyapunov 安全验证、可微软体建模等多条独立技术线，表明具身智能正从单点突破走向工程体系化。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06812" target="_blank" rel="noopener">FP4 Tensor Core 上模拟 FP64 矩阵乘法</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06870" target="_blank" rel="noopener">G-Power：架构级 GPU 功耗建模</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06989" target="_blank" rel="noopener">NPU-PIM 统一内存重思考</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.07226" target="_blank" rel="noopener">双节点 DGX Spark 分布式训练验证</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06838" target="_blank" rel="noopener">StateFlow：面向长上下文的序列流水线并行</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06557" target="_blank" rel="noopener">Cascade：SLO 感知的 LLM 推理调度</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06441" target="_blank" rel="noopener">SNI-GNN：SmartNIC 辅助全图 GNN 训练</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">snowflake.com</span><a href="https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/" target="_blank" rel="noopener">Snowflake：如何将 CDC 推入 Postgres</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06629" target="_blank" rel="noopener">MARS：基于 MCTS 的自适应调度器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06987" target="_blank" rel="noopener">Kubernetes 调度器插件实现集群级放置优化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06966" target="_blank" rel="noopener">云边连续体自适应 CEP 框架</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/responsible-ai-infrastructure-texas/" target="_blank" rel="noopener">OpenAI 致德州州长：负责任 AI 基础设施</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/" target="_blank" rel="noopener">GPT 5.6 Cyber：扩展 Daybreak 网络防御窗口</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">anthropic.com</span><a href="https://www.anthropic.com/research/riemann-zeta" target="_blank" rel="noopener">Anthropic：深入理解 Claude 的数学能力</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blog.sshh.io</span><a href="https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs" target="_blank" rel="noopener">探索 Claude/GPT 知识截止与预训练时间线</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06417" target="_blank" rel="noopener">Latent Fact-Checking：通过激活工程检测虚假信息</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06422" target="_blank" rel="noopener">Sharding 防止 LLM 监督失效与对抗利用</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06434" target="_blank" rel="noopener">自适应 VLA 推理框架：环境感知模型选择</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06688" target="_blank" rel="noopener">CrossTracer：跨具身导航的 VLA 推理与轨迹残差适配</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06481" target="_blank" rel="noopener">LyEvO：基于李雅普诺夫引导的 Sim-to-Real 安全优化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06650" target="_blank" rel="noopener">SoRoMoX：JAX 实现的快速可微软体机器人模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06587" target="_blank" rel="noopener">SyncSBC：去中心化集群行为预测同步控制</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06488" target="_blank" rel="noopener">RAVEN II 手术机器人受力驱动研究</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06707" target="_blank" rel="noopener">Hoverflie：旋翼护罩将微型无人机变为多模态气垫船</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06791" target="_blank" rel="noopener">HLSmith：专家引导的 C/C++ 到 HLS 翻译 Agent</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06397" target="_blank" rel="noopener">Agentic Planning for Symbolic Execution</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">cactuscompute.com</span><a href="https://cactuscompute.com/needle" target="_blank" rel="noopener">Needle2：14MB 端侧 Agent LLM</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06439" target="_blank" rel="noopener">面向实时线段检测的低延迟 ASIC 架构</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-09.html">← 2026-08-09</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

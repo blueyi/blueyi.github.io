@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-26</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-26</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-26 · 周三</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-25 ~ 2026-08-26</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-26</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>OpenAI 双线并进:自研推理芯片 Jalapeño 性能据报优于 Blackwell,同时下调 GPT-5.6 Sol 定价,直指推理侧&quot;成本 + 供给&quot;双垄断格局。</b></li>
+      <li><b>CUDA 在 Hot Chips 上宣布支持 RISC-V,标志着编译生态开始脱离 NVIDIA ISA 锁定,是国产/开源芯片路线的关键观察点。</b></li>
+      <li><b>GPU Scale-Up&quot;同步税&quot;研究量化了互联带宽与域规模增长的根本矛盾,为超大规模训练集群的 scaling 路线敲警钟。</b></li>
+      <li><b>安全侧两条高分 HN 帖(MS Paint 隐水印、LLM 控制宿主)凸显生成内容溯源与推理引擎安全边界的紧迫性。</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">newsletter.semianalysis.com</span><a href="https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia" target="_blank" rel="noopener">OpenAI 自研推理芯片 &quot;Jalapeño&quot; 泄露,SemiAnalysis 评测称性能优于 NVIDIA Blackwell,或重塑推理算力供给格局 —</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc" target="_blank" rel="noopener">Hot Chips 2026:Chester Lam 报道 CUDA 正式支持 RISC-V,生态开始向非 NVIDIA ISA 扩张 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.22602" target="_blank" rel="noopener">面向 AI 时代的下一代异步分布式 GPU:MCM 拓扑 + 异步执行原语 + 多阶段 persistent kernel,并配套周期级仿真基建 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.22613" target="_blank" rel="noopener">NOVA:面向 GQA-SSM-MoE 混合 LLM 的近存计算技术-架构协同设计,直面 DRAM 缩放&quot;技术墙&quot; —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.22741" target="_blank" rel="noopener">2nm 节点混合 Si/IGO 单片 3D 6T SRAM:BEOL 通门 + 埋入式电源轨 + Ru 互连 —</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21555" target="_blank" rel="noopener">首次为 ML 编译器&quot;布局选择&quot;建立形式化基础:全局布局、算子间偏好对齐与显式转换开销的权衡 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">CUDA 支持 RISC-V(见 1️⃣)在编译工具链层面同样意义重大,值得持续跟踪其 ABI/库生态进展。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">developers.openai.com</span><a href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noopener">OpenAI 下调 GPT-5.6 Sol 推理定价,优惠至少持续至 11/21,推理成本战再度升温 —</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21719" target="_blank" rel="noopener">PowerSlider:利用 LLM pipeline 计算/内存相位不对称,在需求响应功率上限下保住 goodput,而非简单降级 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20427" target="_blank" rel="noopener">BF1:确定性块对齐二分稀疏注意力,兼顾局部窗口 + 全局首块 + 对数间隔历史块,长上下文高效 retrofit —</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.22503" target="_blank" rel="noopener">揭示 GPU Scale-Up 域&quot;同步税&quot;:数十万集体操作 × 4 模型 × 3 代 GPU 表明,互联带宽与域规模增长之间存在根本张力 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">PowerSlider(见 3️⃣)同时面向电力约束下的推理集群调度,是&quot;功率信封&quot;维度的新切入口。</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21826" target="_blank" rel="noopener">基于 NVSHMEM 的多 GPU 并发 FIFO 队列系统,以 Bellman-Ford SSSP 为用例验证 —</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">xusheng.dev</span><a href="https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/" target="_blank" rel="noopener">逆向发现:MS Paint/Photos 对本地生成输出也嵌入含 GUID 的不可见水印,内容溯源与隐私争议发酵 —</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ft.com</span><a href="https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245" target="_blank" rel="noopener">FT 报道:Anthropic 最强模型难吸引用户,更便宜工具受青睐,高价前沿模型商业化承压 —</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">boydkane.com</span><a href="https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines" target="_blank" rel="noopener">LLM 或可利用推理引擎漏洞控制宿主机器,安全边界再受审视 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20439" target="_blank" rel="noopener">神经 PDE 算子的&quot;错误物理后门&quot;:跨参数重链接数据投毒,触发输入在错误物理参数下取合法解 —</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21395" target="_blank" rel="noopener">ODG-NoMaD:overhead 相机方向引导,为 NoMaD 探索模式注入全局方向感,提升未知环境导航 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21402" target="_blank" rel="noopener">世界动作模型选择性跨视角一致性:在无测试时相机信息下仍保持新视角鲁棒性 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21400" target="_blank" rel="noopener">主动交互感知 MPPI:ego-conditioned 生成式自回归预测嵌入模型预测路径积分,实现交互式规划 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21387" target="_blank" rel="noopener">养老院服务机器人:多模态 LLM 统一主动视觉、自然交互与安全监护 —</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21962" target="_blank" rel="noopener">NoTB:LLM 生成 RTL 的&quot;无 oracle&quot;功能分诊,基于跨模型形式化共识,避免依赖 LLM 自造 testbench —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.22630" target="_blank" rel="noopener">VeGo:Go 程序直接演绎形式验证,借 AI 编码代理把形式化方法推向教学与日常开发 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.22928" target="_blank" rel="noopener">Agent 执行编辑(Checkpoint/Fork/Restore/Merge)安全性的精确判定:哪些编辑会撤销授权或已发送请求 —</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21910" target="_blank" rel="noopener">PRISM:边缘微服务预测式运行时 in-place 缩放 + 模型变体联合选择,兼顾延迟/质量/能耗预算 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.21657" target="_blank" rel="noopener">FPGA 深度学习模型压缩与硬件感知加速的协同设计分类学与对比分析 —</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.22378" target="_blank" rel="noopener">精度感知可变比特处理单元:FP32/TF32/BF16 近似计算的 weight-stationary systolic array —</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-25.html">← 2026-08-25</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

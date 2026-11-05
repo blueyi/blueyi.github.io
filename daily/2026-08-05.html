@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-05</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-05</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-05 · 周三</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-04 ~ 2026-08-05</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-05</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>DeepSeek V4 Flash 单卡 AMD MI300X 跑通</b>：（HN 363）：社区验证了 AMD Instinct 对国产开源大模型的生产级推理能力，对 NVIDIA 垄断格局构成实质挑战，值得持续关注 MI300X 软件生态成熟度。</li>
+      <li><b>Agentic Kernel Generation 方法论反思</b>：（arxiv 2608.00894）：尖锐指出当前 AI 自动生成 Kernel 路线的重复推理浪费——每次 workload 都重新学习不变的机器语义，提出&quot;解耦机器语义学习与 workload 优化&quot;的新范式，可能深刻影响编译器+LLM 交叉方向的研究路线。</li>
+      <li><b>Apple 前员工数据泄露风波</b>：（HN 325）：Apple 指控更多前员工将机密带入 OpenAI，AI 人才争夺战中的知识产权保护已成行业级治理难题，后续法律动态值得跟踪。</li>
+      <li><b>Meta MTIA 适配 Triton</b>：Meta 将 Triton 编程模型桥接到自研加速器，为超大规模自研芯片的软件生态建设提供重要参考——这也是编译器社区近年最重要的工程方向之一。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/ryanzhou/deepseek-v4-flash-mi300x" target="_blank" rel="noopener">DeepSeek V4 Flash on a Single AMD MI300X</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00867" target="_blank" rel="noopener">NUNA: Characterizing and Mitigating Non-Uniform Network Access in Multi-Die GPU Scale-Up Systems</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00325" target="_blank" rel="noopener">Triton for MTIA: Bridging the Programming Model Gaps for Custom AI Accelerators</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00412" target="_blank" rel="noopener">C2P-Cache: Scalable GPU L1 Cache Sharing via Concurrent Candidate Pruning</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00259" target="_blank" rel="noopener">Themis: Software-Defined Hardware Prefetching</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00016" target="_blank" rel="noopener">HSRAI: Permutation-Preserving Address Interleaving with Hierarchical Balance Metrics</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00029" target="_blank" rel="noopener">Nova: An End-to-End MLIR Compiler for Deep Learning</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00325" target="_blank" rel="noopener">Triton for MTIA: Bridging the Programming Model Gaps for Custom AI Accelerators</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00894" target="_blank" rel="noopener">Rethinking Agentic Kernel Generation for Emerging Accelerators</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/ryanzhou/deepseek-v4-flash-mi300x" target="_blank" rel="noopener">DeepSeek V4 Flash on a Single AMD MI300X</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00129" target="_blank" rel="noopener">Progressive²: A Teacher-Student Progressive Co-Evolving Knowledge Distillation Method for Substantial Model Compression</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00455" target="_blank" rel="noopener">AReaL-DTE: Sparse Policy-Weight Transfer for Online Agentic Reinforcement Learning</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00106" target="_blank" rel="noopener">Learning Compositional Meta-Routing for Agentic Workflows</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00742" target="_blank" rel="noopener">Multi-tenant Kubernetes Use Cases for AI, Secure Computing and Data Services</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00454" target="_blank" rel="noopener">Cache-Consistent Dynamic Load Balancing for Kubernetes Controllers</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">hoplite.sh</span><a href="https://hoplite.sh" target="_blank" rel="noopener">Hoplite (YC S26) – Effortlessly deploy cloud coding agents</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/" target="_blank" rel="noopener">Apple says more ex-employees may have taken confidential data to OpenAI</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">africanews.com</span><a href="https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/" target="_blank" rel="noopener">AI fuels more than half of cybercrime in Africa as scams surge – Interpol</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00144" target="_blank" rel="noopener">Leak It: A Probabilistic Approach to Training-Data Extraction from Black-Box Language Models</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00315" target="_blank" rel="noopener">Towards General Language-Conditioned Latent Safety Filters</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00208" target="_blank" rel="noopener">Developing Combined Manipulation and Locomotion Skills with Interaction Representation and Skill Composition</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00113" target="_blank" rel="noopener">Track-Guided Hierarchical Reinforcement Learning for Autonomous Vehicle Drifting with Minimum-Lap-Time Planning</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00322" target="_blank" rel="noopener">Belief-Space Perception Routing under Coupled Sensor Faults and Compute Contention</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00206" target="_blank" rel="noopener">Motion Planning for Mobile Manipulators Navigating Doorways via Model Predictive Control</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00284" target="_blank" rel="noopener">Hybrid Attention Estimation Pipeline for Adaptive HRI Using an Expressive Robotic Head</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00894" target="_blank" rel="noopener">Rethinking Agentic Kernel Generation for Emerging Accelerators</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00029" target="_blank" rel="noopener">Nova: An End-to-End MLIR Compiler for Deep Learning</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/MakazhanAlpamys/Soup" target="_blank" rel="noopener">Show HN: Fine-tune an 8B model on a 4 GB laptop GPU</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00922" target="_blank" rel="noopener">From Cloud to Crowd: Democratizing LLM Service with Decentralized Edge Collaboration for RAG</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00720" target="_blank" rel="noopener">CascadeLUT: Information-Ordered Streaming Inference for Bandwidth-Constrained FPGAs</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-04.html">← 2026-08-04</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

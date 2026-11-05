@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-07-09</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-07-09</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-07-09 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-07 ~ 2026-07-09</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-07-09</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>超节点重构 MoE 推理</b>：UBEP 直面 NVL72/576 与 CloudMatrix384 上 MoE 通信瓶颈,给出重构版专家并行库,是&quot;下一代超节点 × MoE 推理&quot;必读工程论文。</li>
+      <li><b>Mistral 入局机器人基础模型</b>：Robostral Navigate 以 SOTA 导航模型形式亮相,欧洲玩家正式向 π0 / OpenVLA / RT-X 阵营发起挑战,VLA 竞争进入多极格局。</li>
+      <li><b>GPT-Live 上线</b>：OpenAI 把实时多模态感知/交互开出正式产品线,为遥操作、VLA 端侧感知与消费端 always-on Agent 提供底座。</li>
+      <li><b>移动端 LLM 系统级测量</b>：5 框架 × 3 后端的跨层实测第一次系统回答&quot;手机 NPU 是否 ready&quot;,给出 PowerBench 工具链,是端侧推理研究的新基准工作。</li>
+      <li><b>欧盟强制车内驾驶员摄像头 + PS 数字游戏删除条款</b>：双政策共振——前者做实边缘 VLM/NPU 需求,后者推动&quot;数字所有权&quot;合规倒逼云与端侧协同重设计。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05445" target="_blank" rel="noopener">BitFair:12nm Bit-Serial CNN 加速器,面向超低功耗 XR 视觉</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05453" target="_blank" rel="noopener">Neuromorphic Silicon Neuron 控制器:面向帕金森自适应 DBS 的模拟脑神经元电路</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05993" target="_blank" rel="noopener">Bit2Watt:GPU workload 攻击数据中心电网的新型 CPS 漏洞</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05756" target="_blank" rel="noopener">FPGA:BRAM→DSP 直连路径提升 DL 算力密度</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05818" target="_blank" rel="noopener">GPU 加速的 3D IC 电源分配网络 (PDN) 有效电阻分析</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05478" target="_blank" rel="noopener">InvWeaver:面向多循环交互程序的 LLM+演绎反馈循环不变量合成</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06225" target="_blank" rel="noopener">Compiling Bioinformatics Recurrences</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2508.01974" target="_blank" rel="noopener">Flow Sensitivity without CFG:高效 Andersen 风格流敏感指针分析</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05483" target="_blank" rel="noopener">PatchOptic:面向共享状态 LLM 工作流的投影视图与可验证结构化更新</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05410" target="_blank" rel="noopener">CANONIC:把&quot;治理&quot;变成&quot;编译&quot;</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06202" target="_blank" rel="noopener">UBEP:面向生产超节点重构专家并行通信库</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05895" target="_blank" rel="noopener">MatrixFSDP:ZeRO-3 分片下无通信矩阵优化器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05439" target="_blank" rel="noopener">Design-CP:面向蛋白质纳米颗粒设计的 Context Parallelism</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/" target="_blank" rel="noopener">HN 侧本轮无独立的 vLLM/TensorRT-LLM/SGLang 版本发布或 blog(注:</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05596" target="_blank" rel="noopener">Disk-Backed Parallel Image Pulling:GPU 集群冷启动的关键路径优化</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06107" target="_blank" rel="noopener">DDB:分布式应用的源码级交互式调试器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06144" target="_blank" rel="noopener">Ordering by Unanimity</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.ycombinator.com</span><a href="https://news.ycombinator.com/item?id=48834919" target="_blank" rel="noopener">HN</a> <span class="hot">🔥</span></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/" target="_blank" rel="noopener">HN</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.ycombinator.com</span><a href="https://news.ycombinator.com/item?id=48837162" target="_blank" rel="noopener">HN</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">allaboutcookies.org</span><a href="https://allaboutcookies.org/eu-mandatory-distracted-driver-system" target="_blank" rel="noopener">HN</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05410" target="_blank" rel="noopener">CANONIC:治理即编译</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05458" target="_blank" rel="noopener">Learning to Control LLM Agent Harnesses with Offline RL</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">mistral.ai</span><a href="https://mistral.ai/news/robostral-navigate/" target="_blank" rel="noopener">HN</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">HN</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05468" target="_blank" rel="noopener">MECo-WAM:学习 4D 几何先验的高推理效率世界-动作模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05543" target="_blank" rel="noopener">GEM-Occ:视觉几何证据到具身语义占据记忆</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05705" target="_blank" rel="noopener">IMR:多智能体轨迹预测的迭代模式-世界加权回归</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05439" target="_blank" rel="noopener">Design-CP for RFdiffusion 3</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05657" target="_blank" rel="noopener">NEMESIS:LLM 驱动的 OTA 电路方程自动合成,SPICE-anchored</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05985" target="_blank" rel="noopener">Auto-DSM Under the Lens:LLM 生成设计结构矩阵的黑盒评测框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05478" target="_blank" rel="noopener">InvWeaver:LLM+演绎反馈合成多循环不变量</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/dekart-xyz/geosql" target="_blank" rel="noopener">HN</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.ycombinator.com</span><a href="https://news.ycombinator.com/item?id=48827092" target="_blank" rel="noopener">HN</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05475" target="_blank" rel="noopener">Is Your NPU Ready for LLMs?移动端 LLM 推理的隐性效率瓶颈</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05445" target="_blank" rel="noopener">BitFair:12nm bit-serial 加速器面向 XR 视觉</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.05453" target="_blank" rel="noopener">Neuromorphic Silicon Neuron for Adaptive DBS</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">HN 侧本轮无独立的 llama.cpp / MLX / ExecuTorch / MLC-LLM 版本发布上榜。近两天欧盟车内摄像头强制令(见 5)会成为端侧 VLM/NPU 长期需求的政策级驱动。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-07-08.html">← 2026-07-08</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

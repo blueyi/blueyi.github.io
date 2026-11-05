@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-07</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-07</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-07 · 周五</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-06 ~ 2026-08-07</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-07</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>AMD 收购 Taalas（🔥311 分）——「模型蚀刻硅片」路线获巨头押注</b>：将预训练权重固化到芯片电路中，推理不再走指令流水线——这是对「GPU 万能论」的一次正面挑战，专用推理芯片赛道正在加速分化。</li>
+      <li><b>Google DeepMind 大地震（🔥🔥822 分）——Demis Hassabis 退居 Chair、Jeff Dean 彻底离开</b>：这不仅是人事新闻，更可能影响 Google 在 AI 基础设施、模型架构与芯片战略上的长期路线。</li>
+      <li><b>SparseDitto 用 LLM Agent 自动生成 GPU 稀疏 Kernel——cuSPARSE 同一矩阵不同格式差 350× 的痛点终于有自动化解法</b>：LLM 辅助 GPU 编程正从 paper 走向 compiler/toolchain 集成。</li>
+      <li><b>Chips and Cheese 公开质疑 Nvidia Vera 白皮书的一处关键疑点</b>：——硬件架构文档的透明性正成为社区与技术媒体共同关注的新战场。</li>
+      <li><b>具身智能方向今日 arXiv 丰产——Deltoris（边缘 VLA 实时推理）、SiMDex（跨具身数据挖掘）、SAFECAST（VLA 失败检测）三条主线分别从推理系统、数据工程、安全鲁棒性三个维度推进</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener">AMD 收购 Taalas，将模型「蚀刻」进硅片以提升推理性能</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread" target="_blank" rel="noopener">Nvidia Vera 白皮书被指存在一处关键疑点</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04169" target="_blank" rel="noopener">异构 DRAM-PIM-GPU 系统的高效设计原则</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04247" target="_blank" rel="noopener">面向异构多核 SoC 的集中式性能监控架构</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">近两天无重大独立动态（背景：编译器相关论文多集中在代码生成优化与 EDA 方向，已归入第 7 类；纯编译器框架/IR 层本周 arXiv cs.PL 缺乏 AI 编译器直接相关的显著工作）。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04502" target="_blank" rel="noopener">AFD-Ledger：Attention-FFN 分离架构的部署资源配置</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04991" target="_blank" rel="noopener">RAC：面向 Split LLM 推理的参考感知激活压缩</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04974" target="_blank" rel="noopener">AsymSpec：非对称网络下的云-边缘投机解码</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04413" target="_blank" rel="noopener">基于 eBPF 的零插桩微服务依赖发现</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">本周 HN 与 arXiv 在该方向无明显单条高热度内容，但 DeepMind 高层变动（见第 5 类）对 Google 内部 AI 基础设施路线的影响值得持续关注。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blog.google</span><a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank" rel="noopener">🔥</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" target="_blank" rel="noopener">OpenAI 改进 GPT-5.6 Sol 并扩大 GPT-5.6 Luna 免费用户访问</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04428" target="_blank" rel="noopener">Deltoris：面向具身 AI 的位级稀疏 + 投机推理实时 VLA 加速</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04196" target="_blank" rel="noopener">SiMDex：跨具身灵巧操作的相似自我中心视频挖掘</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04246" target="_blank" rel="noopener">SAFECAST：基于对比集训练与校准的 VLA 策略鲁棒失败检测</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04309" target="_blank" rel="noopener">结构化 LLM 推理实现零样本人-机器人协作（隐目标场景）</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04042" target="_blank" rel="noopener">厨房场景中基于基础模型的机器人操控</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05033" target="_blank" rel="noopener">SparseDitto：用 LLM Agent 为不同稀疏模式自动定制 GPU Kernel</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04450" target="_blank" rel="noopener">CommBench：LLM 能写出正确且高效的 GPU 通信代码吗？</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04032" target="_blank" rel="noopener">EDATracer：面向大规模 EDA 制品分析的 Agentic 框架</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04031" target="_blank" rel="noopener">硬件级模糊推理：架构、平台与新兴趋势综述</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04035" target="_blank" rel="noopener">CheckOne：面向 Vision Transformer 的轻量级故障检测与缓解</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04974" target="_blank" rel="noopener">另见第 3 类</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-06.html">← 2026-08-06</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-07-10</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-07-10</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-07-10 · 周五</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-08 ~ 2026-07-10</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-07-10</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>OpenAI 双箭齐发,GPT-5.6 与 ChatGPT Work 同天登场</b>：1004 分与 320 分双双高热,前者是模型能力的又一次跃迁,后者把 ChatGPT 推入企业深度工作场景。对 AI Infra 侧意味着企业级推理集群的容量、审计、权限设计需要重新盘算。</li>
+      <li><b>Meta 的 CXL 桥接 ASIC + 二手 DRAM 复用</b>：是 HBM/DRAM 涨价周期下最&quot;硬核&quot;的省钱手段,配合 arxiv 上</li>
+      <li><b>Mistral 首发 Robostral Navigate</b>：(HN 481 分),欧洲 LLM 一线厂商正式入局具身,标志着机器人基础模型的&quot;三极格局&quot;(美中欧)雏形显现。</li>
+      <li><b>TriRoute 把注意力、专家、KV-cache 位宽三条路由统一学习</b>：是 LLM 推理架构层继 MoE/MoD 之后又一次&quot;联合决策&quot;式的整合,值得数据中心推理系统架构师关注。</li>
+      <li><b>AI-for-EDA 三连发</b>：HiFuzz(RL CPU fuzz)、Miter-Aware LUT Mapping(SAT 友好映射)、ATLAS(DL FPGA 自动 HLS)集中出现,预示 AI 生成硬件与硬件验证的工具链正在快速成熟。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/06/29/zuck-saves-meta-bucks-by-reusing-memory-from-old-servers-with-a-custom-cxl-asic/5263483" target="_blank" rel="noopener">Meta reuses old RAM in new servers with custom bridge chip</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07207" target="_blank" rel="noopener">Memory Scarcity, Open Models, and the Restructuring of the AI Industry, 2026-2030</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06881" target="_blank" rel="noopener">Multiple Double Arithmetic on NVIDIA Tensor Cores</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07096" target="_blank" rel="noopener">ThermoDSE: Thermal-Aware DSE for Chiplet-Based DNN Accelerators</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07217" target="_blank" rel="noopener">Finding and Understanding Miscompilation Bugs in the Solidity Compiler</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2604.09558" target="_blank" rel="noopener">VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2605.12893" target="_blank" rel="noopener">LFPL: Revisited and Mechanized</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06601" target="_blank" rel="noopener">TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07046" target="_blank" rel="noopener">Voltron: Enabling Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/06/29/zuck-saves-meta-bucks-by-reusing-memory-from-old-servers-with-a-custom-cxl-asic/5263483" target="_blank" rel="noopener">Meta reuses old RAM in new servers with custom bridge chip</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06868" target="_blank" rel="noopener">Seekable OCI: Lazy-Loading Container Images via Range-Request Indexing</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07687" target="_blank" rel="noopener">Scaling WaterLily.jl with MPI and Improved Geometric Multigrid Solver</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07313" target="_blank" rel="noopener">POO-LPSP: Parallel Osprey Optimized Least Penalty-Squared Prioritization</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener">GPT-5.6</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/" target="_blank" rel="noopener">ChatGPT Work</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06700" target="_blank" rel="noopener">CILC: Cryptographically-secure Inter-agent Loop Closure Candidate Detection</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06804" target="_blank" rel="noopener">ECO/CPO-DAG: Contradiction-Based Accountability Layer for Adversarial Supply Chains</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">mistral.ai</span><a href="https://mistral.ai/news/robostral-navigate/" target="_blank" rel="noopener">Mistral&#x27;s Robostral Navigate: state of the art robotics navigation model</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">mira-wm.com</span><a href="https://mira-wm.com/" target="_blank" rel="noopener">MIRA: Multiplayer Interactive World Models Trained on Rocket League</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">bittlex-sim.petoi.com</span><a href="https://bittlex-sim.petoi.com/" target="_blank" rel="noopener">In-browser programmable robot simulator</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06655" target="_blank" rel="noopener">Pelican-VLA 0.5: Attending Before Acting Benefits Generalization</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06678" target="_blank" rel="noopener">NativeMEM: Native Memory Compression for Long-Horizon Robotic Manipulation</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06699" target="_blank" rel="noopener">RoboSnap: One-Shot Real-to-Sim Scene Generation</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06706" target="_blank" rel="noopener">Vision Language Action Models for UAV &amp; Bimanual Manipulation: A Review</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06724" target="_blank" rel="noopener">EvoPlan: Evolutionary Neuro-Symbolic Robot Planning with Spatio-Temporal Guarantees</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06740" target="_blank" rel="noopener">Continual Learning Framework for Modular Soft Robots</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06782" target="_blank" rel="noopener">G-PROBE: Cross-FOV Place Recognition for 3D Point Clouds</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06619" target="_blank" rel="noopener">HiFuzz: Hierarchical Reinforcement Learning for Semantic-Aware and Adaptive CPU Fuzzing</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07164" target="_blank" rel="noopener">Miter-Aware LUT Mapping: Aligning Structure and Solvability for Logic Equivalence Checking</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07643" target="_blank" rel="noopener">ATLAS: Automated HLS for DL-Optimized FPGAs</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07052" target="_blank" rel="noopener">Progressive Crystallization: Turning Agent Exploration into Deterministic, Lower-Cost Workflows</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07372" target="_blank" rel="noopener">Vectorizing Quantum Control: RISC-V Vector Extension for Scalable Qubit Systems</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07046" target="_blank" rel="noopener">Voltron: Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06915" target="_blank" rel="noopener">Smart Scissor: Coupling Spatial Redundancy Reduction and CNN Compression for Embedded Hardware</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06982" target="_blank" rel="noopener">EdgeCompress: Multidimensional Model Compression + Dynamic Inference for EdgeAI</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06617" target="_blank" rel="noopener">Inertia-1: An Open Exploration of Wearable Motion Foundation Models</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">bittlex-sim.petoi.com</span><a href="https://bittlex-sim.petoi.com/" target="_blank" rel="noopener">In-browser programmable robot simulator</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-07-09.html">← 2026-07-09</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

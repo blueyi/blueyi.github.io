@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-06-30</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-06-30</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-06-30 · 周二</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-06-28 ~ 2026-06-30</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-06-30</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>存储芯片产业进入&quot;反垄断 + 国家级扩产&quot;双向拉扯</b>：Samsung / SK Hynix / Micron 在美遭集体诉讼(HN 354),同日传出南韩 1 万亿美元押注存储 + 人形机器人,HBM 长协定价与产能扩张博弈将直接影响 AI 训练整机 BOM。</li>
+      <li><b>底层教程级文章上 HN 197 分</b>：&quot;What happens when you run a CUDA kernel?&quot; 把用户态到 SM 调度的完整路径讲透,反映社区对编译器/运行时栈的关注度正在从&quot;会用 PyTorch&quot;升级到&quot;读 PTX/SASS&quot;。</li>
+      <li><b>机械可解释性方法学被打补丁</b>：Activation Patching 的 NIE 估计被指存在隐藏交互项——过去一年大量&quot;电路归因&quot;结论需要重审,这对监管侧采纳&quot;可解释性作为对齐证据&quot;提出了更高要求。</li>
+      <li><b>VLA 通用化只用&quot;一个 3D 点&quot;就显著缓解</b>：Direct Action-Head Injection 工作显示空间/任务泛化的瓶颈未必需要更大模型,极简的 grounded 3D point 注入即可见效,对 OpenVLA/π0 路线是实在的小改动机会。</li>
+      <li><b>Agentic 硬件设计进入&quot;仓库级演化&quot;阶段</b>：HORIZON + MultModLM + PDAGENT-BENCH 同期发布,意味着&quot;LLM 写 RTL/PD&quot;从模型秀正式进入框架 + 评测 + 仓库 git 工作流期,与 AlphaEvolve / FunSearch 路线开始正面交汇。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">en.sedaily.com</span><a href="https://en.sedaily.com/international/2026/06/29/samsung-sk-hynix-micron-sued-in-us-over-memory-price-fixing" target="_blank" rel="noopener">Samsung、SK Hynix、Micron 在美国遭存储芯片价格操纵集体诉讼</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arstechnica.com</span><a href="https://arstechnica.com/ai/2026/06/south-korea-to-spend-1t-on-more-memory-chip-production-and-humanoid-robots/" target="_blank" rel="noopener">南韩拟投入 1 万亿美元扩张存储芯片与人形机器人产能</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.22283" target="_blank" rel="noopener">Apple Neural Engine:架构、编程与性能(arXiv 论文)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27884" target="_blank" rel="noopener">SEADA:面向多精度空间架构的混合精度 DNN 优化方法</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27906" target="_blank" rel="noopener">Phase Matters:在 Snapdragon 8 Elite (SM8750) 上的异构 VLM 推理特征化</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">fergusfinn.com</span><a href="https://fergusfinn.com/blog/what-happens-when-you-run-a-gpu-kernel/" target="_blank" rel="noopener">What happens when you run a CUDA kernel?</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28042" target="_blank" rel="noopener">Same Coeffect, Different Base:连接 Graded Types 的两大主流方法</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28066" target="_blank" rel="noopener">Prophecy-Based Automated Verification of Message-Passing Programs</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27805" target="_blank" rel="noopener">量子仪器单子(Quantum Instrument Monad)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.22908" target="_blank" rel="noopener">纯 λ 演算中的循环图与记忆化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景:今天 HN 上没有 tinygrad/MLIR/Triton 的独立大新闻,本节以底层 GPU 执行原理 + 类型系统/形式化语义论文为主。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27979" target="_blank" rel="noopener">DiStash:分布式多 stash 事务性 KV 存储</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27797" target="_blank" rel="noopener">优化教师-学生切分以实现 HPC 上可扩展的知识蒸馏</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27449" target="_blank" rel="noopener">Prism Transformer:层级注意力的渐进式 Head 调度</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27510" target="_blank" rel="noopener">Mediators 的诅咒:Activation Patching 中的隐藏交互效应</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景:本期 vLLM/SGLang/TensorRT-LLM 无独立大新闻,DiStash + 蒸馏切分代表了数据中心推理优化向&quot;KV 存储分层 + 训练蒸馏一体化&quot;的方向。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27695" target="_blank" rel="noopener">从 54 次 LAMMPS+SPICA 基准看随机森林的泛化能力</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27919" target="_blank" rel="noopener">RAMSES:面向敏感数据的安全 HPC</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27622" target="_blank" rel="noopener">FoggyTrust:基于层级信任网络的鲁棒联邦学习</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27934" target="_blank" rel="noopener">自验证度量记录:用哈希链证据图做硬件基准</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27819" target="_blank" rel="noopener">探索与利用时间触发网络无关守卫的同步极限</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景:HN 今天无独立的液冷/网络/电力大新闻,本节以 HPC + 可信基础设施论文为主。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">tidal.com</span><a href="https://tidal.com/ai-policy" target="_blank" rel="noopener">Tidal AI 政策</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27510" target="_blank" rel="noopener">Mediators 的诅咒:Activation Patching 中的隐藏交互效应</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27440" target="_blank" rel="noopener">PairSAE:基于 Pair 表征的蛋白质共折叠机械可解释性</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2510.06420" target="_blank" rel="noopener">自动化可重复对手威胁仿真与效应语言 EL</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27934" target="_blank" rel="noopener">自验证度量记录(再次相关)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景:今天无 EU AI Act / 美国出口管制 / 各国法案级别的独立新闻,本节以可解释性方法学修正 + 内容平台政策为主。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arstechnica.com</span><a href="https://arstechnica.com/ai/2026/06/south-korea-to-spend-1t-on-more-memory-chip-production-and-humanoid-robots/" target="_blank" rel="noopener">南韩 1 万亿美元同时押注存储与人形机器人</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27475" target="_blank" rel="noopener">Support-Constrained RL:无需真机经验即可在真机改进策略</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27581" target="_blank" rel="noopener">SceneBot:接触提示的通用人形全身追踪</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27663" target="_blank" rel="noopener">直接将 grounded 3D point 注入 VLA 动作头解锁空间与任务泛化</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27625" target="_blank" rel="noopener">P-ARC 与 AO-ARC:并行 + 渐近最优多机器人运动规划</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27603" target="_blank" rel="noopener">学会投掷:四旋翼悬挂载荷的敏捷精准投放</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27750" target="_blank" rel="noopener">SceneBot/Quadrotor 投放/物理引导辐射源定位/航天器对接基准/Lightweight MvCP 协同感知</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28279" target="_blank" rel="noopener">HORIZON:把硬件设计视为仓库级代码演化的自演化 Agent 框架</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27666" target="_blank" rel="noopener">MultModLM:面向 RTL 的多模态 LLM 硬件原理图生成基准</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.17253" target="_blank" rel="noopener">PDAGENT-BENCH:面向 VLSI 物理设计的 LLM/VLM Agent 基准</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.28126" target="_blank" rel="noopener">AI 驱动的高科技系统设计综合(AiD / CDS)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27934" target="_blank" rel="noopener">可解释 + 可验证测量记录(再次相关)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景:本期没有 AlphaEvolve / Triton kernel agent 类独立大新闻,HORIZON + 两个基准的组合,代表&quot;LLM 写硬件&quot;正从模型秀进入工程框架与评测期。</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.22283" target="_blank" rel="noopener">Apple Neural Engine:架构、编程与性能(论文)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27906" target="_blank" rel="noopener">Phase Matters:Snapdragon 8 Elite 上的异构 VLM 推理</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27892" target="_blank" rel="noopener">面向柔性电子的模拟 KAN 协同优化(低功耗函数近似)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">weblog.rogueamoeba.com</span><a href="https://weblog.rogueamoeba.com/2026/06/26/free-the-icons/" target="_blank" rel="noopener">自由的图标(Free the Icons)</a></div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">背景:HN 上没有 llama.cpp/MLC-LLM/ExecuTorch 的独立大版本新闻,但 ANE 论文 + 8 Elite 实测论文两篇组合,基本就是本期端侧推理的&quot;双主线&quot;,分别对应 Apple 与 Qualcomm 阵营。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-06-27.html">← 2026-06-27</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

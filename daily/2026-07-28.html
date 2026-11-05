@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-07-28</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-07-28</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-07-28 · 周二</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-27 ~ 2026-07-28</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-07-28</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>开放权重治理成为今日最清晰的行业议题：Anthropic 的公开立场获得 HN 356 分，模型分发、安全评估与部署责任正在加速绑定。</b></li>
+      <li><b>数据中心推理优化集中在“少搬、少算、按需算”：静态—动态剪枝、分层 KV Cache、CPU-GPU 异构调度分别从权重、上下文和设备选择切入。</b></li>
+      <li><b>TileSight 把 GPU 性能分析推进到 tile 一级并覆盖集群，有望成为 Triton/TileLang 自动调优和 kernel 搜索的重要模型底座。</b></li>
+      <li><b>具身智能继续从单体策略转向系统编排：机场机器人泊车展示真实运营，Physical Agency、GRACE 与进度奖励则分别补足编排、不可微约束和长时程反馈。</b></li>
+      <li><b>Android ADB 潜在收紧以 997 分成为 HN 热点，提醒端侧 AI 不仅受 NPU 和量化制约，也受操作系统权限与开发工具政策影响。</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22022" target="_blank" rel="noopener">HEMERA：面向边缘受限 SSD/状态空间模型的异构内存中心加速器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21731" target="_blank" rel="noopener">RED-PIM：用存内计算降低 Transformer 数据搬运</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22038" target="_blank" rel="noopener">Sparse by Command：按任务指令跳过无关计算</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2512.22131" target="_blank" rel="noopener">面向神经网络加速器的 RFET 随机计算方案</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10392" target="_blank" rel="noopener">温度感知的动态 Rowhammer 阈值管理</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22432" target="_blank" rel="noopener">TileSight：从单核到集群的 tile-centric GPU 性能分析模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2511.19711" target="_blank" rel="noopener">CrypTorch：面向多方安全计算机器学习的 PyTorch 自动调优编译器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21797" target="_blank" rel="noopener">用于机器学习与实时调度的数据流网络时钟演算</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2509.06752" target="_blank" rel="noopener">线性约束程序的终止性分析综述</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21985" target="_blank" rel="noopener">统一静态—动态剪枝提升 LLM 推理效率</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22389" target="_blank" rel="noopener">HiKV：分层重要性感知 KV Cache 与硬件加速</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.13062" target="_blank" rel="noopener">投机窗口解码的验证器侧设计</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22242" target="_blank" rel="noopener">Agentic CPU-GPU Scheduling：代理式 AI 工具的异构调度</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21746" target="_blank" rel="noopener">PRISM：以 AI 研究工作流评估 POSIX 存储系统</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22275" target="_blank" rel="noopener">NUMA 自动平衡可能拖慢脉冲神经网络仿真</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22432" target="_blank" rel="noopener">TileSight 的集群级 GPU 性能建模</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22209" target="_blank" rel="noopener">Duet：协同优化 P2P 消息传播与轮换领导者共识</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">anthropic.com</span><a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener">Anthropic 公布其对开放权重模型的立场</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">lesswrong.com</span><a href="https://www.lesswrong.com/posts/iKm2FhpWkuuBojm82/why-i-left-google-deepmind" target="_blank" rel="noopener">为什么我离开 Google DeepMind</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21635" target="_blank" rel="noopener">面向个人 LLM Agent 的用户条件化、时间干预评测</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21623" target="_blank" rel="noopener">云原生 Evaluation-as-a-Service</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07738" target="_blank" rel="noopener">REFORGE：评测 LLM 对反编译函数命名的逆向工程能力</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">aerospaceglobalnews.com</span><a href="https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics/" target="_blank" rel="noopener">伦敦盖特威克机场上线机器人代客泊车服务</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21725" target="_blank" rel="noopener">Physical Agency：弥合通用机器人的编排鸿沟</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21648" target="_blank" rel="noopener">仅用合成视频场景学习多样化人形机器人任务</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21661" target="_blank" rel="noopener">GRACE：扩散策略与 MPPI 结合的无梯度动作生成</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21670" target="_blank" rel="noopener">有序动作 Token 用于视觉运动策略学习</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21918" target="_blank" rel="noopener">机器人超声的动作条件世界模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21655" target="_blank" rel="noopener">机器人学习中的进度奖励建模综述</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22432" target="_blank" rel="noopener">TileSight：为自动 tile 搜索提供可解释性能先验</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2511.05987" target="_blank" rel="noopener">高性能约束输入生成</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2512.02918" target="_blank" rel="noopener">Belobog：面向真实 Move 智能合约的语言模糊测试框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2511.19711" target="_blank" rel="noopener">CrypTorch 自动调优 MPC 编译</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">kitsumed.github.io</span><a href="https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb/" target="_blank" rel="noopener">Android 可能限制设备端 ADB</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22022" target="_blank" rel="noopener">HEMERA 边缘 SSD 模型加速器</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22038" target="_blank" rel="noopener">Sparse by Command 的任务条件计算跳过</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2512.22131" target="_blank" rel="noopener">RFET 随机计算神经网络加速</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-07-25.html">← 2026-07-25</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

@@ -6,6 +6,20 @@
   "schedule": "Updated every day 08:30 HKT",
   "days": [
     {
+      "date": "2026-11-05",
+      "html": "2026-11-05.html",
+      "title_date": "2026-11-05 · 周四",
+      "highlight": "基建的政治约束第一次硬着陆：美国中期选举中 45 项数据中心相关议案被多数否决,叠加 RTX Spark 固件把本地推理锁到 35%,今天两条最热新闻指向同一个主题——算力不只看能不能造出来,还看能不能建、能不能用。",
+      "published": true
+    },
+    {
+      "date": "2026-11-03",
+      "html": "2026-11-03.html",
+      "title_date": "2026-11-03 · 周二",
+      "highlight": "资本与算力承诺彻底脱钩：Anthropic 一边 Q3 收入 $17B、亏损扩大,一边披露 $900B 采购承诺;Oracle 一周花光 $200 亿借贷额度。上游供应链被长期锁定,而下游盈利模型仍待验证——这是今天所有基础设施新闻的共同底色。",
+      "published": true
+    },
+    {
       "date": "2026-11-01",
       "html": "2026-11-01.html",
       "title_date": "2026-11-01 · 周日",
@@ -262,6 +276,314 @@
       "html": "2026-08-28.html",
       "title_date": "2026-08-28 · 周五",
       "highlight": "英伟达「软硬一体」版图加速成型：129 亿美元吃下 Hugging Face 开源生态，叠加 $673B 年度销售预测与 Vera Rubin / Vera CPU 极速出货，从芯片到模型社区全链条收口。",
+      "published": true
+    },
+    {
+      "date": "2026-08-27",
+      "html": "2026-08-27.html",
+      "title_date": "2026-08-27 · 周四",
+      "highlight": "Jalapeño：被 SemiAnalysis 评价为\"超越 Blackwell\"，自研 AI 芯片竞争进入新阶段。",
+      "published": true
+    },
+    {
+      "date": "2026-08-26",
+      "html": "2026-08-26.html",
+      "title_date": "2026-08-26 · 周三",
+      "highlight": "OpenAI 双线并进:自研推理芯片 Jalapeño 性能据报优于 Blackwell,同时下调 GPT-5.6 Sol 定价,直指推理侧\"成本 + 供给\"双垄断格局。",
+      "published": true
+    },
+    {
+      "date": "2026-08-25",
+      "html": "2026-08-25.html",
+      "title_date": "2026-08-25 · 周二",
+      "highlight": "前沿模型\"叫好不叫座\":FT 报道 Anthropic 最强模型遇冷、廉价工具崛起(HN 762),叠加 OpenAI GPT 5.6 Sol 降价(HN 285),高价旗舰与低成本推理的博弈进入白热化。",
+      "published": true
+    },
+    {
+      "date": "2026-08-22",
+      "html": "2026-08-22.html",
+      "title_date": "2026-08-22 · 周六",
+      "highlight": "扩散语言模型再进一步:DiffusionGemma 技术报告登上 HN(158 分),为 LLM 并行解码与推理吞吐路线提供新选项。",
+      "published": true
+    },
+    {
+      "date": "2026-08-21",
+      "html": "2026-08-21.html",
+      "title_date": "2026-08-21 · 周五",
+      "highlight": "Mojo 正式开源、且 Modular 已被 Qualcomm 收购——AI 编译器/系统语言赛道迎来确定性拐点,高通借此补强端侧软件栈。",
+      "published": true
+    },
+    {
+      "date": "2026-08-20",
+      "html": "2026-08-20.html",
+      "title_date": "2026-08-20 · 周四",
+      "highlight": "Mojo 正式开源是当日编译器生态最大事件,叠加 Qualcomm 收购背景,值得持续跟踪其对 MLIR/AI 编译器栈的影响。",
+      "published": true
+    },
+    {
+      "date": "2026-08-19",
+      "html": "2026-08-19.html",
+      "title_date": "2026-08-19 · 周三",
+      "highlight": "硬件成本与软件栈同日释放强信号:内存 12 个月涨 500%(HN 450)🔥 + Mojo 正式开源,「算力更贵、编程栈更开放」两条线值得同步关注。",
+      "published": true
+    },
+    {
+      "date": "2026-08-18",
+      "html": "2026-08-18.html",
+      "title_date": "2026-08-18 · 周二",
+      "highlight": "Qwen 3.8 27B 以 1423 分霸榜 HN,直接发布 FP8 权重,标志阿里在高效推理落地上的持续发力。",
+      "published": true
+    },
+    {
+      "date": "2026-08-15",
+      "html": "2026-08-15.html",
+      "title_date": "2026-08-15 · 周六",
+      "highlight": "推理芯片与推理模型同台竞技：Cerebras 与 OpenAI 合作加速 GPT-5.6(HN 696)与 Qwen3.8-27B FP8 发布(HN 856)同日霸榜,「更小 + 更快」正成为云端与端侧的共同主线。",
+      "published": true
+    },
+    {
+      "date": "2026-08-14",
+      "html": "2026-08-14.html",
+      "title_date": "2026-08-14 · 周五",
+      "highlight": "Cerebras × OpenAI 加速 GPT-5.6 Sol：(396 分)把\"推理时延\"推到前台,晶圆级引擎与专用推理硅的路线之争继续升温。",
+      "published": true
+    },
+    {
+      "date": "2026-08-13",
+      "html": "2026-08-13.html",
+      "title_date": "2026-08-13 · 周四",
+      "highlight": "Mojo 1.0 正式发布：(HN 424 分):面向 AI 的系统级语言进入稳定期,\"Python 易用 + C 级性能\"路线为自研编译器栈再添重要参照。",
+      "published": true
+    },
+    {
+      "date": "2026-08-12",
+      "html": "2026-08-12.html",
+      "title_date": "2026-08-12 · 周三",
+      "highlight": "Needle2 (HN 506)：将 Agentic LLM 压缩到 14MB,标志着端侧自主 Agent 从实验室走向可部署——14MB 足以塞进任何 IoT 设备,RAM 需求断崖下降。",
+      "published": true
+    },
+    {
+      "date": "2026-08-11",
+      "html": "2026-08-11.html",
+      "title_date": "2026-08-11 · 周二",
+      "highlight": "小模型 + 端侧 Agent 升温：Needle2（14MB）以 130 分登上 HN 热榜，验证了\"能在手机上跑的 agentic LLM\"正从实验走向产品化，与端侧推理赛道持续火热的趋势共振。",
+      "published": true
+    },
+    {
+      "date": "2026-08-09",
+      "html": "2026-08-09.html",
+      "title_date": "2026-08-09 · 周日",
+      "highlight": "AMD 收购 Taalas(921 分)：是本周 AI 芯片领域最重磅事件——将模型权重直接蚀刻到硅片中，标志着推理芯片从「通用架构+编译器优化」向「模型-硅片一体化」迈出实质性一步，可能重塑从数据中心到边缘的推理硬件格局。",
+      "published": true
+    },
+    {
+      "date": "2026-08-08",
+      "html": "2026-08-08.html",
+      "title_date": "2026-08-08 · 周六",
+      "highlight": "AMD 收购 Taalas（HN 880 分）：— \"模型蚀刻进硅片\"若成功量产，将重新定义 AI 推理芯片架构范式，直击 NVIDIA GPU 在推理市场的统治地位。",
+      "published": true
+    },
+    {
+      "date": "2026-08-07",
+      "html": "2026-08-07.html",
+      "title_date": "2026-08-07 · 周五",
+      "highlight": "AMD 收购 Taalas（🔥311 分）——「模型蚀刻硅片」路线获巨头押注：将预训练权重固化到芯片电路中，推理不再走指令流水线——这是对「GPU 万能论」的一次正面挑战，专用推理芯片赛道正在加速分化。",
+      "published": true
+    },
+    {
+      "date": "2026-08-06",
+      "html": "2026-08-06.html",
+      "title_date": "2026-08-06 · 周四",
+      "highlight": "Google DeepMind 顶层换血：Demis Hassabis 从 CEO 转为 Chair，Jeff Dean 离开 Google——这是 Google AI 史上最大规模高管变动，可能重塑整个 AI 研究版图。",
+      "published": true
+    },
+    {
+      "date": "2026-08-05",
+      "html": "2026-08-05.html",
+      "title_date": "2026-08-05 · 周三",
+      "highlight": "DeepSeek V4 Flash 单卡 AMD MI300X 跑通：（HN 363）：社区验证了 AMD Instinct 对国产开源大模型的生产级推理能力，对 NVIDIA 垄断格局构成实质挑战，值得持续关注 MI300X 软件生态成熟度。",
+      "published": true
+    },
+    {
+      "date": "2026-08-04",
+      "html": "2026-08-04.html",
+      "title_date": "2026-08-04 · 周二",
+      "highlight": "OpenAI数学十大进展引爆讨论：(HN 396分)：AI在定理证明与理论CS中的突破引发\"AI能否独立做科研\"的治理热议。",
+      "published": true
+    },
+    {
+      "date": "2026-08-02",
+      "html": "2026-08-02.html",
+      "title_date": "2026-08-02 · 周日",
+      "highlight": "OpenAI 数学突破霸榜 HN（407 分 🔥）：OpenAI 发布的十项数学与理论计算机科学进展成为当日 HN 最高分帖子，标志着 AI 在形式化推理领域从\"辅助工具\"向\"独立贡献者\"的转变正在加速，也意味着 AI for Science 对算力基础设施的需求将进一步攀升。",
+      "published": true
+    },
+    {
+      "date": "2026-08-01",
+      "html": "2026-08-01.html",
+      "title_date": "2026-08-01 · 周六",
+      "highlight": "具身智能拿下今日最高热度：DeepMind",
+      "published": true
+    },
+    {
+      "date": "2026-07-31",
+      "html": "2026-07-31.html",
+      "title_date": "2026-07-31 · 周五",
+      "highlight": "Gemini Robotics 2 的高热度发布与多篇全身控制、移动操作论文共同表明，具身智能竞争正在从单技能演示转向长期闭环、全身协调和真机可靠性。",
+      "published": true
+    },
+    {
+      "date": "2026-07-30",
+      "html": "2026-07-30.html",
+      "title_date": "2026-07-30 · 周四",
+      "highlight": "端侧推理成为今日最强热点：Turbo Fieldfare 以“26B 模型、2GB RAM、M 系列 Mac”的组合获得 HN 626 分，模型容量优化正快速逼近新的工程边界。",
+      "published": true
+    },
+    {
+      "date": "2026-07-28",
+      "html": "2026-07-28.html",
+      "title_date": "2026-07-28 · 周二",
+      "highlight": "开放权重治理成为今日最清晰的行业议题：Anthropic 的公开立场获得 HN 356 分，模型分发、安全评估与部署责任正在加速绑定。",
+      "published": true
+    },
+    {
+      "date": "2026-07-25",
+      "html": "2026-07-25.html",
+      "title_date": "2026-07-25 · 周六",
+      "highlight": "Claude Opus 5 发布：以 1240 分刷屏 HN,前沿模型竞赛再提速;同日 Guardian 对 OpenAI\"失控黑客智能体\"叙事的质疑,构成前沿能力与叙事真实性的双面镜像。",
+      "published": true
+    },
+    {
+      "date": "2026-07-23",
+      "html": "2026-07-23.html",
+      "title_date": "2026-07-23 · 周四",
+      "highlight": "治理三连爆：OpenAI × Hugging Face 评测安全事件(HN 1542 分)、ChatGPT 广告平台上线(1053 分)、Anthropic 15 亿美元盗版书和解获批(545 分)同日刷屏——评测供应链安全、对话广告伦理与训练数据定价三条治理线同时收紧。",
+      "published": true
+    },
+    {
+      "date": "2026-07-21",
+      "html": "2026-07-21.html",
+      "title_date": "2026-07-21 · 周二",
+      "highlight": "小米重磅入局 VLA 基础模型竞赛",
+      "published": true
+    },
+    {
+      "date": "2026-07-18",
+      "html": "2026-07-18.html",
+      "title_date": "2026-07-18 · 周六",
+      "highlight": "太空数据中心从\"营销词\"迈向\"工程账\"：arXiv 一次性放出",
+      "published": true
+    },
+    {
+      "date": "2026-07-17",
+      "html": "2026-07-17.html",
+      "title_date": "2026-07-17 · 周五",
+      "highlight": "Decoding 芯片经济学：—",
+      "published": true
+    },
+    {
+      "date": "2026-07-16",
+      "html": "2026-07-16.html",
+      "title_date": "2026-07-16 · 周四",
+      "highlight": "端侧最抢眼:无 GPU 的 13 年老 Xeon 跑 Gemma 4 26B 到 5 tok/s(HN 221),再叠加 HeteroMosaic 的异构 SoC 调度,\"消费级/老旧硬件本地大模型\"正从玩具走向可用。",
+      "published": true
+    },
+    {
+      "date": "2026-07-15",
+      "html": "2026-07-15.html",
+      "title_date": "2026-07-15 · 周三",
+      "highlight": "HN 最高热度落在治理侧:",
+      "published": true
+    },
+    {
+      "date": "2026-07-14",
+      "html": "2026-07-14.html",
+      "title_date": "2026-07-14 · 周二",
+      "highlight": "端侧 agent 推理成为独立主线：STEEL(AMD XDNA NPU)与 Sticky Routing(MoE 权重换入换出)同日出现,共同指向\"把 agentic 负载从云拉回笔记本/NPU\"以规避隐私与可靠性风险,少比特量化(Signed Symmetric)则是配套弹药。",
+      "published": true
+    },
+    {
+      "date": "2026-07-11",
+      "html": "2026-07-11.html",
+      "title_date": "2026-07-11 · 周六",
+      "highlight": "Apple 起诉 OpenAI：年度 AI 行业司法事件,涉及商业机密、员工流动、端 vs 云路线定义,对 AI 治理与端侧战略双重发酵。",
+      "published": true
+    },
+    {
+      "date": "2026-07-10",
+      "html": "2026-07-10.html",
+      "title_date": "2026-07-10 · 周五",
+      "highlight": "OpenAI 双箭齐发,GPT-5.6 与 ChatGPT Work 同天登场：1004 分与 320 分双双高热,前者是模型能力的又一次跃迁,后者把 ChatGPT 推入企业深度工作场景。对 AI Infra 侧意味着企业级推理集群的容量、审计、权限设计需要重新盘算。",
+      "published": true
+    },
+    {
+      "date": "2026-07-09",
+      "html": "2026-07-09.html",
+      "title_date": "2026-07-09 · 周四",
+      "highlight": "超节点重构 MoE 推理：UBEP 直面 NVL72/576 与 CloudMatrix384 上 MoE 通信瓶颈,给出重构版专家并行库,是\"下一代超节点 × MoE 推理\"必读工程论文。",
+      "published": true
+    },
+    {
+      "date": "2026-07-08",
+      "html": "2026-07-08.html",
+      "title_date": "2026-07-08 · 周三",
+      "highlight": "隐私与监控成今日主线:欧盟强制车内驾驶员监控摄像头(383 分)与微软借 Windows 设备 ID 追踪用户(325 分)双双引爆 HN,平台/政策级数据治理进入落地与争议并行阶段。",
+      "published": true
+    },
+    {
+      "date": "2026-07-06",
+      "html": "2026-07-06.html",
+      "title_date": "2026-07-06 · 周一",
+      "highlight": "EU Chat Control 1.0 快速通道强推(HN 384)：是本期最重量级事件——首次以立法形式将 **客户端扫描** 强加于加密通讯之上,同时把端侧 NPU 变成\"政府征用的推理硬件\",对端到端加密、端侧 AI、跨国 AI 产品合规三条战线同时开火,Signal 已放话可能退出欧盟,产业震动才刚开始。",
+      "published": true
+    },
+    {
+      "date": "2026-07-03",
+      "html": "2026-07-03.html",
+      "title_date": "2026-07-03 · 周五",
+      "highlight": "政策地震：美商务部解除 Claude Fable 5 / Mythos 5 出口管制(HN 963 分),叠加 OpenAI 或向美政府让渡 5% 股权的传闻,前沿模型的全球分发与资本治理格局正被同时改写。",
+      "published": true
+    },
+    {
+      "date": "2026-07-02",
+      "html": "2026-07-02.html",
+      "title_date": "2026-07-02 · 周四",
+      "highlight": "模型侧双响炮",
+      "published": true
+    },
+    {
+      "date": "2026-07-01",
+      "html": "2026-07-01.html",
+      "title_date": "2026-07-01 · 周三",
+      "highlight": "内存反垄断诉讼落地：三星/SK 海力士/美光在美因价格操纵被诉(HN 419),叠加数据中心抢购 HBM,AI 硬件成本的定价逻辑正被推上法庭。",
+      "published": true
+    },
+    {
+      "date": "2026-06-30",
+      "html": "2026-06-30.html",
+      "title_date": "2026-06-30 · 周二",
+      "highlight": "存储芯片产业进入\"反垄断 + 国家级扩产\"双向拉扯：Samsung / SK Hynix / Micron 在美遭集体诉讼(HN 354),同日传出南韩 1 万亿美元押注存储 + 人形机器人,HBM 长协定价与产能扩张博弈将直接影响 AI 训练整机 BOM。",
+      "published": true
+    },
+    {
+      "date": "2026-06-27",
+      "html": "2026-06-27.html",
+      "title_date": "2026-06-27 · 周六",
+      "highlight": "政策成为前沿模型分发的硬约束：OpenAI GPT-5.6 Sol 由美国政府审查准入(HN 762/783),Anthropic Mythos 走\"受信任伙伴\"受控释放(HN 146),前沿模型正式进入国家安全监管框架——这是本周最大的治理拐点。",
+      "published": true
+    },
+    {
+      "date": "2026-06-26",
+      "html": "2026-06-26.html",
+      "title_date": "2026-06-26 · 周五",
+      "highlight": "大模型厂商\"硬件自研\"提速：OpenAI 携博通推出首颗定制芯片(804 分),叠加 Nvidia 45°C 近零耗水液冷(462 分)与 Oxide 3D 机架(278 分),AI 基础设施正从\"堆 GPU\"转向\"软硬一体 + 能耗/用水可持续\"。",
+      "published": true
+    },
+    {
+      "date": "2026-06-25",
+      "html": "2026-06-25.html",
+      "title_date": "2026-06-25 · 周四",
+      "highlight": "OpenAI 自研芯片落地(479 分)：模型公司\"算力垂直整合\"成主旋律,Nvidia 之外的自研硅版图再扩,长期改写 AI 算力供给格局。",
       "published": true
     }
   ]

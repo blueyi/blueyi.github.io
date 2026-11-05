@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-07-25</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-07-25</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-07-25 · 周六</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-07-24 ~ 2026-07-25</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-07-25</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>Claude Opus 5 发布</b>：以 1240 分刷屏 HN,前沿模型竞赛再提速;同日 Guardian 对 OpenAI&quot;失控黑客智能体&quot;叙事的质疑,构成前沿能力与叙事真实性的双面镜像。</li>
+      <li><b>Nvidia、微软、Meta 联合反对过度监管开放权重模型</b>：开源 AI 的政策攻防从社区呼吁升级为巨头游说,下半年立法走向值得紧盯。</li>
+      <li><b>IRGC 宣称打击亚马逊巴林数据中心</b>：——无论细节真伪,超大规模云设施已被明确纳入军事目标清单,基础设施韧性设计的假设需要重写。</li>
+      <li><b>学术侧两大冷水值得收藏:RTL-to-GDS Agent 基准揭示 LLM 全流程芯片设计仍不可靠;PhantomFill 证明结构化输出格式本身就会制造幻觉,Agent 工具链设计者应引以为戒。</b></li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/amds-instinct-mi455x-aiming-for-the" target="_blank" rel="noopener">AMD Instinct MI455X:剑指太阳</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">pme.uchicago.edu</span><a href="https://pme.uchicago.edu/news-events/news/cleaner-route-purifying-rare-earth-elements" target="_blank" rel="noopener">固态&quot;原子通道&quot;分离稀土元素</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21408" target="_blank" rel="noopener">Chip Floorplanning:凸与非凸优化结合</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.17028" target="_blank" rel="noopener">HAMON:无源光学序列混合器</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20650" target="_blank" rel="noopener">PortLBM:基于 SYCL 的可移植 Lattice Boltzmann 框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2505.20314" target="_blank" rel="noopener">Δ-Nets:基于交互网的最优并行 λ-规约</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21204" target="_blank" rel="noopener">chrKanren:关系式语言中的 Constraint Handling Rules</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">sliplane.io</span><a href="https://sliplane.io/blog/hetzner-inference" target="_blank" rel="noopener">Hetzner 正在做 LLM Inference</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20495" target="_blank" rel="noopener">Workload-Aware Caching for Multi-Agent Systems</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20519" target="_blank" rel="noopener">Looped Transformer 的自适应深度诊断</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">houseofsaud.com</span><a href="https://houseofsaud.com/irgc-claims-destroyed-amazon-bahrain-data-center/" target="_blank" rel="noopener">IRGC 宣称摧毁了亚马逊巴林数据中心</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">essenceia.github.io</span><a href="https://essenceia.github.io/projects/ethernet_switch_asic/" target="_blank" rel="noopener">设计一颗以太网交换 ASIC</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21224" target="_blank" rel="noopener">Controlled Periodic Synchronization 数据并行训练</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">anthropic.com</span><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener">Claude Opus 5 发布</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbc.com</span><a href="https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html" target="_blank" rel="noopener">Nvidia、微软、Meta 警告不要过度监管开放权重模型</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theguardian.com</span><a href="https://www.theguardian.com/technology/2026/jul/24/openai-rogue-hacker" target="_blank" rel="noopener">对 OpenAI&quot;失控黑客智能体&quot;故事保持怀疑</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20492" target="_blank" rel="noopener">PhantomFill:表单强迫模型编造答案</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20522" target="_blank" rel="noopener">SAE 特征平面的 Holonomy 预注册实验(Gemma 2 2B)</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20653" target="_blank" rel="noopener">PhysCoRe:物理修正残差世界模型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20683" target="_blank" rel="noopener">FELT:从视觉生成触觉信号</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20665" target="_blank" rel="noopener">CBF-RL 多无人机吊运载荷,零样本 Sim2Real</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20679" target="_blank" rel="noopener">容量感知可通行性导航 CAT</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.17528" target="_blank" rel="noopener">AI Agent 真能跑通 RTL-to-GDS 吗?</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20638" target="_blank" rel="noopener">WaveformQA:LLM 数字波形时序推理基准</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20432" target="_blank" rel="noopener">立场论文:自然语言不应完全取代形式语言</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21130" target="_blank" rel="noopener">RISC-V 单核上的 Float16 端侧训练软硬协同</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.20490" target="_blank" rel="noopener">CRAWO:边缘自适应负载编排的自定义资源</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-07-23.html">← 2026-07-23</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-13</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-13</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-13 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-12 ~ 2026-08-13</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-13</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>Mojo 1.0 正式发布</b>：(HN 424 分):面向 AI 的系统级语言进入稳定期,&quot;Python 易用 + C 级性能&quot;路线为自研编译器栈再添重要参照。</li>
+      <li><b>OpenAI 伦理负责人不满一年离职</b>：(HN 505 分):前沿实验室安全/对齐团队稳定性再度成为行业焦点。</li>
+      <li><b>昇腾 NPU 动态形状 MatMul 优化(AdaptCore)</b>：直击显式受控架构下的算子&quot;泛化危机&quot;,与国产 AI 芯片/华为昇腾工作栈高度相关,值得重点跟进。</li>
+      <li><b>llama.cpp(350 分)与 Nvidia Nemotron 3.5 Lightning(257 分)</b>：分别从端侧生态与模型+agent 框架双线,持续加固&quot;边缘到数据中心&quot;的推理格局。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/" target="_blank" rel="noopener">Nvidia Nemotron 3.5 Lightning 与 NeMo Switchyard 发布</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11116" target="_blank" rel="noopener">You Only Charge Once 2.0:可重构开关电容的端到端模拟存内计算架构</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10521" target="_blank" rel="noopener">具有差分隐私形式化保证的概率饱和计数器综合</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10803" target="_blank" rel="noopener">AdaptCore:昇腾 NPU 动态形状矩阵乘</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">modular.com</span><a href="https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here" target="_blank" rel="noopener">Mojo 1.0 正式发布</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10103" target="_blank" rel="noopener">手写 PTX Tensor-Core GEMM Kernel:多精度在 NVIDIA L4 上的研究</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10803" target="_blank" rel="noopener">AdaptCore:昇腾 NPU 上动态形状的自适应矩阵乘框架</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10010" target="_blank" rel="noopener">CurveFP:有理底数对数型、闭式乘积的低精度数据类型</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11152" target="_blank" rel="noopener">超越前缀局部性的混合 RL Rollout 调度</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10956" target="_blank" rel="noopener">ClusterBench:集群级持续基准测试与回归测试框架</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11034" target="_blank" rel="noopener">SCOUT:对称共识离群点检测用于 LLM 预训练故障定位</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.09953" target="_blank" rel="noopener">研究者视角的 HPC 网络指南</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2602.12596" target="_blank" rel="noopener">Arcalís:轻量近缓存方案加速 RPC</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10188" target="_blank" rel="noopener">GPU LZ77 解码到底卡在哪:三种解码器、三种机制与一个编码端杠杆</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">ft.com</span><a href="https://www.ft.com/content/e49dfb75-f841-4466-a577-f7aaff8779a0" target="_blank" rel="noopener">OpenAI 伦理负责人入职不足一年离职</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.09997" target="_blank" rel="noopener">Transformer 几何观测站 TGO-IV:发育拓扑观测</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11147" target="_blank" rel="noopener">CKKS 同态加密乘法中的瞬态错误研究</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11022" target="_blank" rel="noopener">Workflow Cards:基于溯源数据的结构化工作流摘要</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10220" target="_blank" rel="noopener">人形机器人穿越受限空间的全身体规划</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10232" target="_blank" rel="noopener">FACT:世界-动作模型的失败感知因果训练</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10383" target="_blank" rel="noopener">单视角观测下的大物体双臂协同灵巧抓取</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10367" target="_blank" rel="noopener">基于神经网络的车辆遥操作</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10023" target="_blank" rel="noopener">视觉位姿估计的保护等级</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10025" target="_blank" rel="noopener">运营数据保真度对安全关键自动驾驶软件评估的影响</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2503.07215" target="_blank" rel="noopener">CodeInverter 套件:结构/数据感知的高效 LLM 二进制反编译</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10290" target="_blank" rel="noopener">Comprendia:AI 增强的代码理解</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10803" target="_blank" rel="noopener">AdaptCore</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">llama.app</span><a href="https://llama.app" target="_blank" rel="noopener">llama.cpp</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10506" target="_blank" rel="noopener">CARB:表征引导的 CNN 推理成本预测与部署筛选</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10016" target="_blank" rel="noopener">基于层(Sheaf)的联邦表征学习</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-12.html">← 2026-08-12</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

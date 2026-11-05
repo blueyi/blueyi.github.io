@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-02</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-02</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-02 · 周日</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-01 ~ 2026-08-02</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-02</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>OpenAI 数学突破霸榜 HN（407 分 🔥）</b>：OpenAI 发布的十项数学与理论计算机科学进展成为当日 HN 最高分帖子，标志着 AI 在形式化推理领域从&quot;辅助工具&quot;向&quot;独立贡献者&quot;的转变正在加速，也意味着 AI for Science 对算力基础设施的需求将进一步攀升。</li>
+      <li><b>Anthropic 罕见公开安全事件调查报告（245 分 🔥）</b>：三起真实红队事件的详细技术复盘展现了前沿 AI 安全研究的实战难度，也为行业提供了难得的透明度范本——安全治理不能停留在论文里，必须经得起真实攻击的检验。</li>
+      <li><b>AMD Gluon 工具链持续成熟</b>：AMD 官方发布的 MI450 Kernel 优化指南表明，AMD 正在系统性地建设其 AI 软件生态，从硬件参数竞争转向&quot;硬件+软件栈&quot;的全栈能力比拼。Gluon 作为 AMD 版的 Triton/CUTLASS，值得 AI Infra 从业者关注。</li>
+      <li><b>&quot;探索性建模&quot;提出训练新范式</b>：将推理时的 Best-of-K 采样反哺到训练过程，这种&quot;以推理反哺训练&quot;的思路可能会影响下一代大模型训练框架的设计。</li>
+      <li><b>AI 与创作的边界讨论升温</b>：Charlie Stross 的&quot;反 AI 写作宣言&quot;获得 125 分的高热度讨论，反映出公众对 AI 渗透创意领域的复杂情绪——这既是治理议题，也是产品设计需要慎重对待的用户感知问题。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">rocm.blogs.amd.com</span><a href="https://rocm.blogs.amd.com/software-tools-optimization/gluon-attention-decode-mi450/README.html" target="_blank" rel="noopener">AMD MI450 上的 Attention Decode：Gluon Kernel 优化指南</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">rocm.blogs.amd.com</span><a href="https://rocm.blogs.amd.com/software-tools-optimization/gluon-attention-decode-mi450/README.html" target="_blank" rel="noopener">AMD MI450 上的 Gluon Kernel 优化指南</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">alexiglad.github.io</span><a href="https://alexiglad.github.io/blog/2026/explorative_modeling/" target="_blank" rel="noopener">探索性建模：在 K 个猜测中训练最优解</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <div class="empty">今日该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">anthropic.com</span><a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" target="_blank" rel="noopener">Anthropic 网络安全评估中三起真实世界事件的调查</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/ten-advances-in-mathematics/" target="_blank" rel="noopener">OpenAI：数学与理论计算机科学的十项进展</a> <span class="hot">🔥</span></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">antipope.org</span><a href="https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html" target="_blank" rel="noopener">论 AI 在我写作过程中的不使用</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <div class="empty">今日该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">rocm.blogs.amd.com</span><a href="https://rocm.blogs.amd.com/software-tools-optimization/gluon-attention-decode-mi450/README.html" target="_blank" rel="noopener">AMD MI450 上的 Gloun Attention Decode Kernel 优化指南</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <div class="empty">今日该方向公开源未见重大动态。</div>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-01.html">← 2026-08-01</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

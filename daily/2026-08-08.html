@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-08-08</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-08-08</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-08-08 · 周六</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-08-06 ~ 2026-08-08</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-08-08</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>AMD 收购 Taalas（HN 880 分）</b>：— &quot;模型蚀刻进硅片&quot;若成功量产，将重新定义 AI 推理芯片架构范式，直击 NVIDIA GPU 在推理市场的统治地位。</li>
+      <li><b>Google DeepMind 双巨头同日离任（HN 847 分）</b>：— Demis Hassabis 退居 Chair、Jeff Dean 离开 Google，Google AI 十年领导架构终结，Gemini 后续路线图或出现重大调整。</li>
+      <li><b>NVIDIA B300 首个公开实战报告出炉</b>：— 16×B300 全量微调 Qwen3-32B 的踩坑经验对即将采购 B300 的团队极具参考价值，telemetry 诊断与负结果同样珍贵。</li>
+      <li><b>碳感知推理路由验证成功</b>：— 跨区域调度 LLM 推理请求可将碳排放降低一个数量级，绿色 AI 从口号走向可操作方案。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener">AMD 收购 Taalas，将模型直接蚀刻进硅片以提升推理性能</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blog.janestreet.com</span><a href="https://blog.janestreet.com/can-you-reverse-engineer-an-asic/" target="_blank" rel="noopener">Can you reverse engineer an ASIC?</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05965" target="_blank" rel="noopener">自动化异构分层缓存一致性协议合成</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05339" target="_blank" rel="noopener">PowerScope: ML 驱动的亚时钟周期功耗估计</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">malisper.me</span><a href="https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/" target="_blank" rel="noopener">Making Postgres 300x faster: batching, operator fusion, and SIMD</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05855" target="_blank" rel="noopener">RepoOMP: 仓库感知的 OpenMP 热点并行化</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05451" target="_blank" rel="noopener">Let it Flow: 形式化验证的异步数据流编译框架</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05234" target="_blank" rel="noopener">PPDL: 将 LLM 工作流建模为概率程序</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">aleksagordic.com</span><a href="https://www.aleksagordic.com/blog/vllm" target="_blank" rel="noopener">Inside vLLM: Anatomy of a High-Throughput LLM Inference System</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06007" target="_blank" rel="noopener">TensorCast: LLM 基础设施中缺失的张量管理层</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05483" target="_blank" rel="noopener">PLoRA: 基于近存计算(NDP)的多 LoRA 高效推理</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05944" target="_blank" rel="noopener">NVIDIA B300 双节点全量微调实战报告</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.06188" target="_blank" rel="noopener">碳感知推理路由：LLM 请求实时调度到最清洁电网</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05332" target="_blank" rel="noopener">面向 Agentic Science 的分层服务器架构</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05300" target="_blank" rel="noopener">eMicro: 基于 eBPF 的微服务多跳访问控制</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blog.google</span><a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank" rel="noopener">Google DeepMind 重大变动：Demis Hassabis 从 CEO 转任 Chair，Jeff Dean 离职</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" target="_blank" rel="noopener">OpenAI 改进 GPT-5.6 Sol，扩展 Luna 免费访问</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/" target="_blank" rel="noopener">OpenAI: 应对前沿网络攻防能力</a></div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05215" target="_blank" rel="noopener">VLAff: 视觉-语言-可供性统一模型</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05369" target="_blank" rel="noopener">World-to-Wrist (W2-VLA): 任务条件化腕部未来建模</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05579" target="_blank" rel="noopener">ARGUS: 跨视角对齐机器人场景几何</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05313" target="_blank" rel="noopener">Failing Gracefully: 缓解机器人不可避免的故障影响</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05586" target="_blank" rel="noopener">PathCover: 基于随机迭代空间划分的快速凸分解</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05493" target="_blank" rel="noopener">Learning Context-Free Grammars for Grammar-Constrained Decoding</a></div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05234" target="_blank" rel="noopener">PPDL: LLM 工作流即概率程序</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2503.13105" target="_blank" rel="noopener">LLM 微调驱动的混合 SSD 管理</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05303" target="_blank" rel="noopener">EdgeXpert: 边缘设备 MoE + 推测解码联合优化</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2603.00378" target="_blank" rel="noopener">OBASE: 基于对象地址空间工程的内存分级优化</a></div>
+      <div class="it-sum">—</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="" target="_blank" rel="noopener">近两天无其他重大端侧推理独立动态（MLC-LLM / llama.cpp / ExecuTorch 本周无重大版本发布或高分 HN 讨论）。</a></div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-08-07.html">← 2026-08-07</a></span>
+    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
