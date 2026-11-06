@@ -13,6 +13,15 @@ def test_daily_and_feeds_share_global_publish_lock():
     assert publish_daily.LOCK_PATH == Path.home() / ".hermes/locks/blueyi-pages-publish.lock"
 
 
+def test_worker_requires_today_snapshot(monkeypatch):
+    monkeypatch.setattr(publish_daily, "snapshots_by_date", lambda: {})
+    try:
+        publish_daily.worker_main()
+    except RuntimeError as exc:
+        assert "no daily news snapshot" in str(exc)
+    else:
+        raise AssertionError("worker must fail when today's snapshot is missing")
+
 def test_publish_retries_after_remote_fast_forward(monkeypatch, tmp_path):
     calls = []
     outcomes = [1, 0]

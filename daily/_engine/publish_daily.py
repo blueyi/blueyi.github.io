@@ -9,6 +9,7 @@ the shared checkout from breaking daily publication.
 import glob
 import os
 import re
+from datetime import datetime
 import shutil
 import subprocess
 import sys
@@ -92,6 +93,10 @@ def publish_commit(latest, changed_dates):
 
 
 def worker_main():
+    today = datetime.now().astimezone().strftime("%Y-%m-%d")
+    snapshots = snapshots_by_date()
+    if today not in snapshots:
+        raise RuntimeError(f"no daily news snapshot for {today}")
     changed_dates = []
     for date, snap_path in snapshots_by_date().items():
         clean = clean_markdown(Path(snap_path).read_text(encoding="utf-8"))
@@ -104,6 +109,7 @@ def worker_main():
         changed_dates.append(date)
 
     if not changed_dates:
+        print("[daily] no new snapshots to publish")
         return 0
 
     rebuild_daily.main()
