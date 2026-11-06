@@ -7,6 +7,7 @@ verifies the newest page. This keeps unrelated feed jobs and conflicted files in
 the shared checkout from breaking daily publication.
 """
 import glob
+import json
 import os
 import re
 from datetime import datetime
@@ -109,7 +110,8 @@ def worker_main():
         changed_dates.append(date)
 
     if not changed_dates:
-        print("[daily] no new snapshots to publish")
+        latest_available = max(snapshots) if snapshots else "none"
+        print(f"[daily] STATUS=no_changes latest_available={latest_available}")
         return 0
 
     rebuild_daily.main()
@@ -124,7 +126,8 @@ def worker_main():
             REPO_DIR,
         )
         if result.stdout.strip() == "200":
-            print(f"[daily] published {','.join(changed_dates)} -> {sha} ({url})")
+            print(json.dumps({"STATUS": "published", "dates": changed_dates, "commit": sha,
+                              "url": url, "http_status": 200}, ensure_ascii=False))
             return 0
     print(f"[daily] deployment verification failed for {url}", file=sys.stderr)
     return 1
