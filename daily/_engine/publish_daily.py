@@ -141,7 +141,7 @@ def parent_main():
         try:
             fcntl.flock(lock_file, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError:
-            print("[daily] another publish run is active; skipping")
+            print('[daily] STATUS=skipped reason=publish_lock_busy')
             return 0
 
         run(["git", "fetch", "-q", "origin", "master"], REPO_DIR, check=True)
@@ -178,7 +178,7 @@ def main():
     try:
         return worker_main() if IS_WORKER else parent_main()
     except Exception as exc:
-        print(f"[daily] {exc}", file=sys.stderr)
+        print(json.dumps({"STATUS": "failed", "error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
 
 
