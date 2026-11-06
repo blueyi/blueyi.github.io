@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T09:51:05.106489+08:00",
+ "generated_at": "2026-11-07T01:05:55.014091+08:00",
  "entries": [
   {
    "type": "daily",
@@ -31471,6 +31471,281 @@
    "summary": "Chips and Cheese 指出高通放弃了全大核策略转向混合核,配合其",
    "url": "https://chipsandcheese.com/p/qualcomms-system-level-architecture",
    "page": "/daily/2026-11-05.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "1️⃣ AI 芯片",
+   "title": "AI 硬件股集体反弹，费城半导体指数盘中涨约 6.5%",
+   "summary": "芯片板块在此前压力后出现强势修复，但行情反弹与产业基本面仍需分开判断 (",
+   "url": "https://www.ithome.com/1/023/564.htm",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "1️⃣ AI 芯片",
+   "title": "NVIDIA 加强东南亚 AI GPU 部署追踪",
+   "summary": "申请官方云合作伙伴资格的服务商需要加入 Fleet Intelligence 监控计划，出口管制和芯片流向审计进一步下沉至云基础设施层 (",
+   "url": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-tightens-tracking-of-ai-gpus-in-southeast-asia-as-chinese-chip-smuggling-draws-scrutiny-report-claims-cloud-providers-must-join-monitoring-program-to-qualify-for-official-partner-status",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "1️⃣ AI 芯片",
+   "title": "DeepSeek 带动稀疏计算需求，国产芯片企业获得近 10 亿元融资",
+   "summary": "稀疏模型和推理负载正在为差异化国产加速器创造新窗口 (",
+   "url": "https://www.qbitai.com/2026/11/508155.html",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "2️⃣ AI 编译器与框架",
+   "title": "Cloudflare 与 VoidZero 发布 tsrs：由 AI 生成的 TypeScript 编译器 Rust 移植版",
+   "summary": "编译器这种高语义密度、强测试约束的系统软件开始出现 AI 主导跨语言移植案例 (",
+   "url": "https://www.infoq.cn/article/lGoA1ZSw6ojeh68GVlBl?utm_source=rss&utm_medium=article",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "2️⃣ AI 编译器与框架",
+   "title": "谷歌与 Meta 开源 TorchTPU，为 TPU 提供原生 PyTorch 支持",
+   "summary": "非 NVIDIA 加速器获得更直接的 PyTorch 接入路径，XLA、Inductor 与硬件后端之间的边界将继续调整 (",
+   "url": "https://www.infoq.cn/article/5s2oa0BLlgR8fplkq2uK?utm_source=rss&utm_medium=article",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "3️⃣ AI 推理优化（数据中心）",
+   "title": "Agent 自动调优推理引擎，两周内实现近 3 倍提速并超过人工精调",
+   "summary": "Coding Agent 通过持续读取代码、修改配置和执行 benchmark 构成性能优化闭环，自动调参正在从实验走向工程实践 (",
+   "url": "https://aiera.com.cn/2026/11/06/other/admin/122527/%e6%8e%a8%e7%90%86%e6%8f%90%e9%80%9f%e8%bf%913%e5%80%8d%ef%bc%81agent%e4%b8%8b%e5%9c%ba%e8%b0%83%e5%bc%95%e6%93%8e%ef%bc%8c%e4%b8%a4%e5%91%a8%e5%8f%8d%e8%b6%85%e4%ba%ba%e5%b7%a5%e7%b2%be%e8%b0%83/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "3️⃣ AI 推理优化（数据中心）",
+   "title": "腾讯混元从研发体系重构延伸到 MaaS 推理优化",
+   "summary": "模型能力落地真实业务时，服务化、成本与推理工程成为与模型质量同等重要的指标 (",
+   "url": "https://www.infoq.cn/article/azhgYaRTIjsSSVfA8AaU?utm_source=rss&utm_medium=article",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "3️⃣ AI 推理优化（数据中心）",
+   "title": "AI Token 使用量与商业模式快速增长",
+   "summary": "大规模调用增长使容量规划、路由与单位 token 成本成为平台竞争核心 (",
+   "url": "https://aiera.com.cn/2026/11/06/other/admin/122456/%e5%8d%8a%e5%b9%b4106%e4%ba%bf%e3%80%81%e7%8b%82%e6%b6%a8%e8%bf%919%e5%80%8d%ef%bc%81%e5%8d%96token%e7%9a%84%e8%bf%99%e4%b8%aa%e6%96%b0%e6%96%b9%e5%90%91%ef%bc%8c%e7%88%86%e4%ba%86/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "4️⃣ 数据中心与基础设施",
+   "title": "微软阿姆斯特丹数据中心工地遭百余名抗议者进入",
+   "summary": "抗议集中于水资源、能源消耗及 AI 基建影响，欧洲数据中心扩张面临更强社区和许可约束 (",
+   "url": "https://www.datacenterdynamics.com/en/news/more-than-100-protesters-break-into-microsoft-data-center-construction-site-in-amsterdam/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "4️⃣ 数据中心与基础设施",
+   "title": "ING 拟出售约 5 亿美元数据中心贷款，包含 Stargate 相关站点",
+   "summary": "AI 基建融资开始接受二级市场流动性和风险偏好检验 (",
+   "url": "https://www.datacenterdynamics.com/en/news/ing-bank-looks-to-sell-500m-in-data-center-loans-at-once-including-at-stargate-site/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "4️⃣ 数据中心与基础设施",
+   "title": "DTE Energy 将五年投资计划提高至 440 亿美元",
+   "summary": "公司明确将数据中心用电需求列为推动因素之一 (",
+   "url": "https://www.datacenterdynamics.com/en/news/dte-energy-ups-five-year-utility-investment-plan-to-44bn-cites-data-center-demand/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "4️⃣ 数据中心与基础设施",
+   "title": "NVIDIA 探索把 130 余座旧电信机房改造成小型数据中心",
+   "summary": "存量设施再利用可能成为缓解新建园区许可和并网压力的路径 (",
+   "url": "https://www.tomshardware.com/tech-industry/data-centers/nvidia-wants-to-repurpose-over-130-old-telco-buildings-as-tiny-data-centers-report-claims-company-in-talks-with-brightspeed-after-pitching-idea-to-parent-company-apollo-global-management",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "5️⃣ AI 安全与治理",
+   "title": "OpenAI 发布负责任 AI 基础设施政策框架",
+   "summary": "提出社区资源保护、就业和 Compute Campus 治理原则，并减少数据中心项目中的保密安排 (",
+   "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "5️⃣ AI 安全与治理",
+   "title": "Meta 警告选举后的数据中心反弹可能限制 AI 扩张",
+   "summary": "地方政治、社区接受度和资源消耗正在进入科技公司的正式风险叙事 (",
+   "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "5️⃣ AI 安全与治理",
+   "title": "奥特曼讨论“谁来决定 AI 应该比人类聪明多少”",
+   "summary": "能力上限、授权主体和治理边界再次成为前沿模型发展中的核心公共议题 (",
+   "url": "https://aiera.com.cn/2026/11/06/other/admin/122566/%e5%a5%a5%e7%89%b9%e6%9b%bc%ef%bc%9a%e8%b0%81%e6%9d%a5%e5%86%b3%e5%ae%9aai%e8%af%a5%e6%af%94%e4%ba%ba%e7%b1%bb%e8%81%aa%e6%98%8e%e5%a4%9a%e5%b0%91%ef%bc%9f/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "6️⃣ 具身智能",
+   "title": "AGIBOT 发布 GO-3 Preview，并在三项具身智能 benchmark 中取得领先",
+   "summary": "模型把预训练、后训练和部署后学习串成闭环，真机经验回灌成为重要能力 (",
+   "url": "https://roboticsandautomationnews.com/2026/11/05/agibot-unveils-go-3-preview-and-takes-top-spot-on-three-embodied-ai-benchmarks/106711/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "6️⃣ 具身智能",
+   "title": "Pudu Robotics 提出“One Brain, Multiple Embodiments”战略",
+   "summary": "六条产品线共享具身智能能力，商用机器人尝试用统一模型摊薄多本体研发成本 (",
+   "url": "https://roboticsandautomationnews.com/2026/11/05/pudu-robotics-unveils-one-brain-multiple-embodiments-strategy-and-showcases-full-portfolio-in-european-first/106725/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "6️⃣ 具身智能",
+   "title": "京东物流以统一调度系统协同多类机器人",
+   "summary": "供应链场景正在从单机自动化转向异构机器人群体协作 (",
+   "url": "https://www.infoq.cn/article/1YeowHagkg1Or6wwy23P?utm_source=rss&utm_medium=article",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "6️⃣ 具身智能",
+   "title": "交互式投影对齐基准测试模型的三维物体位姿推理能力",
+   "summary": "空间感知从识别走向可交互的几何推理 (",
+   "url": "https://aiera.com.cn/2026/11/06/other/admin/122471/%e6%a8%a1%e5%9e%8b%e8%83%bd%e6%84%9f%e7%9f%a5%e8%b0%83%e6%95%b43d%e7%89%a9%e4%bd%93%e4%bd%8d%e5%a7%bf%e5%90%97%ef%bc%9f%e9%a6%96%e4%b8%aa%e4%ba%a4%e4%ba%92%e5%bc%8f%e6%8a%95%e5%bd%b1%e5%af%b9%e9%bd%90/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "7️⃣ AI 自动算子与代码生成优化",
+   "title": "Agent 自动优化推理引擎并实现近 3 倍提速",
+   "summary": "这说明自动代码修改、性能测试和反馈循环可以直接进入系统优化主流程 (",
+   "url": "https://aiera.com.cn/2026/11/06/other/admin/122527/%e6%8e%a8%e7%90%86%e6%8f%90%e9%80%9f%e8%bf%913%e5%80%8d%ef%bc%81agent%e4%b8%8b%e5%9c%ba%e8%b0%83%e5%bc%95%e6%93%8e%ef%bc%8c%e4%b8%a4%e5%91%a8%e5%8f%8d%e8%b6%85%e4%ba%ba%e5%b7%a5%e7%b2%be%e8%b0%83/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "7️⃣ AI 自动算子与代码生成优化",
+   "title": "Microsoft PDD Kit 对 Agent 生成的全栈应用进行形式化验证",
+   "summary": "当生成代码规模超过人工逐行审查能力时，规约和机器验证成为必要质量门禁 (",
+   "url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "7️⃣ AI 自动算子与代码生成优化",
+   "title": "tsrs 展示 AI 主导编译器跨语言移植的可行性",
+   "summary": "也说明高覆盖测试和语义验证是 Agent 开发系统软件的关键基础 (",
+   "url": "https://www.infoq.cn/article/lGoA1ZSw6ojeh68GVlBl?utm_source=rss&utm_medium=article",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "8️⃣ 边缘与端侧推理",
+   "title": "EE Times 讨论从 PyTorch 到端侧产品的开放生态链路",
+   "summary": "训练框架、转换工具、运行时和硬件后端之间的兼容性仍是边缘 AI 落地主要成本 (",
+   "url": "https://www.eetimes.com/from-pytorch-to-product-accelerating-edge-ai-through-open-ecosystems/",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "8️⃣ 边缘与端侧推理",
+   "title": "Hugging Face 发布可在设备侧运行的 Phonon TTS",
+   "summary": "高质量本地语音合成继续缩小端侧与云端体验差距 (",
+   "url": "https://huggingface.co/blog/phonon-tts",
+   "page": "/daily/2026-11-06.html"
+  },
+  {
+   "type": "daily",
+   "channel": "ai-infra-daily",
+   "date": "2026-11-06",
+   "week": "",
+   "category": "8️⃣ 边缘与端侧推理",
+   "title": "豆包工作个人版取消五小时短周期额度限制",
+   "summary": "虽然不是底层推理技术，但反映推理成本和容量管理改善后，长任务 Agent 的产品限制正在放宽 (",
+   "url": "https://www.leiphone.com/category/industrynews/Ii6W43GghzJA7V1u.html",
+   "page": "/daily/2026-11-06.html"
   },
   {
    "type": "weekly",
