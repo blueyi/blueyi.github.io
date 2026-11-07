@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T08:04:52.023372+08:00",
+ "generated_at": "2026-11-07T20:05:30.229708+08:00",
  "entries": [
   {
    "type": "daily",
@@ -43263,6 +43263,237 @@
    "summary": "Crunchbase 统计显示，全球机器人创业融资约 99 亿美元，同比高于 2025 年 Q3 的 43 亿美元。",
    "url": "https://news.crunchbase.com/venture/q3-2026-us-china-robotics-startup-funding-jumps-physical-ai-push/",
    "page": "/feeds/embodied-ai/weeks/2026-W44.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "SLA：持续预训练扩展空间语言动作模型",
+   "summary": "将冻结 3D 感知模型的空间表征通过门控机制接入预训练 VLA，并以状态 dropout 保持多样机器人数据上的泛化能力。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2611.08373",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "NEO-VLA：从像素到动作的原生视觉语言动作策略",
+   "summary": "取消固定视觉编码器，让动作策略访问网络不同深度的视觉表征，并以 flow matching 提升操作鲁棒性。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2611.06918",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "H2RB：用人类示范迁移到新机器人",
+   "summary": "通过几何锚定对齐与解耦动作 tokenizer，将无配对的人类示范迁移到新的机器人本体，针对跨本体技能泛化。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2611.04391",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "Liber-0：从人类经验到机器人动作的世界动作模型",
+   "summary": "LiberAI 发布基于超过 220 万小时人类经验预训练的 World Action Model，面向通用机器人与物理世界交互。[端到端VLA]",
+   "url": "https://roboticsandautomationnews.com/2026/11/04/from-human-experience-to-robot-action-liberai-launches-liber-0-world-action-model/106378/",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "OopsieRecover：从语义干预学习可迁移 VLA 修正",
+   "summary": "针对部署中的操作失败，利用语义干预学习可迁移的纠错行为，减少为每种失败单独采集修正数据的需求。[控制层·BC]",
+   "url": "http://arxiv.org/abs/2611.08462v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "Uni-robot-agent：开放模型机器人使用智能体",
+   "summary": "统一开放权重模型与机器人使用工具链，在零样本操作任务上评估并推进开放模型的真实机器人能力。[规划层]",
+   "url": "https://arxiv.org/abs/2611.01560",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "HiFOR：动作引导的层次前瞻操作",
+   "summary": "通过层次化预测未来状态并检索相关未来信息，引导机器人生成操作动作，改善长视野任务中的动作决策。[控制层·世界模型]",
+   "url": "https://arxiv.org/abs/2610.40373",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "RoboTryOn：从人类视频合成灵巧机器人示范",
+   "summary": "将人类示范视频转换为机器人视频，用于训练双臂与灵巧操作策略，降低真实机器人示范采集成本。[控制层·BC]",
+   "url": "https://arxiv.org/abs/2611.05163",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "VisionSIM：面向非理想传感器的多模态机器人仿真",
+   "summary": "把事件、SPAD、iToF/dToF 与热成像等传感器的物理真实性纳入统一仿真器，暴露传统理想化传感器遗漏的部署失败模式。[感知层]",
+   "url": "http://arxiv.org/abs/2611.08368v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "PrimeSim：跨本体示范驱动的通用世界模型模拟器",
+   "summary": "使用跨本体动作表示、视角感知注意力和层次记忆，构建动作条件多视角世界模型，支持长视野机器人模拟与策略优化。[控制层·世界模型]",
+   "url": "https://arxiv.org/abs/2611.04870",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "MOMASPLAT：移动操作的动态新视角示范增强",
+   "summary": "用动态新视角合成缓解移动操作中相机视角、底座位姿与定位漂移变化导致的模仿策略退化。[控制层·BC]",
+   "url": "http://arxiv.org/abs/2611.08372v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "GPWM：以 3D 粒子运动建模世界",
+   "summary": "生成 3D 场景中粒子与刚体的运动，而非仅生成外观视频，统一覆盖刚体、可变形、布料和颗粒材料及机器人交互。[控制层·世界模型]",
+   "url": "http://arxiv.org/abs/2611.08338v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "VFlash：通过 Flash 原语解码加速视觉规划",
+   "summary": "以点、框和轨迹等视觉计划表达空间目标与运动，避免逐坐标自回归生成的成本，面向物理智能任务提升规划效率。[规划层]",
+   "url": "http://arxiv.org/abs/2611.08449v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "REA：异步脑-小脑控制的路由具身运行时",
+   "summary": "统一审慎推理策略与快速反应策略，通过异步协调、路由记忆和升级机制降低控制开销并覆盖仿真与真实机器人任务。[控制层·BC]",
+   "url": "https://arxiv.org/abs/2610.42053",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "SCALE：面向赛博物理智能体的实时潜通信",
+   "summary": "让异构赛博物理智能体直接交换中间表征，在带宽约束与不同任务截止时间下实现实时协作。[规划层]",
+   "url": "http://arxiv.org/abs/2611.08390v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "AGIBOT 发布 GO-3 Preview 并登顶三项具身基准",
+   "summary": "AGIBOT 发布 GO-3 Preview，报道显示其连接预训练、后训练与部署后学习，面向通用具身能力持续迭代。[市场/产业]",
+   "url": "https://roboticsandautomationnews.com/2026/11/05/agibot-unveils-go-3-preview-and-takes-top-spot-on-three-embodied-ai-benchmarks/106711/",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Shield AI 获 20 亿美元融资，Zipline 亦获大额融资",
+   "summary": "Crunchbase 周度融资盘点将 Shield AI 的自主系统与虚拟仿真融资列为最大单笔，并提及无人机配送公司 Zipline；金额与用途以公司官方渠道核验。[市场/产业]",
+   "url": "https://news.crunchbase.com/venture/biggest-startup-rounds-ai-defense-space-tech-shield-zipline/",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Unitree 工厂参访：人形机器人规模化制造观察",
+   "summary": "参访文章记录 Unitree 工厂与人形机器人制造情况，为机器人本体规模化、供应链与成本结构提供产业观察。[市场/产业]",
+   "url": "https://josef.cn/blog/unitree",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "📈 产业动态 · 融资",
+   "title": "Shield AI 获 20 亿美元融资，Zipline 亦获大额融资",
+   "summary": "Crunchbase 报道 Shield AI 获得 20 亿美元融资，聚焦自主系统与虚拟仿真；具体交易细节以官方渠道核验。",
+   "url": "https://news.crunchbase.com/venture/biggest-startup-rounds-ai-defense-space-tech-shield-zipline/",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "📈 产业动态 · 融资",
+   "title": "机器人手公司 Proception 宣布融资并和解特斯拉商业秘密诉讼",
+   "summary": "TechCrunch 报道 Proception 围绕机器人手训练数据推进业务并宣布 1100 万美元融资；以公司官方渠道核验。",
+   "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W45",
+   "category": "📈 产业动态 · 融资",
+   "title": "建筑与机器人融资规模持续增长",
+   "summary": "Crunchbase 统计称 2026 年建筑机器人相关公司融资约 16 亿美元，反映产业部署资金热度；统计口径以原文为准。",
+   "url": "https://news.crunchbase.com/venture/sector-snapshot-2026-construction-robotics-funding-soars-bedrock/",
+   "page": "/feeds/embodied-ai/weeks/2026-W45.html"
   }
  ]
 }
