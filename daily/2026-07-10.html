@@ -22,7 +22,7 @@
     <h2>🌟 今日亮点</h2>
     <ol>
       <li><b>OpenAI 双箭齐发,GPT-5.6 与 ChatGPT Work 同天登场</b>：1004 分与 320 分双双高热,前者是模型能力的又一次跃迁,后者把 ChatGPT 推入企业深度工作场景。对 AI Infra 侧意味着企业级推理集群的容量、审计、权限设计需要重新盘算。</li>
-      <li><b>Meta 的 CXL 桥接 ASIC + 二手 DRAM 复用</b>：是 HBM/DRAM 涨价周期下最&quot;硬核&quot;的省钱手段,配合 arxiv 上</li>
+      <li><b>Meta 的 CXL 桥接 ASIC + 二手 DRAM 复用</b>：是 HBM/DRAM 涨价周期下最&quot;硬核&quot;的省钱手段,配合 arxiv 上 Memory Scarcity 定量分析看,2026-2030 的 AI 基础设施经济学将围绕内存展开重塑。</li>
       <li><b>Mistral 首发 Robostral Navigate</b>：(HN 481 分),欧洲 LLM 一线厂商正式入局具身,标志着机器人基础模型的&quot;三极格局&quot;(美中欧)雏形显现。</li>
       <li><b>TriRoute 把注意力、专家、KV-cache 位宽三条路由统一学习</b>：是 LLM 推理架构层继 MoE/MoD 之后又一次&quot;联合决策&quot;式的整合,值得数据中心推理系统架构师关注。</li>
       <li><b>AI-for-EDA 三连发</b>：HiFuzz(RL CPU fuzz)、Miter-Aware LUT Mapping(SAT 友好映射)、ATLAS(DL FPGA 自动 HLS)集中出现,预示 AI 生成硬件与硬件验证的工具链正在快速成熟。</li>
@@ -33,15 +33,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/06/29/zuck-saves-meta-bucks-by-reusing-memory-from-old-servers-with-a-custom-cxl-asic/5263483" target="_blank" rel="noopener">Meta reuses old RAM in new servers with custom bridge chip</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 294 分) — Meta 定制了一颗 CXL 桥接 ASIC,把老服务器上退役下来的 DDR4 内存&quot;回收&quot;到新一代服务器里,以 CXL memory pool 的形式挂到新平台上。在 HBM/DRAM 价格全线暴涨的当下,自研桥接 ASIC + 二手 DRAM 复用是超大规模厂省钱的典型硬件路线,给国内二线云厂做 CXL memory expander 也提供了强背书。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07207" target="_blank" rel="noopener">Memory Scarcity, Open Models, and the Restructuring of the AI Industry, 2026-2030</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— 定量情景分析:DRAM/HBM 价格飙升 + 前沿开源权重(GLM-5.2) + 近 Shannon 极限的 KV cache 压缩 + Meta/xAI 进入算力转售,四力将在 2026-2030 重塑 AI 产业格局。作者以&quot;美元/PB·s&quot;为单位重构推理经济学,并给出训练成本发散与基础设施偿付能力的分歧曲线,对芯片采购和产能规划有直接参考价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06881" target="_blank" rel="noopener">Multiple Double Arithmetic on NVIDIA Tensor Cores</a></div>
+      <div class="it-sum">— 把 multiple-double(多重双精度)算法映射到 Ampere A100 起的 FP64 tensor core 上。难点是 renormalization 需要分支,而 tensor core 不擅长分支,论文给出无分支的规约算法,对科学计算类 workload 在 GPU 上的高精度加速有价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07096" target="_blank" rel="noopener">ThermoDSE: Thermal-Aware DSE for Chiplet-Based DNN Accelerators</a></div>
+      <div class="it-sum">— 面向 chiplet 化 DNN 加速器的热感知设计空间探索框架,联合考虑任务建模、chiplet 粒度、core 粒度与热约束。是首个把物理约束与 fine-grained task 建模一起纳入 DSE 的工作,对下一代 UCIe 时代的 AI 芯片设计有借鉴意义。</div>
     </li>
     </ul>
   </section>
@@ -50,12 +54,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07217" target="_blank" rel="noopener">Finding and Understanding Miscompilation Bugs in the Solidity Compiler</a></div>
+      <div class="it-sum">— 语义感知的差分 fuzz 工具 SolSmith,三年时间在 Solidity 编译器里挖出大量 miscompilation。虽然领域在智能合约,但方法学(semantics-aware differential fuzzing)完全可以搬到 MLIR / TVM / XLA 上做 tensor 编译器验证。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2604.09558" target="_blank" rel="noopener">VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination</a></div>
+      <div class="it-sum">— 提出 Virtual Tensor 抽象,统一 layout transform 与 operator fusion,把数据搬运优化扩展到更大的算子子集。当代 DNN workload 里 compute 与 memory 延迟差距越来越大,VTC 这类跨算子数据搬运消除会成为编译器主流手段。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2605.12893" target="_blank" rel="noopener">LFPL: Revisited and Mechanized</a></div>
+      <div class="it-sum">— Hofmann 1999 年的 LFPL 语言(用仿射类型刻画多项式时间可计算函数)被重新机械化证明。看似纯理论,但线性/仿射类型系统正是当代 Rust-like GPU DSL 与自动内存管理编译器的理论基石。</div>
     </li>
     </ul>
   </section>
@@ -64,9 +71,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06601" target="_blank" rel="noopener">TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— 把三条独立的条件计算路径(MoE 的 expert 选择 / MoD 的 block skip / KV cache 位宽)统一到一个学习式 router 里做联合决策,而不是各自为战。这是当前 LLM 推理优化里最值得关注的架构级动作:一次前向决定&quot;用多少注意力、走哪些 expert、KV 存多少 bit&quot;,在数据中心侧对吞吐/成本曲线的意义相当大。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07046" target="_blank" rel="noopener">Voltron: Enabling Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence</a></div>
+      <div class="it-sum">— 虽然标题是 edge,但核心机制是把 LLM 推理弹性切分到多设备,解决中心化 data center 推理的延迟与隐私问题。对混合云/边云协同的推理系统架构师有参考价值。</div>
     </li>
     </ul>
   </section>
@@ -75,15 +84,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/06/29/zuck-saves-meta-bucks-by-reusing-memory-from-old-servers-with-a-custom-cxl-asic/5263483" target="_blank" rel="noopener">Meta reuses old RAM in new servers with custom bridge chip</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 294 分,同 1️⃣) — 从数据中心角度看,这是 CXL memory pool 在超大规模落地的首个公开案例:老服务器 DRAM 通过定制 ASIC 汇聚成共享内存池,给新服务器按需分配。在 HBM 涨价、DRAM 全面紧张的背景下,这一模式极可能被其他 hyperscaler 复制。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06868" target="_blank" rel="noopener">Seekable OCI: Lazy-Loading Container Images via Range-Request Indexing</a></div>
+      <div class="it-sum">— SOCI 通过 range-request 索引让容器不必下载完整镜像就能启动。在大规模 Kubernetes AI 训练/推理集群里,pull 时间是 pod 冷启动的主要瓶颈,SOCI 类方案对 elastic scaling(比如推理弹性扩容、训练抢占恢复)有实质加速效果。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07687" target="_blank" rel="noopener">Scaling WaterLily.jl with MPI and Improved Geometric Multigrid Solver</a></div>
+      <div class="it-sum">— 纯 Julia 的可扩展 CFD 求解器,新增 MPI 并行,强扩展接近线性、弱扩展 85%+。虽然是流体求解器,但方法论(vendor-agnostic GPU + MPI + multigrid)对 HPC/AI 融合集群有借鉴意义。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07313" target="_blank" rel="noopener">POO-LPSP: Parallel Osprey Optimized Least Penalty-Squared Prioritization</a></div>
+      <div class="it-sum">— 面向 AHP 的并行优先级推导算法,属于经典 HPC workload 现代化改造,对集群调度和多目标优化框架的实现细节有参考。</div>
     </li>
     </ul>
   </section>
@@ -92,15 +105,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener">GPT-5.6</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 1004 分) — OpenAI 发布 GPT-5.6,今日 HN 榜首。虽然主要是能力发布,但一旦模型能力再上一档,对应的对齐、红队、安全评测方法论也会随之调整;近期需要关注 OpenAI Safety Card / System Card 的更新细节。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/" target="_blank" rel="noopener">ChatGPT Work</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 320 分) — OpenAI 面向企业推出的深度工作模式,涉及企业数据接入、权限、审计等治理层面话题。企业级 AI 上线的合规红线(数据出境、审计留痕、访问控制)将被再度放到聚光灯下。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06700" target="_blank" rel="noopener">CILC: Cryptographically-secure Inter-agent Loop Closure Candidate Detection</a></div>
+      <div class="it-sum">— 多机器人 SLAM 中的对内攻击面研究:即便外部通信加密,一个被攻陷的 swarm 成员就能污染全局地图。给出密码学层面的 loop closure 检测方案。这是&quot;多智能体系统内部信任&quot;这个安全话题的具体化。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06804" target="_blank" rel="noopener">ECO/CPO-DAG: Contradiction-Based Accountability Layer for Adversarial Supply Chains</a></div>
+      <div class="it-sum">— 用因果排序的 DAG 做对抗性供应链的问责协议,把矛盾检测形式化为验证层而不是共识层。对 AI 供应链(模型权重、数据集)追溯有方法论价值。</div>
     </li>
     </ul>
   </section>
@@ -109,33 +126,43 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">mistral.ai</span><a href="https://mistral.ai/news/robostral-navigate/" target="_blank" rel="noopener">Mistral&#x27;s Robostral Navigate: state of the art robotics navigation model</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 481 分) — Mistral 首发机器人导航模型 Robostral Navigate,这是欧洲 LLM 一线厂商正式切入具身赛道的标志性动作。至此 OpenAI、Google DeepMind、Mistral 三家都有明确的机器人产品线,欧洲机器人生态终于有了自己的基础模型玩家。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">mira-wm.com</span><a href="https://mira-wm.com/" target="_blank" rel="noopener">MIRA: Multiplayer Interactive World Models Trained on Rocket League</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 97 分) — 多人交互世界模型,用 Rocket League 这种高频对抗的游戏做训练场。多智能体交互场景下的世界模型是通用具身智能的关键拼图。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">bittlex-sim.petoi.com</span><a href="https://bittlex-sim.petoi.com/" target="_blank" rel="noopener">In-browser programmable robot simulator</a></div>
+      <div class="it-sum">(HN 80 分) — Petoi 出的浏览器内可编程机器人仿真,零门槛跑机器狗算法。对教育、快速原型验证很有价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06655" target="_blank" rel="noopener">Pelican-VLA 0.5: Attending Before Acting Benefits Generalization</a></div>
+      <div class="it-sum">— 统一视觉-语言理解、未来帧生成与动作预测的 VLA 单模型,无需目标标注/分割掩码/注意力监督,action pathway 就能自动聚焦指令目标,泛化性显著提升。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06678" target="_blank" rel="noopener">NativeMEM: Native Memory Compression for Long-Horizon Robotic Manipulation</a></div>
+      <div class="it-sum">— 让预训练 VLA 内生地压缩长视觉历史,不依赖外部内存管理,兼顾长时程与实时更新。是 VLA 走向长时程操作的关键工程改进。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06699" target="_blank" rel="noopener">RoboSnap: One-Shot Real-to-Sim Scene Generation</a></div>
+      <div class="it-sum">— 单张 RGB 图片生成物理稳定、视觉可信的仿真场景。Real2Sim2Real 是策略评测规模化的关键路径。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06706" target="_blank" rel="noopener">Vision Language Action Models for UAV &amp; Bimanual Manipulation: A Review</a></div>
+      <div class="it-sum">— VLA 在无人机与双手操作两个新战场的综述,系统梳理了 VLA 从 manipulator 向 aerial/双臂扩展的架构与数据方案。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06724" target="_blank" rel="noopener">EvoPlan: Evolutionary Neuro-Symbolic Robot Planning with Spatio-Temporal Guarantees</a></div>
+      <div class="it-sum">— 本地 open-weight LLM + PDDL 混合规划,兼具 LLM 的上下文理解与经典 planner 的可执行性/安全性保障。神经+符号规划继续是 VLA 之外的可靠路线。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06740" target="_blank" rel="noopener">Continual Learning Framework for Modular Soft Robots</a></div>
+      <div class="it-sum">— 面向模块化软体机器人的持续学习控制框架,回答&quot;结构可重构机器人如何在线自适应&quot;的问题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06782" target="_blank" rel="noopener">G-PROBE: Cross-FOV Place Recognition for 3D Point Clouds</a></div>
+      <div class="it-sum">— learning-free 的全局定位框架,支持从窄 FOV 到全景的一致 pipeline,对轻量化机器人/AGV 的复用性很好。</div>
     </li>
     </ul>
   </section>
@@ -144,18 +171,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06619" target="_blank" rel="noopener">HiFuzz: Hierarchical Reinforcement Learning for Semantic-Aware and Adaptive CPU Fuzzing</a></div>
+      <div class="it-sum">— 用分层强化学习替代传统 mutation-based fuzzing 做 CPU 验证:Program Agent 管全局布局,Basic Block Agent 管指令填充。这是 RL 驱动的&quot;AI 帮 CPU 做验证&quot;路线,与 AlphaEvolve 类 AI-for-EDA 是一条脉络。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07164" target="_blank" rel="noopener">Miter-Aware LUT Mapping: Aligning Structure and Solvability for Logic Equivalence Checking</a></div>
+      <div class="it-sum">— LEC 长期受制于 XOR-dense 结构导致 SAT solver 崩坏。miter-aware mapping 从&quot;建模层面&quot;重塑问题,而不是硬拉 SAT solver。EDA 层面的结构感知代码生成思路,对 AI 生成 RTL 后的等价性验证有帮助。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07643" target="_blank" rel="noopener">ATLAS: Automated HLS for DL-Optimized FPGAs</a></div>
+      <div class="it-sum">— 自动化 HLS 面向带 DL hardblock 的现代 FPGA。以往开发者必须手写 RTL 才能榨干 hardblock,ATLAS 让 C/C++ HLS 也能拿到接近手工 RTL 的性能,这是&quot;AI 编译器 → 硬件&quot;链条的关键一环。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07052" target="_blank" rel="noopener">Progressive Crystallization: Turning Agent Exploration into Deterministic, Lower-Cost Workflows</a></div>
+      <div class="it-sum">— 把 Agent 探索出的成功路径逐步&quot;结晶&quot;为确定性、低成本 workflow,而不是每次都跑全套 LLM 推理。对 IT Ops 类 Agent 落地是关键的成本优化,思路可迁移到 auto-kernel-tuning 场景。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07372" target="_blank" rel="noopener">Vectorizing Quantum Control: RISC-V Vector Extension for Scalable Qubit Systems</a></div>
+      <div class="it-sum">— 用 RISC-V 向量扩展给量子控制处理器做通用 ISA,替代各家自研 ISA。指令集统一是&quot;AI 生成硬件控制代码&quot;能规模化的前提。</div>
     </li>
     </ul>
   </section>
@@ -164,24 +196,29 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07046" target="_blank" rel="noopener">Voltron: Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— 边缘 LLM 推理的弹性多设备执行框架,针对中心化推理的高延迟与隐私风险。给边缘盒子集群、家庭设备协同推理提供了理论与工程模板。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06915" target="_blank" rel="noopener">Smart Scissor: Coupling Spatial Redundancy Reduction and CNN Compression for Embedded Hardware</a></div>
+      <div class="it-sum">— 联合空间冗余削减(比如背景像素裁剪)与 CNN 压缩,专门面向嵌入式硬件的 CNN 部署。对 Jetson / RK3588 等边缘 SoC 的视觉模型部署很实用。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06982" target="_blank" rel="noopener">EdgeCompress: Multidimensional Model Compression + Dynamic Inference for EdgeAI</a></div>
+      <div class="it-sum">— 多维度压缩 + 动态推理的综合框架,针对边缘设备的 CNN 部署做端到端优化。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.06617" target="_blank" rel="noopener">Inertia-1: An Open Exploration of Wearable Motion Foundation Models</a></div>
+      <div class="it-sum">— 可穿戴运动传感的基础模型开放探索,梳理预训练与 scaling 原则。这类小模型直接跑在可穿戴设备 NPU 上,是端侧基础模型的另一条产品化路径(不是 LLM,而是运动模态)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">bittlex-sim.petoi.com</span><a href="https://bittlex-sim.petoi.com/" target="_blank" rel="noopener">In-browser programmable robot simulator</a></div>
+      <div class="it-sum">(HN 80 分,同 6️⃣) — 从&quot;端侧&quot;视角看,浏览器内运行的机器人仿真降低了本地部署门槛,是 WebAssembly + WebGPU 生态在端侧机器人 / VLA 教学的一次落地。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-09.html">← 2026-07-09</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-11.html">2026-07-11 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

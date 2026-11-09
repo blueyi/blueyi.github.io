@@ -33,12 +33,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">lttlabs.com</span><a href="https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo" target="_blank" rel="noopener">AMD Ryzen AI Halo – $4k AI Dev Kit</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 371 分):AMD 推出面向本地 AI 开发的 Halo 套件,定价约 4000 美元,主打统一内存 + NPU 的一体化本地推理开发平台。这类&quot;桌面级 AI 工作站&quot;正成为绕开云端 GPU 排队的新品类,对小团队原型开发有吸引力。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02610" target="_blank" rel="noopener">FAPlace: Chiplet Placement 与 Interposer Footprint 联合优化</a></div>
+      <div class="it-sum">针对 2.5D 系统集成,破解&quot;footprint 依赖 placement、placement 又受 footprint 约束&quot;的循环依赖,联合优化硅中介层布局。HBM/多 die 封装时代的物理设计基础工作。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02729" target="_blank" rel="noopener">HyNoC:FPGA 上分布式 VLIW 计算的混合电路交换/虫洞 NoC</a></div>
+      <div class="it-sum">开源片上网络架构,结合电路交换建路与虫洞数据传输,平衡延迟、面积与拥塞。</div>
     </li>
     </ul>
   </section>
@@ -47,12 +50,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02519" target="_blank" rel="noopener">Kotlin-MP:面向并行的 DSL 与 IR Transformer</a></div>
+      <div class="it-sum">Kotlin 有优秀的协程异步抽象,但缺低开销、指令式的硬件并行构造。该工作用编译器 IR 变换消除 lambda 分配与状态机开销,给计算密集循环加真并行。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02521" target="_blank" rel="noopener">Tile-Level Activation Overlap 高效 LLM 推理</a></div>
+      <div class="it-sum">SwiGLU 中间张量物化占 MLP 执行 9–37% 时间。基于 CUTLASS 的两个 SM90 kernel 把 SwiGLU 在 tile 级融进 GeMM(Pingpong warp 专用调度),典型的编译器/kernel 协同优化。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02541" target="_blank" rel="noopener">静态 PTX 指标能追踪结构性 kernel 回归,却漏掉语义性回归</a></div>
+      <div class="it-sum">在 3060/A10/L40S/A100/H100 五类 GPU 上把静态 PTX 指标与 CUDA event 实测配对,发现 Δregs/Δinstrs 跨 GPU 完全一致但无法捕捉语义 bug——对自动调优的可观测性有直接启示。</div>
     </li>
     </ul>
   </section>
@@ -61,12 +67,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02525" target="_blank" rel="noopener">PEEK:队列感知的预测式 KV Cache 管理</a></div>
+      <div class="it-sum">在 pending 队列上维护增量 radix tree,暴露现有引擎看不到的 prefix-sharing 簇,通过双向遍历匹配引擎 prefix cache 做最长前缀匹配调度与驱逐,面向在线流式 LLM 服务。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02518" target="_blank" rel="noopener">GLM-5 面向 OpenClaw 的单部署 MaaS 推理调参</a></div>
+      <div class="it-sum">针对 28k–30k 输入 / 500 输出的长上下文、工具增强 Agent 负载,服务质量由吞吐、TTFT 与尾延迟主导,给出 serving 参数调优经验。Agent workload 越来越成为服务优化的独立场景。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02522" target="_blank" rel="noopener">Multi-Turn 分布式 MoE 推理(6G 边云)</a></div>
+      <div class="it-sum">揭示 MoE 边云推理中 KV 局部性与弹性专家分派之间的张力——KV 迁移开销大,是数据中心/边缘 MoE 调度的核心权衡。</div>
     </li>
     </ul>
   </section>
@@ -75,12 +84,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">postgres.saneengineer.com</span><a href="https://postgres.saneengineer.com" target="_blank" rel="noopener">PostgreSQL 跨 23 种 EC2 实例类型的性能与成本</a></div>
+      <div class="it-sum">(HN 82 分):Show HN 实测,给出不同实例型号下 Postgres 的性价比曲线,对云端选型是实用参考。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02524" target="_blank" rel="noopener">SWIFT:小波集成的时空云负载预测框架</a></div>
+      <div class="it-sum">纯卷积框架,针对高波动、易突发的云工作负载,兼顾时间局部性与空间依赖,服务于资源调度。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02528" target="_blank" rel="noopener">Kubernetes 运维记忆架构:证据视界分类学</a></div>
+      <div class="it-sum">形式化 K8s 事件保留模型按确定性时间表丢弃最有诊断价值上下文的机制,提出&quot;证据视界&quot;五类边界,面向集群可观测性。</div>
     </li>
     </ul>
   </section>
@@ -89,15 +101,18 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">allaboutcookies.org</span><a href="https://allaboutcookies.org/eu-mandatory-distracted-driver-system" target="_blank" rel="noopener">欧盟要求所有新售汽车强制搭载驾驶员监控摄像头</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 383 分):政策落地,车内摄像头强制化引发隐私争议,是监控 vs 安全的典型治理拐点。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">pcmag.com</span><a href="https://www.pcmag.com/news/a-hackers-arrest-reveals-microsoft-can-track-users-via-a-windows-device" target="_blank" rel="noopener">微软可通过 Windows 设备 ID 追踪用户</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 325 分):一起黑客落网案暴露微软借设备 ID 追踪用户的能力,平台级隐私与数据治理话题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02586" target="_blank" rel="noopener">Auditing the Audit:基准有效性审计的五种失败模式</a></div>
+      <div class="it-sum">治理框架要求评测证据,但基于扰动的构念有效性审计本身脆弱,其结论可能被读者看不到的实现细节悄悄操纵——对 AI 监管的&quot;审计可信度&quot;提出警示。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">bbc.com</span><a href="https://www.bbc.com/news/articles/c33y0n1v1xjo" target="_blank" rel="noopener">补充背景:</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">bbc.com</span><a href="https://www.bbc.com/news/articles/c33y0n1v1xjo" target="_blank" rel="noopener">补充背景:[中国以受贿 3.25 亿美元判处一名官员死刑](https://www.bbc.com/news/articles/c33y0n1v1xjo)(HN 274 分),非 AI 直接相关,列作宏观治理背景。</a> <span class="hot">🔥</span></div>
     </li>
     </ul>
   </section>
@@ -106,15 +121,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02642" target="_blank" rel="noopener">GigaWorld-1:构建机器人策略评估世界模型的路线图</a></div>
+      <div class="it-sum">机器人策略评估依赖缓慢昂贵的真机 rollout,推动用世界模型做代理评估器,系统梳理可靠 world model 的关键属性。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02841" target="_blank" rel="noopener">CLEAR:面向端到端自动驾驶的大规模闭环强化学习</a></div>
+      <div class="it-sum">将 VLA 范式引入 E2E-AD,统一视觉感知、语言理解与动作预测于单一策略,并做大规模闭环 RL。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02865" target="_blank" rel="noopener">DREAMSTEER:潜在世界模型无需微调即可在部署时引导 VLA 策略</a></div>
+      <div class="it-sum">与 TACO:触觉世界模型作为 VLA 后训练自校正器:两篇都攻 VLA 在部署时分布漂移/接触密集任务的失败,前者免微调引导,后者用触觉做局部纠错。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02764" target="_blank" rel="noopener">MorphQuad:可变形四旋翼,追求超人机动/操作/韧性</a></div>
+      <div class="it-sum">EVA-Client:真机策略数据采集/推理/部署统一框架补充了硬件与工程侧进展。</div>
     </li>
     </ul>
   </section>
@@ -123,12 +142,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.03601" target="_blank" rel="noopener">ArchEval:把 AI Agent 当计算架构师来测量</a></div>
+      <div class="it-sum">新基准,要求 agent 解读负载、选机制、用模拟器、预测性能、满足硬约束并决策——超越&quot;写代码/调参&quot;的能力度量,是 LLM 做架构探索的评测基础。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.03701" target="_blank" rel="noopener">SABLE:NDA 安全的闭环 LLM 模拟电路优化框架</a></div>
+      <div class="it-sum">让 LLM 通过 Cadence Virtuoso 等工业 EDA 流优化模拟电路,同时不向云端暴露 PDK、专有原理图与许可绑定工具状态。工业级 LLM-driven EDA 的合规范式。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02595" target="_blank" rel="noopener">Attributing Structured-Output Gains in Function Calling</a></div>
+      <div class="it-sum">提出四层增益归因协议,区分函数调用中的接口对齐 vs 可迁移程序性技能——对&quot;prompt 注入式 skill&quot;的真实收益做严谨归因。</div>
     </li>
     </ul>
   </section>
@@ -137,18 +159,21 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">lttlabs.com</span><a href="https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo" target="_blank" rel="noopener">AMD Ryzen AI Halo 开发套件</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 371 分):除数据中心视角外,它本质是端侧/桌面本地推理平台,统一内存 + NPU 让本地跑较大模型成为可能(与第 1 类交叉,此处从端侧落地角度带过)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02523" target="_blank" rel="noopener">边缘单 GPU 微调 LLM 用于电信网络排障</a></div>
+      <div class="it-sum">电信边缘站点受电力、散热、空间与重量预算约束,该工作在单 GPU 上完成本地微调,满足低延迟与数据主权要求,是端侧适配的务实案例。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.02608" target="_blank" rel="noopener">面向可迁移轻量神经形态计算的无模型时序开关框架</a></div>
+      <div class="it-sum">与 AIGOR:模块化事件驱动 SNN 推理架构:从神经形态/SNN 方向探索资源受限边缘部署,应对器件差异导致的重训练成本。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-06.html">← 2026-07-06</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-09.html">2026-07-09 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

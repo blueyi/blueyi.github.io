@@ -25,7 +25,7 @@
       <li><b>自动化算子优化路线明显升温:Agentic Kernel Optimization(无手写 CUDA 生成 B200 内核)与 CacheCraft(LLM 演化 KV 淘汰策略)两条「LLM 自动发现」路径同时出现,直指编译与推理优化的未来形态。</b></li>
       <li><b>数据中心可持续性成为社区焦点:废热城市尺度实测(HN 279)与 DumpsterCluster 退役 GPU 复用,呼应算力成本与碳排放的双重压力。</b></li>
       <li><b>具身方向 VLA 部署工程化提速:分块层并行推理、推理期反事实重对齐、NPU 卸载冻结编码器,均指向「把 VLA 真正装进机器人/车辆」的落地瓶颈。</b></li>
-      <li><b>社区情绪旁注:今日 HN 最高分(1057)是</b></li>
+      <li><b>社区情绪旁注:今日 HN 最高分(1057)是 [AI;DR(AI; Didn&#x27;t Read)](https://www.rickmanelius.com/p/aidr-ai-didnt-read) 这篇对 AI 内容洪流的反思,虽非 infra 主题,但折射出从业者对「AI 噪音」的普遍倦怠。</b></li>
     </ol>
   </div>
   <section class="domain">
@@ -33,15 +33,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/pc-components/ram/memory-prices-climb-500-percent-in-12-months-up-to-10x-the-lowest-ever-tracked-prices-128gb-of-ddr5-now-usd3-399" target="_blank" rel="noopener">内存价格 12 个月飙涨 500%</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— 128GB DDR5 已至 $3399,达历史最低点 10 倍;DRAM/HBM 涨价潮直击 AI 服务器与终端成本(HN 450 分)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.15764" target="_blank" rel="noopener">H100 普通全局加载(ld.global)的并发响应实测</a></div>
+      <div class="it-sum">— 以 Little&#x27;s Law 作吞吐记账,在 3 颗 H100 SXM5 上用干净微基准刻画 ld.global 与 cp.async 的并发特性(cs.AR)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.16458" target="_blank" rel="noopener">TRACE:面向形式化硬件验证的代数计算引擎</a></div>
+      <div class="it-sum">— 针对乘加、MAC 等算术原语的符号计算机代数(SCA)引擎,应对 AI 时代电路复杂度增长(cs.AR)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.16733" target="_blank" rel="noopener">GoalEvolve:物理设计算法从手工先验走向目标驱动演化</a></div>
+      <div class="it-sum">— 针对多阶段耦合优化流中「阶段局部收益消失/下游退化」问题(cs.AR)。</div>
     </li>
     </ul>
   </section>
@@ -50,15 +54,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">modular.com</span><a href="https://www.modular.com/blog/mojo-open-source" target="_blank" rel="noopener">Mojo 现已开源</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— Modular 正式开源 Mojo,AI 系统编程语言/框架格局的重要节点(HN 124 分)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14953" target="_blank" rel="noopener">T-LLM Compiler:可信的 LLM 代码优化与验证框架</a></div>
+      <div class="it-sum">— 用 LLM 做高层代码变换并引入独立验证,缓解优化正确性难以自证的问题(cs.PL)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14554" target="_blank" rel="noopener">OpenMP Target GPU offload 的显式内存管理利弊</a></div>
+      <div class="it-sum">— 剖析半自动 buffer 同步带来的正确性、性能与资源代价(cs.DC)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14560" target="_blank" rel="noopener">Agentic Kernel Optimization:无需手写 CUDA 生成 GPU Kernel</a></div>
+      <div class="it-sum">— 见第 7 类详述(cs.DC)。</div>
     </li>
     </ul>
   </section>
@@ -67,15 +75,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14555" target="_blank" rel="noopener">CacheCraft:LLM 引导的程序演化自动发现 KV Cache 淘汰策略</a></div>
+      <div class="it-sum">— 摆脱手工 salience 启发式,跨模型/长度/压缩比自动搜索 eviction 策略(cs.DC)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14561" target="_blank" rel="noopener">多类缓存公平性的仿生反馈控制器</a></div>
+      <div class="it-sum">— 解决多租户 LLM 服务中 system prompt/文档/代码/对话四类内容共享淘汰池的公平性(cs.DC)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.16336" target="_blank" rel="noopener">LLM 服务多级 SLA 调度</a></div>
+      <div class="it-sum">— 在 Llumnix 动态多实例调度之上扩展到多租户异构 SLO 分级(cs.AR)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14560" target="_blank" rel="noopener">Agentic Kernel Optimization</a></div>
+      <div class="it-sum">— 在 B200 上以 correctness-gated FlashInfer-Bench 评估 Fused MoE / DSA TopK / Sparse Attention 内核,同属推理算子侧优化(cs.DC)。</div>
     </li>
     </ul>
   </section>
@@ -84,18 +96,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">asmedigitalcollection.asme.org</span><a href="https://asmedigitalcollection.asme.org/sustainablebuildings/article/7/2/024501/1233035/Data-Center-Waste-Heat-as-an-Emerging-Urban" target="_blank" rel="noopener">数据中心废热对街区尺度气温影响的实地测量</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— 揭示数据中心废热作为新兴城市热源的温升影响(HN 279 分)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14614" target="_blank" rel="noopener">DumpsterCluster:用退役 GPU 拼出集群跑 LLaMA-70B</a></div>
+      <div class="it-sum">— 实测 128 卡退役加速器,评估二手 GPU 复用的经济与环保可行性(cs.AR/cs.LG)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14557" target="_blank" rel="noopener">Orbital AI Computing:卫星规模下的碳权衡</a></div>
+      <div class="it-sum">— 低轨(LEO)计算做低时延分布式 AI 服务,用 ESpaS 框架评估生命周期碳强度(cs.DC)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14635" target="_blank" rel="noopener">Belayer:LLM Agentic RL 训练的高效容错</a></div>
+      <div class="it-sum">— GPU rollout 引擎与有状态环境容器耦合下的容错机制(cs.DC)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14563" target="_blank" rel="noopener">Forward Pass Domain Adaptation:免跨层反向传播的适配训练</a></div>
+      <div class="it-sum">— FPO 达 2.7–3.2x 吞吐、省约 40% 峰值显存(cs.LG)。</div>
     </li>
     </ul>
   </section>
@@ -104,18 +121,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" target="_blank" rel="noopener">OpenAI:网络关键能力时代的模型开发节奏控制</a></div>
+      <div class="it-sum">— 对 cyber-critical 能力放慢开发并评估风险(HN 70 分)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">onethousandmeans.com</span><a href="https://www.onethousandmeans.com/p/norway-should-buy-openai" target="_blank" rel="noopener">挪威应该收购 OpenAI</a></div>
+      <div class="it-sum">— 主权 AI 讨论:提议国家收购以掌控关键 AI 基础设施(HN 198 分)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14594" target="_blank" rel="noopener">Geometry Is Not Robustness:PGD 轨迹级鲁棒性研究</a></div>
+      <div class="it-sum">— 质疑仅看最终对抗准确率,引入损失演化/梯度对齐/失败步数等轨迹级诊断(cs.LG)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14620" target="_blank" rel="noopener">自适应性系统中 RL 决策的可解释性</a></div>
+      <div class="it-sum">— 用「另类现实」(Alternative Realities)解释 deep RL 策略决策(cs.LG)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14564" target="_blank" rel="noopener">AI 与可信性的别扭联姻</a></div>
+      <div class="it-sum">— 把 ensemble/reject option 与 N 模冗余/验收测试逐一对标,架起容错与精度增强的方法学桥梁(cs.DC)。</div>
     </li>
     </ul>
   </section>
@@ -124,21 +146,27 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14586" target="_blank" rel="noopener">混合架构上 VLA 的分块层并行推理</a></div>
+      <div class="it-sum">— 解决自动驾驶 VLA 部署的高时延与 GPU 资源压力(cs.DC)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14822" target="_blank" rel="noopener">Imagining Recovery:VLA 推理期反事实重对齐</a></div>
+      <div class="it-sum">— 无需失败数据/重训练/外部纠正即可在线恢复(cs.RO)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14713" target="_blank" rel="noopener">SpotlessGS:动态光照下可重光照 3DGS 用于机器人感知</a></div>
+      <div class="it-sum">— 扩展 DarkGS,缓解自载光照不均对感知的退化(cs.RO)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14772" target="_blank" rel="noopener">MISTac:微创手术视觉触觉传感器</a></div>
+      <div class="it-sum">— 高分辨率、可换触头,恢复术中触诊反馈(cs.RO)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14902" target="_blank" rel="noopener">3DGS SLAM 的几何感知在线建图</a></div>
+      <div class="it-sum">— 初始化与密度控制决定在线建图的算力与迭代分配(cs.RO)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14944" target="_blank" rel="noopener">SkillComposer:自然语言机器人编程的可复用技能学习</a></div>
+      <div class="it-sum">— 让 LLM 分解多步任务并复用既有方案(cs.RO)。</div>
     </li>
     </ul>
   </section>
@@ -147,15 +175,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14560" target="_blank" rel="noopener">Agentic Kernel Optimization:生成 SOTA GPU Kernel</a></div>
+      <div class="it-sum">— 基于 FlashInfer-Bench,在 B200 上以 correctness-gated 协议评估代码 Agent 生成的内核,验证「无手写 CUDA」路线(cs.DC)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14953" target="_blank" rel="noopener">T-LLM Compiler</a></div>
+      <div class="it-sum">— LLM 驱动的代码优化 + 独立验证,见第 2 类(cs.PL)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14771" target="_blank" rel="noopener">From Errors to Proofs:神经符号约束求解的最小核心引导修复</a></div>
+      <div class="it-sum">— 修复 LM 翻译到形式化规范时的「不忠实」问题(cs.PL)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.15579" target="_blank" rel="noopener">Kozuchi Agent:语言无关的开源软件修复 Agent</a></div>
+      <div class="it-sum">— bug report 到正确 patch 的 CI 流水线,显式阶段 + 持久状态(cs.PL)。</div>
     </li>
     </ul>
   </section>
@@ -164,18 +196,21 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.15002" target="_blank" rel="noopener">冻结视觉编码器的 NPU 卸载用于机器人策略训练</a></div>
+      <div class="it-sum">— 把冻结编码器前向迁移到低功耗 NPU,省 GPU 算力(cs.AR)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.16542" target="_blank" rel="noopener">One Residual with Three Reuses:腕带手势感知前端</a></div>
+      <div class="it-sum">— MEMS IMU + 60GHz FMCW 雷达,硬币电池功耗预算内的 always-on 前端(cs.AR)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.14557" target="_blank" rel="noopener">Orbital AI Computing 的 LEO 低时延分布式推理</a></div>
+      <div class="it-sum">— 见第 4 类,卫星边缘化的分布式 AI 服务形态(cs.DC)。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-08-18.html">← 2026-08-18</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-08-20.html">2026-08-20 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

@@ -33,15 +33,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">cerebras.ai</span><a href="https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai" target="_blank" rel="noopener">Cerebras 携手 OpenAI 超高速加速 GPT-5.6 Sol</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 696):晶圆级引擎跑 GPT-5.6 推理,「ultrafast」主打 token 生成速度,AI 专用芯片在云端推理侧的又一次高调秀肌肉。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13127" target="_blank" rel="noopener">HBF 在 LLM 服务系统中的潜力</a></div>
+      <div class="it-sum">(arXiv):探讨 High-Bandwidth Flash 作为 HBM 的容量型扩展,缓解模型权重、KV Cache 与多模型变体带来的显存压力。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12354" target="_blank" rel="noopener">SCALE-Sim EVA:可扩展可视化加速器仿真框架</a></div>
+      <div class="it-sum">(arXiv):面向异构计算单元、层级存储与专用数据搬运路径的 IR-aware 加速器建模框架。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12934" target="_blank" rel="noopener">Dryas:高速互连追踪分析的可重编程引擎</a></div>
+      <div class="it-sum">(arXiv):FPGA 实现的高带宽低延迟互连协议的开发、调试与优化引擎。</div>
     </li>
     </ul>
   </section>
@@ -50,6 +54,7 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12409" target="_blank" rel="noopener">A Rig of Transformations(数据布局变换)</a></div>
+      <div class="it-sum">(arXiv):高阶函数式语言中让用户描述数据类型运行时表示及其变换,弥合「程序级建模」与「二进制级布局」之间的鸿沟,对编译器后端布局控制有借鉴意义。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">近两天无重大独立动态(背景:本轮 arXiv 未见 MLIR/TVM/XLA/Triton 等主流编译框架的直接新作,编译器侧更多体现在 §7 的 LLM 驱动代码/RTL 生成方向)。</a></div>
@@ -61,15 +66,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/Qwen/Qwen3.8-27B-FP8" target="_blank" rel="noopener">Qwen3.8-27B-FP8 发布</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 856):27B 中尺寸模型直接以 FP8 精度发布,面向云端/高端消费级推理的量化落地。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13057" target="_blank" rel="noopener">TEMPO:Makespan 感知的专家并行负载均衡</a></div>
+      <div class="it-sum">(arXiv):指出 MoE 专家并行中「专家耗时线性于 token 数」的假设不成立——低于 ~156–168 token 时 HBM 权重流式主导,成本挂在激活副本上,提出跨显存/算力约束的均衡策略。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12419" target="_blank" rel="noopener">LoKiFormer:局部感知注意力 + 解耦知识记忆</a></div>
+      <div class="it-sum">(arXiv):针对预训练效率,解决注意力缺局部性归纳偏置与 MoE 隐式耦合知识存储两大低效点。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12435" target="_blank" rel="noopener">MARCH:内容路由状态锚点扩展循环记忆</a></div>
+      <div class="it-sum">(arXiv):用内容路由的状态锚点压缩历史,兼顾长上下文检索与线性 KV 解码开销。</div>
     </li>
     </ul>
   </section>
@@ -78,15 +87,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">tailscale.com</span><a href="https://tailscale.com/blog/sqlite-wal-reset-bug" target="_blank" rel="noopener">追查 16 年前 SQLite WAL-reset 缺陷</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 1199):Tailscale 深挖一个潜伏 16 年的 WAL 重置 bug,存储层持久性/一致性问题的经典案例,对依赖本地 SQLite 的服务有实战价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12915" target="_blank" rel="noopener">InFactPlanner:可持续地理分布式 LLM 数据中心规划</a></div>
+      <div class="it-sum">(arXiv):将 LLM 推理的能耗、碳排放、水耗与服务质量的权衡纳入建站前的规划决策。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12633" target="_blank" rel="noopener">微秒级跨 VM 核弹性调度</a></div>
+      <div class="it-sum">(arXiv):Serverless 场景下同置轻量 VM 的物理核迁移,兼顾部署密度与尾延迟保护。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13107" target="_blank" rel="noopener">Meshlib:无 Sidecar 服务网格的进程内策略执行</a></div>
+      <div class="it-sum">(arXiv):去除每 Pod sidecar 代理带来的延迟与资源开销,同时不牺牲安全策略保证。</div>
     </li>
     </ul>
   </section>
@@ -95,15 +108,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12441" target="_blank" rel="noopener">Dual Spatial-Temporal Attribution:图异常检测可解释性</a></div>
+      <div class="it-sum">(arXiv):为 AddGraph 等动态图检测器提供架构对齐的事后归因,让告警可审计可信任。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12447" target="_blank" rel="noopener">Transformer 残差流中的几何与行为分层</a></div>
+      <div class="it-sum">(arXiv):可解释性研究,发现预测方向构成内容定义的「特权锚点」。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.18064" target="_blank" rel="noopener">Move 语言的纵深运行时安全</a></div>
+      <div class="it-sum">(arXiv):Aptos 智能合约 VM 在类型/引用安全之外的运行时纵深防御。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2605.10007" target="_blank" rel="noopener">Move 命令式一等函数的形验证</a></div>
+      <div class="it-sum">(arXiv):Move Prover 对高阶函数(动态分派)表示的形验证扩展。</div>
     </li>
     </ul>
   </section>
@@ -112,18 +129,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12854" target="_blank" rel="noopener">BrainWAM:语义先验 + 预测动力学的自动驾驶动作空间协调</a></div>
+      <div class="it-sum">(arXiv):将 VLA 的语义推理与世界动作模型(WAM)的未来感知统一到同一动作空间。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12416" target="_blank" rel="noopener">RoboSynChallenge:通过合成技能泛化掌握真实世界灵巧操作</a></div>
+      <div class="it-sum">(arXiv):统一基准评估操作策略在真实世界数据稀缺下的泛化能力。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12683" target="_blank" rel="noopener">FUSE:主动功能可供性接地</a></div>
+      <div class="it-sum">(arXiv):根据功能而非身份识别物体,主动采集揭示判别性功能证据的观测。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12707" target="_blank" rel="noopener">SAP-Nav:空间语义表示 + 主动感知的分层开放词表导航</a></div>
+      <div class="it-sum">(arXiv)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12835" target="_blank" rel="noopener">AirForesight:UAV-VLN 的当前到未来空间地图想象</a></div>
+      <div class="it-sum">(arXiv);ASPIRE-VINS:自适应样条视觉惯性导航(arXiv);遗传模糊系统的多机器人行星任务协调(arXiv)。</div>
     </li>
     </ul>
   </section>
@@ -132,18 +154,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">community.openai.com</span><a href="https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027" target="_blank" rel="noopener">ChatGPT 桌面版 Linux 上线 Codex 预览</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 463):Codex 编程智能体进入 Linux 桌面端,AI 辅助编码的产品化一步。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13122" target="_blank" rel="noopener">验证中心的 AI 辅助 GPU 移植(25 万行遗留气象代码)</a></div>
+      <div class="it-sum">(arXiv):LLM 驱动 CLI 智能体移植大规模科学计算代码,强调「科学资产可信度」的验证约束。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12635" target="_blank" rel="noopener">GateTruth:用变异测试审计 RTL 基准的严谨性</a></div>
+      <div class="it-sum">(arXiv):质疑 LLM 硬件设计基准的 testbench 质量。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12684" target="_blank" rel="noopener">Spec-Driven 硬件演进:可执行契约精化 + 证明引导 RTL 更新</a></div>
+      <div class="it-sum">(arXiv);SynAct:推理-行动 LLM 智能体做自适应综合优化(arXiv)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13027" target="_blank" rel="noopener">为什么预取器会失败?让智能体来回答</a></div>
+      <div class="it-sum">(arXiv);Vero:AI 智能体能构建形验证软件仓库吗?(arXiv)。</div>
     </li>
     </ul>
   </section>
@@ -152,18 +179,21 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/unsloth/Qwen3.8-27B-GGUF" target="_blank" rel="noopener">Unsloth Qwen3.8-27B GGUF</a></div>
+      <div class="it-sum">(HN 63):Qwen3.8-27B 的 GGUF 量化版本,可直接用于 llama.cpp 等本地/边缘推理栈。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.13144" target="_blank" rel="noopener">LipCache:边缘图像分类的带认证缓存推理代理</a></div>
+      <div class="it-sum">(arXiv):用「认证缓存」替代经验相似度阈值,降低边缘视觉服务推理成本的同时避免决策边界附近的静默误分类。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12500" target="_blank" rel="noopener">Lonic:INT4 全局部在线 SNN 训练的算法-硬件协同设计</a></div>
+      <div class="it-sum">(arXiv):面向能效的脉冲神经网络端侧训练,INT4 精度下的算法-硬件协同。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-08-14.html">← 2026-08-14</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-08-18.html">2026-08-18 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

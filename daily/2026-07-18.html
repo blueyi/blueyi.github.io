@@ -21,27 +21,31 @@
   <div class="highlights">
     <h2>🌟 今日亮点</h2>
     <ol>
-      <li><b>太空数据中心从&quot;营销词&quot;迈向&quot;工程账&quot;</b>：arXiv 一次性放出</li>
-      <li><b>AI 人才战升级到司法层</b></li>
-      <li><b>AGI 评测赛自身出现信任危机</b></li>
-      <li><b>FHE 推理进入亚秒时代</b></li>
-      <li><b>VLA 补力反馈成新共识</b></li>
+      <li><b>太空数据中心从&quot;营销词&quot;迈向&quot;工程账&quot;</b>：arXiv 一次性放出 太空 AI 算力的成本与网络极限 与配套的 地面侧任务编译工具链,标志着这条路线开始进入可评估、可运维的阶段。</li>
+      <li><b>AI 人才战升级到司法层</b>：Apple 向数十名 OpenAI 员工发律师函,接下来&quot;竞业+商业秘密&quot;很可能成为大厂锁人的常规工具。</li>
+      <li><b>AGI 评测赛自身出现信任危机</b>：Kaggle Measuring AGI 比赛的评审不一致质疑 被证据链推到 HN 首页,提醒行业:声称&quot;衡量 AGI&quot;的比赛自己要先经得起衡量。</li>
+      <li><b>FHE 推理进入亚秒时代</b>：Belfort Labs 展示 200 ms 完成 CIFAR-10 同态加密推理,隐私计算与云端 LLM 结合的时间表被实质性提前。</li>
+      <li><b>VLA 补力反馈成新共识</b>：LIFT 与 DiMaS 一起表明,单纯视觉驱动的 VLA 已到瓶颈,接触状态下的力信号与表征引导正在成为下一阶段共同的加速方向。</li>
     </ol>
   </div>
   <section class="domain">
     <h2>1️⃣ AI 芯片</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14622" target="_blank" rel="noopener">ExaGEMM:CPU 低比特 GEMM 的关联式寄存器内计算探索框架</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14622" target="_blank" rel="noopener">[ExaGEMM:CPU 低比特 GEMM 的关联式寄存器内计算探索框架](https://arxiv.org/abs/2607.14622)</a></div>
+      <div class="it-sum">(arXiv cs.AR):面向 1/2/4-bit 权重与可变激活精度的 CPU 推理场景,提出在固定 SIMD 与寄存器预算下的轻量支持选择方法。对不打算上 GPU、只想在通用 CPU 上跑 QLoRA/量化模型推理的路线是重要参考。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14789" target="_blank" rel="noopener">Valinor:物理内存分配的架构级加速</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14789" target="_blank" rel="noopener">[Valinor:物理内存分配的架构级加速](https://arxiv.org/abs/2607.14789)</a></div>
+      <div class="it-sum">(arXiv cs.AR):当前 minor page fault 一次动辄数万 cycle,对短生命周期 serverless / 微服务 workload 是明显瓶颈。Valinor 提出快速、节能且可编程的硬件级页面分配单元,直接命中云原生 AI 服务栈里的隐性长尾开销。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15123" target="_blank" rel="noopener">NIFA:非线性 IMC 增强的 FPGA 用于高效 ML 推理</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15123" target="_blank" rel="noopener">[NIFA:非线性 IMC 增强的 FPGA 用于高效 ML 推理](https://arxiv.org/abs/2607.15123)</a></div>
+      <div class="it-sum">(arXiv cs.AR):在 FPGA 里塞入 ReRAM 模拟存内计算(VMM 直接在 crossbar 内完成),声称在算力密度与能效上比传统数字逻辑高一个量级,给&quot;介于 ASIC 与 FPGA 之间&quot;的定制路径提供新样本。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14908" target="_blank" rel="noopener">CODA:边缘视频扩散的算法-硬件协同设计,NMP 驱动的计算-缓存算子解耦</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14908" target="_blank" rel="noopener">[CODA:边缘视频扩散的算法-硬件协同设计,NMP 驱动的计算-缓存算子解耦](https://arxiv.org/abs/2607.14908)</a></div>
+      <div class="it-sum">(arXiv cs.AR):瞄准边缘设备本地跑视频扩散模型,通过近内存处理(NMP)把 Cross-Timestep Caching 中的计算与缓存算子解耦,是芯片架构层面回应&quot;端侧生成&quot;需求的一个方向。</div>
     </li>
     </ul>
   </section>
@@ -49,16 +53,20 @@
     <h2>2️⃣ AI 编译器与框架</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14420" target="_blank" rel="noopener">NetKAT 快速定量分析器(wNetKAT)</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14420" target="_blank" rel="noopener">[NetKAT 快速定量分析器(wNetKAT)](https://arxiv.org/abs/2607.14420)</a></div>
+      <div class="it-sum">(arXiv cs.PL):虽然定位是网络 DSL,但其&quot;加权自动机 + 符号化 backend&quot;的编译思路,对做定量分析型算子调度语言(如带成本模型的 Halide/TVM 变体)有直接借鉴意义。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15174" target="_blank" rel="noopener">Mech:机械化验证的 Choreographic Programming</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15174" target="_blank" rel="noopener">[Mech:机械化验证的 Choreographic Programming](https://arxiv.org/abs/2607.15174)</a></div>
+      <div class="it-sum">(arXiv cs.PL):以全局视角写出分布式行为、再由 endpoint projection 编译到各节点。对手写多机 collective / pipeline 并行日益复杂的今天,这类&quot;全局 IR + 自动切分&quot;的思想很可能被搬进下一代分布式训练/推理编译器。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14325" target="_blank" rel="noopener">两侧类型理论(Two-Sided Type Theory)的逻辑基础</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14325" target="_blank" rel="noopener">[两侧类型理论(Two-Sided Type Theory)的逻辑基础](https://arxiv.org/abs/2607.14325)</a></div>
+      <div class="it-sum">(arXiv cs.PL):偏理论,但 two-sided judgement 的扩展性对未来 MLIR/Triton 风格 DSL 的类型系统有潜在启发。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14453" target="_blank" rel="noopener">Simply Typed 反向模式 AD + 变体类型的指称正确性</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14453" target="_blank" rel="noopener">[Simply Typed 反向模式 AD + 变体类型的指称正确性](https://arxiv.org/abs/2607.14453)</a></div>
+      <div class="it-sum">(arXiv cs.PL):把 JAX/PyTorch 里&quot;含分支的反向传播&quot;落实到简单类型语义上的一次尝试,给自动微分编译器加严格性做地基。</div>
     </li>
     </ul>
   </section>
@@ -66,16 +74,20 @@
     <h2>3️⃣ AI 推理优化(数据中心)</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">sofar.belfortlabs.cloud</span><a href="https://sofar.belfortlabs.cloud/" target="_blank" rel="noopener">Homomorphically Encrypted CIFAR-10 Inference in 200 ms</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">sofar.belfortlabs.cloud</span><a href="https://sofar.belfortlabs.cloud/" target="_blank" rel="noopener">[Homomorphically Encrypted CIFAR-10 Inference in 200 ms](https://sofar.belfortlabs.cloud/)</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 65 分):比利时 Belfort Labs 展示同态加密下 CIFAR-10 推理压到 200 ms,虽然还是小模型,但把 FHE 推理从&quot;分钟级&quot;推到&quot;亚秒级&quot;,让隐私计算上云端 LLM 推理管线的时间表实质性提前。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14394" target="_blank" rel="noopener">DRIFT:面向分布式频谱神经算子的直接约简 FFT</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14394" target="_blank" rel="noopener">[DRIFT:面向分布式频谱神经算子的直接约简 FFT](https://arxiv.org/abs/2607.14394)</a></div>
+      <div class="it-sum">(arXiv cs.DC):Fourier Neural Operator 上高分辨率训练/推理时,分布式 FFT 是瓶颈。DRIFT 针对 PDE 代理模型场景重构了通信/计算比,是 AI for Science 集群推理的关键优化点。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15115" target="_blank" rel="noopener">Don&#x27;t Predict, Prioritize:重新思考 GPU 可靠性评估</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15115" target="_blank" rel="noopener">[Don&#x27;t Predict, Prioritize:重新思考 GPU 可靠性评估](https://arxiv.org/abs/2607.15115)</a></div>
+      <div class="it-sum">(arXiv cs.DC):作者指出精确预测 GPU 故障时刻本质困难,与其做预测性维护不如做&quot;优先级调度&quot;。对同步训练大集群里&quot;单节点崩=全体 stall&quot;的痛点提出更务实的运维思路。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14171" target="_blank" rel="noopener">Branching Policy Optimization:沙盒原生的语言智能体 RL</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14171" target="_blank" rel="noopener">[Branching Policy Optimization:沙盒原生的语言智能体 RL](https://arxiv.org/abs/2607.14171)</a></div>
+      <div class="it-sum">(arXiv cs.LG):PPO/RLOO/GRPO 都从 RLHF 继承了 N 条独立 rollout 的拓扑,BPO 提出更贴合可执行沙盒场景的分支策略,是 LLM Agent 训练侧算力效率的直接改进。</div>
     </li>
     </ul>
   </section>
@@ -83,19 +95,24 @@
     <h2>4️⃣ 数据中心与基础设施</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14172" target="_blank" rel="noopener">The Cost and Network Limits of Space-Based AI Compute</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14172" target="_blank" rel="noopener">[The Cost and Network Limits of Space-Based AI Compute](https://arxiv.org/abs/2607.14172)</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(arXiv cs.DC):系统性对比 LEO 太空数据中心与地面数据中心的发射成本、供电、散热、辐射与算网性能,并指出关键区别是从 Clos 拓扑迁到轨道网络的通信模型变化。是本周关于&quot;太空 AI 数据中心是否可行&quot;最扎实的一篇量化分析。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14798" target="_blank" rel="noopener">Ground-Side Mission Plan Compilation with Policy-as-Code Guardrails for Cloud-Native Satellite Platforms</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14798" target="_blank" rel="noopener">[Ground-Side Mission Plan Compilation with Policy-as-Code Guardrails for Cloud-Native Satellite Platforms](https://arxiv.org/abs/2607.14798)</a></div>
+      <div class="it-sum">(arXiv cs.DC):配套上一篇,给 ORCHIDE / Axiom AxDCU-1 / Kepler Jetson 等在轨云原生平台补齐&quot;地面侧任务编译 + 策略即代码防护&quot;工具链,是把&quot;太空算力&quot;跑成可运维产品的一步。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14489" target="_blank" rel="noopener">EdgeFaaS:面向边缘计算的函数式框架</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14489" target="_blank" rel="noopener">[EdgeFaaS:面向边缘计算的函数式框架](https://arxiv.org/abs/2607.14489)</a></div>
+      <div class="it-sum">(arXiv cs.DC):边缘节点异构度极高,现有分布式框架应对不佳,EdgeFaaS 用 FaaS 抽象兜住这层复杂度,可与 AI 推理调度层结合。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14413" target="_blank" rel="noopener">Byzantine Agreement 在完全信息、自适应对手模型下的轮次复杂度下界</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14413" target="_blank" rel="noopener">[Byzantine Agreement 在完全信息、自适应对手模型下的轮次复杂度下界](https://arxiv.org/abs/2607.14413)</a></div>
+      <div class="it-sum">(arXiv cs.DC):把经典下界从 Ω(t/√(n log n)) 推到 Ω(t²/(n log n)),对分布式训练/推理里做 fault-tolerant 协议的底层理论支撑意义显著。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15185" target="_blank" rel="noopener">Blocklace Byzantine-Repelling CRDT 的内存耗尽攻击</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15185" target="_blank" rel="noopener">[Blocklace Byzantine-Repelling CRDT 的内存耗尽攻击](https://arxiv.org/abs/2607.15185)</a></div>
+      <div class="it-sum">(arXiv cs.DC):Blocklace 类结构近年很火,这篇给出实用的内存耗尽攻击面,提醒做分布式状态同步基础设施的团队警惕新型 DoS 向量。</div>
     </li>
     </ul>
   </section>
@@ -103,16 +120,20 @@
     <h2>5️⃣ AI 安全与治理</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">ft.com</span><a href="https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166" target="_blank" rel="noopener">Apple 对数十名 OpenAI 员工发出法律函件</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">ft.com</span><a href="https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166" target="_blank" rel="noopener">[Apple 对数十名 OpenAI 员工发出法律函件](https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166)</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 370 分):Apple 就近期从其挖走的多位 AI 高管/工程师发出律师函,可能涉及竞业与商业秘密。是继 Anthropic-Google、xAI-OpenAI 之后又一轮&quot;AI 人才竞业战&quot;,大厂如何在司法层面锁定核心团队将影响未来几年的模型/基础设施人才流动。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">kaggle.com</span><a href="https://www.kaggle.com/competitions/kaggle-measuring-agi/discussion/724918#3498423" target="_blank" rel="noopener">Kaggle &quot;Measuring AGI&quot; 比赛评审与获奖流程被质疑存在不一致</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">kaggle.com</span><a href="https://www.kaggle.com/competitions/kaggle-measuring-agi/discussion/724918#3498423" target="_blank" rel="noopener">[Kaggle &quot;Measuring AGI&quot; 比赛评审与获奖流程被质疑存在不一致](https://www.kaggle.com/competitions/kaggle-measuring-agi/discussion/724918#3498423)</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 436 分):一场直接命名为&quot;衡量 AGI&quot;的评测赛被参赛者提交系统性证据,指出评审与结果选择存在不一致。对做 LLM/Agent benchmark 公信力的行业信任度是负面事件,后续可能推动更严格的评测治理规范。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14123" target="_blank" rel="noopener">Position:可解释性研究应优先建立基础而非堆砌 Ad-hoc 方法</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14123" target="_blank" rel="noopener">[Position:可解释性研究应优先建立基础而非堆砌 Ad-hoc 方法](https://arxiv.org/abs/2607.14123)</a></div>
+      <div class="it-sum">(arXiv cs.LG):作者点出 XAI 论文虽多,却极少真正嵌入端到端 human-in-the-loop 工作流。是本周 AI 治理侧一篇值得转发的立场文。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14157" target="_blank" rel="noopener">Certified Domain Consistency for Multi-Domain Retrieval (C3R)</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14157" target="_blank" rel="noopener">[Certified Domain Consistency for Multi-Domain Retrieval (C3R)](https://arxiv.org/abs/2607.14157)</a></div>
+      <div class="it-sum">(arXiv cs.LG):在多域检索/RAG 场景下,给每个域一个可认证的&quot;污染预算&quot;上限,是 RAG 与 Agent 应用做合规控制时可直接落地的一层保护机制。</div>
     </li>
     </ul>
   </section>
@@ -120,28 +141,36 @@
     <h2>6️⃣ 具身智能</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14236" target="_blank" rel="noopener">Never Too Late for Force:LIFT 用反应式力反馈加速 VLA 后训练</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14236" target="_blank" rel="noopener">[Never Too Late for Force:LIFT 用反应式力反馈加速 VLA 后训练](https://arxiv.org/abs/2607.14236)</a></div>
+      <div class="it-sum">(arXiv cs.RO):当前视觉主导的 VLA 一旦进入接触状态(视觉被遮挡、深度模糊)就容易偏离示教分布,LIFT 在后训练阶段&quot;迟到但仍有效&quot;地注入力信号,是 VLA 从&quot;抓取秀&quot;走向真实工业任务的关键一步。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14280" target="_blank" rel="noopener">DiMaS:分布匹配用于 Vision-Language-Action 模型的行为引导</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14280" target="_blank" rel="noopener">[DiMaS:分布匹配用于 Vision-Language-Action 模型的行为引导](https://arxiv.org/abs/2607.14280)</a></div>
+      <div class="it-sum">(arXiv cs.RO):把语言/视觉模型里成熟的&quot;表征引导(representation steering)&quot;搬到 flow-matching VLA 上,提供了不重训即可细粒度控制机器人行为的方法。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14252" target="_blank" rel="noopener">MEMORA:从第一人称视频构建具身动作记忆</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14252" target="_blank" rel="noopener">[MEMORA:从第一人称视频构建具身动作记忆](https://arxiv.org/abs/2607.14252)</a></div>
+      <div class="it-sum">(arXiv cs.RO):提出 Embodied Action Memory 概念,把地点、物体状态变化、既往操作序列显式建模到长程规划里,弥补当前&quot;只看当前 scene 就规划&quot;的短板。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14183" target="_blank" rel="noopener">Open-AoE:开源第一人称操作数据集与工具链</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14183" target="_blank" rel="noopener">[Open-AoE:开源第一人称操作数据集与工具链](https://arxiv.org/abs/2607.14183)</a></div>
+      <div class="it-sum">(arXiv cs.RO):从手机端采集到模型训练全流程开源,针对社区亟需的&quot;低成本高质量 embodied 数据&quot;痛点。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14182" target="_blank" rel="noopener">Semantic Audio-driven Understanding for Dynamic Humanoid Whole Body Control</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14182" target="_blank" rel="noopener">[Semantic Audio-driven Understanding for Dynamic Humanoid Whole Body Control](https://arxiv.org/abs/2607.14182)</a></div>
+      <div class="it-sum">(arXiv cs.RO):把语音语义直接接入人形机器人的全身控制策略,减少对预编排动作序列的依赖,对现场演示/展台场景很实用。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14341" target="_blank" rel="noopener">Beyond Visual Grasping:复杂抓取的检测到执行 benchmark</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14341" target="_blank" rel="noopener">[Beyond Visual Grasping:复杂抓取的检测到执行 benchmark](https://arxiv.org/abs/2607.14341)</a></div>
+      <div class="it-sum">(arXiv cs.RO):现有抓取评测多集中在孤立的视觉位姿检测,该 benchmark 引入多步推理与语义要求,更接近真实使用。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14177" target="_blank" rel="noopener">Adaptive Control of Motor-Position-Controlled Flexible Joint Robots</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14177" target="_blank" rel="noopener">[Adaptive Control of Motor-Position-Controlled Flexible Joint Robots](https://arxiv.org/abs/2607.14177)</a></div>
+      <div class="it-sum">(arXiv cs.RO):针对柔性关节机器人在关节刚度未知情况下的自适应控制,对协作机器人/人形关节长期磨损带来的性能漂移是刚需。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14262" target="_blank" rel="noopener">Stochastic Filtering for Quorum Sensing in Robot Swarms</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14262" target="_blank" rel="noopener">[Stochastic Filtering for Quorum Sensing in Robot Swarms](https://arxiv.org/abs/2607.14262)</a></div>
+      <div class="it-sum">(arXiv cs.RO):在匿名通信下用随机滤波做集群 quorum 估计,是集群机器人向真实通信条件靠近的一小步。</div>
     </li>
     </ul>
   </section>
@@ -149,16 +178,20 @@
     <h2>7️⃣ AI 自动算子与代码生成优化</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14165" target="_blank" rel="noopener">Towards Reliable AI-Assisted Analog Design:面向 SAR ADC 生成的模板约束 LLM 智能体</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14165" target="_blank" rel="noopener">[Towards Reliable AI-Assisted Analog Design:面向 SAR ADC 生成的模板约束 LLM 智能体](https://arxiv.org/abs/2607.14165)</a></div>
+      <div class="it-sum">(arXiv cs.AR):直接把 LLM 用在模拟 EDA 上会大量幻觉、SPICE 仿真不过关。作者用&quot;模板约束 + 智能体&quot;框架把可用性显著拉高,是 LLM 写电路(而非 RTL)方向最新的可靠性尝试。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15068" target="_blank" rel="noopener">Pattern-Guided Design Space Exploration for FPGA Accelerator Design</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15068" target="_blank" rel="noopener">[Pattern-Guided Design Space Exploration for FPGA Accelerator Design](https://arxiv.org/abs/2607.15068)</a></div>
+      <div class="it-sum">(arXiv cs.AR):HLS 面临的 pipeline/unroll/tile/reorder/buffer 组合空间巨大,该工作用 kernel 中的&quot;重复计算模式&quot;做导向式搜索,与 AlphaEvolve / AVO 类&quot;AI 找算子实现&quot;路线互为补充。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15005" target="_blank" rel="noopener">Differentiable Routability-Driven Package Floorplanning</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15005" target="_blank" rel="noopener">[Differentiable Routability-Driven Package Floorplanning](https://arxiv.org/abs/2607.15005)</a></div>
+      <div class="it-sum">(arXiv cs.AR):把封装 floorplan + pin 分配做成可微优化,对高级封装(chiplet/2.5D)时代的自动化 EDA 是关键组件。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14137" target="_blank" rel="noopener">Untrusted Authors, Trusted Answers:保真度分级翻译的演算</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14137" target="_blank" rel="noopener">[Untrusted Authors, Trusted Answers:保真度分级翻译的演算](https://arxiv.org/abs/2607.14137)</a></div>
+      <div class="it-sum">(arXiv cs.PL):把多源多目标翻译看作图,而非单条链路,给&quot;LLM 生成代码/算子后如何组合校验&quot;的多路径正确性问题提供理论工具。</div>
     </li>
     </ul>
   </section>
@@ -166,25 +199,30 @@
     <h2>8️⃣ 边缘与端侧推理</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14181" target="_blank" rel="noopener">Quantize with Confidence? 代码生成场景下的量化实证研究</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14181" target="_blank" rel="noopener">[Quantize with Confidence? 代码生成场景下的量化实证研究](https://arxiv.org/abs/2607.14181)</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(arXiv cs.PL):随着 Ollama 等本地推理框架普及,越来越多开发者在笔记本上跑 code LLM。这篇系统评估 PTQ 在代码生成任务上的实际影响,是端侧部署 code 模型的直接参考。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14747" target="_blank" rel="noopener">Toward Energy-Efficient and Low-Power Arrhythmia Detection for Wearable Devices</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14747" target="_blank" rel="noopener">[Toward Energy-Efficient and Low-Power Arrhythmia Detection for Wearable Devices](https://arxiv.org/abs/2607.14747)</a></div>
+      <div class="it-sum">(arXiv cs.AR):把 DL 心律失常检测塞进可穿戴设备的功耗预算里,是&quot;AI 芯片 + 端侧推理&quot;交叉方向的实际用例。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14908" target="_blank" rel="noopener">CODA(重复引用)</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14908" target="_blank" rel="noopener">[CODA(重复引用)](https://arxiv.org/abs/2607.14908)</a></div>
+      <div class="it-sum">面向边缘视频扩散生成,把 CTC 缓存搬到近内存单元,不仅是芯片话题,也是端侧生成式 AI 落地的关键路径。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14176" target="_blank" rel="noopener">Low-Latency Relay Selection in NR-V2X via GIN with Edge Features</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14176" target="_blank" rel="noopener">[Low-Latency Relay Selection in NR-V2X via GIN with Edge Features](https://arxiv.org/abs/2607.14176)</a></div>
+      <div class="it-sum">(arXiv cs.LG):V2X 场景下用图同构网络做低延迟中继选择,是&quot;车端小模型 + 端云协同&quot;的具体样本。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14160" target="_blank" rel="noopener">QFireNet:Sentinel-2 影像的量子增强 U-Net</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.14160" target="_blank" rel="noopener">[QFireNet:Sentinel-2 影像的量子增强 U-Net](https://arxiv.org/abs/2607.14160)</a></div>
+      <div class="it-sum">(arXiv cs.LG):偏遥感/端侧推理探索,量子混合方案对高维光谱特征建模是新维度。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-17.html">← 2026-07-17</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-21.html">2026-07-21 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

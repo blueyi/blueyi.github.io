@@ -32,16 +32,20 @@
     <h2>1️⃣ AI 芯片</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener">AMD 收购 Taalas，将模型「蚀刻」进硅片以提升推理性能</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener">[AMD 收购 Taalas，将模型「蚀刻」进硅片以提升推理性能](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344)</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">（HN 311）——Taalas 的技术路线是将预训练模型直接蚀刻为硅片中的固定电路，绕过传统指令执行开销。AMD 此举标志推理芯片从通用 GPU 向专用化加速迈出关键一步。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread" target="_blank" rel="noopener">Nvidia Vera 白皮书被指存在一处关键疑点</a></div>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread" target="_blank" rel="noopener">[Nvidia Vera 白皮书被指存在一处关键疑点](https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread)</a></div>
+      <div class="it-sum">（HN 199）——Chips and Cheese 对 Nvidia 下一代 Vera 架构白皮书做了深度技术剖析，发现其中一处线程调度描述与架构图示存在矛盾，可能影响对 Vera 实际并行能力的判断。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04169" target="_blank" rel="noopener">异构 DRAM-PIM-GPU 系统的高效设计原则</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04169" target="_blank" rel="noopener">[异构 DRAM-PIM-GPU 系统的高效设计原则](https://arxiv.org/abs/2608.04169)</a></div>
+      <div class="it-sum">（arXiv cs.AR）——系统性评估了 PIM（存内计算）+ GPU 异构架构在 LLM 解码阶段的表现，揭示现有设计实践中被忽略的关键瓶颈：PIM 与 GPU 间的数据迁移开销在长文本生成场景下可能抵消 PIM 的能效优势。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04247" target="_blank" rel="noopener">面向异构多核 SoC 的集中式性能监控架构</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04247" target="_blank" rel="noopener">[面向异构多核 SoC 的集中式性能监控架构](https://arxiv.org/abs/2608.04247)</a></div>
+      <div class="it-sum">（arXiv cs.AR）——提出统一 HPC（硬件性能计数器）抽象层，解决嵌入式 SoC 中 CPU/加速器/互连/内存控制器各自独立监控、难以协同调优的痛点。</div>
     </li>
     </ul>
   </section>
@@ -57,13 +61,16 @@
     <h2>3️⃣ AI 推理优化（数据中心）</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04502" target="_blank" rel="noopener">AFD-Ledger：Attention-FFN 分离架构的部署资源配置</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04502" target="_blank" rel="noopener">[AFD-Ledger：Attention-FFN 分离架构的部署资源配置](https://arxiv.org/abs/2608.04502)</a></div>
+      <div class="it-sum">（arXiv cs.DC）——针对 MoE 大模型推理中 AFD（Attention 与 FFN 物理分离）架构，在给定硬件预算和 TPOT SLO 约束下求解最优部署配置。填补了 AFD 从「能跑」到「最优跑」之间的工程空白。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04991" target="_blank" rel="noopener">RAC：面向 Split LLM 推理的参考感知激活压缩</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04991" target="_blank" rel="noopener">[RAC：面向 Split LLM 推理的参考感知激活压缩](https://arxiv.org/abs/2608.04991)</a></div>
+      <div class="it-sum">（arXiv cs.DC）——Split 推理（终端跑 head/tail、云端跑中间层）面临中间激活传输瓶颈，RAC 利用上一层的激活分布作为参考，在保持精度的同时大幅压缩跨网络传输量。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04974" target="_blank" rel="noopener">AsymSpec：非对称网络下的云-边缘投机解码</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04974" target="_blank" rel="noopener">[AsymSpec：非对称网络下的云-边缘投机解码](https://arxiv.org/abs/2608.04974)</a></div>
+      <div class="it-sum">（arXiv cs.DC）——在云端大模型 + 边缘小模型的投机解码架构中，上链带宽受限时候选 token 排队导致验证端闲置。AsymSpec 以调度策略同时利用边缘空闲算力做乐观推理，缓解 stop-and-wait 的效率损失。（边缘侧影响见第 8 类）</div>
     </li>
     </ul>
   </section>
@@ -71,7 +78,8 @@
     <h2>4️⃣ 数据中心与基础设施</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04413" target="_blank" rel="noopener">基于 eBPF 的零插桩微服务依赖发现</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04413" target="_blank" rel="noopener">[基于 eBPF 的零插桩微服务依赖发现](https://arxiv.org/abs/2608.04413)</a></div>
+      <div class="it-sum">（arXiv cs.DC）——利用 eBPF 内核级网络追踪自动发现微服务间运行时通信依赖，无需应用插桩。目标是指导微服务跨 VM 迁移时避免制造跨 VM 热点和延迟尖峰——对 AI 推理集群的服务编排有直接参考价值。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">本周 HN 与 arXiv 在该方向无明显单条高热度内容，但 DeepMind 高层变动（见第 5 类）对 Google 内部 AI 基础设施路线的影响值得持续关注。</a></div>
@@ -82,10 +90,12 @@
     <h2>5️⃣ AI 安全与治理</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">blog.google</span><a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank" rel="noopener">🔥</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">blog.google</span><a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank" rel="noopener">[Google DeepMind 重大变动：Demis Hassabis 从 CEO 转任 Chair，Jeff Dean 离开 Google](https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/)</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">（HN 822）——这是 DeepMind 成立以来最大规模的高层重组。Hassabis 转任 Chair 意味着日常运营权交接，而 Jeff Dean 的离开标志着 Google AI 一个时代的落幕。HN 讨论量爆炸，社区关注焦点集中于 Google 内部 AI 路线是否将迎来方向性调整。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" target="_blank" rel="noopener">OpenAI 改进 GPT-5.6 Sol 并扩大 GPT-5.6 Luna 免费用户访问</a></div>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" target="_blank" rel="noopener">[OpenAI 改进 GPT-5.6 Sol 并扩大 GPT-5.6 Luna 免费用户访问](https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/)</a></div>
+      <div class="it-sum">（HN 136）——Sol 模型推理效率与质量双提升，同时 Luna 向免费用户扩大开放，表明 OpenAI 在模型服务化与免费 tier 策略上持续加码。</div>
     </li>
     </ul>
   </section>
@@ -93,19 +103,24 @@
     <h2>6️⃣ 具身智能</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04428" target="_blank" rel="noopener">Deltoris：面向具身 AI 的位级稀疏 + 投机推理实时 VLA 加速</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04428" target="_blank" rel="noopener">[Deltoris：面向具身 AI 的位级稀疏 + 投机推理实时 VLA 加速](https://arxiv.org/abs/2608.04428)</a></div>
+      <div class="it-sum">（arXiv cs.AR）——扩散型 VLA 模型需以 50–200Hz 控制频率运行，边缘设备算力与功耗均吃紧。Deltoris 结合位级稀疏化与投机推理两重优化，首次将扩散 VLA 推至边缘实时推理门槛。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04196" target="_blank" rel="noopener">SiMDex：跨具身灵巧操作的相似自我中心视频挖掘</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04196" target="_blank" rel="noopener">[SiMDex：跨具身灵巧操作的相似自我中心视频挖掘](https://arxiv.org/abs/2608.04196)</a></div>
+      <div class="it-sum">（arXiv cs.RO）——将人类视频数据筛选建模为推荐问题：给定机器人演示，自动检索「最相似」的人类自我中心视频用于 VLA 后训练，避免盲目堆数据。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04246" target="_blank" rel="noopener">SAFECAST：基于对比集训练与校准的 VLA 策略鲁棒失败检测</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04246" target="_blank" rel="noopener">[SAFECAST：基于对比集训练与校准的 VLA 策略鲁棒失败检测](https://arxiv.org/abs/2608.04246)</a></div>
+      <div class="it-sum">（arXiv cs.RO）——VLA 策略在部署时的分布偏移（杂物/光照/指令改写）常导致静默失败。SAFECAST 提出对比集训练 + 功能保形预测的检测框架，在不重新训练策略的前提下给出可靠的风险判断。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04309" target="_blank" rel="noopener">结构化 LLM 推理实现零样本人-机器人协作（隐目标场景）</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04309" target="_blank" rel="noopener">[结构化 LLM 推理实现零样本人-机器人协作（隐目标场景）](https://arxiv.org/abs/2608.04309)</a></div>
+      <div class="it-sum">（arXiv cs.RO）——在双方各自持有私密目标的协作搭建任务中，将决策分解为心智推理、分层规划、对话解读、动作验证与协调五步，以 Dec-POMDP 建模支撑零样本泛化。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04042" target="_blank" rel="noopener">厨房场景中基于基础模型的机器人操控</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04042" target="_blank" rel="noopener">[厨房场景中基于基础模型的机器人操控](https://arxiv.org/abs/2608.04042)</a></div>
+      <div class="it-sum">（arXiv cs.RO）——集成开放词汇检测、多视角分割与实例级 3D 重建的模块化感知管线，专注餐具抓取等日常家庭任务。</div>
     </li>
     </ul>
   </section>
@@ -113,13 +128,16 @@
     <h2>7️⃣ AI 自动算子与代码生成优化</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05033" target="_blank" rel="noopener">SparseDitto：用 LLM Agent 为不同稀疏模式自动定制 GPU Kernel</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.05033" target="_blank" rel="noopener">[SparseDitto：用 LLM Agent 为不同稀疏模式自动定制 GPU Kernel](https://arxiv.org/abs/2608.05033)</a></div>
+      <div class="it-sum">（arXiv cs.DC）——同一矩阵、同一 SpMM 操作，cuSPARSE 的 CSR 与 Blocked-ELL 格式间性能差距可达 350×。SparseDitto 用 LLM agentic 系统自动为输入稀疏模式选择/生成最优 kernel，避免了人工逐 case 调优的不可扩展性。这是 LLM 辅助 GPU 编程从玩具走向工程的关键一步。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04450" target="_blank" rel="noopener">CommBench：LLM 能写出正确且高效的 GPU 通信代码吗？</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04450" target="_blank" rel="noopener">[CommBench：LLM 能写出正确且高效的 GPU 通信代码吗？](https://arxiv.org/abs/2608.04450)</a></div>
+      <div class="it-sum">（arXiv cs.DC）——首个系统性评测 LLM 生成 GPU 通信原语（NCCL 级集合通信）的 benchmark。结论：当前模型在正确性上尚可，但在高效利用 NVLink/RDMA 拓扑上表现惨淡——暴露了 LLM 在硬件感知代码生成上的核心短板。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04032" target="_blank" rel="noopener">EDATracer：面向大规模 EDA 制品分析的 Agentic 框架</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04032" target="_blank" rel="noopener">[EDATracer：面向大规模 EDA 制品分析的 Agentic 框架](https://arxiv.org/abs/2608.04032)</a></div>
+      <div class="it-sum">（arXiv cs.AR）——芯片设计中 EDA 工具产生大量异构制品（源码/脚本/日志/网表/报告），EDATracer 用 LLM agent 自动跨制品关联分析，目标是把设计调试与优化从「人工 grep + 翻报告」升级为 agent 驱动的结构化搜索。</div>
     </li>
     </ul>
   </section>
@@ -127,19 +145,22 @@
     <h2>8️⃣ 边缘与端侧推理</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04031" target="_blank" rel="noopener">硬件级模糊推理：架构、平台与新兴趋势综述</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04031" target="_blank" rel="noopener">[硬件级模糊推理：架构、平台与新兴趋势综述](https://arxiv.org/abs/2608.04031)</a></div>
+      <div class="it-sum">（arXiv cs.AR）——全面梳理模糊逻辑系统在边缘硬件上的实现方案，从 FPGA/ASIC 到新兴存内计算平台，重点解决实时边缘推理的延迟不可预测与功耗失控问题。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04035" target="_blank" rel="noopener">CheckOne：面向 Vision Transformer 的轻量级故障检测与缓解</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04035" target="_blank" rel="noopener">[CheckOne：面向 Vision Transformer 的轻量级故障检测与缓解](https://arxiv.org/abs/2608.04035)</a></div>
+      <div class="it-sum">（arXiv cs.AR）——ViT 进入安全关键型边缘应用（自动驾驶/医疗）后，硬件软错误的可靠性成为硬要求。CheckOne 提出一种基于算法的轻量容错方案，目标是在端侧功耗预算内提供与三模冗余接近的保护级别。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04974" target="_blank" rel="noopener">另见第 3 类</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.04974" target="_blank" rel="noopener">[AsymSpec](https://arxiv.org/abs/2608.04974)</a></div>
+      <div class="it-sum">（云-边缘投机解码）与第 6 类 Deltoris（边缘 VLA 实时推理），两者均直击端侧推理的核心瓶颈。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-08-06.html">← 2026-08-06</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-08-08.html">2026-08-08 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

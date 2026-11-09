@@ -32,15 +32,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">cerebras.ai</span><a href="https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai" target="_blank" rel="noopener">Accelerating GPT-5.6 Sol Ultrafast</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— Cerebras 与 OpenAI 合作,在晶圆级引擎(Wafer-Scale Engine)上跑 GPT-5.6 Sol 推理,主打超低时延,推理时延军备竞赛再升级。HN 396 分。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11693" target="_blank" rel="noopener">Spec Sheets Are Not Kernels: An ISA- and Source-Level Audit of INT8 Availability on NVIDIA Blackwell Ultra</a></div>
+      <div class="it-sum">— 对 B300 的 INT8 W8A8 支持做四层审计(spec / PTX ISA / CUTLASS / 源码):官方 spec 显示 FP8:INT8 稠密算力约 30:1,与前代 H200/B200 的 1:1 形成鲜明反差,INT8 路线被实质&quot;降级&quot;。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11577" target="_blank" rel="noopener">Uni-SFU: Algorithm-HW Co-Design for Universal SFUs via Mixed-Degree Piecewise Approximation</a></div>
+      <div class="it-sum">— 用混合阶分段多项式逼近统一 GPU/加速器的特殊函数单元(SFU),在误差约束下兼顾精度与面积/功耗。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11380" target="_blank" rel="noopener">The Fallacy of Independent Ceilings: Characterizing Coupled Load-Branch Stall Interaction</a></div>
+      <div class="it-sum">— 指出&quot;分支误预测与缓存缺失可独立取上界&quot;的假设在非规则负载下不成立:消除其一会暴露另一瓶颈,二者存在耦合。</div>
     </li>
     </ul>
   </section>
@@ -49,15 +53,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11882" target="_blank" rel="noopener">Evaluating OpenMP Offloading for Intra-node Multi-GPU Programming across NVIDIA, AMD, and Intel</a></div>
+      <div class="it-sum">— 以 3D 热传导为案例,评估 OpenMP offloading 在单节点多 GPU 场景下跨 NVIDIA/AMD/Intel 的可移植性与性能,验证编译器 offload 的跨厂商通用性。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11833" target="_blank" rel="noopener">Inferring Empirical Sound Resource Bounds via Symbolic Execution and Linear Programming</a></div>
+      <div class="it-sum">— 混合静态+动态分析:用符号执行与线性规划推导程序资源上界,兼具形式保证(静态)与普适性(动态)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11279" target="_blank" rel="noopener">Basin: Efficient and Extensible Numerical Optimization in Rust</a></div>
+      <div class="it-sum">— Rust 数值优化库,统一拟合、仿真标定、模型训练、工程参数寻优的接口,面向科学计算生态。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11524" target="_blank" rel="noopener">Descriptive Dispatch of Computational Work</a></div>
+      <div class="it-sum">— AI/ML 驱动的&quot;描述式派发&quot;,把请求动态变换并提交到异构集群的工作负载管理器,面向多集群科学工作流编排。</div>
     </li>
     </ul>
   </section>
@@ -66,18 +74,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11840" target="_blank" rel="noopener">User-Assisted Collaborative Distributed Inference for Efficient QoS-Aware Autoscaling</a></div>
+      <div class="it-sum">— 专用资源保底 + 用户自愿算力弹性扩容的协同分布式推理,兼顾 QoS 与集中式服务成本。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12123" target="_blank" rel="noopener">Ready Cohorts: Bounding GPU Opportunity and Avoiding Host Round Trips in LLM-Agent Control</a></div>
+      <div class="it-sum">— 让 LLM-agent 的路由决策留在 device 侧,量化&quot;ready-cohort&quot;边界,减少 host 往返、提升 GPU 利用率。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12146" target="_blank" rel="noopener">RoutePack: Expert Placement and Attention-Aware Data Packing for MoE RL</a></div>
+      <div class="it-sum">— 解耦 MoE RL 训练中&quot;序列组合(密集注意力)&quot;与&quot;token 路由(稀疏专家)&quot;两个负载均衡问题,避免优化一个而暴露另一个。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11668" target="_blank" rel="noopener">A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving</a></div>
+      <div class="it-sum">— 用 TokenSim + 四条 Qwen-Bailian 生产 trace,评估高带宽闪存(HBF)替换 SSD 作为 Mooncake 式 KV offload 背板的收益(见 4️⃣)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11342" target="_blank" rel="noopener">Weightless Fine-Tuning: Personalizing LLMs via Logit-Space Transport</a></div>
+      <div class="it-sum">— 免训练的&quot;解码时 logit 空间迁移&quot;,近似 SFT 的分布效果,实现低成本个性化(见 5️⃣ 关联话题)。</div>
     </li>
     </ul>
   </section>
@@ -86,12 +99,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">tailscale.com</span><a href="https://tailscale.com/blog/sqlite-wal-reset-bug" target="_blank" rel="noopener">Tracking down the 16-year-old WAL-reset SQLite bug</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— Tailscale 追溯一个潜伏 16 年的 SQLite WAL 重置 bug,存储/数据库可靠性经典案例,是 AI 数据层的底座工程。HN 1174 分。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11920" target="_blank" rel="noopener">NITRO: High-Performance 3D NAND Flash-Based In-Storage Computing with Enhanced Activation Dataflow</a></div>
+      <div class="it-sum">— 面向 LLM 的近存储计算(NAND-PIM),缓解 host↔memory 数据瓶颈。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11668" target="_blank" rel="noopener">A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving</a></div>
+      <div class="it-sum">— HBF 以 flash 级容量换取远优于 SSD 的读时延/带宽,作为 KV offload 介质(见 3️⃣)。</div>
     </li>
     </ul>
   </section>
@@ -100,18 +116,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">alignment.anthropic.com</span><a href="https://alignment.anthropic.com/2026/conceptual-reasoning-index/" target="_blank" rel="noopener">The Conceptual Reasoning Index</a></div>
+      <div class="it-sum">— Anthropic 提出概念推理指数,用于评估模型的概念推理能力与可解释性(对齐向)。HN 70 分。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">support.claude.com</span><a href="https://support.claude.com/en/articles/12326764-can-i-use-my-outputs-to-train-an-ai-model" target="_blank" rel="noopener">Can I use my Outputs to train an AI model?</a></div>
+      <div class="it-sum">— Claude 官方说明用户输出内容用于训练的边界与政策,模型使用条款治理话题。HN 85 分。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11256" target="_blank" rel="noopener">Why AI Detection Fails for Academic Integrity</a></div>
+      <div class="it-sum">— 实证研究:商业 AI 检测器无法区分&quot;AI 润色&quot;与&quot;整篇 AI 生成&quot;,学术诚信政策面临系统性失效。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2508.21219" target="_blank" rel="noopener">To WASM or Not to WASM: Browser Fingerprinting Defenses Under WASM Obfuscation</a></div>
+      <div class="it-sum">— 首次系统评估 WASM 混淆对浏览器指纹防御的绕过,揭示 WASM 追踪的盲区。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11451" target="_blank" rel="noopener">Herding End-to-End Autonomous Driving via Neuro-Symbolic Safety Guards</a></div>
+      <div class="it-sum">— 神经符号安全护栏补足端到端驾驶对物理安全约束的盲区(见 6️⃣)。</div>
     </li>
     </ul>
   </section>
@@ -120,18 +141,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11521" target="_blank" rel="noopener">Keep the Future, Drop the Rollout: RIFT for World Action Models</a></div>
+      <div class="it-sum">— 世界动作模型只需&quot;未来表示&quot;而非迭代 rollout,在 4 个 WAM × 40 个 LIBERO 任务上验证,显著降低部署时延。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11363" target="_blank" rel="noopener">Adaptation of Generalist Robot Policies with Minimal Data</a></div>
+      <div class="it-sum">— 研究预训练通用策略的最小数据适应,迈向机器人自主交互改进。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11407" target="_blank" rel="noopener">Top-down Traffic Scenario Generation via Joint Initial-Goal Diffusion and Trajectory Infilling</a></div>
+      <div class="it-sum">— 联合初始-目标扩散 + 轨迹填充生成交通场景,提升仿真规模与多样性。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11451" target="_blank" rel="noopener">Herding End-to-End Autonomous Driving via Neuro-Symbolic Safety Guards</a></div>
+      <div class="it-sum">— 端到端驾驶智能体配神经符号护栏,约束其遵守基本交通规则。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11580" target="_blank" rel="noopener">RoadWeaver: Large-Scale Lane-Level HD Map Generation from Scratch</a></div>
+      <div class="it-sum">— 从零生成车道级 HD 地图(coarse-to-fine),支撑自动驾驶长时程仿真。</div>
     </li>
     </ul>
   </section>
@@ -140,15 +166,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">community.openai.com</span><a href="https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027" target="_blank" rel="noopener">Codex in ChatGPT desktop app for Linux is now in preview</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— OpenAI Codex 落地 Linux 桌面应用(预览版),AI 编码/代码生成工具链向桌面/本地下沉。HN 443 分。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">funcall.blogspot.com</span><a href="http://funcall.blogspot.com/2026/08/why-vibe-code-in-lisp.html" target="_blank" rel="noopener">Why Target Common Lisp for Code Generation?</a></div>
+      <div class="it-sum">— 讨论用 Common Lisp 作为代码生成目标语言的取舍(vibe coding 视角)。HN 147 分。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2505.03818" target="_blank" rel="noopener">Program Semantic Inequivalence Game with Large Language Models</a></div>
+      <div class="it-sum">— 用&quot;语义不等价博弈&quot;合成代码推理训练数据,教 LLM 做程序语义层面的推理。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12140" target="_blank" rel="noopener">FQTree: Fine-grained Quantization and Hardware Generation of Boosted Decision Trees</a></div>
+      <div class="it-sum">— 量化感知训练 + 自动硬件生成的 BDT 部署,兼顾延迟与精度(见 8️⃣)。</div>
     </li>
     </ul>
   </section>
@@ -157,24 +187,29 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11688" target="_blank" rel="noopener">APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference</a></div>
+      <div class="it-sum">— 面向边缘 MoE 推理的自适应专家预取,缓解片外内存对专家加载的约束。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11770" target="_blank" rel="noopener">Achieving Near-Zero-Overhead Multi-Model Hierarchical Classification in Real-Time Detection Pipelines</a></div>
+      <div class="it-sum">— 边缘 SoC 上&quot;检测 + 分类&quot;多模型流水线的近零开销分层推理,打破串行瓶颈。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11281" target="_blank" rel="noopener">Federated Learning for Distributed CNC Tool Wear Prediction</a></div>
+      <div class="it-sum">— 工业端侧联邦学习做刀具磨损预测,规避跨厂/跨机数据共享限制。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11402" target="_blank" rel="noopener">An Event-Driven Cloud-Native Wearable Analytics Framework for Real-Time Clinical Workloads</a></div>
+      <div class="it-sum">— 面向可穿戴体征数据的云原生事件驱动分析框架(端-云协同)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.12140" target="_blank" rel="noopener">FQTree</a></div>
+      <div class="it-sum">— 量化 + 硬件生成(见 7️⃣)。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-08-13.html">← 2026-08-13</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-08-15.html">2026-08-15 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

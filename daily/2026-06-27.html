@@ -33,12 +33,14 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank" rel="noopener">OpenAI 发布首款自研芯片,由 Broadcom 代工</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 817 分)。这是 OpenAI 垂直整合算力栈的标志性一步——继微软、Google、Amazon、Meta 之后,头部模型厂商&quot;去 Nvidia 化&quot;再添重磅玩家。由 Broadcom 提供定制 ASIC 设计与封装,意在降低长期推理成本、缓解 GPU 供应瓶颈。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26176" target="_blank" rel="noopener">arXiv cs.AR 关注下一代封装与内存技术:</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26176" target="_blank" rel="noopener">arXiv cs.AR 关注下一代封装与内存技术:[Toward Mitigating Process-Induced Performance Degradation in 3.5D Heterogeneous Packages](https://arxiv.org/abs/2606.26176) 针对 Intel 3.5D 异构封装(Foveros Direct 3D + PowerVia + EMIB-T + UCIe + HBM5),用物理感知的预硅固件调度层,通过 20-50ms 前瞻的热提示缓解工艺诱导性能退化;[The Kernel&#x27;s Write: Application Read-Only Memory](https://arxiv.org/abs/2606.26138) 探讨用新兴长效内存 LtRAM 替代成本停滞的 DRAM,应对数据中心内存墙。</a></div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">techpowerup.com</span><a href="https://www.techpowerup.com/348723/amd-readies-full-open-source-hdmi-2-1-support-for-linux" target="_blank" rel="noopener">AMD 即将为 Linux 提供完整开源 HDMI 2.1 支持</a></div>
+      <div class="it-sum">(HN 70 分),长期受 HDMI Forum 闭源限制的难题终现转机。</div>
     </li>
     </ul>
   </section>
@@ -47,12 +49,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26344" target="_blank" rel="noopener">Axon:面向张量程序的合成式超优化器</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(arXiv cs.PL)是本期编译器领域最值得关注的工作——针对 tile-based AI 加速器,用程序综合(program synthesis)从语义自动生成目标指令,把 tiling、指令选择、数据布局、算子融合等需深度专家经验的工作自动化,可同时归入第 7 类。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27122" target="_blank" rel="noopener">Mostly Automatic Translation of Language Interpreters from C to Safe Rust</a></div>
+      <div class="it-sum">Reboot 技术几乎全自动地把真实世界解释器从 C 迁移到安全 Rust,对处理不可信输入、易受内存漏洞影响的运行时尤为重要。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27138" target="_blank" rel="noopener">Welterweight Go:装箱、结构化子类型与泛型</a></div>
+      <div class="it-sum">给出 Go 核心模型 WG,刻画了结构化子类型与非统一运行时表示交互这一形式化难点;A Typestate Approach to Purpose-aware Programming 用 typestate 在编译期推理数据用途合规性。</div>
     </li>
     </ul>
   </section>
@@ -61,12 +66,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26607" target="_blank" rel="noopener">Moebius:运行时无缝切换并行策略的 MoE 服务系统</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(arXiv cs.DC)直击 MoE 部署痛点:TP 在低并发更快、EP 在高并发占优,Moebius 实现两者运行时无缝切换以匹配在途请求数变化,是面向生产级 MoE 服务的关键工程进展。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26997" target="_blank" rel="noopener">RolloutPipe:解耦式 On-Policy LLM 强化学习中重叠流水化 Rollout 与训练</a></div>
+      <div class="it-sum">面向 RLVR 推理后训练,在解耦架构下重叠 rollout 生成与训练,提升异构资源利用率——推理与训练边界的优化样本。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27153" target="_blank" rel="noopener">DMuon:近 Adam 开销的高效分布式 Muon 训练</a></div>
+      <div class="it-sum">矩阵正交化优化器 Muon 收敛性强,DMuon 解决其在分布式基础设施上的通信/开销难题,使其逼近 Adam 的系统成本。</div>
     </li>
     </ul>
   </section>
@@ -75,12 +83,14 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">newsweek.com</span><a href="https://www.newsweek.com/cost-me-the-election-data-centers-trigger-voter-backlash-12118327" target="_blank" rel="noopener">数据中心建设引发选民反弹</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 154 分):AI 算力扩张的电力、用水与社区成本正转化为政治压力(&quot;它害我输掉了选举&quot;),预示超大规模 capex 将面临更严苛的地方审批与监管摩擦。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">explorer.oxide.computer</span><a href="https://explorer.oxide.computer/" target="_blank" rel="noopener">Oxide Computer 3D 机架导览</a></div>
+      <div class="it-sum">(HN 464 分):可交互的 3D 机架探索器,展示其软硬一体的云原生机架设计,是基础设施透明化与工程美学的优秀范例。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26150" target="_blank" rel="noopener">学术前沿:</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26150" target="_blank" rel="noopener">学术前沿:[Hot AI in Cold Space:面向可持续轨道 AI 集群的热串扰感知调度](https://arxiv.org/abs/2606.26150) 提出轨道数据中心(ODC)作为&quot;零运营碳&quot;替代,但 sub-10μs 通信延迟迫使极端物理密度,引发&quot;邻近-热&quot;悖论;[Simulating Unified Tensor Resharding in heterogeneous AI systems](https://arxiv.org/abs/2606.26633) 针对真实训练基础设施日益异构(多模态/MoE、云端硬件代际混杂)给出统一张量重分片模拟;[Priceless](https://arxiv.org/abs/2606.26308) 系统梳理了 Serverless FaaS 各家复杂定价模型。</a></div>
     </li>
     </ul>
   </section>
@@ -89,15 +99,18 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">washingtonpost.com</span><a href="https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/" target="_blank" rel="noopener">OpenAI:美国政府将审查谁能使用 GPT-5.6</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 762 分)与 🔥 预览 GPT-5.6 Sol 下一代模型(HN 783 分)同期登场:前沿模型与国家安全审查机制正式绑定,政府介入前沿模型的访问准入,是 AI 治理的重大政策拐点。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">reuters.com</span><a href="https://www.reuters.com/technology/us-releases-anthropic-model-mythos-some-us-companies-semafor-reports-2026-06-26/" target="_blank" rel="noopener">美国允许 Anthropic 向&quot;受信任伙伴&quot;释放 Mythos 模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 146 分):受控释放模式成为前沿模型分发新常态。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">reuters.com</span><a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/" target="_blank" rel="noopener">Anthropic 称阿里巴巴非法提取 Claude 模型能力</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 789 分):模型蒸馏/能力窃取的知识产权与地缘争端浮上台面,牵动出口管制与跨境合规。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26185" target="_blank" rel="noopener">学术侧</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26185" target="_blank" rel="noopener">学术侧 [Necessary but Not Sufficient:LLM-as-Judge 安全评测中的温度控制与可复现性](https://arxiv.org/abs/2606.26185) 实证推翻&quot;temperature=0 即可让评判确定&quot;的普遍假设(基于日本 AISI 开源 aisev),对 pass/fail 门控部署的安全评测有直接警示。</a></div>
     </li>
     </ul>
   </section>
@@ -106,12 +119,14 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26201" target="_blank" rel="noopener">OmniContact:通过接触流串联元技能实现可泛化人形 Loco-Manipulation</a></div>
+      <div class="it-sum">与 TaskNPoint:如何在几分钟内教人形机器人打反手 是本期亮点:后者主张&quot;像教网球一样&quot;用教练+练习的结构化方式教授动态技能,聚焦轨迹中决定成败的关键短窗口。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26175" target="_blank" rel="noopener">RMTL:用 VLM 奖励做长程操作的强化微任务学习</a></div>
+      <div class="it-sum">用预训练 VLM 作零样本奖励模型替代昂贵的人工奖励设计;LiMoDE 从&quot;动态专家混合&quot;视角重思终身机器人操作以缓解灾难性遗忘。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26151" target="_blank" rel="noopener">真机/仿真场景:</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26151" target="_blank" rel="noopener">真机/仿真场景:[农业巡检车无监督记忆增强视频 Transformer 障碍检测](https://arxiv.org/abs/2606.26151)(检测冠层下障碍)、[强化学习驱动微机器人在模拟血管中自主导航](https://arxiv.org/abs/2606.26154)、[对数螺旋连续臂的形态特定闭环控制](https://arxiv.org/abs/2606.26188)、[RoboTales 机器人讲故事系统](https://arxiv.org/abs/2606.26213) 共同展现具身智能在农业、医疗、抓取、HRI 的多元落地。</a></div>
     </li>
     </ul>
   </section>
@@ -120,12 +135,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26344" target="_blank" rel="noopener">Axon:面向张量程序的合成式超优化器</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(同第 2 类):用程序综合自动生成 AI 加速器目标指令,是本类核心——把 kernel 编写从人工调优推向自动综合。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26490" target="_blank" rel="noopener">An Empirical Study of LLM-Generated Specifications for VeriFast</a></div>
+      <div class="it-sum">实证研究 LLM 为分离逻辑验证器自动生成复杂辅助规约的能力,是&quot;LLM 写形式化规约&quot;方向的代表;Theory-Scale Auto-Formalization of Logics for Computer Science 推出 LCS-Bench,挑战数百个相互依赖定义/引理/定理的理论级自动形式化。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26547" target="_blank" rel="noopener">Compiler-Driven Approximation Tuning for Hyperdimensional Computing</a></div>
+      <div class="it-sum">编译器驱动的近似调优,自动为超维计算(HDC)workload 做硬件高效近似——自动调优思路的延展。</div>
     </li>
     </ul>
   </section>
@@ -134,18 +152,20 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.27098" target="_blank" rel="noopener">Residual GPU Cache State on Apple M4 Pro</a></div>
+      <div class="it-sum">(arXiv cs.AR):刻画 Apple M4 Pro 统一内存上 GPU 命令完成后的缓存残留状态(系统级缓存占用模式),对端侧 Apple silicon 上 GPU/ANE 推理的内存行为优化与性能可预测性有参考价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26137" target="_blank" rel="noopener">Mitigating High-Frequency Geometric Noise in Non-Parametric 1-Bit Sparse</a></div>
+      <div class="it-sum">面向能效神经形态计算的确定性、非参数 1-bit 稀疏编码框架,绕过功耗密集的浮点运算——与端侧极低比特量化(BitNet 类)思路同源,适合能耗受限的嵌入式/边缘场景。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26177" target="_blank" rel="noopener">端侧 RISC-V 实时硬件方面,</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.26177" target="_blank" rel="noopener">端侧 RISC-V 实时硬件方面,[CVA6-RT:开源时间可预测 RV64 处理器](https://arxiv.org/abs/2606.26177) 为混合关键性系统提供有界最坏延迟(TLB 分区锁定、可重配置 L1 scratchpad),是边缘确定性推理的底层硬件基座。</a></div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-06-26.html">← 2026-06-26</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-06-30.html">2026-06-30 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

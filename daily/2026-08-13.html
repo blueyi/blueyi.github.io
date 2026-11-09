@@ -32,15 +32,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/" target="_blank" rel="noopener">Nvidia Nemotron 3.5 Lightning 与 NeMo Switchyard 发布</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 257):Nvidia 面向 RTX/DGX 双线推出低延迟推理模型 Nemotron 3.5 Lightning 与 agent 路由框架 NeMo Switchyard,补齐从模型到 agentic AI 的一体化软件栈,强化其在端到端推理层的布局。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11116" target="_blank" rel="noopener">You Only Charge Once 2.0:可重构开关电容的端到端模拟存内计算架构</a></div>
+      <div class="it-sum">直击模拟存内计算(ACiM)长期受困的 &quot;ADC wall&quot;——ADC 占据大量能耗与面积、位切片执行反复调用转换器,提出可重构开关电容方案降低该开销。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10521" target="_blank" rel="noopener">具有差分隐私形式化保证的概率饱和计数器综合</a></div>
+      <div class="it-sum">为分支预测器综合概率饱和计数器(PSC),从微架构层面缓解确定性计数器易受侧信道攻击(操纵计数器状态反推受害进程分支方向)的问题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10803" target="_blank" rel="noopener">AdaptCore:昇腾 NPU 动态形状矩阵乘</a></div>
+      <div class="it-sum">(自研芯片相关,详见 §2/§7):针对 Ascend NPU 显式受控架构与严格物理约束下的 MatMul 算子优化,与国产 AI 芯片生态直接相关。</div>
     </li>
     </ul>
   </section>
@@ -49,12 +53,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">modular.com</span><a href="https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here" target="_blank" rel="noopener">Mojo 1.0 正式发布</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 424):Modular 宣布 Mojo 1.0 落地,标志这门&quot;Python 易用 + C 级性能&quot;的面向 AI 系统级语言进入稳定期,对 tinygrad/Triton 之外的自研编译器栈是又一重要参照系。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10103" target="_blank" rel="noopener">手写 PTX Tensor-Core GEMM Kernel:多精度在 NVIDIA L4 上的研究</a></div>
+      <div class="it-sum">系统回答&quot;何时用 cp.async + ldmatrix + mma.sync 手写 PTX 取代 WMMA C++ API&quot;这一实际问题,量化低层异步管线在不同精度下的真实收益边界。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10803" target="_blank" rel="noopener">AdaptCore:昇腾 NPU 上动态形状的自适应矩阵乘框架</a></div>
+      <div class="it-sum">直击 MatMul 的 &quot;generalization crisis&quot;,指出动态 tensor shape 下 GPU 中心化优化在 Ascend NPU 上失效,提出显式受控架构下的通用高性能算子框架。</div>
     </li>
     </ul>
   </section>
@@ -63,9 +70,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10010" target="_blank" rel="noopener">CurveFP:有理底数对数型、闭式乘积的低精度数据类型</a></div>
+      <div class="it-sum">面向 LLM 的极低比特数据格式,以有理底数在动态范围与局部精度间权衡,重点优化乘积运算引入的算术误差,而非仅标量保真度。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11152" target="_blank" rel="noopener">超越前缀局部性的混合 RL Rollout 调度</a></div>
+      <div class="it-sum">研究异构 rollout 会话(多领域、多反馈范式)对 KV-cache 容量的竞争;前缀感知路由只解决缓存复用与负载均衡,不控制会话间 KV 容量争抢,论文提出针对性调度策略。</div>
     </li>
     </ul>
   </section>
@@ -74,18 +83,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10956" target="_blank" rel="noopener">ClusterBench:集群级持续基准测试与回归测试框架</a></div>
+      <div class="it-sum">数据中心需要&quot;验证整装而非单节点&quot;的工具,该框架在单次提交内将同一基准分发至全部节点,实现集群感知调度与验收/定期回归。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11034" target="_blank" rel="noopener">SCOUT:对称共识离群点检测用于 LLM 预训练故障定位</a></div>
+      <div class="it-sum">同步会把 rank 级局部卡顿/减速/数值错误传播为作业级症状,掩盖根因;论文提出对称共识离群检测,解决进程内监控无法在阻塞后上报、事后日志只留同步症状的难题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.09953" target="_blank" rel="noopener">研究者视角的 HPC 网络指南</a></div>
+      <div class="it-sum">系统梳理超算/数据中心网络硬件与软件技术栈,填补课堂教学与教科书长期覆盖不足的空白,适合作为 InfiniBand/RoCE 等方向的系统性入门材料。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2602.12596" target="_blank" rel="noopener">Arcalís:轻量近缓存方案加速 RPC</a></div>
+      <div class="it-sum">随着网络带宽持续增长,序列化/反序列化与协议处理的 CPU 开销成为微服务 RPC 关键瓶颈,论文提出近缓存(Near-Cache)轻量加速方案。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10188" target="_blank" rel="noopener">GPU LZ77 解码到底卡在哪:三种解码器、三种机制与一个编码端杠杆</a></div>
+      <div class="it-sum">在 H100 上实测 parse(而非 copy)占据 64-72% 设备端解码时间;提出可证明的有界回指链深度优化,代价仅 0.006% 压缩率,却对时延改善有限——揭示真正的瓶颈在编码端而非解码端。</div>
     </li>
     </ul>
   </section>
@@ -94,15 +108,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">ft.com</span><a href="https://www.ft.com/content/e49dfb75-f841-4466-a577-f7aaff8779a0" target="_blank" rel="noopener">OpenAI 伦理负责人入职不足一年离职</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 505):OpenAI 治理层再度变动,再度引发行业对前沿实验室安全/对齐团队稳定性与独立性的广泛讨论。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.09997" target="_blank" rel="noopener">Transformer 几何观测站 TGO-IV:发育拓扑观测</a></div>
+      <div class="it-sum">一改&quot;孤立层或整体&quot;的可解释性视角,聚焦单个表征及其流形在训练过程中的&quot;发育演化&quot;轨迹,回答&quot;Transformer 如何学习&quot;。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11147" target="_blank" rel="noopener">CKKS 同态加密乘法中的瞬态错误研究</a></div>
+      <div class="it-sum">与单比特翻转客户端错误表征:研究 FHE 计算中故障的时序与位置敏感性,揭示噪声注入带来的固有错误敏感性对隐私计算容错的挑战。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.11022" target="_blank" rel="noopener">Workflow Cards:基于溯源数据的结构化工作流摘要</a></div>
+      <div class="it-sum">将 Model Card / Data Card 范式从静态产物(数据集、模型)延伸到产生它们的&quot;工作流执行&quot;,提升 ML 产物全链路的可审计性与上下文记录。</div>
     </li>
     </ul>
   </section>
@@ -111,21 +129,27 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10220" target="_blank" rel="noopener">人形机器人穿越受限空间的全身体规划</a></div>
+      <div class="it-sum">针对高受限环境中的密集障碍与复杂自碰撞约束,引入自碰撞规避参考,解决传统轨迹优化易陷入局部极小的多接触动力学可行性问题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10232" target="_blank" rel="noopener">FACT:世界-动作模型的失败感知因果训练</a></div>
+      <div class="it-sum">当前世界模型多以成功为主训练、对未来预测失败情形建模不足,论文注入失败感知因果训练,提升动作生成的物理先验。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10383" target="_blank" rel="noopener">单视角观测下的大物体双臂协同灵巧抓取</a></div>
+      <div class="it-sum">突破现有研究&quot;顺序操作而非协同抓取、且多限于仿真&quot;的局限,面向真实世界实现双臂协同大物体抓取。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10367" target="_blank" rel="noopener">基于神经网络的车辆遥操作</a></div>
+      <div class="it-sum">用波变量(WV)方案应对通信时延与未建模环境扰动(气动阻力、坡角)及高度非线性轮胎-路面动力学,构建单边遥操作框架。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10023" target="_blank" rel="noopener">视觉位姿估计的保护等级</a></div>
+      <div class="it-sum">借鉴 RAIM 故障检测思想,为基于视觉的跑道位姿估计推导&quot;保护等级&quot;,以给出认证所需的完整性保证。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10025" target="_blank" rel="noopener">运营数据保真度对安全关键自动驾驶软件评估的影响</a></div>
+      <div class="it-sum">探讨历史失败事件数据粒度不足时,基于该数据的可靠性评估无法充分覆盖软件故障的局限。</div>
     </li>
     </ul>
   </section>
@@ -134,12 +158,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2503.07215" target="_blank" rel="noopener">CodeInverter 套件:结构/数据感知的高效 LLM 二进制反编译</a></div>
+      <div class="it-sum">LLM 驱动的端到端反编译,针对结构重建难、数据流恢复难提出改进,提升高可读源码的自动生成能力。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10290" target="_blank" rel="noopener">Comprendia:AI 增强的代码理解</a></div>
+      <div class="it-sum">Eclipse 插件将结构依赖可视化与 LLM 代码解释融合于交互式图上,并借 Graph-Aware Callee Pruning(GACP)保证解释可审计、可追溯。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10803" target="_blank" rel="noopener">AdaptCore</a></div>
+      <div class="it-sum">同样体现&quot;动态形状算子自动调优&quot;方向(自适应框架应对 shape 泛化危机,详见 §2)。</div>
     </li>
     </ul>
   </section>
@@ -148,18 +175,21 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">llama.app</span><a href="https://llama.app" target="_blank" rel="noopener">llama.cpp</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 350):本地/端侧推理标杆项目持续保持高热度,多后端、多量化路径的生态继续演进,是手机/PC/边缘盒子跑 LLM 的默认入口之一。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10506" target="_blank" rel="noopener">CARB:表征引导的 CNN 推理成本预测与部署筛选</a></div>
+      <div class="it-sum">针对资源受限 GPU 平台的能耗/时延/峰值内存预部署估计,指出仅靠 FLOPs/时延/单设备 profiling 会忽略架构设计-硬件负载的非线性交互,提出负载表征引导的预测框架。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.10016" target="_blank" rel="noopener">基于层(Sheaf)的联邦表征学习</a></div>
+      <div class="it-sum">面向数据分布、传感模态、模型架构、潜在维度、学习目标均异构的联邦系统,联合优化局部目标与流形约束,支撑边缘端跨设备协同表征学习。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-08-12.html">← 2026-08-12</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-08-14.html">2026-08-14 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

@@ -33,9 +33,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28824" target="_blank" rel="noopener">Characterizing LLM Kernel Access and Memory Interaction in Multi-Partition NUMA GPUs</a></div>
+      <div class="it-sum">— 系统分析LLM核心kernel(weight projection / MoE / attention)在多分区NUMA GPU上的访存模式与跨分区通信瓶颈，揭示非均匀内存架构下的性能退化根因，为下一代GPU互连与缓存设计提供量化依据。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29076" target="_blank" rel="noopener">Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems</a></div>
+      <div class="it-sum">— 提出选择性KV Cache保护策略，解决模拟存算一体(CIM)阵列在attention计算中因频繁权重重写与weight-stationary范式不匹配引入的噪声问题，为模拟CIM芯片部署LLM推理扫清关键障碍。</div>
     </li>
     </ul>
   </section>
@@ -44,15 +46,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">octanejs.dev</span><a href="https://octanejs.dev" target="_blank" rel="noopener">Octane – React&#x27;s programming model, compiled</a></div>
+      <div class="it-sum">(HN 118分) — 将React声明式编程模型编译为高效原生代码的编译器框架，借鉴AI编译器中的图优化与代码生成思路，将组件树转为可直接执行的优化指令序列。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2605.01660" target="_blank" rel="noopener">Testing, Credible Compilation, and Verification in the Axon Verified Compiler in Lean and Claude Code</a></div>
+      <div class="it-sum">— Axon验证编译器完全由Claude Code在Lean中编写并机器验证，实现从编译器到生成代码的全链correctness proof，消除了对验证代码的人工审计需求。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28897" target="_blank" rel="noopener">High-Level Big Integer Arithmetic in Futhark for GPUs</a></div>
+      <div class="it-sum">— 用函数式语言Futhark在GPU上实现2^15~2^19比特大整数算术的高层编译，识别哪些函数式构造可高效映射到CUDA，为高层语言在数值密集型GPU计算的编译优化提供实践指南。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28835" target="_blank" rel="noopener">From C to Idiomatic Rust: A Ship-of-Theseus Agentic Translation</a></div>
+      <div class="it-sum">— Agent驱动的C→Rust翻译框架，采用&quot;忒修斯之船&quot;渐进式替换策略（参见分类7）。</div>
     </li>
     </ul>
   </section>
@@ -61,18 +67,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28848" target="_blank" rel="noopener">DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs</a></div>
+      <div class="it-sum">— 提出与主机无关的推理+微调协同服务设计，将峰值推理的空闲GPU算力转化为LoRA微调吞吐，在保障推理SLO的前提下提升集群整体利用率。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29575" target="_blank" rel="noopener">SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving</a></div>
+      <div class="it-sum">— 揭示LLM推理性能饱和不仅受限于HBM带宽，更与部署相关的batch size天花板有关，提供轻量级饱和感知建模以避免无效扩容。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28633" target="_blank" rel="noopener">Topology-Aware Data Movement for Disaggregated GPU Inference</a></div>
+      <div class="it-sum">— 指出现有分离式推理系统(DistServe/Splitwise/Mooncake)均忽略GPU池间网络拓扑异构性，提出拓扑感知的KV Cache传输策略——70B模型每请求2.6GB KV迁移可大幅降低跨池延迟。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28669" target="_blank" rel="noopener">LARA: Lightweight Adapters in the Residual Stream for Composable Adaptation</a></div>
+      <div class="it-sum">— 在残差流(而非权重矩阵)中注入低秩修正的轻量适配方法，冻结base model全权重，实现可组合的模型适配与对齐。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28670" target="_blank" rel="noopener">Hierarchical Copula-Gumbel-Top-K Routing for MoE</a></div>
+      <div class="it-sum">— 为MoE模型提供保持逐token路由律不变的两侧依赖控制，在固定单token路由分布下灵活建模token间联合路由选择。</div>
     </li>
     </ul>
   </section>
@@ -81,18 +92,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">fortune.com</span><a href="https://fortune.com/2026/07/31/ai-debt-hypescalers-capex-capital-spending-hidden-borrowing-bond-issuance/" target="_blank" rel="noopener">AI&#x27;s debt binge can&#x27;t last, hidden borrowing reaches $1.65T</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 110分) — Fortune深度调查揭露AI行业隐性债务达$1.65万亿，超大规模capex背后的债券发行与表外融资面临可持续性危机，可能重塑AI基建投资节奏。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29069" target="_blank" rel="noopener">Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework</a></div>
+      <div class="it-sum">— Aries全栈实验框架重新审视Agentic Serving的云基础设施需求，将任务语义与执行配置解耦，通过跨组件轨迹重建与关联遥测为Agent系统提供端到端可观测性。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">planetscale.com</span><a href="https://planetscale.com/blog/massively-parallel-postgres-backups" target="_blank" rel="noopener">Massively Parallel Postgres Backups</a></div>
+      <div class="it-sum">(HN 85分) — PlanetScale开源大规模并行Postgres备份方案，利用分布式并行加速TB级数据库备份与恢复。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28880" target="_blank" rel="noopener">LayoutBench: Performance Benchmarking of Cloud Storage Layouts for Multimedia Data</a></div>
+      <div class="it-sum">— 首个系统评估云对象存储布局对多媒体ML工作负载影响的基准，将数据物理组织方式与训练吞吐/成本直接关联。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29465" target="_blank" rel="noopener">CARA: Exact Local Repair with Fresh One-Action Certification for Cloud Consolidation</a></div>
+      <div class="it-sum">— 提出证书对齐重组方法，为云资源整合中的布局修复提供可证明的单步认证保证。</div>
     </li>
     </ul>
   </section>
@@ -101,9 +117,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/ten-advances-in-mathematics/" target="_blank" rel="noopener">Ten advances in mathematics and theoretical computer science</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 396分) — OpenAI发布AI辅助数学与理论计算机科学十大进展，涵盖定理证明、组合优化等方向，展示LLM在严谨科学推理中的最新能力边界，同时引发AI自主科研能力的治理讨论。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28672" target="_blank" rel="noopener">LAWFUL: Law-Aligned Witness for Faithful Use of Latents</a></div>
+      <div class="it-sum">— 提出&quot;法律对齐见证&quot;方法，验证神经网络在预测物理系统时是否真正内化了物理定律作为结构化知识——弥合可解释性研究在覆盖连续变量物理定律上的四个关键缺口。</div>
     </li>
     </ul>
   </section>
@@ -112,21 +130,27 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28952" target="_blank" rel="noopener">Advances, challenges, and opportunities for legged robots</a></div>
+      <div class="it-sum">— 综合评述人形与四足机器人在硬件、运动、自主性、数据和应用五个维度的当前能力边界与开放挑战，为具身智能落地提供全景路线图。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29031" target="_blank" rel="noopener">Auto-JEPA: A Latent World Model of Continuous Intent for End-to-End Autonomous Driving</a></div>
+      <div class="it-sum">— 提出面向自动驾驶的连续意图潜世界模型，核心洞见：规划无需重建完整未来世界，仅需关注影响自车动作的场景特征，在潜在空间中学习连续未来意图。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29052" target="_blank" rel="noopener">Outcome-Guided Distillation: Advancing VLM Reasoning in Autonomous Driving</a></div>
+      <div class="it-sum">— 结果引导蒸馏框架：通过教师-学生范式将VLM推理能力从大模型迁移到轻量端到端驾驶模型，以驾驶结果为导向优化蒸馏目标。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29009" target="_blank" rel="noopener">D-VLC: Decentralized Vision-Language Collaboration for Heterogeneous Multi-Robot Systems</a></div>
+      <div class="it-sum">— 去中心化VLM协作框架，使异构多机器人系统在未知环境中通过自然语言指令实现协同任务执行。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28993" target="_blank" rel="noopener">ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation</a></div>
+      <div class="it-sum">— 识别并解决世界动作模型中的&quot;训练分布幻觉&quot;问题，在视觉分布偏移下保持操作策略鲁棒性。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29011" target="_blank" rel="noopener">DART: Dual-Axis Airborne Reachability-Gated Torque-Reaction for Off-Road Vehicle Jumps</a></div>
+      <div class="it-sum">— 越野车辆跳跃空中姿态控制：利用车轮角动量预算在1.4吨平台上实现约9~13°/s俯仰修正，降低着陆碰撞风险。</div>
     </li>
     </ul>
   </section>
@@ -135,15 +159,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28877" target="_blank" rel="noopener">Open-Source LLM-Driven Formal Verification: A Multi-Agent Pipeline for RTL Repair</a></div>
+      <div class="it-sum">— 开源LLM驱动的多Agent形式化验证管线，弥补现有RTL修复仅依赖仿真的不足，实现具备数学保证的硬件设计自动修复。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29283" target="_blank" rel="noopener">RTLCurator: Label-Efficient Data Curation for RTL Generation</a></div>
+      <div class="it-sum">— 针对RTL训练数据稀缺：两个常用数据集中仅24.4%和53.5%的合成样本通过功能测试，提出标签高效的数据筛选策略——质量控制胜过数量。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2605.01660" target="_blank" rel="noopener">Testing, Credible Compilation, and Verification in the Axon Verified Compiler in Lean and Claude Code</a></div>
+      <div class="it-sum">— Claude Code全自动编写并形式化验证编译器（详见分类2），整个开发过程无需人工审计验证代码。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.28835" target="_blank" rel="noopener">From C to Idiomatic Rust: A Ship-of-Theseus Agentic Translation</a></div>
+      <div class="it-sum">— Agent驱动的&quot;忒修斯之船&quot;式C→Rust翻译，逐步替换C组件为惯用Rust，在保持功能等价的同时实现安全迁移。</div>
     </li>
     </ul>
   </section>
@@ -152,18 +180,21 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">mattbeton.com</span><a href="https://mattbeton.com/blog/bitnet-6502.html" target="_blank" rel="noopener">Autoregressive Language Model on the 6502 Processor</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 131分) — 在1975年发布的MOS 6502处理器(Apple II / Commodore 64同款)上运行自回归语言模型！利用BitNet极低比特(1.58-bit)量化技术，在8位CPU、KB级内存的极限约束下实现LLM推理——边缘推理极致压缩的里程碑式演示。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29076" target="_blank" rel="noopener">Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems</a></div>
+      <div class="it-sum">— 模拟存算一体芯片的LLM推理噪声防护（详见分类1），对端侧低功耗AI芯片尤其关键。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.29357" target="_blank" rel="noopener">Low-Power PLL-Based Clock Stabilization for Flexible IGZO AMS Systems</a></div>
+      <div class="it-sum">— 面向柔性电子平台的超低功耗PLL时钟稳定方案，解决柔性生物传感器等模拟混合信号电路的PVT漂移问题，为可穿戴/植入式端侧AI硬件提供时钟基础。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-08-02.html">← 2026-08-02</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-08-05.html">2026-08-05 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

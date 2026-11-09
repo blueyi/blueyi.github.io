@@ -57,6 +57,23 @@ def test_validate_digest_requires_three_to_five_highlights():
         raise AssertionError("too few highlights must be rejected")
 
 
+def test_validate_digest_requires_article_summaries_for_new_digest():
+    md = """# Daily
+## 1️⃣ AI 芯片
+- **Title only**
+## 🌟 今日亮点
+1. **News**: impact
+2. **News 2**: impact
+3. **News 3**: impact
+"""
+    try:
+        publish_daily.validate_digest(md, "2026-11-09")
+    except ValueError as exc:
+        assert "article summaries are required" in str(exc)
+    else:
+        raise AssertionError("missing article summary must be rejected")
+
+
 def test_publish_retries_after_remote_fast_forward(monkeypatch, tmp_path):
     calls = []
     outcomes = [1, 0]

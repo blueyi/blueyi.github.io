@@ -21,11 +21,11 @@
   <div class="highlights">
     <h2>🌟 今日亮点</h2>
     <ol>
-      <li><b>HN 最高热度落在治理侧:</b></li>
-      <li><b>生产推理稳定性成 arXiv cs.DC 焦点——</b></li>
+      <li><b>HN 最高热度落在治理侧:[Codex 加密子代理提示](https://news.ycombinator.com/item?id=48905028)(408 分)把 agent 生态的透明度与厂商锁定问题推上台面。</b></li>
+      <li><b>生产推理稳定性成 arXiv cs.DC 焦点——[Trusted Floors](https://arxiv.org/abs/2607.09992) 给学习式 serving 上&quot;保底 SLO 守卫&quot;,[WorldMove](https://arxiv.org/abs/2607.10389) 解有状态世界模型的弹性迁移,都在补 K8s 之上的 ML serving 短板。</b></li>
       <li><b>端侧/本地大模型系统层集中出货:混合 CPU-GPU 张量调度、MawForge 的 MoE 专家物化、FlashAccel 的闪存推理,共同指向&quot;超显存模型跑在消费硬件&quot;这一趋势。</b></li>
-      <li><b>LLM 进硬件与验证链路加速:AI 写 RTL 测试(</b></li>
-      <li><b>具身智能延续 VLA + 世界模型主线,</b></li>
+      <li><b>LLM 进硬件与验证链路加速:AI 写 RTL 测试([语义化 fuzzing](https://arxiv.org/abs/2607.10340))与用形式证明压制 agentic 找 bug 误报([Mizzle](https://arxiv.org/abs/2607.11611))两头并进。</b></li>
+      <li><b>具身智能延续 VLA + 世界模型主线,[EgoSteer](https://arxiv.org/abs/2607.09701) 用第一视角人类视频撬动灵巧操作的数据瓶颈,是本周最值得追的方向。</b></li>
     </ol>
   </div>
   <section class="domain">
@@ -33,12 +33,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09742" target="_blank" rel="noopener">Chiplet3D:引脚与热感知的 3D 芯粒布图</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">提出把布线密度用卷积算子嵌进 MILP 里,在 3D-IC 堆叠早期的 floorplanning 阶段就同时约束引脚与散热。Moore&#x27;s Law 放缓后垂直堆叠是延续性能的主路,但&quot;热陷阱&quot;是绕不开的坎,该工作把最省成本的散热优化前置到了最早期,值得关注布局工具链的团队。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09775" target="_blank" rel="noopener">WINT:一种误差特性更好的加权整数表示</a></div>
+      <div class="it-sum">提出可配置的 mantissa-exponent 格式,面向嵌入式与边缘 ML 的严格内存约束场景,在保证大动态范围的同时压低量化误差,可视作数字表示层的一个新旋钮。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10392" target="_blank" rel="noopener">温度感知的动态 Rowhammer 阈值管理</a></div>
+      <div class="it-sum">指出出厂固定的缓解阈值忽略了真实 TRHD 随温度漂移的问题,提出每 epoch 依观测温度用线性-T 模型重估阈值的 defense-agnostic 运行层,对 DRAM 安全设计是实用补丁。</div>
     </li>
     </ul>
   </section>
@@ -47,12 +50,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10001" target="_blank" rel="noopener">Programming with Ellipses</a></div>
+      <div class="it-sum">设计了在模式与表达式中直接使用省略号 `...` 的语言扩展,用最小一般泛化做程序翻译,让列表函数定义比递归写法更简洁,是 PL 层的表达力实验。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.11329" target="_blank" rel="noopener">Fuss-free 累积宇宙:理论与实践</a></div>
+      <div class="it-sum">给出依赖类型论中多态累积宇宙的新代数式表述,绕开复杂的相干宇宙强制理论,并用归一化证明等价,对依赖类型编译器实现者有参考价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.11636" target="_blank" rel="noopener">On Thread Convergence</a></div>
+      <div class="it-sum">为控制流图的节点/边引入收敛性概念,判定某处 barrier 是否保证同步线程块内所有线程,让编译器在均匀执行区省去多余的代码变换——GPU 编译优化的经典问题。</div>
     </li>
     </ul>
   </section>
@@ -61,12 +67,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09683" target="_blank" rel="noopener">KV-Cache 压缩的消融、统计推断与验证</a></div>
+      <div class="it-sum">系统比较 Turbo-Quant 与 SpectralQuant,用一套统计验证方法把系统性编解码差异和实现方差分离开,关键发现是基于特征基的方法在重尾数据上因协方差不稳而失效,给 KV 压缩选型提了醒。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10152" target="_blank" rel="noopener">Consensus as Collapse Policy</a></div>
+      <div class="it-sum">把分布式执行读作通信诱导的二阶证据态,重构共识输出的安全性来源,偏理论,但对做大规模一致性服务框架的人有启发。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10305" target="_blank" rel="noopener">无共识的拜占庭问责</a></div>
+      <div class="it-sum">针对 multi-Krum 等鲁棒聚合规则依赖中心协调器的痛点,给出去中心化下的强最终一致性方案,面向分布式鲁棒训练/聚合场景。</div>
     </li>
     </ul>
   </section>
@@ -75,12 +84,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09992" target="_blank" rel="noopener">Trusted Floors Under Untrusted Learners</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">为 ML serving 提出运行时&quot;保底 SLO 守卫&quot;:当学习式路由/准入判错时限制损害范围,并处理 Kueue、DRA、Gateway-API Inference Extension 等 Kubernetes 层的跨层意外——直击生产推理集群的稳定性软肋。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10389" target="_blank" rel="noopener">WorldMove:交互式世界模型的精确状态迁移服务</a></div>
+      <div class="it-sum">把多 GB 且每步重写的注意力缓存&quot;钉死在设备上&quot;当作调度问题,在一条保证下把在线会话迁移到另一 GPU,对有状态推理的弹性伸缩是新思路。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10081" target="_blank" rel="noopener">HPC 应用与工作流的描述式执行</a></div>
+      <div class="it-sum">观察到编排正从人写代码转向 LLM 驱动的描述式散文,梳理其在作业管理、系统监控调试中的落地形态。</div>
     </li>
     </ul>
   </section>
@@ -89,12 +101,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">news.ycombinator.com</span><a href="https://news.ycombinator.com/item?id=48905028" target="_blank" rel="noopener">Codex 开始加密 sub-agent prompts</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 408 分)引发热议:OpenAI 在 Codex 中对子代理提示做加密,社区围绕透明度、可审计性与厂商锁定展开激烈讨论,是 agent 生态治理的一个信号性事件。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09682" target="_blank" rel="noopener">AuditWeave:防篡改、可审计导航的证据层</a></div>
+      <div class="it-sum">面向审计/金融/医疗等受监管领域,让组织事后可重建&quot;哪些证据支撑了某结论&quot;并证明记录未被篡改,是 AI 辅助决策合规的基础设施。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09668" target="_blank" rel="noopener">立场:每个 Ground Truth 都是人为建构而非客观真理</a></div>
+      <div class="it-sum">主张训练/评测里的基准真值并非中立测量,而由人与技术的安排构造,呼吁 ML 社区正视其价值负载——对齐与评测伦理的重要讨论。</div>
     </li>
     </ul>
   </section>
@@ -103,12 +118,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09701" target="_blank" rel="noopener">EgoSteer:从第一视角视频走向可操控灵巧操作的全栈系统</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">用第一视角人类视频扩展灵巧手 VLA 预训练,再做数据高效的真机后训练,直击灵巧手缺乏大规模语言对齐+动作精确数据的瓶颈,是 VLA 落地的代表性工作。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09764" target="_blank" rel="noopener">OmniSCS:面向自动驾驶的全可编辑驾驶世界安全关键场景合成</a></div>
+      <div class="it-sum">在外观与轨迹层编辑 agent 状态,同时保持场景保真度,解决闭环仿真里编辑后数据失真的问题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09741" target="_blank" rel="noopener">SWIFT:小世界交互框架用于流感知轨迹预测</a></div>
+      <div class="it-sum">从交通网络的结构与动力学重新审视交互建模,给纯数据驱动方法注入结构先验以抗分布漂移;另有RoboNav-Arm做杂乱环境下机械臂的 agentic 导航避障、可复用运载火箭的饱和感知鲁棒轨迹优化用可微物理处理大攻角翻转机动。</div>
     </li>
     </ul>
   </section>
@@ -117,12 +135,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10340" target="_blank" rel="noopener">When Fuzzing Meets Understanding:LLM 驱动的 RTL 语义化测试生成</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">让 LLM 理解语义后生成测试,突破传统硬件 fuzzer 只靠启发式、难覆盖 corner-case 的局限,是 AI 写硬件验证的实用进展。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.11611" target="_blank" rel="noopener">Mizzle:防止 agentic 找 bug 误报的完备并发不正确性逻辑</a></div>
+      <div class="it-sum">要求 LLM 为每个 bug 报告附上机器可检验的证明,从根上压制 LLM 找 bug 泛滥的假阳性,思路干净。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10499" target="_blank" rel="noopener">K-ESBMC</a></div>
+      <div class="it-sum">给 IEC 61131-3 梯形图建可执行形式语义,用来验证 verifier 前端翻译是否偏离标准,防止工业验证器静默返回错误结果。</div>
     </li>
     </ul>
   </section>
@@ -131,18 +152,21 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10183" target="_blank" rel="noopener">消费设备上混合 CPU-GPU LLM 推理的自动张量调度</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">指出现有 offloading 只做粗粒度的层级/专家级调度,忽略了张量间的显著异构性,提出更细粒度的自动调度,直接面向笔记本/台式机跑超显存模型的场景。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09686" target="_blank" rel="noopener">MawForge:面向本地 MoE 推理的内存受限专家物化</a></div>
+      <div class="it-sum">验证在统一内存受限机器上,通过按需物化专家而非常驻全模型,让本地 MoE serving 变得可行——端侧跑稀疏大模型的关键系统假设。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10186" target="_blank" rel="noopener">FlashAccel:用高带宽闪存做高吞吐 LLM 推理</a></div>
+      <div class="it-sum">以 HBF 补 HBM 容量短板,针对其高延迟低带宽利用做优化;另有IRONSmith为 AMD Ryzen AI NPU 提供首个可视化数据流编程环境、Edge Physical AI 上 ViT 的异构边缘 GPU 部署面向自动驾驶的低延迟低功耗约束。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-14.html">← 2026-07-14</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-16.html">2026-07-16 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

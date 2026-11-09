@@ -21,10 +21,10 @@
   <div class="highlights">
     <h2>🌟 今日亮点</h2>
     <ol>
-      <li><b>EU Chat Control 1.0 快速通道强推(HN 384)</b>：是本期最重量级事件——首次以立法形式将 **客户端扫描** 强加于加密通讯之上,同时把端侧 NPU 变成&quot;政府征用的推理硬件&quot;,对端到端加密、端侧 AI、跨国 AI 产品合规三条战线同时开火,Signal 已放话可能退出欧盟,产业震动才刚开始。</li>
-      <li><b>GPT-5.5 Codex reasoning-token clustering 争议(HN 354)</b>：揭开了 reasoning model 服务化的一个隐藏成本:为压低单 token 成本而做的 **跨请求 CoT batching / 中间状态复用**,正在牺牲输出稳定性——vLLM/SGLang/TensorRT-LLM 阵营必须重新审视 reasoning 段的 batch 边界与 KV 隔离策略。</li>
+      <li><b>EU Chat Control 1.0 快速通道强推(HN 384)</b>：是本期最重量级事件——首次以立法形式将 客户端扫描 强加于加密通讯之上,同时把端侧 NPU 变成&quot;政府征用的推理硬件&quot;,对端到端加密、端侧 AI、跨国 AI 产品合规三条战线同时开火,Signal 已放话可能退出欧盟,产业震动才刚开始。</li>
+      <li><b>GPT-5.5 Codex reasoning-token clustering 争议(HN 354)</b>：揭开了 reasoning model 服务化的一个隐藏成本:为压低单 token 成本而做的 跨请求 CoT batching / 中间状态复用,正在牺牲输出稳定性——vLLM/SGLang/TensorRT-LLM 阵营必须重新审视 reasoning 段的 batch 边界与 KV 隔离策略。</li>
       <li><b>自主跟随飞行伞(HN 89)</b>：虽是 DIY 项目,却完整验证了&quot;贴身漂浮设备&quot;的技术闭环,可能催生人形机器人之外的一个消费级具身智能新品类。</li>
-      <li><b>AI 芯片、编译器框架、数据中心基础设施三大分类今日空窗</b>：反映当前产业进入&quot;财报窗口前的静默期&quot;,主线博弈已从新品发布转向 **政策合规与推理服务稳定性**——这本身就是产业成熟度上升的信号,值得持续跟踪本周后半段。</li>
+      <li><b>AI 芯片、编译器框架、数据中心基础设施三大分类今日空窗</b>：反映当前产业进入&quot;财报窗口前的静默期&quot;,主线博弈已从新品发布转向 政策合规与推理服务稳定性——这本身就是产业成熟度上升的信号,值得持续跟踪本周后半段。</li>
     </ol>
   </div>
   <section class="domain">
@@ -39,7 +39,8 @@
     <h2>3️⃣ AI 推理优化(数据中心)</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/openai/codex/issues/30364" target="_blank" rel="noopener">GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/openai/codex/issues/30364" target="_blank" rel="noopener">354</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">分)—— OpenAI `codex` 仓库出现的这条 issue 在 HN 引爆讨论。核心怀疑:GPT-5.5 Codex 在服务端做 reasoning-token 聚簇/批处理(把多个用户会话的 CoT token 拼到同一个 batch 或复用同一段中间状态)以摊薄推理成本,但在高并发下引入了跨请求的隐式耦合,导致 同一 prompt 在不同时段/负载下输出稳定性显著下降、代码补全质量出现肉眼可见的波动。对推理系统的启示是明确的:continuous batching + reasoning-model 的组合并不是&quot;免费午餐&quot;——当中间推理 token 占比远高于最终输出 token 时,batch 内 token 分布的方差会被放大,PagedAttention/prefix cache 的命中策略、乃至 speculative decoding 的接受率都可能被拖累。vLLM / SGLang / TensorRT-LLM 阵营接下来需要重点回答:reasoning model 的 batching 边界应该画在哪里,是否需要为 CoT 段单独开辟隔离的 KV 分片。这也是继上半年&quot;long-context 下 prefix cache 失效&quot;讨论之后,推理侧最值得追的架构级问题。</div>
     </li>
     </ul>
   </section>
@@ -51,7 +52,8 @@
     <h2>5️⃣ AI 安全与治理</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">heise.de</span><a href="https://www.heise.de/en/news/Chat-Control-1-0-EU-Council-forces-messenger-scans-via-fast-track-11353659.html" target="_blank" rel="noopener">EU Council forces Chat Control via fast-track</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">heise.de</span><a href="https://www.heise.de/en/news/Chat-Control-1-0-EU-Council-forces-messenger-scans-via-fast-track-11353659.html" target="_blank" rel="noopener">384</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">分)—— 欧盟理事会通过&quot;快速通道&quot;程序强推 Chat Control 1.0,要求消息类应用(WhatsApp、Signal、iMessage、Telegram 等)对用户内容进行 客户端扫描 (client-side scanning, CSS),以 CSAM(儿童性剥削材料)检测为名义,在端到端加密之外插入一层强制的本地哈希/AI 匹配。对 AI Infra 与治理层面的三重冲击:(1) 端侧 AI 被首次以立法形式&quot;征用&quot; —— 手机上的 NPU 将被迫承载政府指定的分类/哈希模型,厂商 (Apple / Google / Meta) 是否配合、模型是否可审计、误报率如何披露,将成为接下来数月的核心争议;(2) 端到端加密的政策终局 —— Signal 已多次表态&quot;宁可退出欧盟市场也不接入 CSS&quot;,Chat Control 1.0 若正式生效,可能触发主流加密通讯应用的欧盟撤出潮;(3) AI 分类器的合规责任链 —— 一旦模型误报导致公民被误判,责任归属(模型提供方 / 应用厂商 / 成员国政府)在现行框架下完全模糊。这是欧盟继 AI Act 之后对 AI 治理格局影响最大的一次立法动作,量级远超一般政策新闻,值得所有做端侧模型、隐私推理、以及跨国 AI 产品的团队立即评估影响面。</div>
     </li>
     </ul>
   </section>
@@ -59,10 +61,12 @@
     <h2>6️⃣ 具身智能</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">designboom.com</span><a href="https://www.designboom.com/technology/autonomous-flying-umbrella-follows-users-rain-sunlight-i-build-stuff-01-13-2026/" target="_blank" rel="noopener">Autonomous flying umbrella follows and shields users from rain and sunlight</a></div>
+      <div class="it-title"><span class="badge score">designboom.com</span><a href="https://www.designboom.com/technology/autonomous-flying-umbrella-follows-users-rain-sunlight-i-build-stuff-01-13-2026/" target="_blank" rel="noopener">89</a></div>
+      <div class="it-sum">分)—— 一款可 自主跟随人体、遮挡雨水与阳光 的飞行伞原型登上 HN 前排。虽然本质更接近 DIY hobbyist 项目而非产业级具身智能,但从技术栈看却完整覆盖了 感知—定位—控制 三段:视觉/雷达跟踪人体、SLAM 维持相对位姿、姿态控制在动态风场下保持稳定悬停。这类&quot;贴身跟随无人机&quot;过去几年最大的瓶颈从来不是硬件,而是 户外强扰动下的鲁棒策略 —— 树影、逆光、突风、周围行人干扰都会让传统 PID/MPC 失效。若后续能引入学习型策略(RL 或 Diffusion Policy 替代手写控制律)甚至端侧 VLA 模型进行意图理解(判断&quot;用户想避雨&quot;还是&quot;用户想拍照&quot;),就有机会从玩具走向消费级产品。人形机器人之外,&quot;随身漂浮设备&quot; 或将成为具身智能下一个被忽视但有实用价值的细分方向。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">airplaneboneyards.com</span><a href="https://airplaneboneyards.com/airplane-boneyards-list-and-map.htm" target="_blank" rel="noopener">Airplane Boneyards List and Map</a></div>
+      <div class="it-title"><span class="badge score">airplaneboneyards.com</span><a href="https://airplaneboneyards.com/airplane-boneyards-list-and-map.htm" target="_blank" rel="noopener">81</a></div>
+      <div class="it-sum">分)—— 严格意义上是航空退役场地数据聚合站,与具身智能无直接关联,但对 自动驾驶/无人机的仿真数据采集 而言是一份意外的资源清单:全球飞机坟场是极佳的 大规模、静态、可控光照的开放场景,适合做 LiDAR / 多视图重建 / NeRF-Sim 训练数据,历史上已有多支 CV/机器人团队在类似环境采集数据。作为背景资料保留。</div>
     </li>
     </ul>
   </section>
@@ -76,7 +80,7 @@
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-03.html">← 2026-07-03</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-08.html">2026-07-08 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

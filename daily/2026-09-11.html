@@ -21,7 +21,7 @@
   <div class="highlights">
     <h2>🌟 今日亮点</h2>
     <ol>
-      <li><b>成本结构被两条线同时改写</b>：DeepSeek V4.1-Flash 用 CED 架构把 KV Cache 压到 1/437,而 OpenAI 因 Astra 需求过猛暂停 Pro 订阅——**推理效率与推理容量已是同一场战争的两端**。</li>
+      <li><b>成本结构被两条线同时改写</b>：DeepSeek V4.1-Flash 用 CED 架构把 KV Cache 压到 1/437,而 OpenAI 因 Astra 需求过猛暂停 Pro 订阅——推理效率与推理容量已是同一场战争的两端。</li>
       <li><b>NVIDIA 用 129 亿美元买下 Hugging Face + 让 d-Matrix 接 NVLink Fusion</b>：一手抓模型分发入口,一手把 scale-up 互联做成行业事实标准,护城河从「芯片」移到「生态 + 网络」。</li>
       <li><b>可信 AI 集中爆发</b>：OpenAI 训练数据溯源遭数学家追问、默认「允许训练」开关被指反复重开、Anthropic 披露蒸馏攻击与单人国家级攻击——治理与安全从外围防线变成上产品前的前置条件。</li>
       <li><b>具身智能的「数据来源」正在换轨</b>：Skild S1 单视频学任务、HSImul3R 把人-场景交互变成可仿真训练数据、触觉数据成为新焦点——视频与触觉正在替代昂贵的真机采样。</li>
@@ -33,23 +33,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/" target="_blank" rel="noopener">NVIDIA 以 129 亿美元收购 Hugging Face</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">——本周最大变量。黄的算盘是把「交付 AI 能力」从硅片延伸到模型分发生态,把开源权重、数据集与推理入口一次性收进自家栈;业内已把它读作「开放权重 + 自研网络」的组合拳。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/" target="_blank" rel="noopener">d-Matrix 采用 NVIDIA NVLink Fusion 上机架级 XPU</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">(NVIDIA Blog、The Next Platform)。推理芯片新贵把下一代 Raptor XPU 接进 NVLink scale-up(互联)+Spectrum-X scale-out(横向扩展)体系,信号很明确:scale-up 互联正在成为新的护城河,哪怕你不买 GPU 也得接它的网络。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/09/486436.html" target="_blank" rel="noopener">京东发布 10 万卡国产算力集群 + JoyAI 世界模型</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">国产算力继续走「集群规模 + 物理 AI」双线。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">semianalysis.com</span><a href="https://semianalysis.com/2025/09/08/huawei-ascend-production-ramp/" target="_blank" rel="noopener">华为 Ascend 产能爬坡:die bank、TSMC 存量代工、HBM 是瓶颈</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">——老文新读仍有效:国产加速卡的约束已从「设计」转向 HBM 供给。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">semiengineering.com</span><a href="https://semiengineering.com/redefining-processes-at-sub-2nm/" target="_blank" rel="noopener">sub-2nm 工艺开始「工序合并」</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">尺寸进入埃级后,离散步骤合并与良率控制成为新的工程主轴。</div>
     </li>
     </ul>
   </section>
@@ -58,19 +58,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.10368" target="_blank" rel="noopener">Triton/TinyTC 这类 AI 张量编译器被拿来写高阶 stencil</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">8 阶 25 点声学模板在 GPGPU 上与手写 HPC 内核正面对比。AI 编译器吃 HPC 负载,是「tiling + 内存抽象」复用度的一次真实检验。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.09270" target="_blank" rel="noopener">量子工作负载跨 CPU/GPU/FPGA 编译</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">“Python 在前、后端在 Backline”,实时 QEC 的低延迟需求倒逼量子平台把 Python 前端编译掉。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">developers.openai.com</span><a href="https://developers.openai.com/api/docs/guides/agents-api/overview" target="_blank" rel="noopener">OpenAI Agents API 文档放出</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">agent 编排层正从各家自研 SDK 收敛为平台级 API。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/grpo-with-trl-ifstruct" target="_blank" rel="noopener">HF:350M 小模型 100 步 GRPO 提升结构化输出</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">——TRL 路径的轻量后训练配方,适合端侧/私有化。</div>
     </li>
     </ul>
   </section>
@@ -79,23 +79,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/yanxishe/U8PtVze3OZTTnJc4.html" target="_blank" rel="noopener">DeepSeek V4.1-Flash:KV Cache 暴降 437 倍,参数几乎翻倍而推理更省</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">(雷锋网深度、InfoQ、SiliconANGLE)。CED(Causal-Encoder-Decoder)架构重写长上下文路径,官方称小模型反超旗舰 V4-Pro。Agent 长会话成本结构被直接改写,这是本周对「每 token 成本」影响最大的一条。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.09748" target="_blank" rel="noopener">Epoch:为稀疏 MoE 服务编译 Diffusion Blocks</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">指出扩散语言模型的「固定块多轮精修」循环与主流 serving 的 per-forward 执行单元根本不匹配,必须把编译层拉进来做路由复用与专家输出复用。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.09643" target="_blank" rel="noopener">UNISON:面向 LLM Agent 的会话级 KV 驻留近存调度</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">——agent 循环持有增长的 KV 前缀,驱逐/分层要按 session 而非按请求决策。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.09823" target="_blank" rel="noopener">AMEND:GPU-PIM 解码中的可审计边距无阻塞丢弃</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">块稀疏注意力要跳过 K 块,但选择器仍读满带宽,近存计算 + 可证明边距是解法。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/" target="_blank" rel="noopener">Astra 需求把 OpenAI Pro 订阅按下暂停</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">——推理容量成为产品上线的硬约束,「有模型没算力」的产品侧体现。</div>
     </li>
     </ul>
   </section>
@@ -104,27 +104,26 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/" target="_blank" rel="noopener">Crusoe 以 300 亿美元估值融资 30 亿美元</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">Fluidstack 15 亿。AI 基础设施包揽本周最大融资前二。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/on-prem/2026/09/10/nscale-swallows-lions-share-of-uk-datacenter-investment/5295541" target="_blank" rel="noopener">英国数据中心投资 57 亿美元,Nscale 一家吃掉 37 亿</a></div>
-      <div class="it-sum">(</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">planetscale.com</span><a href="https://planetscale.com/blog/introducing-neki" target="_blank" rel="noopener">PlanetScale 开源 Neki:分片 Postgres</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">——面向超大规模多租户的分片原生路线,值得跟踪其与分布式事务的取舍。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">blocksandfiles.com</span><a href="https://www.blocksandfiles.com/architecture/2026/09/09/panmnesia-and-meta-take-single-chip-cxl-based-view-of-ai-datacenters/5295213" target="_blank" rel="noopener">Panmnesia + Meta:CXL 视角的「单芯片 AI 数据中心」</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">内存池化继续往 CXL 走。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/nvidias-groq-deal-facing-doj-probe-amid-regulator-scrutiny-into-acqui-hires-report/" target="_blank" rel="noopener">NVIDIA/Groq 交易遭 DOJ 调查</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">「收购式挖人」(acqui-hire)是否构成事实并购,进入监管射程。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">semianalysis.com</span><a href="https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/" target="_blank" rel="noopener">xAI Colossus 2 作为全球首个吉瓦级数据中心 + 独有 RL 方法</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">——电力与机架密度已取代 GPU 数量成为集群头号瓶颈。</div>
     </li>
     </ul>
   </section>
@@ -133,27 +132,27 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">news.ycombinator.com</span><a href="https://news.ycombinator.com/item?id=49643556" target="_blank" rel="noopener">HN 热帖:OpenAI 反复把「允许训练」开关改回开启</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">默认值即治理,用户同意(consent)的可持续性成为信任问题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">mathstodon.xyz</span><a href="https://mathstodon.xyz/@andreasthom/117240535270608201" target="_blank" rel="noopener">数学家要求 OpenAI 证明没用未发表成果</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">(HN 594、The Verge)——Navier–Stokes 的宣布附带了 Lean 4 形式化证明,但训练数据溯源成了学术界的核心质疑,形式化证明反而成了「可信度基建」的样板。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/" target="_blank" rel="noopener">Anthropic 9 月威胁情报:指称阿里/Moonshot/DeepSeek 持续蒸馏攻击</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">(TechCrunch、报告、SiliconANGLE):AI 已让单人运行国家级攻击行动成为可能;同批报告披露 rogue agent 用废弃 wiki/老网站当 C2 通道(The Register、Tom&#x27;s Hardware)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/expanding-ai-access-us-government" target="_blank" rel="noopener">OpenAI × GSA:政府 $0 许可费 + 用量 5 折 + 网络防御支持</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">AI 政策窗口——采购与政策双线落地。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/industrynews/X2TDF0nWzEIkJnmf.html" target="_blank" rel="noopener">蚂蚁陈亮:能力决定 AI 能做什么,可信决定社会敢把什么交给 AI</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">Agent 调用服务、执行交易后,授权边界与过程可控性成为基础设施。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">microsoft.com</span><a href="https://www.microsoft.com/en-us/research/blog/verifying-rust-cryptography-in-symcrypt-from-standards-to-code/" target="_blank" rel="noopener">SymCrypt 的 Rust 密码学验证</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">与 UnsafeChecker 查 Rust 安全抽象中的 soundness bug。</div>
     </li>
     </ul>
   </section>
@@ -162,27 +161,27 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/" target="_blank" rel="noopener">Skild AI S1:单段视频学新任务</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">面向产线/仓储「布局常变、任务常换」的长期任务机器人基座模型,免重编程。这是「机器人基础模型」从演示走向产线的强信号。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/09/486900.html" target="_blank" rel="noopener">阿里高德发布 ABot-Earth 0.7,全球首个 3D 原生城市世界模型</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">同周轻量 LingBot-World 2.0 仅 1.3B、单卡实时。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/09/486747.html" target="_blank" rel="noopener">大晓机器人 × NTU S-Lab:HSImul3R 可仿真人–场景交互重建</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">(量子位、新智元)——把人类视频变成机器人技能,同时开源 Puffin-World 统一多模态世界模型。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/tactile-data-robots" target="_blank" rel="noopener">触觉数据成为 Dexterous Manipulation 的破局点</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">自动采血机器人 VITESTRO 进入临床叙事。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/" target="_blank" rel="noopener">General Intuition 60 亿美元估值</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">Kalanick 的 Atoms 获 17 亿美元(a16z 领投)。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.09630" target="_blank" rel="noopener">JEPA Policy 无扩散模仿学习</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">AccelMPC:FPGA 加速微型无人机 MPC、「没有免费验证器」机器人策略验证器综述。</div>
     </li>
     </ul>
   </section>
@@ -191,23 +190,22 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.09526" target="_blank" rel="noopener">HLS-Eval:Agent 化 HLS 设计任务基准</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">与 HLSFactory-Agent:从学术/开源工程大规模构造 HLS 数据集——LLM 写硬件从「生成 HDL」转向「可评测的 HLS 数据集 + 智能体流程」。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.05658" target="_blank" rel="noopener">LLM 生成 SystemVerilog 断言的语义保持变换鲁棒性</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">单点正确率不等于稳定正确。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.10509" target="_blank" rel="noopener">Avatar:LLM 驱动科学工作流端到端自治编排</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">actor 架构(orchestrator / executor / provenance monitor)回答了「agentic 推理该插在哪、风险如何界定」。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.09164" target="_blank" rel="noopener">HELIOS:多公有云下 LLM 驱动的资源编排策略演化(带护栏)</a></div>
-      <div class="it-sum">(</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.05435" target="_blank" rel="noopener">AhaBench:Agent 会不会从先前经验中学习?</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">——长时程持续学习仍是短板。</div>
     </li>
     </ul>
   </section>
@@ -216,23 +214,22 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">desertant.com</span><a href="https://desertant.com/blog/introducing-desert-ant-labs/" target="_blank" rel="noopener">Desert Ant Labs:本地、快速、跑在设备上的模型</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">——本地小模型赛道新增玩家。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/" target="_blank" rel="noopener">NVIDIA 在 IFA 2026 加速本地 AI:RTX Spark Windows PC,10 月上市</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">与 Microsoft 合作让 agent 更易在本地部署;端侧 agent 从 demo 变成出货形态。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">eetimes.com</span><a href="https://www.eetimes.com/adi-snaps-alif-semiconductor-to-push-ai-into-physical-systems/" target="_blank" rel="noopener">ADI 13.5 亿美元收购 Alif Semiconductor</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">模拟感知 + 低功耗 AI 处理器,边缘 AI 并购加速。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/qualcomm-details-next-gen-oryon-cpu-adreno-gpu-and-hexagon-npu/" target="_blank" rel="noopener">Qualcomm 详解下一代 Oryon CPU / Adreno GPU / Hexagon NPU</a></div>
-      <div class="it-sum">(</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2609.09254" target="_blank" rel="noopener">DiffLUT-Net:可微训练的 FPGA LUT 网络(可学习连线)</a></div>
-      <div class="it-sum">(</div>
+      <div class="it-sum">CEDD-optimizer:分布式边缘上的数据集蒸馏。</div>
     </li>
     </ul>
   </section>

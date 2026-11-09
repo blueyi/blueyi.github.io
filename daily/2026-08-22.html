@@ -32,18 +32,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19296" target="_blank" rel="noopener">HyperCut</a></div>
+      <div class="it-sum">面向 tiled 加速器的 DNN 层间调度,用有向超图建模 + 早过滤机制,替代&quot;先做细粒度层内调度再反馈成本&quot;的低效路径,在规模化 DNN 上显著提升计算资源利用率与能效。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19395" target="_blank" rel="noopener">HYDRA</a></div>
+      <div class="it-sum">针对动态混合 Transformer-Mamba LLM 负载的异构 Chiplet 设计空间探索框架,把静态架构配置与动态运行策略纳入统一搜索,解决混合架构计算/通信模式异构带来的加速难题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19471" target="_blank" rel="noopener">异构 HBM 多态可靠性</a></div>
+      <div class="it-sum">建立精确多态可靠性框架,刻画 HBM 服务单元&quot;满速/降速/隔离&quot;等部分服务状态,并给出基于阈值剪枝 BAT 的升级设计方案。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19300" target="_blank" rel="noopener">AmpereOne CPU 核性能验证</a></div>
+      <div class="it-sum">公开覆盖四代 AmpereOne 定制核的工业级性能验证方法论,核心是 RTL 设计与 trace-driven 参考模型的周期精确对齐,面向 pre-silicon 阶段。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19628" target="_blank" rel="noopener">线程-寄存器解耦的 GPU 执行模型</a></div>
+      <div class="it-sum">解耦线程与寄存器调度,适配从 Ampere 寄存器式到 Hopper/Blackwell 内存式 Tensor Core 操作数供给的演进,优化 AI 工作负载张量计算流水线。</div>
     </li>
     </ul>
   </section>
@@ -52,12 +57,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20137" target="_blank" rel="noopener">编译器优化启发式的形式化保证</a></div>
+      <div class="it-sum">针对 NP-hard 编译优化问题中启发式搜索导致&quot;烂码/长编译时间&quot;的现象,提出验证编译器 pass 性能与编译时间性质的方法,把启发式缺陷当作可证明的 bug 对待。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19273" target="_blank" rel="noopener">DSLHyPE</a></div>
+      <div class="it-sum">面向 ExaHyPE 超算双曲 PDE 引擎的双语 DSL kernel 语言——物理项用 C/C++ 表达、数值格式用 Python 内嵌 DSL 描述,编译器将 Python 描述 lowering 到 MLIR。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19889" target="_blank" rel="noopener">Axon DSL</a></div>
+      <div class="it-sum">形状安全、框架无关的 LLM 架构 DSL,主打&quot;一次编写、处处运行&quot;,缓解开源 LLM 生态对单一平台的依赖,降低模型定义在训练与推理框架间的迁移成本。</div>
     </li>
     </ul>
   </section>
@@ -66,12 +74,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.00146" target="_blank" rel="noopener">DiffusionGemma 技术报告</a></div>
+      <div class="it-sum">(HN 158 分):扩散式语言模型报告,为 LLM 并行解码(非自回归)与推理吞吐路线再添实证。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19677" target="_blank" rel="noopener">CacheRoute</a></div>
+      <div class="it-sum">大规模 LLM 服务的 prefix 亲和路由——用周期性路由计划把高命中率 key 纳入稳定热集并按预期负载分配,热 key 可部署多副本,化解&quot;缓存盲分发 vs 固定亲和过载&quot;的两难。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19659" target="_blank" rel="noopener">FleetSieve</a></div>
+      <div class="it-sum">面向 SLO 的 LLM 服务舰队配置 profiling,只测对最终资源分配有实际影响的 TP 度/副本数组合,避免穷举测量,适配负载动态变化。</div>
     </li>
     </ul>
   </section>
@@ -80,15 +91,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">encore.dev</span><a href="https://encore.dev/blog/firecracker-apple-silicon" target="_blank" rel="noopener">在 Apple Silicon 上重建 Linux MicroVM 栈</a></div>
+      <div class="it-sum">(HN 143 分):Encore 分享在 Apple Silicon 上重建 Firecracker 类 microVM 栈的工程实践与权衡。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19412" target="_blank" rel="noopener">The Lazy Pod That Lies</a></div>
+      <div class="it-sum">评估 Kubernetes 上模型服务懒加载容器镜像(eStargz/SOCI vs 急切加载)的延迟成本与失效语义,工件覆盖 2~140GB 真实 fp16 模型。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19629" target="_blank" rel="noopener">Fast BFT SMR 最优性与权衡</a></div>
+      <div class="it-sum">快速拜占庭容错状态机复制的扩展版最优性分析,关注低冲突执行延迟、吞吐与公平性。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20283" target="_blank" rel="noopener">面向对地观测的本地化数据中心架构</a></div>
+      <div class="it-sum">为跨大西洋机构设计网络中心型本地(on-premises)EO 数据访问架构,应对连通性、主权与经费约束。</div>
     </li>
     </ul>
   </section>
@@ -97,12 +112,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19338" target="_blank" rel="noopener">Mechanistic Tomography</a></div>
+      <div class="it-sum">把 patching、梯度、Hessian 向量积、子集干预等统一为&quot;机械化测量&quot;框架,为控制导向的可解释性提供设计化测量范式。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19323" target="_blank" rel="noopener">黑盒 LLM 置信度估计改进</a></div>
+      <div class="it-sum">针对零样本、无标注数据的 LLM 不确定度量化(UQ),改进黑盒场景下的置信度评分性能。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19351" target="_blank" rel="noopener">神经网络证明共享的局限</a></div>
+      <div class="it-sum">揭示跨查询复用中间层抽象状态/模板加速不完备验证,在不同网络结构下存在鲁棒性边界。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">近两天无重大政策/出口管制独立动态(背景:本窗口 JSON 无政策法规类条目)。</a></div>
@@ -114,21 +132,27 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19490" target="_blank" rel="noopener">自演示生成式控制微调 VLA</a></div>
+      <div class="it-sum">用自演示生成式控制微调 π0.5 类 VLA,缓解新机器人硬件配置与预训练不匹配导致的性能骤降。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19372" target="_blank" rel="noopener">The Missing Touch</a></div>
+      <div class="it-sum">分布式触觉反馈让遥操作逼近人手灵巧度,实证提升遥操作数据采集质量。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19425" target="_blank" rel="noopener">SCAPE</a></div>
+      <div class="it-sum">场景条件、仿真增强的策略评估,用有限真实 rollout + 丰富仿真代理缓解 sim-to-real 偏差。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19557" target="_blank" rel="noopener">LLM 智能体何时有用:自动驾驶边缘调度</a></div>
+      <div class="it-sum">研究 LLM 作为自适应可解释调度器在异构 MEC 上处理混合关键级任务的截止期表现,给出&quot;何时有效&quot;的证据。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19522" target="_blank" rel="noopener">LF-GICP</a></div>
+      <div class="it-sum">无参数、退化感知的 LiDAR 里程计,用体素法向可定位性场识别不可观测轴,解决隧道/走廊退化漂移。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19281" target="_blank" rel="noopener">APPROVE</a></div>
+      <div class="it-sum">可视化终端用户在环的 LLM 机器人编程,增强透明度与用户意图对齐。</div>
     </li>
     </ul>
   </section>
@@ -137,9 +161,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19628" target="_blank" rel="noopener">线程-寄存器解耦 GPU 执行模型</a></div>
+      <div class="it-sum">(跨 1/7):算子级 Tensor Core 数据供给流水线优化。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.20137" target="_blank" rel="noopener">编译器优化启发式保证</a></div>
+      <div class="it-sum">(跨 2/7):面向启发式搜索自动调优的形式化性能/编译时间保证。</div>
     </li>
     </ul>
   </section>
@@ -148,18 +174,21 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19535" target="_blank" rel="noopener">边缘 RAG 的自适应上下文压缩</a></div>
+      <div class="it-sum">在边缘端对检索上下文做自适应压缩,降低 prefill、KV cache 占用、内存流量与能耗。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19837" target="_blank" rel="noopener">FFT-CNN + FP8 量化视觉检测</a></div>
+      <div class="it-sum">CPU-FPGA 工业平台上的 FFT 卷积 + 自适应 FP8 量化,结合渐进偏置调整与逐层指数偏置选择。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2608.19210" target="_blank" rel="noopener">直升机机载重量估计 ML</a></div>
+      <div class="it-sum">Airbus 机队在机部署的监督式 ML 重量估计,对齐 EASA 概念论文与 ED-324 学习保证流程。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-08-21.html">← 2026-08-21</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-08-25.html">2026-08-25 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

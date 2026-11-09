@@ -32,9 +32,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener">AMD 收购 Taalas，将模型直接蚀刻到硅片中提升推理性能</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— HN 921 分。AMD 收购 AI 芯片初创公司 Taalas，通过将模型权重直接蚀刻到硅片中实现极致推理加速。这标志着专用 AI 芯片从「通用计算+编译器优化」进一步迈向「模型硬化」路线，可能重塑推理硬件竞争格局。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">blog.janestreet.com</span><a href="https://blog.janestreet.com/can-you-reverse-engineer-an-asic/" target="_blank" rel="noopener">你能逆向工程一颗 ASIC 吗？</a></div>
+      <div class="it-sum">— HN 116 分。Jane Street 技术博客探讨 ASIC 逆向工程的可行性与方法论，涵盖芯片物理层去层(delayer)、显微成像与逻辑门级网表提取，对理解芯片安全边界有参考价值。</div>
     </li>
     </ul>
   </section>
@@ -43,9 +45,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">malisper.me</span><a href="https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/" target="_blank" rel="noopener">Postgres 查询引擎加速 300 倍：批处理、算子融合与 SIMD</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— HN 325 分。虽属数据库领域，但其算子融合(operator fusion)、列式批处理与 SIMD 向量化技术正是 AI 编译器后端(Triton/MLIR/XLA)的核心优化手段。文章展示的编译期 fusion pass 策略与 MLIR 中 linalg→vector 的 lowering 路径异曲同工。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">aleksagordic.com</span><a href="https://www.aleksagordic.com/blog/vllm" target="_blank" rel="noopener">Inside vLLM：高吞吐 LLM 推理系统剖析</a></div>
+      <div class="it-sum">— HN 148 分。从 PagedAttention 内存管理到 continuous batching 调度，系统梳理 vLLM 架构设计，为理解推理框架中编译器级优化(KV cache 布局、kernel dispatch)提供入门路线图。</div>
     </li>
     </ul>
   </section>
@@ -54,12 +58,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" target="_blank" rel="noopener">OpenAI 改进 GPT-5.6 Sol、扩展 GPT-5.6 Luna 免费用户访问</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— HN 314 分。新一代模型推理成本进一步下降，使其能向免费用户开放更强能力。背后涉及 MoE 稀疏路由优化、动态批处理与 speculative decoding 的持续工程迭代，降低单 token 推理成本。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">aleksagordic.com</span><a href="https://www.aleksagordic.com/blog/vllm" target="_blank" rel="noopener">Inside vLLM：高吞吐 LLM 推理系统剖析</a></div>
+      <div class="it-sum">— HN 148 分。从 PagedAttention 到 continuous batching，系统化梳理 vLLM 在数据中心推理场景的核心技术栈，包括 KV cache 块管理、prefix caching 与调度策略。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">malisper.me</span><a href="https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/" target="_blank" rel="noopener">Postgres 加速 300 倍中的算子融合与 SIMD</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— HN 325 分。数据库查询引擎的算子融合与向量化直接对应 LLM 推理中 kernel fusion(Gemm+LayerNorm、attention+残差连接)，跨领域技术迁移价值显著。</div>
     </li>
     </ul>
   </section>
@@ -76,15 +83,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">blog.google</span><a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank" rel="noopener">Google DeepMind 管理层变动：Demis Hassabis 转任 Chair，Jeff Dean 离职</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— HN 854 分。DeepMind CEO 转任董事会主席，Google 首席科学家 Jeff Dean 离开，标志 Google AI 进入新的组织阶段。此举可能影响 Gemini 后续研发方向及 Google 在 AI 基础设施上的资源分配。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">simonwillison.net</span><a href="https://simonwillison.net/2026/Aug/7/openai-timeline/" target="_blank" rel="noopener">OpenAI 意外攻击 Hugging Face 事件时间线</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— HN 318 分。Simon Willison 梳理 OpenAI 自动化系统对 Hugging Face 发起意外攻击的完整时间线。事件引发对 AI 公司自动化系统安全边界、第三方平台防护能力及模型 sandboxing 机制的广泛讨论。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/" target="_blank" rel="noopener">OpenAI：应对下一代关键网络能力的前沿挑战</a></div>
+      <div class="it-sum">— HN 196 分。OpenAI 发布前沿 AI 系统在网络攻防中潜在能力的评估框架，涉及红队测试、能力边界界定与外部协作机制，对 AI Infra 安全架构有参考意义。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">twitter.com</span><a href="https://twitter.com/un1c0rnioz/status/2084686552299634805" target="_blank" rel="noopener">手机丢失后用 Claude 建议追踪蓝牙信号找回</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— HN 211 分。用户通过 Claude 建议，利用蓝牙 RSSI 信号强度实现室内三角定位找回手机。侧面反映 LLM 在非常规工程推理中的实用能力，也引发 AI 辅助物理世界交互的安全思考。</div>
     </li>
     </ul>
   </section>
@@ -101,9 +112,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener">AMD 收购 Taalas：模型蚀刻入硅片的算子硬化</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— HN 921 分。Taalas 将特定模型计算图直接映射为硅片固定数据路径，本质上是算子的硬件级融合——将传统 AI 编译器「计算图→指令」的编译流程推进到「计算图→电路」的终极形态。这为 AI 算子自动生成领域打开了新的想象空间。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">malisper.me</span><a href="https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/" target="_blank" rel="noopener">Postgres 算子融合实践经验</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">— HN 325 分。数据库领域在异构算子上自动选择融合粒度的启发式算法，可反哺 AI 编译器中自动 kernel fusion 策略设计，尤其是多算子联合编译时的代价模型构建。</div>
     </li>
     </ul>
   </section>
@@ -117,7 +130,7 @@
   </section>
   <div class="wk-nav">
     <span><a href="2026-08-08.html">← 2026-08-08</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-08-11.html">2026-08-11 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

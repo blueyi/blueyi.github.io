@@ -33,9 +33,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08993" target="_blank" rel="noopener">StreamDQ:自定义 HBM 内近存权重反量化</a></div>
+      <div class="it-sum">(cs.AR):指出当前 GPU 上 CUDA core 反量化带来指令开销、片上流量与流水线阻塞,是高吞吐推理的主要瓶颈;方案把反量化下沉到定制 HBM 近存单元,面向可扩展 AI 推理加速,是&quot;存算靠近&quot;路线在权重量化场景的一次硬件级尝试。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09616" target="_blank" rel="noopener">LLM for EDA 前端设计:挑战与机遇</a></div>
+      <div class="it-sum">(cs.AR):随着芯片复杂度上升、上市压力增大,前端设计成为瓶颈;综述 LLM 在电子设计自动化(EDA)中作为统一智能接口的潜力,涵盖规格理解、HDL 生成与测试(与第 7 类交叉)。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">背景:本窗口无 Nvidia/AMD/TSMC/SK Hynix 等厂商的独立新品或制程动态,以上为学术侧信号。</a></div>
@@ -47,9 +49,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08959" target="_blank" rel="noopener">黑盒场景下推断大语言的准确上下文无关文法</a></div>
+      <div class="it-sum">(cs.PL):针对 Arvada、TreeVada、Kedavra 等在大型语言上可扩展性/准确性/可读性不足的问题,Xvada 引入确定性推断新技术;对程序分析、逆向、模糊测试等编译前端工具链有直接价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09564" target="_blank" rel="noopener">Bidirectional Elaborators à la Carte</a></div>
+      <div class="it-sum">(cs.PL):面向 Rocq/Lean/Agda/Idris 的隐式表层语法,系统化研究把表层语法翻译为显式核心语法的 elaboration 算法的可靠性与可预测性——证明助手/DSL 编译器的地基工作。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">背景:tinygrad / MLIR / TVM / Triton / torch.compile 本窗口无重大独立发布;以上为 PL 侧的编译前端进展。</a></div>
@@ -61,15 +65,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08973" target="_blank" rel="noopener">SiFAR:面向低延迟 LLM 推理的无同步 All-Reduce</a></div>
+      <div class="it-sum">(cs.DC):推理模型与 agentic 系统产生大量不被人类阅读的中间推理 token,per-token 延迟直接决定端到端时延;低延迟推理用极小 batch,使 token 生成受带宽制约,SiFAR 以去同步化的 All-Reduce 缓解通信瓶颈。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08782" target="_blank" rel="noopener">Director:在线主动专家放置加速分布式 MoE 服务</a></div>
+      <div class="it-sum">(cs.LG):专家并行下效率取决于专家在 GPU 上的放置;现有方法依赖历史激活模式,面对多样负载能力不足,Director 以在线主动放置应对。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08786" target="_blank" rel="noopener">用中等非结构化稀疏权重矩阵加速 GPU LLM 推理</a></div>
+      <div class="it-sum">(cs.AR):为保模型质量,剪枝通常止步于约 50% 非结构化稀疏,而此稀疏度下现有 GPU 稀疏矩乘 kernel 均无收益;工作面向这一&quot;中等稀疏&quot;空档做加速。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08779" target="_blank" rel="noopener">Signed Symmetric Quantization:少比特整数的符号对称量化</a></div>
+      <div class="it-sum">(cs.LG):有符号整数负端比正端多一个可表示值,传统对称量化把它划给负尾,导致正向离群值被裁剪;在少比特精度下这类裁剪是非平凡的量化误差来源(与第 8 类交叉)。</div>
     </li>
     </ul>
   </section>
@@ -78,12 +86,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09207" target="_blank" rel="noopener">面向解耦异步 RL 后训练的双向资源调度</a></div>
+      <div class="it-sum">(cs.DC):RL 后训练中 policy 通过 rollout 生成经验再更新,StreamRL/AReaL 等高性能框架存在资源利用不均;工作提出双向资源调度,平衡生成与训练两侧算力——大规模 RL 训练集群的调度优化。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09318" target="_blank" rel="noopener">EcoKube:异构边缘-云环境下碳感知调度策略仿真</a></div>
+      <div class="it-sum">(cs.DC):在混合边云场景下,可持续性受时空变化的电网碳强度(CI)、站点 PUE 与异构硬件影响;EcoKube 提供碳感知调度策略的仿真环境,对接超大规模数据中心的电力与碳排治理。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09170" target="_blank" rel="noopener">超曲随机图上的分布式对称破缺</a></div>
+      <div class="it-sum">(cs.DC):以超曲随机图(HRG)刻画互联网等真实网络的幂律度分布与高聚类特性,解释了为何部分算法在真实网络上优于最坏情况——分布式系统理论侧背景性成果。</div>
     </li>
     </ul>
   </section>
@@ -92,15 +103,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">nebusec.ai</span><a href="https://nebusec.ai/research/ionstack-part-2/" target="_blank" rel="noopener">GhostLock:潜伏 15 年、覆盖所有 Linux 发行版的栈 UAF</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 392 分):影响面覆盖全部 Linux 发行版的栈上 Use-After-Free 漏洞,存在时间长达 15 年;对承载 AI 集群的底层操作系统安全构成系统性风险,值得基础设施团队关注补丁进展。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">raymyers.org</span><a href="https://raymyers.org/post/zed-creator-calls-spade-a-spade/" target="_blank" rel="noopener">Zig 作者直言不讳,Anthropic 在放烟雾</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 1399 分):围绕 Anthropic 相关表述的公开质疑成为社区高热话题,折射 AI 大厂&quot;营销叙事 vs 工程实质&quot;的治理与信任议题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08776" target="_blank" rel="noopener">从交互视角统一解读大模型的知识蒸馏</a></div>
+      <div class="it-sum">(cs.LG):把 LLM 输出得分分解为大量&quot;交互&quot;之和,统一解释各类 KD 方法的共同机制——提升蒸馏可解释性,属对齐/可解释性方向。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09489" target="_blank" rel="noopener">Ceci n&#x27;est pas une pipe:将 AI 系统视为语义抽象</a></div>
+      <div class="it-sum">(cs.PL):主张 AI 输出并非其所描述的世界状态,而是被工程化的表示;提出语义框架区分&quot;领域知识所证成&quot;&quot;参考源所述&quot;&quot;系统当前所用&quot;,以检验表示的正确性——AI 系统正确性治理的理论工具。</div>
     </li>
     </ul>
   </section>
@@ -109,21 +124,26 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08974" target="_blank" rel="noopener">CLAP:通过语言-动作对齐实现 VLM 到 VLA 的直接适配</a></div>
+      <div class="it-sum">(cs.RO):VLA 继承预训练 VLM 的语义能力,但大规模机器人数据后训练与架构改动常重塑 backbone,难以厘清 VLM 的贡献;CLAP 以最小架构改动直接转化 VLM,提供更透明的控制路径。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08857" target="_blank" rel="noopener">AgenticFocus:从人类第一视角视频合成保物体的混合现实数据</a></div>
+      <div class="it-sum">(cs.RO):将普通 FPV 人类视频转为可训练机器人示范,解决手-物遮挡、运动过简与专用采集硬件依赖,为人形策略学习提供可扩展监督源。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08877" target="_blank" rel="noopener">FlowDAgger:潜空间中人在回路的生成式机器人策略适配</a></div>
+      <div class="it-sum">(cs.RO):针对 flow matching/扩散预训练策略在真实部署中暴露的分布外失效,以潜空间人在回路适配替代昂贵的大规模数据采集或在线 RL。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08948" target="_blank" rel="noopener">SplatCtrl:高斯场景表征驱动的感知-动作耦合与反应式控制</a></div>
+      <div class="it-sum">(cs.RO):基于 3D 高斯泼溅实现实时场景重建与反应式运动生成,在未见且持续变化的环境中做无碰撞机械臂控制。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09138" target="_blank" rel="noopener">BeyondSight:端到端自动驾驶的物体恒存性</a></div>
+      <div class="it-sum">(cs.RO):多数端到端驾驶把&quot;目标存在&quot;耦合到瞬时观测,长时遮挡会使目标假设退化;工作为遮挡下的关键 agent 引入物体恒存能力。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09060" target="_blank" rel="noopener">另有</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09060" target="_blank" rel="noopener">另有 [Dec-MARVEL 无通信多机探索](https://arxiv.org/abs/2607.09060)、[血管几何表征辅助血管内导航](https://arxiv.org/abs/2607.09130)、[BLDC 电机残差 PINN 建模](https://arxiv.org/abs/2607.09136) 三篇机器人子方向工作。</a></div>
     </li>
     </ul>
   </section>
@@ -132,9 +152,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09616" target="_blank" rel="noopener">LLM for EDA 前端设计</a></div>
+      <div class="it-sum">(cs.AR,与第 1 类交叉):重点在 LLM 作为统一接口做 HDL/RTL 生成与测试生成,是&quot;LLM 写硬件描述语言&quot;的系统性综述。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08959" target="_blank" rel="noopener">黑盒文法推断 Xvada</a></div>
+      <div class="it-sum">(cs.PL,与第 2 类交叉):确定性文法推断可服务于自动化程序理解与模糊测试的代码生成环节。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">背景:AlphaEvolve / FunSearch / AI Kernel 自动生成本窗口无独立发布;当前信号集中在 LLM 驱动的 RTL/程序结构生成学术侧。</a></div>
@@ -146,21 +168,25 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09385" target="_blank" rel="noopener">STEEL:面向 AMD XDNA NPU 的稀疏感知融合注意力</a></div>
+      <div class="it-sum">(cs.AR):随 OS 工作流中 LLM agent 普及,笔记本级 SoC 上的能效推理愈发重要;云卸载带来可靠性与隐私隐患(对 agentic 负载尤甚),STEEL 在新一代笔记本 NPU 上做能效长序列推理——端侧 agent 落地的关键路径。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08780" target="_blank" rel="noopener">Sticky Routing:训练面向内存高效推理的 MoE 模型</a></div>
+      <div class="it-sum">(cs.LG):边缘设备上相邻 token 常激活不同专家,导致权重在慢存储与快内存间反复换入换出;现有缓存启发式/事后路由微调未触及根因,Sticky Routing 从预训练阶段改造路由行为。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08779" target="_blank" rel="noopener">Signed Symmetric Quantization</a></div>
+      <div class="it-sum">(cs.LG,与第 3 类交叉):少比特量化的符号对称改进,对端侧 INT4/W4A16 等极低比特部署有直接意义。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.09400" target="_blank" rel="noopener">电动车电池功率的端侧自适应预测</a></div>
+      <div class="it-sum">(cs.AR):在资源受限 EV 上做 on-device 学习以应对分布漂移——虽非 LLM,但代表端侧自适应推理的工程范式。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-11.html">← 2026-07-11</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-15.html">2026-07-15 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

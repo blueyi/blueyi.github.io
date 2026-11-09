@@ -33,18 +33,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22022" target="_blank" rel="noopener">HEMERA：面向边缘受限 SSD/状态空间模型的异构内存中心加速器</a></div>
+      <div class="it-sum">针对 Mamba 一类结构化状态空间模型在 SSD 计算中产生的大量中间张量与系统开销，提出异构存储层级和递归数据流。它反映出端侧 AI 芯片设计正在从“缩小 Transformer”转向围绕新模型结构重做数据通路。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21731" target="_blank" rel="noopener">RED-PIM：用存内计算降低 Transformer 数据搬运</a></div>
+      <div class="it-sum">将注意力操作中的部分计算推入内存侧，瞄准处理单元与存储器之间的数据移动瓶颈。对带宽受限的 Transformer 推理而言，这类 PIM 设计的价值不只是峰值算力，而是减少每个 token 的访存能耗。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22038" target="_blank" rel="noopener">Sparse by Command：按任务指令跳过无关计算</a></div>
+      <div class="it-sum">利用推理开始前已经明确的任务命令，在多任务模型中执行硬件级条件稀疏。论文把任务条件作为“免费控制信号”，尝试通过软硬协同避免共享骨干在所有任务上执行完全相同的计算。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2512.22131" target="_blank" rel="noopener">面向神经网络加速器的 RFET 随机计算方案</a></div>
+      <div class="it-sum">探索以可重构场效应晶体管降低随机数生成器、并行计数器等随机计算组件的资源开销，为超低功耗 CNN 加速提供器件—架构协同路径。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.10392" target="_blank" rel="noopener">温度感知的动态 Rowhammer 阈值管理</a></div>
+      <div class="it-sum">指出固定于出厂阶段的防护阈值无法覆盖运行时温度变化，提出按 epoch 根据观测温度更新阈值并加入保护裕量。随着 AI 服务器内存容量与热密度持续上升，这类可靠性机制值得基础设施团队关注。</div>
     </li>
     </ul>
   </section>
@@ -53,15 +58,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22432" target="_blank" rel="noopener">TileSight：从单核到集群的 tile-centric GPU 性能分析模型</a></div>
+      <div class="it-sum">面向 Triton、TileLang、CUDA Tile 已普遍采用的 tile 一级抽象，建立第一性原理分析模型，试图弥补粗粒度 Roofline、黑盒 ML 预测器与事后 profiler 之间的空白。若模型能准确覆盖多级存储和集群扩展，将有助于在实际运行前筛掉低效 tile 配置。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2511.19711" target="_blank" rel="noopener">CrypTorch：面向多方安全计算机器学习的 PyTorch 自动调优编译器</a></div>
+      <div class="it-sum">聚焦 MPC 推理中的精度损失与协议转换开销，把原本对用户不透明的 MPC 特定变换纳入自动调优流程，属于隐私计算框架向易用性和系统化优化迈进的一步。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21797" target="_blank" rel="noopener">用于机器学习与实时调度的数据流网络时钟演算</a></div>
+      <div class="it-sum">以 Lustre 数据流原语表达复杂条件执行和循环状态，并通过放宽激活分析来静态推断活性、调度等属性，为动态 ML 工作负载与实时系统之间建立更严格的编译期接口。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2509.06752" target="_blank" rel="noopener">线性约束程序的终止性分析综述</a></div>
+      <div class="it-sum">系统梳理数值变量与线性约束转移程序的终止性证明方法。虽然不是 AI 框架新品，但对编译器验证、生成代码的静态检查以及可信工具链仍有直接参考价值。</div>
     </li>
     </ul>
   </section>
@@ -70,15 +79,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21985" target="_blank" rel="noopener">统一静态—动态剪枝提升 LLM 推理效率</a></div>
+      <div class="it-sum">尝试结合静态剪枝的持久压缩与动态剪枝的输入自适应能力，直接面向自回归解码中低计算强度、受内存带宽限制的核心瓶颈。关键看点是能否在真实 GPU kernel 中把理论稀疏转化为稳定延迟收益。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22389" target="_blank" rel="noopener">HiKV：分层重要性感知 KV Cache 与硬件加速</a></div>
+      <div class="it-sum">在长上下文解码中按两种粒度识别并压缩冗余 KV，包含淘汰等分阶段机制。相比单一比例裁剪，分层重要性管理更接近数据中心推理对吞吐、质量和显存占用三者动态权衡的需求。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.13062" target="_blank" rel="noopener">投机窗口解码的验证器侧设计</a></div>
+      <div class="it-sum">补足已有方案重预测器、轻验证器的问题，给出可预测性区间、机器检查的影响范围边界和解码器无关恢复循环。该工作针对量子纠错解码窗口，但其“先猜测推进、后验证回滚”的系统设计对低延迟投机执行也有借鉴意义。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22242" target="_blank" rel="noopener">Agentic CPU-GPU Scheduling：代理式 AI 工具的异构调度</a></div>
+      <div class="it-sum">实测 19 类 AI 工具后发现，并非所有 GPU 可运行工具都应默认上 GPU；其中既有 CPU 更优、设备中性，也有偏好不明确的负载。对多工具 Agent 服务而言，调度器应把 PCIe 搬运、队列拥塞和任务特征一并纳入，而非采用 GPU-first 固定策略。</div>
     </li>
     </ul>
   </section>
@@ -87,15 +100,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21746" target="_blank" rel="noopener">PRISM：以 AI 研究工作流评估 POSIX 存储系统</a></div>
+      <div class="it-sum">将评估重点从传统 HPC 的纯吞吐扩展到原型开发、调试、实验迭代与研究者生产力。GPU 集群规模持续扩大后，POSIX 语义、元数据性能和小文件行为往往决定昂贵算力能否被有效利用。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22275" target="_blank" rel="noopener">NUMA 自动平衡可能拖慢脉冲神经网络仿真</a></div>
+      <div class="it-sum">研究显示，操作系统层面的自动 NUMA 策略未必适合大规模神经仿真，反而可能引入迁移与访问开销。对 CPU 密集型 AI/HPC 作业，拓扑感知绑核、内存放置和基准复测仍不可省略。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22432" target="_blank" rel="noopener">TileSight 的集群级 GPU 性能建模</a></div>
+      <div class="it-sum">除单 kernel 分析外，还把 tile 执行模型延伸到集群尺度，提示未来性能工具需要同时解释 kernel 映射、存储层次与多 GPU 扩展，而不能只给出单卡峰值利用率。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22209" target="_blank" rel="noopener">Duet：协同优化 P2P 消息传播与轮换领导者共识</a></div>
+      <div class="it-sum">虽然应用场景是区块链，但其核心问题是上层共识与底层覆盖网络彼此不透明造成的性能损失；这种跨层联合设计也适用于需要低尾延迟广播和强一致协调的分布式基础设施。</div>
     </li>
     </ul>
   </section>
@@ -104,18 +121,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">anthropic.com</span><a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener">Anthropic 公布其对开放权重模型的立场</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">（HN 356 分）：开放权重再次成为模型能力扩散、安全责任与产业竞争之间的政策焦点。对 AI Infra 团队而言，治理立场最终会落到权重分发、部署权限、评测门槛和下游审计能力上，而不只是许可证文本。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">lesswrong.com</span><a href="https://www.lesswrong.com/posts/iKm2FhpWkuuBojm82/why-i-left-google-deepmind" target="_blank" rel="noopener">为什么我离开 Google DeepMind</a></div>
+      <div class="it-sum">（HN 179 分）：来自前沿实验室从业者的离职反思引发讨论，折射出模型能力推进、组织激励与安全判断之间仍存在显著张力。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21635" target="_blank" rel="noopener">面向个人 LLM Agent 的用户条件化、时间干预评测</a></div>
+      <div class="it-sum">指出个人 Agent 的记忆、技能、工具配置与策略状态会随用户持续演化，单独测试工具调用或静态安全不足以刻画真实风险，主张在时间干预下联合评估这些状态。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21623" target="_blank" rel="noopener">云原生 Evaluation-as-a-Service</a></div>
+      <div class="it-sum">以六个无状态 Kubernetes 微服务组合保形预测、校准、漂移、公平性监控和 DAG 编排，为生产 AI 监控提供带统计保证的参考架构。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07738" target="_blank" rel="noopener">REFORGE：评测 LLM 对反编译函数命名的逆向工程能力</a></div>
+      <div class="it-sum">针对 LLM 已进入真实攻防流程、但测量标准滞后的问题，强调构建可靠函数级真值与可复现基准，关系到模型网络安全能力的边界识别。</div>
     </li>
     </ul>
   </section>
@@ -124,24 +146,31 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">aerospaceglobalnews.com</span><a href="https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics/" target="_blank" rel="noopener">伦敦盖特威克机场上线机器人代客泊车服务</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">（HN 288 分）：机器人在真实机场停车场承担车辆搬运，属于结构化环境中具身系统商业化部署的直观案例。相比实验室 demo，持续运营更考验定位、异常恢复、安全责任和人车混行管理。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21725" target="_blank" rel="noopener">Physical Agency：弥合通用机器人的编排鸿沟</a></div>
+      <div class="it-sum">不把感知、规划、成功检测、恢复与低层控制全部塞进单一大模型，而是将其拆成通用语言条件策略与外围编排能力，代表“基础策略 + Agent 控制环”的工程路线。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21648" target="_blank" rel="noopener">仅用合成视频场景学习多样化人形机器人任务</a></div>
+      <div class="it-sum">试图绕开真实示范采集昂贵、动作覆盖不足的问题，用合成视频扩大技能与场景多样性；真正价值取决于合成动作到物理执行之间的迁移稳定性。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21661" target="_blank" rel="noopener">GRACE：扩散策略与 MPPI 结合的无梯度动作生成</a></div>
+      <div class="it-sum">允许碰撞检查、关节限制、黑盒 rollout 成本等不可微约束直接参与部署时引导，比依赖可微代价的传统 guidance 更贴近真实机器人安全约束。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21670" target="_blank" rel="noopener">有序动作 Token 用于视觉运动策略学习</a></div>
+      <div class="it-sum">在解析离散化序列过长与学习式 tokenizer 缺乏结构之间寻求折中，尝试让离散动作表示既紧凑，又保留可供下游策略利用的顺序关系。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21918" target="_blank" rel="noopener">机器人超声的动作条件世界模型</a></div>
+      <div class="it-sum">围绕颈部超声目标切面引导学习探头运动后的图像变化，以减少昂贵示范轨迹需求，是世界模型进入医疗机器人控制的具体落点。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.21655" target="_blank" rel="noopener">机器人学习中的进度奖励建模综述</a></div>
+      <div class="it-sum">系统讨论终局成功信号之外，如何判断动作是在推进、停滞还是撤销既有进展，对长时程操作与失败恢复尤其关键。</div>
     </li>
     </ul>
   </section>
@@ -150,15 +179,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22432" target="_blank" rel="noopener">TileSight：为自动 tile 搜索提供可解释性能先验</a></div>
+      <div class="it-sum">今天没有明确的 AlphaEvolve 或 LLM 生成 kernel 新品，但 TileSight 可作为自动调优器的分析底座，用第一性原理模型缩小 Triton、TileLang 等框架的候选配置空间，减少盲目实测成本。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2511.05987" target="_blank" rel="noopener">高性能约束输入生成</a></div>
+      <div class="it-sum">研究如何在上下文无关文法与语义约束共同存在时高效生成测试输入。它可用于编译器、自动生成代码与解析器的系统性 fuzzing，重点是兼顾输入结构合法性和约束求解吞吐。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2512.02918" target="_blank" rel="noopener">Belobog：面向真实 Move 智能合约的语言模糊测试框架</a></div>
+      <div class="it-sum">针对 Move 的资源语义与强类型系统构造测试，说明代码生成优化不应只追求“生成得快”，还需要语言感知的输入生成、语义覆盖与缺陷发现闭环。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2511.19711" target="_blank" rel="noopener">CrypTorch 自动调优 MPC 编译</a></div>
+      <div class="it-sum">跨类看，其核心也是自动搜索隐私计算专用变换，在误差与性能之间选择实现方案，可视作面向特殊执行后端的编译优化案例。</div>
     </li>
     </ul>
   </section>
@@ -167,21 +200,25 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">kitsumed.github.io</span><a href="https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb/" target="_blank" rel="noopener">Android 可能限制设备端 ADB</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">（HN 997 分）：若限制落地，将显著影响 Android 端侧 AI 应用的调试、自动化部署、设备农场与本地模型实验工作流。它不是推理算法更新，却可能改变开发者触达设备底层能力的方式，是今日端侧生态最受关注的信号。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22022" target="_blank" rel="noopener">HEMERA 边缘 SSD 模型加速器</a></div>
+      <div class="it-sum">通过内存中心架构和递归数据流处理 Mamba/SSD 的中间数据开销，面向资源受限推理，显示边缘芯片正在针对线性复杂度序列模型做专用化设计。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.22038" target="_blank" rel="noopener">Sparse by Command 的任务条件计算跳过</a></div>
+      <div class="it-sum">多任务端侧模型通常长期驻留却一次只执行一个任务；利用预先已知的任务命令跳过无关骨干计算，有望直接降低时延和能耗，而无需先运行额外门控网络。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2512.22131" target="_blank" rel="noopener">RFET 随机计算神经网络加速</a></div>
+      <div class="it-sum">目标是减少随机计算中 SNG、APC 等组件的面积与功耗负担，适合关注超低功耗、资源受限 CNN 推理的硬件团队。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-25.html">← 2026-07-25</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-30.html">2026-07-30 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

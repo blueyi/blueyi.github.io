@@ -71,11 +71,20 @@ def clean_markdown(raw):
     return "\n".join(lines[start:end]).strip() + "\n"
 
 
-def validate_digest(md, date):
+def validate_digest(md, date, require_summaries=True):
     doc = render_daily.parse(md)
     highlights = doc["highlights"]
     if not 3 <= len(highlights) <= 5:
         raise ValueError(f"{date}: expected 3-5 numbered news highlights, got {len(highlights)}")
+    if require_summaries:
+        missing_summaries = [
+            item["title"]
+            for domain in doc["domains"]
+            for item in domain["items"]
+            if not item["summary"] and "无重大" not in item["title"]
+        ]
+        if missing_summaries:
+            raise ValueError(f"{date}: article summaries are required: {missing_summaries[:5]}")
     if re.search(r"(?im)^#{1,6}\s*(?:状态报告|PREFETCH|CURATION|PUBLISH|DEPLOY|DELIVERY)", md):
         raise ValueError(f"{date}: operational status must not appear in digest content")
     if re.search(r"(?im)^[-*]\s*\*\*(?:PREFETCH|CURATION|PUBLISH|DEPLOY|DELIVERY)", md):
@@ -112,7 +121,7 @@ def worker_main():
     changed_dates = []
     for date, snap_path in snapshots_by_date().items():
         md = clean_markdown(Path(snap_path).read_text(encoding="utf-8"))
-        validate_digest(md, date)
+        validate_digest(md, date, require_summaries=(date == today))
         target = DATA_DIR / f"{date}.md"
         if target.exists() and target.read_text(encoding="utf-8") == md:
             continue

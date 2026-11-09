@@ -33,18 +33,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank" rel="noopener">OpenAI 首款自研芯片由博通代工亮相</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">OpenAI 正式发布与 Broadcom 联合打造的首颗定制 AI 芯片(</div>
+      <div class="it-sum">OpenAI 正式发布与 Broadcom 联合打造的首颗定制 AI 芯片(TechCrunch,HN 804 分)。这标志着头部大模型厂商加速摆脱对单一 GPU 供应商的依赖,博通 ASIC 路线再下一城,对 Nvidia 数据中心霸权构成中长期变量。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25313" target="_blank" rel="noopener">百万 p-bit 概率计算机问世</a></div>
-      <div class="it-sum">研究者通过 FPGA 组网搭出超越单芯片容量上限的 Ising 机,实现</div>
+      <div class="it-sum">研究者通过 FPGA 组网搭出超越单芯片容量上限的 Ising 机,实现 1,000,000 p-bits 的可编程概率计算机,为采样与组合优化类工作负载提供有别于传统 GPU 的硬件加速思路。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25673" target="_blank" rel="noopener">开源端到端硅训练平台 Croc</a></div>
-      <div class="it-sum">面向 AI/机器人/汽车 SoC 人才缺口,</div>
+      <div class="it-sum">面向 AI/机器人/汽车 SoC 人才缺口,Croc 用开源 EDA 工具与 PDK 打通&quot;架构规格→流片&quot;全链路,降低 VLSI 教学的授权门槛。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24934" target="_blank" rel="noopener">云 GPU 拓扑证明原语</a></div>
+      <div class="it-sum">Unprivileged Topology Certificates 提出纯软件 CUDA 探针,通过 SM×内存延迟矩阵为租户验证其实际跑在哪块物理加速器上,补足云 GPU &quot;看不见底层硬件&quot;的信任缺口。</div>
     </li>
     </ul>
   </section>
@@ -53,12 +54,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25244" target="_blank" rel="noopener">用形式理论重读 MLIR 编译</a></div>
+      <div class="it-sum">Reading AI Model Compilation in MLIR Through the Lens of Formal Theories 指出 MLIR 的 IR 抽象、match-and-rewrite、分级 lowering、类型转换等工程经验,在形式理论中都有对应物,为编译器设计的&quot;直觉&quot;提供严谨注脚——AI 编译栈从业者值得一读。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.23870" target="_blank" rel="noopener">PLC 形式化验证新框架 ESBMC-PLC+</a></div>
+      <div class="it-sum">ESBMC-PLC+ 作为 CERN PLCverif 的后继,补齐了梯形图(LD)支持并以 ESBMC 替换 CBMC 后端,突破&quot;仅有界证明&quot;的限制,展示了将形式验证作为编译/校验后端的工程路径。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24891" target="_blank" rel="noopener">Project Haystack Grid 的类型检查</a></div>
+      <div class="it-sum">用 JSON Schema 与 Pydantic 给建筑本体做类型校验,把模糊的 tag 语义纳入自动化验证,是&quot;用通用语言基础设施替代专用 DSL/格式&quot;的典型实践。</div>
     </li>
     </ul>
   </section>
@@ -67,12 +71,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25353" target="_blank" rel="noopener">GB 级末级缓存中的常驻式 LLM 推理</a></div>
+      <div class="it-sum">Cache-Resident LLM Inference 利用 3D 堆叠缓存把可复用模型权重常驻片上 LLC,绕开内存层级间的数据搬运瓶颈;深流水带来的权重驻留需要精细调度,瞄准服务器 CPU 推理场景。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25091" target="_blank" rel="noopener">远距离投机解码的真实收益边界</a></div>
+      <div class="it-sum">Speculation at a Distance 用闭式不等式证明,当 draft 在边缘、target 在云端、且经 WAN 通信时,分布式投机解码(DSD)的单请求延迟收益相当有限——若服务端能同时托管两个模型,co-located SD 的 1.5–3× 加速仍是上策。给&quot;边缘-云协同推理&quot;泼了一盆冷静水。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25453" target="_blank" rel="noopener">高精度 GEMM 的低精度重构内核 EmuGEMM</a></div>
+      <div class="it-sum">EmuGEMM 基于 Ozaki Scheme,用低精度 Tensor Core 重构高精度矩阵乘的融合内核,试图弥合科学计算工作负载的&quot;精度-吞吐&quot;鸿沟,挖掘现有实现未释放的性能。</div>
     </li>
     </ul>
   </section>
@@ -81,21 +88,27 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/" target="_blank" rel="noopener">Nvidia 45°C 液冷设计把数据中心耗水量压到近零</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Nvidia 博客(HN 462 分)详解其 AI 工厂的高温液冷方案,在 45°C 进液温度下几乎免去蒸发冷却用水。在 AI 集群用水争议升温的当下,这是面向超大规模部署的关键基础设施进展。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">explorer.oxide.computer</span><a href="https://explorer.oxide.computer/" target="_blank" rel="noopener">Oxide 3D 机架在线导览</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Oxide computer 交互式机架浏览器(HN 278 分)以可视化方式展示其一体化云计算机架设计,是&quot;软硬一体、面向云的整机&quot;思路的鲜活样本。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25098" target="_blank" rel="noopener">电网响应式 AI 数据中心新范式</a></div>
+      <div class="it-sum">Power-Flexible AI Data Centers 主张把 AI 集群从&quot;不可调的尖峰负载&quot;转为可在用电高峰削减消耗的灵活负载,缓解电网扩容的高成本与并网长延迟。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25082" target="_blank" rel="noopener">MIG 动态重分区下的节能调度</a></div>
+      <div class="it-sum">Energy Efficient Scheduling on Multi-Instance GPUs 借助 NVIDIA MIG 的灵活切分,在保持可接受性能的同时降低数据中心 AI/ML 工作负载能耗。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25099" target="_blank" rel="noopener">拯救 BFT 的&quot;赛跑&quot;机制 Ambulance</a></div>
+      <div class="it-sum">Ambulance 针对 BFT 复制部署因超时引发的慢速问题,提出以 racing 替代激进/保守超时的折中,改善慢 leader 下的恢复延迟——分布式集群可靠性议题。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25553" target="_blank" rel="noopener">边缘-云服务放置的神经组合优化</a></div>
+      <div class="it-sum">Latency-Aware Service Placement 用神经组合优化器求解 NP-hard 的微服务放置问题,面向算力连续体的资源/网络约束部署。</div>
     </li>
     </ul>
   </section>
@@ -104,12 +117,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">reuters.com</span><a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/" target="_blank" rel="noopener">Anthropic 指控阿里巴巴非法提取 Claude 模型能力</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">路透社报道(HN 747 分)。这是前沿实验室就&quot;模型蒸馏/能力窃取&quot;对中国大厂发起的高调指控,牵动模型 IP 保护、跨境合规与中美 AI 竞争的敏感神经,治理与法律层面影响深远。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">syracuse.com</span><a href="https://www.syracuse.com/news/2026/06/federal-agents-track-down-syracuse-woman-demand-she-remove-instagram-post-about-ice.html" target="_blank" rel="noopener">联邦执法人员要求删除关于 ICE 的 Instagram 帖文</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Syracuse.com 报道(HN 181 分,接近重大阈值)。涉及政府追踪社交媒体言论与言论自由边界,是平台治理与公权力关系的标志性事件。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.20615" target="_blank" rel="noopener">AI-SDLC 流程的协议语言</a></div>
+      <div class="it-sum">Specifying AI-SDLC Processes 提出一种规范语言来明确&quot;人-Agent 责任边界、审批门、治理约束&quot;,对治理逻辑写在易漂移的提示词里的现状是一种工程化纠偏。</div>
     </li>
     </ul>
   </section>
@@ -118,28 +134,35 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24597" target="_blank" rel="noopener">Qwen-AgentWorld:面向通用 Agent 的语言世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">arXiv 论文(HN 198 分)。世界模型 + 通用 Agent 是当前具身/智能体的核心方向,Qwen 系发力此处值得持续跟踪。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25056" target="_blank" rel="noopener">行为基础模型的运动追踪 BFMTrack</a></div>
+      <div class="it-sum">BFMTrack 通过潜在序列优化,让擅长时不变任务的行为基础模型(BFM)支持物理仿真下的时变运动追踪,推进通用物理角色控制。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25123" target="_blank" rel="noopener">RL 引导的人形全身 MPPI 控制 RGB</a></div>
+      <div class="it-sum">RGB 结合深度 RL 的鲁棒稳定性与全身模型预测路径积分控制,解决接触密集环境下&quot;加新反馈目标需重训&quot;的痛点。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25136" target="_blank" rel="noopener">长程机器人控制中的记忆检索</a></div>
+      <div class="it-sum">Memory Retrieval in Visuomotor Policies 为部分可观测家庭环境中的机器人提供通用记忆检索机制,支撑长时序自主任务。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25083" target="_blank" rel="noopener">多 IMU 关节刚体的不变卡尔曼滤波</a></div>
+      <div class="it-sum">Invariant Kalman Filtering 将 IEKF 的收敛性与一致性保证扩展到多 IMU 关节系统的扩展位姿估计。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25111" target="_blank" rel="noopener">自适应多传感器融合 ADM-Fusion</a></div>
+      <div class="it-sum">ADM-Fusion 针对不同模态各异的失效模式,自适应平衡互补线索,提升退化环境下自运动估计的鲁棒性。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25134" target="_blank" rel="noopener">多车交互安全的因果参数化 CBF</a></div>
+      <div class="it-sum">Causality-Based Parametric CBF 面向自动驾驶,通过因果建模周车行为实现自适应安全控制。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25122" target="_blank" rel="noopener">非合作空中障碍的概率轨迹预测 AeroCast</a></div>
-      <div class="it-sum">与 **机器人-监控协同导航 SurveilNav**:</div>
+      <div class="it-sum">与 机器人-监控协同导航 SurveilNav:AeroCast 用 Transformer-MDN 预测鸟类/无人机/碎片等多模态运动以规避碰撞;SurveilNav 让机器人联合既有监控系统完成大场景多视角协作导航。</div>
     </li>
     </ul>
   </section>
@@ -148,9 +171,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.25296" target="_blank" rel="noopener">LLM 驱动的功能安全断言生成 SafeGen</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">SafeGen 面向汽车芯片,以 LLM 驱动、形式验证辅助的框架自动生成断言并评估故障关键性,改进传统模块级仿真过于保守的问题——LLM 写验证逻辑/RTL 辅助的代表性工作。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2605.10913" target="_blank" rel="noopener">可编程元 Agent 的可逆执行轨迹 Shepherd</a></div>
+      <div class="it-sum">Shepherd 通过可逆的 agentic 执行轨迹,支持元 Agent 在运行时协调、中止高风险操作、修复失败运行,为&quot;Agent 自动生成/操控 Agent&quot;提供底层基座。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">*(承接第 2 类)* ESBMC-PLC+ 的&quot;LD 支持 + 无界证明&quot;也可视为自动化验证后端的能力扩展。</a></div>
@@ -162,9 +187,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24900" target="_blank" rel="noopener">设备端神经架构搜索</a></div>
+      <div class="it-sum">On-Device Neural Architecture Search 直接在部署设备上做轻量 NAS,为传感器近端实时数据找到最优微型网络,贴合人机接口等端侧自适应场景。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.24901" target="_blank" rel="noopener">工业级 LLM 持续学习生命周期视角</a></div>
+      <div class="it-sum">LLM Evolution as an Industry-Scale Ecosystem 重构工业持续学习(ICL),关注部署模型如何持续更新而非反复全量重训——对端侧/工业现场长期运行的模型维护有直接意义。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">*(背景)* 本批次未见 llama.cpp / MLX / ExecuTorch / BitNet 等纯端侧推理引擎的独立重磅更新,极低比特量化方向暂以上述 NAS / 持续学习论文间接呼应。</a></div>
@@ -173,7 +200,7 @@
   </section>
   <div class="wk-nav">
     <span><a href="2026-06-25.html">← 2026-06-25</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-06-27.html">2026-06-27 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

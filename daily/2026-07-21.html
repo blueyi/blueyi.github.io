@@ -21,11 +21,11 @@
   <div class="highlights">
     <h2>🌟 今日亮点</h2>
     <ol>
-      <li><b>小米重磅入局 VLA 基础模型竞赛</b></li>
-      <li><b>前沿实验室经济学之争升温</b>：HN 272 分热帖直指</li>
-      <li><b>推理系统进入&quot;微秒时代&quot;</b></li>
+      <li><b>小米重磅入局 VLA 基础模型竞赛</b>：Xiaomi-Robotics-1(HN 446 分)以 10 万+小时真实世界轨迹训练,主打零样本泛化与少样本适配,标志着国内大厂正式对标 π0/RT-X 级别的具身智能基础模型,数据规模成为新的军备竞赛维度。</li>
+      <li><b>前沿实验室经济学之争升温</b>：HN 272 分热帖直指 Kimi K3、Qwen 3.8 等中国开源模型正在冲击 Anthropic 的商业模式,开源追赶速度对闭源定价权的侵蚀成为行业核心议题。</li>
+      <li><b>推理系统进入&quot;微秒时代&quot;</b>：近光速延迟 GPU 集合通信一文点明长上下文 decode 密集负载已从带宽受限转向延迟受限,小 collective 的微秒级优化将是下一轮多 GPU 推理框架的主战场。</li>
       <li><b>AI capex 的电力矛盾外溢到法律层面</b>：数据中心输电征地权讨论(HN 166 分)显示,电网扩建与私有产权的冲突正成为 AI 基础设施扩张的社会摩擦点。</li>
-      <li><b>训练效率竞速工程化</b></li>
+      <li><b>训练效率竞速工程化</b>：LoRA Speedrun 公开排行榜把微调优化变成可复现的 wall-clock 竞赛,有望像 nanoGPT speedrun 一样催化社区级的系统优化创新。</li>
     </ol>
   </div>
   <section class="domain">
@@ -33,15 +33,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15830" target="_blank" rel="noopener">RTL-Sequencer: 基于序列范式的可扩展 RTL 时序预测</a></div>
+      <div class="it-sum">(arXiv cs.AR)— 针对图神经网络方法感受野有限、复杂度高、缺乏信号方向性的痛点,提出通过 BFS 遍历将逻辑锥线性化的序列化范式,把 RTL 级时序预测变成可扩展的序列建模问题,是 EDA × ML 路线上的又一步。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15782" target="_blank" rel="noopener">Vogls: 面向流片前功耗侧信道分析的快速交互式全时序仿真器</a></div>
+      <div class="it-sum">(arXiv cs.AR)— 开源工具,专为侧信道分析所需的&quot;大量短 trace、微小输入扰动&quot;场景优化,填补了传统功能验证仿真器的空白。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16042" target="_blank" rel="noopener">ECC 降低嵌入式动态存储器(GCRAM)功耗</a></div>
+      <div class="it-sum">(arXiv cs.AR)— 用纠错码掩盖弱单元位错误、减少刷新频率,量化了额外访问/逻辑能耗与刷新节省之间的权衡,对片上高密度缓存设计有参考价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2512.03594" target="_blank" rel="noopener">离线强化学习加速详细布线收敛</a></div>
+      <div class="it-sum">(arXiv cs.AR)— 用 offline RL 缩短物理设计中最耗时的 detailed routing 迭代次数,继布局之后 RL 进一步渗透后端流程。</div>
     </li>
     </ul>
   </section>
@@ -50,12 +54,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2602.18602" target="_blank" rel="noopener">Package Managers à la Carte: 依赖解析的形式化模型</a></div>
+      <div class="it-sum">(arXiv cs.PL)— 为碎片化的包管理器生态建立统一形式语义,对多语言 AI 工程(Python/C++/CUDA 混合依赖)的供应链可见性有长远意义。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15876" target="_blank" rel="noopener">Yarrow: 调和代数效应与基于区域的内存管理</a></div>
+      <div class="it-sum">(arXiv cs.PL)— 新 ML 系语言,解决 effect handler 非局部控制流破坏 region 栈式内存纪律的难题,是系统级语言设计(可类比 Mojo 的野心)的前沿探索。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16061" target="_blank" rel="noopener">双向类型检查:Freezing、Skeletons 与 Ghosts</a></div>
+      <div class="it-sum">(arXiv cs.PL)— 扩展双向类型系统支持混合信息流以推断一等多态,面向下一代编译器前端的类型推断基础设施。</div>
     </li>
     </ul>
   </section>
@@ -64,15 +71,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16100" target="_blank" rel="noopener">Every Microsecond Matters: GPU 集合通信逼近光速延迟</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(arXiv cs.DC)— 指出长上下文、decode 密集的 LLM 推理已从带宽受限转向延迟受限:多 GPU 服务中大量小 collective 位于 token 生成关键路径上,每一微秒开销都直接影响吞吐。方向上与 NVLink/NVL72 时代的推理系统设计高度相关,值得推理框架团队精读。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15846" target="_blank" rel="noopener">DSTAR: 通过时空冗余消减加速 Diffusion Transformer</a></div>
+      <div class="it-sum">(arXiv cs.AR)— 现有 DiT 加速多只做相邻 timestep 的时间冗余,DSTAR 同时利用空间冗余,面向图像/视频生成推理的能效优化。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15413" target="_blank" rel="noopener">FSZ: 打破 GPU 有损压缩的预测-吞吐权衡</a></div>
+      <div class="it-sum">(arXiv cs.DC)— 重新设计预测阶段的三项算法创新,在保持纯 GPU 单 kernel 高吞吐的同时提升压缩率,可用于科学计算与大规模训练的数据搬运降本。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15593" target="_blank" rel="noopener">MCP 云端规模化:Scalable LLM Agent Tool Access in the Cloud</a></div>
+      <div class="it-sum">(arXiv cs.DC)— MCP 已成 Agent 工具调用事实标准,但云端大规模运营面临遗留服务接入与协议快速演进的兼容成本,论文给出系统化方案,Agent Infra 方向的信号值得关注。</div>
     </li>
     </ul>
   </section>
@@ -81,15 +92,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">theconversation.com</span><a href="https://theconversation.com/when-can-a-power-company-take-your-land-for-data-center-infrastructure-284061" target="_blank" rel="noopener">电力公司何时可以为数据中心基础设施征用你的土地?</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 166 分)— 讨论美国输电线路 eminent domain(征地权)在数据中心电力扩张中的适用边界,AI capex 洪流正在把电网法律问题推向公众议程,属于电力约束成为 AI 扩张第一瓶颈的又一注脚。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15511" target="_blank" rel="noopener">多专家共识机制的 Serverless 自动扩缩容</a></div>
+      <div class="it-sum">(arXiv cs.DC)— 融合依赖图瓶颈识别、短期负载预测与多模型共识的成本感知扩缩框架。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15681" target="_blank" rel="noopener">ADASCALE: 动态环境下微服务的自适应扩缩与放置</a></div>
+      <div class="it-sum">(arXiv cs.DC)— 面向云-边异构节点与时变网络延迟的微服务放置决策框架。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16074" target="_blank" rel="noopener">JoyNexus: 面向 VLA 模型的服务化多租户后训练</a></div>
+      <div class="it-sum">(arXiv cs.DC)— 指出独占式 GPU 租赁/批作业模式对 VLA 后训练的资源浪费,提出多租户共享的后训练服务架构,机器人训练 Infra 化的信号。</div>
     </li>
     </ul>
   </section>
@@ -98,12 +113,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">emergingtrajectories.com</span><a href="https://www.emergingtrajectories.com/lh/frontier-lab-economics/" target="_blank" rel="noopener">Kimi K3、Qwen 3.8 与 Anthropic 的(潜在)瓦解</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 272 分)— 热议前沿实验室经济学:中国开源模型(Kimi K3、Qwen 3.8)的快速迭代正在压缩闭源实验室的定价权与商业模式空间,文章直指 Anthropic 面临的结构性压力。开源-闭源竞争格局与实验室可持续性之争,是本期治理层面最重要的讨论。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15313" target="_blank" rel="noopener">量子程序生成必须优先保证有效性而非概率式 Scaling</a></div>
+      <div class="it-sum">(arXiv cs.LG,Position Paper)— 论证在有严格数学约束的领域(量子电路),盲目套用 scaling hypothesis 是方向性错误,对&quot;生成即正确&quot;的可验证 AI 生成范式有借鉴意义。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15394" target="_blank" rel="noopener">可迁移的阈值化可解释医疗分类框架</a></div>
+      <div class="it-sum">(arXiv cs.LG)— 黑盒模型阻碍医疗 AI 落地,提出统计学基础的全可解释规则分类方法。</div>
     </li>
     </ul>
   </section>
@@ -112,18 +130,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">robotics.xiaomi.com</span><a href="https://robotics.xiaomi.com/xiaomi-robotics-1.html" target="_blank" rel="noopener">Xiaomi-Robotics-1: 以 10 万+小时真实世界轨迹扩展 VLA 模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 446 分,论文)— 本期最重磅:小米发布基础 VLA 模型,主打(1)开箱即用地在未见环境中执行多样化移动操作指令,(2)极少量微调数据即可适配新任务。两阶段预训练+后训练配方,100K+ 小时真机轨迹的数据规模把 VLA scaling 竞赛推向新量级,国内厂商正式加入 π0 / RT-X 级别的基础模型竞争。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15395" target="_blank" rel="noopener">NeuroCommitSSM: 基于 EEG-EMG-眼动的辅助操作共享自主</a></div>
+      <div class="it-sum">(arXiv cs.RO)— 建模&quot;何时执行&quot;而非仅&quot;做什么&quot;,从多模态生理信号预测连续 commit-readiness 分数,辅助机器人安全执行。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15448" target="_blank" rel="noopener">VTAP Gripper: 指尖感知 + 视触觉主动手掌的灵巧手内操作</a></div>
+      <div class="it-sum">(arXiv cs.RO)— 结构化指-掌协同与多模态感知,兼顾稳健抓取与精细操作。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15483" target="_blank" rel="noopener">面向随机结果的风险感知偏好学习</a></div>
+      <div class="it-sum">(arXiv cs.RO)— 指出人类并非期望效用最大化者,将行为经济学的风险敏感性引入机器人偏好对齐。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15422" target="_blank" rel="noopener">软体机器人执行器的可复现硅胶浇注与传感器嵌入工艺</a></div>
+      <div class="it-sum">(arXiv cs.RO)— 解决软体机器人规模化制造的可复现性瓶颈。</div>
     </li>
     </ul>
   </section>
@@ -132,15 +155,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/Saivineeth147/lora-speedrun" target="_blank" rel="noopener">LoRA Speedrun: 微调技术的公开 wall-clock 排行榜</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 138 分)— 效仿 nanoGPT speedrun 的思路,为 LoRA 微调建立公开的实测耗时榜单,把&quot;炼丹技巧&quot;变成可复现的竞速工程,预计将催生一波 kernel 级与训练配方级的自动优化提交。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.16058" target="_blank" rel="noopener">From Patterns to Parsers: FPGA 高效硬件解析器自动生成</a></div>
+      <div class="it-sum">(arXiv cs.AR)— 开源工具,从高层规范经解析中间表示(PIR)自动生成优化的、人类可读的 SystemVerilog,自动 FSM 生成与字节对齐处理,属&quot;规范→RTL&quot;自动生成路线。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15383" target="_blank" rel="noopener">Gradual C0 等验证器中的 Unfolding 表达式与纯函数渐进验证</a></div>
+      <div class="it-sum">(arXiv cs.PL)— 提升演绎程序验证器规范的模块化能力,为自动生成代码的形式化验证铺路。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2510.25369" target="_blank" rel="noopener">依赖动态类型的接地算术递归推理</a></div>
+      <div class="it-sum">(arXiv cs.PL)— 允许直接表达任意递归定义而不失一致性的形式推理基础,对程序合成的逻辑基座有潜在意义。</div>
     </li>
     </ul>
   </section>
@@ -149,21 +176,25 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15951" target="_blank" rel="noopener">在图处理器(IPU)上渲染 3D Gaussians</a></div>
+      <div class="it-sum">(arXiv cs.DC)— 首个在 Graphcore IPU(1472 个仅有片上 SRAM 的独立 tile)上实现的 3DGS 渲染器,其约束近似高效传感器-处理器架构,是低功耗端侧空间计算/机器人感知渲染的有趣探索。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15328" target="_blank" rel="noopener">Lazy Arithmetic + 脉动阵列:弥合嵌入式系统的验证鸿沟</a></div>
+      <div class="it-sum">(arXiv cs.AR)— 指出 GPU/NPU/TPU 为吞吐而非计算正确性设计,难以满足医疗设备等安全关键边缘场景,提出面向可验证正确性的脉动阵列惰性算术方案。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15753" target="_blank" rel="noopener">CoG 引导的权重校正:容错深度神经网络</a></div>
+      <div class="it-sum">(arXiv cs.AR)— 利用层内权重空间特征(重心)检测并恢复硬件/内存故障导致的权重损坏,面向安全关键嵌入式部署的可靠性加固。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.15421" target="_blank" rel="noopener">qZACH-ViT: 量化感知的本征可解释医疗影像分类</a></div>
+      <div class="it-sum">(arXiv cs.LG)— 紧凑模型的量化效率与可解释证据一体化设计,适合资源受限的医疗边缘设备。</div>
     </li>
     </ul>
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-18.html">← 2026-07-18</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-23.html">2026-07-23 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

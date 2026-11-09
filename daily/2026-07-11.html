@@ -33,15 +33,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/06/29/zuck-saves-meta-bucks-by-reusing-memory-from-old-servers-with-a-custom-cxl-asic/5263483" target="_blank" rel="noopener">Meta reuses old RAM in new servers with custom bridge chip</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 326):Meta 用一颗自研 CXL 桥接 ASIC 把老服务器上退役的 DDR4/DDR5 内存插回新服务器,通过 CXL.mem 语义暴露给新平台。在 HBM/DDR 供应吃紧、DRAM 现货价被 AI 拉爆的当口,这是超大规模厂商&quot;资本支出摊薄&quot;的教科书操作,也再度验证 CXL 内存池化正在从 PPT 走向机架级量产。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">macrumors.com</span><a href="https://www.macrumors.com/2026/07/06/apple-silicon-exec-explains-mac-mini-ai-demand/" target="_blank" rel="noopener">Apple Silicon Exec Explains Mac Mini AI Demand and On-Device Future</a></div>
+      <div class="it-sum">(HN 192):Apple Silicon 高管确认 Mac mini 出货被 AI 端侧推理需求推起来,统一内存架构成为核心卖点。同时释放&quot;未来更多能力跑在设备上&quot;的信号——对 8️⃣ 边缘端侧板块同样是重要背景。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08407" target="_blank" rel="noopener">Who Needs DRAM? We Have Fiber</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08407" target="_blank" rel="noopener">Fiber Memory</a></div>
+      <div class="it-sum">架构,重新审视光纤在超大规模数据中心的角色——将部分远端内存访问下沉到光互连而非扩 DRAM,是一条极其激进但方向正确的路线。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2605.03713" target="_blank" rel="noopener">SPEC CPU2026: Characterization, Representativeness, and Cross-Suite Comparison</a></div>
+      <div class="it-sum">(arXiv cs.AR):专用加速器主导 AI 负载,但 CPU 仍是调度加速器和跑日常服务的关键。文章系统评估 SPEC CPU2026 的代表性,给通用 CPU 微架构与基准选型提供新参考。</div>
     </li>
     </ul>
   </section>
@@ -49,16 +53,20 @@
     <h2>2️⃣ AI 编译器与框架</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07727" target="_blank" rel="noopener">SPL: Orchestrating Workflows with Declarative Deterministic-Probabilistic Composition</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07727" target="_blank" rel="noopener">结构化提示语言 SPL</a></div>
+      <div class="it-sum">把 AutoGen/LangGraph 那套 LLM 编排与 SymPy/Lean 那套符号计算统一到一个声明式语言里,提供 GENERATE / EVALUATE 两个原语——概率计算和确定性计算在同一份规范里协同,可以看作面向 Agent 时代的&quot;编译器 IR&quot;。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07728" target="_blank" rel="noopener">Environment-Sensitive Lexicographic Disambiguation for Contextual Parsing</a></div>
+      <div class="it-sum">(arXiv cs.PL):基于全局可变上下文做解析树消歧的确定性算法,锦标赛式淘汰竞争推导——对 DSL / 编译器前端在处理歧义语法时有直接工程价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07732" target="_blank" rel="noopener">A Top-Down Deriving Mechanism in Haskell</a></div>
+      <div class="it-sum">(arXiv cs.PL):对 Haskell `deriving` 机制的扩展,支持组合数据类型和多参数场景;由此外溢到 Rust trait / Java Lombok 等以派生生成样板代码的生态。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08547" target="_blank" rel="noopener">Potential Functions as Types</a></div>
+      <div class="it-sum">(arXiv cs.PL):在依赖类型代价验证系统 Calf 中,把物理学派(potential function)和银行家派(type-level credit)两种摊销分析视角统一起来,面向可证明的性能上界。</div>
     </li>
     </ul>
   </section>
@@ -67,18 +75,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07862" target="_blank" rel="noopener">CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems</a></div>
+      <div class="it-sum">(arXiv cs.DC):多 GPU 系统正从&quot;高速网络互连&quot;演进到&quot;紧耦合共享内存&quot;,而现有软件栈仍把 NVLink/NVSwitch 当成快网卡。作者提出以 CTA(线程块)为粒度的空间流水线,针对 LLM 服务从吞吐导向切换到延迟导向的新范式——直接对应 B200 / GB200 集群上的低延迟 serving 场景。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08006" target="_blank" rel="noopener">Toward a Unified GPU-Aware OpenSHMEM Specification</a></div>
+      <div class="it-sum">(arXiv cs.DC):随下一代 HPC/AI 系统通过高速内存 fabric 把更大设备域紧耦合起来,PGAS 模型天然适合表达细粒度远端访问,文章推动 GPU-aware OpenSHMEM 规范统一化,与 NCCL/NVSHMEM 生态形成呼应。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08215" target="_blank" rel="noopener">On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08215" target="_blank" rel="noopener">16 卡 Ascend 910 + CANN + vLLM-Ascend</a></div>
+      <div class="it-sum">部署 LLM-as-a-judge 与多模态服务的实测报告,系统记录&quot;离开 CUDA&quot;的真实工程代价。国产替代路径上一份难得的第一手数据。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07740" target="_blank" rel="noopener">Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE</a></div>
+      <div class="it-sum">(arXiv cs.LG):面向 RAG / Repo-level Coding / Agent 长上下文场景的零样本扩窗方法,动态双焦 RoPE 在超预训练窗口一个量级的输入上仍能工作——对开源权重的生产化部署非常实用。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07724" target="_blank" rel="noopener">Uncertainty-gated selection for block-sparse attention</a></div>
+      <div class="it-sum">(arXiv cs.LG):Block-sparse attention 的 top-k 选择过于短视,作者提出信息价值路由器,当第 k 与第 k+1 块得分接近时动态追加预算——直击长上下文稀疏注意力&quot;证据丢块&quot;的老毛病。</div>
     </li>
     </ul>
   </section>
@@ -86,19 +99,24 @@
     <h2>4️⃣ 数据中心与基础设施</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/06/29/zuck-saves-meta-bucks-by-reusing-memory-from-old-servers-with-a-custom-cxl-asic/5263483" target="_blank" rel="noopener">Meta reuses old RAM in new servers with custom bridge chip</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/systems/2026/06/29/zuck-saves-meta-bucks-by-reusing-memory-from-old-servers-with-a-custom-cxl-asic/5263483" target="_blank" rel="noopener">超大规模 capex 优化的标志性事件</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">——自研 CXL ASIC 把旧内存翻新入池,直接压低单位 token 的资本折旧。已在 1️⃣ 详述,此处点名。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08407" target="_blank" rel="noopener">Who Needs DRAM? We Have Fiber</a></div>
+      <div class="it-sum">(arXiv cs.AR):把光纤定位为&quot;远端内存介质&quot;的机架级/园区级架构提案,若成立将重塑数据中心 memory tier 与光互连 roadmap。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08313" target="_blank" rel="noopener">Adaptive Row Selection Meets Asynchrony in Randomized Kaczmarz</a></div>
+      <div class="it-sum">(arXiv cs.DC):共享内存机器上无锁并发 Kaczmarz 求解器的首个系统研究,面向大规模稀疏最小二乘/层析重建——HPC + AI 混合负载相关基础工作。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08307" target="_blank" rel="noopener">Empirical Analysis of GPU Frequency Behavior Under ML Workloads</a></div>
+      <div class="it-sum">(arXiv cs.DC):实测 NVIDIA GPU 在 ML 负载下的频率行为,低端 GPU 的频率受最近约 80ms 历史强烈影响——直接挑战了很多 SOTA 延迟预测模型的隐含假设,数据中心调度和 SLO 建模都要重看。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08440" target="_blank" rel="noopener">Coded Task Offloading for Fluid Computing: A Privacy-Aware Approach under D2D Networks</a></div>
+      <div class="it-sum">(arXiv cs.DC):面向 Fluid Computing 的编码卸载方案,在 D2D 场景兼顾隐私与对抗性执行——把&quot;云-边-端&quot;资源作为流体统一编排的实践参考。</div>
     </li>
     </ul>
   </section>
@@ -106,16 +124,20 @@
     <h2>5️⃣ AI 安全与治理</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">9to5mac.com</span><a href="https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/" target="_blank" rel="noopener">Apple sues OpenAI, accuses ex-employees of stealing trade secrets</a> <span class="hot">🔥</span></div>
+      <div class="it-title"><span class="badge score">9to5mac.com</span><a href="https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/" target="_blank" rel="noopener">AI 行业年度诉讼</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">——Apple 起诉 OpenAI,指控其前员工窃取商业机密。事件影响远超两家公司:一是端侧 AI(Apple Intelligence)与云端 AI(ChatGPT)技术边界的司法定义;二是员工流动、竞业和 AI 模型/权重的知识产权保护先例;三是对开源 vs. 闭源模型披露口径的连锁影响。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07717" target="_blank" rel="noopener">Who Gets Missed in the Tail? Thresholded Subgroup Underdiagnosis in Long-Tailed Chest X-ray Classification</a></div>
+      <div class="it-sum">(arXiv cs.LG):长尾多标签医学影像模型在分数转决策后&quot;谁被漏诊&quot;的部署前公平性审计,VinDr-CXR 与 MIMIC-CXR/CXR-LT 上给出诊断阶梯——医疗 AI 治理的实用工具。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07716" target="_blank" rel="noopener">Towards the Explainability of Temporal Graph Networks via Memory Backtracking and Topological Attribution</a></div>
+      <div class="it-sum">(arXiv cs.LG):把可解释性引入时序图网络的 memory 模块,追踪哪些历史事件驱动了模型判断——对可审计 AI 与合规部署都是加分项。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08417" target="_blank" rel="noopener">Detecting Ladder Logic Bombs in IEC 61131-3 PLC Programs using ESBMC-PLC+</a></div>
+      <div class="it-sum">与 ESBMC-Arduino: Closing the Deployment Gap for Formal Verification of Open-Hardware PLCs(arXiv cs.AR/cs.PL):两篇工控安全工作把形式化验证从抽象模型推进到真实资源受限微控器——OT/ICS 安全在 AI 时代同样是国家级议题。</div>
     </li>
     </ul>
   </section>
@@ -124,18 +146,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07830" target="_blank" rel="noopener">Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains</a></div>
+      <div class="it-sum">(arXiv cs.RO):Model-free RL 训人形在极端坡地上行走的最大痛点是策略被重力偏置逼向低重心保守步态,作者用生物力学先验+物理引导重塑奖励——直击 Unitree/Figure 类真机部署问题。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07844" target="_blank" rel="noopener">Shift &amp; Drift: A Zero-Shot Benchmark for Generalizable and Robust Autonomous Driving Motion Planning</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07844" target="_blank" rel="noopener">双轨零样本压力测试</a></div>
+      <div class="it-sum">——考验闭环运动规划在新城市拓扑和执行扰动后的鲁棒性,是当前 E2E 自驾研究急需的评测标尺。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07737" target="_blank" rel="noopener">SASGeo: Stability-Aware Semantic Map Localization for GNSS-Denied UAVs</a></div>
+      <div class="it-sum">(arXiv cs.RO):无 GNSS 环境下 UAV 的语义地图定位框架,通过稳定持久结构对抗季节/光照/视角/传感器差异——具身智能里&quot;世界模型的定位锚点&quot;这条线。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07885" target="_blank" rel="noopener">Time-to-Collision Based Dynamic Obstacle Avoidance Using Pretrained Vision Models</a></div>
+      <div class="it-sum">(arXiv cs.RO):完全走真实数据、不依赖仿真到现实迁移的动态避障方案,数据效率与可解释性并重——对小团队真机部署极友好。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07897" target="_blank" rel="noopener">Monocular Vision Based Control Framework for Grasping</a></div>
+      <div class="it-sum">STEMbot 与两篇 Soft Robotic Exogloves、Personalized Exoglove:单目视觉抓取的统一框架、大棚下作物病虫害监测的合规软体机器人、面向康复的个性化气动软体外骨手套——本周具身智能应用侧密度不低。</div>
     </li>
     </ul>
   </section>
@@ -143,16 +170,20 @@
     <h2>7️⃣ AI 自动算子与代码生成优化</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08002" target="_blank" rel="noopener">A Theoretical Framework for Stochastic Activity Prediction in Tensor Accelerator Wallace-Tree Multipliers</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08002" target="_blank" rel="noopener">随机活动预测 SAP</a></div>
+      <div class="it-sum">对稀疏操作数下的动态功耗做在线自适应门控,填补了零检测和结构性功耗门控之外的一片空白——本质是&quot;用小模型替编译器/RTL 做微观自动调优&quot;。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08427" target="_blank" rel="noopener">FPGN: Redefining Ultra-Fast Programmable Gate-based Neural Acceleration with Differentiable LUTs</a></div>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08427" target="_blank" rel="noopener">可微分神经算子</a></div>
+      <div class="it-sum">训练,而不是继续把 LUT 当算术运算的乐高——纳秒级推理场景下,是 AI 与硬件联合设计的又一次前沿尝试,与 AlphaEvolve/FunSearch 精神相通。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.07738" target="_blank" rel="noopener">REFORGE: A Method for Benchmarking LLMs&#x27; Reverse Engineering Capabilities in Decompiled Binary Function Naming</a></div>
+      <div class="it-sum">(arXiv cs.PL):严肃对待 LLM 在反编译函数命名这类任务里的能力评测——把&quot;函数级 ground truth 构造&quot;本身作为核心问题重做,给 AI 参与逆向/安全工作流提供扎实的量化基准。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08015" target="_blank" rel="noopener">CRIMP: Compact &amp; Reliable DNN Inference on In-Memory Processing via Crossbar-Aligned Compression</a></div>
+      <div class="it-sum">(arXiv cs.AR):存内计算 crossbar 上的量化与非理想性自适应压缩,消灭浮点尺度因子对 FP 处理器的依赖——把算法-架构协同压缩推进一大步。</div>
     </li>
     </ul>
   </section>
@@ -161,15 +192,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">macrumors.com</span><a href="https://www.macrumors.com/2026/07/06/apple-silicon-exec-explains-mac-mini-ai-demand/" target="_blank" rel="noopener">Apple Silicon Exec Explains Mac Mini AI Demand and On-Device Future</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">(HN 192):Apple 高管明说&quot;更多能力将在设备端运行&quot;,Mac mini 的 AI 需求由此爆发。对 Core ML / ANE / MLX 生态是持续利好,也是&quot;端侧 AI 是差异化&quot;这条 narrative 的官方背书。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">9to5mac.com</span><a href="https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/" target="_blank" rel="noopener">Apple sues OpenAI</a></div>
+      <div class="it-sum">(已在 5️⃣ 详述,HN 351):从技术侧读,案由本身与 Apple Intelligence 的端侧策略强绑定——这一诉讼给&quot;端 vs 云&quot;的路线之争添了法律维度。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08427" target="_blank" rel="noopener">FPGN</a></div>
+      <div class="it-sum">(见 7️⃣):可微分 LUT 直接落到 FPGA,是极低比特/极低延迟端侧推理硬件的重要备胎。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.08015" target="_blank" rel="noopener">CRIMP</a></div>
+      <div class="it-sum">(见 7️⃣):存内计算 + crossbar 对齐压缩,天然属于低功耗端侧场景。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">面向 llama.cpp / MLC-LLM / ExecuTorch / MLX / BitNet 等端侧栈的重大更新,本窗口无直接独立条目——需注意 Apple 端侧战略与 Mac mini 需求的整体宏观牵引已相当强。</a></div>
@@ -178,7 +213,7 @@
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-10.html">← 2026-07-10</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-14.html">2026-07-14 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

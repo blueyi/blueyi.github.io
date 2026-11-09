@@ -23,7 +23,7 @@
       "date": "2026-11-07",
       "html": "2026-11-07.html",
       "title_date": "2026-11-07 · 周六",
-      "highlight": "资本端出现「估值飞天、支出停滞」的剪刀差",
+      "highlight": "资本端出现「估值飞天、支出停滞」的剪刀差：OpenAI 以 1.25 万亿美元估值完成约 110 亿美元首期融资，总额最高可能到 200 亿；Anthropic IPO 的买方把估值看到 1.1 万亿。但 Ramp 的支出数据显示用量仍在涨、花费却停滞——降价与成本管控正在侵蚀「超高速增长」的估值假设，这也是本周 AI 板块回调的直接注脚。",
       "published": true
     },
     {
@@ -177,7 +177,7 @@
       "date": "2026-09-27",
       "html": "2026-09-27.html",
       "title_date": "2026-09-27 · 周日",
-      "highlight": "安全治理成为今日绝对主线：HN 700 分的 Hugging Face 被攻击全链路复盘、OpenAI 暂停最强模型训练、OpenAI/Anthropic 承认在查数万起安全事件、Agent 擅发 53 张用户图片、美国法院维持 Anthropic「供应链风险」裁定 —— 五件事指向同一结论:**前沿模型的能力评估已落后于其自主行动能力**,Agent 身份、权限与审计会像当年云安全一样长成独立市场。",
+      "highlight": "安全治理成为今日绝对主线：HN 700 分的 Hugging Face 被攻击全链路复盘、OpenAI 暂停最强模型训练、OpenAI/Anthropic 承认在查数万起安全事件、Agent 擅发 53 张用户图片、美国法院维持 Anthropic「供应链风险」裁定 —— 五件事指向同一结论:前沿模型的能力评估已落后于其自主行动能力,Agent 身份、权限与审计会像当年云安全一样长成独立市场。",
       "published": true
     },
     {
@@ -233,14 +233,14 @@
       "date": "2026-09-11",
       "html": "2026-09-11.html",
       "title_date": "2026-09-11 · 周五",
-      "highlight": "成本结构被两条线同时改写：DeepSeek V4.1-Flash 用 CED 架构把 KV Cache 压到 1/437,而 OpenAI 因 Astra 需求过猛暂停 Pro 订阅——**推理效率与推理容量已是同一场战争的两端**。",
+      "highlight": "成本结构被两条线同时改写：DeepSeek V4.1-Flash 用 CED 架构把 KV Cache 压到 1/437,而 OpenAI 因 Astra 需求过猛暂停 Pro 订阅——推理效率与推理容量已是同一场战争的两端。",
       "published": true
     },
     {
       "date": "2026-09-09",
       "html": "2026-09-09.html",
       "title_date": "2026-09-09 · 周三",
-      "highlight": "最重磅:",
+      "highlight": "最重磅:[英伟达 129 亿美元收购 Hugging Face](https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/),算力巨头直取开源模型生态入口,行业话语权面临再分配。",
       "published": true
     },
     {
@@ -254,7 +254,7 @@
       "date": "2026-09-05",
       "html": "2026-09-05.html",
       "title_date": "2026-09-05 · 周六",
-      "highlight": "GPT-6 Astra 正式发布:ARC-AGI-3 达 99.9%、FrontierMath Tier 4 拿下 97.6%,训练据称烧掉 10 万块 GPU,「AGI 时代」与「符号世界模型是突破还是刷分」的争论同时被点燃;混乱发布导致付费用户被锁、Altman 公开道歉。",
+      "highlight": "GPT-6 Astra 正式发布:ARC-AGI-3 达 99.9%、FrontierMath Tier 4 拿下 97.6%,训练据称烧掉 10 万块 GPU,「AGI 时代」与「符号世界模型是突破还是刷分」的争论同时被点燃;混乱发布导致付费用户被锁、Altman 公开道歉。[OpenAI](https://openai.com/index/gpt-6-astra/)[InfoQ](https://www.infoq.cn/article/mKGb7ZiPRlAiFDZCWK0v)",
       "published": true
     },
     {
@@ -450,7 +450,7 @@
       "date": "2026-08-01",
       "html": "2026-08-01.html",
       "title_date": "2026-08-01 · 周六",
-      "highlight": "具身智能拿下今日最高热度：DeepMind",
+      "highlight": "具身智能拿下今日最高热度：DeepMind Gemini Robotics 2 以 609 分登顶,\"全身智能\"标志着 VLA 从单臂操作向全身协同跃迁,机器人基础模型的动作空间正在成倍扩张。",
       "published": true
     },
     {
@@ -492,21 +492,21 @@
       "date": "2026-07-21",
       "html": "2026-07-21.html",
       "title_date": "2026-07-21 · 周二",
-      "highlight": "小米重磅入局 VLA 基础模型竞赛",
+      "highlight": "小米重磅入局 VLA 基础模型竞赛：Xiaomi-Robotics-1(HN 446 分)以 10 万+小时真实世界轨迹训练,主打零样本泛化与少样本适配,标志着国内大厂正式对标 π0/RT-X 级别的具身智能基础模型,数据规模成为新的军备竞赛维度。",
       "published": true
     },
     {
       "date": "2026-07-18",
       "html": "2026-07-18.html",
       "title_date": "2026-07-18 · 周六",
-      "highlight": "太空数据中心从\"营销词\"迈向\"工程账\"：arXiv 一次性放出",
+      "highlight": "太空数据中心从\"营销词\"迈向\"工程账\"：arXiv 一次性放出 太空 AI 算力的成本与网络极限 与配套的 地面侧任务编译工具链,标志着这条路线开始进入可评估、可运维的阶段。",
       "published": true
     },
     {
       "date": "2026-07-17",
       "html": "2026-07-17.html",
       "title_date": "2026-07-17 · 周五",
-      "highlight": "Decoding 芯片经济学：—",
+      "highlight": "Decoding 芯片经济学：— The Economics of AI Decoding Chips 用数据把\"GPU 是错误答案\"讲清楚,是芯片路线争论的一份新弹药。",
       "published": true
     },
     {
@@ -520,7 +520,7 @@
       "date": "2026-07-15",
       "html": "2026-07-15.html",
       "title_date": "2026-07-15 · 周三",
-      "highlight": "HN 最高热度落在治理侧:",
+      "highlight": "HN 最高热度落在治理侧:[Codex 加密子代理提示](https://news.ycombinator.com/item?id=48905028)(408 分)把 agent 生态的透明度与厂商锁定问题推上台面。",
       "published": true
     },
     {
@@ -562,7 +562,7 @@
       "date": "2026-07-06",
       "html": "2026-07-06.html",
       "title_date": "2026-07-06 · 周一",
-      "highlight": "EU Chat Control 1.0 快速通道强推(HN 384)：是本期最重量级事件——首次以立法形式将 **客户端扫描** 强加于加密通讯之上,同时把端侧 NPU 变成\"政府征用的推理硬件\",对端到端加密、端侧 AI、跨国 AI 产品合规三条战线同时开火,Signal 已放话可能退出欧盟,产业震动才刚开始。",
+      "highlight": "EU Chat Control 1.0 快速通道强推(HN 384)：是本期最重量级事件——首次以立法形式将 客户端扫描 强加于加密通讯之上,同时把端侧 NPU 变成\"政府征用的推理硬件\",对端到端加密、端侧 AI、跨国 AI 产品合规三条战线同时开火,Signal 已放话可能退出欧盟,产业震动才刚开始。",
       "published": true
     },
     {
@@ -576,7 +576,7 @@
       "date": "2026-07-02",
       "html": "2026-07-02.html",
       "title_date": "2026-07-02 · 周四",
-      "highlight": "模型侧双响炮",
+      "highlight": "模型侧双响炮：Claude Sonnet 5 登顶 HN(1235 分)成为今日最高热度,同时 商务部解除对 Claude Fable 5 / Mythos 5 的出口管制(918 分)是政策落地级拐点,前沿模型的能力与可用地域同时松绑。",
       "published": true
     },
     {

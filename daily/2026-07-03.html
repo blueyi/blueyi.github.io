@@ -33,11 +33,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00621" target="_blank" rel="noopener">PQC 专用 NTT 加速器新微架构</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— High-Performance NTT Accelerators for PQC 面向后量子密码(ML-KEM/Kyber、ML-DSA/Dilithium)的大次多项式运算,提出统一冗余算术 + 精调微架构来加速 NTT 这一核心原语。虽属密码硬件,但对未来数据中心安全协处理器的裸片设计有参考价值。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00819" target="_blank" rel="noopener">GPU 能效&quot;甜点区&quot;建模</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Modeling and Chasing the Energy-Efficiency Sweet Spots in Modern GPUs 在 A40 / A100 / H100 / H200 四代卡上,用 GROMACS、AMBER 分子动力学与 FIRESTARTER 压力测试刻画硬件配置对&quot;每解能耗&quot;的影响,给出锁频/功耗墙下的能效最优区间——对超算与训练集群的功耗预算调优直接有用。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">背景:本窗口 Nvidia/AMD/Intel/TSMC/HBM 无独立重大发布。</a></div>
@@ -49,11 +49,11 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00563" target="_blank" rel="noopener">块程序的可证明变换</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Certificate-Carrying Transformation of Event-Driven Block Programs 把 Scratch 等块状语言的优化改写成&quot;携带证书&quot;的源到源重写:不可信优化器提出改写,可信 fail-closed 检查器重算每个副条件后才接受。为编译器优化的可信化提供了轻量范式。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00824" target="_blank" rel="noopener">实用化区间精化类型</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Practical Range Refinement Types with Inference 针对精化类型标注负担过重的痛点,提出带推断的区间精化类型,降低主流语言接入静态验证的门槛。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">背景:tinygrad / MLIR / TVM / XLA / Triton / Mojo 本窗口无独立重大更新。</a></div>
@@ -65,15 +65,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00151" target="_blank" rel="noopener">长时程 Agent 服务的上下文工程</a></div>
-      <div class="it-sum">🔥 —</div>
+      <div class="it-sum">🔥 — SmoothAgent 直击多轮 Agent 上下文持续膨胀、offloading/reduction/isolation 引入巨大上下文变换开销的问题,提出&quot;前瞻式上下文工程&quot;(Lookahead Context Engineering)来高效服务长时程 LLM Agent。是当下 Agent 基础设施最贴地的一篇。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00466" target="_blank" rel="noopener">MoE 解码路由感知专家局部性</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving 指出 PD 分离服务中,现有解码路由只均衡负载并不够:MoE 下等负载 worker 因每步需加载 batch 激活的全部专家权重而延迟迥异,遂提出感知专家局部性的解码路由。对 vLLM/SGLang 类 MoE 服务栈有直接工程意义。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">mixedbread.com</span><a href="https://www.mixedbread.com/blog/asymmetric-quant" target="_blank" rel="noopener">稀疏检索存储压缩 97%</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Asymmetric Quantization: Near-Lossless Retrieval with 97% Storage Reduction非对称量化实现近无损向量检索、存储降 97%,对大规模 RAG/向量库的成本结构影响显著。</div>
     </li>
     </ul>
   </section>
@@ -82,15 +82,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00303" target="_blank" rel="noopener">Promise-Future 集群异步同步</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Promise-Future Synchronization for Cluster AMT Runtimes via MPI One-Sided Communication 扩展 Itoyori AMT 运行时,突破&quot;future 创建即绑定生产者、读者数编译期固定&quot;的限制,支持动态依赖表达——对超算级异步多任务调度是底层改进。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00740" target="_blank" rel="noopener">微服务可用性运行时模型</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Stochastic Connectivity as the Foundation of a Runtime Model for Microservice Availability Analysis 用分布式追踪 + 部署元数据推导端点级可用性,替代昂贵高风险的混沌工程,给大规模服务集群提供更廉价的可用性证据。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00455" target="_blank" rel="noopener">自动扩缩容仿真框架</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— CloudyGUI 提供带 GUI 的 Python 云工作负载仿真与预测框架,便于研究者验证资源管理与 auto-scaling 策略。</div>
     </li>
     </ul>
   </section>
@@ -99,15 +99,15 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">twitter.com</span><a href="https://twitter.com/AnthropicAI/status/2072106151890809341" target="_blank" rel="noopener">美商务部解除 Claude Fable 5 / Mythos 5 出口管制</a></div>
-      <div class="it-sum">🔥 —</div>
+      <div class="it-sum">🔥 — Anthropic 官宣前沿模型出口管制放开,是本窗口最重磅的政策拐点,直接影响前沿模型的全球分发与算力/合规格局。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">theguardian.com</span><a href="https://www.theguardian.com/technology/2026/jul/02/openai-stake-us-government-ai-sam-altman" target="_blank" rel="noopener">OpenAI 或向美国政府让渡 5% 股权</a></div>
-      <div class="it-sum">🔥 —</div>
+      <div class="it-sum">🔥 — The Guardian 报道早期谈判阶段,若落地将重塑 AI 头部企业与政府的资本与治理关系,值得持续跟踪。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00089" target="_blank" rel="noopener">可解释性可复用性协议</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Representation as a Bottleneck for Mechanistic Interpretability: The Manifestation Unit Protocol 针对机制可解释性成果(选择性表、电路图、特征列表)锁在各自 notebook 里、不可组合/不可查询的问题,提出统一的&quot;表现单元&quot;协议使结果可复用可行动。</div>
     </li>
     </ul>
   </section>
@@ -116,23 +116,23 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00020" target="_blank" rel="noopener">空间场景图 VLA 基准</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— EmbodimentSemantic 面向 VLA 机器人操作缺乏显式空间表征(支撑、包含、遮挡、深度关系)的痛点,推出空间场景图数据集与基准。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00022" target="_blank" rel="noopener">何时该个性化家庭物品搜索</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— When to Personalize Household Object Search 提出 PerSim 刚性门控混合策略,权衡&quot;住户特质先验&quot;与&quot;群体频率基线&quot;。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00024" target="_blank" rel="noopener">缆索悬挂载荷协同运输</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Decentralized Geometric Control for Cable-Suspended Payload Transport N 架四旋翼无中心协调、带自适应质量估计的四层分层控制。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00025" target="_blank" rel="noopener">仿蝇脑拓扑的鲁棒导航网络</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— FLYNN 直接由果蝇突触级连接组导出 RNN 架构,提升新环境/感知缺失下的鲁棒性;另有 SE(3) 不变卡尔曼滤波机械臂状态估计、Argoverse 2 城市减速行为分类器、社交机器人导航的图轨迹学习、面向具身智能的记忆原生非地面网络 等一批 cs.RO 新作,覆盖状态估计、驾驶行为、社交导航与天地一体连接。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">makerspet.com</span><a href="https://makerspet.com/blog/building-an-open-source-robot-vacuum-meet-oomwoo/" target="_blank" rel="noopener">DIY 开源扫地机器人</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Oomwoo开源可自制扫地机器人,消费级具身硬件民主化的有趣样本。</div>
     </li>
     </ul>
   </section>
@@ -141,19 +141,19 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.01120" target="_blank" rel="noopener">自进化 Agent 的强化学习系统</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents 指出生产环境中 LLM Agent 的权重、系统提示、工具库、上下文 harness 在部署时全部冻结,改进需人工离线循环;提出下一代 agentic RL 系统支撑自进化,是&quot;AI 自动改进 AI&quot;方向的系统级探索。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00700" target="_blank" rel="noopener">LLVM 编译器 issue 求解基准</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— LLVM-Bench 首个大规模 LLVM 编译器 issue 解决基准,填补 LLM 在系统级编译器(而非算法题)上求解能力评测的空白——对&quot;LLM 驱动编译器&quot;落地评估很关键。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00062" target="_blank" rel="noopener">算法适应性代码生成基准</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— AlgoBench 质疑 HumanEval/LiveCodeBench 高通过率不等于真会算法推理(题面/题解泄漏进训练),构造衡量算法适应能力的新基准。</div>
     </li>
     <li>
       <div class="it-title"><span class="badge score">cursor.com</span><a href="https://cursor.com/evals" target="_blank" rel="noopener">CursorBench 3.1</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— Cursor 评测集更新代码 Agent 评测持续演进,是衡量 LLM 编码/代码生成能力的行业风向标。</div>
     </li>
     </ul>
   </section>
@@ -162,7 +162,7 @@
     <ul class="items">
     <li>
       <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2607.00621" target="_blank" rel="noopener">PQC 端侧 NTT 加速微架构</a></div>
-      <div class="it-sum">—</div>
+      <div class="it-sum">— High-Performance NTT Accelerators for PQC(见第 1 类)以统一冗余算术做定制硬件,对功耗/面积受限的端侧安全芯片(NPU 旁的密码协处理器)同样适用,可为端侧后量子加密提速。</div>
     </li>
     <li>
       <div class="it-title"><a href="" target="_blank" rel="noopener">背景:本窗口 llama.cpp / MLC-LLM / ExecuTorch / MLX / Core ML / NPU(Hexagon/ANE/Jetson)/ 小模型 / 极低比特量化(BitNet/INT4)无独立重大动态。</a></div>
@@ -171,7 +171,7 @@
   </section>
   <div class="wk-nav">
     <span><a href="2026-07-02.html">← 2026-07-02</a></span>
-    <span><a href="2026-08-28.html">2026-08-28 →</a></span>
+    <span><a href="2026-07-06.html">2026-07-06 →</a></span>
   </div>
   <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
 </div>

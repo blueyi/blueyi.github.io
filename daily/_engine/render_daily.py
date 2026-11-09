@@ -60,34 +60,37 @@ def _strip_outer_bold(s: str) -> str:
 
 
 def _parse_item(raw: str) -> dict:
-    """解析一条 '- ' bullet -> {title, summary, url, source, hot}"""
+    """解析一条新闻，兼容链接位于标题后、简介中或末尾来源处。"""
     s = raw.strip()
     hot = False
     if s.startswith("🔥"):
         hot = True
         s = s[1:].lstrip()
-    url, source = "", ""
-    m = _LINK_RE.search(s)
-    if m:
-        url = m.group(2).strip()
-        # 去掉包裹在链接外的 **...**，避免被当成标题
-        s = _strip_outer_bold(s[:m.start()])
-        if not s:
-            # 链接被 ** 包裹，用链接文本作为标题
-            s = m.group(1).strip()
-        # 从 URL 提取来源域名，作为 badge 显示
-        try:
-            source = urlparse(url).netloc.replace("www.", "")
-        except Exception:
-            source = ""
-    title, summary = "", ""
+
+    links = list(_LINK_RE.finditer(s))
+    url = links[0].group(2).strip() if links else ""
+    try:
+        source = urlparse(url).netloc.replace("www.", "") if url else ""
+    except Exception:
+        source = ""
+
     bm = _BOLD_RE.search(s)
     if bm:
         title = bm.group(1).strip()
-        summary = s[bm.end():].strip()
+        remainder = s[bm.end():].strip()
+    elif links and links[0].start() == 0:
+        title = links[0].group(1).strip()
+        remainder = s[links[0].end():].strip()
     else:
         title = s.strip()
-    summary = re.sub(r'^[：:。，,、\s]+', '', summary).strip()
+        remainder = ""
+
+    # 末尾括号链接通常只是来源标注，不属于简介；正文中的链接保留链接文字。
+    remainder = re.sub(r'[（(]\s*\[[^\]]+\]\([^)]+\)\s*[）)]', '', remainder)
+    remainder = _LINK_RE.sub(lambda match: match.group(1), remainder)
+    remainder = _BOLD_RE.sub(lambda match: match.group(1), remainder)
+    summary = re.sub(r'^[：:。，,、;；\s]+', '', remainder).strip()
+    summary = re.sub(r'[（(\s]+$', '', summary).strip()
     return {"title": title, "summary": summary, "url": url, "source": source, "hot": hot}
 
 
