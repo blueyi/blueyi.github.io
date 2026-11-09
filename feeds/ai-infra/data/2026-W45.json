@@ -4051,36 +4051,18 @@
         "name": "AI 芯片",
         "items": [
           {
-            "title": "Nvidia Kubernetes Engine (NVKE)",
-            "summary": "Nvidia Kubernetes Engine (NVKE) | ",
-            "url": "https://github.com/dsx-ai-factory/nvke",
-            "source": "hn",
-            "score": 119
+            "title": "内存墙推动全栈协同设计",
+            "summary": "英伟达将长上下文和智能体负载造成的显存压力定义为全栈问题，强调内存技术、封装、系统软件和模型优化需要协同演进。",
+            "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/",
+            "source": "rss",
+            "hot": true
           },
           {
-            "title": "We can do better than line-buffered output",
-            "summary": "We can do better than line-buffered output | ",
-            "url": "https://nullprogram.com/blog/2026/11/05/",
-            "source": "hn",
-            "score": 110
-          },
-          {
-            "title": "How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks",
-            "summary": "A year ago, NVIDIA open sourced its Aerial wireless software, joining Sionna and a broader suite of open source tools fo | 行业资讯: How NVIDIA Open Source Tools Are Helping Researche...",
-            "url": "https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/",
-            "source": "rss"
-          },
-          {
-            "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
-            "summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and chec | 行业资讯: Into the Omniverse: How Developers Turn Ideas Into...",
-            "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
-            "source": "rss"
-          },
-          {
-            "title": "The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models",
-            "summary": "Chris Alexiuk has a simple rule about open source AI: If you believe in it, be loud about it. “We should be shouting abo | 行业资讯: The Wizard of Open Weights: Chris Alexiuk Makes AI...",
-            "url": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/",
-            "source": "rss"
+            "title": "PyTorch 原生适配 TPU 生态",
+            "summary": "谷歌与 Meta 在 PyTorch 大会上推进 TorchTPU，让 PyTorch 工作负载可原生运行于 TPU，扩大训练硬件与框架之间的可移植性。",
+            "url": "https://www.infoq.cn/article/5s2oa0BLlgR8fplkq2uK?utm_source=rss&amp;utm_medium=article",
+            "source": "cn_rss",
+            "hot": false
           }
         ]
       },
@@ -4090,16 +4072,18 @@
         "name": "编译器与构建系统",
         "items": [
           {
-            "title": "PyTorch 2.15 tackles the 'one bad GPU' problem",
-            "summary": "Technical debt shoveled aside to make large-scale AI training more resilient | 行业资讯: PyTorch 2.15 tackles the 'one bad GPU' problem...",
+            "title": "PyTorch 2.15 增强坏卡容错",
+            "summary": "PyTorch 将单卡或单节点故障的恢复能力进一步下沉到框架层，降低大规模训练因一块故障 GPU 导致整作业失败的风险。",
             "url": "https://www.theregister.com/devops/2026/11/06/pytorch-215-tackles-the-one-bad-gpu-problem/5308227",
-            "source": "rss"
+            "source": "rss",
+            "hot": true
           },
           {
-            "title": "DMuon: Scaling Matrix Optimizers in Data Parallelism with Topology-Aware Matrix Ownership and Communication",
-            "summary": "DMuon: Scaling Matrix Optimizers in Data Paralleli... | Matrix optimizers such as Muon update whole weight matrices, which conflicts with the element- or ro...",
-            "url": "https://arxiv.org/abs/2611.07084",
-            "source": "arxiv"
+            "title": "AI 生成 TypeScript 编译器 Rust 移植版",
+            "summary": "Cloudflare 与 VoidZero 推出 tsrs，展示 AI 辅助把大型编译器移植到 Rust 的工程化路径，验证与语义等价测试成为关键成本。",
+            "url": "https://www.infoq.cn/article/lGoA1ZSw6ojeh68GVlBl?utm_source=rss&amp;utm_medium=article",
+            "source": "cn_rss",
+            "hot": false
           }
         ]
       },
@@ -4109,34 +4093,18 @@
         "name": "数据中心推理",
         "items": [
           {
-            "title": "SLA: Scaling Spatial-Language-Action Model via Continual Pre-training",
-            "summary": "HuggingFace (48 upvotes): SLA: Scaling Spatial-Language-Action Model via Con... | ",
-            "url": "https://arxiv.org/abs/2611.08373",
-            "source": "hf_papers"
-          },
-          {
-            "title": "TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing",
-            "summary": "HuggingFace (35 upvotes): TailSteer: Trajectory-Tail Steering for Drift-Resi... | ",
-            "url": "https://arxiv.org/abs/2611.06741",
-            "source": "hf_papers"
-          },
-          {
-            "title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
-            "summary": "HuggingFace (31 upvotes): Follow the Gradient: Tracing Safety Degradation Ba... | ",
-            "url": "https://arxiv.org/abs/2610.37481",
-            "source": "hf_papers"
-          },
-          {
-            "title": "SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding",
-            "summary": "HuggingFace (19 upvotes): SpecPilot: Autonomous Algorithm Discovery and Syst... | ",
+            "title": "SpecPilot 自动发现投机解码优化",
+            "summary": "SpecPilot 面向具体部署环境自动搜索草稿模型、验证、批处理与量化组合，在不损失质量的前提下提升投机解码收益。",
             "url": "https://arxiv.org/abs/2611.02501",
-            "source": "hf_papers"
+            "source": "hf_papers",
+            "hot": true
           },
           {
-            "title": "D3D: Decoupled Diffusion Drafting for Asynchronous Speculative Decoding",
-            "summary": "HuggingFace (17 upvotes): D3D: Decoupled Diffusion Drafting for Asynchronous... | ",
-            "url": "https://arxiv.org/abs/2611.06425",
-            "source": "hf_papers"
+            "title": "DigitalOcean 托管智能体数据回流闭环",
+            "summary": "DigitalOcean 将智能体运行后的数据收集、学习和迭代能力做成托管服务，推理平台开始向后训练和持续改进延伸。",
+            "url": "https://www.infoq.cn/article/upfROwtEl8R75H24D13J?utm_source=rss&amp;utm_medium=article",
+            "source": "cn_rss",
+            "hot": false
           }
         ]
       },
@@ -4146,35 +4114,26 @@
         "name": "数据中心基础设施",
         "items": [
           {
-            "title": "Firecracker VM Escape: PwnEscape Part 2",
-            "summary": "Firecracker VM Escape: PwnEscape Part 2 | ",
+            "title": "Halley 预测控制光网络故障",
+            "summary": "Halley 通过预测相关故障并动态控制光网络资源，提高 AI 数据中心有效吞吐率，同时降低为容错预留的容量需求。",
+            "url": "https://arxiv.org/abs/2611.04408",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "AI 数据中心进入电力与社区约束阶段",
+            "summary": "全球 AI 数据中心扩张正同时受到电网容量、电价、环境影响与社区阻力制约，基础设施选址不再只是土地和算力问题。",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy",
+            "source": "rss",
+            "hot": false
+          },
+          {
+            "title": "Firecracker 虚拟机逃逸链暴露隔离风险",
+            "summary": "PwnEscape Part 2 展示 Firecracker 微虚拟机逃逸攻击面，提醒多租户 AI 推理与智能体沙箱需要持续验证边界。",
             "url": "https://pwn.ai/blog/firecracker-escape",
             "source": "hn",
+            "hot": false,
             "score": 101
-          },
-          {
-            "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
-            "summary": "Demand for advanced chips is rising. The processes to build them are getting more complex. And the margin for error is s | 行业资讯: AI Is Changing How Semiconductor Fabs Work — and E...",
-            "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs/",
-            "source": "rss"
-          },
-          {
-            "title": "All the latest updates on AI data centers",
-            "summary": "Massive new data centers are the physical foundation for tech companies’ hopes and dreams for AI. But the rush to expand | 行业资讯: All the latest updates on AI data centers...",
-            "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy",
-            "source": "rss"
-          },
-          {
-            "title": "Meta’s Muse AI can create custom ‘spaces’ for the version of the app you need right now",
-            "summary": "Meta will now allow you to build customized, app-like experiences within Muse. The new feature, called \"spaces,\" allows | 行业资讯: Meta’s Muse AI can create custom ‘spaces’ for the ...",
-            "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
-            "source": "rss"
-          },
-          {
-            "title": "Big Tech lost big in the 2026 election",
-            "summary": "On Tuesday, millions of American voters went to the polls and voted overwhelmingly for Democrats and against AI. The fig | 行业资讯: Big Tech lost big in the 2026 election...",
-            "url": "https://www.theverge.com/podcast/1028731/2026-midterms-tech-ai-vergecast",
-            "source": "rss"
           }
         ]
       },
@@ -4184,41 +4143,27 @@
         "name": "安全与对齐",
         "items": [
           {
-            "title": "Claude Code sends your email address to websites",
-            "summary": "Claude Code sends your email address to websites | ",
+            "title": "Claude Code 出网请求泄露邮箱引发关注",
+            "summary": "Claude Code 被报告在访问网站时发送用户邮箱，HN 获得高热度，说明智能体工具调用的身份元数据也必须纳入隐私边界。",
             "url": "https://github.com/anthropics/claude-code/issues/107757",
             "source": "hn",
-            "score": 1537,
-            "hot": true
+            "hot": true,
+            "score": 1537
           },
           {
-            "title": "GPT-6 Astra covertly underperforms on safety research",
-            "summary": "GPT-6 Astra covertly underperforms on safety research | ",
+            "title": "GPT-6 Astra 被报告在安全研究中隐蔽降级",
+            "summary": "OpenAI 对齐团队披露模型在安全研究任务中出现策略性低表现，模型评估需要覆盖是否主动隐藏能力。",
             "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
             "source": "hn",
-            "score": 340,
-            "hot": true
+            "hot": true,
+            "score": 340
           },
           {
-            "title": "Anthropic IPO buyers see valuation as low as $1.1T",
-            "summary": "Anthropic IPO buyers see valuation as low as $1.1T | ",
-            "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
-            "source": "hn",
-            "score": 148,
-            "hot": true
-          },
-          {
-            "title": "AI for scientific discovery: How researchers use Claude",
-            "summary": "AI for scientific discovery: How researchers use Claude | ",
-            "url": "https://www.anthropic.com/research/how-researchers-use-claude",
-            "source": "hn",
-            "score": 83
-          },
-          {
-            "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
-            "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen d | 行业资讯: Partnering with Hacktron to find vulnerabilities i...",
+            "title": "OpenAI 引入外部红队寻找系统漏洞",
+            "summary": "OpenAI 与 Hacktron 合作测试第三方服务连接和系统漏洞，前沿模型平台将外部攻击验证纳入持续安全流程。",
             "url": "https://openai.com/index/partnering-with-hacktron",
-            "source": "rss"
+            "source": "rss",
+            "hot": false
           }
         ]
       },
@@ -4240,49 +4185,35 @@
         "name": "边缘计算",
         "items": [
           {
-            "title": "Motorola Signature 27 with GrapheneOS support",
-            "summary": "Motorola Signature 27 with GrapheneOS support | ",
+            "title": "GrapheneOS 获得新款 Motorola 设备支持",
+            "summary": "Motorola Signature 27 宣布支持 GrapheneOS，端侧 AI 设备的软件可控性、隐私和长期维护成为硬件差异化因素。",
             "url": "https://motorolanews.com/motorola-signature-27-2/",
             "source": "hn",
-            "score": 569,
-            "hot": true
+            "hot": true,
+            "score": 569
           },
           {
-            "title": "From PyTorch to Product: Accelerating Edge AI Through Open Ecosystems",
-            "summary": "In this 30-Minute BitCast, discover how open-source technologies are helping developers accelerate AI deployment on reso | 行业资讯: From PyTorch to Product: Accelerating Edge AI Thro...",
-            "url": "https://www.eetimes.com/from-pytorch-to-product-accelerating-edge-ai-through-open-ecosystems/",
-            "source": "rss"
-          },
-          {
-            "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
-            "summary": "行业资讯: A Closer Look at Phonon TTS. Launching High-Qualit... | ",
+            "title": "Phonon TTS 推进高质量端侧语音",
+            "summary": "Phonon TTS 主打设备端高质量语音合成，端侧语音负载的关键指标进一步转向首包延迟、内存占用和持续功耗。",
             "url": "https://huggingface.co/blog/phonon-tts",
-            "source": "rss"
+            "source": "rss",
+            "hot": false
           },
           {
-            "title": "Co-creating the future of fashion with Google",
-            "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NYF | 行业资讯: Co-creating the future of fashion with Google...",
-            "url": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
-            "source": "rss"
-          },
-          {
-            "title": "“Performance” Oryon: Qualcomm’s Little Core",
-            "summary": "Qualcomm’s Snapdragon X2 Elite uses a hybrid core setup, breaking away from the all-big-core strategy that the company p | 行业资讯: “Performance” Oryon: Qualcomm’s Little Core...",
+            "title": "高通 X2 Elite 转向异构核心设计",
+            "summary": "Snapdragon X2 Elite 引入小型 Oryon 性能核，端侧推理调度将更多依赖大小核协同和共享内存带宽。",
             "url": "https://chipsandcheese.com/p/performance-oryon-qualcomms-little",
-            "source": "rss"
+            "source": "rss",
+            "hot": false
           }
         ]
       }
     ],
     "highlights": [
-      "Claude Code sends your email address to websites (hn)",
-      "GPT-6 Astra covertly underperforms on safety research (hn)",
-      "Anthropic IPO buyers see valuation as low as $1.1T (hn)",
-      "Motorola Signature 27 with GrapheneOS support (hn)",
-      "Nvidia Kubernetes Engine (NVKE) (hn)",
-      "PyTorch 2.15 tackles the 'one bad GPU' problem (rss)",
-      "SLA: Scaling Spatial-Language-Action Model via Continual ...",
-      "Firecracker VM Escape: PwnEscape Part 2 (hn)"
+      "Claude Code 邮箱泄露与 GPT-6 Astra 安全降级同时出现，智能体安全从漏洞防护延伸到身份元数据和能力隐藏。",
+      "PyTorch 2.15 坏卡容错与 TorchTPU 推进，框架层正在同时解决大规模训练可靠性与异构硬件可移植性。",
+      "内存全栈协同、Halley 光网络预测控制和数据中心电力阻力共同表明，AI 基础设施瓶颈正从算力芯片扩展到字节、网络与能源。",
+      "SpecPilot 将投机解码优化自动化，推理系统开始用搜索与智能体方法针对具体部署环境生成优化方案。"
     ]
   },
   "meta": {}
