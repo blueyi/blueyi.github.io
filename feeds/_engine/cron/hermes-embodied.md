@@ -1,7 +1,7 @@
 # Hermes cron 重建参数 — 具身智能每周资讯
 
 - **name**: `feeds-embodied-weekly`
-- **schedule**: `0 22 * * 0`  （每周日 22:00；时区取实例本地）
+- **schedule**: `0 20 * * 6`  （每周六 20:00；时区取实例本地，本机为 Asia/Hong_Kong）
 - **workdir**: 仓库根目录
 - **enabled_toolsets**: `["terminal","file"]`
 - **deliver**: `weixin,discord`

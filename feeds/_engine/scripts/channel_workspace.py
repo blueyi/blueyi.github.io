@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-"""Run one feed prefetch in its channel-specific persistent worktree."""
+"""Run feed prefetch in an isolated channel worktree and emit bounded context."""
 import argparse
 import datetime
 import fcntl
-import os
-import shutil
+import json
 import subprocess
 import sys
-import tempfile
 from pathlib import Path
 
 REPO = Path("/data/workspace/repos/blueyi.github.io")
@@ -22,15 +20,6 @@ def run(args, cwd, check=True):
     return p
 
 
-def channel_worktree(channel):
-    BASE.mkdir(parents=True, exist_ok=True)
-    path = BASE / channel
-    if not path.exists():
-        run(["git", "fetch", "origin", "master"], REPO)
-        run(["git", "worktree", "add", "--detach", str(path), "origin/master"], REPO)
-    return path
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--channel", required=True, choices=["ai-infra", "embodied-ai"])
@@ -40,27 +29,35 @@ def main():
     with lock_path.open("w") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         try:
-            worktree = channel_worktree(args.channel)
-            # Rebase this channel's private checkout onto the latest published state.
-            run(["git", "fetch", "origin", "master"], worktree)
-            run(["git", "rebase", "origin/master"], worktree)
-            publish_script = worktree / "feeds/_engine/scripts/publish_week.py"
-            shutil.copy2(Path.home() / ".hermes/scripts/feeds_publish_week.py", publish_script)
+            worktree = BASE / args.channel
+            if not worktree.exists():
+                BASE.mkdir(parents=True, exist_ok=True)
+                run(["git", "fetch", "origin", "master"], REPO)
+                run(["git", "worktree", "add", "--detach", str(worktree), "origin/master"], REPO)
+            status = run(["git", "status", "--porcelain"], worktree).stdout.strip()
+            if not status:
+                run(["git", "fetch", "origin", "master"], worktree)
+                run(["git", "merge", "--ff-only", "origin/master"], worktree)
             cmd = [sys.executable, str(worktree / "feeds/_engine/scripts/prefetch.py"), "--channel", args.channel]
             p = subprocess.run(cmd, cwd=worktree, text=True, capture_output=True)
-            sys.stdout.write(p.stdout)
             if p.returncode:
                 sys.stderr.write(p.stderr)
+                print(json.dumps({"STATUS": "prefetch_failed", "channel": args.channel,
+                                  "error": p.stderr.strip()}, ensure_ascii=False), file=sys.stderr)
                 return p.returncode
-            # Emit deterministic path for the editor/publisher agent.
-            now = datetime.datetime.now().astimezone()
-            year, week, _ = now.isocalendar()
-            data = worktree / "feeds" / args.channel / "data" / f"{year}-W{week:02d}.json"
-            print(f"\nPUBLISH_SOURCE={data}")
-            print(f"PUBLISH_COMMAND=python3 {publish_script} --channel {args.channel} --week {year}-W{week:02d} --data {data}")
+            today = datetime.date.today().isocalendar()
+            source = worktree / "feeds" / args.channel / "data" / f"{today.year}-W{today.week:02d}.json"
+            raw = json.loads(source.read_text(encoding="utf-8"))["raw"]
+            week = raw["week"]
+            print(json.dumps({"STATUS": "prefetched", "channel": args.channel, "week": week,
+                              "counts": raw.get("counts", {}), "errors": raw.get("errors", []),
+                              "data_file": str(source)}, ensure_ascii=False))
+            print(f"PUBLISH_SOURCE={source}")
+            print(f"PUBLISH_COMMAND=python3 {Path.home()}/.hermes/scripts/feeds_publish_week.py --channel {args.channel} --week {week} --data {source}")
             return 0
         except Exception as exc:
-            print(f"[feeds] {exc}", file=sys.stderr)
+            print(json.dumps({"STATUS": "prefetch_failed", "channel": args.channel,
+                              "error": str(exc)}, ensure_ascii=False), file=sys.stderr)
             return 1
 
 

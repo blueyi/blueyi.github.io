@@ -24,7 +24,7 @@ FEEDS_DIR = ENGINE_DIR.parent
 CHANNELS = ["ai-infra", "embodied-ai"]
 
 # 各频道的更新时间（cron 触发时间）—— 用于在总入口页展示，避免用户看到当天未更新以为坏掉了
-# 与 skill/cron 保持一致：AI Infra 周六 06:00 HKT / 具身智能 周日 22:00 HKT
+# 与实际 cron 保持一致：AI Infra 周六 06:00 HKT / 具身智能 周六 20:00 HKT
 CHANNEL_SCHEDULES = {
     "ai-infra": "Updated every Sat 06:00 HKT",
     "embodied-ai": "Updated every Sat 20:00 HKT",
@@ -155,13 +155,15 @@ def list_weeks(channel: str):
     if not data_dir.exists():
         return weeks
     for p in sorted(data_dir.glob("*.json"), reverse=True):
+        if p.stem.endswith("_curated"):
+            continue
         try:
             doc = json.loads(p.read_text(encoding="utf-8"))
         except Exception:
             continue
         week = doc.get("week", p.stem)
-        html_exists = (FEEDS_DIR / channel / "weeks" / f"{week}.html").exists()
-        weeks.append((week, doc, html_exists))
+        published = bool(doc.get("curated")) and (FEEDS_DIR / channel / "weeks" / f"{week}.html").exists()
+        weeks.append((week, doc, published))
     return weeks
 
 

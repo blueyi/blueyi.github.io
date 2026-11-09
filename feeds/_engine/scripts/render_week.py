@@ -28,6 +28,7 @@ from pathlib import Path
 import sys as _sys
 _sys.path.insert(0, str(Path(__file__).resolve().parent))
 from rebuild_index import normalize_title_date, normalize_window, lint_html, HOME_SVG  # noqa: E402
+from validate_week import validate_weekly  # noqa: E402
 
 ENGINE_DIR = Path(__file__).resolve().parent.parent
 FEEDS_DIR = ENGINE_DIR.parent
@@ -141,6 +142,7 @@ def render_industry(ind: dict) -> str:
 def render(channel: str, week: str) -> str:
     data_path = FEEDS_DIR / channel / "data" / f"{week}.json"
     doc = json.loads(data_path.read_text(encoding="utf-8"))
+    validate_weekly(channel, doc)
     cur = doc.get("curated") or {}
     zh, en = CHANNEL_TITLES.get(channel, (channel, channel))
     zh = en  # 站点外壳标题统一英文（正文内容仍中文）

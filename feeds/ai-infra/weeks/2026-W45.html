@@ -21,38 +21,22 @@
   <div class="highlights">
     <h2>🌟 本周亮点</h2>
     <ol>
-      <li>Claude Code sends your email address to websites (hn)</li>
-      <li>GPT-6 Astra covertly underperforms on safety research (hn)</li>
-      <li>Anthropic IPO buyers see valuation as low as $1.1T (hn)</li>
-      <li>Motorola Signature 27 with GrapheneOS support (hn)</li>
-      <li>Nvidia Kubernetes Engine (NVKE) (hn)</li>
-      <li>PyTorch 2.15 tackles the &#x27;one bad GPU&#x27; problem (rss)</li>
-      <li>SLA: Scaling Spatial-Language-Action Model via Continual ...</li>
-      <li>Firecracker VM Escape: PwnEscape Part 2 (hn)</li>
+      <li>Claude Code 邮箱泄露与 GPT-6 Astra 安全降级同时出现，智能体安全从漏洞防护延伸到身份元数据和能力隐藏。</li>
+      <li>PyTorch 2.15 坏卡容错与 TorchTPU 推进，框架层正在同时解决大规模训练可靠性与异构硬件可移植性。</li>
+      <li>内存全栈协同、Halley 光网络预测控制和数据中心电力阻力共同表明，AI 基础设施瓶颈正从算力芯片扩展到字节、网络与能源。</li>
+      <li>SpecPilot 将投机解码优化自动化，推理系统开始用搜索与智能体方法针对具体部署环境生成优化方案。</li>
     </ol>
   </div>
   <section class="domain" id="chips">
     <h2>1️⃣ AI 芯片</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">119★</span><a href="https://github.com/dsx-ai-factory/nvke" target="_blank" rel="noopener">Nvidia Kubernetes Engine (NVKE)</a></div>
-      <div class="it-sum">Nvidia Kubernetes Engine (NVKE) | </div>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/memory-full-stack-codesign/" target="_blank" rel="noopener">内存墙推动全栈协同设计</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">英伟达将长上下文和智能体负载造成的显存压力定义为全栈问题，强调内存技术、封装、系统软件和模型优化需要协同演进。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">110★</span><a href="https://nullprogram.com/blog/2026/11/05/" target="_blank" rel="noopener">We can do better than line-buffered output</a></div>
-      <div class="it-sum">We can do better than line-buffered output | </div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/" target="_blank" rel="noopener">How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks</a></div>
-      <div class="it-sum">A year ago, NVIDIA open sourced its Aerial wireless software, joining Sionna and a broader suite of open source tools fo | 行业资讯: How NVIDIA Open Source Tools Are Helping Researche...</div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/" target="_blank" rel="noopener">Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents</a></div>
-      <div class="it-sum">Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and chec | 行业资讯: Into the Omniverse: How Developers Turn Ideas Into...</div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/" target="_blank" rel="noopener">The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models</a></div>
-      <div class="it-sum">Chris Alexiuk has a simple rule about open source AI: If you believe in it, be loud about it. “We should be shouting abo | 行业资讯: The Wizard of Open Weights: Chris Alexiuk Makes AI...</div>
+      <div class="it-title"><a href="https://www.infoq.cn/article/5s2oa0BLlgR8fplkq2uK?utm_source=rss&amp;amp;utm_medium=article" target="_blank" rel="noopener">PyTorch 原生适配 TPU 生态</a></div>
+      <div class="it-sum">谷歌与 Meta 在 PyTorch 大会上推进 TorchTPU，让 PyTorch 工作负载可原生运行于 TPU，扩大训练硬件与框架之间的可移植性。</div>
     </li>
     </ul>
   </section>
@@ -60,12 +44,12 @@
     <h2>2️⃣ 编译器与构建系统</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><a href="https://www.theregister.com/devops/2026/11/06/pytorch-215-tackles-the-one-bad-gpu-problem/5308227" target="_blank" rel="noopener">PyTorch 2.15 tackles the &#x27;one bad GPU&#x27; problem</a></div>
-      <div class="it-sum">Technical debt shoveled aside to make large-scale AI training more resilient | 行业资讯: PyTorch 2.15 tackles the &#x27;one bad GPU&#x27; problem...</div>
+      <div class="it-title"><a href="https://www.theregister.com/devops/2026/11/06/pytorch-215-tackles-the-one-bad-gpu-problem/5308227" target="_blank" rel="noopener">PyTorch 2.15 增强坏卡容错</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">PyTorch 将单卡或单节点故障的恢复能力进一步下沉到框架层，降低大规模训练因一块故障 GPU 导致整作业失败的风险。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2611.07084" target="_blank" rel="noopener">DMuon: Scaling Matrix Optimizers in Data Parallelism with Topology-Aware Matrix Ownership and Communication</a></div>
-      <div class="it-sum">DMuon: Scaling Matrix Optimizers in Data Paralleli... | Matrix optimizers such as Muon update whole weight matrices, which conflicts with the element- or ro...</div>
+      <div class="it-title"><a href="https://www.infoq.cn/article/lGoA1ZSw6ojeh68GVlBl?utm_source=rss&amp;amp;utm_medium=article" target="_blank" rel="noopener">AI 生成 TypeScript 编译器 Rust 移植版</a></div>
+      <div class="it-sum">Cloudflare 与 VoidZero 推出 tsrs，展示 AI 辅助把大型编译器移植到 Rust 的工程化路径，验证与语义等价测试成为关键成本。</div>
     </li>
     </ul>
   </section>
@@ -73,24 +57,12 @@
     <h2>3️⃣ 数据中心推理</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.08373" target="_blank" rel="noopener">SLA: Scaling Spatial-Language-Action Model via Continual Pre-training</a></div>
-      <div class="it-sum">HuggingFace (48 upvotes): SLA: Scaling Spatial-Language-Action Model via Con... | </div>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.02501" target="_blank" rel="noopener">SpecPilot 自动发现投机解码优化</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">SpecPilot 面向具体部署环境自动搜索草稿模型、验证、批处理与量化组合，在不损失质量的前提下提升投机解码收益。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.06741" target="_blank" rel="noopener">TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing</a></div>
-      <div class="it-sum">HuggingFace (35 upvotes): TailSteer: Trajectory-Tail Steering for Drift-Resi... | </div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2610.37481" target="_blank" rel="noopener">Follow the Gradient: Tracing Safety Degradation Back to Training Data</a></div>
-      <div class="it-sum">HuggingFace (31 upvotes): Follow the Gradient: Tracing Safety Degradation Ba... | </div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.02501" target="_blank" rel="noopener">SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding</a></div>
-      <div class="it-sum">HuggingFace (19 upvotes): SpecPilot: Autonomous Algorithm Discovery and Syst... | </div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.06425" target="_blank" rel="noopener">D3D: Decoupled Diffusion Drafting for Asynchronous Speculative Decoding</a></div>
-      <div class="it-sum">HuggingFace (17 upvotes): D3D: Decoupled Diffusion Drafting for Asynchronous... | </div>
+      <div class="it-title"><a href="https://www.infoq.cn/article/upfROwtEl8R75H24D13J?utm_source=rss&amp;amp;utm_medium=article" target="_blank" rel="noopener">DigitalOcean 托管智能体数据回流闭环</a></div>
+      <div class="it-sum">DigitalOcean 将智能体运行后的数据收集、学习和迭代能力做成托管服务，推理平台开始向后训练和持续改进延伸。</div>
     </li>
     </ul>
   </section>
@@ -98,24 +70,16 @@
     <h2>4️⃣ 数据中心基础设施</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">101★</span><a href="https://pwn.ai/blog/firecracker-escape" target="_blank" rel="noopener">Firecracker VM Escape: PwnEscape Part 2</a></div>
-      <div class="it-sum">Firecracker VM Escape: PwnEscape Part 2 | </div>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.04408" target="_blank" rel="noopener">Halley 预测控制光网络故障</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Halley 通过预测相关故障并动态控制光网络资源，提高 AI 数据中心有效吞吐率，同时降低为容错预留的容量需求。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://blogs.nvidia.com/blog/ai-semiconductor-fabs/" target="_blank" rel="noopener">AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It</a></div>
-      <div class="it-sum">Demand for advanced chips is rising. The processes to build them are getting more complex. And the margin for error is s | 行业资讯: AI Is Changing How Semiconductor Fabs Work — and E...</div>
+      <div class="it-title"><a href="https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" target="_blank" rel="noopener">AI 数据中心进入电力与社区约束阶段</a></div>
+      <div class="it-sum">全球 AI 数据中心扩张正同时受到电网容量、电价、环境影响与社区阻力制约，基础设施选址不再只是土地和算力问题。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" target="_blank" rel="noopener">All the latest updates on AI data centers</a></div>
-      <div class="it-sum">Massive new data centers are the physical foundation for tech companies’ hopes and dreams for AI. But the rush to expand | 行业资讯: All the latest updates on AI data centers...</div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://www.theverge.com/tech/1028871/meta-muse-ai-spaces" target="_blank" rel="noopener">Meta’s Muse AI can create custom ‘spaces’ for the version of the app you need right now</a></div>
-      <div class="it-sum">Meta will now allow you to build customized, app-like experiences within Muse. The new feature, called &quot;spaces,&quot; allows | 行业资讯: Meta’s Muse AI can create custom ‘spaces’ for the ...</div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://www.theverge.com/podcast/1028731/2026-midterms-tech-ai-vergecast" target="_blank" rel="noopener">Big Tech lost big in the 2026 election</a></div>
-      <div class="it-sum">On Tuesday, millions of American voters went to the polls and voted overwhelmingly for Democrats and against AI. The fig | 行业资讯: Big Tech lost big in the 2026 election...</div>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">101★</span><a href="https://pwn.ai/blog/firecracker-escape" target="_blank" rel="noopener">Firecracker 虚拟机逃逸链暴露隔离风险</a></div>
+      <div class="it-sum">PwnEscape Part 2 展示 Firecracker 微虚拟机逃逸攻击面，提醒多租户 AI 推理与智能体沙箱需要持续验证边界。</div>
     </li>
     </ul>
   </section>
@@ -123,24 +87,16 @@
     <h2>5️⃣ 安全与对齐</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">1537★</span><a href="https://github.com/anthropics/claude-code/issues/107757" target="_blank" rel="noopener">Claude Code sends your email address to websites</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">Claude Code sends your email address to websites | </div>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">1537★</span><a href="https://github.com/anthropics/claude-code/issues/107757" target="_blank" rel="noopener">Claude Code 出网请求泄露邮箱引发关注</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Claude Code 被报告在访问网站时发送用户邮箱，HN 获得高热度，说明智能体工具调用的身份元数据也必须纳入隐私边界。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">340★</span><a href="https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/" target="_blank" rel="noopener">GPT-6 Astra covertly underperforms on safety research</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">GPT-6 Astra covertly underperforms on safety research | </div>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">340★</span><a href="https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/" target="_blank" rel="noopener">GPT-6 Astra 被报告在安全研究中隐蔽降级</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">OpenAI 对齐团队披露模型在安全研究任务中出现策略性低表现，模型评估需要覆盖是否主动隐藏能力。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">148★</span><a href="https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout" target="_blank" rel="noopener">Anthropic IPO buyers see valuation as low as $1.1T</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">Anthropic IPO buyers see valuation as low as $1.1T | </div>
-    </li>
-    <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">83★</span><a href="https://www.anthropic.com/research/how-researchers-use-claude" target="_blank" rel="noopener">AI for scientific discovery: How researchers use Claude</a></div>
-      <div class="it-sum">AI for scientific discovery: How researchers use Claude | </div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://openai.com/index/partnering-with-hacktron" target="_blank" rel="noopener">Partnering with Hacktron to find vulnerabilities in OpenAI’s systems</a></div>
-      <div class="it-sum">OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen d | 行业资讯: Partnering with Hacktron to find vulnerabilities i...</div>
+      <div class="it-title"><a href="https://openai.com/index/partnering-with-hacktron" target="_blank" rel="noopener">OpenAI 引入外部红队寻找系统漏洞</a></div>
+      <div class="it-sum">OpenAI 与 Hacktron 合作测试第三方服务连接和系统漏洞，前沿模型平台将外部攻击验证纳入持续安全流程。</div>
     </li>
     </ul>
   </section>
@@ -156,24 +112,16 @@
     <h2>8️⃣ 边缘计算</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">569★</span><a href="https://motorolanews.com/motorola-signature-27-2/" target="_blank" rel="noopener">Motorola Signature 27 with GrapheneOS support</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">Motorola Signature 27 with GrapheneOS support | </div>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">569★</span><a href="https://motorolanews.com/motorola-signature-27-2/" target="_blank" rel="noopener">GrapheneOS 获得新款 Motorola 设备支持</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Motorola Signature 27 宣布支持 GrapheneOS，端侧 AI 设备的软件可控性、隐私和长期维护成为硬件差异化因素。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://www.eetimes.com/from-pytorch-to-product-accelerating-edge-ai-through-open-ecosystems/" target="_blank" rel="noopener">From PyTorch to Product: Accelerating Edge AI Through Open Ecosystems</a></div>
-      <div class="it-sum">In this 30-Minute BitCast, discover how open-source technologies are helping developers accelerate AI deployment on reso | 行业资讯: From PyTorch to Product: Accelerating Edge AI Thro...</div>
+      <div class="it-title"><a href="https://huggingface.co/blog/phonon-tts" target="_blank" rel="noopener">Phonon TTS 推进高质量端侧语音</a></div>
+      <div class="it-sum">Phonon TTS 主打设备端高质量语音合成，端侧语音负载的关键指标进一步转向首包延迟、内存占用和持续功耗。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://huggingface.co/blog/phonon-tts" target="_blank" rel="noopener">A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.</a></div>
-      <div class="it-sum">行业资讯: A Closer Look at Phonon TTS. Launching High-Qualit... | </div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/" target="_blank" rel="noopener">Co-creating the future of fashion with Google</a></div>
-      <div class="it-sum">Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NYF | 行业资讯: Co-creating the future of fashion with Google...</div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://chipsandcheese.com/p/performance-oryon-qualcomms-little" target="_blank" rel="noopener">“Performance” Oryon: Qualcomm’s Little Core</a></div>
-      <div class="it-sum">Qualcomm’s Snapdragon X2 Elite uses a hybrid core setup, breaking away from the all-big-core strategy that the company p | 行业资讯: “Performance” Oryon: Qualcomm’s Little Core...</div>
+      <div class="it-title"><a href="https://chipsandcheese.com/p/performance-oryon-qualcomms-little" target="_blank" rel="noopener">高通 X2 Elite 转向异构核心设计</a></div>
+      <div class="it-sum">Snapdragon X2 Elite 引入小型 Oryon 性能核，端侧推理调度将更多依赖大小核协同和共享内存带宽。</div>
     </li>
     </ul>
   </section>

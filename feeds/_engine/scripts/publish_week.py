@@ -22,14 +22,26 @@ def run(args, cwd, check=True):
     return p
 
 
+def verify_url(url, cwd):
+    for _ in range(18):
+        time.sleep(10)
+        r = run(["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", url], cwd, False)
+        if r.stdout.strip() == "200":
+            return True
+    return False
+
+
 def publish(channel, week, source_data):
     source_data = Path(source_data).resolve()
     doc = json.loads(source_data.read_text(encoding="utf-8"))
     if doc.get("week") != week or doc.get("channel") != channel:
         raise RuntimeError("channel/week mismatch in curated source")
     curated = doc.get("curated") or {}
-    if not curated.get("domains") or not curated.get("highlights"):
+    if not curated.get("domains"):
         raise RuntimeError("curated content is incomplete")
+    sys.path.insert(0, str(REPO / "feeds/_engine/scripts"))
+    from validate_week import validate_weekly
+    validate_weekly(channel, doc, require_grounding=True)
 
     LOCK.parent.mkdir(parents=True, exist_ok=True)
     BASE.mkdir(parents=True, exist_ok=True)
@@ -49,21 +61,33 @@ def publish(channel, week, source_data):
                        "feeds/index.html", "search-index.json"]
             run(["git", "add", "--", *allowed], path)
             staged = run(["git", "diff", "--cached", "--name-only"], path).stdout.splitlines()
+            url = f"https://yulong.wang/feeds/{channel}/weeks/{week}.html"
             if not staged:
-                print(f"[feeds] {channel} {week}: no changes")
-                return 0
+                if verify_url(url, path):
+                    print(json.dumps({"STATUS": "published_noop", "channel": channel, "week": week,
+                                      "commit": run(["git", "rev-parse", "--short", "HEAD"], path).stdout.strip(),
+                                      "url": url, "http_status": 200}, ensure_ascii=False))
+                    return 0
+                raise RuntimeError(f"no changes but deployment is unverified: {url}")
             unexpected = sorted(set(staged) - set(allowed))
             if unexpected:
                 raise RuntimeError(f"unexpected staged paths: {unexpected}")
             run(["git", "commit", "-m", f"feeds({channel}): {week} weekly"], path)
-            run(["git", "push", "origin", "HEAD:master"], path)
-            url = f"https://yulong.wang/feeds/{channel}/weeks/{week}.html"
-            for _ in range(18):
-                time.sleep(10)
-                r = run(["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", url], path, False)
-                if r.stdout.strip() == "200":
-                    print(f"[feeds] published {channel} {week}: {url} HTTP 200")
-                    return 0
+            pushed = None
+            for _attempt in range(3):
+                pushed = run(["git", "push", "origin", "HEAD:master"], path, False)
+                if pushed.returncode == 0:
+                    break
+                run(["git", "fetch", "origin", "master"], path)
+                run(["git", "rebase", "origin/master"], path)
+            else:
+                detail = "git push failed" if pushed is None else (pushed.stderr or pushed.stdout or "git push failed").strip()
+                raise RuntimeError(detail)
+            if verify_url(url, path):
+                print(json.dumps({"STATUS": "published", "channel": channel, "week": week,
+                                  "commit": run(["git", "rev-parse", "--short", "HEAD"], path).stdout.strip(),
+                                  "url": url, "http_status": 200}, ensure_ascii=False))
+                return 0
             raise RuntimeError(f"deployment check timed out: {url}")
         finally:
             run(["git", "worktree", "remove", "--force", str(path)], REPO, False)
@@ -79,7 +103,8 @@ def main():
     try:
         return publish(args.channel, args.week, args.data)
     except Exception as exc:
-        print(f"[feeds] publish failed: {exc}", file=sys.stderr)
+        print(json.dumps({"STATUS": "failed", "channel": args.channel, "week": args.week,
+                          "error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 1
 
 
