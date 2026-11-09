@@ -22,6 +22,41 @@ def test_worker_requires_today_snapshot(monkeypatch):
     else:
         raise AssertionError("worker must fail when today's snapshot is missing")
 
+def test_validate_digest_rejects_operational_status():
+    md = """# Daily
+## 1️⃣ AI 芯片
+- **News**: summary
+## 🌟 今日亮点
+1. **News**: impact
+2. **News 2**: impact
+3. **News 3**: impact
+### 状态报告
+- **PUBLISH**: done
+"""
+    try:
+        publish_daily.validate_digest(md, "2026-11-09")
+    except ValueError as exc:
+        assert "operational status" in str(exc)
+    else:
+        raise AssertionError("operational status must be rejected")
+
+
+def test_validate_digest_requires_three_to_five_highlights():
+    md = """# Daily
+## 1️⃣ AI 芯片
+- **News**: summary
+## 🌟 今日亮点
+1. **News**: impact
+2. **News 2**: impact
+"""
+    try:
+        publish_daily.validate_digest(md, "2026-11-09")
+    except ValueError as exc:
+        assert "expected 3-5" in str(exc)
+    else:
+        raise AssertionError("too few highlights must be rejected")
+
+
 def test_publish_retries_after_remote_fast_forward(monkeypatch, tmp_path):
     calls = []
     outcomes = [1, 0]

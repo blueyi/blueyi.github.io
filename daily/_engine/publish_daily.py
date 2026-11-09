@@ -71,6 +71,17 @@ def clean_markdown(raw):
     return "\n".join(lines[start:end]).strip() + "\n"
 
 
+def validate_digest(md, date):
+    doc = render_daily.parse(md)
+    highlights = doc["highlights"]
+    if not 3 <= len(highlights) <= 5:
+        raise ValueError(f"{date}: expected 3-5 numbered news highlights, got {len(highlights)}")
+    if re.search(r"(?im)^#{1,6}\s*(?:状态报告|PREFETCH|CURATION|PUBLISH|DEPLOY|DELIVERY)", md):
+        raise ValueError(f"{date}: operational status must not appear in digest content")
+    if re.search(r"(?im)^[-*]\s*\*\*(?:PREFETCH|CURATION|PUBLISH|DEPLOY|DELIVERY)", md):
+        raise ValueError(f"{date}: operational status bullet must not appear in digest content")
+
+
 def publish_commit(latest, changed_dates):
     run(["git", "add", "--", "daily/", "search-index.json"], REPO_DIR, check=True)
     if run(["git", "diff", "--cached", "--quiet"], REPO_DIR).returncode == 0:
@@ -100,12 +111,13 @@ def worker_main():
         raise RuntimeError(f"no daily news snapshot for {today}")
     changed_dates = []
     for date, snap_path in snapshots_by_date().items():
-        clean = clean_markdown(Path(snap_path).read_text(encoding="utf-8"))
+        md = clean_markdown(Path(snap_path).read_text(encoding="utf-8"))
+        validate_digest(md, date)
         target = DATA_DIR / f"{date}.md"
-        if target.exists() and target.read_text(encoding="utf-8") == clean:
+        if target.exists() and target.read_text(encoding="utf-8") == md:
             continue
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(clean, encoding="utf-8")
+        target.write_text(md, encoding="utf-8")
         (DAILY_DIR / f"{date}.html").write_text(render_daily.render(date), encoding="utf-8")
         changed_dates.append(date)
 

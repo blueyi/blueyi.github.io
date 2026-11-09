@@ -129,11 +129,13 @@ def parse(md: str) -> dict:
                 cur = {"emoji": emoji, "name": rest, "items": []}
                 domains.append(cur)
             continue
+        if ls.startswith("#") or ls == "---":
+            in_highlights = False
+            cur = None
+            continue
         if in_highlights:
             if re.match(r'^\d+[\.、)]', ls):
                 highlights.append(_parse_highlight(ls))
-            elif ls.startswith("- "):
-                highlights.append(_parse_item(ls[2:]))
             continue
         if cur is not None and ls.startswith("- "):
             cur["items"].append(_parse_item(ls[2:]))
