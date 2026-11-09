@@ -2128,22 +2128,127 @@
     ],
     "industry": {
       "stocks": [
-        {"name": "特斯拉(Optimus)", "sym": "TSLA", "price": 382.7, "pct": 1.05, "currency": "USD", "note": ""},
-        {"name": "直觉外科(手术机器人)", "sym": "ISRG", "price": 423.96, "pct": 4.3, "currency": "USD", "note": ""},
-        {"name": "Symbotic(仓储机器人)", "sym": "SYM", "price": 42.63, "pct": -0.56, "currency": "USD", "note": ""},
-        {"name": "Serve Robotics(配送)", "sym": "SERV", "price": 4.35, "pct": -10.86, "currency": "USD", "note": ""},
-        {"name": "UiPath(自动化)", "sym": "PATH", "price": 13.48, "pct": 2.43, "currency": "USD", "note": ""},
-        {"name": "英伟达(机器人算力)", "sym": "NVDA", "price": 229.28, "pct": -4.03, "currency": "USD", "note": ""},
-        {"name": "京东(物流机器人)", "sym": "9618.HK", "price": 105.6, "pct": 3.12, "currency": "HKD", "note": ""}
+        {
+          "name": "特斯拉(Optimus)",
+          "sym": "TSLA",
+          "price": 382.7,
+          "pct": 1.05,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "直觉外科(手术机器人)",
+          "sym": "ISRG",
+          "price": 423.96,
+          "pct": 4.3,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Symbotic(仓储机器人)",
+          "sym": "SYM",
+          "price": 42.63,
+          "pct": -0.56,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Serve Robotics(配送)",
+          "sym": "SERV",
+          "price": 4.35,
+          "pct": -10.86,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "UiPath(自动化)",
+          "sym": "PATH",
+          "price": 13.48,
+          "pct": 2.43,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "英伟达(机器人算力)",
+          "sym": "NVDA",
+          "price": 229.28,
+          "pct": -4.03,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "京东(物流机器人)",
+          "sym": "9618.HK",
+          "price": 105.6,
+          "pct": 3.12,
+          "currency": "HKD",
+          "note": ""
+        }
       ],
       "cn_stocks": [
-        {"name": "宇树科技", "sym": "1.688836", "market": "A股", "price": 432.0, "pct": 0.98, "currency": "CNY", "note": ""},
-        {"name": "优必选", "sym": "116.09880", "market": "港股", "price": 71.75, "pct": 3.68, "currency": "HKD", "note": ""},
-        {"name": "地平线机器人", "sym": "116.09660", "market": "港股", "price": 4.12, "pct": 4.18, "currency": "HKD", "note": ""},
-        {"name": "汇川技术", "sym": "0.300124", "market": "A股", "price": 50.59, "pct": 1.48, "currency": "CNY", "note": ""},
-        {"name": "埃斯顿", "sym": "0.002747", "market": "A股", "price": 27.04, "pct": 0.67, "currency": "CNY", "note": ""},
-        {"name": "绿的谐波", "sym": "1.688017", "market": "A股", "price": 263.76, "pct": 3.08, "currency": "CNY", "note": ""},
-        {"name": "科大讯飞", "sym": "0.002230", "market": "A股", "price": 37.4, "pct": 1.38, "currency": "CNY", "note": ""}
+        {
+          "name": "宇树科技",
+          "sym": "1.688836",
+          "market": "A股",
+          "price": 432.0,
+          "pct": 0.98,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "优必选",
+          "sym": "116.09880",
+          "market": "港股",
+          "price": 71.75,
+          "pct": 3.68,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "地平线机器人",
+          "sym": "116.09660",
+          "market": "港股",
+          "price": 4.12,
+          "pct": 4.18,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "汇川技术",
+          "sym": "0.300124",
+          "market": "A股",
+          "price": 50.59,
+          "pct": 1.48,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "埃斯顿",
+          "sym": "0.002747",
+          "market": "A股",
+          "price": 27.04,
+          "pct": 0.67,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "绿的谐波",
+          "sym": "1.688017",
+          "market": "A股",
+          "price": 263.76,
+          "pct": 3.08,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "科大讯飞",
+          "sym": "0.002230",
+          "market": "A股",
+          "price": 37.4,
+          "pct": 1.38,
+          "currency": "CNY",
+          "note": ""
+        }
       ],
       "funding": [
         {
@@ -2151,18 +2256,6 @@
           "summary": "机器人数据初创公司 Mecka AI 获得 6000 万美元融资，聚焦采集和分析人类运动数据以训练人形机器人；具体交易条款以公司官方渠道核验。",
           "url": "https://techcrunch.com/2026/10/07/robot-data-startup-mecka-ai-nabs-60m-from-sequoia/",
           "amount": "$60M"
-        },
-        {
-          "title": "Odyssey launches world model to control robots, humanoids, vehicles and drones",
-          "summary": "Odyssey 发布面向机器人、人形机器人、车辆和无人机的世界模型产品，属于产业产品动态，能力与部署细节需以官方渠道核验。",
-          "url": "https://roboticsandautomationnews.com/2026/10/08/odyssey-launches-world-model-to-control-robots-humanoids-vehicles-and-drones/105756/",
-          "amount": null
-        },
-        {
-          "title": "Galaxy Corporation stages 16-robot K-pop performance in New York",
-          "summary": "Galaxy Corporation 在纽约展示 16 台人形机器人同步表演，属于多机协同部署动态，具体产品信息需以官方渠道核验。",
-          "url": "https://roboticsandautomationnews.com/2026/10/08/galaxy-corporation-stages-16-robot-k-pop-performance-in-new-york/105765/",
-          "amount": null
         }
       ]
     }

@@ -55,6 +55,8 @@ def validate_weekly(channel, doc, require_grounding=False):
             parsed = urlparse(url)
             if not title or not summary:
                 raise ValueError(f"title and summary are required in {domain.get('id')}")
+            if re.search(r"(?is)<(?:meta|script|style|html|body)\b|<!--", summary):
+                raise ValueError(f"summary contains scraped HTML in {domain.get('id')}")
             if parsed.scheme not in ("http", "https") or not parsed.netloc:
                 raise ValueError(f"invalid article URL in {domain.get('id')}: {url!r}")
             if url in seen_urls:

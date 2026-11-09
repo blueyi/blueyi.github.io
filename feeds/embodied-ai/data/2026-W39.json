@@ -1916,27 +1916,121 @@
     ],
     "industry": {
       "stocks": [
-        {"name": "特斯拉(Optimus)", "sym": "TSLA", "price": 372.11, "pct": -0.85, "currency": "USD", "note": ""},
-        {"name": "直觉外科(手术机器人)", "sym": "ISRG", "price": 405.18, "pct": 0.88, "currency": "USD", "note": ""},
-        {"name": "Symbotic(仓储机器人)", "sym": "SYM", "price": 43.47, "pct": -1.11, "currency": "USD", "note": ""},
-        {"name": "Serve Robotics(配送)", "sym": "SERV", "price": 4.45, "pct": 0.23, "currency": "USD", "note": ""},
-        {"name": "英伟达(机器人算力)", "sym": "NVDA", "price": 225.07, "pct": -1.02, "currency": "USD", "note": ""},
-        {"name": "京东(物流机器人)", "sym": "9618.HK", "price": 103.7, "pct": -1.61, "currency": "HKD", "note": ""}
+        {
+          "name": "特斯拉(Optimus)",
+          "sym": "TSLA",
+          "price": 372.11,
+          "pct": -0.85,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "直觉外科(手术机器人)",
+          "sym": "ISRG",
+          "price": 405.18,
+          "pct": 0.88,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Symbotic(仓储机器人)",
+          "sym": "SYM",
+          "price": 43.47,
+          "pct": -1.11,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Serve Robotics(配送)",
+          "sym": "SERV",
+          "price": 4.45,
+          "pct": 0.23,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "英伟达(机器人算力)",
+          "sym": "NVDA",
+          "price": 225.07,
+          "pct": -1.02,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "京东(物流机器人)",
+          "sym": "9618.HK",
+          "price": 103.7,
+          "pct": -1.61,
+          "currency": "HKD",
+          "note": ""
+        }
       ],
       "cn_stocks": [
-        {"name": "宇树科技", "sym": "1.688836", "market": "A股", "price": 488.0, "pct": -0.6, "currency": "CNY", "note": ""},
-        {"name": "优必选", "sym": "116.09880", "market": "港股", "price": 76.7, "pct": -1.92, "currency": "HKD", "note": ""},
-        {"name": "地平线机器人", "sym": "116.09660", "market": "港股", "price": 4.03, "pct": -2.66, "currency": "HKD", "note": ""},
-        {"name": "汇川技术", "sym": "0.300124", "market": "A股", "price": 51.88, "pct": -1.59, "currency": "CNY", "note": ""},
-        {"name": "埃斯顿", "sym": "0.002747", "market": "A股", "price": 29.35, "pct": -0.41, "currency": "CNY", "note": ""},
-        {"name": "绿的谐波", "sym": "1.688017", "market": "A股", "price": 284.34, "pct": -0.89, "currency": "CNY", "note": ""},
-        {"name": "科大讯飞", "sym": "0.002230", "market": "A股", "price": 38.32, "pct": -1.03, "currency": "CNY", "note": ""}
+        {
+          "name": "宇树科技",
+          "sym": "1.688836",
+          "market": "A股",
+          "price": 488.0,
+          "pct": -0.6,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "优必选",
+          "sym": "116.09880",
+          "market": "港股",
+          "price": 76.7,
+          "pct": -1.92,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "地平线机器人",
+          "sym": "116.09660",
+          "market": "港股",
+          "price": 4.03,
+          "pct": -2.66,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "汇川技术",
+          "sym": "0.300124",
+          "market": "A股",
+          "price": 51.88,
+          "pct": -1.59,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "埃斯顿",
+          "sym": "0.002747",
+          "market": "A股",
+          "price": 29.35,
+          "pct": -0.41,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "绿的谐波",
+          "sym": "1.688017",
+          "market": "A股",
+          "price": 284.34,
+          "pct": -0.89,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "科大讯飞",
+          "sym": "0.002230",
+          "market": "A股",
+          "price": 38.32,
+          "pct": -1.03,
+          "currency": "CNY",
+          "note": ""
+        }
       ],
-      "funding": [
-        {"title": "灵巧手公司 Proception 和解 Tesla 商业秘密诉讼并获融资", "summary": "TechCrunch 报道 Proception 宣布 1100 万美元融资，方向是机器人手部训练数据。", "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/", "amount": "$11M"},
-        {"title": "智元机器人向长隆部署超过 300 台机器人", "summary": "雷锋网报道该部署进入真实客流运营场景，部署规模与公司产品动态需以官方渠道核验。", "url": "https://www.leiphone.com/category/robot/23F3DiDtv7Puosqy.html", "amount": null},
-        {"title": "Digit 人形机器人安全性与规模化工作讨论", "summary": "IEEE Spectrum 聚焦人形机器人从演示走向经济可行工作时的安全要求，公司产品动态需以官方渠道核验。", "url": "https://spectrum.ieee.org/humanoid-robot-safety", "amount": null}
-      ]
+      "funding": []
     }
   },
   "meta": {}

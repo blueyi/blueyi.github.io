@@ -1946,80 +1946,304 @@
     ],
     "domains": [
       {
-        "id": "vla", "emoji": "1️⃣", "name": "VLA（视觉-语言-动作模型）",
+        "id": "vla",
+        "emoji": "1️⃣",
+        "name": "VLA（视觉-语言-动作模型）",
         "items": [
-          {"title": "ScaleNav：互联网视频预训练语言导航动作", "summary": "从互联网第一视角视频学习目标导向视觉动力学，再对齐机器人动作；论文报告其在仿真与真机语言条件局部导航中的结果。[端到端VLA]", "url": "https://arxiv.org/abs/2610.25690", "source": "arxiv", "hot": true},
-          {"title": "VLA-Rolling：复用动作尾部降低去噪成本", "summary": "通过自适应去噪预算复用滚动规划中被丢弃的动作尾部，目标是在减少 VLA 推理开销的同时提升控制成功率。[端到端VLA]", "url": "https://arxiv.org/abs/2610.25043", "source": "arxiv", "hot": true},
-          {"title": "Echo：动作与任务状态联合去噪", "summary": "把任务成功/失败状态信号与动作生成耦合，帮助 VLA 在执行中判断何时停止、恢复或重规划，减少额外细粒度标注依赖。[端到端VLA]", "url": "http://arxiv.org/abs/2610.31569v1", "source": "arxiv"}
+          {
+            "title": "ScaleNav：互联网视频预训练语言导航动作",
+            "summary": "从互联网第一视角视频学习目标导向视觉动力学，再对齐机器人动作；论文报告其在仿真与真机语言条件局部导航中的结果。[端到端VLA]",
+            "url": "https://arxiv.org/abs/2610.25690",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "VLA-Rolling：复用动作尾部降低去噪成本",
+            "summary": "通过自适应去噪预算复用滚动规划中被丢弃的动作尾部，目标是在减少 VLA 推理开销的同时提升控制成功率。[端到端VLA]",
+            "url": "https://arxiv.org/abs/2610.25043",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "Echo：动作与任务状态联合去噪",
+            "summary": "把任务成功/失败状态信号与动作生成耦合，帮助 VLA 在执行中判断何时停止、恢复或重规划，减少额外细粒度标注依赖。[端到端VLA]",
+            "url": "http://arxiv.org/abs/2610.31569v1",
+            "source": "arxiv"
+          }
         ]
       },
       {
-        "id": "dexterous", "emoji": "2️⃣", "name": "灵巧手 / 灵巧操作",
+        "id": "dexterous",
+        "emoji": "2️⃣",
+        "name": "灵巧手 / 灵巧操作",
         "items": [
-          {"title": "DONIC：从人类示范学习通用双臂跟踪控制", "summary": "结合多样人类运动数据、示范回收与按手设计的奖励，以 RL 实现无需微调的未见物体双臂跟踪；代码已公开。[控制层·RL]", "url": "https://arxiv.org/abs/2610.29997", "source": "arxiv", "hot": true},
-          {"title": "OpenTac：可定制、可扩展的 3D 触觉生态", "summary": "提出可规模化部署的电阻式触觉皮肤与完整生态，利用可变形覆盖层把切向载荷转成空间压力分布，面向下游控制与学习。[感知层]", "url": "http://arxiv.org/abs/2610.31661v1", "source": "arxiv", "hot": true},
-          {"title": "VecTile：低成本柔性三轴力触觉阵列", "summary": "6 mm 薄的柔性触觉阵列可测三自由度力，补足常见低成本阵列只能测法向力的限制，服务抓取稳定性和接触修正。[感知层]", "url": "http://arxiv.org/abs/2610.31472v1", "source": "arxiv"}
+          {
+            "title": "DONIC：从人类示范学习通用双臂跟踪控制",
+            "summary": "结合多样人类运动数据、示范回收与按手设计的奖励，以 RL 实现无需微调的未见物体双臂跟踪；代码已公开。[控制层·RL]",
+            "url": "https://arxiv.org/abs/2610.29997",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "OpenTac：可定制、可扩展的 3D 触觉生态",
+            "summary": "提出可规模化部署的电阻式触觉皮肤与完整生态，利用可变形覆盖层把切向载荷转成空间压力分布，面向下游控制与学习。[感知层]",
+            "url": "http://arxiv.org/abs/2610.31661v1",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "VecTile：低成本柔性三轴力触觉阵列",
+            "summary": "6 mm 薄的柔性触觉阵列可测三自由度力，补足常见低成本阵列只能测法向力的限制，服务抓取稳定性和接触修正。[感知层]",
+            "url": "http://arxiv.org/abs/2610.31472v1",
+            "source": "arxiv"
+          }
         ]
       },
       {
-        "id": "sim2real", "emoji": "3️⃣", "name": "sim2real / 仿真到真实",
+        "id": "sim2real",
+        "emoji": "3️⃣",
+        "name": "sim2real / 仿真到真实",
         "items": [
-          {"title": "DiffDreamer：世界模型耦合可微仿真的四旋翼控制", "summary": "面向动态门竞速，把世界模型的未来想象与可微仿真耦合，试图分离环境演化和机器人动力学以抑制模型偏差。[控制层·世界模型]", "url": "http://arxiv.org/abs/2610.31617v1", "source": "arxiv", "hot": true},
-          {"title": "LaLa-World：自然语言动作的潜空间世界模型", "summary": "联合仿真、机器人和视频数据，以语言作为动作接口训练潜世界模型，支持高效模型预测控制与策略初始化；代码已公开。[控制层·世界模型]", "url": "https://arxiv.org/abs/2610.27851", "source": "arxiv", "hot": true},
-          {"title": "跨会话室内导航的稀疏拓扑度量图", "summary": "以可通行空间的拓扑连通结构补足易受场景变化影响的局部测量，面向跨会话室内导航的训练免适配引导。[感知层]", "url": "http://arxiv.org/abs/2610.31432v1", "source": "arxiv"}
+          {
+            "title": "DiffDreamer：世界模型耦合可微仿真的四旋翼控制",
+            "summary": "面向动态门竞速，把世界模型的未来想象与可微仿真耦合，试图分离环境演化和机器人动力学以抑制模型偏差。[控制层·世界模型]",
+            "url": "http://arxiv.org/abs/2610.31617v1",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "LaLa-World：自然语言动作的潜空间世界模型",
+            "summary": "联合仿真、机器人和视频数据，以语言作为动作接口训练潜世界模型，支持高效模型预测控制与策略初始化；代码已公开。[控制层·世界模型]",
+            "url": "https://arxiv.org/abs/2610.27851",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "跨会话室内导航的稀疏拓扑度量图",
+            "summary": "以可通行空间的拓扑连通结构补足易受场景变化影响的局部测量，面向跨会话室内导航的训练免适配引导。[感知层]",
+            "url": "http://arxiv.org/abs/2610.31432v1",
+            "source": "arxiv"
+          }
         ]
       },
       {
-        "id": "embodied-model", "emoji": "4️⃣", "name": "具身模型（感知/规划/控制三层 × 动作生成方式）",
+        "id": "embodied-model",
+        "emoji": "4️⃣",
+        "name": "具身模型（感知/规划/控制三层 × 动作生成方式）",
         "items": [
-          {"title": "Ropedia W0：跨本体移动操作世界模型", "summary": "用运动学表征统一人类与机器人经验，扩展跨本体移动操作的世界模型，并在多项基准上报告领先结果；代码已公开。[控制层·世界模型]", "url": "https://arxiv.org/abs/2610.26855", "source": "arxiv", "hot": true},
-          {"title": "S-Agent 2.0：带持久场景记忆的空间推理", "summary": "把持续场景记忆、自然语言解释和 3D 感知工具接入通用编码智能体，增强对空间关系的持续推理；代码已公开。[感知层]", "url": "https://arxiv.org/abs/2610.28354", "source": "arxiv", "hot": true},
-          {"title": "SERA：随执行反馈演化的长视野操作规划", "summary": "在固定低层 VLA 执行器上增加可编辑 harness，维护任务上下文并按执行反馈更新规划，处理具历史依赖的操作任务。[规划层]", "url": "https://arxiv.org/abs/2610.29560", "source": "arxiv"},
-          {"title": "AnyGoal：检验世界模型是否超越专家轨迹", "summary": "提出评估，考察世界模型能否对熟悉状态与动作的未见组合泛化，为面向规划的动力学组合泛化提供更直接的检验。[控制层·世界模型]", "url": "https://arxiv.org/abs/2610.26844", "source": "arxiv"}
+          {
+            "title": "Ropedia W0：跨本体移动操作世界模型",
+            "summary": "用运动学表征统一人类与机器人经验，扩展跨本体移动操作的世界模型，并在多项基准上报告领先结果；代码已公开。[控制层·世界模型]",
+            "url": "https://arxiv.org/abs/2610.26855",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "S-Agent 2.0：带持久场景记忆的空间推理",
+            "summary": "把持续场景记忆、自然语言解释和 3D 感知工具接入通用编码智能体，增强对空间关系的持续推理；代码已公开。[感知层]",
+            "url": "https://arxiv.org/abs/2610.28354",
+            "source": "arxiv",
+            "hot": true
+          },
+          {
+            "title": "SERA：随执行反馈演化的长视野操作规划",
+            "summary": "在固定低层 VLA 执行器上增加可编辑 harness，维护任务上下文并按执行反馈更新规划，处理具历史依赖的操作任务。[规划层]",
+            "url": "https://arxiv.org/abs/2610.29560",
+            "source": "arxiv"
+          },
+          {
+            "title": "AnyGoal：检验世界模型是否超越专家轨迹",
+            "summary": "提出评估，考察世界模型能否对熟悉状态与动作的未见组合泛化，为面向规划的动力学组合泛化提供更直接的检验。[控制层·世界模型]",
+            "url": "https://arxiv.org/abs/2610.26844",
+            "source": "arxiv"
+          }
         ]
       },
-      {"id": "embodied-chip", "emoji": "5️⃣", "name": "具身智能芯片（机器人计算 / 边缘 NPU）", "items": []},
       {
-        "id": "manufacturing", "emoji": "6️⃣", "name": "制造 / 产线",
+        "id": "embodied-chip",
+        "emoji": "5️⃣",
+        "name": "具身智能芯片（机器人计算 / 边缘 NPU）",
+        "items": []
+      },
+      {
+        "id": "manufacturing",
+        "emoji": "6️⃣",
+        "name": "制造 / 产线",
         "items": [
-          {"title": "海康机器人发布“存、拣、运”移动机器人方案", "summary": "报道显示其发布面向箱式存拣与搬运配送的单体智能产品及方案升级，覆盖厂内物流全链路；产品能力以公司官方渠道核验。[控制层]", "url": "https://www.leiphone.com/category/robot/h4vGHMyQ6b8drzy6.html", "source": "rss", "hot": true},
-          {"title": "BrickWright：面向可物理装配积木的智能体工具链", "summary": "为编码智能体配备装配与物理可行性验证工具，针对漂浮、碰撞、断连等失效生成可实际组装的积木结构。[规划层]", "url": "http://arxiv.org/abs/2610.31651v1", "source": "arxiv"},
-          {"title": "LLM2R：将 3D 零件重组建模为序列预测", "summary": "用几何 token 和预训练 decoder-only LLM 在单次前向中预测全部零件姿态，面向更可扩展的 3D 装配。[规划层]", "url": "https://arxiv.org/abs/2610.18604", "source": "arxiv"}
+          {
+            "title": "海康机器人发布“存、拣、运”移动机器人方案",
+            "summary": "报道显示其发布面向箱式存拣与搬运配送的单体智能产品及方案升级，覆盖厂内物流全链路；产品能力以公司官方渠道核验。[控制层]",
+            "url": "https://www.leiphone.com/category/robot/h4vGHMyQ6b8drzy6.html",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "BrickWright：面向可物理装配积木的智能体工具链",
+            "summary": "为编码智能体配备装配与物理可行性验证工具，针对漂浮、碰撞、断连等失效生成可实际组装的积木结构。[规划层]",
+            "url": "http://arxiv.org/abs/2610.31651v1",
+            "source": "arxiv"
+          },
+          {
+            "title": "LLM2R：将 3D 零件重组建模为序列预测",
+            "summary": "用几何 token 和预训练 decoder-only LLM 在单次前向中预测全部零件姿态，面向更可扩展的 3D 装配。[规划层]",
+            "url": "https://arxiv.org/abs/2610.18604",
+            "source": "arxiv"
+          }
         ]
       },
       {
-        "id": "market", "emoji": "7️⃣", "name": "市场 / 产业",
+        "id": "market",
+        "emoji": "7️⃣",
+        "name": "市场 / 产业",
         "items": [
-          {"title": "欧洲 Physical AI 数据工厂计划", "summary": "媒体报道 Generative Bionics 计划建设结合真机训练与数字孪生仿真的人形机器人训练设施，并采用 AMD 计算基础设施；项目细节以公司官方渠道核验。[控制层·世界模型]", "url": "https://roboticsandautomationnews.com/2026/10/23/generative-bionics-to-build-european-physical-ai-data-factory-for-humanoid-robots/106245/", "source": "rss", "hot": true},
-          {"title": "Atlas 新型机器人手瞄准规模化生产", "summary": "IEEE Spectrum 报道 Boston Dynamics 发布重新设计的 Atlas 机器人手，重点从研究硬件转向大规模生产可用性；产品细节以官方渠道核验。[控制层]", "url": "https://spectrum.ieee.org/robust-robot-hand", "source": "rss", "hot": true},
-          {"title": "宇树 H2-X 侧空翻失误引发可靠性讨论", "summary": "中文媒体报道宇树 H2-X 在活动演示中侧空翻失误，反映高动态人形展示与实际可靠性之间仍需分开评估；事件以公司官方渠道核验。[控制层]", "url": "https://www.cnbeta.com.tw/articles/tech/1583674.htm", "source": "rss"}
+          {
+            "title": "欧洲 Physical AI 数据工厂计划",
+            "summary": "媒体报道 Generative Bionics 计划建设结合真机训练与数字孪生仿真的人形机器人训练设施，并采用 AMD 计算基础设施；项目细节以公司官方渠道核验。[控制层·世界模型]",
+            "url": "https://roboticsandautomationnews.com/2026/10/23/generative-bionics-to-build-european-physical-ai-data-factory-for-humanoid-robots/106245/",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "Atlas 新型机器人手瞄准规模化生产",
+            "summary": "IEEE Spectrum 报道 Boston Dynamics 发布重新设计的 Atlas 机器人手，重点从研究硬件转向大规模生产可用性；产品细节以官方渠道核验。[控制层]",
+            "url": "https://spectrum.ieee.org/robust-robot-hand",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "宇树 H2-X 侧空翻失误引发可靠性讨论",
+            "summary": "中文媒体报道宇树 H2-X 在活动演示中侧空翻失误，反映高动态人形展示与实际可靠性之间仍需分开评估；事件以公司官方渠道核验。[控制层]",
+            "url": "https://www.cnbeta.com.tw/articles/tech/1583674.htm",
+            "source": "rss"
+          }
         ]
       }
     ],
     "industry": {
       "stocks": [
-        {"name": "特斯拉(Optimus)", "sym": "TSLA", "price": 372.22, "pct": 1.13, "currency": "USD", "note": ""},
-        {"name": "直觉外科(手术机器人)", "sym": "ISRG", "price": 452.29, "pct": 4.41, "currency": "USD", "note": ""},
-        {"name": "Symbotic(仓储机器人)", "sym": "SYM", "price": 39.28, "pct": 0.69, "currency": "USD", "note": ""},
-        {"name": "Serve Robotics(配送)", "sym": "SERV", "price": 2.78, "pct": -9.74, "currency": "USD", "note": ""},
-        {"name": "UiPath(自动化)", "sym": "PATH", "price": 14.13, "pct": 7.7, "currency": "USD", "note": ""},
-        {"name": "英伟达(机器人算力)", "sym": "NVDA", "price": 210.96, "pct": -2.82, "currency": "USD", "note": ""},
-        {"name": "京东(物流机器人)", "sym": "9618.HK", "price": 100.0, "pct": -5.75, "currency": "HKD", "note": ""}
+        {
+          "name": "特斯拉(Optimus)",
+          "sym": "TSLA",
+          "price": 372.22,
+          "pct": 1.13,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "直觉外科(手术机器人)",
+          "sym": "ISRG",
+          "price": 452.29,
+          "pct": 4.41,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Symbotic(仓储机器人)",
+          "sym": "SYM",
+          "price": 39.28,
+          "pct": 0.69,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Serve Robotics(配送)",
+          "sym": "SERV",
+          "price": 2.78,
+          "pct": -9.74,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "UiPath(自动化)",
+          "sym": "PATH",
+          "price": 14.13,
+          "pct": 7.7,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "英伟达(机器人算力)",
+          "sym": "NVDA",
+          "price": 210.96,
+          "pct": -2.82,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "京东(物流机器人)",
+          "sym": "9618.HK",
+          "price": 100.0,
+          "pct": -5.75,
+          "currency": "HKD",
+          "note": ""
+        }
       ],
       "cn_stocks": [
-        {"name": "宇树科技", "secid": "1.688836", "market": "A股", "price": 624.0, "pct": 20.0, "currency": "CNY", "note": ""},
-        {"name": "优必选", "secid": "116.09880", "market": "港股", "price": 68.2, "pct": 6.73, "currency": "HKD", "note": ""},
-        {"name": "地平线机器人", "secid": "116.09660", "market": "港股", "price": 3.79, "pct": 8.14, "currency": "HKD", "note": ""},
-        {"name": "汇川技术", "secid": "0.300124", "market": "A股", "price": 53.5, "pct": 7.19, "currency": "CNY", "note": ""},
-        {"name": "埃斯顿", "secid": "0.002747", "market": "A股", "price": 29.18, "pct": 9.99, "currency": "CNY", "note": ""},
-        {"name": "绿的谐波", "secid": "1.688017", "market": "A股", "price": 290.0, "pct": 12.05, "currency": "CNY", "note": ""},
-        {"name": "科大讯飞", "secid": "0.002230", "market": "A股", "price": 38.2, "pct": 4.09, "currency": "CNY", "note": ""}
+        {
+          "name": "宇树科技",
+          "secid": "1.688836",
+          "market": "A股",
+          "price": 624.0,
+          "pct": 20.0,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "优必选",
+          "secid": "116.09880",
+          "market": "港股",
+          "price": 68.2,
+          "pct": 6.73,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "地平线机器人",
+          "secid": "116.09660",
+          "market": "港股",
+          "price": 3.79,
+          "pct": 8.14,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "汇川技术",
+          "secid": "0.300124",
+          "market": "A股",
+          "price": 53.5,
+          "pct": 7.19,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "埃斯顿",
+          "secid": "0.002747",
+          "market": "A股",
+          "price": 29.18,
+          "pct": 9.99,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "绿的谐波",
+          "secid": "1.688017",
+          "market": "A股",
+          "price": 290.0,
+          "pct": 12.05,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "科大讯飞",
+          "secid": "0.002230",
+          "market": "A股",
+          "price": 38.2,
+          "pct": 4.09,
+          "currency": "CNY",
+          "note": ""
+        }
       ],
-      "funding": [
-        {"title": "欧洲 Physical AI 数据工厂计划", "summary": "媒体报道 Generative Bionics 计划把真机训练与大规模数字孪生仿真结合；尚非融资披露，具体建设与合作以公司官方渠道核验。", "url": "https://roboticsandautomationnews.com/2026/10/23/generative-bionics-to-build-european-physical-ai-data-factory-for-humanoid-robots/106245/", "amount": null, "region": "欧洲"},
-        {"title": "海康机器人移动机器人新品发布", "summary": "媒体报道其更新覆盖存、拣、运场景的厂内物流方案；尚非融资披露，产品规格与部署进展以公司官方渠道核验。", "url": "https://www.leiphone.com/category/robot/h4vGHMyQ6b8drzy6.html", "amount": null, "region": "中国"},
-        {"title": "Atlas 新型机器人手", "summary": "IEEE Spectrum 报道 Boston Dynamics 发布重新设计的 Atlas 机器人手，定位于可规模化生产；尚非融资披露，产品细节以公司官方渠道核验。", "url": "https://spectrum.ieee.org/robust-robot-hand", "amount": null, "region": "美国"}
-      ]
+      "funding": []
     }
   },
   "meta": {}
