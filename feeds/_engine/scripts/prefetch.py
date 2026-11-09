@@ -179,8 +179,17 @@ def fetch_hn(all_re, per_domain, excl_re, min_score: int, max_items: int = 40) -
 
 def _clean_xml(s: str) -> str:
     s = s.replace("<![CDATA[", "").replace("]]>", "")
-    s = re.sub(r"<[^>]+>", "", s)
-    return html.unescape(re.sub(r"\s+", " ", s).strip())
+    s = re.sub(r"(?is)<!--.*?-->", " ", s)
+    s = re.sub(r"(?is)<meta\\b[^>]*>", " ", s)
+    s = re.sub(r"(?is)<(script|style)\\b[^>]*>.*?</\\1>", " ", s)
+    s = re.sub(r"<[^>]+>", " ", s)
+    return html.unescape(re.sub(r"\\s+", " ", s).strip())
+
+
+def _clean_feed_url(value: str) -> str:
+    value = (value or "").replace("<![CDATA[", "").replace("]]>", "").strip()
+    return html.unescape(value)
+
 
 
 def _arxiv_from_rss(cat: str, per_cat: int) -> list:
@@ -269,9 +278,9 @@ def _parse_feed_items(xml: str, limit: int) -> list:
             continue
         url = ""
         if l and l.group(1).strip():
-            url = l.group(1).strip()
+            url = _clean_feed_url(l.group(1))
         elif href:
-            url = href.group(1).strip()
+            url = _clean_feed_url(href.group(1))
         rows.append({
             "title": _clean_xml(t.group(1)),
             "url": url,
@@ -557,8 +566,8 @@ def main():
     if data_path.exists():
         try:
             existing = json.loads(data_path.read_text(encoding="utf-8"))
-        except Exception:
-            existing = {}
+        except Exception as exc:
+            raise RuntimeError(f"refusing to overwrite malformed existing weekly JSON: {data_path}: {exc}") from exc
     doc = {
         "channel": args.channel,
         "week": week,

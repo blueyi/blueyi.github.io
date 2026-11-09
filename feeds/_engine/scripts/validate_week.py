@@ -32,7 +32,9 @@ def validate_weekly(channel, doc, require_grounding=False):
     highlights = curated.get("highlights")
     if not isinstance(highlights, list) or not 3 <= len(highlights) <= 5:
         raise ValueError("expected 3-5 curated weekly highlights")
-    text = "\n".join(str(h) for h in highlights)
+    if any(not isinstance(item, str) or not item.strip() for item in highlights):
+        raise ValueError("highlights must be non-empty editorial strings")
+    text = "\n".join(highlights)
     if OPERATIONAL.search(text):
         raise ValueError("operational status must not appear in editorial highlights")
 

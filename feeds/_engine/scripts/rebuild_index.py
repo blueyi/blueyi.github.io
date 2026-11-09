@@ -102,15 +102,14 @@ def normalize_title_date(td, week: str = "") -> str:
     return wid or (week or "")
 
 def normalize_window(win, week: str = "") -> str:
-    """统一 window 为 'YYYY-MM-DD ~ YYYY-MM-DD'（周一~周日）。
-    优先按 week 重算；week 不可解析时才退回容忍 dict/字符串输入。
+    """统一实际采集窗口为 'YYYY-MM-DD ~ YYYY-MM-DD'。
+
+    周报由 cron 在周六采集，raw/curated window 可能是滚动七日窗口，
+    与 ISO 周一~周日不同；优先保留真实覆盖窗口，缺失时才按 week 推算。
     """
-    start, end = week_range(week)
-    if start and end:
-        return f'{start:%Y-%m-%d} ~ {end:%Y-%m-%d}'
-    # 降级：沿用旧的容忍逻辑
     if win is None or win == "":
-        return ""
+        start, end = week_range(week)
+        return f'{start:%Y-%m-%d} ~ {end:%Y-%m-%d}' if start and end else ""
     if isinstance(win, dict):
         s, e = win.get("start", ""), win.get("end", "")
         win = f'{s} ~ {e}' if s and e else (s or e or "")
@@ -167,10 +166,20 @@ def list_weeks(channel: str):
     return weeks
 
 
+def _highlight_text(value) -> str:
+    if isinstance(value, str):
+        return value.strip()
+    if isinstance(value, dict):
+        title = str(value.get("title", "")).strip()
+        summary = str(value.get("summary", "")).strip()
+        return (title + ("：" + summary if summary else "")).strip()
+    return ""
+
+
 def week_highlight(doc: dict) -> str:
     cur = doc.get("curated") or {}
     hl = cur.get("highlights") or []
-    return hl[0] if hl else cur.get("window", "")
+    return _highlight_text(hl[0]) if hl else str(cur.get("window", ""))
 
 
 def build_channel_index(channel: str, spec: dict) -> int:

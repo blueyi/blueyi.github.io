@@ -30,10 +30,23 @@ def main():
         fcntl.flock(lock, fcntl.LOCK_EX)
         try:
             worktree = BASE / args.channel
+            registered = run(["git", "worktree", "list", "--porcelain"], REPO).stdout
+            registered_paths = {
+                line[5:] for line in registered.splitlines() if line.startswith("worktree ")
+            }
+            if worktree.exists() and str(worktree) not in registered_paths:
+                raise RuntimeError(f"worktree path exists but is not registered: {worktree}")
+            if str(worktree) in registered_paths and not worktree.exists():
+                run(["git", "worktree", "prune"], REPO)
+                registered = run(["git", "worktree", "list", "--porcelain"], REPO).stdout
+                if str(worktree) in {line[5:] for line in registered.splitlines() if line.startswith("worktree ")}:
+                    raise RuntimeError(f"stale worktree registration could not be pruned: {worktree}")
             if not worktree.exists():
                 BASE.mkdir(parents=True, exist_ok=True)
                 run(["git", "fetch", "origin", "master"], REPO)
                 run(["git", "worktree", "add", "--detach", str(worktree), "origin/master"], REPO)
+            if run(["git", "rev-parse", "--is-inside-work-tree"], worktree).stdout.strip() != "true":
+                raise RuntimeError(f"not a Git worktree: {worktree}")
             status = run(["git", "status", "--porcelain"], worktree).stdout.strip()
             if not status:
                 run(["git", "fetch", "origin", "master"], worktree)

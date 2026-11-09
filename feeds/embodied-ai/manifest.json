@@ -53,7 +53,7 @@
       "html": "weeks/2026-W45.html",
       "data": "data/2026-W45.json",
       "title_date": "2026-W45 · 11-02 ~ 11-08",
-      "window": "2026-11-02 ~ 2026-11-08",
+      "window": "2026-10-31 ~ 2026-11-07",
       "highlight": "SLA 通过持续预训练把冻结 3D 感知表征接入既有 VLA，补强空间理解并保持推理架构不变：[端到端VLA]",
       "published": true
     },
@@ -62,7 +62,7 @@
       "html": "weeks/2026-W44.html",
       "data": "data/2026-W44.json",
       "title_date": "2026-W44 · 10-26 ~ 11-01",
-      "window": "2026-10-26 ~ 2026-11-01",
+      "window": "2026-10-24 ~ 2026-10-31",
       "highlight": "PDRVLA 以轻量物理动力学表征监督未来视觉特征预测，在不进行在线视频生成的前提下增强机器人动作生成：[端到端VLA]",
       "published": true
     },
@@ -71,7 +71,7 @@
       "html": "weeks/2026-W43.html",
       "data": "data/2026-W43.json",
       "title_date": "2026-W43 · 10-19 ~ 10-25",
-      "window": "2026-10-19 ~ 2026-10-25",
+      "window": "2026-10-17 ~ 2026-10-24",
       "highlight": "ScaleNav 用互联网第一视角视频预训练语言条件导航动作，并报告仿真与真机部署结果：[端到端VLA]",
       "published": true
     },
@@ -80,12 +80,8 @@
       "html": "weeks/2026-W42.html",
       "data": "data/2026-W42.json",
       "title_date": "2026-W42 · 10-12 ~ 10-18",
-      "window": "2026-10-12 ~ 2026-10-18",
-      "highlight": {
-        "title": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation",
-        "summary": "We introduce P$^{3}$-WAM, a unified world action model for egocentric dexterous manipulation that learns 3D perception, action-conditioned prediction, and goal-directed planning through three compleme",
-        "url": "http://arxiv.org/abs/2610.22363v1"
-      },
+      "window": "2026-10-10 ~ 2026-10-17",
+      "highlight": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation：We introduce P$^{3}$-WAM, a unified world action model for egocentric dexterous manipulation that learns 3D perception, action-conditioned prediction, and goal-directed planning through three compleme",
       "published": true
     },
     {
@@ -93,7 +89,7 @@
       "html": "weeks/2026-W41.html",
       "data": "data/2026-W41.json",
       "title_date": "2026-W41 · 10-05 ~ 10-11",
-      "window": "2026-10-05 ~ 2026-10-11",
+      "window": "2026-10-03 ~ 2026-10-10",
       "highlight": "VersaCamVLA 与 VioLA 分别从相机配置泛化和人形全身耦合动作切入，推动端到端 VLA 从固定实验设置走向更复杂部署。[端到端VLA]",
       "published": true
     },
@@ -102,7 +98,7 @@
       "html": "weeks/2026-W40.html",
       "data": "data/2026-W40.json",
       "title_date": "2026-W40 · 09-28 ~ 10-04",
-      "window": "2026-09-28 ~ 2026-10-04",
+      "window": "2026-09-26 ~ 2026-10-03",
       "highlight": "世界-动作模型开始从“预测未来”转向“只在训练需要时建模未来”：潜式 WAM 的测试时消融为低延迟 VLA 部署提供了直接依据。[端到端VLA]",
       "published": true
     },
@@ -129,7 +125,7 @@
       "html": "weeks/2026-W37.html",
       "data": "data/2026-W37.json",
       "title_date": "2026-W37 · 09-07 ~ 09-13",
-      "window": "2026-09-07 ~ 2026-09-13",
+      "window": "2026-09-05 ~ 2026-09-12",
       "highlight": "[端到端VLA] 世界-动作模型（WAM）集中发力：OpenWAM 以模块化方式厘清世界-动作预训练关键设计并开源可规模化模型，GE-Act 2.0 从零预训练实现跨本体零样本操作，端到端具身基础模型的范式持续推进。",
       "published": true
     },
@@ -138,7 +134,7 @@
       "html": "weeks/2026-W36.html",
       "data": "data/2026-W36.json",
       "title_date": "2026-W36 · 08-31 ~ 09-06",
-      "window": "2026-08-31 ~ 2026-09-06",
+      "window": "2026-08-30 ~ 2026-09-06",
       "highlight": "Persona AI 专注船厂焊接这一经济可行的人形机器人首个落地场景，IEEE Spectrum 深度报道行业从演示走向真实就业的路径转向。",
       "published": true
     },
@@ -147,7 +143,7 @@
       "html": "weeks/2026-W35.html",
       "data": "data/2026-W35.json",
       "title_date": "2026-W35 · 08-24 ~ 08-30",
-      "window": "2026-08-24 ~ 2026-08-30",
+      "window": "2026-08-23 ~ 2026-08-30",
       "highlight": "跨本体世界模型走热：CLAP 用互联网视频作零样本物理模拟器，Riemann-1.0 以全因果自回归统一视觉、状态与动作。",
       "published": true
     },
@@ -156,7 +152,7 @@
       "html": "weeks/2026-W34.html",
       "data": "data/2026-W34.json",
       "title_date": "2026-W34 · 08-17 ~ 08-23",
-      "window": "2026-08-17 ~ 2026-08-23",
+      "window": "2026-08-16 ~ 2026-08-23",
       "highlight": "DECOWAM 与手术世界—动作建模显示，世界模型正从固定基座扩展到全身移动操作和专业场景。",
       "published": true
     },
@@ -165,7 +161,7 @@
       "html": "weeks/2026-W33.html",
       "data": "data/2026-W33.json",
       "title_date": "2026-W33 · 08-10 ~ 08-16",
-      "window": "2026-08-10 ~ 2026-08-16",
+      "window": "2026-08-09 ~ 2026-08-16",
       "highlight": "VLA 可解释性开始进入运行时监控：π₀.₅ 内部表征可解码任务进度信号。",
       "published": true
     },
@@ -174,7 +170,7 @@
       "html": "weeks/2026-W32.html",
       "data": "data/2026-W32.json",
       "title_date": "2026-W32 · 08-03 ~ 08-09",
-      "window": "2026-08-03 ~ 2026-08-09",
+      "window": "2026-08-02 ~ 2026-08-09",
       "highlight": "ω-0把人形机器人移动、平衡与操作统一到潜在预测式世界动作模型中。",
       "published": true
     },
@@ -183,7 +179,7 @@
       "html": "weeks/2026-W31.html",
       "data": "data/2026-W31.json",
       "title_date": "2026-W31 · 07-27 ~ 08-02",
-      "window": "2026-07-27 ~ 2026-08-02",
+      "window": "2026-07-26 ~ 2026-08-02",
       "highlight": "Google DeepMind 发布 Gemini Robotics 2，并在 Apptronik Apollo 2 上展示全身控制、灵巧操作与多机器人协作",
       "published": true
     },
@@ -192,7 +188,7 @@
       "html": "weeks/2026-W30.html",
       "data": "data/2026-W30.json",
       "title_date": "2026-W30 · 07-20 ~ 07-26",
-      "window": "2026-07-20 ~ 2026-07-26",
+      "window": "2026-07-19 ~ 2026-07-26",
       "highlight": "宇树双热点：新品轮式机器人 As2-W 上线引 HN 热议，CEO 王兴兴携载人机甲 GD01 登《时代》封面",
       "published": true
     },
@@ -201,7 +197,7 @@
       "html": "weeks/2026-W29.html",
       "data": "data/2026-W29.json",
       "title_date": "2026-W29 · 07-13 ~ 07-19",
-      "window": "2026-07-13 ~ 2026-07-19",
+      "window": "2026-07-12 ~ 2026-07-19",
       "highlight": "RoboTTT 将机器人策略的视觉运动上下文扩展到 8K 步（较 SOTA 高三个数量级）且不增推理延迟，解锁单样本上下文内学习。",
       "published": true
     },
