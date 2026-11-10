@@ -113,6 +113,19 @@ def publish_commit(latest, changed_dates):
     return run(["git", "rev-parse", "--short", "HEAD"], REPO_DIR, check=True).stdout.strip()
 
 
+def verify_deployment(latest, attempts=60):
+    url = f"https://yulong.wang/daily/{latest}.html"
+    expected = (DAILY_DIR / f"{latest}.html").read_text(encoding="utf-8")
+    for attempt in range(attempts):
+        result = run(["curl", "--fail", "--silent", "--show-error", "--location",
+                      "--max-time", "20", url], REPO_DIR)
+        if result.returncode == 0 and result.stdout == expected:
+            return True
+        if attempt + 1 < attempts:
+            time.sleep(10)
+    return False
+
+
 def worker_main():
     today = datetime.now().astimezone().strftime("%Y-%m-%d")
     snapshots = snapshots_by_date()
@@ -145,8 +158,10 @@ def worker_main():
         changed_dates.append(date)
 
     if not changed_dates:
-        latest_available = max(snapshots) if snapshots else "none"
-        print(f"[daily] STATUS=no_changes latest_available={latest_available}")
+        latest_available = max(date for date in snapshots if date <= today)
+        if not verify_deployment(latest_available):
+            raise RuntimeError(f"deployment verification failed for {latest_available}; no new Git changes")
+        print(f"[daily] STATUS=no_changes latest_available={latest_available} DEPLOY=verified")
         return 0
 
     rebuild_daily.main()
@@ -154,17 +169,12 @@ def worker_main():
     sha = publish_commit(latest, changed_dates)
 
     url = f"https://yulong.wang/daily/{latest}.html"
-    for _ in range(12):
-        time.sleep(10)
-        result = run(
-            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", url],
-            REPO_DIR,
-        )
-        if result.stdout.strip() == "200":
-            print(json.dumps({"STATUS": "published", "dates": changed_dates, "commit": sha,
-                              "url": url, "http_status": 200}, ensure_ascii=False))
-            return 0
-    print(f"[daily] deployment verification failed for {url}", file=sys.stderr)
+    if verify_deployment(latest):
+        print(json.dumps({"STATUS": "published", "dates": changed_dates, "commit": sha,
+                          "url": url, "http_status": 200, "content_verified": True}, ensure_ascii=False))
+        return 0
+    print(json.dumps({"STATUS": "deployment_unverified", "PUBLISH": "pushed",
+                      "commit": sha, "url": url, "error": "deployed content did not match within verification window"}), file=sys.stderr)
     return 1
 
 

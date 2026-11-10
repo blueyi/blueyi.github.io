@@ -74,6 +74,46 @@ def test_validate_digest_requires_article_summaries_for_new_digest():
         raise AssertionError("missing article summary must be rejected")
 
 
+def test_historical_status_snapshot_does_not_block_today(monkeypatch, tmp_path):
+    class FrozenDateTime:
+        @classmethod
+        def now(cls):
+            from datetime import datetime
+            return datetime(2026, 11, 10, 9, 0)
+
+    old_snapshot = tmp_path / "snapshot_20261109.txt"
+    old_snapshot.write_text("# Old\n## 状态报告\n- **PUBLISH**: done\n", encoding="utf-8")
+    today_snapshot = tmp_path / "snapshot_20261110.txt"
+    today_snapshot.write_text("""# Daily
+## 1️⃣ AI 芯片
+- **News**: summary
+## 🌟 今日亮点
+1. **News**: impact
+2. **News 2**: impact
+3. **News 3**: impact
+""", encoding="utf-8")
+    data_dir = tmp_path / "data"
+    daily_dir = tmp_path / "daily"
+    data_dir.mkdir()
+    daily_dir.mkdir()
+    (data_dir / "2026-11-09.md").write_text("# Published historical digest\n", encoding="utf-8")
+    (daily_dir / "2026-11-09.html").write_text("<html>", encoding="utf-8")
+    monkeypatch.setattr(publish_daily, "datetime", FrozenDateTime)
+    monkeypatch.setattr(publish_daily, "snapshots_by_date", lambda: {
+        "2026-11-09": str(old_snapshot), "2026-11-10": str(today_snapshot)
+    })
+    monkeypatch.setattr(publish_daily, "DATA_DIR", data_dir)
+    monkeypatch.setattr(publish_daily, "DAILY_DIR", daily_dir)
+    monkeypatch.setattr(publish_daily.render_daily, "DATA_DIR", data_dir)
+    monkeypatch.setattr(publish_daily, "rebuild_daily", type("R", (), {"main": staticmethod(lambda: None)}))
+    monkeypatch.setattr(publish_daily, "publish_commit", lambda latest, dates: "testsha")
+    monkeypatch.setattr(publish_daily, "verify_deployment", lambda latest: True)
+    monkeypatch.setattr(publish_daily, "run", lambda *args, **kwargs: subprocess.CompletedProcess([], 0, "200", ""))
+    monkeypatch.setattr(publish_daily.time, "sleep", lambda _: None)
+    assert publish_daily.worker_main() == 0
+    assert (data_dir / "2026-11-09.md").read_text() == "# Published historical digest\n"
+
+
 def test_publish_retries_after_remote_fast_forward(monkeypatch, tmp_path):
     calls = []
     outcomes = [1, 0]
