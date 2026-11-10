@@ -119,11 +119,25 @@ def worker_main():
     if today not in snapshots:
         raise RuntimeError(f"no daily news snapshot for {today}")
     changed_dates = []
-    for date, snap_path in snapshots_by_date().items():
-        md = clean_markdown(Path(snap_path).read_text(encoding="utf-8"))
-        validate_digest(md, date, require_summaries=(date == today))
+    for date, snap_path in snapshots.items():
         target = DATA_DIR / f"{date}.md"
-        if target.exists() and target.read_text(encoding="utf-8") == md:
+        page = DAILY_DIR / f"{date}.html"
+        # Published historical files are authoritative: cron snapshots are an
+        # append-only input archive, not a source of historical corrections.
+        if date < today and target.exists() and page.exists():
+            continue
+        if date > today:
+            continue
+        try:
+            md = clean_markdown(Path(snap_path).read_text(encoding="utf-8"))
+            validate_digest(md, date, require_summaries=(date == today))
+        except ValueError as exc:
+            if date == today:
+                raise
+            print(json.dumps({"STATUS": "backfill_rejected", "date": date,
+                              "snapshot": snap_path, "error": str(exc)}, ensure_ascii=False))
+            continue
+        if target.exists() and target.read_text(encoding="utf-8") == md and page.exists():
             continue
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(md, encoding="utf-8")

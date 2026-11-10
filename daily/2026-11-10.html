@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-11-10</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-11-10</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-11-10 · 周二</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-11-09 ~ 2026-11-10</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-11-10</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>电力成为 AI 扩张的第一约束</b>：Anthropic 以 34 亿美元直接接手 1.7GW 燃气轮机订单，跳过约六年排队；SpaceX 同步在 Starbase 规划 240 亿美元的数据中心与自营电厂。算力扩张的瓶颈已从芯片交付前移到发电与并网。</li>
+      <li><b>Google 把 TPU 拆成“训练档/推理档”</b>：TPU 8i Max 内存带宽翻倍，TPU 8tx 改用 AMD EPYC Turin 作 host 并支持机密计算。自研加速器开始按负载类型细分配置，同时更公开地嵌入 x86 host 生态。</li>
+      <li><b>推理侧的稳定性问题被实证</b>：前缀缓存“突发即崩塌”的更新律在 30/30 次运行中复现零命中，与 ResServe、ReKV、DARIC、BitDecoding-FP4 一起指向同一现实——KV Cache 的搬运、精度与复用策略已是推理系统的核心矛盾而非细节调优。</li>
+      <li><b>VLA 基座进入规模化投入阶段</b>：美团 MR0 用 1.47 亿视觉语言样本与 15,060 小时真机轨迹训练桌面操作模型，Nature Will 则把灵巧手模型推到 50B 参数。具身智能的竞争焦点正从本体硬件转向“数据 + 基座模型”。</li>
+      <li><b>Anthropic 用双轨分级发售同源模型</b>：Fable 5.2 面向公众并内置网安/生物安全防护，Mythos 5.2 仅向审核机构开放；速度 +30%、API 降价 20%。这是把“能力”与“风险等级”解耦的产品化样本，可能成为后续前沿模型发布的默认形态。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blog.google</span><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/" target="_blank" rel="noopener">🔥 Google 重构 TPU 产品线，重心从训练转向推理</a></div>
+      <div class="it-sum">新发布 TPU 8i Max 与 TPU 8tx。TPU 8tx 首次采用 AMD EPYC Turin 作为 host CPU，并支持机密计算；TPU 8i Max 将内存带宽翻倍，面向推理场景中 KV Cache 与长上下文需求。这一变化意味着 Google 在自研加速器上开始像 Nvidia 一样细分“训练档”与“推理档”，并更公开地依赖 x86 host 生态。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/nvidia-veras-system-architecture" target="_blank" rel="noopener">Nvidia Vera 与 Olympus 微架构细节披露</a></div>
+      <div class="it-sum">Chips and Cheese 分析指出，Vera 的系统架构以“推带宽”为核心目标，Olympus 核则试图突破服务器单线程性能瓶颈。对 AI 集群而言，host CPU 的单核性能与内存带宽会直接影响数据加载、算子调度与 GPU 利用率，这是此前较少被讨论的瓶颈来源。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/ai/2026/11/02/qualcomm-has-eyes-on-the-ai-inference-datacenter-with-hbc-and-ai250/5306954" target="_blank" rel="noopener">高通以 HBC 与 AI250 切入推理数据中心</a></div>
+      <div class="it-sum">The Next Platform 认为，高通选择避开训练正面战场，主打近存计算与大容量内存路线，瞄准推理侧的能效比。这意味着 AI 推理芯片的竞争正从“算力峰值”转向“每瓦吞吐 + 内存成本”。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">eetimes.com</span><a href="https://www.eetimes.com/deepx-tapes-out-second-gen-chip-projects-6-7x-performance-gain-with-lpddr5x-pim/" target="_blank" rel="noopener">DeepX 第二代芯片流片，押注 LPDDR5x-PIM</a></div>
+      <div class="it-sum">官方宣称，凭借存内计算架构可获得 6.7 倍性能提升，并能在 5W 功耗内运行大模型；其 DX-M1 还做了“黄油散热”的演示。低功耗 PIM 路线能否成立，取决于软件栈与编译器成熟度，这也是端侧 AI 芯片普遍存在的短板。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08526" target="_blank" rel="noopener">RoadBlock：为自定义 Microscaling 格式建立 GPU Tensor Core 级建模</a></div>
+      <div class="it-sum">现有 MX 格式研究多停留在独立 MAC 单元原型，忽略了真实 Tensor Core 内部的系统集成开销。该开源框架把自定义 MX 格式放进可编程 Tensor Core 做端到端建模，为 FP4/FP6 之后的格式设计提供了可信的评估基准。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infineon.com</span><a href="https://www.infineon.com/press-release/2026/infpr202611-028" target="_blank" rel="noopener">Infineon 推出 300mm 碳化硅晶圆</a></div>
+      <div class="it-sum">作为车规与工业功率器件的基础材料，300mm SiC 有助于摊薄单颗成本。AI 数据中心供电链路（PSU、母线、UPS）对 SiC 的需求正随单机架功率上升而放大。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08660" target="_blank" rel="noopener">AutoParallel：PyTorch 原生的可组合自动并行</a></div>
+      <div class="it-sum">生产训练通常依赖手写的并行 recipe（DP/TP/PP/EP 组合），模型或集群一变就需要重写。AutoParallel 尝试把并行搜索变成可组合的框架能力，这有望让训练系统从“人工调优”转向“编译期决策”。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.09410" target="_blank" rel="noopener">“同步之前无共享”：重新解释 Java 以获得无数据竞争语义</a></div>
+      <div class="it-sum">论文指出，锁只提供时间序，而共享内存仍在每次普通读写中传递更新，因此隔离性并不成立。作者提出一种重新解释方案，使共享数据仅在同步点可见。这是解决并发语义问题，并非单纯的编译器优化，但会对未来并行语言的 IR 设计产生影响。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2601.20370" target="_blank" rel="noopener">抽象解释的程序逻辑化</a></div>
+      <div class="it-sum">该工作把 Hoare 式程序逻辑与抽象解释这两个长期只在直觉上关联的框架，做成形式对应（以 bunch fibrations 与 BI hyperdoctrines 建立等价）。对静态分析与验证工具的统一理论有直接价值。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08503" target="_blank" rel="noopener">pfoqcompiler：递归量子程序的控制编译</a></div>
+      <div class="it-sum">朴素编译会把量子 if 的分支串行化，导致电路深度指数增长；并行化又会带来辅助量子比特指数膨胀。该编译器在两者之间做权衡，属于量子编译领域的基础设施工作。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08902" target="_blank" rel="noopener">🔥 前缀缓存崩塌存在“更新律”</a></div>
+      <div class="it-sum">论文在 2 个引擎、2 个 GPU、2 个模型上做配对测试，200 会话突发后 30 次运行全部以零命中收场，而同样负载的无突发运行正常。它揭示的不是性能退化，而是“在曾经撑得住的负载下突然全面失效”，对 Agent 服务的长尾稳定性是硬约束。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08713" target="_blank" rel="noopener">ResServe：用残差补偿救回 FP4 精度</a></div>
+      <div class="it-sum">块缩放 FP4 能降低推理成本，但在窄矩阵（解码阶段）会掉质量。ResServe 利用解码时富余的硬件容量做低成本精度恢复，思路类似“用空闲算力换取精度”，而不是牺牲吞吐。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08770" target="_blank" rel="noopener">ReKV：量化 KV 传输与后缀重算重叠</a></div>
+      <div class="it-sum">PD 分离后，KV Cache 需要在 worker 之间搬运。ReKV 选择“哪些层传、传什么精度、哪些层在 decode worker 上重算”，把 handoff 从“压缩或重算二选一”变成联合优化问题。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.09109" target="_blank" rel="noopener">DARIC：位置无关 KV 复用的分布感知重算</a></div>
+      <div class="it-sum">长上下文与 Agent/RAG 场景下，跨请求复用 KV 的前提是位置无关性，而重算子集的选择直接决定精度损失。DARIC 依据注意力分布选择重算 token，而不是固定策略。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.09825" target="_blank" rel="noopener">BitDecoding-FP4：NVFP4/MXFP4 KV Cache 的算法-系统协同设计</a></div>
+      <div class="it-sum">现有 FP4 KV 系统用朴素量化导致精度严重下滑，而精度导向方案又太慢。该工作强调算法量化与系统感知加速必须一起设计，否则 FP4 只能停留在纸面收益。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.09008" target="_blank" rel="noopener">ISER-MoE：交换机内热专家动态复制</a></div>
+      <div class="it-sum">专家并行（EP）受最忙 GPU 拖累，少数热专家承担超额负载。ISER 把热专家复制放进交换机内，绕开“从 owner 广播”的瓶颈，为 MoE 负载均衡提供了网络层的新解法。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08720" target="_blank" rel="noopener">“GPU 需要一个操作系统”</a></div>
+      <div class="it-sum">实测两个大开源模型时，数学单元仅忙碌 6–11%，因为每步都要等内存。作者主张用 OS 式调度把紧急工作排程、把空闲容量填给可共享的其它任务，并称已落地特性可回收四分之一个 GPU。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/data-centers/anthropic-skips-six-year-waitlist-with-massive-usd3-4-billion-gas-turbine-generator-deal-firm-takes-over-onepwrs-orders-secures-1-7gw-of-capacity-to-power-ai-data-centers" target="_blank" rel="noopener">🔥 Anthropic 花 34 亿美元拿下 1.7GW 燃气轮机</a></div>
+      <div class="it-sum">它直接接手 OnePWR 的既有 Caterpillar 订单，跳过约六年的设备排队。当电力交付周期成为模型上线的实际限速器，头部实验室开始自建电源而非等待电网，AI capex 的重心正从“买卡”转向“买电”。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1585674.htm" target="_blank" rel="noopener">🔥 SpaceX 计划在德州 Starbase 投资 240 亿美元建数据中心与燃气电厂</a></div>
+      <div class="it-sum">据听证会通知，SpaceX 将自建并自营燃气电厂与超算设施，市政委员会 12 月 9 日审议税收减免与开发协议。这一动向与 Anthropic 相呼应，算力扩张正与能源自给捆绑。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08999" target="_blank" rel="noopener">资本效率、隔离、风险与“毁灭”：生成式推理基础设施的经济学</a></div>
+      <div class="it-sum">论文直言，推理服务是极度资本密集的业务，必须快速提升资本效率，否则行业整体资本成本上升将直接压制扩张计划。其中还包含对“生产现实”中运营上不便言说之处的讨论，属于少见的把工程与经济放在一起看的分析。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/connect/2026/11/03/marvell-cuts-to-the-front-of-the-datacenter-optics-line-with-lumentum-deal/5307392" target="_blank" rel="noopener">Marvell 借 Lumentum 交易抢占数据中心光互连位置</a></div>
+      <div class="it-sum">该收购把 Marvell 推到光器件供应链前端。随着单机架带宽逼近铜缆极限，光电共封装与光交换正从“可选优化”变成集群规模的硬性前提。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/industrynews/ljc6ifIFxCUD6DYG.html" target="_blank" rel="noopener">阿里云获中国专利金奖：超大规模算力调度</a></div>
+      <div class="it-sum">获奖专利“一种用户请求的处理方法和装置”面向需求潮汐，实现按需分配、随需伸缩与多租户安全隔离。这相当于国内云厂商在“高峰期撑得住、低谷期收得回”的调度能力上拿到国家级背书。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-pro-6000-users-cables-almost-melted-even-when-limited-to-500w-12v-2x6-cables-appear-to-still-cause-problems-show-clear-signs-of-melting" target="_blank" rel="noopener">RTX PRO 6000 的 12V-2x6 线缆在 500W 限功耗下仍出现熔痕</a></div>
+      <div class="it-sum">两张工作站 GPU 险遭损坏，所幸在熔到接口前被发现。高功率密度下的连接器可靠性仍是数据中心与工作站部署的隐性风险点。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">nvidianews.nvidia.com</span><a href="https://nvidianews.nvidia.com/news/a-message-to-our-company" target="_blank" rel="noopener">🔥 黄仁勋事件持续升级：董事会调查、国会传唤、集体诉讼同时推进</a></div>
+      <div class="it-sum">Nvidia 董事会已就 CEO 与 Megaspeed 高管 Alice Huang（被指为中方情报资产）的关系启动调查，股价跌超 4%；美国众议院中共特别委员会传唤黄仁勋作证，做空机构 Culper Research 半年前已公开质疑该关系，证券法专家认为公司此前“一切正常”的表态可能代价高昂。Nvidia 发言人确认黄仁勋将继续履职，特朗普亦公开表态支持。对企业治理与出口管制议题而言，这是本周最大的非技术变量。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">anthropic.com</span><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">🔥 Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2，采用双轨安全分级</a></div>
+      <div class="it-sum">两款模型基于同一底座，Fable 面向公众并内置网络安全与生物安全防护，Mythos 仅向通过审核的网安与生命科学机构开放。输出速度较 5.1 快约 30%，API 价格下降 20%，输入定价 8 美元/百万 token。这是“同一能力、按风险分档发售”的一次明确产品化尝试。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/policy/nvidia-cracks-down-on-overseas-cloud-ai-gpu-rentals-for-china-partners-face-51-percent-non-chinese-quota-as-black-market-b300-rack-prices-surge-to-usd2-8-million" target="_blank" rel="noopener">Nvidia 收紧海外云 GPU 对华租赁，非中国客户配额不低于 51%</a></div>
+      <div class="it-sum">据 Tom&#x27;s Hardware，Nvidia 可能把云合作伙伴的中国业务上限定为 49%，同时中国厂商已购入超百万颗游戏与工作站 GPU，黑市 B300 整机价格飙至 280 万美元。这是出口管制从“卖不卖卡”延伸到“云上能不能租”的典型动作。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/CUgMFMX7uRJNMec1pfYo?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">Gartner 2027 十大趋势：智能体治理成为主战场</a></div>
+      <div class="it-sum">InfoQ 中国解读指出，AI 能力增长快于企业管控能力，“AI 越来越聪明、企业却快管不住”正成为普遍状态。治理从合规文档转向运行时约束、权限边界与审计追踪。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/control-room" target="_blank" rel="noopener">OpenAI 上线 Control Room，可跨研究基础设施追踪并急停模型负载</a></div>
+      <div class="it-sum">该中心用于在出现安全或安保顾虑时快速终止工作负载。随着训练与推理任务在多集群间流动，“可观测 + 可熔断”正成为前沿实验室的基础治理能力。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.09422" target="_blank" rel="noopener">用最小 DRAM 流量做网站指纹攻击</a></div>
+      <div class="it-sum">论文显示，同机共置攻击可绕过网络层加密，通过 DRAM 访问模式推断用户访问的网站，且在多核系统上比 loop-counting 更稳健。这是对多租户云与机密计算威胁模型的一次提醒。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08577" target="_blank" rel="noopener">🔥 美团发布 MR0：面向桌面操作的 VLA 基座模型</a></div>
+      <div class="it-sum">MR0 融合 1.47 亿视觉语言样本与 15,060 小时、覆盖 12 种本体的机器人轨迹，采用“离散动作 token 预训练 → 对齐 → 后训练”三阶段配方。它的定位是固定底座上的桌面精细操作，是国内大厂在 VLA 基座上的正面入场。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/09/nature-will-launches-50-billion-parameter-ai-model-for-dexterous-robot-hands/106855/" target="_blank" rel="noopener">🔥 Nature Will 发布 500 亿参数灵巧手模型 Natura-1</a></div>
+      <div class="it-sum">号称基于超 100 万小时数据预训练，支持零样本指令跟随，面向“物理 AGI”。参数规模进入 50B 级别意味着 VLA 开始按大模型的方式堆数据与容量，但真机泛化仍需第三方验证。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/agility-robotics-digit-5-redesign" target="_blank" rel="noopener">Agility 发布 Digit 5，ANYbotics 开始交付 ANYmal X</a></div>
+      <div class="it-sum">Digit 5 定位“首个能安全且经济地规模化做有用工作的人形机器人”；ANYmal X 则针对油气、化工等潜在爆炸环境。两者分别代表“通用人形量产”与“高危场景四足巡检”两条商业化路径。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/" target="_blank" rel="noopener">NVIDIA 与伙伴在 CoRL 展示“仿真里排练精细活”</a></div>
+      <div class="it-sum">仿真重点从走跑跳转向对精度要求更高的操作任务，如对齿轮、插线缆、装小件。从运动控制到精细操作的迁移，是当前 Sim2Real 的主要攻坚方向。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/industrynews/EihvEi3hKb9icG62.html" target="_blank" rel="noopener">云深处发布绝影 X50：50kg 额定负载下兼顾复杂地形</a></div>
+      <div class="it-sum">通过“感控融合”与高刚性关节系统，在不增大机身的前提下把行进负载提到 50kg，面向应急消防与能源电力。重载与通行长期难以两全，这一代重点解决“最后一公里”地形容错。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.crunchbase.com</span><a href="https://news.crunchbase.com/venture/sector-snapshot-2026-construction-robotics-funding-soars-bedrock/" target="_blank" rel="noopener">建筑机器人融资年内达 16 亿美元，超 2025 全年 4 倍</a></div>
+      <div class="it-sum">Crunchbase 数据显示，该赛道由三家公司贡献了大部分资金。建筑业被视作具身智能最容易算清 ROI 的场景之一（结构化环境、重复工序、人力短缺）。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/" target="_blank" rel="noopener">资本继续押注“空间智能”：General Intuition 洽谈 60 亿美元估值，Atoms 融资 17 亿美元</a></div>
+      <div class="it-sum">前者做的是让智能体理解空间与时间的基础模型，后者由 Travis Kalanick 创办、a16z 领投。资金正从“本体公司”向“具身基座 + 数据”层迁移。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08827" target="_blank" rel="noopener">其它值得关注</a></div>
+      <div class="it-sum">ActPrune 用动作相关性裁剪视觉 token，降低 VLA 闭环推理成本；STRIDE 用加速度奖励让人形机器人在数分钟内学会行走；Lodos-v2 改进 GPU 并行刚体仿真的精确摩擦接触求解；IEEE Spectrum 则质疑“数据规模”是否真是机器人落地的唯一瓶颈。ActPrune · STRIDE · Lodos-v2 · IEEE Spectrum</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/industrynews/FO9Dx6HKj5Bvno5y.html" target="_blank" rel="noopener">🔥 百度文心首次披露 RSI 进展：ERNIE Evolve 已投入 5.5 Flash 研发</a></div>
+      <div class="it-sum">该系统能围绕目标与约束自主提出研究方向、做实验、验证结果并积累经验，在 NanoChat AutoResearch 与 NanoGPT Speedrun 的三项指标上取得公开 SOTA。它已被用于昆仑芯 P800 低时延场景优化、确定性推理吞吐与解码速度优化，说明“AI 优化 AI 推理栈”从论文进入产线。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">microsoft.com</span><a href="https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/" target="_blank" rel="noopener">微软 PDD Kit：形式化验证 Agent 写的全栈 Web 应用</a></div>
+      <div class="it-sum">Agent 生成代码的规模已超出人工逐行评审能力，PDD Kit 把开发者意图转成 Verus 规约，再证明生成代码满足规约。这把“AI 写代码”的质量保证从测试覆盖率推进到形式化证明。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.09822" target="_blank" rel="noopener">用 AI 发现形式化可验证的量子程序</a></div>
+      <div class="it-sum">该工作把 LLM 自动化发现循环引入量子算法设计，目标是产出可机器验证的量子程序，而非仅“看起来合理”的电路。量子算法长期依赖专家多年协作，这是把自动发现范式迁移过去的早期尝试。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08947" target="_blank" rel="noopener">Agent-Skill 工作流做并行科学代码翻译</a></div>
+      <div class="it-sum">现有 LLM 方案依赖固定顺序流水线与统一的修复策略，与科学计算“正确性标准各异”的现实不匹配。该框架把翻译、编译诊断、执行验证分离成独立 skill，按失败类型分流修复。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/YPQyY6bqhzhtO8MN6XUb?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">Anthropic 工程师谈 Agent 管理实战</a></div>
+      <div class="it-sum">核心观点是“不想当管理者，就用不好 Coding Agent”。Agent 的产出质量取决于任务拆解、验收标准与上下文供给，本质是管理能力而非提示词技巧。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/11/508694.html" target="_blank" rel="noopener">千问办公 2.0：首个支持多人与 Agent 协作的 Team Agent</a></div>
+      <div class="it-sum">从“个人生产力”转向“组织生产力”，重点解决任务在人与人之间流转时的信息损耗。All in One Agent 的下一步竞争点是协作协议而非单点能力。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank" rel="noopener">🔥 Meta 发布轻量模型 Muse Ember：10 美分/百万输入 token</a></div>
+      <div class="it-sum">第三方评测给出综合智能指数 36 分，与 Claude Haiku 5.5 最高推理档持平，单任务成本约为后者三分之一。轻量模型价格战直接压低 Agent 高频调用的边际成本，也扩大了端侧/边缘侧可承载的任务范围。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.08697" target="_blank" rel="noopener">CPU 微架构如何影响端侧 Agent 延迟</a></div>
+      <div class="it-sum">论文面向希望本地运行 Agent 的小企业与个人用户，研究 CPU 微架构特征与 agentic 任务 CPU 侧延迟的关系。当模型侧优化趋同，host CPU 的缓存层次、分支预测与内存延迟会成为端侧体验的实际决定因素。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.09522" target="_blank" rel="noopener">Atik：RISC-V 上的共享 MAC mesh Transformer 加速器</a></div>
+      <div class="it-sum">开源 RoCC 加速器，用一套定点 MAC mesh 同时执行矩阵乘与稠密注意力，采用流式 online-softmax 调度，避免显式物化注意力矩阵。这是 RISC-V 生态在 Transformer 加速上的完整参考实现。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2606.16190" target="_blank" rel="noopener">Embedded Arena：靠硬件反馈做 MCU 模型的迭代优化</a></div>
+      <div class="it-sum">面向微控制器上的本地推理，需要在内存、功耗、温度的硬约束下同时保住精度。该工作把真实硬件反馈接入优化循环，而非依赖静态成本模型。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/phonon-tts" target="_blank" rel="noopener">Phonon TTS：端侧语音合成刷新基准</a></div>
+      <div class="it-sum">HuggingFace 博客介绍的高质量 on-device TTS，主打在设备端达到榜单领先水平。端侧语音是 Agent 交互链路中延迟最敏感的一环。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnx-software.com</span><a href="https://www.cnx-software.com/2026/11/03/when-will-this-stop-the-raspberry-pi-5-16gb-sbc-now-sells-for-385/" target="_blank" rel="noopener">Raspberry Pi 5 16GB 涨到 385 美元</a></div>
+      <div class="it-sum">HN 讨论将涨价归因于存储与内存成本上行。内存价格波动正在压缩边缘与嵌入式设备的性价比空间，对低成本推理盒子方案是直接冲击。来源</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-11-09.html">← 2026-11-09</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
