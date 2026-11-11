@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-11-11</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-11-11</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-11-11 · 周三</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-11-09 ~ 2026-11-11(部分产业媒体条目回溯至 11-06)</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-11-11</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>通用 CPU 与自研 ASIC 同时&quot;为供数与推理&quot;重设架构</b>：AMD 用 Zen 6 Venice(256 核、5.3 GHz、IPC +20~31%)和 Verano 明确&quot;为加速器供数&quot;的设计目标,Google 则用 TPU 8tx(AMD Turin host + 机密计算)与 8i Max(带宽翻倍)把自研芯片推向推理主力。两侧同日发布,说明机架内的 CPU:加速器配比和内存带宽正被重新定义。</li>
+      <li><b>Anthropic IPO 路演把 AI capex 送进公开市场审视</b>：拟发 8.25 亿股、区间 70~78 美元、估值最高约 1.4 万亿、募资约 640 亿美元,七位联合创始人合计套现约 17.5 亿美元且保留控制权。前沿实验室的融资结构从风投转向二级市场,意味着后续每一轮数据中心与算力承诺都要接受季度财报的检验。</li>
+      <li><b>触觉成为具身智能的下一个&quot;基础模型&quot;模态</b>：蚂蚁灵波开源 LingBot-Touch,基于近 5000 小时真实触觉数据、覆盖三类传感路线,目标是跨硬件跨任务复用。这直接针对 VLA 最薄弱的一环——精细操作的数据无法靠视频规模化,触觉基础模型若成立,操作类任务的泛化成本结构会改变。</li>
+      <li><b>资本在具身领域出现明显分层</b>：Path Robotics 以 3 亿美元 E 轮、24.5 亿美元投后估值聚焦制造业物理 AI,而 SoftBank 54 亿美元收购 ABB 机器人业务被中国否决。一边是高确定性工业场景获得大额后期资金,一边是跨境整合被产业安全审查挡住——具身的规模化路径更可能长在产线上,而不是靠并购拼图。</li>
+      <li><b>&quot;AI 生成代码&quot;开始与&quot;可证明正确&quot;绑定</b>：DeepMind AlphaProof Code 把自动证明推进到代码层,微软 PDD Kit 用 Verus 形式化规格证明 Agent 生成的代码,CodeRabbit 则用治理层把交付量做到 20 倍。三件事指向同一结论:生成速度不再是瓶颈,验证带宽才是,自动生成与自动验证必须成对交付。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/amd-epyc-9006-results-are-here-and-amd-delivers-a-knockout-part-deux/" target="_blank" rel="noopener">AMD EPYC 9006「Venice」正式发布,Zen 6 把服务器 CPU 拉到 256 核</a></div>
+      <div class="it-sum">🔥:Zen 6 架构代号 Venice 的 EPYC 9006 全面登场,最高 256 核、频率上探 5.3 GHz,IPC 提升 20%~31%(不同 SKU 取舍不同)。Tom&#x27;s Hardware 实测双路 EPYC 9996(1024 线程)代际性能提升最高 93%,单路 9686F 在部分项目上压过 NVIDIA Vera;停更三年的 Epyc-X 线回归,Venice-X 面向 EDA/HPC,另有面向 GPU 供数的 Verano 超级芯片首次披露。这意味着通用 CPU 厂商正把&quot;为加速器供数&quot;当成一级设计目标,而不是被动配套。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/google-tpu-8tx-8i-max-amd-epyc-turin/" target="_blank" rel="noopener">Google TPU 8tx / TPU 8i Max:主机侧换 AMD Turin,推理带宽翻倍</a></div>
+      <div class="it-sum">🔥:新一代 TPU 8tx 采用 AMD EPYC Turin 作为 host 并引入机密计算,TPU 8i Max 则把内存带宽直接翻倍,明确瞄准推理负载;The Next Platform 的判断是 Google 正在&quot;重构 TPU 的产品形态以覆盖更宽的 AI 推理场景&quot;,而非只服务训练。对云厂商而言,这是把自研 ASIC 从&quot;训练专用&quot;推向&quot;推理主力&quot;的关键一步,也侧面印证 host CPU 与加速器的配比正在被重新设计。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infineon.com</span><a href="https://www.infineon.com/press-release/2026/infpr202611-028" target="_blank" rel="noopener">Infineon 造出全球首片 300 mm 功率碳化硅(SiC)晶圆</a></div>
+      <div class="it-sum">功率器件从 200 mm 走向 300 mm,单片可产出芯片数量显著上升,直接对应 AI 数据中心供电链(PSU、48V 母线、UPS)的成本与产能瓶颈。AI 机架的瓶颈已从算力芯片蔓延到供电与散热器件,SiC 大尺寸化是这条链上少见的硬进展。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1585852.htm" target="_blank" rel="noopener">传闻:英伟达可能放缓向台积电下单</a></div>
+      <div class="it-sum">台湾《工商时报》援引未具名供应链消息称 NVIDIA 正放缓对台积电的芯片下单节奏,但未指明产品、制程、订单规模与时间表,NVIDIA 与台积电均未回应。单一信源,应视为传闻;若成立,通常对应库存周期与下一代平台切换窗口,而非需求崩塌。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/Y7lTO7Q1M8oN5JhxhirK" target="_blank" rel="noopener">DeepSeek Harness 日活 154 万,官方开始给插件作者发 Token</a></div>
+      <div class="it-sum">Harness 已从&quot;模型配套工具&quot;演化为一个有独立开发者生态的 Agent 运行框架,官方用 Token 补贴换插件供给,是把 Agent 生态的激励层前移到开发者侧。对 Infra 视角的意义在于:Agent 框架的竞争已不只是调度与工具调用能力,而是&quot;谁能把第三方扩展的边际成本压到最低&quot;。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/korea-secure-agentic-ai/" target="_blank" rel="noopener">NVIDIA OpenShell 成为 Agent 安全运行时的事实候选</a></div>
+      <div class="it-sum">现代汽车集团正在验证 NVIDIA NemoClaw blueprint 与 OpenShell 运行时,AIM Intelligence 把 Starfort 平台与 OpenShell 集成以支撑安全的 Agentic AI。OpenShell 提供的是一层沙箱化的执行与隔离语义,属于&quot;Agent 时代的 libc/runtime&quot;位置——它决定上层编排框架能否安全地跑不可信代码。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">microsoft.com</span><a href="https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/" target="_blank" rel="noopener">微软 PDD Kit:把 Agent 生成的代码编译到可证明的规格上</a></div>
+      <div class="it-sum">针对&quot;AI 生成的代码量已超出人类逐行 review 能力&quot;的现实,PDD Kit 把开发者意图转成 Verus 形式化规格,再证明 AI 生成的代码满足规格,已在全栈 Web 应用上验证。这是把编译器/验证器作为 AI 代码生成的&quot;类型系统&quot;,与单纯的测试覆盖是两条不同路线。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/nvidia-dynamo-korea-open-models/" target="_blank" rel="noopener">NVIDIA Dynamo 为韩国四大开源模型出部署配方</a></div>
+      <div class="it-sum">SK Telecom 的 A.X K2、LG AI Research 的 K-EXAONE 2.0、Upstage 的 Solar Open 2、Motif Technologies 的 Motif-3 均获得 Dynamo 优化的部署 recipe。核心矛盾被点得很清楚:模型规模已超出单卡容量,必须做多卡切分与 disaggregated 式调度,Dynamo 的作用是把&quot;切分 + 路由 + KV 管理&quot;从手写脚本变成可复用配置。这对非英语语种开源模型落地生产是最实际的推力。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">docs.modelplane.ai</span><a href="https://docs.modelplane.ai/guides/inference-guide" target="_blank" rel="noopener">《An Open Field Guide to Inference Engineering》引发讨论</a></div>
+      <div class="it-sum">ModelPlane 的这份指南系统梳理了推理工程的完整链路——从 roofline 与算术强度判断瓶颈,到 batch/并发调度、KV cache 布局、prefill-decode 分离、量化与投机解码的收益边界。它之所以在 HN 上被讨论,是因为社区长期缺一份&quot;跨框架、不绑定厂商&quot;的推理工程方法论,而不是又一篇 vLLM 调参技巧。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/11/09/google-rejiggers-tpu-accelerators-for-broader-ai-inference-work/5308534" target="_blank" rel="noopener">推理硬件侧的连带变化</a></div>
+      <div class="it-sum">TPU 8i Max 把带宽翻倍、AMD Venice 为 agentic 负载调优,两者的共同指向是推理场景的&quot;内存墙 + 长上下文 KV&quot;已成主要矛盾(详见 1️⃣)。当带宽而非 FLOPs 成为约束,量化的边际收益会下降、分层 KV 与稀疏注意力类方案的价值上升。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/" target="_blank" rel="noopener">NVIDIA 在 KubeCon 上把 OpenShell 捐给开源,并加码 AI 工厂基础设施</a></div>
+      <div class="it-sum">🔥:官方口径很直接——Kubernetes 已成为&quot;数万张 GPU 规模的 AI 工厂&quot;的运行底座,负载压力只增不减,因此把运行时层开源出去换生态。这是云原生栈向 AI 负载深度改造的又一信号:调度的单位正从 Pod 变成&quot;带拓扑意识的 GPU 工作组&quot;。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/softbank-petros-and-grab-plan-malaysian-data-center-buildout-with-long-term-target-of-5gw/" target="_blank" rel="noopener">SoftBank、Petros、Grab 联合在马来西亚建数据中心,长期目标 5 GW</a></div>
+      <div class="it-sum">首期投入 10 亿美元,长期目标 5 GW 量级。东南亚正在成为新一轮超大规模容量的落点,而 5 GW 这种量级已接近国家级电力规划议题,不再是单个企业的 capex 决策。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/application-filed-for-8bn-data-center-project-in-quanah-texas/" target="_blank" rel="noopener">德州 Quanah 申报 80 亿美元、756 MW 数据中心项目</a></div>
+      <div class="it-sum">Integra 计划在 Childress 附近建设 756 MW 园区。单一项目接近 1 GW 的申报节奏说明&quot;电&quot;而非&quot;地&quot;成为选址第一约束,配套的并网排队与变电站扩建正成为项目能否按期投产的关键路径。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/11/10/datacenter-systems-spending-to-go-through-the-roof-in-2027/5308636" target="_blank" rel="noopener">2027 年数据中心系统支出被预测将&quot;大幅跃升&quot;</a></div>
+      <div class="it-sum">The Next Platform 的判断是系统级(服务器 + 加速器 + 网络 + 存储)支出在 2027 年出现台阶式增长,与 AMD/Google 在同一天发布的新硬件节奏相互印证。同时地方阻力也在累积——米兰出现数千人反对数据中心扩张的抗议,意大利 Lombardy 大区新法面临复审压力,供给侧的&quot;社会许可&quot;成本正在上升。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/" target="_blank" rel="noopener">纽约州 AI 安全法生效,OpenAI、Anthropic 进入强制登记披露期</a></div>
+      <div class="it-sum">🔥:大型模型开发者须注册、披露安全实践、上报严重事件,否则面临罚款。这是美国州层面首部具有实际执法抓手的综合性 AI 安全法,其影响不止合规成本:披露义务会反向塑造模型卡、红队报告与事件响应流程的标准化。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">siliconangle.com</span><a href="https://siliconangle.com/2026/11/10/anthropic-launches-ipo-roadshow-with-64b-fundraising-goal/" target="_blank" rel="noopener">Anthropic 启动 IPO 路演,拟发 8.25 亿股、募资约 640 亿美元</a></div>
+      <div class="it-sum">🔥:发行价区间 70~78 美元,对应估值最高约 1.4 万亿美元(含并行私募placement 的口径最高 885 亿美元);七名联合创始人各出售 337.84 万股,按中值每人套现约 2.5 亿美元、合计约 17.5 亿美元,同时保留控制权。这是 AI 基础设施资本循环的关键节点——前沿实验室从&quot;风投驱动&quot;转入&quot;公开市场定价&quot;,其 capex 承诺将被季度财报持续审视。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/control-room" target="_blank" rel="noopener">OpenAI 建 Control Room:跨研究基础设施追踪并急停模型负载</a></div>
+      <div class="it-sum">该系统的能力是横跨整个研究基础设施追踪模型工作负载,并在出现安全或安保问题时快速停机。这属于&quot;AI 生产系统的 kill switch + 资产台账&quot;,是把失控风险从&quot;事后追责&quot;前移为&quot;实时可中断&quot;的工程化尝试。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">vulncheck.com</span><a href="https://www.vulncheck.com/blog/anthropic-glasswing-november-update" target="_blank" rel="noopener">Glasswing 七个月后回访:漏洞发现量压垮维护者,但价值被质疑</a></div>
+      <div class="it-sum">VulnCheck 的复盘指出 Anthropic 主导的漏洞挖掘行动在七个月内让开源维护者不堪重负,而实际可利用性评估被认为不及预期。这暴露了 AI 驱动安全研究的结构性问题:发现成本趋近于零,但分类、复现、修补的人类带宽没有变化,结果是告警通胀而非安全水位提升。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/policy/microsoft-lobbies-against-potential-ban-on-chinese-optical-networking-gear-for-ai-data-centers-as-fcc-mulls-restricting-imports-industry-group-says-move-could-grind-data-center-rollout-to-a-halt" target="_blank" rel="noopener">微软游说白宫放弃限制中国光模块,并连带模型行为争议</a></div>
+      <div class="it-sum">微软联合行业组织反对 FCC 拟限制进口中国新型光收发器,理由是会造成关键部件短缺、拖慢美国 AI 数据中心建设(Cleanview 数据显示微软在美 35 座数据中心在建、134 座规划中)。同日 Claude Fable 5.2 与 Mythos 5.2 发布(HN 869 分),而社区高热度讨论&quot;Opus 5.5 是否被削弱:11 月 3 日思维模式发生变化&quot;(HN 812 分)——出口管制与模型静默变更,构成治理议题的两端。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/11/508996.html" target="_blank" rel="noopener">蚂蚁灵波开源触觉基础模型 LingBot-Touch</a></div>
+      <div class="it-sum">🔥:基于近 5000 小时真实触觉数据预训练,覆盖磁触觉、视触觉、压阻式三类传感,目标是让&quot;手感&quot;跨硬件、跨模型、跨任务复用,并把路径从&quot;一脑多机&quot;推进到&quot;一脑多手&quot;。触觉长期是 VLA 模态中最缺数据、最缺统一表征的一环,把它做成基础模型意味着操作类任务的泛化不必再逐本体重采数据。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/10/china-blocks-softbanks-5-4-billion-takeover-of-abb-robotics/106941/" target="_blank" rel="noopener">中国否决 SoftBank 以 54 亿美元收购 ABB 机器人业务</a></div>
+      <div class="it-sum">🔥:ABB 于 11 月 10 日确认该交易被阻止,这对 SoftBank 通过并购切入工业机器人与 physical AI 的路线是一次直接挫败。监管否决而非估值分歧,说明机器人资产已被纳入产业安全审查范畴,跨境整合窗口正在收窄。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/10/path-robotics-raises-stunning-300-million-at-2-45-billion-valuation-to-expand-physical-ai-in-manufacturing/106929/" target="_blank" rel="noopener">Path Robotics 完成 3 亿美元 E 轮,投后估值 24.5 亿美元</a></div>
+      <div class="it-sum">🔥:由 Georgian 领投,Addition、Drive Capital 等老股东跟投,资金用于扩张制造业 physical AI。在&quot;具身智能融资集中于通用人形&quot;的叙事之外,这是焊接/装配这类高确定性工业场景拿到大额后期资金的代表案例——收入可验证性明显优于通用人形。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/" target="_blank" rel="noopener">NVIDIA 在 CoRL 展示:仿真从行走转向精细操作</a></div>
+      <div class="it-sum">齿轮对位、线缆插接、微小零件装配等需要&quot;手感&quot;的任务成为仿真训练主战场,合作方公开了让机器人在仿真中反复排练再迁移到真机的方法。Sim2Real 的难点已从动力学保真度转向接触建模与传感噪声建模。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/11/508991.html" target="_blank" rel="noopener">国内具身融资热度延续,Agility 推出 Digit 5</a></div>
+      <div class="it-sum">TensorWorld 物原科技成立四个月、一个月内拿到过亿美元融资,走&quot;物理真实&quot;路线;Agility Robotics 发布 Digit 5,定位首个可安全、经济地规模化做有用工作的人形机器人。同时 IEEE Spectrum 提出尖锐问题——agentic robotics 能否真正解决数据规模化难题,这是当前所有路线共同的技术赌注。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">deepmind.google</span><a href="https://deepmind.google/blog/introducing-alphaproof-code/" target="_blank" rel="noopener">DeepMind 发布 AlphaProof Code,HN 559 分</a></div>
+      <div class="it-sum">🔥:把自动定理证明能力落到代码/形式化层面,意味着&quot;AI 生成的不只是能跑的代码,而是可被证明满足规格的代码&quot;。这与 2️⃣ 的 Verus 路线形成呼应:自动生成 + 自动验证必须成对出现,否则生成速度会把 review 与测试彻底压垮。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/11/508998.html" target="_blank" rel="noopener">openJiuwen 首发 TTSE 经验学习框架,主打 Agent 自演进&quot;双轨&quot;</a></div>
+      <div class="it-sum">核心主张是让每次任务执行沉淀为下一次的经验,而不是每次从零 prompt。这是把&quot;自动调优&quot;的对象从 kernel/编译参数扩展到 agent 自身的策略与工具使用模式,属于 LLM-driven optimization 在编排层的延伸。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/coderabbit-codex-daybreak" target="_blank" rel="noopener">CodeRabbit 用 Codex 把交付量做到 20 倍</a></div>
+      <div class="it-sum">官方案例称其用 OpenAI 模型治理与校验 AI 生成代码,并以 Codex 在同等工程团队规模下把软件交付量提升 20 倍。真正可迁移的经验是&quot;治理层先行&quot;——没有评审与验证基础设施,生成速度的提升只会转化为缺陷率。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/025/213.htm" target="_blank" rel="noopener">技嘉推出 AI TOP AERO 迷你主机:RTX Spark 平台 + 最高 128 GB 统一内存</a></div>
+      <div class="it-sum">🔥:基于 Blackwell 架构 GPU 与统一内存设计,把端侧 AI 开发、内容创作与游戏塞进紧凑机身。统一内存容量是端侧跑大模型的第一约束,128 GB 级别意味着可以在本地驻留此前只能在云端运行的中等规模模型。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/going-deep-on-local-ai-performance-with-apples-mac-studio-with-m5-ultra-inference-engine-recipes-mandatory-for-bigger-models-as-mlx-stack-matures" target="_blank" rel="noopener">Mac Studio M5 Ultra 对垒 NVIDIA DGX Spark:本地推理实测</a></div>
+      <div class="it-sum">Tom&#x27;s Hardware 的深度测试关注&quot;花一万美元以上做本地推理是否值得&quot;,并指出随着 MLX 栈成熟,Apple Silicon 上跑更大模型的 recipe 已趋实用化。端侧推理的竞争维度正从&quot;能不能跑&quot;转向&quot;每美元 token 吞吐 + 能耗&quot;。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/phonon-tts" target="_blank" rel="noopener">HuggingFace 上架 Phonon TTS:端侧语音合成对标云端基准</a></div>
+      <div class="it-sum">主打设备端高质量语音,宣称在基准上领先。TTS 这类&quot;低延迟、强隐私、需离线&quot;的模态是端侧 NPU 最容易吃下的负载,也是手机/PC 厂商把 NPU 从营销参数变成真实用例的主要入口。来源</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-11-10.html">← 2026-11-10</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>

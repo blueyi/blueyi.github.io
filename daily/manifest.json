@@ -6,6 +6,13 @@
   "schedule": "Updated every day 08:30 HKT",
   "days": [
     {
+      "date": "2026-11-11",
+      "html": "2026-11-11.html",
+      "title_date": "2026-11-11 · 周三",
+      "highlight": "通用 CPU 与自研 ASIC 同时\"为供数与推理\"重设架构：AMD 用 Zen 6 Venice(256 核、5.3 GHz、IPC +20~31%)和 Verano 明确\"为加速器供数\"的设计目标,Google 则用 TPU 8tx(AMD Turin host + 机密计算)与 8i Max(带宽翻倍)把自研芯片推向推理主力。两侧同日发布,说明机架内的 CPU:加速器配比和内存带宽正被重新定义。",
+      "published": true
+    },
+    {
       "date": "2026-11-10",
       "html": "2026-11-10.html",
       "title_date": "2026-11-10 · 周二",
