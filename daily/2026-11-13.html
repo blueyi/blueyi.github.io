@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-11-13</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-11-13</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-11-13 · 周五</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-11-12 ~ 2026-11-13</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-11-13</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>英伟达完成史上最突然的 CEO 交接</b>：黄仁勋因多重婚外关系与疑似间谍调查即时辞职,CFO 临时接任,股价盘中跌 14%、市值一度蒸发近 6000 亿美元后收复至 4 万亿美元上方。同期国会启动第二项对华销售调查——英伟达同时面对治理与地缘两条风险线。</li>
+      <li><b>芯片供给侧在同一天集体刷新</b>：AMD EPYC 9006「Venice」(Zen 6)正式发布并针对 agentic AI 调优,Google 重整 TPU 为 8tx(机密计算 host)/8i Max(推理带宽翻倍)双线,SpaceX 为轨道数据中心定制 Vera Rubin 机架「Kessel」。算力竞争的重心从 FLOPS 明确转向带宽、隔离与部署形态。</li>
+      <li><b>neocloud 杠杆模式首次被公开定价</b>：Nebius 抛出 400 亿美元扩张计划、Q3 签约 120 亿美元,却因微软项目延期与&quot;预付款+贷款&quot;融资结构单日跌 17%。同期康奈尔研究指出数据中心新增电力成本主要转嫁给低收入与农村居民——AI capex 的社会成本开始进入定价。</li>
+      <li><b>人形机器人进入公开市场</b>：Agility Robotics 完成 SPAC 合并、获 4.65 亿美元并以 AGLT 登陆纳斯达克,同步发布 Digit 5;英伟达在 CoRL 把仿真重点从运动转向齿轮对位、线缆插接等精细操作。具身智能的资本结构与技术瓶颈同时换挡。</li>
+      <li><b>端侧 agent 与可验证代码生成两条暗线成型</b>：BotPsy 用十亿参数以下模型在本地完成工具调用,微软 PDD Kit 把 agent 生成的全栈代码转成 Verus 规范并形式化证明;Fable 5.2 更以 1000 个智能体在 30 小时内形式化费马大定理。小模型执行与机器可验证性,正在成为 2027 年前后最确定的两条工程主线。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/nvidia-ceo-and-co-founder-jensen-huang-resigns-effective-immediately/" target="_blank" rel="noopener">🔥 黄仁勋辞任英伟达 CEO,董事会启动继任搜寻</a></div>
+      <div class="it-sum">英伟达公告黄仁勋辞去总裁、CEO 及董事职务,即时生效,CFO Colette Kress 出任临时 CEO;导火索是董事会对其多起与直接下属的婚外关系及一名疑似中国间谍的调查。股价盘中一度跌约 14%、市值蒸发近 6000 亿美元,收盘跌幅收窄至 4.34%($166.19),市值重回 4 万亿美元上方;黄仁勋放弃约 1.08 亿美元未归属股权(仅占其 1384 亿美元净资产 0.08%)。这是全球 AI 算力供应链最核心节点的第一次强制权力交接,直接牵动 CUDA 生态、对华销售政策与开源战略的连续性。来源 · 市值反弹</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/amd-epyc-9006-results-are-here-and-amd-delivers-a-knockout-part-deux/" target="_blank" rel="noopener">🔥 AMD EPYC 9006「Venice」正式发布,Zen 6 主打 agentic AI</a></div>
+      <div class="it-sum">AMD 兑现 Zen 6 服务器平台,ServeTheHome 实测称其为&quot;又一次击倒式胜利&quot;,The Next Platform 指出 Venice 专门针对 agentic AI 的 CPU 侧负载(长上下文、KV 缓存卸载、工具调用编排)做了调优;ASRock Rack 同场展出 16 通道 DDR5、128 条 PCIe Gen6 的 Diamond Rapids 主板,Intel 侧反击已在路上。来源 · agentic 调优</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/google-tpu-8tx-8i-max-amd-epyc-turin/" target="_blank" rel="noopener">Google 重整 TPU 产品线:TPU 8tx 用 AMD EPYC Turin 做 host,8i Max 内存带宽翻倍</a></div>
+      <div class="it-sum">8tx 在 host 侧引入机密计算,8i Max 把 HBM 带宽翻倍专攻推理,等于把&quot;训练/推理分线&quot;写进硬件 SKU。对自研 ASIC 阵营是明确信号:推理侧的瓶颈已从 FLOPS 转向带宽与内存容量。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/spacex-developing-custom-nvidia-vera-rubin-rack-dubbed-kessel-for-its-orbital-data-centers-report/" target="_blank" rel="noopener">SpaceX 为轨道数据中心定制英伟达 Vera Rubin 机架「Kessel」</a></div>
+      <div class="it-sum">据报底层配置不变但重新设计了 PCB,以适配太空环境与自研供电/散热约束。把 Vera Rubin 级机架搬上轨道,是&quot;算力上天&quot;从概念走向工程化的第一个具体形态。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/nvidia-veras-system-architecture" target="_blank" rel="noopener">Vera 服务器 CPU 与 Olympus 核微架构细节曝光</a></div>
+      <div class="it-sum">Chips and Cheese 拆解指出 Vera 走&quot;高单核性能&quot;路线,Olympus 核在服务器单线程性能上突破了传统服务芯片弱于客户端的惯例——英伟达正在把 Grace 之后的 CPU 自研补成完整系统能力。来源 · Olympus 核</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/Fikt82HLToqb6ZANB2xj" target="_blank" rel="noopener">🔥 Google 让 PyTorch 原生跑上 TPU</a></div>
+      <div class="it-sum">PyTorch 侧原生接入 TPU 后端,开发者不必再绕 XLA 专用路径,社区评价&quot;早该如此&quot;。对编译器栈的意义大于对硬件:此前 JAX/XLA 与 PyTorch 生态割裂是 TPU 最大的采用摩擦,打通后 TPU 与 GPU 的框架层差异被压缩到后端选择。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">makepad.github.io</span><a href="https://makepad.github.io/relax/" target="_blank" rel="noopener">Relax:面向 Rust 的 JIT 编译器,专治构建慢</a></div>
+      <div class="it-sum">Makepad 团队推出 Relax,用 JIT 思路削减 Rust 冗长的编译-链接周期(HN 101 分)。Rust 在 AI Infra 组件(vLLM、向量库、推理网关)中占比快速上升,编译时间已成工程效率瓶颈。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/3d-lora-finetuning" target="_blank" rel="noopener">HuggingFace 发布 3D 生成模型微调权威指南</a></div>
+      <div class="it-sum">系统梳理 3D LoRA 微调的数据构造、损失设计与显存取舍,把原本分散在论文里的经验固化为可复现流程。3D 资产生成正从 demo 走向可定制的生产工具链。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">semiengineering.com</span><a href="https://semiengineering.com/rethinking-memory-for-ai-inference/" target="_blank" rel="noopener">存内计算重新被摆上推理主路径</a></div>
+      <div class="it-sum">SemiEngineering 长文指出把计算搬到内存附近可同时降功耗、提带宽利用率,但软件栈、散热与架构一致性仍是三大障碍。在 HBM 容量与带宽成为推理第一瓶颈的当下,这是对&quot;堆 HBM&quot;路线的结构性挑战。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">semiengineering.com</span><a href="https://semiengineering.com/introduction-to-fp8-formats-part-1/" target="_blank" rel="noopener">FP8 格式系统科普(上):生态动能与硬件支持盘点</a></div>
+      <div class="it-sum">从数值范围、动态范围折中讲到各厂商硬件支持矩阵。FP8 已是 Hopper/Blackwell 与国产 NPU 的事实标配,理解其舍入与 scaling 语义是量化部署的前置知识。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/E7QKIMUz3h0G0IE5Paii" target="_blank" rel="noopener">Google 发布首个「决策模型」Gemini Decision 1</a></div>
+      <div class="it-sum">9 项测试拿下 7 项第一,最高准确率 92.2%。把&quot;决策&quot;从通用 LLM 的隐式能力拆成独立模型类别,意味着 agent 编排层的推理开销可能被专用小模型接管,而不是每步都调大模型。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/google-tpu-8tx-8i-max-amd-epyc-turin/" target="_blank" rel="noopener">TPU 8i Max 把推理带宽翻倍(见 1️⃣)</a></div>
+      <div class="it-sum">硬件层面的直接回应是——decode 阶段的瓶颈在 KV Cache 读写而非算力,带宽翻倍比 FLOPS 提升更能改善 tokens/s/美元。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/" target="_blank" rel="noopener">🔥 Nebius 抛出 400 亿美元扩张计划,Q3 签约 120 亿美元但股价跌 17%</a></div>
+      <div class="it-sum">公司称 Q3 拿下的合同已覆盖其 capex,融资方式依赖客户预付款与贷款;同时承认微软数据中心项目延期。市场惩罚的逻辑很直接:neocloud 的高增长建立在&quot;预付款 + 债务&quot;的杠杆结构上,一旦交付延期,现金流链条就暴露。来源 · Q3 签约额</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/this-is-the-meta-metaroce-network-adapter/" target="_blank" rel="noopener">Meta 展示 MetaRoCE 网卡,目标百万 GPU 训练集群</a></div>
+      <div class="it-sum">OCP Summit 2026 上亮相的自研 RoCE 适配器,是 Meta 把以太网推进到 InfiniBand 传统领地的最新一步。超大规模厂商自研网卡的动机很实际:RoCE 的拥塞控制与多租户隔离只有自己改硬件才能调到位。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">michael.bacarella.com</span><a href="https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/" target="_blank" rel="noopener">🔥 Jane Street 纽约唯一数据中心险被一次误报烟感&quot;淹掉&quot;</a></div>
+      <div class="it-sum">一次假火警触发气体/水基灭火系统,机房几乎被毁。这篇一线复盘的价值在于:AI 集群密度上升后,消防与配电的&quot;非 IT 故障&quot;已成为与 GPU 故障同级的风险项。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.cornell.edu</span><a href="https://news.cornell.edu/stories/2026/11/data-centers-need-power-lower-income-rural-residents-pay-price" target="_blank" rel="noopener">数据中心用电成本被转嫁给低收入与农村居民</a></div>
+      <div class="it-sum">康奈尔大学研究指出,为满足数据中心负荷而新增的输配电投资,通过电价机制主要落在居民用户身上,农村与低收入群体承担比例最高。这是 AI capex 开始转化为社会成本与政治议题的标志。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/11/10/datacenter-systems-spending-to-go-through-the-roof-in-2027/5308636" target="_blank" rel="noopener">2027 年数据中心系统支出将&quot;冲上屋顶&quot;</a></div>
+      <div class="it-sum">The Next Platform 汇总口径显示,2027 年服务器/加速器/网络/存储的系统级支出增速将显著高于 2026,且结构上向加速计算与高密度机架倾斜。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/" target="_blank" rel="noopener">英伟达在 KubeCon 贡献 OpenShell,并加码 AI 工厂基础设施</a></div>
+      <div class="it-sum">把 Kubernetes 之上的 agent 运行时开源,目标是让&quot;千卡到万卡 AI 工厂&quot;的调度与隔离标准化。云原生栈正在成为 AI Infra 的默认控制面。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/" target="_blank" rel="noopener">🔥 美国国会启动对英伟达的第二项调查</a></div>
+      <div class="it-sum">民主党人就英伟达对华销售及其与特朗普政府的往来发出措辞严厉的信件,这是间谍传闻爆发后的第二项国会调查。芯片出口管制正从行政规则升级为立法与监督程序,英伟达的对华业务进入高不确定性区间。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/026/464.htm" target="_blank" rel="noopener">Anthropic 与 OpenAI 同被诉侵犯五项神经网络专利</a></div>
+      <div class="it-sum">Flinn AI Technologies 向特拉华州联邦法院提起两起诉讼,指控两家公司侵犯其神经网络相关专利。基础模型厂商的专利雷区此前较少被触发,此案可能开启一轮&quot;训练方法专利&quot;诉讼潮。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500" target="_blank" rel="noopener">OpenAI 推出安全产品线,同时遭非营利组织集体起诉</a></div>
+      <div class="it-sum">OpenAI 上线安全产品并警告不用者&quot;将陷于劣势&quot;;另一边多个非营利组织以 AI 驱动的网络攻击为由起诉多家 AI 巨头。安全既是产品也是责任边界,治理压力与商业扩张同步加速。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">siliconangle.com</span><a href="https://siliconangle.com/2026/11/12/ai-networking-nvidia-scalein-security-agentic-aifactoriesdatacenters/" target="_blank" rel="noopener">英伟达 Scale-In:为 agentic AI 工厂重构安全模型</a></div>
+      <div class="it-sum">新增的 Scale-In 加速层负责安全访问、高性能数据移动与租户隔离,面向&quot;agent 大规模并发操作算力&quot;的场景。agent 时代的威胁模型从&quot;人访问模型&quot;变成&quot;模型自主访问资源&quot;,隔离必须在网络与加速层做。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/ai-and-ml/2026/11/12/a-third-of-us-ai-chatters-are-hot-at-bots-hurling-insults-at-llms/5309506" target="_blank" rel="noopener">三分之一美国 AI 用户对模型出言不逊,Anthropic 制定行为规范</a></div>
+      <div class="it-sum">调查显示大量用户对 LLM 使用侮辱性语言,Anthropic 据此设定交互行为标准以保护 Claude。这反映对齐研究正从&quot;模型不伤人&quot;扩展到&quot;人不伤模型&quot;的双向边界。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/11/agility-robotics-completes-merger-and-secures-465-million-in-capital-ahead-of-nasdaq-listing/107039/" target="_blank" rel="noopener">🔥 Agility Robotics 完成 SPAC 合并并获 4.65 亿美元,即将以 AGLT 登陆纳斯达克</a></div>
+      <div class="it-sum">与 Churchill Capital Corp XI 的业务合并于 11 月 4 日完成,同时发布 Digit 5——定位为首个能&quot;在规模上安全且经济地做有用工作&quot;的人形机器人。人形机器人第一梯队开始用公开市场融资,资本结构从 VC 转向二级市场,披露质量与交付压力同步上升。来源 · Digit 5 设计复盘</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/" target="_blank" rel="noopener">英伟达在 CoRL 展示&quot;精细操作&quot;仿真进展</a></div>
+      <div class="it-sum">研究重点从行走/滚动/跳跃转向齿轮对位、线缆插接、小件装配等需要力控的任务,合作方用仿真完成高难度操作的可重复训练。具身智能的瓶颈已明确从运动能力转移到 manipulation 与数据效率。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/12/xpeng-expands-uk-operations-with-new-vehicles-robotaxis-and-humanoid-robots/107054/" target="_blank" rel="noopener">小鹏在英国发布 robotaxi 与人形机器人计划</a></div>
+      <div class="it-sum">首个 UK Brand Day 上,小鹏把&quot;物理 AI&quot;作为长期战略输出到英国市场,业务从电动车扩展到 robotaxi 与人形机器人。中国具身智能厂商开始把出海从卖车升级为输出整套物理 AI 方案。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/agentic-robotics" target="_blank" rel="noopener">IEEE Spectrum:agentic robotics 能否解决机器人数据规模化难题</a></div>
+      <div class="it-sum">报道指出整个行业的赌注是&quot;数据足够多,机器人就能覆盖绝大多数人工任务&quot;,但示范数据的采集成本与跨本体迁移仍是核心障碍。这是对&quot;堆数据即可 scaling&quot;叙事的少有的冷静质疑。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/12/cainiao-introduces-upgraded-climbing-robot-with-four-side-retrieval-and-denser-storage/107042/" target="_blank" rel="noopener">菜鸟发布升级版攀爬机器人,支持四向取货与双深位存储</a></div>
+      <div class="it-sum">在 CeMAT Asia 上亮相的系统包含新一代机器人调度系统与仓库规划方案,仓储密度与取货效率同步提升。物流机器人是中国具身智能落地最成熟的场景,迭代节奏已进入&quot;工程优化&quot;阶段。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/12/estun-robotics-and-robodk-announce-strategic-partnership-at-dfactory-barcelona-to-simplify-and-accelerate-the-adoption-of-industrial-robots-in-europe/107047/" target="_blank" rel="noopener">埃斯顿与 RoboDK 达成战略合作,加速欧洲工业机器人落地</a></div>
+      <div class="it-sum">中国最大工业机器人厂商与仿真/离线编程软件商在巴塞罗那 DFT Factory 签约,打通&quot;仿真-编程-部署&quot;链路。国产机器人出海正从卖本体转向补软件生态短板。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">aiera.com.cn</span><a href="https://aiera.com.cn/2026/11/13/other/admin/123577/%e7%99%be%e5%ba%a6%e6%8a%bc%e4%b8%adai%e4%b8%8b%e4%b8%80%e5%b9%95%ef%bc%81%e7%99%be%e4%b8%87%e6%99%ba%e8%83%bd%e4%bd%93%e7%bb%84%e5%9b%a2%e4%b8%8a%e5%b2%97%ef%bc%8cai%e7%a7%91%e5%ad%a6%e5%ae%b6/" target="_blank" rel="noopener">🔥 千个智能体 30 小时形式化费马大定理</a></div>
+      <div class="it-sum">Fable 5.2 调度 1000 个智能体组队,在 30 小时内完成费马大定理的完整形式化。这不是&quot;AI 做数学&quot;的又一次展示,而是多智能体并行分解 + 形式化验证闭环首次在超大规模定理上跑通,直接对标自动形式化与程序合成方向。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">microsoft.com</span><a href="https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/" target="_blank" rel="noopener">微软 PDD Kit:把 agent 写的全栈代码形式化验证</a></div>
+      <div class="it-sum">工具把开发者意图转成 Verus 规范,再证明 AI 生成代码满足规范,解决&quot;agent 生成速度远超人类逐行 review&quot;的审查瓶颈。这是 LLM 代码生成从&quot;能跑&quot;走向&quot;可证&quot;的关键基础设施。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">importai.substack.com</span><a href="https://importai.substack.com/p/import-ai-478-math-for-alignment" target="_blank" rel="noopener">Import AI 478:对齐的数学化、ProgramBench 与 Mirendil 的 RSI 含义</a></div>
+      <div class="it-sum">本期把&quot;递归自我改进&quot;从口号拆成可观测指标,并讨论程序级基准如何衡量模型的工程能力而非答题能力。RSI 讨论开始具备可测量的实验设计。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/qvac/botpsy" target="_blank" rel="noopener">🔥 HuggingFace:BotPsy——十亿参数以下的端侧 agentic 语言模型</a></div>
+      <div class="it-sum">qvac 团队展示了一个 sub-billion 参数的本地个人助理模型,在端侧完成工具调用与多步任务,而非把请求发往云端。这直接验证了&quot;小模型 + agent 框架&quot;可以在手机/PC 上承担实用级助理,是端侧推理从&quot;聊天&quot;走向&quot;执行&quot;的分水岭。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/performance-oryon-qualcomms-little" target="_blank" rel="noopener">Qualcomm「Performance」Oryon 核:Snapdragon X2 Elite 的小核策略转向</a></div>
+      <div class="it-sum">Chips and Cheese 指出 X2 Elite 采用混合核布局,放弃了此前全大核的自研路线。PC 端 NPU+CPU 异构是端侧 LLM 推理的载体,小核能效直接决定本地模型的可用续航。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/qualcomms-system-level-architecture" target="_blank" rel="noopener">Snapdragon X2 Elite 系统级架构拆解</a></div>
+      <div class="it-sum">核数、iGPU 与 DRAM 带宽同步抬升,面向&quot;本地跑得动更大模型&quot;的整机设计。端侧推理的天花板正从算力转向内存带宽与功耗预算。来源</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-11-12.html">← 2026-11-12</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
