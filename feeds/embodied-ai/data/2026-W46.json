@@ -1,0 +1,2142 @@
+{
+  "channel": "embodied-ai",
+  "week": "2026-W46",
+  "raw": {
+    "channel": "embodied-ai",
+    "week": "2026-W46",
+    "generated_at": "2026-11-14T20:00:12.518356+08:00",
+    "window": {
+      "start": "2026-11-07",
+      "end": "2026-11-14"
+    },
+    "hn": [
+      {
+        "source": "hn",
+        "score": 656,
+        "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
+        "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+        "hn_url": "https://news.ycombinator.com/item?id=50493251",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 266,
+        "title": "After 600 experiments, here's what I discovered about JEPA world models",
+        "url": "https://haddyalchaer.com/jepa",
+        "hn_url": "https://news.ycombinator.com/item?id=50487185",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 355,
+        "title": "$11.4M in Nvidia hardware vanishes during shipment from CA to TX",
+        "url": "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas",
+        "hn_url": "https://news.ycombinator.com/item?id=50487864",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "hn",
+        "score": 133,
+        "title": "I'm Working on a FOSS Linux Pinbal Simulation Engine",
+        "url": "https://www.getlazarus.org/forums/topic/17/",
+        "hn_url": "https://news.ycombinator.com/item?id=50463540",
+        "domains": [
+          "sim2real"
+        ]
+      }
+    ],
+    "arxiv": [
+      {
+        "source": "arxiv:cs.RO",
+        "title": "ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation",
+        "url": "http://arxiv.org/abs/2611.17330v1",
+        "abstract": "Vision language navigation (VLN) is very challenging for Unmanned Aerial Vehicles (UAVs) since small errors in 3D motion prediction can lead to navigation errors and collisions. Unable to fathom execution outcomes in 3D environments, existing methods often struggle to predict accurate navigation waypoints from language instructions. To solve this, we introduce the Prototypical Visual Imagination f",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "HEIR: Harness Egocentric Intent for Human-Robot Interactions",
+        "url": "http://arxiv.org/abs/2611.17238v1",
+        "abstract": "For robots to assist, serve, and collaborate with humans, they must not only interpret human requests conveyed through language and multimodal intentional cues, but also execute long-horizon tasks that interleave navigation and manipulation. In this paper, we introduce HEIR, a resource for studying how to Harness Egocentric Intent for Human-Robot Interaction. HEIR pairs human speech, measured gaze",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Collaborative Task Allocation for Heterogeneous Multi-Robot Systems Through Iterative Clustering",
+        "url": "http://arxiv.org/abs/2611.17213v1",
+        "abstract": "Multi-robot systems face the challenge of efficiently allocating teams of heterogeneous robots to tasks. The task allocation problem is complicated by collaborative interactions between robots where teams of robots develop emergent capabilities that enable them to complete tasks that would be inefficient or impossible for individual robots. To address these challenges, we present an iterative clus",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "UAV-Flow++: A Unified Suite for Benchmarking and Learning Language-Guided UAV Flight",
+        "url": "http://arxiv.org/abs/2611.17163v1",
+        "abstract": "Language-guided UAV navigation has largely focused on long-horizon route planning, leaving short-range, object-relative flight maneuvers underexplored. To address this gap, we formulate Flying-on-a-Word (Flow), a task requiring a UAV to convert concise natural-language instruction, egocentric visual observation, and current state dynamics into continuous flight actions. Flow encompasses both primi",
+        "domains": [
+          "vla",
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "XBot-Omni: An Omni-Modal Model for Embodied Understanding and Interaction",
+        "url": "http://arxiv.org/abs/2611.17160v1",
+        "abstract": "Embodied interaction requires an agent to integrate multimodal perception with verbal and nonverbal behaviors to effectively communicate its intentions, including speech, body motion, and facial expressions. We present XBot-Omni, a Thinker--Talker--Actor architecture that extends the Omni paradigm to robotic modalities, including body motion and facial expressions, with ``X'' representing the exte",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Inner Product Regularization for Imitation Learning",
+        "url": "http://arxiv.org/abs/2611.17159v1",
+        "abstract": "Robots that learn from demonstrations should extrapolate their policy despite state perturbations such as sensor noise, scene variation, and compounding errors. One approach to this robustness is regularization. Prior regularizers consider each state on its own and limit how sensitive the policy is to any perturbation at that state. By contrast, we explore how the policy's output shifts when given",
+        "domains": [
+          "dexterous",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid Loco-Manipulation",
+        "url": "http://arxiv.org/abs/2611.17142v1",
+        "abstract": "Humanoid loco-manipulation requires coordinated locomotion, balance regulation, and manipulation under frequent contacts, making teleoperated demonstration collection difficult: a practical controller must simultaneously provide precision, stability, and contact awareness. We propose FORGE, a force-aware multi-granularity control system with a coarse-to-fine command space spanning velocity navigat",
+        "domains": [
+          "dexterous",
+          "embodied-model",
+          "market"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "SALA: Semantically Aligned Latent Actions Enable Dual-Axis Scaling of Embodied Foundation Models",
+        "url": "http://arxiv.org/abs/2611.17110v1",
+        "abstract": "Embodied foundation models hinge on diverse robot interaction data, which are costly to collect. Egocentric human videos offer a complementary source of experience, and latent action models (LAMs) provide a popular means of leveraging these videos for policy supervision. Compared with world-action models (WAMs), LAMs can offer greater training efficiency and potentially lower inference costs by av",
+        "domains": [
+          "vla",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Maximizing LLM Utility While Managing LLM Fallibility",
+        "url": "http://arxiv.org/abs/2611.17020v1",
+        "abstract": "Large language models (LLMs) can supply autonomous systems with plans, predictions, and judgments, but these contributions are sometimes wrong. This review asks how a system can maximize an LLM's utility while managing its fallibility. Our answer is to adapt the system's reliance on the LLM as evidence about the LLM's performance accumulates. Systems built from imperfect components, such as noisy ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "An Integrated Architecture for Data-Efficient Real-Time Neural Imitation of Nonlinear Time-Optimal Model Predictive Control",
+        "url": "http://arxiv.org/abs/2611.17005v1",
+        "abstract": "Nonlinear time-optimal model predictive control (TOMPC) enables highly performant control of constrained systems, but its computational cost prohibits real-time use on fast dynamical systems. Neural network imitation of the TOMPC control law can reduce online computational costs, yet existing work mostly targets quadratic cost formulations in simulation and addresses the challenges of neural contr",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "CT-SGAL-LIO: Causal Continuous Time Refinement of Discrete LiDAR Inertial Odometry",
+        "url": "http://arxiv.org/abs/2611.16918v1",
+        "abstract": "State-of-the-art LiDAR-inertial odometry methods, including those on richer state manifolds, achieve strong global accuracy, yet their pose stream alternates between propagation and correction and can oscillate over short horizons even when globally accurate. Most existing methods follow these approaches: they either modify the filter to enable faster updates or estimate a continuous-time trajecto",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "Informative Path Planning with Gaussian Processes: Error Bounds, Algorithms, and Benchmarks",
+        "url": "http://arxiv.org/abs/2611.16877v1",
+        "abstract": "Accurate environmental monitoring relies on Informative Path Planning (IPP) to deploy autonomous systems that maximize information gain. While Gaussian Processes (GPs) provide a robust mathematical foundation for modeling the environment, contemporary IPP approaches remain hindered by heuristic operational constraints and the lack of simultaneous theoretical guarantees for worst-case estimation er",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "ACE-CaP-0: Real-World Code-as-Policies in the Era of Experience",
+        "url": "http://arxiv.org/abs/2611.16872v1",
+        "abstract": "Recent advances in frontier models have pushed the boundaries of agentic robot control, enabling agents to perform complex robotic tasks through reasoning and interaction. However, repeated calls to these models during execution can substantially increase task completion time. Code as Policies (CaP) offers a route for coding agents to acquire physical skills through experience and retain them in e",
+        "domains": [
+          "dexterous",
+          "sim2real",
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "A Class of Bayesian Conjugate Distributions on $SE_n(3)$ for Motion Estimation",
+        "url": "http://arxiv.org/abs/2611.16822v1",
+        "abstract": "This paper proposes a novel class of Bayesian Conjugate Distributions (BCDs) on extended special Euclidean groups SE_n(3) for global motion uncertainty representation and estimation. BCDs are constructed by restricting matrix Gaussian distributions on ambient Euclidean space to SE_n(3), avoiding singularity of local coordinates. The unique feature of BCDs is their conjugacy to a broad class of sam",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.RO",
+        "title": "ScrewSense: Mapping the Invisible - Anomaly Detection and Error Classification in Screwdriving Processes",
+        "url": "http://arxiv.org/abs/2611.16789v1",
+        "abstract": "The growing volume of process data generated by screwdriving systems, combined with advancements in computing power, data storage, and algorithms, is facilitating the application of artificial intelligence in this field. Accurately detecting and classifying screwdriving errors is crucial for ensuring product quality, avoiding costly rework in manufacturing, and supporting sustainability by facilit",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Unbundling Multimodal Vision Encoding",
+        "url": "http://arxiv.org/abs/2611.17334v1",
+        "abstract": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e.",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
+        "url": "http://arxiv.org/abs/2611.17332v1",
+        "abstract": "Model architecture shapes the scaling behavior, training efficiency, and inference cost of LLMs, making it a central focus of both industry and academia. In industry, teams such as those behind DeepSeek, Qwen, and Kimi routinely introduce architectural innovations, yet public reports rarely document which ideas succeeded, which were abandoned, and why. In academia, limited compute and inconsistent",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+        "url": "http://arxiv.org/abs/2611.17329v1",
+        "abstract": "Institutional portfolios operate under investment policy statements that specify asset allocation constraints, often conditioned on market regime information. Deep reinforcement learning has been shown to optimize financial performance but typically does not enforce rule compliance, making it unsuitable for real-world deployment. Existing neurosymbolic methods such as Probabilistic Logic Policy Gr",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+        "url": "http://arxiv.org/abs/2611.17323v1",
+        "abstract": "Applying machine learning systems to new domains introduces bottlenecks in both labeled data acquisition and manual pipeline engineering. While recent MLE agents show promise in automating pipeline design, they have been studied almost exclusively in fully supervised settings, leaving them untested in realistic regimes where labeled data is scarce but unlabeled data is abundant. In this work, we i",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Linking Rapid Learning to Compositional Structure in Neural Networks: Evidence from Additive Analogies in Meta-Learned Parameter Spaces",
+        "url": "http://arxiv.org/abs/2611.17314v1",
+        "abstract": "Humans can learn rapidly from limited experience, while neural networks typically require extensive training. In this work, we investigate what properties of a neural network can enable it to learn rapidly. We study neural networks that have been optimized via meta-learning, a technique that exposes a network to many related functions to facilitate its subsequent learning of similar functions. Pri",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Sketching Language Models for Context Attribution",
+        "url": "http://arxiv.org/abs/2611.17313v1",
+        "abstract": "Context attribution asks how removing parts of a prompt changes a language model's output. We study leave-one-out (LOO) attribution for a prompt of $n$ tokens and a fixed measurement function. Computing all LOO values directly requires $n$ model evaluations. Under a stability assumption, our algorithm estimates all LOO values to error proportional to $\\varepsilon$ with constant probability using $",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Classical Energies Learn to Reason 1,000x Faster than Looped Models",
+        "url": "http://arxiv.org/abs/2611.17309v1",
+        "abstract": "Looped models have emerged as a prominent paradigm for reasoning, with successes on simple reasoning puzzles such as Sudoku-Extreme and Maze-Unique. However, these models can be unstable, slow to train, and use many parameters and FLOPs to solve simple puzzles. Descent on an energy not only mitigates these issues but also offers advantages: built-in early stopping, compute that adapts to problem d",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Quantifying structural stability of transparent models for general insurance pricing",
+        "url": "http://arxiv.org/abs/2611.17308v1",
+        "abstract": "The short duration of general insurance contracts leads to rapid distributional shifts in the data, warranting regular model updates. This process may yield a post-update model that differs considerably from the pre-update model in both predictions and structure. Structural stability is upstream of predictive stability, yet existing structural stability metrics are mostly restricted to simple deci",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Towards a Theory of Learnability via Debate",
+        "url": "http://arxiv.org/abs/2611.17303v1",
+        "abstract": "Debate has been recently proposed as a training protocol that is hoped to produce more aligned models even as model capabilities scale. The idea is that the human, instead of providing supervision in the form of labels, judges a debate between two models that compete to prove the correctness of opposite labels. It can be shown that functions of a much higher computational complexity can be correct",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "FLEX-LBP: Learning Local Binary Patterns with Exact Binary Inference for Texture Classification",
+        "url": "http://arxiv.org/abs/2611.17302v1",
+        "abstract": "Local Binary Patterns (LBP) remain among the most widely used texture descriptors, from industrial inspection to medical imaging. Yet their radius, sampling angles, color transform and thresholds are fixed by hand for each dataset. We present FLEX-LBP, which learns these parameters by backpropagation while every forward pass computes exact binary codes and hard histogram counts. A straight-through",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Consistent Video-to-Video Translation via Explicit Correspondences",
+        "url": "http://arxiv.org/abs/2611.17298v1",
+        "abstract": "Interactive video-to-video applications require real-time generation while maintaining long-range temporal consistency. However, recent methods achieve speed by restricting attention to a fixed-length causal window. This limits long-range consistency whenever relevant history falls outside the context window. To address this limitation, we introduce vid2vid-long, a correspondence-based approach gr",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Goal Encoding in LLMs",
+        "url": "http://arxiv.org/abs/2611.17297v1",
+        "abstract": "We investigate whether and how LLMs encode goals: internal neural representations that precede and guide action, and that are flexible enough to be realized through many different execution paths. We construct a coding setting with multiple sub-tasks that allows us to evaluate goal-seeking behavior and the selection of sub-goals. In this setting, we localize an encoding of the next sub-goal in the",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Metal Sandbox: Isolated Execution and Command Scheduling for GPU Coding Agents on Apple Silicon",
+        "url": "http://arxiv.org/abs/2611.17294v1",
+        "abstract": "On-device inference requires kernels that make effective use of local accelerators. Efficient training and evaluation of models that generate Apple Metal kernels benefit from native macOS tools and concurrent agent sessions. These sessions alternate between model requests, development commands, and GPU execution, leaving GPU capacity idle for much of a rollout. We present Metal Sandbox, infrastruc",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Negative-Only Policy Optimization for One-Sided Verifiable Rewards",
+        "url": "http://arxiv.org/abs/2611.17287v1",
+        "abstract": "Reinforcement learning with verifiable rewards (RLVR) typically relies on a verifier that can reliably judge whether sampled solutions are correct. However, in many realistic settings, complete verification is generally unavailable, while cheap checks can only falsify failures. We formalize this regime as one-sided verifiability (OSV): verified negatives are reliable counterexamples, but verified ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.LG",
+        "title": "Programming Quantum Circuit Parameters with Large Language Models",
+        "url": "http://arxiv.org/abs/2611.17246v1",
+        "abstract": "Large language models (LLMs) have recently demonstrated the ability to generate parameters for variational quantum circuits without conventional optimization. However, the conditions under which this approach is effective remain unclear. Here, we investigate a frozen, general-purpose LLM that generates complete circuit parameter vectors from symbolic circuit and Hamiltonian descriptions, with opti",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Zugwise: Domain-Aware Game Reconstruction for Digitizing Handwritten Chess Scoresheets",
+        "url": "https://arxiv.org/abs/2611.14544",
+        "abstract": "Digitizing handwritten chess scoresheets has been studied as a handwriting-recognition problem: read the move in each box and check that it is legal. This framing misses the errors that matter most. A misread that yields an illegal move is loud. One that yields a legal-but-wrong move is silent, because a legality-only pipeline accepts it and reads every later move against a wrong position. We ther",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Cleaning an Agent's History Hurts When the World Still Holds the Error",
+        "url": "https://arxiv.org/abs/2611.14654",
+        "abstract": "Tool-using language-model agents accumulate histories of their own mistakes, and a system that compacts, repairs or hands off such a history decides what it says about those mistakes while their effects stay in the world. Prior work cleans the history at a fixed world, where showing a corrected step and saying it is done move together. We ask whether the same correct content helps or hurts dependi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Together Compiler: Continual Compilation for AI Inference",
+        "url": "https://arxiv.org/abs/2611.14681",
+        "abstract": "Today's AI workloads are rapidly changing: new models are released more often, model architectures are increasingly diverse, and traffic distributions change frequently. The challenge we face at Together AI is continual optimization for these changing workloads. Compiling a deployment into an optimized forward pass is a challenge that is well-suited for agent hill-climbing. Existing systems strugg",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "When Should Semantic Priors Enter Partially-Identified Causal Discovery?",
+        "url": "https://arxiv.org/abs/2611.14736",
+        "abstract": "Observational causal discovery often leaves causal di- rections unresolved or unstable. Large language mod- els (LLMs) can provide semantic information to resolve these directions, but incorrect proposals can exclude the true causal graph and invalidate downstream inference. We study three separate decisions: where to allocate semantic queries, which proposals to admit, and which causal graphs to ",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "SynthCorp: A Platform for Creating Benchmarks for Data Agents",
+        "url": "https://arxiv.org/abs/2611.14765",
+        "abstract": "Current benchmarks for LLM-driven data agents saturate quickly and cannot target specific capabilities. We present SynthCorp, a platform that creates customizable data estates and benchmarks by simulating how business events produce and modify corporate data over time. Each data estate combines relational databases, a document store, and a data catalog, paired with evaluation tasks and executable ",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Rational Use of Time for Social Coordination in Humans and AI",
+        "url": "https://arxiv.org/abs/2611.14766",
+        "abstract": "All social interactions are situated in time. Previous studies have shown that humans are able to use implicit temporal cues, such as the duration of a pause, to infer others' mental states. But how do humans use temporal cues for dynamic, fine-grained social coordination? And can AI systems do the same, without ``experiencing'' continuous real-time as humans do? We study these questions using a c",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Leaderboard Hacking: Preference-Based Model Evaluations are Vulnerable to Manipulation",
+        "url": "https://arxiv.org/abs/2611.14769",
+        "abstract": "Arena-style rankings of language models are a widely used evaluation framework in online leaderboards, research papers, and model evaluation in production. These rankings aim to realistically assess model performance using pairwise comparisons of anonymous models on user prompts, aggregating votes via the Bradley-Terry model to produce the final ranking. However, we find that these leaderboards ar",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Robust Task-Aware State Estimation from Pre-trained Perception",
+        "url": "https://arxiv.org/abs/2611.14781",
+        "abstract": "Agents that perform state estimation using pretrained perception models, e.g., Vision-Language Models (VLMs), face the fundamental challenge that predictions are uncertain. Still, most approaches determinize these predictions into a single best-guess state and make decisions as if it were ground truth. This is brittle because when the guess is wrong, the agent's decisions may be unsafe or infeasib",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "When Is Proof-Step Verification Worth Its Cost? Operating Requirements of Certify-or-Decline Verification for Open-Weight Mathematical Reasoning",
+        "url": "https://arxiv.org/abs/2611.14794",
+        "abstract": "Proof-step verification rewrites a solver's answer into typed steps and uses LLM judges to certify or decline. We evaluate this pipeline on open-weight models across GPQA, AIME-2025, and a MATH-500 subset. Certification raises answer-key-match precision by 31 percentage points on the strong GPQA configuration and 46 on AIME, while answering only 35% and 21% of attempts. On near-ceiling MATH-500, g",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "GenPFN: An In-Context Tabular Foundation Model Approach for Augmenting Small Datasets in Engineering",
+        "url": "https://arxiv.org/abs/2611.14804",
+        "abstract": "Costly simulations and experiments limit the data available for engineering design. This paper proposes GenPFN, a training-free candidate generator guided by a pretrained tabular Prior-Data Fitted Network (TabPFN) classifier with fixed weights. The context contains evaluated designs labeled desired (Class 1) or undesired (Class 0). GenPFN interpolates between desired designs and refines candidates",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "AutoAssumption: Searching over Assumptions Discovers ML-Systems Algorithms",
+        "url": "https://arxiv.org/abs/2611.14844",
+        "abstract": "Many advances in ML systems came from breaking an assumption that earlier methods took for granted: speculative decoding dropped the assumption that a model needs one forward pass per token. Yet algorithms rarely state their assumptions, so experts and discovery harnesses search over programs, where one edit changes several design choices and gains are difficult to attribute. Searching over the as",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Open Challenges and Opportunities in Human-Agent Systems",
+        "url": "https://arxiv.org/abs/2611.14846",
+        "abstract": "Agentic AI systems increasingly undertake extended tasks and act on people's behalf, making human-agent interaction central to their effectiveness. Successful interaction requires understanding human perspectives, coordinating complementary capabilities, and maintaining productive relationships within socio-technical environments. This paper examines how foundations developed by the Autonomous Age",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Effective Teacher Support for Reasoning Distillation",
+        "url": "https://arxiv.org/abs/2611.14850",
+        "abstract": "Forward-KL language-model distillation normally computes dense teacher and student scores over the full vocabulary at every supervised position, making training and stored teacher targets expensive. We instead distill from the teacher's highest-probability vocabulary fraction, renormalizing the retained mass as we sweep support from 100% to 0.01%. Our main study distills Qwen3 4B -> 1.7B. We confi",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "Can an AI Agent Be Epistemically Akratic? Higher-Order Evidence & the Limits of Self-Correction",
+        "url": "https://arxiv.org/abs/2611.14889",
+        "abstract": "When we judge that our reasoning was defective, it seems plausible that we should abandon the conclusion it produced. This thought has special force for AI agents built to assess and correct their own work. Yet obeying such judgments can make an agent worse at distinguishing sound reasoning from defective reasoning. An AI agent may rely on information about its reasoning when deciding which conclu",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.AI",
+        "title": "MuEdit: An efficient multi-task editing method towards inter-domain knowledge conflicts",
+        "url": "https://arxiv.org/abs/2611.14910",
+        "abstract": "Large language models (LLMs) require frequent knowledge updates across heterogeneous domains, but existing editing methods fail when applied sequentially to multi-task settings. We trace this collapse to inter-domain null-space misalignment: heterogeneous tasks induce distinct Jacobian geometries, causing their common null space to shrink dramatically and leaving insufficient admissible directions",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Back to Pixels: Lifting Latent Video Diffusion into Pixel Space",
+        "url": "http://arxiv.org/abs/2611.17336v1",
+        "abstract": "Frontier video generation models work in a VAE latent space that compresses video in both space and time. This compression made training tractable, but now limits high-resolution, controllable, and interactive generation -- doubling resolution quadruples token count, conditions apply to groups of frames rather than individual ones, and each response must wait for the rest of its multi-frame block.",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Unbundling Multimodal Vision Encoding",
+        "url": "http://arxiv.org/abs/2611.17334v1",
+        "abstract": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e.",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models",
+        "url": "http://arxiv.org/abs/2611.17331v1",
+        "abstract": "Decoder-only Large View Synthesis Models (LVSMs) with KV-cache have recently achieved state-of-the-art quality by regressing novel views from neural networks without reconstructing 3D geometry, while Test-Time Training (TTT) layers save computation but sacrifice quality. We propose Test-Time Baking (TTB), a strategy that learns to bake global scene information from cross-view attention into a ligh",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation",
+        "url": "http://arxiv.org/abs/2611.17330v1",
+        "abstract": "Vision language navigation (VLN) is very challenging for Unmanned Aerial Vehicles (UAVs) since small errors in 3D motion prediction can lead to navigation errors and collisions. Unable to fathom execution outcomes in 3D environments, existing methods often struggle to predict accurate navigation waypoints from language instructions. To solve this, we introduce the Prototypical Visual Imagination f",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "K2V: Generative Keyframing For Physically Plausible Video Generation",
+        "url": "http://arxiv.org/abs/2611.17324v1",
+        "abstract": "Video diffusion models are able to generate samples with high-quality appearance and textural qualities. However, content produced by these methods is known to exhibit significant physical errors. This is because, in a classical video generation setting, all physical reasoning must take place simultaneously and exclusively within the diffusion process.We propose to resolve these issues by redistri",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "BrickFlow: Connectivity-Guided Brick Reconstruction",
+        "url": "http://arxiv.org/abs/2611.17321v1",
+        "abstract": "Given a set of LEGO parts and an image of an assembled object, our task is to infer the pose of each part to assemble the object. In contrast with traditional 3D reconstruction, doing so requires satisfying discrete physical constraints, which provide structure but render the problem combinatorial and highly sensitive to small pose errors. To learn a prior over how parts fit together, we train a s",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Spatial Foundry: A Multimodal Dataset for Spatial Intelligence",
+        "url": "http://arxiv.org/abs/2611.17318v1",
+        "abstract": "Spatial intelligence requires connecting visual observations to the geometry, objects, and persistent state of an environment. Images alone leave these relationships implicit, while disconnected annotations make it difficult to study appearance, camera motion, and scene changes under a common reference. We introduce Spatial Foundry, a collection of 5,280 furnished residential 3D scene configuratio",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "FLEX-LBP: Learning Local Binary Patterns with Exact Binary Inference for Texture Classification",
+        "url": "http://arxiv.org/abs/2611.17302v1",
+        "abstract": "Local Binary Patterns (LBP) remain among the most widely used texture descriptors, from industrial inspection to medical imaging. Yet their radius, sampling angles, color transform and thresholds are fixed by hand for each dataset. We present FLEX-LBP, which learns these parameters by backpropagation while every forward pass computes exact binary codes and hard histogram counts. A straight-through",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Consistent Video-to-Video Translation via Explicit Correspondences",
+        "url": "http://arxiv.org/abs/2611.17298v1",
+        "abstract": "Interactive video-to-video applications require real-time generation while maintaining long-range temporal consistency. However, recent methods achieve speed by restricting attention to a fixed-length causal window. This limits long-range consistency whenever relevant history falls outside the context window. To address this limitation, we introduce vid2vid-long, a correspondence-based approach gr",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Objects as Addresses: Instance Binding in Vision Transformer Attention",
+        "url": "http://arxiv.org/abs/2611.17240v1",
+        "abstract": "Humans naturally parse visual scenes into coherent individual objects rather than scattered features, a capability cognitive science calls object binding. While recent work shows that pretrained Vision Transformers (ViTs) intrinsically acquire this ability, how native self-attention computations mechanistically keep object instances separate remains unresolved. By studying this across eight pretra",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "MALNISI-Infused Graph Construction and Weighted Contrastive Loss based GAT for Unsupervised Representation Learning in HSI",
+        "url": "http://arxiv.org/abs/2611.17199v1",
+        "abstract": "Hyperspectral images (HSI) possess discriminating spectral characteristics with respect to land utilization due to high-dimensional information. Recently, unsupervised representation learning using graph neural networks has unveiled these utilization-specific complex spectral relations. This article has three main contributions. First, it proposes an index, the Mean Absolute Local Neighborhood Inv",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "eDMD: Endpoint Distribution Matching for Few-Step Diffusion Distillation",
+        "url": "http://arxiv.org/abs/2611.17194v1",
+        "abstract": "Distribution matching distillation (DMD) has emerged as a leading paradigm for distilling diffusion models into few-step students, where an auxiliary fake score model tracks the student's distribution and the discrepancy between the teacher and fake predictions drives the student toward the teacher. In multi-step distillation, although only the student's final output is delivered, existing methods",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Consensus Capture in Reference-Based UAV Video Stabilization: A Benchmark on Dynamic Urban Scenes",
+        "url": "http://arxiv.org/abs/2611.17190v1",
+        "abstract": "Reference-frame stabilization registers every frame of a hovering-drone video onto one reference frame, keeping object positions comparable. The registration pipelines it relies on are selected on feature-matching benchmarks in which only the camera moves. Over a busy intersection, vehicles moving together supply mutually consistent correspondences that can draw the robust homography estimate towa",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Neural Render Proxies for Interactive and Differentiable Lighting",
+        "url": "http://arxiv.org/abs/2611.17185v1",
+        "abstract": "Within the CG animation production pipeline, the challenges artists tackle in Lighting can be immense. Even minor adjustments require re-rendering massive scenes with slow offline renderers; global illumination has to be sampled and complex shaders have to be evaluated, leading to iteration times of minutes to hours per frame. To accelerate this process, we introduce a novel neural render proxy (N",
+        "domains": []
+      },
+      {
+        "source": "arxiv:cs.CV",
+        "title": "Validation-Guided Prompt Selection for Differential Morphing Attack Detection",
+        "url": "http://arxiv.org/abs/2611.17176v1",
+        "abstract": "Differential morphing attack detection (D-MAD) compares a trusted live capture with a document image that may contain a facial morph. We investigate whether labelled validation data can improve a frozen-parameter vision-language evaluator through prompt selection rather than model fine-tuning. Version~1 generates 50 candidate prompts and selects the top-ranked instruction using a security-oriented",
+        "domains": []
+      }
+    ],
+    "hf_papers": [
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-10",
+        "upvotes": 102,
+        "title": "Learning Heterogeneous Tactile Representation for General Dexterous Manipulation",
+        "url": "https://arxiv.org/abs/2611.12806",
+        "abstract": "LingBot-Touch is a tactile foundation model that learns a unified, extensible representation across heterogeneous tactile sensors, yielding plug-and-play tactile tokens that consistently enhance manipulation policies such as diffusion policy and VLA models.",
+        "ai_keywords": [
+          "tactile foundation model",
+          "unified representation",
+          "heterogeneous tactile data",
+          "tactile tokens",
+          "plug-and-play",
+          "policy models",
+          "diffusion policy",
+          "vision-language-action (VLA) models",
+          "π0.5",
+          "LingBot-VLA",
+          "embodied models",
+          "cross-sensor data",
+          "tactile learning",
+          "manipulation dexterity"
+        ],
+        "github_repo": "https://github.com/Robbyant/lingbot-touch",
+        "domains": [
+          "vla",
+          "dexterous",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-10",
+        "upvotes": 58,
+        "title": "WorldFoundry: Towards Unified Infrastructure for World Intelligence",
+        "url": "https://arxiv.org/abs/2611.10771",
+        "abstract": "WorldFoundry offers open-source infrastructure for reproducible inference and evaluation of generative world models across video, 3D/4D, embodied action, and interactive systems, with traceable evidence and benchmarks.",
+        "ai_keywords": [
+          "visual generative models",
+          "generative world model",
+          "predictive dynamical system",
+          "persistent history-conditioned representation",
+          "temporally coherent trajectories",
+          "counterfactual interventions",
+          "perceptual grounding",
+          "persistent state modeling",
+          "controllable transformation",
+          "dynamics-aware prediction",
+          "closed-loop interaction",
+          "video",
+          "3D and 4D",
+          "embodied action",
+          "interactive world systems",
+          "modality-specific adapters",
+          "evidence-aware scorecards",
+          "execution orchestration",
+          "artifact management",
+          "interactive visualization"
+        ],
+        "github_repo": "https://github.com/OpenEnvision/WorldFoundry",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-11",
+        "upvotes": 57,
+        "title": "World In-Context Learning for Agentic Robot Manipulation",
+        "url": "https://arxiv.org/abs/2611.12885",
+        "abstract": "Trained action policies write manipulation skill into network weights, tying what is learned to the distribution it is learned from. In-context learning (ICL) avoids this coupling but has not matched trained policies, because a demonstration recorded in another scene carries no feedback from the world the robot currently faces. We observe that what an agent learns in context is semantic, recording",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/ArcheOne-AI/RoboScript",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-10",
+        "upvotes": 57,
+        "title": "Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery",
+        "url": "https://arxiv.org/abs/2611.12762",
+        "abstract": "We introduce Sage-Taiyi, a metacognition-inspired architecture that uses accumulated scientific understanding to guide what to investigate next and how to investigate it. Through explicit monitoring and control, the system revises its understanding of evidence, assumptions, and unresolved questions, then uses these assessments to adapt research targets and select reusable reasoning methods. On Tai",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/Alpha-Innovator/Sage-Taiyi",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-09",
+        "upvotes": 53,
+        "title": "Toward the Era of Agentic Embodied Intelligence",
+        "url": "https://arxiv.org/abs/2611.09124",
+        "abstract": "An embodied multi-agent framework uses learned correction codes and a vision-language-action model with motion-aware history and latent world modeling to improve robot control, failure recovery, and training efficiency.",
+        "ai_keywords": [
+          "foundation models",
+          "embodied multi-agent framework",
+          "code as scaling interface",
+          "learned correction codes",
+          "corrective language",
+          "spatial evidence",
+          "execution history",
+          "action proposals",
+          "MetaBrain",
+          "training supervision",
+          "runtime guidance",
+          "correction encoder",
+          "adapter",
+          "policy weights",
+          "frozen weights",
+          "action model",
+          "A2-WLA",
+          "motion-aware history",
+          "latent world model",
+          "vision-language-action policy",
+          "action pretraining",
+          "task specialization",
+          "online correction",
+          "history-conditioned adapter",
+          "embodied learning",
+          "A2-MEAS",
+          "pi0.5 reference implementation"
+        ],
+        "github_repo": "https://github.com/AutoLab-SAI-SJTU/A2MEAS",
+        "domains": [
+          "vla",
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-13",
+        "upvotes": 49,
+        "title": "BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model",
+        "url": "https://arxiv.org/abs/2611.14815",
+        "abstract": "Driving world models aim to simulate how a scene unfolds under different ego actions. This requires plausible motion of surrounding vehicles as well as precise ego-trajectory control. Learning vehicle motion from perspective video alone is challenging because motion is entangled with appearance and vehicles can be occluded. Prior work therefore conditions video generation on layouts that specify v",
+        "ai_keywords": [],
+        "github_repo": "",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-13",
+        "upvotes": 38,
+        "title": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
+        "url": "https://arxiv.org/abs/2611.15131",
+        "abstract": "A reciprocal world model enables real-time full-duplex audiovisual interaction by jointly modeling intent and realization using autoregressive reasoning, synchronized attention, and dual rollout distillation.",
+        "ai_keywords": [
+          "Reciprocal World Model",
+          "Duo v1",
+          "full-duplex world model",
+          "autoregressive modeling",
+          "diffusion models",
+          "continuous interaction reasoning",
+          "participation decisions",
+          "Intent",
+          "Realization",
+          "chunk-specific conditions",
+          "token synchronization",
+          "unified timeline",
+          "module-specific attention masks",
+          "causal dependencies",
+          "distribution shift",
+          "dual rollout distillation",
+          "autoregressively generated Intent tokens",
+          "synthesized audiovisual histories",
+          "full-duplex interaction"
+        ],
+        "github_repo": "https://github.com/inclusionAI/Duo",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-13",
+        "upvotes": 26,
+        "title": "Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors",
+        "url": "https://arxiv.org/abs/2611.17060",
+        "abstract": "Large foundation models such as GPT-6 Astra and Claude Fable 5.1 have recently been shown to control robots directly from visual observations. They nevertheless remain brittle on long-horizon, contact-rich tasks in real-world environments. Further progress depends on two complementary resources: demonstrations of human behavior that supervise how tasks are performed, and interactive environments i",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/Ropedia/Ropedia-Xperience-2",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-11",
+        "upvotes": 26,
+        "title": "DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight",
+        "url": "https://arxiv.org/abs/2611.11166",
+        "abstract": "Dexterous manipulation requires rich spatial foresight over both the surrounding scene and the robot hand. Existing world-action models often acquire such predictive knowledge through explicit future prediction. We introduce DexForesight, a framework that learns spatial foresight implicitly by injecting dynamics-aware world representations into the latent space of a dexterous policy. During traini",
+        "ai_keywords": [],
+        "github_repo": "",
+        "domains": [
+          "vla",
+          "dexterous"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-10",
+        "upvotes": 23,
+        "title": "SWAM: Scaling World Action Models with Cross-Modal Alignment",
+        "url": "https://arxiv.org/abs/2611.12870",
+        "abstract": "World action models jointly predict video and actions conditioned on language. Existing studies focus primarily on architectures and training mechanisms, typically treating language-video alignment acquired through video pretraining as an established foundation. However, introducing action learning may impair this alignment. Principled guidance on data and supervision design for maintaining langua",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/shaaaaron/SWAM",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-09",
+        "upvotes": 19,
+        "title": "Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations",
+        "url": "https://arxiv.org/abs/2611.09382",
+        "abstract": "Weight-Space Programming can produce large localized accuracy gains and uneven cross-task transfer, but reliable editing remains inconsistent.",
+        "ai_keywords": [
+          "Weight-Space Programming",
+          "reasoning agents",
+          "neural network parameters",
+          "gradient-based model adaptation",
+          "editing trajectories",
+          "cross-task generalization",
+          "model scales",
+          "Qwen3.5-0.8B",
+          "Qwen3.5-9B",
+          "held-out evaluations",
+          "MATH-500",
+          "GPQA Diamond",
+          "IFEval",
+          "SciBench",
+          "checkpoint",
+          "SciCode",
+          "localized interventions",
+          "intervention discovery",
+          "cross-task transfer"
+        ],
+        "github_repo": "https://github.com/WSP-Scope/WSP-Scope-Project",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-10",
+        "upvotes": 16,
+        "title": "How Many Exposures Does a World Model Need? Learning Unseen Game Mechanics at Test Time",
+        "url": "https://arxiv.org/abs/2611.12324",
+        "abstract": "World models enable agents to plan and learn from imagined experience, but in an unfamiliar environment they must learn its mechanics from limited interaction. A mechanic is a rule for how an action or an interaction changes part of the environment. Each occurrence of a mechanic that the model observes is one exposure. We ask how many exposures a world model needs to predict the effects of a new e",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/third-intelligence/WARC",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-11",
+        "upvotes": 14,
+        "title": "ProTEUS: A mutation-resolved world model for closed-loop protein evolution",
+        "url": "https://arxiv.org/abs/2611.13348",
+        "abstract": "ProTEUS is a mutation-resolved world model that combines sequence, evolutionary, and structural representations with fast all-atom prediction and closed-loop feedback to guide protein evolution and improve mutant activity.",
+        "ai_keywords": [
+          "world model",
+          "mutation-resolved world model",
+          "pretrained",
+          "joint representation",
+          "MutationFormer",
+          "mutation-biased attention architecture",
+          "joint latent space",
+          "physics-constrained all-atom predictor",
+          "explicit geometric constraint enforcement",
+          "AlphaFold3",
+          "closed-loop experimental feedback",
+          "zero-shot mutation prediction",
+          "supervised fine-tuning",
+          "world-model framework"
+        ],
+        "github_repo": "https://github.com/yikunpku/ProTEUS",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-12",
+        "upvotes": 13,
+        "title": "Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds",
+        "url": "https://arxiv.org/abs/2611.08286",
+        "abstract": "Interactive Visual Gym enables closed-loop evaluation and training of visual interaction models by jointly simulating task environments and human users, exposing limitations in state-of-the-art VLMs and improving performance through closed-loop training.",
+        "ai_keywords": [
+          "visual interaction models",
+          "closed-loop evaluation",
+          "closed-loop training",
+          "joint simulation",
+          "executable task environments",
+          "human-aligned action spaces",
+          "persona-conditioned user simulation",
+          "out-of-plan behaviors",
+          "IVG-Bench",
+          "vision-language models (VLMs)",
+          "factual grounding",
+          "actionable guidance",
+          "response latency",
+          "interaction-quality metric",
+          "GRPO",
+          "Qwen3.5-4B"
+        ],
+        "github_repo": "https://github.com/SalesforceAIResearch/Interactive-Visual-Gym",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-13",
+        "upvotes": 12,
+        "title": "UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation",
+        "url": "https://arxiv.org/abs/2611.16517",
+        "abstract": "We present UniSpark-9B, a unified multimodal model that investigates hybrid attention for visual understanding and generation. Built on a Mixture-of-Transformer-Experts backbone with approximately 9B parameters in each branch, UniSpark combines full attention for explicit token interactions with GatedDeltaNet linear attention for compact context propagation. Autoregressive text prediction and visu",
+        "ai_keywords": [],
+        "github_repo": "",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-10",
+        "upvotes": 12,
+        "title": "SIRIS: Can LLMs Tell When Simulation Errors Matter in AI-Driven Systems Research",
+        "url": "https://arxiv.org/abs/2611.10329",
+        "abstract": "A benchmark probes whether large language models can determine when imperfect simulator limitations invalidate recommended system designs, finding that identifying a limitation does not ensure correct design choices and that review-based self-correction yields mixed results.",
+        "ai_keywords": [
+          "LLM agents",
+          "large language models",
+          "frontier LLMs",
+          "LLM serving design problems",
+          "self-correction",
+          "review turn"
+        ],
+        "github_repo": "",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-11",
+        "upvotes": 8,
+        "title": "Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies",
+        "url": "https://arxiv.org/abs/2611.14488",
+        "abstract": "Memory in vision-language-action policies can mistake pauses for progress because it is indexed by time, causing early stopping, while event-based indexing mitigates this without retraining.",
+        "ai_keywords": [
+          "vision-language-action (VLA) policies",
+          "memory-augmented VLA",
+          "RoboMME",
+          "temporal shortcut",
+          "time encoding",
+          "time-sampled memory",
+          "event-indexed memory",
+          "phantom progress",
+          "null event"
+        ],
+        "github_repo": "https://github.com/bennidict23/memory-clock",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-10",
+        "upvotes": 8,
+        "title": "Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation",
+        "url": "https://arxiv.org/abs/2611.01112",
+        "abstract": "Auriga, a task-agnostic agent harness, closes most of the planning-execution gap in zero-shot robot manipulation by combining explicit task beliefs, calibrated 3D measurements, dual-arm control, and execution monitoring, achieving state-of-the-art results on RoboDojo and RoboCasa365.",
+        "ai_keywords": [
+          "vision-language models",
+          "robot policies",
+          "zero-shot manipulation",
+          "task-agnostic agent harness",
+          "planning-execution gap",
+          "task belief",
+          "tool calls",
+          "synthesized multi-step Python programs",
+          "calibrated 3D measurements",
+          "finger-referenced dual-arm control",
+          "admission gateway",
+          "visual trajectory preview",
+          "stage tolerances",
+          "grasp bounds",
+          "in-place recovery",
+          "scene randomization",
+          "learned policies",
+          "VLA-assisted agents",
+          "composite tasks"
+        ],
+        "github_repo": "https://github.com/lose4578/Auriga",
+        "domains": [
+          "dexterous",
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-11",
+        "upvotes": 5,
+        "title": "DyCraft: An Agentic System for Long-Horizon 4D Scene Generation",
+        "url": "https://arxiv.org/abs/2610.40754",
+        "abstract": "DyCraft improves long-horizon 3D animation by decomposing it into planned static scenes, keyframe storyboards, and local motion authoring to reduce physical errors.",
+        "ai_keywords": [
+          "3D scene generation",
+          "articulated assets",
+          "long-horizon animations",
+          "physical plausibility",
+          "DyCraft",
+          "3D storyboard",
+          "key animation poses",
+          "motion authoring tools",
+          "spatiotemporal constraints"
+        ],
+        "github_repo": "https://github.com/jefftan969/dycraft",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-13",
+        "upvotes": 4,
+        "title": "TurtLES: A Large-Scale Benchmark for Turbulent 3D Neural PDE Surrogates",
+        "url": "https://arxiv.org/abs/2611.09567",
+        "abstract": "Machine-learning surrogates are increasingly used to accelerate computational fluid dynamics, yet progress is limited by the lack of benchmarks capturing realistic, time-dependent turbulent flows. We introduce TurtLES, a 14 TB dataset of 3D turbulent cylinder wakes in the shear-layer transition regime, computed via high-fidelity implicit large-eddy simulations. The dataset contains 400 trajectorie",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/itsakk/TurtLES",
+        "domains": [
+          "sim2real"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-10",
+        "upvotes": 4,
+        "title": "JoVox: Joint Hierarchical Flow Matching for Lightweight Voxel Generation",
+        "url": "https://arxiv.org/abs/2611.10690",
+        "abstract": "Generating high-fidelity voxels while keeping their lightweight nature remains an open problem in computer vision. Current generators are either high-fidelity but computationally heavy, or lightweight but of lower fidelity. Hierarchical methods keep the lightweight nature of voxels. However, their coarse levels, which decide where all finer cells can appear, are generated with the least informatio",
+        "ai_keywords": [],
+        "github_repo": "https://github.com/yuyujunjun/JoVox",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-13",
+        "upvotes": 2,
+        "title": "A Cross-Scenario Survey and Analysis of Self-Evolving Multimodal Agents",
+        "url": "https://arxiv.org/abs/2611.14256",
+        "abstract": "A survey analyzes why self-improvement mechanisms for multimodal agents transfer unevenly across reasoning, generation, navigation, and manipulation scenarios, framing them as trade-offs over scarce factors and task-structural resources.",
+        "ai_keywords": [
+          "multimodal agents",
+          "self-evolving multimodal agent",
+          "cross-scenario transfer",
+          "multimodal reasoning",
+          "multimodal generation",
+          "GUI and Web navigation",
+          "embodied manipulation",
+          "self-reference",
+          "self-evolving loop",
+          "experience generation",
+          "feedback acquisition",
+          "update consolidation",
+          "rollout count",
+          "feedback fidelity",
+          "fixed loops",
+          "task-structural resource",
+          "output equivalence",
+          "checkable outcomes",
+          "matched-budget measurements"
+        ],
+        "github_repo": "https://github.com/jingjing12110/SE-MMAgents",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "hf_papers",
+        "hf_date": "2026-11-12",
+        "upvotes": 2,
+        "title": "Bits or permutations? Spending a fixed inference budget on weight precision or on option-order averaging in small local language models",
+        "url": "https://arxiv.org/abs/2611.14413",
+        "abstract": "Local language models can save memory by storing weights in fewer bits, and they can reduce sensitivity to the order of answer options by averaging a few reorderings. We ask whether the first makes the second worse, and which is the cheaper way to spend a fixed budget. On Qwen3-0.6B and Qwen3-1.7B with simulated round-to-nearest weight quantization (8, 6, 4 and 3 bits, fp16 reference), read from t",
+        "ai_keywords": [],
+        "github_repo": "",
+        "domains": [
+          "embodied-chip"
+        ]
+      }
+    ],
+    "rss": [
+      {
+        "source": "rss",
+        "feed": "TechCrunch Robotics",
+        "kind": "media",
+        "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
+        "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+        "summary": "The startup, Proception, is taking a unique approach to collecting training data to tackle one of the hardest problems in robotics: hands.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+        "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+        "summary": "OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn't closed yet but is expected to in the coming weeks.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Investors break down how founders can raise a Series A today",
+        "url": "https://techcrunch.com/2026/10/22/investors-break-down-how-founders-can-raise-a-series-a-today/",
+        "summary": "Raising a Series A these days isn't so simple — top investors break down what founders need to know now.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Thiel Capital’s Jack Selby nabs stakes in hot startups like Etched through Arizona connections",
+        "url": "https://techcrunch.com/2026/07/02/thiel-capitals-jack-selby-nabs-stakes-in-hot-startups-like-etched-through-arizona-connections/",
+        "summary": "Selby's VC firm, Copper Sky Capital, is currently raising a $300 million second fund, according to a regulatory filing.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Whoop’s valuation just tripled to $10 billion",
+        "url": "https://techcrunch.com/2026/03/31/whoop-valuation-10b-series-g-fundraise/",
+        "summary": "The fitness tracking startup just closed a $575 million Series G with Cristiano Ronaldo and LeBron James among its investors. The obvious question looming over a round of this size at this valuation: Is an IPO coming?",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Modelence raises $3M to smooth out the vibe-coding stack",
+        "url": "https://techcrunch.com/2026/01/28/modelence-raises-13-million-to-smooth-out-the-vibe-coding-stack/",
+        "summary": "How do you build tooling for the AI software stack? A company called Modelence has an interesting answer.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "VC firm 2150 raises €210M fund to solve cities’ climate challenges",
+        "url": "https://techcrunch.com/2026/01/26/vc-firm-2150-raises-e210m-fund-to-solve-cities-climate-challenges/",
+        "summary": "Europe-based venture fund 2150 raised the money to invest in climate tech startups that help solve cities' carbon footprint.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Superorganism raises $25M to back biodiversity startups",
+        "url": "https://techcrunch.com/2026/01/13/superorganism-raises-25m-to-back-biodiversity-startups/",
+        "summary": "Superorganism backs companies across three categories: tech that slows or reverses extinction, startups that operate at the intersection of climate and biodiversity, and tools that enable conservationists to do their work more effectively.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "More than 100 new tech unicorns were minted in 2025 — here they are",
+        "url": "https://techcrunch.com/2026/01/12/at-least-36-new-tech-unicorns-were-minted-in-2025-so-far/",
+        "summary": "Using data from Crunchbase and PitchBook, TechCrunch tracked down the VC-backed startups that became unicorns so far this year.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Supabase hit $5B by turning down million-dollar contracts. Here’s why.",
+        "url": "https://techcrunch.com/video/supabase-hit-5b-by-turning-down-million-dollar-contracts-heres-why/",
+        "summary": "Vibe coding has taken the tech industry by storm, and it’s not just the Lovables and Replits of the world that are winning. The startups building the infrastructure behind them are cashing in too.  Supabase, the open source database platform that’s become the back end of choice for the vibe-coding w",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Sequoia unveils $950M in new early-stage funds as it strives to be ‘only as good as our next investment’",
+        "url": "https://techcrunch.com/2025/10/27/sequoia-unveils-950m-in-new-early-stage-funds-as-it-strives-to-be-only-as-good-as-our-next-investment/",
+        "summary": "The legendary firm launched a $750 million early-stage fund targeting Series A startups and a $200 million seed fund.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "Redwood Materials raises another $350M to power up its energy-storage business",
+        "url": "https://techcrunch.com/2025/10/23/redwood-materials-raises-another-350-million-to-power-up-its-energy-storage-business/",
+        "summary": "The round was led by Eclipse and saw participation from Nvidia's venture capital arm, NVentures.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Fundraising",
+        "kind": "finance",
+        "title": "A new search engine raises $1.1M to let obsessive fans dive down internet rabbit holes",
+        "url": "https://techcrunch.com/2025/10/03/a-new-search-engine-raises-1-1m-to-let-obsessive-fans-dive-down-internet-rabbit-holes/",
+        "summary": "Lore raises $1.1 million to build a personalized search engine for fandom culture.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+        "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+        "summary": "Nvidia poured tens of billions into AI startups under Huang. Without him at the helm, founders and VCs are bracing for smaller checks and lower valuations.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Norwest pushes deeper into AI with new $4B fund",
+        "url": "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/",
+        "summary": "This is the investment firm's largest fund to date.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Olaf Sakkers is betting he can beat the emerging-manager squeeze",
+        "url": "https://techcrunch.com/2026/11/11/olaf-sakkers-is-betting-he-can-beat-the-emerging-manager-squeeze/",
+        "summary": "Entering into the world of venture capital has never been easy, especially as a first-time fund manager. But it's especially daunting right now. Olaf Sakkers has spent the past five years proving that difficult doesn't mean impossible.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Proximal Ventures raises debut fund to back startups bringing AI to drug development",
+        "url": "https://techcrunch.com/2026/11/10/proximal-ventures-raises-debut-fund-to-back-startups-bringing-ai-to-drug-development/",
+        "summary": "Former SignalFire investor Sahir Raoof raises $27.5 million for new fund targeting AI in pharma.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Sequoia partners reportedly blindsided when Roelof Botha joined SpaceX board",
+        "url": "https://techcrunch.com/2026/11/08/sequoia-partners-reportedly-blindsided-when-roelof-botha-joined-spacex-board/",
+        "summary": "A new report claims Sequoia's recent changes undo the legacy of the firm's former steward.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Sequoia shutting down its Scouts program marks the end of an era",
+        "url": "https://techcrunch.com/2026/11/06/sequoia-shutting-down-its-scouts-program-marks-the-end-of-an-era/",
+        "summary": "Sequoia pioneered the scouts model and many VC firms followed suit, but a consensus now seems to be forming that the model has reached its limits in its current form.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "He arrested a hacker, then spent 18 months clearing his own name. Now he’s a cybersecurity VC.",
+        "url": "https://techcrunch.com/2026/11/05/the-ex-secret-service-agent-who-flipped-a-hacker-is-now-raising-a-second-250m-cybersecurity-fund/",
+        "summary": "Stephen Ward, a former Secret Service agent and Home Depot CISO, is preparing a second fund of roughly $250 million for Brightmind Partners.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Sequoia hits rewind, undoing 20 years of expansion",
+        "url": "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/",
+        "summary": "Sequoia is consolidating into a smaller, Bay Area–centered firm, shutting down the programs and offices it built during a 20-year expansion while announcing roughly $10 billion in new funds.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "TechCrunch Founder Summit 2026: Doors open at 9 a.m. ET in Boston",
+        "url": "https://techcrunch.com/2026/11/04/techcrunch-founder-summit-2026-todays-the-day/",
+        "summary": "Today is the day to join TechCrunch Founder Summit 2026 in Boston's SoWa Power Station. Register now to join this founder-focused conference today.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
+        "url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/",
+        "summary": "Cybersecurity-focused Ballistic Ventures is seeking to raise $360 million for a new flagship fund and another $130 million for a separate investment vehicle.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "The TechCrunch Founder Summit agenda is only half the reason to be in Boston on November 4",
+        "url": "https://techcrunch.com/2026/11/03/the-techcrunch-founder-summit-agenda-is-only-half-the-reason-to-be-in-boston-on-nov-4/",
+        "summary": "On November 4, TechCrunch Founder Summit 2026 brings founders and VCs to Boston's SoWa Power Station for practical insights and connections. Register before prices increase at the door.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "TechCrunch Venture",
+        "kind": "finance",
+        "title": "Tomorrow: TechCrunch Founder Summit takes over Boston and when pass rates increase",
+        "url": "https://techcrunch.com/2026/11/03/tomorrow-techcrunch-founder-summit-takes-over-boston-and-when-pass-rates-increase/",
+        "summary": "Secure your TechCrunch Founder Summit pass savings before prices increase tomorrow at 9 a.m. ET. Save up to $100 on your pass, and get a second for free.",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Crunchbase Data: Nvidia’s Startup Funding Deals Hit A Record. What’s Next After Huang?",
+        "url": "https://news.crunchbase.com/venture/huang-nvda-ai-startup-funding-record-2026/",
+        "summary": "Before it was thrust into crisis this week, Nvidia was steadily continuing its pace as one of the busiest startup investors around, including backing many of the biggest venture deals of 2026. We take a fresh look at where Nvidia and its venture arm NVentures have been investing and what the future ",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Week’s 10 Biggest Funding Rounds: Agentic AI And Infrastructure Are Still On A Roll",
+        "url": "https://news.crunchbase.com/venture/biggest-startup-funding-rounds-agentic-ai-infrastructure-mirendil-mercor/",
+        "summary": "It was another big week for AI-related startup financings. Mirendil, a developer of agentic AI for R&D, led the pack with a $1 billion series A, followed by Mercor, which secured $750 million to connect AI developers with human experts.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Protein Startups Are Selling Lots Of Snacks And Drinks. Our Sample Tasting Found Most Neither Great Nor Horrible",
+        "url": "https://news.crunchbase.com/agtech-foodtech/protein-startup-snacks-drinks-sample-taste/",
+        "summary": "As we chronicled earlier this week, both startups and established food brands are making it simpler than ever to up protein intake. From sodas to snack bars to ice cream, it’s now possible to get a fix of this coveted macronutrient with foods and drinks more commonly associated with sugar, starch an",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "How Founders Can Reduce Platform Risk Before It Threatens Growth",
+        "url": "https://news.crunchbase.com/ai/startup-founders-reduce-platform-risk-filippenko-intch/",
+        "summary": "Founders should treat dependence on app stores as infrastructure risk, since a sudden removal can disrupt customer access, subscriptions and revenue with no reliable path to reinstatement. Sharing his experience, Yakov Filippenko, founder and CEO of Intch, suggests that building and testing alternat",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "VCs Are Still Chasing Protein, Even As Fake Meat Falls Out Of Favor",
+        "url": "https://news.crunchbase.com/venture/protein-startups-raise-funding-medici/",
+        "summary": "Recent startup investment has shifted away from meat substitutes and toward stuffing more protein into other packaged foods and drinks. It’s a fad that’s obvious on supermarket shelves, where startups and established brands alike relentlessly tout the added protein in their noodles, pancakes, cereal",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Exclusive: Nubank Alum Raises $14M For Colombia’s Palomma To Tackle Rent Payments, Landlord Financing",
+        "url": "https://news.crunchbase.com/fintech/nubank-alum-colombia-startup-palomma-ai-rental-services/",
+        "summary": "Colombia-based startup, Palomma, has raised $10 million in Series A funding led by Mexican venture firm Cometa to expand its financial services business for landlords, tenants and property managers, Crunchbase News has exclusively learned.",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Anthropic Seeks Record $88.5B Tied To Public Market Debut",
+        "url": "https://news.crunchbase.com/ai/anthropic-record-ipo-ant-public-market-debut-spcx/",
+        "summary": "Anthropic is seeking to secure up to $88.5 billion in its planned IPO and a concurrent private placement, potentially making it the largest-ever fundraise tied to a public market debut. On Tuesday, the AI giant submitted an updated S-1 filing for its upcoming public offering, unveiling new details i",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "The Crunchbase Unicorn Board Tops 1,900 Companies In October, With 34 Companies Joining — Half Under 4 Years Old",
+        "url": "https://news.crunchbase.com/venture/october-2026-unicorn-board-gains-34-tops-1900-ai-defense/",
+        "summary": "A total of 34 companies joined The Crunchbase Unicorn Board in October, adding more than $96 billion in value and $14.8 billion in total funding to the board. The board also reached a new record of 1,900 private companies last month, along with a new record for the U.S. with more than 1,000 private ",
+        "domains": [
+          "vla",
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Startup Founders Are Using AI To File Patents. Here’s Where DIY Becomes A Liability.",
+        "url": "https://news.crunchbase.com/ai/startup-founder-diy-patents-legal-liabiity-drapkin-mutter-landfall/",
+        "summary": "AI can help startups reduce patent preparation costs, but DIY applications may overlook critical issues. In this guest commentary, attorneys Michael Drapkin and Nathan Mutter of AI-Native law firm Landfall IP, argue that combining AI with legal expertise can produce more efficient, commercially valu",
+        "domains": []
+      },
+      {
+        "source": "rss",
+        "feed": "Crunchbase News",
+        "kind": "finance",
+        "title": "Series A In 2026: Capital Is Flowing Faster, But Fewer Startups Are Making The Cut",
+        "url": "https://news.crunchbase.com/venture/series-a-2026-startup-capital-up-deals-steady/",
+        "summary": "More money is pouring into Series A rounds, but it isn’t opening the door to more startups. U.S. companies have raised $42 billion at that stage this year through October, up roughly 60% year over year, while deal counts remain on pace with the past few years, Crunchbase data shows.",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Video Friday: NASA PROMISEs a New Moon Rover",
+        "url": "https://spectrum.ieee.org/video-friday-moon-rover-promise",
+        "summary": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at   IEEE Spectrum   robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please   send us your events   for inclusion.    Humanoids 2026 : 6–9 December 2026, SANTA CL",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Are Drone Ports the Next Annoying Tech Neighbor?",
+        "url": "https://spectrum.ieee.org/drone-delivery-noise",
+        "summary": "Rick and Marcia LeCompte loved to watch the Cooper’s hawks that frequented a sweet-gum tree in their yard in Baton Rouge, La. But this October, the hawks were gone. Marcia LeCompte is convinced the birds were scared away by the same flying robots that have been vexing the couple since early Septembe",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Video Friday: Spot Plays to Show Its Whole-Body Manipulation",
+        "url": "https://spectrum.ieee.org/video-friday-whole-body-manipulation",
+        "summary": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at   IEEE Spectrum   robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please   send us your events   for inclusion.    CoRL 2026 : 9–12 November 2026, AUSTIN   Hum",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Your Robot’s Safety Functions Already Work. What If the Input Lies?",
+        "url": "https://spectrum.ieee.org/ai-robot-safety-cybersecurity-vicone",
+        "summary": "This article is brought to you by  VicOne .      A mobile robot slows for someone in a hallway. A collaborative arm eases its movement as a worker approaches. A humanoid pauses to let a person pass. Each response depends on information about the robot or its surroundings: a distance reading, a posit",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "The Robot I Didn’t Expect to Build",
+        "url": "https://spectrum.ieee.org/agility-robotics-digit-5-redesign",
+        "summary": "Agility Robotics  , the  company I cofounded out of  my robotics lab at Oregon State University  in 2015, has just launched  Digit 5 . It’s designed to be the first humanoid robot that can safely and economically do useful work at scale, allowing us to bring tens of thousands of humanoid workers int",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "IEEE Spectrum Robotics",
+        "kind": "media",
+        "title": "Q&A: Mars Perseverance Rover Sets a Distance Record",
+        "url": "https://spectrum.ieee.org/mars-rover-distance-record",
+        "summary": "On 11 October , the  Perseverance  rover completed a drive that brought its  total distance traveled  on Mars to 28.10 miles (45.22 kilometers). This is a new record for Mars rovers, enabled in large part by  Perseverance ’s ability to drive with much more autonomy than its predecessors. Over the pa",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "BAIR Blog",
+        "kind": "analysis",
+        "title": "Gradient-based Planning for World Models at Longer Horizons",
+        "url": "http://bair.berkeley.edu/blog/2026/04/20/grasp/",
+        "summary": "<!-- twitter -->\n<meta name=\"twitter:title\" content=\"Gradient-based Planning for World Models at Longer Horizons\" />\n\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n\n<meta name=\"twitter:image\" content=\"https://bair.berkeley.edu/static/blog/grasp/pusht_zoomout.gif\" />\n\n<meta name=\"keyword",
+        "domains": [
+          "embodied-model"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Humble Robotics raises $51 million to expand autonomous electric freight operations",
+        "url": "https://roboticsandautomationnews.com/2026/11/14/humble-robotics-raises-51-million-to-expand-autonomous-electric-freight-operations/107110/",
+        "summary": "Humble Robotics, which specializes in developing autonomy for freight, has announced a $51 million Series A, bringing its total funding to $75 million in less than a year since its founding. The round was led by Obvious Ventures with participation from insiders Eclipse, Energy Impact Partners and ot",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Neura Robotics partners with E.ON to bring humanoid robots to energy infrastructure",
+        "url": "https://roboticsandautomationnews.com/2026/11/14/neura-robotics-partners-with-e-on-to-bring-humanoid-robots-to-energy-infrastructure/107100/",
+        "summary": "Neura Robotics, E.ON and German energy company enviaM have announced a partnership to develop physical AI applications for electricity networks, with initial real-world trials planned for 2027. The collaboration will focus on using intelligent robots to inspect and monitor energy infrastructure, inc",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Expoline completes international logistics project for humanoid robots",
+        "url": "https://roboticsandautomationnews.com/2026/11/14/expoline-successfully-completes-multimodal-logistics-project-for-advanced-physical-ai-robots/107092/",
+        "summary": "Expoline, a South Korean specialist in international exhibition and special cargo logistics, has successfully completed a multimodal transportation and on-site logistics project involving advanced humanoid robots developed by a global physical AI robotics company. The project supported the company’s",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "Why Build a Humanoid Robot From the Sensor Up? The Thinking Behind GENTO’s CoRL 2026 Debut",
+        "url": "https://roboticsandautomationnews.com/2026/11/13/why-build-a-humanoid-robot-from-the-sensor-up-the-thinking-behind-gentos-corl-2026-debut/107075/",
+        "summary": "At CoRL 2026 in Austin, GENTO showed humanoid robots and a new dexterous hand that sit on top of a stack Tianji Intelligence has been building since 2015, starting with a single component most people never see. Most conversations about humanoid robots start with the AI model. Far fewer start with th",
+        "domains": [
+          "dexterous",
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robotics & Automation News",
+        "kind": "media",
+        "title": "What Makes Modern Dentistry an Appealing Career Choice",
+        "url": "https://roboticsandautomationnews.com/2026/11/13/what-makes-modern-dentistry-an-appealing-career-choice/107065/",
+        "summary": "Modern dentistry combines patient care, practical problem-solving, and opportunities to work with evolving technology. It offers several professional directions, from general practice to education and research, rather than one fixed career track. For anyone exploring a modern dentistry career, the a",
+        "domains": [
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robohub",
+        "kind": "analysis",
+        "title": "AIhub coffee corner: Are humanoids the future of embodied AI?",
+        "url": "https://robohub.org/aihub-coffee-corner-are-humanoids-the-future-of-embodied-ai/",
+        "summary": "The AIhub coffee corner captures the musings of AI experts over a short conversation. This month we ask whether humanoids are the future of robotics. How has the technology evolved recently, and what can we expect in the years to come? Joining the conversation this time are: Joydeep Biswas (Universi",
+        "domains": [
+          "market"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robohub",
+        "kind": "analysis",
+        "title": "Robot Talk Episode 169 – Robot sensing inspired by nature, with Dexter Shepherd",
+        "url": "https://robohub.org/robot-talk-episode-169-robot-sensing-inspired-by-nature-with-dexter-shepherd/",
+        "summary": "Claire chatted to Dexter Shepherd from the University of Sussex about using artificial intelligence to help robots understand and adapt to their environment. Dexter Shepherd is a Postdoctoral Researcher at the University of Sussex, exploring machine learning for bio-inspired tactile sensing and robo",
+        "domains": [
+          "vla",
+          "dexterous",
+          "embodied-chip"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robohub",
+        "kind": "analysis",
+        "title": "Robots in society, business and culture: October 2026",
+        "url": "https://robohub.org/robots-in-society-business-and-culture-october-2026/",
+        "summary": "The biohybrid robot pushes off from the ground as soon as it is stimulated by an electrical impulse. Credit: Nature Communications (2026). By Emmet Cole In our monthly series, we showcase a selection of robotics stories from society, business, research and culture, as we track the field’s ongoing jo",
+        "domains": [
+          "vla"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robohub",
+        "kind": "analysis",
+        "title": "Robot Talk Episode 168 – Advancing robotics with novel electronics, with Zlatka Stoeva",
+        "url": "https://robohub.org/robot-talk-episode-168-advancing-robotics-with-novel-electronics-with-zlatka-stoeva/",
+        "summary": "Claire chatted to Zlatka Stoeva from DZP Technologies about flexible, stretchable and soft printed electronics for dexterous robots. Zlatka Stoeva is a founder and managing director of DZP Technologies, a Cambridge-based company specialising in advanced materials and novel forms of electronics. Zlat",
+        "domains": [
+          "dexterous"
+        ]
+      },
+      {
+        "source": "rss",
+        "feed": "Robohub",
+        "kind": "analysis",
+        "title": "Robots in society, business and culture: September 2026",
+        "url": "https://robohub.org/robots-in-society-business-and-culture-september-2026/",
+        "summary": "A walking robotic hand, from Fingers as Legs: Learning Self-Supported Locomotion and Manipulation with an Anthropomorphic Hand, Amirhossein Kazemipour, Hehui Zheng, Robert Katzschmann. By Emmet Cole In our monthly series, we showcase a selection of robotics stories from society, business, research a",
+        "domains": [
+          "dexterous",
+          "embodied-model"
+        ]
+      }
+    ],
+    "cn_rss": [
+      {
+        "source": "cn_rss",
+        "feed": "IT之家",
+        "kind": "cn_broad",
+        "title": "上汽奥迪 AUDI E7X 计划于 12 月 OTA 推送升级 Momenta R7 世界模型",
+        "url": "https://www.ithome.com/1/027/218.htm",
+        "summary": "<p data-vmark=\"81cf\">IT之家 11 月 14 日消息，在昨日举行的 AUDI DAY 上，官方宣布奥迪 E7X 将搭载由 Momenta R7 世界模型赋能的奥迪全景辅助驾驶，计划于 12 月通过 OTA 推送上线。</p><p data-vmark=\"226c\" style=\"text-align: center;\"><img src=\"https://img.ithome.com/newsuploadfiles/2026/11/04081c22-4794-47ed-b14c-a8cefba19967.jpg\" w=\"1440\" h=\"812\" data-weibo=\"",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "黄仁勋辞职，英伟达33年首换帅，市值蒸发超3万亿",
+        "url": "https://www.qbitai.com/2026/11/509995.html",
+        "summary": "一个时代结束了",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "MEET2027含金量再加码：AI4S/量子计算/AI Infra…第二批嘉宾强势来袭！",
+        "url": "https://www.qbitai.com/2026/11/509827.html",
+        "summary": "12.9 北京，来MEET2027现场",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "中国AI突破复杂肺癌诊疗！中美医疗圈集体坐不住了",
+        "url": "https://www.qbitai.com/2026/11/509796.html",
+        "summary": "250名国内顶尖三甲医院医生联合评测",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "比亚迪第1900万辆新能源汽车下线，科技新奢旗舰SUV方程豹钛9开启预订",
+        "url": "https://www.qbitai.com/2026/11/509730.html",
+        "summary": "比亚迪第1900万辆新能源汽车在西安工厂正式下线",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "从仰望极速新纪录和鼎曜全球发布 看比亚迪的国际化与高端化之路",
+        "url": "https://www.qbitai.com/2026/11/509716.html",
+        "summary": "比亚迪正在把规模优势转化为技术与品牌价值",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "比亚迪与神州租车首批闪充车及闪充站投放仪式顺利举行，战略合作落地兑现，闪充中国再次提速",
+        "url": "https://www.qbitai.com/2026/11/509710.html",
+        "summary": "2026年11月10日，比亚迪与神州租车首批闪充车及闪充站投放仪式在山东济南隆重举办",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "高难盲测超越GPT-6-Astra与Opus-5！无界前沿开源Fx-Bio-1031，把RSI带进生命科学",
+        "url": "https://www.qbitai.com/2026/11/509663.html",
+        "summary": "数据不出域、本地可部署",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "openJiuwen发布RSI原生AgentOS，让Agent自由变身，持续迭代！",
+        "url": "https://www.qbitai.com/2026/11/509653.html",
+        "summary": "想要什么功能，让Agent自己开发",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "特斯拉和SpaceX最快下月合并",
+        "url": "https://www.qbitai.com/2026/11/509613.html",
+        "summary": "马斯克帝国终极形态。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "量子位",
+        "kind": "cn_media",
+        "title": "中国机器人学会隔墙“递眼色”！成功率从0飙到100%，组队干活不烧心",
+        "url": "https://www.qbitai.com/2026/11/509614.html",
+        "summary": "信息少传80%，准确率反而提高",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "百度词元所发布首日：供应商暴增超100家，客户新增超1000家",
+        "url": "https://www.leiphone.com/category/industrynews/cqPXhF38rM4VcVa7.html",
+        "summary": "11月14日，从百度获悉，百度词元所发布首日，新增申请入驻的供应商已超过100家，新增超过1000家客户接入。     词元所在11月12日举行的百度世界2026上正式发布，百度创始人李彦宏将其称为“大模型的交易所”。据介绍，词元所一端汇聚模型和模型提供商，另一端服务企业和个人，让用户便捷地找到、购买和使用可信的模型Token。        词元所主打验真与征信两大能力：模型入平台前需通过模型指纹比对、模型能力测试、性能指标与可用性测试等准入核验，上线后接受定期抽检拨测与全链路实时监测，相关结果沉淀为供应商的信用评级。     李彦宏提到，今年前9个月几乎每天都有不止一款新模型发布，调用需求",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "浙大彭思达：从元宇宙到具身智能，一个三维视觉研究者的八年 | 世界模型50人",
+        "url": "https://www.leiphone.com/category/ai/lpK3LQWqmpZP8jcG.html",
+        "summary": "八年研究，两个落地系统，超六万GitHub Stars。                                                 作者丨   李秋悦                     编辑丨  吴   彤                                                                                                                            一支女团跳舞，镜头不必再听导演安排，观众甚至能看到拍摄时不存在的机位。    传统MV拍摄，摄影机架在哪里，观众看到的",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "独家｜燧原科技首席生态官李星宇离职",
+        "url": "https://www.leiphone.com/category/chips/G6AiPuplIGyPkaQL.html",
+        "summary": "作者｜包永刚    编辑｜刘伟   雷峰网独家获悉，燧原科技首席生态官李星宇已于近日离职。他离职后已入读港大-北大联合DBA博士项目，但尚未披露下一步职业计划。  李星宇拥有超过20年的半导体行业从业经验，工作经历涵盖云端AI计算芯片、自动驾驶AI芯片、智能座舱芯片等领域。  加入燧原科技之前，他曾在地平线任职8年，担任生态发展与战略规划副总裁，是地平线创始管理团队成员。更早之前，他曾任职于恩智浦半导体。  从地平线的创始管理团队成员，到燧原科技首席生态官，李星宇在企业战略规划和产业生态建设方面积累了丰富经验。他先后任职的地平线与燧原科技，分别于2024年10月和2026年9月上市。  据雷峰",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "9.99万的ID.ERA 5X，大众开始用中国效率打价格战",
+        "url": "https://www.leiphone.com/category/transportation/vNdfiZqSJgLMJc3M.html",
+        "summary": "从过去全球技术导入中国，转向中国本土研发定义产品，并反哺全球，大众在华的研发模式迎来的关键转身，集中在一款新车型中。  11月12日，上汽大众ID.ERA 5X正式上市，限时权益价9.99万起，共推出四款配置。定位都市纯电SUV，瞄准年轻用户与家庭市场。     作为一款主打高性价比的紧凑型纯电SUV，上汽大众ID.ERA 5X是德系品质与中国智能共同发力的代表。  新车车长4560mm，但轴距达到  2815mm ，采用短前后悬设计，把车轮推向四角，主打“小车身、大空间”，后排腿部空间比较宽裕。  德系车的安全品质也严格呈现。全系标配 83%高强度钢 的笼式车身，关键受力部位采用热成型钢补强",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "独家丨港大孵化的半导体材料公司，融资数千万",
+        "url": "https://www.leiphone.com/category/weiwu/DewyIGiyxQl09nUM.html",
+        "summary": "一个发表于《Nature》的技术，能在三步剥出晶圆级薄膜，公司获耀途独家投资。              作者丨陈玘凡           编辑    丨吴优                         雷峰网    ·鲸犀独家获悉，    半导体材料公司钻耐科思科技（DiamNEX）已完成  数千万元  新一轮融资，由耀途资本独家投资。         钻耐科思（DiamNEX）成立于2025年，由  香港大学孵化  ，专注于金刚石半导体和量子技术的研发、生产与商业化应用。创始人褚智勤是港大电机与计算机工程系副教授、副系主任，在金刚石方向论文超80篇、专利17项；科学顾问来自港大、港科大",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "海尔热水器双11战报：京东天猫双平台销量TOP1",
+        "url": "https://www.leiphone.com/category/industrynews/pDERNZsb2r8U4vS5.html",
+        "summary": "随着双11落幕，热水器市场也结束了新一轮换新热潮。从近两年的用户需求来看，热水器不再只看重热水供给，而是更加关注使用安全、沐浴水质与维保省心，家庭用水的健康化、场景化、智能化成为选购核心标尺。激烈角逐之中，海尔热水器脱颖而出，拿下京东、天猫双平台热水器销量 TOP1，电热、燃热双线领跑，用亮眼战绩印证市场对海尔全屋用水方案的认可。     这份成绩的背后，是海尔持续深耕AI智慧用水场景，瞄准家庭用水隐忧，将创新科技落地到日常洗浴带来的成果。  使用传统金属胆电热水器时，要定期预约师傅上门更换镁棒、清洗内胆；内胆维护不及时，水垢、镁渣、细菌就容易积存在内胆中，混在水中流出，皮肤容易发痒、敏感。海",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "中金公司与蚂蚁集团达成战略合作 共探AI赋能财富管理",
+        "url": "https://www.leiphone.com/category/industrynews/U7WtbV9kyb90UuZ0.html",
+        "summary": "11月13日，中国国际金融股份有限公司（简称“中金公司”）与蚂蚁科技集团股份有限公司（简称“蚂蚁集团”）签署战略合作协议。  双方将结合中金公司在专业投研、金融服务等方面的积累，以及蚂蚁集团在人工智能、行业生态、客户运营等方面的优势，围绕金融大模型技术创新、AI赋能财富管理、客户全生命周期服务等领域开展合作，共同探索“AI+金融”创新路径。     中金公司党委副书记、副董事长、总裁王曙光（右二），蚂蚁集团首席执行官、蚂蚁数科董事长韩歆毅（左二）出席并见证签约仪式。中金公司党委委员、中金财富党委书记、总裁王建力（右一），蚂蚁集团资深副总裁、蚂蚁数科CEO赵闻飙（左一）代表双方签署协议。  随着",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "独家丨一家主动灭火的智慧消防公司，融资超千万",
+        "url": "https://www.leiphone.com/category/weiwu/c3euXbtYsl0O6fm2.html",
+        "summary": "把 AI 用在“水火之间”——菲思拓的整体方案，已接入超三万家单位。        作者丨      陈玘凡             编辑    丨吴优                         雷峰网·鲸犀独家获悉，做主动灭火的智慧消防公司菲思拓已完成千万级天使轮融资，投资方为北京国润智投科技有限公司。      菲思拓  已经开启新一轮融资，  投前估值 3 亿元，本轮资金意在进行产品研发、市场拓展和推动产能落地。      创始人兼 CEO 顾永峰有 20 年消防行业经验，曾任喜利得中国区域经理、STI 中国全国销售总监；团队拥有消防、材料、loT 等复合背景，2025 年公司  ",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "美团陈一方：2026洗浴行业线上化率超20%",
+        "url": "https://www.leiphone.com/category/industrynews/reILtCnNdcvKB3fi.html",
+        "summary": "11月13日，2027美团洗浴指南在沈阳发布。美团服务零售乐生活业务部负责人陈一方介绍，中国洗浴行业正呈现出新发展气象，2026年洗浴行业线上化率已超20%。越来越多洗浴商户把美团作为承接多元消费需求的主阵地，更多门店特色服务、多种供需组合产品在线上同步首发。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "解读丨不插电的宠物梳毛器，凭什么拿下三千家海外门店？",
+        "url": "https://www.leiphone.com/category/weiwu/Hxr2CvehePVKjS4m.html",
+        "summary": "用专利，PawSwing 在宠物梳毛器品类画了一个大圈。          作者丨陈玘凡        编辑丨吴优                         雷峰网·鲸犀获悉，宠物智能硬件公司「橘猫宇宙」近日完成数千万元Pre-A轮融资，高秉强教授及旗下高锋耐心基金、前海创新投资、常垒创投等持续加注，     并同步开启新一轮融资     。资金将主要用于技术创新、产品迭代、专利体系建设以及全球线下渠道网络拓展。      橘猫宇宙（PawSwing）的核心产品 PawSwing Neo 是一款被动式猫窝梳毛收集器，利用猫喜欢钻洞的天性，在进出猫窝时，通过机械结构直接梳毛，把脱掉的毛进行",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "英伟达博客发声：她不一样，她懂显卡 ( bushi )，她懂端到端！",
+        "url": "https://www.leiphone.com/category/ai/1jG5k34DSlHSSJE9.html",
+        "summary": "她叫Alpamayo 2 Edge，因果推理结合扩散动作，端到端输出闭环表现提升 48.9%。                                                 作者丨   郑佳美                     编辑丨岑   峰                                                                                                                            点开前，你以为老黄家的惊天大瓜又有了什么后续； 点开后才发现：这个“她”连人都不是。",
+        "domains": []
+      },
+      {
+        "source": "cn_rss",
+        "feed": "雷锋网",
+        "kind": "cn_media",
+        "title": "40 亿参数模型拿下 6 个评测第一，西湖大学团队押注「概念世界模型」",
+        "url": "https://www.leiphone.com/category/academic/nhzldlwI6rJVyXIl.html",
+        "summary": "西湖世界模型研究中心成立，施一公亲自揭牌。                                                  作者丨   张岂萍                     编辑丨  幸丽娟                                                                                                                            世界模型赛道已经不缺创业公司。    海外李飞飞、Yann LeCun 等学术大佬亲自下场，国内极佳视界、逆矩阵、流形空间等创业公司高",
+        "domains": []
+      }
+    ],
+    "markets": [
+      {
+        "sym": "TSLA",
+        "name": "特斯拉(Optimus)",
+        "price": 390.22,
+        "pct_5d": 3.22,
+        "currency": "USD"
+      },
+      {
+        "sym": "ISRG",
+        "name": "直觉外科(手术机器人)",
+        "price": 443.59,
+        "pct_5d": -3.68,
+        "currency": "USD"
+      },
+      {
+        "sym": "ABB",
+        "name": "ABB(工业机器人)",
+        "_error": "HTTP Error 404: Not Found"
+      },
+      {
+        "sym": "SYM",
+        "name": "Symbotic(仓储机器人)",
+        "price": 34.83,
+        "pct_5d": -7.83,
+        "currency": "USD"
+      },
+      {
+        "sym": "SERV",
+        "name": "Serve Robotics(配送)",
+        "price": 2.62,
+        "pct_5d": -22.71,
+        "currency": "USD"
+      },
+      {
+        "sym": "PATH",
+        "name": "UiPath(自动化)",
+        "price": 13.27,
+        "pct_5d": 2.23,
+        "currency": "USD"
+      },
+      {
+        "sym": "NVDA",
+        "name": "英伟达(机器人算力)",
+        "price": 162.85,
+        "pct_5d": -8.85,
+        "currency": "USD"
+      },
+      {
+        "sym": "9618.HK",
+        "name": "京东(物流机器人)",
+        "price": 107.0,
+        "pct_5d": -4.72,
+        "currency": "HKD"
+      }
+    ],
+    "cn_markets": [
+      {
+        "secid": "1.688836",
+        "name": "宇树科技",
+        "market": "A股",
+        "price": 696.0,
+        "pct_5d": -0.7,
+        "currency": "CNY"
+      },
+      {
+        "secid": "116.09880",
+        "name": "优必选",
+        "market": "港股",
+        "price": 72.35,
+        "pct_5d": -2.89,
+        "currency": "HKD"
+      },
+      {
+        "secid": "116.09660",
+        "name": "地平线机器人",
+        "market": "港股",
+        "price": 3.75,
+        "pct_5d": -2.72,
+        "currency": "HKD"
+      },
+      {
+        "secid": "0.300124",
+        "name": "汇川技术",
+        "market": "A股",
+        "price": 53.45,
+        "pct_5d": 0.64,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.002747",
+        "name": "埃斯顿",
+        "market": "A股",
+        "price": 29.05,
+        "pct_5d": -3.01,
+        "currency": "CNY"
+      },
+      {
+        "secid": "1.688017",
+        "name": "绿的谐波",
+        "market": "A股",
+        "price": 281.8,
+        "pct_5d": -0.75,
+        "currency": "CNY"
+      },
+      {
+        "secid": "0.002230",
+        "name": "科大讯飞",
+        "market": "A股",
+        "price": 37.12,
+        "pct_5d": -0.46,
+        "currency": "CNY"
+      }
+    ],
+    "errors": [
+      "rss VentureBeat AI: HTTP Error 429: Too Many Requests"
+    ],
+    "counts": {
+      "hn": 4,
+      "arxiv": 60,
+      "hf_papers": 23,
+      "rss": 52,
+      "cn_rss": 23,
+      "markets": 7,
+      "cn_markets": 7,
+      "errors": 1
+    }
+  },
+  "curated": {
+    "title_date": "2026-W46 (11-07 ~ 11-14)",
+    "window": "2026-11-07 ~ 2026-11-14",
+    "highlights": [
+      "异构触觉表征开始以可插拔 token 进入扩散策略与 VLA，传感器迁移正从硬件适配问题转为统一表征问题：[感知层]",
+      "RoboScript 让操作策略在当前世界中以示范进行上下文学习，尝试解除技能与训练分布的强绑定：[规划层]",
+      "A2-MEAS 将纠错语言、运动历史和潜在世界模型接入 VLA 的训练与运行时，聚焦长任务失败恢复：[端到端VLA]",
+      "物流自主驾驶融资与能源设施人形机器人试点同步出现，具身商业化继续向具体、高价值场景收敛：[市场/产业]"
+    ],
+    "domains": [
+      {
+        "id": "vla",
+        "emoji": "1️⃣",
+        "name": "VLA（视觉-语言-动作模型）",
+        "items": [
+          {
+            "title": "A2-MEAS：以纠错码提升 VLA 的恢复能力",
+            "summary": "该框架将学习到的纠错语言、运动感知历史与潜在世界模型接入 VLA，在训练监督和运行时共同修正动作提案，面向控制失败恢复；代码已公开。[端到端VLA]",
+            "url": "https://arxiv.org/abs/2611.09124",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "SWAM：以跨模态对齐扩展世界动作模型",
+            "summary": "研究语言条件下联合预测视频与动作的世界动作模型，指出引入动作学习会破坏既有语言-视频对齐，并提出数据与监督设计来维持该基础能力；代码已公开。[端到端VLA]",
+            "url": "https://arxiv.org/abs/2611.12870",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "VLA 记忆的时间捷径问题",
+            "summary": "研究发现按时间索引的记忆会把停顿误判为任务进度而导致提前结束，采用事件索引可在不重训模型的条件下缓解这一问题；代码已公开。[端到端VLA]",
+            "url": "https://arxiv.org/abs/2611.14488",
+            "source": "hf_papers"
+          }
+        ]
+      },
+      {
+        "id": "dexterous",
+        "emoji": "2️⃣",
+        "name": "灵巧手 / 灵巧操作",
+        "items": [
+          {
+            "title": "LingBot-Touch：统一异构触觉表征服务灵巧操作",
+            "summary": "触觉基础模型从多种传感器学习统一、可扩展的表示，生成可插拔触觉 token 以增强扩散策略、VLA 与 pi0.5 等操作策略，降低跨传感器迁移成本；代码已公开。[感知层]",
+            "url": "https://arxiv.org/abs/2611.12806",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "RoboScript：在当前世界中进行操作上下文学习",
+            "summary": "方法将示范中的语义经验与机器人当前所处世界的反馈结合，以 in-context learning 执行操作技能，试图突破已训练策略对原始训练分布的绑定；代码已公开。[规划层]",
+            "url": "https://arxiv.org/abs/2611.12885",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "FORGE：力感知的多粒度人形移操控制",
+            "summary": "面向频繁接触下的人形移动与操作协同，提出从速度导航到精细接触的粗到细命令空间，统一处理平衡、精度与接触感知。[控制层·BC]",
+            "url": "http://arxiv.org/abs/2611.17142v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "sim2real",
+        "emoji": "3️⃣",
+        "name": "sim2real / 仿真到真实",
+        "items": [
+          {
+            "title": "Ropedia Xperience 2：扩展物理 AI 的环境与行为基准",
+            "summary": "项目同时提供人类行为示范和可交互环境，针对长视野、接触丰富的真实任务补足数据与评测资源；代码已公开。[控制层·世界模型]",
+            "url": "https://arxiv.org/abs/2611.17060",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "实时神经模仿时间最优 MPC",
+            "summary": "以神经网络模仿非线性时间最优模型预测控制律，目标是在受约束快速动力学系统中降低在线控制计算成本，为仿真优化策略落地实时系统提供路径。[控制层·BC]",
+            "url": "http://arxiv.org/abs/2611.17005v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "embodied-model",
+        "emoji": "4️⃣",
+        "name": "具身模型（感知/规划/控制三层 × 动作生成方式）",
+        "items": [
+          {
+            "title": "WorldFoundry：世界模型的可复现评测基础设施",
+            "summary": "开源系统覆盖视频、3D/4D、具身动作与交互式系统的生成世界模型推理和评测，并以可追溯证据与基准组织结果；代码已公开。[控制层·世界模型]",
+            "url": "https://arxiv.org/abs/2611.10771",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "BirdDreams：视角与鸟瞰联合建模的驾驶世界模型",
+            "summary": "为兼顾周边车辆运动合理性和自车轨迹可控性，联合生成透视与 BEV 视频，并以布局条件降低遮挡与外观耦合造成的预测困难。[控制层·世界模型]",
+            "url": "https://arxiv.org/abs/2611.14815",
+            "source": "hf_papers",
+            "hot": true
+          },
+          {
+            "title": "ProtoVis-Nav：视觉想象辅助无人机语言导航",
+            "summary": "针对三维飞行中航点预测误差会导致碰撞的问题，以原型化视觉想象估计执行结果，使语言指令与视觉空间导航对齐。[规划层]",
+            "url": "http://arxiv.org/abs/2611.17330v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "embodied-chip",
+        "emoji": "5️⃣",
+        "name": "具身智能芯片（机器人计算 / 边缘 NPU）",
+        "items": []
+      },
+      {
+        "id": "manufacturing",
+        "emoji": "6️⃣",
+        "name": "制造 / 产线",
+        "items": [
+          {
+            "title": "ScrewSense：拧紧工序的异常检测与错误分类",
+            "summary": "利用螺钉拧紧系统积累的过程数据识别并分类工艺错误，目标是减少返工、保障产品质量，并将 AI 质量控制嵌入制造流程。[感知层]",
+            "url": "http://arxiv.org/abs/2611.16789v1",
+            "source": "arxiv"
+          }
+        ]
+      },
+      {
+        "id": "market",
+        "emoji": "7️⃣",
+        "name": "市场 / 产业",
+        "items": [
+          {
+            "title": "Agility Robotics 发布面向规模化应用的 Digit 5",
+            "summary": "公司联合创始人在 IEEE Spectrum 介绍 Digit 5，定位为可安全、经济地大规模执行有用工作的类人机器人；具体规格与部署进度以官方渠道核验。[市场/产业]",
+            "url": "https://spectrum.ieee.org/agility-robotics-digit-5-redesign",
+            "source": "rss",
+            "hot": true
+          },
+          {
+            "title": "GENTO 从传感器栈切入人形与灵巧手",
+            "summary": "媒体报道 Tianji Intelligence 在 CoRL 展示人形机器人和新灵巧手，强调以长期构建的传感器与部件栈支撑系统集成；产品能力以官方渠道核验。[市场/产业]",
+            "url": "https://roboticsandautomationnews.com/2026/11/13/why-build-a-humanoid-robot-from-the-sensor-up-the-thinking-behind-gentos-corl-2026-debut/107075/",
+            "source": "rss"
+          }
+        ]
+      }
+    ],
+    "industry": {
+      "stocks": [
+        {
+          "name": "特斯拉(Optimus)",
+          "sym": "TSLA",
+          "price": 390.22,
+          "pct": 3.22,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "直觉外科(手术机器人)",
+          "sym": "ISRG",
+          "price": 443.59,
+          "pct": -3.68,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Symbotic(仓储机器人)",
+          "sym": "SYM",
+          "price": 34.83,
+          "pct": -7.83,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "Serve Robotics(配送)",
+          "sym": "SERV",
+          "price": 2.62,
+          "pct": -22.71,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "英伟达(机器人算力)",
+          "sym": "NVDA",
+          "price": 162.85,
+          "pct": -8.85,
+          "currency": "USD",
+          "note": ""
+        },
+        {
+          "name": "京东(物流机器人)",
+          "sym": "9618.HK",
+          "price": 107.0,
+          "pct": -4.72,
+          "currency": "HKD",
+          "note": ""
+        }
+      ],
+      "cn_stocks": [
+        {
+          "name": "宇树科技",
+          "secid": "1.688836",
+          "market": "A股",
+          "price": 696.0,
+          "pct": -0.7,
+          "currency": "CNY",
+          "note": ""
+        },
+        {
+          "name": "优必选",
+          "secid": "116.09880",
+          "market": "港股",
+          "price": 72.35,
+          "pct": -2.89,
+          "currency": "HKD",
+          "note": ""
+        },
+        {
+          "name": "汇川技术",
+          "secid": "0.300124",
+          "market": "A股",
+          "price": 53.45,
+          "pct": 0.64,
+          "currency": "CNY",
+          "note": ""
+        }
+      ],
+      "funding": [
+        {
+          "title": "Humble Robotics 获 5,100 万美元 A 轮扩展自主电动货运",
+          "summary": "媒体报道该公司完成 5,100 万美元 A 轮，用于扩展货运自主驾驶业务；融资与商业化进展以公司官方渠道核验。",
+          "url": "https://roboticsandautomationnews.com/2026/11/14/humble-robotics-raises-51-million-to-expand-autonomous-electric-freight-operations/107110/",
+          "amount": "$51M"
+        },
+        {
+          "title": "Neura Robotics 与 E.ON 合作试点能源基础设施人形机器人",
+          "summary": "双方计划面向电网巡检和监测开发 Physical AI 应用，首批真实场景试验计划在 2027 年开展；合作细节以官方渠道核验。",
+          "url": "https://roboticsandautomationnews.com/2026/11/14/neura-robotics-partners-with-e-on-to-bring-humanoid-robots-to-energy-infrastructure/107100/",
+          "amount": null
+        }
+      ]
+    }
+  },
+  "meta": {}
+}

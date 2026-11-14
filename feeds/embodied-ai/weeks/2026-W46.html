@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W46 · 11-09 ~ 11-15</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W46</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W46 · 11-09 ~ 11-15</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-11-07 ~ 2026-11-14</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W46</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>异构触觉表征开始以可插拔 token 进入扩散策略与 VLA，传感器迁移正从硬件适配问题转为统一表征问题：[感知层]</li>
+      <li>RoboScript 让操作策略在当前世界中以示范进行上下文学习，尝试解除技能与训练分布的强绑定：[规划层]</li>
+      <li>A2-MEAS 将纠错语言、运动历史和潜在世界模型接入 VLA 的训练与运行时，聚焦长任务失败恢复：[端到端VLA]</li>
+      <li>物流自主驾驶融资与能源设施人形机器人试点同步出现，具身商业化继续向具体、高价值场景收敛：[市场/产业]</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.09124" target="_blank" rel="noopener">A2-MEAS：以纠错码提升 VLA 的恢复能力</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">该框架将学习到的纠错语言、运动感知历史与潜在世界模型接入 VLA，在训练监督和运行时共同修正动作提案，面向控制失败恢复；代码已公开。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.12870" target="_blank" rel="noopener">SWAM：以跨模态对齐扩展世界动作模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">研究语言条件下联合预测视频与动作的世界动作模型，指出引入动作学习会破坏既有语言-视频对齐，并提出数据与监督设计来维持该基础能力；代码已公开。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.14488" target="_blank" rel="noopener">VLA 记忆的时间捷径问题</a></div>
+      <div class="it-sum">研究发现按时间索引的记忆会把停顿误判为任务进度而导致提前结束，采用事件索引可在不重训模型的条件下缓解这一问题；代码已公开。[端到端VLA]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.12806" target="_blank" rel="noopener">LingBot-Touch：统一异构触觉表征服务灵巧操作</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">触觉基础模型从多种传感器学习统一、可扩展的表示，生成可插拔触觉 token 以增强扩散策略、VLA 与 pi0.5 等操作策略，降低跨传感器迁移成本；代码已公开。[感知层]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.12885" target="_blank" rel="noopener">RoboScript：在当前世界中进行操作上下文学习</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">方法将示范中的语义经验与机器人当前所处世界的反馈结合，以 in-context learning 执行操作技能，试图突破已训练策略对原始训练分布的绑定；代码已公开。[规划层]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.17142v1" target="_blank" rel="noopener">FORGE：力感知的多粒度人形移操控制</a></div>
+      <div class="it-sum">面向频繁接触下的人形移动与操作协同，提出从速度导航到精细接触的粗到细命令空间，统一处理平衡、精度与接触感知。[控制层·BC]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.17060" target="_blank" rel="noopener">Ropedia Xperience 2：扩展物理 AI 的环境与行为基准</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">项目同时提供人类行为示范和可交互环境，针对长视野、接触丰富的真实任务补足数据与评测资源；代码已公开。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.17005v1" target="_blank" rel="noopener">实时神经模仿时间最优 MPC</a></div>
+      <div class="it-sum">以神经网络模仿非线性时间最优模型预测控制律，目标是在受约束快速动力学系统中降低在线控制计算成本，为仿真优化策略落地实时系统提供路径。[控制层·BC]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.10771" target="_blank" rel="noopener">WorldFoundry：世界模型的可复现评测基础设施</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">开源系统覆盖视频、3D/4D、具身动作与交互式系统的生成世界模型推理和评测，并以可追溯证据与基准组织结果；代码已公开。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.14815" target="_blank" rel="noopener">BirdDreams：视角与鸟瞰联合建模的驾驶世界模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">为兼顾周边车辆运动合理性和自车轨迹可控性，联合生成透视与 BEV 视频，并以布局条件降低遮挡与外观耦合造成的预测困难。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.17330v1" target="_blank" rel="noopener">ProtoVis-Nav：视觉想象辅助无人机语言导航</a></div>
+      <div class="it-sum">针对三维飞行中航点预测误差会导致碰撞的问题，以原型化视觉想象估计执行结果，使语言指令与视觉空间导航对齐。[规划层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.16789v1" target="_blank" rel="noopener">ScrewSense：拧紧工序的异常检测与错误分类</a></div>
+      <div class="it-sum">利用螺钉拧紧系统积累的过程数据识别并分类工艺错误，目标是减少返工、保障产品质量，并将 AI 质量控制嵌入制造流程。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/agility-robotics-digit-5-redesign" target="_blank" rel="noopener">Agility Robotics 发布面向规模化应用的 Digit 5</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">公司联合创始人在 IEEE Spectrum 介绍 Digit 5，定位为可安全、经济地大规模执行有用工作的类人机器人；具体规格与部署进度以官方渠道核验。[市场/产业]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://roboticsandautomationnews.com/2026/11/13/why-build-a-humanoid-robot-from-the-sensor-up-the-thinking-behind-gentos-corl-2026-debut/107075/" target="_blank" rel="noopener">GENTO 从传感器栈切入人形与灵巧手</a></div>
+      <div class="it-sum">媒体报道 Tianji Intelligence 在 CoRL 展示人形机器人和新灵巧手，强调以长期构建的传感器与部件栈支撑系统集成；产品能力以官方渠道核验。[市场/产业]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（9 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>390.22 USD</td><td class="up">+3.22%</td><td></td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>443.59 USD</td><td class="down">-3.68%</td><td></td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>34.83 USD</td><td class="down">-7.83%</td><td></td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>2.62 USD</td><td class="down">-22.71%</td><td></td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>162.85 USD</td><td class="down">-8.85%</td><td></td></tr>
+        <tr><td>京东(物流机器人) <span class="tk">9618.HK</span></td><td>107.0 HKD</td><td class="down">-4.72%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>宇树科技 <span class="tk">1.688836 · A股</span></td><td>696.0 CNY</td><td class="down">-0.7%</td><td></td></tr>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>72.35 HKD</td><td class="down">-2.89%</td><td></td></tr>
+        <tr><td>汇川技术 <span class="tk">0.300124 · A股</span></td><td>53.45 CNY</td><td class="up">+0.64%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$51M</span><a href="https://roboticsandautomationnews.com/2026/11/14/humble-robotics-raises-51-million-to-expand-autonomous-electric-freight-operations/107110/" target="_blank" rel="noopener">Humble Robotics 获 5,100 万美元 A 轮扩展自主电动货运</a></div><div class="it-sum">媒体报道该公司完成 5,100 万美元 A 轮，用于扩展货运自主驾驶业务；融资与商业化进展以公司官方渠道核验。</div></li>
+      <li><div class="it-title"><a href="https://roboticsandautomationnews.com/2026/11/14/neura-robotics-partners-with-e-on-to-bring-humanoid-robots-to-energy-infrastructure/107100/" target="_blank" rel="noopener">Neura Robotics 与 E.ON 合作试点能源基础设施人形机器人</a></div><div class="it-sum">双方计划面向电网巡检和监测开发 Physical AI 应用，首批真实场景试验计划在 2027 年开展；合作细节以官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
