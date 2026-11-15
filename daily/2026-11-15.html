@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-11-15</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-11-15</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-11-15 · 周日</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-11-13 ~ 2026-11-15</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-11-15</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>英伟达进入“无 CEO”状态，而出口管制同步升级为技术取证</b>：黄仁勋 11 月 12 日辞职、临时 CEO 由 CFO 接任、市值蒸发超 3 万亿，机构投资者要求保留其回归可能；同一周，权重统计分析把 DeepSeek/Kimi/MiniMax 与禁运 Blackwell 关联起来，美国财长质疑壳公司售卡、马来西亚拟以数据中心功耗执法。治理风险与合规风险第一次同时压在同一个供应链节点上（1️⃣5️⃣）。</li>
+      <li><b>ggml 与 llama.cpp 同日打到 v1.0.0（HN 398 分）</b>：本地推理栈从“跟 commit 走”变为有 ABI 承诺的基础设施，这比任何单点 benchmark 更能决定端侧产品敢不敢长期集成；同周 BotPsy 展示 sub-1B 端侧 agent 的可行路线（2️⃣8️⃣）。</li>
+      <li><b>跨节点推理成为大模型服务的默认形态</b>：NVIDIA 用 vLLM 在两台 DGX Station 上服务 GLM-5.3、跑到 607.8 tok/s，意味着单机显存放不下的大模型不再被 NVLink 域限制，推理集群的网络与 KV 传输设计成为新的性能主战场（3️⃣）。</li>
+      <li><b>具身智能出现强烈反差：资本狂买无人机，通用模型厂裁掉机器人团队</b>：Zipline 融资 15 亿美元（投后 215 亿）、Wing 投 1.25 亿美元建厂、Humble 完成 5100 万美元 A 轮；同时 OpenAI 五个月内二度解散机器人团队。结论是单位经济已跑通的物流具身先拿到钱，而“独立机器人栈”正被通用模型路线挤压（6️⃣）。</li>
+      <li><b>AI 生成代码开始靠形式化验证过关</b>：微软 PDD Kit 把意图转成 Verus 规范并证明 agent 产出的代码合规——在代码产量超过人类审阅能力之后，这是 AI 编程进入生产环境的必要条件；同期 Mirendil 十亿美元 A 轮说明资本已押注“自我改进的研发闭环”（7️⃣）。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/11/509995.html" target="_blank" rel="noopener">黄仁勋辞任英伟达 CEO，33 年首度换帅</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">11 月 12 日董事会宣布黄仁勋辞去总裁、CEO 及董事职务并即刻生效，EVP 兼 CFO 科莱特·克雷斯出任临时 CEO，直到选出正式继任者；消息公布后市值蒸发超 3 万亿元人民币。两家机构投资者已于 13 日联名致信董事会，要求不要仓促定永久 CEO 并保留黄仁勋回归可能，这对以“路线图确定性”定价的 AI 算力供应链是重大不确定性。量子位</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/027/255.htm" target="_blank" rel="noopener">超聚变创业板 IPO 过会，国产算力整机登陆 A 股</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">深交所 11 月 12 日审议通过超聚变数字技术（前身为华为 x86 服务器业务）首发申请，上市委重点问询毛利率变动趋势、下游客户资本开支与经营现金流可持续性。国产服务器整机厂进入公开市场融资，意味着通用算力供给侧又多一条资本通道，也把“算力需求周期”直接暴露给二级市场定价。IT之家</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/11/14/cerebras-readies-cs-5-systems-for-2027-launch-as-it-bags-another-hyperscaler/5309932" target="_blank" rel="noopener">Cerebras 准备 2027 年推出 CS-5，再签一家超大规模客户</a></div>
+      <div class="it-sum">晶圆级引擎路线继续以“单芯片超大 SRAM + 高带宽”对抗 GPU 集群，新的超大规模客户意味着推理侧对“低延迟、免 HBM 依赖”的方案开始有真实采购，而不是只做 demo。对推理成本结构是重要的第三条路径。The Next Platform</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">semiengineering.com</span><a href="https://semiengineering.com/shifting-hbm4-controller-functions-closer-to-memory-uc-riverside/" target="_blank" rel="noopener">HBM4 控制器功能前移到存储 base die</a></div>
+      <div class="it-sum">UC Riverside 论文提出把部分 HBM 控制器逻辑拆分到 host 与 HBM base die 两侧，缓解 HBM4 世代带宽抬升带来的 host 侧控制开销与布线压力。HBM 从“纯存储”走向“近存计算接口”，会改变未来加速器的 die-to-die 与封装设计。SemiEngineering</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/11/09/google-rejiggers-tpu-accelerators-for-broader-ai-inference-work/5308534" target="_blank" rel="noopener">Google 为更广的推理负载重排 TPU</a></div>
+      <div class="it-sum">TPU 架构调整方向明显偏向推理（而非只服务训练大集群），与自研 ASIC 在“单位 token 成本”上的竞争直接相关；对云厂商自研芯片替代通用 GPU 的节奏是一个观察点。The Next Platform</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/chips/G6AiPuplIGyPkaQL.html" target="_blank" rel="noopener">国产芯片人事与材料侧动态</a></div>
+      <div class="it-sum">燧原科技首席生态官李星宇离职（此前在地平线任职 8 年、为创始管理团队成员），生态建设岗位空缺对国产 AI 芯片的软件栈推广有直接影响；同时港大孵化的金刚石半导体公司钻耐科思（DiamNEX）完成数千万元融资，押注超宽禁带材料解决算力散热天花板。雷锋网·燧原 · 雷锋网·DiamNEX</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/ggml-org/ggml/releases/tag/v1.0.0" target="_blank" rel="noopener">ggml v1.0.0 发布（HN 398 分）</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">这个支撑 llama.cpp 的 C 语言张量库终于打到 1.0，标志着“无依赖、可移植、纯 CPU/混合后端”的推理底座从实验项目转为稳定 API 契约。对下游所有本地推理发行版（桌面、嵌入式、边缘盒子）而言，ABI 稳定比新算子更重要——它决定了厂商敢不敢把它塞进长期维护的产品里。GitHub</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax" target="_blank" rel="noopener">DeepSeek V3 用约 200 行纯 JAX 复现（HN 145 分）</a></div>
+      <div class="it-sum">把 MoE 版 V3 的前向结构压缩到极简 JAX 实现，价值不在性能而在“可读的参考实现”——研究者可以据此在 TPU/GPU 上快速改结构、验证并行切分策略，而不必读几万行生产代码。这是 JAX 生态对“模型结构透明化”的一次贡献。GitHub</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/ggml-org/llama-cpp-v1" target="_blank" rel="noopener">llama.cpp 同步发布 v1.0.0</a></div>
+      <div class="it-sum">与 ggml 1.0 配套，本地推理栈整体进入 1.x 语义化版本阶段，详见 8️⃣。HuggingFace Blog</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">developer.nvidia.com</span><a href="https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/" target="_blank" rel="noopener">两台 DGX 跨节点服务 GLM-5.3，达 607.8 tok/s</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">NVIDIA 用 vLLM 把单机放不下的模型拆到两台 DGX Station 上，通过解耦式 prefill/decode 与跨节点 KV 传输拿到 607.8 tok/s 的输出吞吐。意义在于“单机放不下的大模型”正从多卡 NVLink 域扩展到跨节点域——这会重塑推理集群的网络假设（RoCE/IB 带宽直接变成吞吐瓶颈）。NVIDIA Blog</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">unsloth.ai</span><a href="https://unsloth.ai/docs/models/qwen3.8" target="_blank" rel="noopener">Unsloth 发布 Qwen3.8-27B 动态 v3.1 量化（HN 239 分）</a></div>
+      <div class="it-sum">动态量化按层敏感度分配比特宽度，在 27B 这一“单卡可跑”的甜点尺寸上继续压低显存占用。对自建推理的个人/小团队，量化质量的迭代速度已经比模型本身更影响实际可用性。Unsloth</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/industrynews/cqPXhF38rM4VcVa7.html" target="_blank" rel="noopener">百度“词元所”上线首日：100+ 供应商入驻、1000+ 客户接入</a></div>
+      <div class="it-sum">李彦宏称其为“大模型的交易所”，平台做模型指纹比对、能力/性能/可用性准入核验与抽检拨测，结果沉淀为供应商信用评级。把 token 从“各家 API 各自计费”变成可验真、可征信的标准化商品，是推理经济走向市场化的关键一步（也是对中转站乱象的制度回应）。雷锋网</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">semiengineering.com</span><a href="https://semiengineering.com/rethinking-memory-for-ai-inference/" target="_blank" rel="noopener">“为推理重新设计内存”成为共识议题</a></div>
+      <div class="it-sum">把计算搬到离内存更近的位置可显著降功耗、提吞吐，但软件栈、散热与架构（PIM/近存）挑战仍未解。HBM 涨价与带宽墙之下，这条路线从学术走向工程排期。SemiEngineering</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/ai-and-ml/2026/11/13/chinese-ai-labs-are-training-models-on-nvidias-blackwell-despite-export-controls-says-ex-openai-engineer/5309891" target="_blank" rel="noopener">中国大模型被指用禁运 Blackwell 训练</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">前 OpenAI 工程师参与的取证报告称，通过对模型权重的统计分析发现 DeepSeek、Kimi、MiniMax、Ant Group 等模型与 Nvidia Blackwell 硬件存在高相关性——即出口管制的“物理隔离”可能已被绕过。详见 5️⃣。The Register</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/" target="_blank" rel="noopener">NVIDIA 在 KubeCon 贡献 OpenShell，把 K8s 变成“AI 工厂”底座</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Kubernetes 已是 AI 基础设施的事实调度层，NVIDIA 此次开源 OpenShell 运行时并配套新基础设施方案，方向是让 agent 负载在沙箱化、可审计的运行时里跑——相当于把“AI 工厂”的控制面从私有的集群管理器推向 CNCF 生态。NVIDIA Blog</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/airtrunk-signs-mou-for-18gw-of-data-center-capacity-in-andhra-pradesh-india/" target="_blank" rel="noopener">AirTrunk 与印度安得拉邦签署 1.8GW 数据中心 MoU</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">规划在维沙卡帕特南（Vizag）以外落地两个项目。单体 1.8GW 的量级已接近一个中等国家的电力负荷，说明亚太超大规模扩张进入“以 GW 为单位签 MoU”的阶段，电网与土地成为比 GPU 更硬的约束。Data Center Dynamics</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/11/10/datacenter-systems-spending-to-go-through-the-roof-in-2027/5308636" target="_blank" rel="noopener">2027 年数据中心系统支出预计“冲顶”</a></div>
+      <div class="it-sum">分析机构给出的口径是服务器/加速器/网络同步放量，且主要由 AI 集群驱动。对上游（HBM、光模块、电力设备）是长约信号，对下游则是资本开支回收周期被拉长的风险。The Next Platform</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/027/253.htm" target="_blank" rel="noopener">SpaceX 星舰首次用发射塔机械臂捕获回收飞船，马斯克称将建 AI 数据中心星座</a></div>
+      <div class="it-sum">第 15 次试飞完成第二级塔捕，可复用性再进一步；把算力放到轨道（靠太阳能 + 星间激光）在散热与运维上是极端命题，但它已成为超大规模算力的一个“逃生方案”叙事。IT之家</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">siliconangle.com</span><a href="https://siliconangle.com/2026/11/13/data-center-telemetry-runs-nats-graduates-from-cncf-kubeconna/" target="_blank" rel="noopener">Agent 集群把消息中间件推成 AI 协调核心</a></div>
+      <div class="it-sum">NATS 在 KubeCon 期间受关注，原因是 agent 间机器对机器流量远超传统稳态请求模型，需要更轻、更低延迟的 pub/sub 而非为人类请求设计的老式 MQ。数据中心的“南北向”假设正在被 agent fleet 改写。SiliconANGLE</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/researchers-allege-deepseek-kimi-and-other-chinese-ai-models-were-trained-on-export-controlled-nvidia-blackwell-chips-statistical-analysis-on-model-weights-reveals-high-correlation-to-nvidia-hardware" target="_blank" rel="noopener">权重指纹取证：禁运芯片“看得见”</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">报告通过对模型权重的统计特征反推训练硬件，指出多家中国头部模型与 Blackwell 高相关。若该方法被监管采信，出口管制的执行手段将从“查货运单”升级为“查模型权重”，所有跨境模型发布都要面对一次技术审计。Tom&#x27;s Hardware</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/u-s-treasury-secretary-questions-whether-nvidia-knowingly-sold-ai-gpus-to-shell-companies-says-company-itself-is-responsible-i-think-it-is-important-that-anyone-at-the-company-there-be-held-accountable-for-that" target="_blank" rel="noopener">美国财长质疑英伟达是否知情向壳公司售卡</a></div>
+      <div class="it-sum">Scott Bessent 表示公司自身应对此负责、相关责任人应被追责，但未直接指控黄仁勋个人。这把出口管制从“行政禁令”推向“企业刑事责任”层面。Tom&#x27;s Hardware</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/malaysia-plans-new-law-using-data-center-power-consumption-to-catch-ai-gpu-smugglers-but-real-world-tdp-variance-and-lack-of-physical-audits-could-undermine-it-new-law-also-forces-operators-to-pay-for-unused-electricity-capacity" target="_blank" rel="noopener">马来西亚拟用数据中心功耗执法抓 GPU 走私</a></div>
+      <div class="it-sum">新法案拟以电力消耗反推 GPU 进口规模并强制运营商为闲置容量付费；但真实 TDP 方差大、缺乏物理审计会让该手段精度受限。监管开始用“电力表”当审计工具，是基础设施层面的政策创新，也是误伤风险来源。Tom&#x27;s Hardware</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1586424.htm" target="_blank" rel="noopener">新加坡澄清“未调查间谍案”，但确认查过 Megaspeed 采购</a></div>
+      <div class="it-sum">内政部否认《华尔街日报》所称因黄乐与黄仁勋关系或怀疑其为情报人员而立案，但说明警方与海关确曾调查她在 Megaspeed 服务器采购案中的角色（涉嫌违反新加坡法律）。芯片转口贸易的合规风险已具体落到个人与采购主体上。cnBeta</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/MU0txcPXXuGdGKBNa6a2?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">Edera：容器隔离不够，从 hypervisor 层限制 AI agent</a></div>
+      <div class="it-sum">InfoQ 报道的方案认为 agent 具备任意代码执行与工具调用能力，容器共享内核的隔离假设不再成立，需在 VMM 层做边界。这是“agent 运行时安全”从 prompt 防护转向系统隔离的代表性主张。InfoQ 中国</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/children-first-declaration" target="_blank" rel="noopener">OpenAI 投入 200 万美元做 AI 与儿童安全研究</a></div>
+      <div class="it-sum">资金用于共享的风险/机会测量工具，属于“先建度量、再谈监管”的路径，也是各家在政策压力下的标准动作。OpenAI</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1586436.htm" target="_blank" rel="noopener">台积电确认员工个人信息泄露，问题指向第三方云服务商</a></div>
+      <div class="it-sum">初步调查未发现自身系统被入侵，数据与某第三方云系统中保存的信息吻合，不涉及生产运营、商业机密与客户数据。晶圆厂把非核心系统外包上云的边界风险由此显性化。cnBeta</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">aiera.com.cn</span><a href="https://aiera.com.cn/2026/11/15/other/admin/123828/openai%e6%9c%ba%e5%99%a8%e4%ba%ba%e5%9b%a2%e9%98%9f%e7%aa%81%e7%84%b6%e8%a7%a3%e6%95%a3%ef%bc%81gpt-6-astra%e6%8a%8a%e8%a1%8c%e4%b8%9a%e4%b8%80%e9%94%85%e7%ab%af%e4%ba%86/" target="_blank" rel="noopener">OpenAI 再度解散机器人团队</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">距 5 月公开招人仅五个月，团队被整体裁撤，中文媒体称与 GPT-6 Astra 的能力路线调整有关。这是“通用模型吃掉专用机器人栈”的一次强信号：如果 VLA 能力可由通用大模型外延获得，独立机器人团队的组织成本就难以自证。新智元</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/14/zipline-raises-an-unbelievable-1-5-billion-to-build-nationwide-drone-delivery-network/107104/" target="_blank" rel="noopener">Zipline 融资 15 亿美元，投后估值 215 亿美元</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">由 Paradigm、WCM、Layer Global 领投，Uber、Fidelity、Tiger Global、摩根大通、ARK 参投，用于建全国性无人机配送网络。单笔规模已超过多数人形机器人公司的累计融资，说明“具身”里最先跑通单位经济的仍是物流无人机。Robotics &amp; Automation News</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/14/wing-invests-125-million-in-us-drone-manufacturing-to-support-nationwide-expansion/107107/" target="_blank" rel="noopener">无人机/自动驾驶货运资本密集落地</a></div>
+      <div class="it-sum">Alphabet 旗下 Wing 未来两年在美投最高 1.25 亿美元建厂（含 Fort Worth 1.5 万平方英尺产线）；Humble Robotics 完成 5100 万美元 A 轮（Obvious Ventures 领投），累计融资 7500 万美元，用于扩张自动驾驶电动货运。制造与运营资本同时到位，是“从 demo 到车队”的分水岭。R&amp;A News·Wing · R&amp;A News·Humble</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/14/neura-robotics-partners-with-e-on-to-bring-humanoid-robots-to-energy-infrastructure/107100/" target="_blank" rel="noopener">Neura Robotics 联手 E.ON 把人形机器人送进电力基础设施</a></div>
+      <div class="it-sum">与德国能源公司 enviaM 合作开发面向电网的 Physical AI 应用，首批真实场景试验定在 2027 年，重点是巡检与状态监测。能源行业成为人形机器人最先明确付费意愿的场景之一（高危、重复、缺人）。R&amp;A News</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/" target="_blank" rel="noopener">NVIDIA 在 CoRL 展示“仿真练精细操作”</a></div>
+      <div class="it-sum">研究重点从行走/滚动转向齿轮对位、线缆插接、小件装配——这类任务对接触力与视觉精度要求远高于 locomotion，仿真到真机的差距（Sim2Real）在此最难跨越。若仿真能承担这类训练，真机数据采集成本结构会变。NVIDIA Blog</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">aiera.com.cn</span><a href="https://aiera.com.cn/2026/11/14/other/admin/123724/%e4%bb%a5%e6%99%ba%e8%83%bd%e4%bd%93%e8%a7%86%e8%a7%92%ef%bc%8c%e6%b8%85%e5%8d%8e%e9%a6%96%e5%8f%91%e5%85%b7%e8%ba%ab%e6%99%ba%e8%83%bd%e7%bb%bc%e8%bf%b0%ef%bc%9a%e4%bb%8e%e7%ab%af%e5%88%b0%e7%ab%af/" target="_blank" rel="noopener">清华首发“以智能体视角”的具身智能综述</a></div>
+      <div class="it-sum">把端到端策略到自主系统的演进用 agent 框架统一叙述（语言理解、视觉感知、动作生成进入同一学习框架）。这类综述的价值在于给“VLA 之后是什么”提供坐标系。新智元</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/agentic-robotics" target="_blank" rel="noopener">“Agentic Robotics 能否解决数据规模化”成为公开辩论</a></div>
+      <div class="it-sum">IEEE Spectrum 梳理了“只要喂够人类示范数据，机器人就能接管大多数手工任务”这一信念的资金与证据缺口；同周另一篇指出机器人安全功能本身没问题、问题在输入被欺骗（传感/网络攻击）。两条合看：数据与安全是具身落地的两道硬门。IEEE Spectrum·数据 · IEEE Spectrum·安全</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">microsoft.com</span><a href="https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/" target="_blank" rel="noopener">微软 PDD Kit：为 agent 写的全栈 Web 应用做形式化验证</a></div>
+      <div class="it-sum">工具把开发者意图转成 Verus 规范，再证明 AI 生成代码满足规范。当代码产量超出人类逐行 review 的能力上限，“生成 + 形式化验证”取代“生成 + 人审”是必然方向，这也是 AI 代码生成进入生产环境的前置条件。Microsoft Research</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.crunchbase.com</span><a href="https://news.crunchbase.com/venture/biggest-startup-funding-rounds-agentic-ai-infrastructure-mirendil-mercor/" target="_blank" rel="noopener">Mirendil 以 10 亿美元 A 轮领跑本周融资，主打 agentic AI 做研发</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">单笔 A 轮达十亿量级，配套本周 Mercor 的 7.5 亿美元，说明资本押注点已从“模型层”转移到“能自我改进的研发闭环”（RSI 叙事）。Import AI 亦以“Mirendil 展示 RSI 意味着什么”作为当周主题。Crunchbase News · Import AI 478</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.crunchbase.com</span><a href="https://news.crunchbase.com/ai/anthropic-record-ipo-ant-public-market-debut-spcx/" target="_blank" rel="noopener">Anthropic 拟融资至多 885 亿美元，绑定公开市场首秀</a></div>
+      <div class="it-sum">更新版 S-1 显示这将是有史以来最大规模的 IPO 相关募资之一；与 Mirendil 等一级市场狂热并置，说明“算力/研发资本”正从私募转向公开市场承接。Crunchbase News</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/ggml-org/llama-cpp-v1" target="_blank" rel="noopener">llama.cpp v1.0.0：本地 AI 生态拿到稳定地基</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">与 ggml 1.0 同步，官方定位是“给本地 AI 生态一个更强的基础”——语义化版本意味着下游可以按兼容性承诺集成，而不是跟 commit 走。对端侧产品（桌面应用、车机、嵌入式）这是比任何 benchmark 数字更实际的进展。HuggingFace Blog</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/qvac/botpsy" target="_blank" rel="noopener">BotPsy：亚十亿参数的端侧 agentic 助手</a></div>
+      <div class="it-sum">HuggingFace 上的方案把“能调用工具的小助手”压到 sub-1B 参数并跑在设备上，靠的是任务窄化 + 工具外置，而不是把通用能力塞进小模型。这是端侧 agent 的现实工程路线：模型做路由与规划，能力放在本地 API 里。HuggingFace Blog</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/performance-oryon-qualcomms-little" target="_blank" rel="noopener">高通 Snapdragon X2 Elite 的混合核心与系统级架构</a></div>
+      <div class="it-sum">Chips and Cheese 剖析其“性能核 Oryon + 小核”的混合布局，打破此前全大核策略；对端侧推理而言，NPU/CPU 的异构调度与内存带宽分配直接决定本地 LLM 的首 token 延迟。Chips and Cheese·Oryon · Chips and Cheese·系统架构</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/3d-lora-finetuning" target="_blank" rel="noopener">3D 生成模型的 LoRA 微调指南</a></div>
+      <div class="it-sum">HuggingFace 给出面向 3D 生成模型的完整微调流程，端侧/工作站侧的 3D 资产生成开始有可复现配方，与 6️⃣ 的仿真资产需求形成互补。HuggingFace Blog</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-11-14.html">← 2026-11-14</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
