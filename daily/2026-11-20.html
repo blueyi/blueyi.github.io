@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-11-20</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-11-20</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-11-20 · 周五</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-11-19 ~ 2026-11-20</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-11-20</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>算力供给侧的叙事在一天内被三件事同时改写</b>：Nvidia 交出营收翻倍、Vera Rubin 史上最快爬坡的成绩单,却停披新加坡销售明细、股价距高点回撤约 40%;黄仁勋因丑闻辞职,VC 预期 AI 初创资金链收紧;同时公司还在处理可能的入侵与勒索期限。业绩、治理、安全三条风险线首次叠加在同一家芯片厂商身上。</li>
+      <li><b>CPO 从演示走进生产</b>：Lambda 用 NVIDIA 光子共封装光学交换机连起 10,000+ GPU 的 GB300 NVL72 集群,是互连侧今年最实的工程里程碑;但 IEA 同时给出「2030 年 AI 数据中心用电翻倍、约 50GW、多出一个英国」的测算——瓶颈正从芯片与网络转向电力与配电。</li>
+      <li><b>Anthropic 以 813 亿美元募资、1.5–2 万亿美元估值完成史上最大 IPO</b>：首日涨约 33%,慈善侧潜在规模达 1560 亿美元;但 S-1 里的巨额算力承诺与开源模型竞争,意味着「安全优先」的品牌叙事从此要按季度接受公开市场检验。</li>
+      <li><b>AI 开始改造自己的生产资料</b>：OpenAI 一边公布编码 agent 加速 AI 研究的「锯齿状前沿」数据(RSI 的首个官方量化),一边展示模型进入芯片设计流程;配合 PDD Kit 用 Verus 规格形式化验证 agent 写的全栈代码、Mechanistic Critics 让 NPU 设计空间探索可归因,「AI 造 AI 基础设施」的闭环已从概念变成流水线。</li>
+      <li><b>具身智能的分水岭是数据与可靠性,不是演示</b>：Genie 4 开放让世界模型成为可交互的训练/评测环境,Serve Robotics 把 Physical AI 栈对外供货,Boston Dynamics 用 Stretch Gen 2 拼可用率与维护性;国内侧商务部首次单列「具身智能机器人」并给出 1–10 月 25.2% 的增长——产业正从 demo 竞赛转入出货与运营竞赛。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">ft.com</span><a href="https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf" target="_blank" rel="noopener">🔥 Nvidia 季度营收 1158 亿美元,但停披新加坡销售明细</a></div>
+      <div class="it-sum">在临时 CEO Colette Kress 主持的首场财报会上,营收同比翻倍多、Vera Rubin 平台成为公司史上最快爬坡产品,但公司不再单独披露新加坡区域销售(此前被质疑为对华转口通道);同时股价距 10 月 6 日高点回撤近 40%,市场开始为「后黄仁勋时代」重新定价。FT / EE Times</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/" target="_blank" rel="noopener">🔥 黄仁勋因与「疑似中国间谍」的婚外情辞职</a></div>
+      <div class="it-sum">TechCrunch 梳理完整时间线,指出该事件已从公司治理问题溢出到国家安全层面——Nvidia 过去两年向 AI 初创投入数百亿美元的资金链,正被 VC 与创始人预期「支票变小、估值下修」。TechCrunch</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/nvidia-announces-rubin-hpc-science-focused-server-gpu-to-arrive-in-2028/" target="_blank" rel="noopener">Nvidia 回归 HPC:Rubin HPC GPU 定档 2028,超 5 万 CUDA 核</a></div>
+      <div class="it-sum">SC26 上发布的科学计算专用 GPU,与面向 AI 的 Rubin 主线分离,同时配套 Nemotron for Science 与可自主规划实验的 agent 工具链,标志 GPU 厂商重新争夺传统超算份额。ServeTheHome</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/amds-zen-6-family-feeding-the-beast" target="_blank" rel="noopener">AMD Zen 6「Venice」全面铺开</a></div>
+      <div class="it-sum">Chips and Cheese 解析 Zen 6 家族「喂饱猛兽」的带宽与缓存设计,Vera 级服务器核 Olympus 主攻单线程;同期 EPYC Embedded 9006 抢先切入长期稳定供货的嵌入式市场,服务器/边缘双线同时施压。Chips and Cheese / ServeTheHome</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1587148.htm" target="_blank" rel="noopener">Intel D270(Crescent Island)首秀:部分专业计算领先 Nvidia 近 6 倍</a></div>
+      <div class="it-sum">该加速器砍掉光栅/光追硬件,把资源全押 AI、HPC 与科研负载,SC26 上首次公开详细性能数据,是 Intel 在推理/科学计算赛道重新定位的信号。cnBeta</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/11/14/cerebras-readies-cs-5-systems-for-2027-launch-as-it-bags-another-hyperscaler/5309932" target="_blank" rel="noopener">Cerebras CS-5 定档 2027,再拿下一家超大规模客户</a></div>
+      <div class="it-sum">晶圆级路线在「推理吞吐」叙事下继续拿到 hyperscaler 订单,与 Rubin HPC 的 2028 时间表形成错位竞争。The Next Platform</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.23555" target="_blank" rel="noopener">MetaphIR:LLVM 窥孔优化该不该合并,用「语料规模适用性」来量化</a></div>
+      <div class="it-sum">对每条 peephole 重写,同时统计真实代码中「模式命中率」与「前置条件满足率」,把编译器的维护负担与编译期开销变成可测量的决策依据,而不是靠经验拍板。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.23584" target="_blank" rel="noopener">eBPF 验证器剪枝:用抽象步函数识别「空抽象」与死路径</a></div>
+      <div class="it-sum">内核验证器用区间域 + 三态位域跟踪寄存器,但缺乏跨域矛盾检测,条件分支细化后可能产生互相冲突的约束而无法判定不可达;该工作补上了这一步,直接减少验证器状态爆炸导致的拒绝与超时。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.23848" target="_blank" rel="noopener">反向 offload 不是「慢速兜底」:GPU 发起通信的 GPU→CPU 调用层</a></div>
+      <div class="it-sum">论文论证在设备发起通信场景下,把传输控制交回 host proxy 线程反而能超过 GPUDirect Async 的 GPU 线程方案,并给出可编程的调用层抽象——对 NCCL/通信库的运行时设计是直接挑战。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time" target="_blank" rel="noopener">为什么你的微调比 FLOPs 算出来的慢</a></div>
+      <div class="it-sum">HuggingFace 博文拆解数据加载、通信、显存碎片与 kernel 启动开销,指出「理论算力利用率」与实际 step time 的差距主要来自非计算路径,给出定位方法。HuggingFace</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化(数据中心)</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.23512" target="_blank" rel="noopener">DexAttention:动态稀疏掩码下,「重新规划」必须比它省下的执行时间更便宜</a></div>
+      <div class="it-sum">co-design 快速在线规划与持久化 GPU 执行,让稀疏注意力在分布式场景不再为每次掩码变化付出调度与数据搬运代价,这是稀疏注意力真正落地集群的关键约束。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.24119" target="_blank" rel="noopener">eFAIR:在「逐小时购电承诺」约束下做公平 LLM 服务</a></div>
+      <div class="it-sum">数据中心按日前市场承诺每小时电量,只最大化总吞吐会让部分请求长期挨饿;该工作把公平性目标与小时级电力预算联合优化,是「电力即调度约束」这一新范式的早期样本。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.23339" target="_blank" rel="noopener">生成式推荐的推理不该照搬 vLLM:先优化 Cob,再优化 Kernel</a></div>
+      <div class="it-sum">GR 推理是「长输入 + 宽 beam + 极少输出 token」,vLLM 把 beam 当独立序列批处理,导致共享前缀的 KV Cache 被重复读、每步 beam search 又被拆成多次 kernel 启动;论文从调度粒度而非算子层面拿到收益。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/moe-expert-streaming" target="_blank" rel="noopener">32GB 内存跑 180B MoE:专家流式加载把「放不下」变成「换得动」</a></div>
+      <div class="it-sum">用 Transformers 实现按需从磁盘/远端流式载入专家权重,配合预取与缓存策略,使超大 MoE 在单机小显存上可推理——对成本敏感的自托管场景极具吸引力。HuggingFace</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/nvidia-and-lambda-disclose-first-production-co-packaged-optics-cluster-it-is-finally-real/" target="_blank" rel="noopener">🔥 首个生产级 CPO 集群落地:Lambda 用 NVIDIA 光子共封装光学交换机连 10,000+ GPU</a></div>
+      <div class="it-sum">GB300 NVL72 规模的 AI Factory 首次公开确认以 CPO 替代可插拔光模块,目标是同时提升带宽密度、能效与链路可靠性——CPO 从 Demo 走进生产,是今年互连侧最重要的工程里程碑之一。ServeTheHome</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/data-centers/ai-data-center-power-demand-will-double-by-2030-thanks-to-usd4-trillion-in-spending-adding-an-entire-great-britain-to-energy-strain-93-large-ai-factories-with-projected-capacity-of-around-50-gigawatts" target="_blank" rel="noopener">IEA:AI 数据中心用电到 2030 年翻倍,$4 万亿投入 ≈ 多出一个英国的用电量</a></div>
+      <div class="it-sum">93 座大型 AI 工厂、合计约 50GW 规划容量,而发电与配电网建设速度明显跟不上,电力正取代芯片成为扩产的第一约束。Tom&#x27;s Hardware</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blocksandfiles.com</span><a href="https://www.blocksandfiles.com/flash/2026/11/18/huaweis-unified-bus-lets-storage-in-on-east-west-gpu-cluster-traffic/5310818" target="_blank" rel="noopener">华为 Unified Bus 让存储进入 GPU 集群东西向流量</a></div>
+      <div class="it-sum">把存储设备直接接入原本只跑 GPU 间通信的总线语义,减少「计算—存储」跨域搬运的协议转换与拷贝层级,是国产超节点在「以存强算」方向上的一次架构级动作。Blocks &amp; Files</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.24398" target="_blank" rel="noopener">ScaleBench:给 Kubernetes 自动扩缩容研究一个可复现实验台</a></div>
+      <div class="it-sum">现有弹性伸缩论文(规则型/优化型/ML 型)普遍缺少统一、可扩展、可复现的评测平台,导致结论难以横向比较;ScaleBench 试图把 SLO、负载形态与扩缩策略解耦成可插拔组件。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">moq.dev</span><a href="https://moq.dev/blog/webrtc-is-still-the-problem/" target="_blank" rel="noopener">OpenAI 的 WebRTC 问题仍未解决</a></div>
+      <div class="it-sum">moq.dev 分析指出实时多模态场景下 WebRTC 的拥塞控制与分层编码模型与现代媒体传输需求错位,Media over QUIC 路线因此持续获得关注——实时语音/视频 agent 规模化的隐性基础设施债。moq.dev</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">theverge.com</span><a href="https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure" target="_blank" rel="noopener">🔥 Anthropic 完成史上最大 IPO:募资 813 亿美元,开盘 111.5 美元、估值冲上 1.5–2 万亿美元</a></div>
+      <div class="it-sum">发行价 83 美元高于上调后的区间,首日涨约 33%;同时其 Public Benefit Foundation 加员工捐赠与公司配捐合计可达 1560 亿美元。但 S-1 也暴露巨额算力承诺与开源模型竞争风险——「安全优先」的品牌叙事第一次要被公开市场的季度节奏检验。The Verge / TechCrunch</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">calif.io</span><a href="https://calif.io/java4shell/" target="_blank" rel="noopener">🔥 Java4Shell:OpenJDK 处理 Base64 时存在 RCE(HN 1176 分,今日最高)</a></div>
+      <div class="it-sum">影响面覆盖几乎所有 JVM 服务端栈,对以 Java 写控制面/调度面的 AI 平台(k8s 生态、数据管线、特征服务)是直接暴露面,补丁窗口内应优先排查不可信输入的解码路径。calif.io</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theregister.com</span><a href="https://www.theregister.com/security/2026/11/19/nvidia-adds-possible-hack-to-list-of-very-bad-things-under-investigation/5311153" target="_blank" rel="noopener">Nvidia 把「可能被入侵」加入正在调查的坏消息清单</a></div>
+      <div class="it-sum">勒索组织已设定付款期限,否则公开数据;在供应链与出口合规本就敏感的时点,芯片厂商的数据泄露风险会直接传导到客户集群的固件与驱动信任链。The Register</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">aiera.com.cn</span><a href="https://aiera.com.cn/2026/11/19/other/admin/124312/%e8%a1%a5%e4%b8%81%e6%88%90%e4%ba%86%e3%80%8c%e6%bc%8f%e6%b4%9e%e8%af%b4%e6%98%8e%e4%b9%a6%e3%80%8d%ef%bc%81%e8%b0%b7%e6%ad%8c%e6%9b%9d%e9%bb%91%e5%ae%a2%e8%ae%a9ai%e7%85%a7%e7%9d%80%e8%a1%a5%e4%b8%81/" target="_blank" rel="noopener">补丁成了「漏洞说明书」:攻击者让 AI 照着 diff 写利用代码</a></div>
+      <div class="it-sum">Google 披露的新趋势是「N-day 窗口」被压缩到小时级——厂商一发补丁,LLM 即可反推漏洞语义并生成 PoC,防守方必须把「补丁→利用」的时间差纳入发布策略。新智元</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/zero-day-robotics-vulnerabilities-vicone-security" target="_blank" rel="noopener">Physical AI 安全欠账:两天内 28 个零日,涉及 Google/NVIDIA/Meta 维护的项目</a></div>
+      <div class="it-sum">VicOne 用 AI 辅助审计机器人生态的软件与工具链,说明具身系统的攻击面已从「算法」扩展到仿真器、驱动与运维工具,而安全投入远未跟上出货速度。IEEE Spectrum</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blog.google</span><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/" target="_blank" rel="noopener">🔥 Google DeepMind Genie 4 开放可用</a></div>
+      <div class="it-sum">交互式世界模型再迭代,直接面向「可玩的生成世界」;对具身智能的意义在于低成本生成可控、可交互的训练与评测环境,缓解真机数据瓶颈——世界模型正从演示走向训练基础设施。Google</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/19/boston-dynamics-launches-next-generation-stretch-robot-with-major-reliability-upgrades/107354/" target="_blank" rel="noopener">Boston Dynamics 发布 Stretch Gen 2</a></div>
+      <div class="it-sum">针对集装箱卸货场景做硬件与结构升级,重点不是新能力而是「可用率与维护性」——第一代真实部署反馈驱动的可靠性改造,说明物流机器人已进入拼运营成本的阶段。R&amp;AN</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/19/serve-robotics-opens-its-physical-ai-technology-to-other-robot-companies/107358/" target="_blank" rel="noopener">Serve Robotics 把自家 Physical AI 栈对外开放</a></div>
+      <div class="it-sum">打包「机器人与离身智能连接 + 训练数据筛选 + 学习加速」能力对外供货,配送机器人公司开始把自己定位成 Physical AI 平台供应商,行业分层加速。R&amp;AN</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.24234" target="_blank" rel="noopener">VLA 推理的显存账本:每步都重读全部权重,却只作用于约 50 个 token</a></div>
+      <div class="it-sum">针对 GR00T 类模型的 action head(扩散 Transformer),论文提出「权重精度随 flow step 递升」的加速方案,把 memory-bound 的延迟与能耗压下来——VLA 落地的瓶颈正从算法转向推理效率。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/029/762.htm" target="_blank" rel="noopener">商务部:1–10 月具身智能机器人销售额增长 25.2%,智能眼镜销售额翻倍</a></div>
+      <div class="it-sum">官方口径首次把「具身智能机器人」单列为消费增长项,叠加以旧换新政策,是国内具身产品从 demo 走向规模出货的直接证据。IT之家</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/19/wayve-and-stellantis-partner-to-advance-autonomous-driving-in-france/107345/" target="_blank" rel="noopener">欧洲 AV 三连:Wayve/Stellantis/Nvidia 联手进法国、Bolt 计划 2028 年大巴黎试运营、Pony.ai 携 inDrive 落地哈萨克斯坦</a></div>
+      <div class="it-sum">主机厂 + 芯片 + 自动驾驶软件的三方结构成为出海标准模板,robotaxi 的区域扩张开始由「技术验证」转为「监管与运营牌照」竞赛。R&amp;AN</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/research-acceleration-jagged-frontier" target="_blank" rel="noopener">🔥 OpenAI 自曝「递归自我提升」已开始转动</a></div>
+      <div class="it-sum">官方研究博客量化编码 agent 对 AI 研究本身的加速效果,并明确指出能力分布是「锯齿状前沿」——部分任务指数级提速、部分仍不可用;这既是 RSI 叙事的首个官方数据支撑,也是「人类已成瓶颈」讨论的起点。OpenAI</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/advancing-chip-design-with-our-models/" target="_blank" rel="noopener">🔥 OpenAI 用自家模型做芯片设计</a></div>
+      <div class="it-sum">官方披露模型在芯片设计流程中的实际介入点与收益,是「LLM 进入硬件工程闭环」的标志性案例,与下面的 RTL 验证、NPU 设计空间探索形成同一条技术线。OpenAI</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">microsoft.com</span><a href="https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/" target="_blank" rel="noopener">PDD Kit:给 agent 写的全栈应用做形式化验证</a></div>
+      <div class="it-sum">把开发者意图转成 Verus 规格,再证明 AI 生成代码满足规格——针对「agent 产码量超过人类逐行 review 能力」这一根本矛盾,给出可工程化的验收层。Microsoft Research</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.24733" target="_blank" rel="noopener">Mechanistic Critics:让 NPU 设计空间探索从「标量反馈」变成「可解释归因」</a></div>
+      <div class="it-sum">传统模拟器只回吐 latency/power 的标量,无法回答「为什么慢、下一个该调哪个参数」;该工作用机制性 critic 区分 prefill 与 decode 负载给出方向性建议,显著提升样本效率。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.23905" target="_blank" rel="noopener">Agentic 硬件验证中的推理时扩展:收益随协议复杂度非线性变化</a></div>
+      <div class="it-sum">系统刻画「多花推理算力」在必须同时满足编译正确性、协议语义与覆盖率约束的 RTL 验证代码生成中的实际表现,给出一条别把 test-time scaling 当万灵药的量化边界。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.23268" target="_blank" rel="noopener">f2x50:仓库级 Fortran→X 迁移基准</a></div>
+      <div class="it-sum">50 个公开 Fortran 仓库、保留跨模块共享状态、构建结构与依赖,针对现有翻译基准「只测小函数/小仓库」的缺陷,是 AI 代码迁移从玩具走向遗留系统改造的必要标尺。arXiv</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/" target="_blank" rel="noopener">🔥 NVIDIA RTX Spark 紧凑台式机开卖:最高 128GB 统一内存跑本地 agent</a></div>
+      <div class="it-sum">ASUS/Dell/MSI 首批出货,主打本地 AI agent、图像视频生成与模型微调,把「大内存统一寻址 + 完整 AI 软件栈」做成消费级形态——端侧能跑的模型规模被显存容量重新定义。NVIDIA</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/" target="_blank" rel="noopener">DGX Spark HPC 开发者套件:四节点成环,把书桌变成超算实验室</a></div>
+      <div class="it-sum">每台直连两个邻居组成环状拓扑,面向研究者做多机并行与通信实验,把「小规模集群调优」从云上搬到桌面。NVIDIA</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.23878" target="_blank" rel="noopener">HETEROVLM:在 Versal SoC 上用 AI Engine + 可编程逻辑做边缘多请求 VLM 服务</a></div>
+      <div class="it-sum">针对车/机器人上「多请求、各自有 deadline、encode+prefill 计算密集 + decode 访存密集」的混合负载,绕过 GPU 逐迭代 host 调度的粒度问题,把小批量 decode 的每 token 能耗压下来。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.24085" target="_blank" rel="noopener">LEDGE:异构边缘设备上分布式 LLM 服务的快速模拟器</a></div>
+      <div class="it-sum">支持细粒度模型切分与设备放置配置、并能预测执行时间,让「哪种切分 + 放到哪台设备」的搜索不必反复做物理实验——边缘集群部署的前置工具。arXiv</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/11/511079.html" target="_blank" rel="noopener">安谋科技解析 Cortex-M42 并发布「星辰100e」AIoT 原型平台</a></div>
+      <div class="it-sum">面向嵌入式侧更高 AI 性能的设计,配合本土 AIoT 原型平台,反映 MCU 级 NPU 正在成为端侧智能的下一波载体。量子位</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/11/511071.html" target="_blank" rel="noopener">范式发布首批国产算力全链路训练的 Phai 系列模型</a></div>
+      <div class="it-sum">语言模型标注「单张 3090 即可运行」,把「国产算力训练 + 低门槛部署」两条线同时讲通,是国内算力—模型协同的样本之一。量子位</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-11-19.html">← 2026-11-19</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
