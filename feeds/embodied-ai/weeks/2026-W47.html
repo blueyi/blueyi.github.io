@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embodied AI Weekly · 2026-W47 · 11-16 ~ 11-22</title>
+<link rel="stylesheet" href="../../assets/feeds.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="../../index.html">Feeds</a> / <a href="../index.html">Embodied AI Weekly</a> / 2026-W47</div>
+  <header class="site">
+    <h1>Embodied AI Weekly · 2026-W47 · 11-16 ~ 11-22</h1>
+    <div class="sub">Embodied AI Weekly weekly digest</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-11-14 ~ 2026-11-21</b></span>
+    <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
+    <span>Issue: <b>2026-W47</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 本周亮点</h2>
+    <ol>
+      <li>ScaleVLA 将视觉语言动作模型扩展至 5520 亿参数，检验前沿视觉语言表征能否直接转化为更强机器人控制：[端到端VLA]</li>
+      <li>Gemini Robotics 2.5 发布并将重点放在真实环境的灵巧性、可靠性与安全性，通用 VLA 开始把能力指标收敛到可部署要求：[端到端VLA]</li>
+      <li>ForceHarness 为冻结的前沿多模态模型加装低层力控闭环，使慢速高层决策可进入接触丰富的机器人任务：[控制层·BC]</li>
+      <li>Awaken-HI 公开约 5 万小时同步第一视角立体视频与全身人体运动数据，为人形长视野移动操作补足规模化训练数据：[控制层·BC]</li>
+      <li>AFFECT 以动作扰动对应的视觉响应训练世界模型，同时提升仿真与真实机器人任务中的轨迹保真度和规划成功率：[控制层·世界模型]</li>
+    </ol>
+  </div>
+  <section class="domain" id="vla">
+    <h2>1️⃣ VLA（视觉-语言-动作模型）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.21607" target="_blank" rel="noopener">ScaleVLA：5520 亿参数探索 VLA 规模化</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">研究将 VLA 扩展到 5520 亿参数，检验前沿视觉语言预训练能否为物理动作提供更强表征；该工作把机器人策略的骨干规模推到新的量级。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/" target="_blank" rel="noopener">Gemini Robotics 2.5：面向真实世界通用灵巧性</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">Google DeepMind 发布新一代视觉语言动作模型，官方将灵巧性、可靠性和安全性列为核心目标，指向真实机器人部署的综合能力。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.24789" target="_blank" rel="noopener">HINT-WAM：用后见信息训练世界动作模型</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">该方法针对世界动作模型的后训练，利用后见信息改善机器人操作执行，将动作生成与未来视觉动力学预测结合；代码已公开。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.22666" target="_blank" rel="noopener">VSpark：自回归 VLA 的推测解码加速</a></div>
+      <div class="it-sum">通过校准动作噪声、隐藏特征对齐和拒绝草稿续写复用，为多项操作任务实现 1.28 至 2.10 倍无损解码加速，缓解 VLA 控制延迟；代码已公开。[端到端VLA]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="dexterous">
+    <h2>2️⃣ 灵巧手 / 灵巧操作</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.21099" target="_blank" rel="noopener">ForceHarness：为冻结多模态模型接入力觉闭环</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">在高层 API 模型下增加快速低层力控，并把力信号转化为可被冻结模型理解的接口，使零样本视觉控制覆盖图像不可见的接触过程；代码已公开。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.26405v1" target="_blank" rel="noopener">TacInno：让 VLA 学习触觉中的接触动力学</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">该方法针对视觉加触觉并不稳定增益的问题，建模视觉无法预测的接触动态，推动 VLA 在接触丰富操作中更有效利用触觉输入。[端到端VLA]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.26444" target="_blank" rel="noopener">Mind2Act World：诊断推理与物理执行的组合缺口</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">180 个模拟操作配置分别评估历史推理、精确执行和环境反馈组合能力，结果提示单项能力无法外推到闭环复合任务；基准与代码已公开。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.23143" target="_blank" rel="noopener">TCP4D：统一跟踪与生成工具中心点轨迹</a></div>
+      <div class="it-sum">以跨本体的工具中心点位姿作为动作空间，用共享 4D 场景表示同时跟踪已观测运动并生成未来轨迹，降低从 RGB 视频恢复操作标注的难度；代码已公开。[控制层·BC]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="sim2real">
+    <h2>3️⃣ sim2real / 仿真到真实</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.25980" target="_blank" rel="noopener">AFFECT：以动作效果匹配提升世界模型保真度</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">辅助目标要求世界模型匹配时间相关动作扰动引发的视觉响应，在模拟和真实机器人任务中同时改善轨迹保真度与规划成功率。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.19771" target="_blank" rel="noopener">JEPA4R：用 4D 点规划连接潜空间预测与操作</a></div>
+      <div class="it-sum">该具身 JEPA 世界模型预测未来表征而非像素，并引入 4D 点规划，使操作需要的度量几何更显式，面向仿真外的真实操作可解释性；代码已公开。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://arxiv.org/abs/2611.26595" target="_blank" rel="noopener">Coda-DaVinci：3D 代理与物理仿真约束视频生成</a></div>
+      <div class="it-sum">通过智能体生成的 3D 代理、物理仿真和多智能体协调增强视频的结构控制与物理合理性，为可控合成训练场景提供路径；代码已公开。[控制层·世界模型]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-model">
+    <h2>4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.26617v1" target="_blank" rel="noopener">O2LaF：复用视频扩散先验学习潜动作</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">将预训练视频扩散 Transformer 同时用作逆动力学和前向动力学先验，从视觉状态变化中自监督恢复动作，减少从零学习动力学的需求。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.26420v1" target="_blank" rel="noopener">Awaken-HI：全身人类经验扩展人形智能</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">约 5 万小时同步第一视角立体视频与全身动作数据为人形移动操作提供大规模人类经验，补上现有第一视角数据缺少全身运动监督的缺口。[控制层·BC]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.26516v1" target="_blank" rel="noopener">Plan4D：面向规划的生成式 4D 世界</a></div>
+      <div class="it-sum">模型联合预测未来 RGB 视频和稠密 4D 几何，试图改善视频世界模型缺乏物理接地与时序几何一致性的问题，为规划提供可操作场景表示。[控制层·世界模型]</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.26603v1" target="_blank" rel="noopener">Depth Pro 2：兼顾边界锐利与时序一致的度量深度</a></div>
+      <div class="it-sum">单一可扩展网络在全分辨率图像和视频上估计稠密度量深度，针对多帧一致性与单帧边缘清晰度间的既有权衡提出改进。[感知层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="embodied-chip">
+    <h2>5️⃣ 具身智能芯片（机器人计算 / 边缘 NPU）</h2>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
+  </section>
+  <section class="domain" id="manufacturing">
+    <h2>6️⃣ 制造 / 产线</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.26503v1" target="_blank" rel="noopener">JARVIS：自主设计、制造和测试电路板的具身智能体</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">系统维护机器能力与约束，以机械臂搭载的 3D 扫描器构建工作空间数字表示，并尝试闭环完成电路板的设计、制作、测试和迭代。[规划层]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain" id="market">
+    <h2>7️⃣ 市场 / 产业</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><a href="https://spectrum.ieee.org/agility-robotics-digit-5-redesign" target="_blank" rel="noopener">Agility Robotics 发布 Digit 5，瞄准规模化实用部署</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">公司联合创始人介绍 Digit 5 的重新设计，目标是在安全与经济性约束下承担实际工作，并把人形机器人部署规模指向数万台级别；产品进展以官方渠道核验。[市场/产业]</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://www.leiphone.com/category/industrynews/leaIWtsEkg58zaCy.html" target="_blank" rel="noopener">灵掌机器人展示工业与太空场景灵巧手</a></div>
+      <div class="it-sum">灵掌机器人在世界智能制造博览会展示九款灵巧手，覆盖工业制造、太空任务和人形机器人等应用，反映末端执行器正在向多场景产品化推进；展示与部署信息以官方渠道核验。[市场/产业]</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain industry" id="industry">
+    <h2>📈 产业动态</h2>
+    <details class="stocks-fold">
+      <summary>上市公司风向（8 只，点击展开 · 截至最近收盘）</summary>
+      <div class="stock-region">🌍 海外</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>特斯拉(Optimus) <span class="tk">TSLA</span></td><td>345.82 USD</td><td class="down">-8.93%</td><td></td></tr>
+        <tr><td>直觉外科(手术机器人) <span class="tk">ISRG</span></td><td>399.05 USD</td><td class="down">-8.84%</td><td></td></tr>
+        <tr><td>Symbotic(仓储机器人) <span class="tk">SYM</span></td><td>31.1 USD</td><td class="down">-9.28%</td><td></td></tr>
+        <tr><td>Serve Robotics(配送) <span class="tk">SERV</span></td><td>2.04 USD</td><td class="down">-18.56%</td><td></td></tr>
+        <tr><td>英伟达(机器人算力) <span class="tk">NVDA</span></td><td>125.53 USD</td><td class="down">-19.6%</td><td></td></tr>
+      </tbody></table>
+      <div class="stock-region">🇨🇳 国内（A股/港股）</div>
+      <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
+        <tr><td>宇树科技 <span class="tk">1.688836 · A股</span></td><td>590.0 CNY</td><td class="down">-1.01%</td><td></td></tr>
+        <tr><td>优必选 <span class="tk">116.09880 · 港股</span></td><td>57.9 HKD</td><td class="down">-13.32%</td><td></td></tr>
+        <tr><td>地平线机器人 <span class="tk">116.09660 · 港股</span></td><td>3.12 HKD</td><td class="down">-8.1%</td><td></td></tr>
+      </tbody></table>
+    </details>
+    <h3 class="sub-h">融资与独角兽</h3>
+    <ul class="items">
+      <li><div class="it-title"><span class="badge amt">$11M</span><a href="https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/" target="_blank" rel="noopener">Proception 宣布 1100 万美元融资推进机器人手数据采集</a></div><div class="it-sum">TechCrunch 报道该机器人手公司在解决与特斯拉的商业秘密诉讼后宣布融资，并以训练数据采集为核心路径；融资细节以公司官方渠道核验。</div></li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="../index.html">← All issues</a></span>
+    <span><a href="../../index.html">Feeds home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · HN / arXiv / industry media / markets · GitHub Pages</footer>
+</div>
+</body>
+</html>
