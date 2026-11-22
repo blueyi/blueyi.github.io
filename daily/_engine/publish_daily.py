@@ -40,9 +40,11 @@ def run(cmd, cwd, check=False):
 
 
 def snapshot_date(path):
-    m = re.search(r"_(\d{8})_", os.path.basename(path)) or re.search(
-        r"(\d{8})", os.path.basename(path)
-    )
+    name = os.path.basename(path)
+    m = re.search(r"(\d{4}-\d{2}-\d{2})", name)
+    if m:
+        return m.group(1)
+    m = re.search(r"_(\d{8})_", name) or re.search(r"(\d{8})", name)
     if not m:
         return None
     value = m.group(1)
@@ -51,7 +53,9 @@ def snapshot_date(path):
 
 def snapshots_by_date():
     snapshots = {}
-    for path in sorted(glob.glob(SNAPSHOT_GLOB)):
+    candidates = glob.glob(SNAPSHOT_GLOB)
+    candidates.extend(glob.glob(os.path.expanduser("~/.hermes/cron/output/5b1b9320afe7/*.md")))
+    for path in sorted(candidates, key=lambda p: os.path.getmtime(p)):
         date = snapshot_date(path)
         if date:
             snapshots[date] = path

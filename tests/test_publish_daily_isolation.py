@@ -13,6 +13,14 @@ def test_daily_and_feeds_share_global_publish_lock():
     assert publish_daily.LOCK_PATH == Path.home() / ".hermes/locks/blueyi-pages-publish.lock"
 
 
+def test_snapshots_by_date_includes_nested_cron_output(monkeypatch, tmp_path):
+    nested = tmp_path / "2026-11-22_23-22-05.md"
+    nested.write_text("snapshot", encoding="utf-8")
+    monkeypatch.setattr(publish_daily.glob, "glob", lambda pattern: [str(nested)] if pattern.endswith("*.md") else [])
+    snapshots = publish_daily.snapshots_by_date()
+    assert snapshots == {"2026-11-22": str(nested)}
+
+
 def test_worker_requires_today_snapshot(monkeypatch):
     monkeypatch.setattr(publish_daily, "snapshots_by_date", lambda: {})
     try:
