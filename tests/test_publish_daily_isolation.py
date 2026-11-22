@@ -21,6 +21,20 @@ def test_snapshots_by_date_includes_nested_cron_output(monkeypatch, tmp_path):
     assert snapshots == {"2026-11-22": str(nested)}
 
 
+def test_clean_markdown_removes_prompt_suffix():
+    raw = "# Daily\n## 1️⃣ AI 芯片\n- **News**: summary\n## 8 个分类(必须全部覆盖)\n- prompt rule\n"
+    assert publish_daily.clean_markdown(raw) == "# Daily\n## 1️⃣ AI 芯片\n- **News**: summary\n"
+
+
+def test_clean_markdown_extracts_response_not_prompt_or_json():
+    raw = "# Cron Job\n## Prompt\n# example title\n## 8 个分类\n## Script Output\n{}\n## Response\n# 📡 AI Infra 日报\n## 🌟 今日亮点\n1. 亮点一\n2. 亮点二\n3. 亮点三\n## 1️⃣ 分类\n- **标题**: 摘要 [来源](https://example.com)\n"
+    cleaned = publish_daily.clean_markdown(raw)
+    assert cleaned.startswith("# 📡 AI Infra 日报")
+    assert "## Script Output" not in cleaned
+    assert "## Prompt 尾部" not in cleaned
+    publish_daily.validate_digest(cleaned, "2026-11-22")
+
+
 def test_worker_requires_today_snapshot(monkeypatch):
     monkeypatch.setattr(publish_daily, "snapshots_by_date", lambda: {})
     try:

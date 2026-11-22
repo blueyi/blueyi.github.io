@@ -64,12 +64,32 @@ def snapshots_by_date():
 
 def clean_markdown(raw):
     lines = raw.splitlines()
-    try:
-        start = next(i for i, line in enumerate(lines) if line.startswith("# "))
-    except StopIteration as exc:
-        raise ValueError("snapshot has no markdown title") from exc
+    response_start = next(
+        (i for i, line in enumerate(lines) if line.strip() == "## Response"),
+        None,
+    )
+    if response_start is not None:
+        start = next(
+            (i for i in range(response_start + 1, len(lines)) if lines[i].startswith("# ")),
+            None,
+        )
+        if start is None:
+            raise ValueError("snapshot response has no markdown title")
+    else:
+        try:
+            start = next(i for i, line in enumerate(lines) if line.startswith("# "))
+        except StopIteration as exc:
+            raise ValueError("snapshot has no markdown title") from exc
+    end_markers = (
+        "To stop or manage this job",
+        "## 8 个分类(必须全部覆盖)",
+        "## 8 个分类",
+        "## 分类提示",
+        "## 输出格式",
+        "## 数据为空的容错",
+    )
     end = next(
-        (i for i, line in enumerate(lines) if line.startswith("To stop or manage this job")),
+        (i for i in range(start + 1, len(lines)) if any(lines[i].startswith(marker) for marker in end_markers)),
         len(lines),
     )
     return "\n".join(lines[start:end]).strip() + "\n"
