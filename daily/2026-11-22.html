@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-11-22</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-11-22</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-11-22 · 周日</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-11-20 ~ 2026-11-22</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-11-22</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>互连层面的“承诺兑现”比算力数字更有分量</b>：NVIDIA 与 Lambda 的首个生产级 CPO 集群（1 万+ GPU 连接 GB300 NVL72）落地，叠加华为把存储纳入 GPU 东西向总线，说明万卡集群的瓶颈已从芯片峰值性能转向“数据能不能及时到达计算单元”。</li>
+      <li><b>推理成为主战场，架构选择随之分化</b>：推理已占 AI 负载三分之二，部署形态从巨型训练集群转向模块化小站点；同一时间 HuggingFace 用 expert streaming 把 180B MoE 压到 32GB 内存、Cerebras 拿新 hyperscaler 订单、Fireworks 主张“跳过旗舰模型”——成本与延迟正在重写模型选型逻辑。</li>
+      <li><b>软件门槛正在被主动拆除</b>：AWS 的 TorchNeuron 让 PyTorch 模型零改动跑上 Trainium，是自研芯片对 CUDA 生态锁定的最直接一击；而 OpenAI 的 Performance Factory 与微软 PDD Kit 则分别从“自动修性能”和“生成即证明”两端，重定义了 LLM 在软件工程中的角色。</li>
+      <li><b>前沿实验室开始把能力提取当作侵权处理</b>：OpenAI 发布四层反蒸馏体系并大规模封号，同期 MiniMax 用内部模型把多项密码学理论攻击推进到分钟级可执行——能力扩散的攻防两侧都在自动化。</li>
+      <li><b>具身智能的路线之争变清晰了</b>：Runway 用互联网视频训练 world-action model（Praxis-1 开源权重）、GPT-6.2 Astra 在 16 项任务上成功率翻倍并首通可变形物体操控，通用模型与视频先验正在同时挑战专用 VLA 路线；而 48 小时内 28 个机器人生态零日则提醒，部署规模的扩张远快于安全投入。</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/nvidia-announces-rubin-hpc-science-focused-server-gpu-to-arrive-in-2028/" target="_blank" rel="noopener">🔥 NVIDIA 宣布 Rubin HPC：重返 HPC 市场的科学计算 GPU</a></div>
+      <div class="it-sum">在 SC26 上，NVIDIA 公布面向科学与工程计算的 Rubin HPC，CUDA 核心数超过 5 万，定位与通用 AI 加速卡分离，2028 年上市。这意味着继 Grace-Hopper 之后，NVIDIA 想把“科学计算 + AI for Science”做成独立产品线，而不是把它当作训练卡的副产物。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">eetimes.com</span><a href="https://www.eetimes.com/nvidia-reports-115-8b-in-quarterly-revenue-under-interim-ceo/" target="_blank" rel="noopener">🔥 Nvidia 单季营收 1158 亿美元，过渡期 CEO 交出的首份财报</a></div>
+      <div class="it-sum">受 AI 基础设施需求驱动，营收与利润双创新高，同时公司确认将停止在中国销售 H200。管理层更迭叠加对华销售收缩，是本周“两个 Nvidia”叙事的核心矛盾：业绩仍在加速，但市场开始为政策风险与领导层不确定性重新定价。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">tomshardware.com</span><a href="https://www.tomshardware.com/tech-industry/policy/tsmc-reportedly-pauses-shipments-to-chinese-designers-after-u-s-export-rules-flag-decade-old-16nm-and-14nm-nodes-new-bis-controls-threaten-smartphone-tv-and-automotive-chips" target="_blank" rel="noopener">🔥 台积电据报暂停对部分中国设计公司出货，16/14nm 老节点被卷入</a></div>
+      <div class="it-sum">美方新规（BIS 的 IFR）要求晶圆厂不能再仅凭客户提供的规格判断芯片性能，结果是十年前的老节点也被纳入审查，波及手机、电视、汽车芯片。管制逻辑从“算力阈值”转向“最终用途不可知即风险”，成熟制程的全球化分工被进一步切割。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/030/713.htm" target="_blank" rel="noopener">AI 服务器签约后仍涨价，最高涨幅 45%</a></div>
+      <div class="it-sum">戴尔、HPE、联想、超微在交付前大幅上调含英伟达 GPU、内存与网络设备的整机报价。存储器与 GPU 成本上行开始向下游传导，云厂商自建集群的 TCO 模型需要重算，“锁价合同”在硬件短缺周期里形同虚设。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">chipsandcheese.com</span><a href="https://chipsandcheese.com/p/nvidia-veras-system-architecture" target="_blank" rel="noopener">Vera 与 Olympus：NVIDIA 正在补服务器 CPU 的单线程短板</a></div>
+      <div class="it-sum">Chips and Cheese 对 Vera 系统架构与 Olympus 核心的深度分析指出，NVIDIA 自研服务器 CPU 的重点是每核性能与内存带宽配比，而非堆核数——这决定了 GB 级机架里 CPU 侧是否还会成为数据供给瓶颈。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/XhtWUmaolJECUhPX2jzY" target="_blank" rel="noopener">🔥 AWS 推出 TorchNeuron，PyTorch 模型零改动跑上 Trainium</a></div>
+      <div class="it-sum">可直接在 AWS Trainium 上运行 PyTorch 模型，无需修改代码。这是 AWS 对 CUDA 生态锁定的一次正面冲击：把迁移成本从“重写 kernel + 改图”降到“换后端”，自研芯片的软件门槛被显著削平，但真实算子覆盖率与性能对齐仍需实测验证。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/fs4IuBTjwIwR1xUgdjqt" target="_blank" rel="noopener">Pinterest 联合英特尔把开源性能分析推到互联网级规模</a></div>
+      <div class="it-sum">双方将性能剖析从单机采样扩展到大规模集群级，面向的是超大规模服务的持续 profiling 与瓶颈定位。对 AI Infra 的启示是：当训练/推理集群动辄上万卡，可观测性工具的采样开销和聚合架构本身就是基础设施问题。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time" target="_blank" rel="noopener">为什么你的微调任务比 FLOPs 算出来的慢</a></div>
+      <div class="it-sum">HuggingFace 博客系统拆解了微调实际耗时与理论算力之间的差距来源——数据加载、通信同步、checkpoint 与优化器状态换入换出等非计算开销往往占据大头。对做容量规划的人来说，按 TFLOPS 估工时的做法会系统性低估 30% 以上。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/TrWuo2vEZRl2xB2XXZNX" target="_blank" rel="noopener">智能体 AI 架构：当前挑战与未来机遇（AICon 议题）</a></div>
+      <div class="it-sum">InfoQ 的架构类议题梳理了 Agent 系统在工具调用、状态管理与多智能体协同上的工程化难点，反映国内技术社区正从“能跑通 demo”转向“如何做可靠运行时”。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">huggingface.co</span><a href="https://huggingface.co/blog/moe-expert-streaming" target="_blank" rel="noopener">🔥 HuggingFace：180B 参数 MoE 模型，32GB 内存跑起来</a></div>
+      <div class="it-sum">通过 expert streaming（按需把专家权重从磁盘/主机内存换入），在 Transformers 生态内把 MoE 推理的内存下限压到单卡 32GB 级别。这对“MoE 只能靠超大显存集群”的假设是一次直接挑战，代价是引入 I/O 成为新的延迟瓶颈，吞吐与首 token 延迟需要按场景权衡。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">siliconangle.com</span><a href="https://siliconangle.com/2026/11/21/inference-two-thirds-ai-workloads-chip-deployment-positron-sc26/" target="_blank" rel="noopener">推理已占 AI 负载的三分之二，芯片部署形态随之改变</a></div>
+      <div class="it-sum">SiliconANGLE 在 SC26 现场报道指出，AI 支出正从巨型训练集群转向更小、更快建成的推理站点，模块化数据中心成为推理负载的自然归宿，电力、散热与内存供给对“token 在哪里生成”的影响已不亚于芯片峰值性能。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">nextplatform.com</span><a href="https://www.nextplatform.com/compute/2026/11/14/cerebras-readies-cs-5-systems-for-2027-launch-as-it-bags-another-hyperscaler/5309932" target="_blank" rel="noopener">Cerebras 筹备 2027 年 CS-5，并再签一家超大规模客户</a></div>
+      <div class="it-sum">晶圆级推理路线拿到新的 hyperscaler 订单，说明在低延迟、高吞吐的推理细分场景里，非 GPU 架构仍能靠确定性的片上带宽优势拿到生产合同。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/11/19/anthropic-rival-says-companies-can-mostly-skip-the-pricey-models/" target="_blank" rel="noopener">Fireworks AI：多数企业可以跳过昂贵的旗舰模型</a></div>
+      <div class="it-sum">在 Anthropic 上市当天，Fireworks 联创公开为开源模型站台，主张用更便宜的开源权重模型承接大部分生产流量。同时他正面回应了此前导致客户流失的安全事件——这提示推理服务商的价格战叙事已从“模型能力”转向“每 token 成本 + 信任”。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/nvidia-and-lambda-disclose-first-production-co-packaged-optics-cluster-it-is-finally-real/" target="_blank" rel="noopener">🔥 NVIDIA 与 Lambda 披露首个生产级 CPO 集群：光互连终于落地</a></div>
+      <div class="it-sum">Lambda 成为首家公开承认在生产集群中部署共封装光学（CPO）交换机的厂商，规模超过 1 万张 GPU，用于连接 GB300 NVL72。铜缆在机架间与跨机架带宽上已接近物理极限，CPO 从“路线图”进入“在跑”，是今年互连层面最实质的一次工程兑现。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">betterdatacenterproject.com</span><a href="https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/" target="_blank" rel="noopener">🔥 2028 年 Anthropic 电力结构：87% 天然气、11% 燃煤（HN 351 分）</a></div>
+      <div class="it-sum">Better Data Center Project 的拆解显示，若按其已签约的 BYOP（自带电源）与电网供电组合推算，两年后其算力扩张仍高度依赖化石能源，可再生能源占比极低。AI 电力瓶颈的解法当下是“抢得到电”而不是“电够绿”，这会持续影响选址、ESG 承诺与地方审批博弈。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/030/715.htm" target="_blank" rel="noopener">Oracle 称已备齐履行 OpenAI 合同的全部资金</a></div>
+      <div class="it-sum">甲骨文本月初已完成融资，任何与供应商的进一步私下讨论只是补充选项。这一表态意在回应市场对“AI 订单是否只是纸面承诺”的质疑——超大规模算力合同的融资结构正在成为信用风险的新焦点。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blocksandfiles.com</span><a href="https://www.blocksandfiles.com/flash/2026/11/18/huaweis-unified-bus-lets-storage-in-on-east-west-gpu-cluster-traffic/5310818" target="_blank" rel="noopener">华为 Unified Bus 让存储在 GPU 集群东西向流量中“上桌”</a></div>
+      <div class="it-sum">华为的统一总线方案把存储侧纳入 GPU 集群的东西向通信体系，而不是让存储停留在集群之外。对万卡训练而言，checkpoint 写入与数据加载正在从“背景任务”变成影响 MFU 的关键路径，存储与网络的边界正在消失。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/microsoft-files-for-3167-acre-data-center-campus-in-mecklenburg-county-virginia/" target="_blank" rel="noopener">微软在弗吉尼亚 Mecklenburg 申请 316.7 英亩园区，规划 5 栋数据中心</a></div>
+      <div class="it-sum">同期 CyrusOne 与 KEP 在日本大阪 48MW 项目封顶，Apollo、Ardian、Macquarie 等竞购 Retelit 数据中心资产。北美新建与亚太、欧洲的资产交易同时活跃，说明资本开支与存量并购两条线都在加速。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/combatting-adversarial-distillation" target="_blank" rel="noopener">🔥 OpenAI 发布《打击对抗性蒸馏》，并开始大规模封号</a></div>
+      <div class="it-sum">OpenAI 的体系由模型训练、防护栏、检测与执法四层组成，目标是阻断能力提取；中文社区同步观察到大规模封号动作。这是“模型权重即资产”逻辑下的必然升级——前沿实验室开始把蒸馏视为知识产权侵权而非普通滥用，随之而来的是 API 使用条款与学术研究的边界争议。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/030/711.htm" target="_blank" rel="noopener">🔥 MiniMax 用内部模型系统性破解现代密码方案，刷新国际挑战赛纪录</a></div>
+      <div class="it-sum">模型发掘出多处此前未知的算法构造缺陷，把多项原本停留在论文理论层面的攻击推进到秒级至分钟级可执行。这既是 LLM 用于安全研究的强力案例，也把“自动化漏洞挖掘能力扩散”的风险摆上台面。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">theverge.com</span><a href="https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax" target="_blank" rel="noopener">特朗普威胁对在海外建数据中心的企业征“巨额税”</a></div>
+      <div class="it-sum">总统称不允许美国公司把数据中心建到国外、“否则中国会拿走它们”，而同期多个州市正在限制新建申请。政策方向自相矛盾——一边限制境内建设，一边惩罚境外建设，给云厂商的长期容量规划增加了政治变量。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/uk-competition-body-probes-hyperscaler-security-and-cloud-lock-in/" target="_blank" rel="noopener">英国 CMA 调查超大规模云厂商的安全与锁定问题</a></div>
+      <div class="it-sum">竞争监管机构在数字主权调查框架下，就 IAM 与 Kubernetes 发起咨询。云锁定的审查正从“迁移费用”深入到身份与编排这类技术耦合层，对多云与自建路线的合规叙事是利好。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">spectrum.ieee.org</span><a href="https://spectrum.ieee.org/zero-day-robotics-vulnerabilities-vicone-security" target="_blank" rel="noopener">两天内 28 个零日：机器人安全跟得上吗</a></div>
+      <div class="it-sum">VicOne 用 AI 辅助研究在不到两天里于 Physical AI 生态的软件与工具中发现 28 个零日，涉及 Google、NVIDIA、Meta 维护的项目。具身系统的攻击面正随部署规模同步扩张，而安全投入远未匹配（另见 6️⃣）。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/22/runway-releases-praxis-1-open-weight-world-action-model-for-robotics/107430/" target="_blank" rel="noopener">🔥 Runway 发布 Praxis-1：开源权重的世界动作模型</a></div>
+      <div class="it-sum">面向机器人的 world-action model，让机器人借助大规模视频训练得到的先验学习物理任务，官方称在开源模型中取得领先结果。视频生成公司把“世界模型”直接转为动作策略，是今年具身技术路线里最值得关注的一次跨界——数据来源从遥操作转向互联网视频。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/11/511779.html" target="_blank" rel="noopener">🔥 GPT-6.2 Astra 再压具身模型：16 项任务成功率较 GPT-6 Astra 翻倍</a></div>
+      <div class="it-sum">量子位报道称其还实现了可变形物体操控的全球首次通过。通用大模型在具身任务上的迭代速度已超过专用 VLA 模型的更新节奏，“通用模型 + 少量适配”对专门具身基础模型构成实质竞争。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/22/boston-dynamics-gives-atlas-wheels-to-test-new-reinforcement-learning-capabilities/107438/" target="_blank" rel="noopener">Boston Dynamics 给 Atlas 装上轮子，验证强化学习能力</a></div>
+      <div class="it-sum">新视频显示 Atlas 通过轮子滚动、侧滑与 360 度跳跃完成非常规动作，属于探索 RL 如何提升运动能力的研究项目。这与其全电动 Atlas 的腿部路线并不冲突，更像是在用极端动作检验策略的泛化边界。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/22/kakao-mobility-partners-with-nvidia-to-develop-level-4-autonomous-driving-technology/107442/" target="_blank" rel="noopener">Kakao Mobility 与 Nvidia 合作开发 L4 自动驾驶</a></div>
+      <div class="it-sum">双方签署 MOU，首批应用指向起亚的 PBV（专用目的车辆）。韩国出行平台 + 美国算力平台的组合，反映 L4 竞争正从“算法公司”转向“有真实运营场景的出行平台 + 芯片供应商”联合体。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/industrynews/leaIWtsEkg58zaCy.html" target="_blank" rel="noopener">灵掌机器人一次性展出 9 款灵巧手，覆盖工业、太空与特种作业</a></div>
+      <div class="it-sum">在南京世界智能制造博览会上，其产品线从产线重物抓取延伸到危险环境远程防爆与航天器维修。灵巧手作为“智能决策到物理执行”的末端，是国内具身供应链中少有的已进入真实场景的环节。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">roboticsandautomationnews.com</span><a href="https://roboticsandautomationnews.com/2026/11/21/bot-auto-launches-capacity-grid-with-agreements-for-200-million-miles-of-driverless-trucking/107423/" target="_blank" rel="noopener">Bot Auto 推出 Capacity Grid，签下 2 亿英里无人货运协议</a></div>
+      <div class="it-sum">休斯顿公司用运力撮合网络匹配货主需求与自动驾驶卡车运力。无人货运的商业化路径正在从“卖车”转向“卖运力”，这是把技术风险转移为运营风险的一种典型结构。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">openai.com</span><a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast" target="_blank" rel="noopener">🔥 OpenAI 的 Performance Factory：用 Codex 工作流自动发现并修复性能问题</a></div>
+      <div class="it-sum">这套系统由 Codex 驱动的多条流水线组成，持续在 ChatGPT 代码库中定位并修复性能退化，是“LLM 写代码”走向“LLM 维护性能指标”的分水岭。从生成代码到自动闭环优化生产性能，是 AI 参与软件工程最深的一步。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">microsoft.com</span><a href="https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/" target="_blank" rel="noopener">微软 PDD Kit：为 Agent 写的全栈 Web 应用做形式化验证</a></div>
+      <div class="it-sum">工具把开发者意图转成 Verus 规格，并证明 AI 生成代码满足这些规格。当 Agent 产出的代码量超过人类逐行审查的能力时，“生成 + 形式化证明”替代“生成 + code review”，可能成为高可靠场景的标准配比。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">importai.substack.com</span><a href="https://importai.substack.com/p/import-ai-478-math-for-alignment" target="_blank" rel="noopener">Import AI 478：ProgramBench 与“递归自我改进”的度量问题</a></div>
+      <div class="it-sum">本期讨论了程序生成基准与 Mirendil 展示的 RSI 含义——如何衡量系统改进自身代码的能力，正成为评估自动代码生成的上位指标。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/" target="_blank" rel="noopener">🔥 NVIDIA RTX Spark 紧凑台式机开售：128GB 统一内存跑本地 Agent</a></div>
+      <div class="it-sum">华硕、戴尔、微星首批出货，定位在专用 Windows PC 上运行本地 AI Agent、图像视频生成与模型微调。统一内存把可承载的本地模型规模推高一个档位，端侧不再是“小模型专属”，这直接挤压了入门级工作站 GPU 的生存空间。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/" target="_blank" rel="noopener">NVIDIA DGX Spark HPC 开发者套件：四节点桌面集群</a></div>
+      <div class="it-sum">每台 DGX Spark 与两个邻居环形直连，组成四节点集群，面向科研人员与高校。把“小型集群”做成桌面产品，意味着 HPC/训练的实验环境正在从机房下移到工位。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/030/716.htm" target="_blank" rel="noopener">研华 ASR-A505 单板计算机曝光，搭载 Intel “Nova Lake H”</a></div>
+      <div class="it-sum">四英寸级 SBC 采用第 4 代酷睿 Ultra 处理器，面向嵌入式与边缘计算场景。x86 边缘平台在能效上持续被 ARM 阵营挤压，Nova Lake H 下放到 SBC 形态，是为工业视觉与本地推理保留的一块阵地。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/" target="_blank" rel="noopener">NVIDIA 与微软把加速计算从 Azure 延伸到 Windows PC</a></div>
+      <div class="it-sum">在 Ignite 上双方扩展全栈合作，覆盖 Azure 新一代基础设施、工业系统与 Windows PC。云端与端侧的加速栈正在被同一套软件栈打通，这对开发者是便利，对竞品生态则是更强的锁定。来源</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-11-21.html">← 2026-11-21</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
