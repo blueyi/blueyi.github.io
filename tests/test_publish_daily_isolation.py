@@ -99,9 +99,10 @@ def test_validate_digest_requires_article_summaries_for_new_digest():
 def test_historical_status_snapshot_does_not_block_today(monkeypatch, tmp_path):
     class FrozenDateTime:
         @classmethod
-        def now(cls):
+        def now(cls, tz=None):
             from datetime import datetime
-            return datetime(2026, 11, 10, 9, 0)
+            value = datetime(2026, 11, 10, 9, 0)
+            return value if tz is None else value.replace(tzinfo=tz)
 
     old_snapshot = tmp_path / "snapshot_20261109.txt"
     old_snapshot.write_text("# Old\n## 状态报告\n- **PUBLISH**: done\n", encoding="utf-8")
@@ -142,6 +143,8 @@ def test_publish_retries_after_remote_fast_forward(monkeypatch, tmp_path):
 
     def fake_run(cmd, cwd, check=True):
         calls.append(cmd)
+        if cmd[:3] == ["git", "config", "--get"]:
+            return subprocess.CompletedProcess(cmd, 0, "tester@example.com\n", "")
         if cmd[:3] == ["git", "diff", "--cached"]:
             return subprocess.CompletedProcess(cmd, 1, "", "")
         if cmd[:2] == ["git", "push"]:

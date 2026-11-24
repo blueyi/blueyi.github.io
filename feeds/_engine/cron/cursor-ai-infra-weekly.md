@@ -24,7 +24,27 @@
 
 只用 JSON 真实条目，绝不编造标题、URL、score、融资金额、股价。domains 标签只是粗筛，按内容重新归类，一条只进一个领域。8 个技术领域都要处理，无料则 `items` 为空数组。重大新闻（拐点 / 首发 / 政策 / 大额资金 / HN≥200）设 `hot: true`。每条：简短中文标题、1–2 句中文摘要、真实 url、source（hn/arxiv/rss/cn_rss）、score（若 hn）。每领域 2–5 条。中英文同一事件只留一条。
 
-领域 id 见 `feeds/_engine/domains/ai-infra.yaml`：chips、compilers、inference-dc、datacenter、safety、embodied-infra、autokernel、edge。纯 VLA / 灵巧操作 / sim2real / 世界模型 / 人形产业归具身频道；本频道第 6 类只收机器人算力、部署、推理系统。
+`curated` 必须能通过 `feeds/_engine/scripts/validate_week.py`。8 个领域按这个顺序，`id` 与 `feeds/_engine/domains/ai-infra.yaml` 一致。`items[].url` 从 `raw` 原样复制，不要改协议、不要去掉版本号。`highlights` 是 3–5 句字符串。股票涨跌幅字段名是 `pct`，数值抄 `raw.markets[].pct_5d` 或 `raw.cn_markets[].pct_5d`，不要把 `pct_5d` 这个键写进 curated。
+
+```json
+{
+  "highlights": ["中文结论一", "中文结论二", "中文结论三"],
+  "domains": [
+    {"id": "chips", "emoji": "1️⃣", "name": "AI 芯片", "items": [
+      {"title": "中文标题", "summary": "一两句中文摘要", "url": "https://example.com/from-raw", "source": "hn", "hot": true}
+    ]},
+    {"id": "compilers", "emoji": "2️⃣", "name": "AI 编译器与框架", "items": []},
+    {"id": "inference-dc", "emoji": "3️⃣", "name": "AI 推理优化（数据中心）", "items": []},
+    {"id": "datacenter", "emoji": "4️⃣", "name": "数据中心与基础设施", "items": []},
+    {"id": "safety", "emoji": "5️⃣", "name": "AI 安全与治理", "items": []},
+    {"id": "embodied-infra", "emoji": "6️⃣", "name": "具身智能（基础设施视角）", "items": []},
+    {"id": "autokernel", "emoji": "7️⃣", "name": "AI 自动算子与代码生成优化", "items": []},
+    {"id": "edge", "emoji": "8️⃣", "name": "边缘与端侧推理", "items": []}
+  ]
+}
+```
+
+纯 VLA / 灵巧操作 / sim2real / 世界模型 / 人形产业归具身频道；本频道第 6 类只收机器人算力、部署、推理系统。
 
 `curated.industry`：
 

@@ -24,7 +24,26 @@
 
 层次标签只用：`[感知层]`、`[规划层]`、`[控制层·扩散]`、`[控制层·BC]`、`[控制层·RL]`、`[控制层·世界模型]`、`[端到端VLA]`。跨层只标最核心的一层。
 
-方向 id 见 `feeds/_engine/domains/embodied-ai.yaml`。方向 1 收端到端 VLA 模型本身；方向 4 收感知、规划、控制和非 VLA 的扩散 / RL / 世界模型。纯基础设施（vLLM、MLIR、数据中心、HBM、量化系统）归 AI Infra，不要收进本频道。
+`curated` 必须能通过 `validate_week.py`。7 个方向按这个顺序。`items[].url` 从 `raw` 原样复制。`highlights` 是 3–5 句字符串，摘要里的层次标签写在字符串末尾。股票字段用 `pct`，数值抄 `pct_5d`。
+
+```json
+{
+  "highlights": ["中文结论 [端到端VLA]", "中文结论 [感知层]", "中文结论 [控制层·扩散]"],
+  "domains": [
+    {"id": "vla", "emoji": "1️⃣", "name": "VLA（视觉-语言-动作模型）", "items": [
+      {"title": "中文标题", "summary": "一两句摘要。[端到端VLA]", "url": "http://arxiv.org/abs/0000.00000v1", "source": "arxiv", "hot": true}
+    ]},
+    {"id": "dexterous", "emoji": "2️⃣", "name": "灵巧手 / 灵巧操作", "items": []},
+    {"id": "sim2real", "emoji": "3️⃣", "name": "sim2real / 仿真到真实", "items": []},
+    {"id": "embodied-model", "emoji": "4️⃣", "name": "具身模型（感知/规划/控制）", "items": []},
+    {"id": "embodied-chip", "emoji": "5️⃣", "name": "具身智能芯片", "items": []},
+    {"id": "manufacturing", "emoji": "6️⃣", "name": "制造 / 产线", "items": []},
+    {"id": "market", "emoji": "7️⃣", "name": "市场 / 产业", "items": []}
+  ]
+}
+```
+
+方向 1 收端到端 VLA 模型本身；方向 4 收感知、规划、控制和非 VLA 的扩散 / RL / 世界模型。纯基础设施（vLLM、MLIR、数据中心、HBM、量化系统）归 AI Infra，不要收进本频道。
 
 优先看 `hf_papers` 里 upvotes ≥ 20、带 github_repo、关键词含机器人 / 具身 / VLA / manipulation 的条目。制造和产业方向没有公开材料就留空，不要为了填满而编造。
 

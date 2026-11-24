@@ -13,7 +13,7 @@
 在仓库根目录：
 
 1. `python3 daily/_engine/prefetch_daily.py > /tmp/ai-infra-daily.json`
-2. 只根据这个 JSON 写日报。把**纯正文**写到 `~/.cursor/blueyi-daily-snapshots/<date>.md`。`<date>` 用 JSON 的 `date`（Asia/Hong_Kong）。文件以 `# 📡 AI Infra 日报` 开头。不要把状态报告、cron、脚本说明写进这个文件。
+2. 只根据这个 JSON 写日报。把**纯正文**写到 `~/.cursor/blueyi-daily-snapshots/<date>.md`。`<date>` 必须等于 JSON 的 `date`，也就是 Asia/Hong_Kong 的日期。发布器用同一时区判断「今天」，文件名不一致会报没有当天快照。文件以 `# 📡 AI Infra 日报` 开头。不要把状态报告、cron、脚本说明写进这个文件。
 3. 若 `counts.hn == counts.arxiv == counts.rss == counts.blog == counts.cn == 0`，不要发布，最终回复只写一行 `[SILENT]`。
 4. 否则运行 `python3 daily/_engine/publish_daily.py`。它会校验亮点、在干净 worktree 里渲染、提交、`git push origin HEAD:master`，并核对线上页面。
 5. 不要自己 `git push`，不要开 Pull Request，不要改 git config。发布器非零退出就是失败。

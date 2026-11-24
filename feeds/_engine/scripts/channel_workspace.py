@@ -58,15 +58,17 @@ def main():
                 print(json.dumps({"STATUS": "prefetch_failed", "channel": args.channel,
                                   "error": p.stderr.strip()}, ensure_ascii=False), file=sys.stderr)
                 return p.returncode
-            today = datetime.date.today().isocalendar()
-            source = worktree / "feeds" / args.channel / "data" / f"{today.year}-W{today.week:02d}.json"
+            now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
+            year, week_num, _ = now.isocalendar()
+            source = worktree / "feeds" / args.channel / "data" / f"{year}-W{week_num:02d}.json"
             raw = json.loads(source.read_text(encoding="utf-8"))["raw"]
             week = raw["week"]
             print(json.dumps({"STATUS": "prefetched", "channel": args.channel, "week": week,
                               "counts": raw.get("counts", {}), "errors": raw.get("errors", []),
                               "data_file": str(source)}, ensure_ascii=False))
             print(f"PUBLISH_SOURCE={source}")
-            print(f"PUBLISH_COMMAND=python3 {Path.home()}/.hermes/scripts/feeds_publish_week.py --channel {args.channel} --week {week} --data {source}")
+            publish = REPO / "feeds" / "_engine" / "scripts" / "publish_week.py"
+            print(f"PUBLISH_COMMAND=python3 {publish} --channel {args.channel} --week {week} --data {source}")
             return 0
         except Exception as exc:
             print(json.dumps({"STATUS": "prefetch_failed", "channel": args.channel,

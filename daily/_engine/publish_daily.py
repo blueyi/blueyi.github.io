@@ -10,7 +10,7 @@ import glob
 import json
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 import shutil
 import subprocess
 import sys
@@ -26,6 +26,7 @@ DATA_DIR = DAILY_DIR / "data"
 SNAPSHOT_GLOB = os.path.expanduser("~/.hermes/cron/output/5b1b9320afe7_*.txt")
 CURSOR_SNAPSHOT_GLOB = os.path.expanduser("~/.cursor/blueyi-daily-snapshots/*.md")
 LOCK_PATH = Path.home() / ".hermes/locks/blueyi-pages-publish.lock"
+HKT = timezone(timedelta(hours=8))
 
 sys.path.insert(0, str(SCRIPT_PATH.parent))
 import render_daily  # noqa: E402
@@ -117,13 +118,31 @@ def validate_digest(md, date, require_summaries=True):
         raise ValueError(f"{date}: operational status bullet must not appear in digest content")
 
 
+def git_prefix(cwd):
+    """Identity flags for one commit. Does not write git config."""
+    name = run(["git", "config", "--get", "user.name"], cwd).stdout.strip()
+    email = run(["git", "config", "--get", "user.email"], cwd).stdout.strip()
+    if name and email:
+        return ["git"]
+    author = run(["git", "log", "-1", "--format=%an%x00%ae"], cwd, check=True).stdout.strip("\n")
+    parts = author.split("\x00")
+    if len(parts) != 2 or not parts[0].strip() or not parts[1].strip():
+        raise RuntimeError("git commit identity is missing and HEAD has no author")
+    prefix = ["git"]
+    if not name:
+        prefix += ["-c", f"user.name={parts[0].strip()}"]
+    if not email:
+        prefix += ["-c", f"user.email={parts[1].strip()}"]
+    return prefix
+
+
 def publish_commit(latest, changed_dates):
     run(["git", "add", "--", "daily/", "search-index.json"], REPO_DIR, check=True)
     if run(["git", "diff", "--cached", "--quiet"], REPO_DIR).returncode == 0:
         return run(["git", "rev-parse", "--short", "HEAD"], REPO_DIR, check=True).stdout.strip()
 
     message = f"daily: publish through {latest} AI Infra daily digest"
-    run(["git", "commit", "-q", "-m", message], REPO_DIR, check=True)
+    run([*git_prefix(REPO_DIR), "commit", "-q", "-m", message], REPO_DIR, check=True)
     pushed = False
     push = None
     for _attempt in range(3):
@@ -153,7 +172,7 @@ def verify_deployment(latest, attempts=60):
 
 
 def worker_main():
-    today = datetime.now().astimezone().strftime("%Y-%m-%d")
+    today = datetime.now(HKT).strftime("%Y-%m-%d")
     snapshots = snapshots_by_date()
     if today not in snapshots:
         raise RuntimeError(f"no daily news snapshot for {today}")

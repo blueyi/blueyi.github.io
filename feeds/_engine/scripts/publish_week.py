@@ -22,6 +22,24 @@ def run(args, cwd, check=True):
     return p
 
 
+def git_prefix(cwd):
+    """Identity flags for one commit. Does not write git config."""
+    name = run(["git", "config", "--get", "user.name"], cwd, False).stdout.strip()
+    email = run(["git", "config", "--get", "user.email"], cwd, False).stdout.strip()
+    if name and email:
+        return ["git"]
+    author = run(["git", "log", "-1", "--format=%an%x00%ae"], cwd).stdout.strip("\n")
+    parts = author.split("\x00")
+    if len(parts) != 2 or not parts[0].strip() or not parts[1].strip():
+        raise RuntimeError("git commit identity is missing and HEAD has no author")
+    prefix = ["git"]
+    if not name:
+        prefix += ["-c", f"user.name={parts[0].strip()}"]
+    if not email:
+        prefix += ["-c", f"user.email={parts[1].strip()}"]
+    return prefix
+
+
 def verify_url(url, cwd):
     for _ in range(18):
         time.sleep(10)
@@ -72,7 +90,7 @@ def publish(channel, week, source_data):
             unexpected = sorted(set(staged) - set(allowed))
             if unexpected:
                 raise RuntimeError(f"unexpected staged paths: {unexpected}")
-            run(["git", "commit", "-m", f"feeds({channel}): {week} weekly"], path)
+            run([*git_prefix(path), "commit", "-m", f"feeds({channel}): {week} weekly"], path)
             pushed = None
             for _attempt in range(3):
                 pushed = run(["git", "push", "origin", "HEAD:master"], path, False)

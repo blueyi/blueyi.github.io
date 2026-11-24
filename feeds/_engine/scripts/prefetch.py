@@ -485,7 +485,7 @@ def main():
     spec = _apply_shared_config(args.channel, spec)
     all_re, per_domain, excl_re = build_keyword_index(spec)
 
-    now = datetime.now(timezone.utc).astimezone()
+    now = datetime.now(timezone(timedelta(hours=8)))
     week = args.week or iso_week_id(now)
     window_start = (now - timedelta(days=7)).strftime("%Y-%m-%d")
 
