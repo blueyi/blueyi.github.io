@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T17:13:20.865743+00:00",
+ "generated_at": "2026-11-24T17:23:18.706020+00:00",
  "entries": [
   {
    "type": "daily",
@@ -50226,6 +50226,226 @@
    "summary": "TechCrunch 报道该机器人手公司在解决与特斯拉的商业秘密诉讼后宣布融资，并以训练数据采集为核心路径；融资细节以公司官方渠道核验。",
    "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
    "page": "/feeds/embodied-ai/weeks/2026-W47.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "WALL-OSS-1.0：自变量发布免微调具身基础模型",
+   "summary": "量子位报道自变量机器人发布新一代具身基础模型 WALL-OSS-1.0，以视觉、语言与动作联合预训练取代 WALL-OSS-0.5，并推出 WALL-API-1.0 供调用；免任务微调即可应对陌生环境的说法来自媒体报道，产品能力以官方渠道核验。[端到端VLA]",
+   "url": "https://www.qbitai.com/2026/11/512264.html",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "nanoAstra：把视觉语言模型训练成操作基础模型",
+   "summary": "该方法把语义动作建模和尽量保留原有能力的监督微调结合起来，使视觉语言模型用于可泛化的机器人操作，并报告较强的零样本成功与更快的流式执行。[端到端VLA]",
+   "url": "https://arxiv.org/abs/2611.29338",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "WeaveVLA：为动作生成补上三维关系接地",
+   "summary": "在预训练视觉语言表征之上显式建模与任务相关的三维关系，以及这些关系在操作过程中如何变化，用来增强视觉语言动作模型的动作生成。[端到端VLA]",
+   "url": "http://arxiv.org/abs/2611.31126v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "1️⃣ VLA（视觉-语言-动作模型）",
+   "title": "VITA-WAM：把世界动作模型拉向实时控制",
+   "summary": "现有世界动作模型往往依赖大型生成模型与迭代采样，动作生成延迟限制了实时部署。VITA-WAM 针对传统流匹配或扩散动作生成中的效率问题，提出流形对齐的世界-动作建模。[端到端VLA]",
+   "url": "http://arxiv.org/abs/2611.31195v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "Embo-Harness：用接口把前沿模型变成操作策略",
+   "summary": "这项工作系统考察前沿多模态模型如何接入机器人，结论是偏向原生视觉推理和工具使用的接口，能让模型在仿真与真机操作中作为策略取得较高成功率；代码已公开。[规划层]",
+   "url": "https://arxiv.org/abs/2611.31201",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "DexDuet：从人类示范学习保持接触的双臂灵巧",
+   "summary": "只跟踪物体轨迹容易忽略人手如何接触物体，机器人可能抓错部位或手指打滑。DexDuet 从人类示范学习保持接触的双臂灵巧技能；代码已公开。[控制层·BC]",
+   "url": "https://arxiv.org/abs/2611.30495",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "ViDiHand2：从第一视角视频恢复度量三维手部运动",
+   "summary": "从人类第一视角视频学习操作，需要准确的度量三维手部运动。ViDiHand2 用视频扩散先验配合手部几何，改写依赖外观的深度回归，以改善未见相机上的手部运动重建。[感知层]",
+   "url": "https://arxiv.org/abs/2611.30597",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "2️⃣ 灵巧手 / 灵巧操作",
+   "title": "腕部相机视频扩散：可迁移的闭环操作策略",
+   "summary": "Wrist Video Policy 用腕部相机轨迹表示机器人运动，通过视频预测学习操作如何展开，再借助几何估计恢复可执行动作，面向新任务、新场景和跨本体迁移。[控制层·扩散]",
+   "url": "http://arxiv.org/abs/2611.31079v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "Real2Worlds2Real：可自我改进的真实-仿真-真实操作学习",
+   "summary": "真机交互数据昂贵。该工作把基于真实观测的仿真策略学习做成可自我改进的智能体式 Real2Sim2Real 流程，以覆盖更多任务和物理交互。[规划层]",
+   "url": "http://arxiv.org/abs/2611.31098v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "RoboUniverse-10K：为智能体机器人准备大规模真实到仿真环境",
+   "summary": "当基础模型以编写可执行程序的方式控制机器人时，后训练仍受限于小型人工基准。RoboUniverse-10K 用真实到仿真环境补上可规模化执行的交互场景。[规划层]",
+   "url": "http://arxiv.org/abs/2611.31002v1",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "3️⃣ sim2real / 仿真到真实",
+   "title": "仿真试错训练的机器人集群可在真机上继续工作",
+   "summary": "Robohub 报道布鲁塞尔自由大学 IRIDIA 发表于 Science Robotics 的结果：在仿真中用强化学习试错学到的集群行为，迁到物理机器人上仍能可靠执行，用来缩小现实差距。[控制层·RL]",
+   "url": "https://robohub.org/robot-swarms-trained-by-trial-and-error-in-simulation-keep-working-on-real-robots/",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "Motion Mamba 2.0：长时程人形运动的自回归扩散",
+   "summary": "交互式动画和人形机器人需要在运动中响应变化的指令与空间目标。Motion Mamba 2.0 用自回归扩散 Mamba 做长时程实时可控的运动生成，针对增量式扩散难以利用远处历史、以及反复去噪推理开销大的问题；代码已公开。[控制层·扩散]",
+   "url": "https://arxiv.org/abs/2611.29897",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "非穿透世界模型：抑制交互视频中的物体互穿",
+   "summary": "该基准和轻量框架利用冻结扩散 Transformer 的隐藏状态，检测并阻止交互式视频世界模型里的物体穿透，从而减少物理违规，并具备零样本泛化；代码已公开。[控制层·世界模型]",
+   "url": "https://arxiv.org/abs/2611.27963",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "原生潜动作：用视频世界模型预训练机器人策略",
+   "summary": "Native LAM 通过可学习的动力学寄存器，从预训练视频扩散 Transformer 中提取紧凑潜动作；PAWlicy 再用这些动作预训练视觉语言动作策略，而无需在控制时生成视频，并报告跨本体迁移。[控制层·世界模型]",
+   "url": "https://arxiv.org/abs/2611.30898",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "Heave-Ho：去中心化的长时程多人形协作",
+   "summary": "多个类人机器人通过低层多智能体后训练，加上高层视觉语言规划器，并以语音做主从同步，协调长时程全身移动操作；代码已公开。[规划层]",
+   "url": "https://arxiv.org/abs/2611.22275",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "WAM-Policy：语言条件的四足移动操作",
+   "summary": "无臂四足可以用一条前腿边走边操作，但此前没有跟随语言指令的策略。WAM-Policy 将面向机械臂、采样偏慢的世界动作模型，通过在线策略蒸馏转成可跟随语言的四足移动操作策略；代码已公开。[控制层·RL]",
+   "url": "https://arxiv.org/abs/2611.24011",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "4️⃣ 具身模型（感知/规划/控制三层 × 动作生成方式）",
+   "title": "HIVE-Bench：第一视角操作更吃补丁级视觉表征",
+   "summary": "共享的流匹配策略直接读取多种视觉编码器的稠密补丁 token 后，第一视角双臂任务成功率更高；把受控运动解码成逆动力学是较强的预训练信号，而识别、深度和对应关系的迁移并不稳定；代码已公开。[感知层]",
+   "url": "https://arxiv.org/abs/2611.30813",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "6️⃣ 制造 / 产线",
+   "title": "Ati Robotics 用云端仿真验证工厂 AMR 结构",
+   "summary": "材料搬运公司 Ati Robotics 采用 SimScale 的云端仿真，对其 Sherpa 自主移动机器人做结构与机械验证，以评估车体和驱动部件能否满足连续工厂作业的载荷、速度与可靠性要求；工程进展以官方渠道核验。[市场/产业]",
+   "url": "https://roboticsandautomationnews.com/2026/11/24/ati-robotics-adopts-simscale-ai-simulation-for-autonomous-vehicle-development/107602/",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "Figure AI 申请用可穿戴设备采集人形示教",
+   "summary": "Robotics & Automation News 报道 Figure AI 公开了可穿戴系统专利申请，用人体手臂动作数据训练人形机器人或做实时遥操作；申请号 US 2026/0364774 A1 于 2026 年 11 月 19 日公开，细节以官方渠道核验。[控制层·BC]",
+   "url": "https://roboticsandautomationnews.com/2026/11/23/figure-ai-patents-wearable-system-for-teaching-humanoid-robots-through-human-movement/107567/",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
+  },
+  {
+   "type": "weekly",
+   "channel": "embodied-ai",
+   "date": "",
+   "week": "2026-W48",
+   "category": "7️⃣ 市场 / 产业",
+   "title": "香港前沿科技产业发展联盟启动，对接具身企业出海",
+   "summary": "雷锋网报道，11 月 23 日香港国际具身智能领袖峰会发布该联盟，发起方包括百度智能云、香港特区政府相关部门，以及智平方、众擎、地瓜机器人、帕西尼等企业，意在推动技术验证、场景落地和海外合作；组织信息以官方渠道核验。[市场/产业]",
+   "url": "https://www.leiphone.com/category/industrynews/uFuwhvMHGUY0Qeu0.html",
+   "page": "/feeds/embodied-ai/weeks/2026-W48.html"
   }
  ]
 }
