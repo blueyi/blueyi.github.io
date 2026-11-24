@@ -10,7 +10,7 @@ import tempfile
 import time
 from pathlib import Path
 
-REPO = Path("/data/workspace/repos/blueyi.github.io")
+REPO = Path(__file__).resolve().parents[3]
 LOCK = Path.home() / ".hermes/locks/blueyi-pages-publish.lock"
 BASE = Path.home() / ".cache/feeds-publish-worktrees"
 

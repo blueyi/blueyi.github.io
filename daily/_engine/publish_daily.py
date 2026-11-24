@@ -24,6 +24,7 @@ DAILY_DIR = SCRIPT_PATH.parent.parent
 REPO_DIR = DAILY_DIR.parent
 DATA_DIR = DAILY_DIR / "data"
 SNAPSHOT_GLOB = os.path.expanduser("~/.hermes/cron/output/5b1b9320afe7_*.txt")
+CURSOR_SNAPSHOT_GLOB = os.path.expanduser("~/.cursor/blueyi-daily-snapshots/*.md")
 LOCK_PATH = Path.home() / ".hermes/locks/blueyi-pages-publish.lock"
 
 sys.path.insert(0, str(SCRIPT_PATH.parent))
@@ -55,6 +56,7 @@ def snapshots_by_date():
     snapshots = {}
     candidates = glob.glob(SNAPSHOT_GLOB)
     candidates.extend(glob.glob(os.path.expanduser("~/.hermes/cron/output/5b1b9320afe7/*.md")))
+    candidates.extend(glob.glob(CURSOR_SNAPSHOT_GLOB))
     for path in sorted(candidates, key=lambda p: os.path.getmtime(p)):
         date = snapshot_date(path)
         if date:

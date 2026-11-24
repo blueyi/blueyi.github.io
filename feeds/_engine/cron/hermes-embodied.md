@@ -1,5 +1,7 @@
 # Hermes cron 重建参数 — 具身智能每周资讯
 
+已迁移到 Cursor Automation `blueyi-feeds-embodied-weekly`（周六 20:00 HKT）。现行说明见 `cursor-embodied-weekly.md`。下面只供回退时重建 Hermes。
+
 - **name**: `feeds-embodied-weekly`
 - **schedule**: `0 20 * * 6`  （每周六 20:00；时区取实例本地，本机为 Asia/Hong_Kong）
 - **workdir**: 仓库根目录

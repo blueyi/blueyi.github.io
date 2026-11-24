@@ -1,5 +1,7 @@
 # Hermes cron 重建参数 — AI Infra 每周资讯
 
+已迁移到 Cursor Automation `blueyi-feeds-ai-infra-weekly`。现行说明见 `cursor-ai-infra-weekly.md`。下面只供回退时重建 Hermes。
+
 迁移到任意 Hermes 实例时，用 `cronjob` 工具按以下参数重建（或用 `hermes` CLI）。
 
 - **name**: `feeds-ai-infra-weekly`

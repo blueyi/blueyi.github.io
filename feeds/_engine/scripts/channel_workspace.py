@@ -8,7 +8,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO = Path("/data/workspace/repos/blueyi.github.io")
+REPO = Path(__file__).resolve().parents[3]
 BASE = Path.home() / ".cache/feeds-channel-worktrees"
 LOCK_DIR = Path.home() / ".hermes/locks"
 

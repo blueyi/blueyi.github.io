@@ -1,8 +1,8 @@
 # feeds/ 资讯站引擎 + 迁移自包含包
 
 `blueyi.github.io/feeds` 是一个**独立、自包含**的每周资讯静态站点，含两个频道：
-- **AI Infra 每周资讯**（`feeds/ai-infra/`）— 每周六 06:00 自动生成
-- **具身智能每周资讯**（`feeds/embodied-ai/`）— 每周日 22:00 自动生成
+- **AI Infra 每周资讯**（`feeds/ai-infra/`）— 每周六 06:00 HKT 自动生成
+- **具身智能每周资讯**（`feeds/embodied-ai/`）— 每周六 20:00 HKT 自动生成
 
 本方案**不依赖任何其它抓取/推送方案**。停掉旧方案后照常运行。本目录（`_engine/`）含迁移到新机器/新 agent 所需的全部信息。
 
@@ -68,10 +68,11 @@ cd <repo>; git add feeds/; git commit -m "feeds(ai-infra): 2026-W27 weekly"; git
 ## 5. 迁移到新机器 / 新 agent（完整步骤）
 1. 在目标机器 `git clone git@github.com:blueyi/blueyi.github.io.git`，配好 SSH push 权限。
 2. `pip install pyyaml`；配置 git user.name/email。
-3. 在目标 agent 建两个定时任务：
-   - AI Infra：见 `cron/hermes-ai-infra.md`（周六 06:00，prompt 用 `prompts/ai-infra-weekly.md`）
-   - 具身智能：见 `cron/hermes-embodied.md`（周日 22:00，prompt 用 `prompts/embodied-ai-weekly.md`）
-   - 非 Hermes 框架见 `cron/openclaw-equivalents.md`。
+3. 定时任务在 Cursor Automations 上，仓库 `github.com/blueyi/blueyi.github.io`，分支 `master`，时区 Asia/Hong_Kong：
+   - AI Infra 周报：周六 06:00，见 `cron/cursor-ai-infra-weekly.md`
+   - 具身智能周报：周六 20:00，见 `cron/cursor-embodied-weekly.md`
+   - AI Infra 日报（每天 08:00，含发布）：见 `cron/cursor-daily.md`
+   - 旧 Hermes 参数仍留在 `cron/hermes-*.md`，不要和 Cursor 任务同时开启。
 4. 手动触发各一次，验证 data→html→index→push→线上可访问 全链路。
 5. 关闭旧机器/旧 agent 上的对应任务，避免重复推送。
 
