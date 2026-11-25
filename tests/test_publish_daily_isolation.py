@@ -130,6 +130,9 @@ def test_historical_status_snapshot_does_not_block_today(monkeypatch, tmp_path):
     monkeypatch.setattr(publish_daily.render_daily, "DATA_DIR", data_dir)
     monkeypatch.setattr(publish_daily, "rebuild_daily", type("R", (), {"main": staticmethod(lambda: None)}))
     monkeypatch.setattr(publish_daily, "publish_commit", lambda latest, dates: "testsha")
+    monkeypatch.setattr(publish_daily, "load_prefetch", lambda date: {
+        "date": date, "hn": [], "arxiv": [], "rss": [], "blog": [], "cn": []
+    })
     monkeypatch.setattr(publish_daily, "verify_deployment", lambda latest: True)
     monkeypatch.setattr(publish_daily, "run", lambda *args, **kwargs: subprocess.CompletedProcess([], 0, "200", ""))
     monkeypatch.setattr(publish_daily.time, "sleep", lambda _: None)

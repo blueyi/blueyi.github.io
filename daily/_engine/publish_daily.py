@@ -29,8 +29,11 @@ LOCK_PATH = Path.home() / ".hermes/locks/blueyi-pages-publish.lock"
 HKT = timezone(timedelta(hours=8))
 
 sys.path.insert(0, str(SCRIPT_PATH.parent))
+sys.path.insert(0, str(REPO_DIR / "_engine"))
 import render_daily  # noqa: E402
 import rebuild_daily  # noqa: E402
+import ground_daily  # noqa: E402
+from publish_git import rebase_and_refresh_search_index  # noqa: E402
 
 
 def run(cmd, cwd, check=False):
@@ -98,7 +101,24 @@ def clean_markdown(raw):
     return "\n".join(lines[start:end]).strip() + "\n"
 
 
-def validate_digest(md, date, require_summaries=True):
+def load_prefetch(date):
+    """Read the prefetch JSON the daily automation wrote before editing."""
+    path = Path(os.environ.get("AI_INFRA_DAILY_PREFETCH") or "/tmp/ai-infra-daily.json")
+    if not path.exists():
+        raise RuntimeError(
+            f"prefetch JSON not found at {path}. Run daily/_engine/prefetch_daily.py first. "
+            "Refusing to publish without URL grounding. 只能根据当日 prefetch JSON 发布。"
+        )
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if payload.get("date") != date:
+        raise RuntimeError(
+            f"prefetch date {payload.get('date')!r} does not match {date}. "
+            "只能使用当日 prefetch JSON。"
+        )
+    return payload
+
+
+def validate_digest(md, date, require_summaries=True, prefetch=None):
     doc = render_daily.parse(md)
     highlights = doc["highlights"]
     if not 3 <= len(highlights) <= 5:
@@ -116,6 +136,8 @@ def validate_digest(md, date, require_summaries=True):
         raise ValueError(f"{date}: operational status must not appear in digest content")
     if re.search(r"(?im)^[-*]\s*\*\*(?:PREFETCH|CURATION|PUBLISH|DEPLOY|DELIVERY)", md):
         raise ValueError(f"{date}: operational status bullet must not appear in digest content")
+    if prefetch is not None:
+        ground_daily.ground_digest(md, date, prefetch, DATA_DIR)
 
 
 def git_prefix(cwd):
@@ -151,7 +173,7 @@ def publish_commit(latest, changed_dates):
             pushed = True
             break
         run(["git", "fetch", "origin", "master"], REPO_DIR, check=True)
-        run(["git", "rebase", "origin/master"], REPO_DIR, check=True)
+        rebase_and_refresh_search_index(run, REPO_DIR, git_prefix)
     if not pushed:
         detail = "git push failed" if push is None else (push.stderr or push.stdout or "git push failed").strip()
         raise RuntimeError(detail)
@@ -188,7 +210,8 @@ def worker_main():
             continue
         try:
             md = clean_markdown(Path(snap_path).read_text(encoding="utf-8"))
-            validate_digest(md, date, require_summaries=(date == today))
+            prefetch = load_prefetch(date) if date == today else None
+            validate_digest(md, date, require_summaries=(date == today), prefetch=prefetch)
         except ValueError as exc:
             if date == today:
                 raise
@@ -245,6 +268,9 @@ def parent_main():
             worker_script = worktree / "daily/_engine/publish_daily.py"
             # Run the exact scheduler version being tested, even before this fix is pushed.
             shutil.copy2(SCRIPT_PATH, worker_script)
+            shutil.copy2(SCRIPT_PATH.parent / "ground_daily.py", worktree / "daily/_engine/ground_daily.py")
+            shutil.copy2(REPO_DIR / "_engine" / "publish_git.py", worktree / "_engine" / "publish_git.py")
+            shutil.copy2(REPO_DIR / "_engine" / "text_match.py", worktree / "_engine" / "text_match.py")
             env = os.environ.copy()
             env["AI_INFRA_DAILY_WORKER"] = "1"
             child = subprocess.run(

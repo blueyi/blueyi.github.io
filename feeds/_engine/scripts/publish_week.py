@@ -13,6 +13,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[3]
 LOCK = Path.home() / ".hermes/locks/blueyi-pages-publish.lock"
 BASE = Path.home() / ".cache/feeds-publish-worktrees"
+sys.path.insert(0, str(REPO / "_engine"))
+from publish_git import rebase_and_refresh_search_index  # noqa: E402
 
 
 def run(args, cwd, check=True):
@@ -97,7 +99,7 @@ def publish(channel, week, source_data):
                 if pushed.returncode == 0:
                     break
                 run(["git", "fetch", "origin", "master"], path)
-                run(["git", "rebase", "origin/master"], path)
+                rebase_and_refresh_search_index(run, path, git_prefix)
             else:
                 detail = "git push failed" if pushed is None else (pushed.stderr or pushed.stdout or "git push failed").strip()
                 raise RuntimeError(detail)

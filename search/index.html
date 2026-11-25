@@ -34,7 +34,7 @@
   var statsEl = document.getElementById('stats');
   var resEl = document.getElementById('results');
 
-  fetch('/search-index.json', { cache: 'no-cache' })
+  fetch('/search-index.json')
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) { idx = d ? d.entries : []; render(); })
     .catch(function () { idx = []; render(); });
@@ -62,6 +62,21 @@
     return s.replace(re, '<mark>$1</mark>');
   }
 
+  function sortKey(e) {
+    if (e.sort_date) return e.sort_date;
+    if (e.date) return e.date;
+    var m = /^(\d{4})-W(\d{2})$/.exec(e.week || '');
+    if (!m) return '';
+    var year = +m[1], week = +m[2];
+    var simple = new Date(Date.UTC(year, 0, 1 + (week - 1) * 7));
+    var dow = simple.getUTCDay() || 7;
+    var monday = new Date(simple);
+    monday.setUTCDate(simple.getUTCDate() - dow + 1);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    return sunday.toISOString().slice(0, 10);
+  }
+
   function render() {
     if (idx === null) {
       resEl.innerHTML = '<div class="hint">正在加载索引…</div>';
@@ -82,15 +97,21 @@
           if (hay.indexOf(terms[j]) === -1) { ok = false; break; }
         }
         if (!ok) continue;
-      } else if (results.length >= 50) {
-        continue;
       }
-      var key = e.title + '|' + (e.date || e.week);
+      var key = (e.url || '') + '|' + e.title + '|' + (e.date || e.week);
       if (seen[key]) continue;
       seen[key] = 1;
       results.push(e);
     }
-    statsEl.textContent = (terms.length ? '匹配 ' : '最近 ') + results.length + ' 条 · 索引共 ' + idx.length + ' 条';
+    results.sort(function (a, b) {
+      var ka = sortKey(a), kb = sortKey(b);
+      if (ka === kb) return 0;
+      return ka < kb ? 1 : -1;
+    });
+    var total = results.length;
+    results = results.slice(0, 40);
+    var shown = results.length + (total > results.length ? (' / ' + total) : '');
+    statsEl.textContent = (terms.length ? '匹配 ' : '最近 ') + shown + ' 条 · 索引共 ' + idx.length + ' 条';
     if (!results.length) {
       resEl.innerHTML = '<div class="hint">无匹配结果</div>';
       return;

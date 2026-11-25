@@ -27,7 +27,7 @@ DATA_DIR = DAILY_DIR / "data"
 TITLE = "AI Infra Daily"
 DESC = "AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge"
 SOURCES_LABEL = "HN / arXiv / tech blogs / Chinese media / embodied RSS"
-SCHEDULE = "Updated every day 08:30 HKT"
+SCHEDULE = "Updated every day 08:00 HKT"
 
 # feather 风格描边 home SVG，与主页/feeds 站图标一致
 HOME_SVG = ('<svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
