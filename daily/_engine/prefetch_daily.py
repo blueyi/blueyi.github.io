@@ -27,7 +27,6 @@ import json
 import re
 import sys
 import time
-import html
 import urllib.request
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -37,19 +36,22 @@ UA = {"User-Agent": "Mozilla/5.0 (compatible; ai-infra-news/1.2)"}
 
 # ─── 统一源+关键词：从 blueyi.github.io 仓库共享配置读取（与周报共用，单一事实源）───
 _REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_REPO / "_engine"))
+from text_match import arxiv_category_allowed, clean_xml_text, compile_keywords  # noqa: E402
+
 _CONFIG = json.loads((_REPO / "_engine" / "news_config.json").read_text(encoding="utf-8"))
 
 _all_kw = []
 for _c in _CONFIG["categories"]:
     _all_kw.extend(_c.get("keywords", []))
 KEYWORDS = list(dict.fromkeys(_all_kw))
-KW_RE = re.compile("|".join(re.escape(k) for k in KEYWORDS), re.I)
+KW_RE = compile_keywords(KEYWORDS)
 
 EMBODIED_KEYWORDS = _CONFIG["embodied_keywords"]
-EMBODIED_KW_RE = re.compile("|".join(re.escape(k) for k in EMBODIED_KEYWORDS), re.I)
+EMBODIED_KW_RE = compile_keywords(EMBODIED_KEYWORDS)
 
 CN_KEYWORDS = _CONFIG["cn_keywords"]
-CN_KW_RE = re.compile("|".join(re.escape(k) for k in CN_KEYWORDS), re.I)
+CN_KW_RE = compile_keywords(CN_KEYWORDS)
 
 RSS_FEEDS = _CONFIG["sources"]["embodied"]
 BLOG_FEEDS = _CONFIG["sources"]["english"]
@@ -68,9 +70,7 @@ def http_get(url: str, timeout: int = 12) -> str:
 
 
 def _clean(s: str) -> str:
-    s = s.replace("<![CDATA[", "").replace("]]>", "")
-    s = re.sub(r"<[^>]+>", "", s)
-    return html.unescape(re.sub(r"\s+", " ", s).strip())
+    return clean_xml_text(s)
 
 
 def fetch_hn(limit_score: int = _HN_MIN_SCORE, max_items: int = 50) -> list:
@@ -129,6 +129,8 @@ def fetch_arxiv(cats=_ARXIV_CATS, per_cat: int = 12) -> list:
             # Strip "arXiv:XXXX Announce Type: ... Abstract:" prefix
             desc = re.sub(r"^arXiv:[^\s]+\s*Announce Type:\s*\w+\s*", "", desc)
             desc = re.sub(r"^Abstract:\s*", "", desc)
+            if not arxiv_category_allowed(cat, f"{title} {desc}", KW_RE):
+                continue
             out.append({
                 "source": f"arxiv:{cat}",
                 "title": title,

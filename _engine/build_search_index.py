@@ -13,6 +13,7 @@ rebuild_index.py 在各自重建末尾调用,保持索引与站点内容同步�
 """
 import datetime
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -20,6 +21,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DAILY_DATA = ROOT / "daily" / "data"
 FEEDS_DIR = ROOT / "feeds"
 OUT_PATH = ROOT / "search-index.json"
+sys.path.insert(0, str(ROOT / "_engine"))
+from text_match import normalize_url  # noqa: E402
 
 # 复用 daily 的 markdown 解析（单一日报事实源，避免重复实现）
 sys.path.insert(0, str(ROOT / "daily" / "_engine"))
@@ -95,8 +98,42 @@ def weekly_entries():
     return out
 
 
+def _sort_date(entry):
+    if entry.get("date"):
+        return entry["date"]
+    match = re.fullmatch(r"(\d{4})-W(\d{2})", entry.get("week") or "")
+    if not match:
+        return ""
+    try:
+        end = datetime.date.fromisocalendar(int(match.group(1)), int(match.group(2)), 7)
+    except ValueError:
+        return ""
+    return end.isoformat()
+
+
+def collapse_entries(entries):
+    """Keep the newest item for each URL. Items with no URL stay as they are."""
+    best = {}
+    rest = []
+    for entry in entries:
+        item = dict(entry)
+        item["sort_date"] = _sort_date(item)
+        url = normalize_url(item.get("url") or "")
+        if not url:
+            rest.append(item)
+            continue
+        previous = best.get(url)
+        if previous is None or (item["sort_date"], len(item.get("summary") or "")) > (
+            previous["sort_date"], len(previous.get("summary") or "")
+        ):
+            best[url] = item
+    merged = list(best.values()) + rest
+    merged.sort(key=lambda item: item.get("sort_date") or "", reverse=True)
+    return merged
+
+
 def main():
-    entries = daily_entries() + weekly_entries()
+    entries = collapse_entries(daily_entries() + weekly_entries())
     payload = {
         "generated_at": datetime.datetime.now().astimezone().isoformat(),
         "entries": entries,

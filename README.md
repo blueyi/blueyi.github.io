@@ -1,36 +1,46 @@
 # blueyi.github.io · `yulong.wang`
 
-Personal homepage of **Yulong Wang** — AI Compiler & AI Infra engineer.
-A single static page served by GitHub Pages at <https://yulong.wang>.
+Personal site of **Yulong Wang** — AI Compiler & AI Infra engineer.
+Served by GitHub Pages at <https://yulong.wang>.
+
+Two pipelines write this repository. They do not edit each other's directories.
+
+| Pipeline | Who publishes | Writes |
+|----------|----------------|--------|
+| News | Three Cursor Automations on `master`: daily 08:00 HKT, AI Infra weekly Sat 06:00, embodied weekly Sat 20:00 | `daily/`, `feeds/`, `search-index.json` |
+| Docs | External Docusaurus builds, committed by `github-actions[bot]` | `ai-infra-docs/`, `embodied-ai-docs/` |
+
+News jobs call the Python under `daily/_engine/` and `feeds/_engine/`. Quality checks live in those scripts. The matching prompt spec is `feeds/_engine/cron/cursor-daily.md` (and the two weekly cron files). Doc canonical URLs are configured in the external build, not by editing the HTML in this repo.
 
 ```
-Hero · 4 link cards (Notes / GitHub / Email / Resume)
+Hero · link cards (Notes / Docs / GitHub / Email / Resume / Feeds / Daily)
   │
   └── scroll ──> Stack × Craft
-                  ├── Full-stack journey pipeline
-                  ├── 6 stack-group chip clusters
-                  ├── Highlights
-                  └── Currently building
 ```
 
 ## Highlights
 
-- Pure static, single `index.html` — **no build step, no runtime deps**.
-- Aurora gradient + grid background, animated hero, scroll-revealed Stack section.
+- Static files on `master`. News rendering has no frontend build.
 - **Password-gated resume**: client-side AES-GCM, decrypted inside the browser.
+- Daily and weekly publishers push `master` directly. `search-index.json` is rebuilt after a rebase instead of being merged.
 - Fully responsive, accessible, and respects `prefers-reduced-motion`.
 
 ## Repo layout
 
 | Path                          | Purpose                                                          |
 |-------------------------------|------------------------------------------------------------------|
-| `index.html`                  | The whole site — inline CSS/JS, no external scripts              |
+| `index.html`                  | Homepage — inline CSS/JS                                         |
+| `daily/`                      | AI Infra daily digest                                            |
+| `feeds/`                      | AI Infra and embodied weekly feeds                               |
+| `search/`                     | News search UI. Index is `search-index.json`                     |
+| `ai-infra-docs/`              | External build of the AI Infra notes                             |
+| `embodied-ai-docs/`           | External build of the embodied-AI notes                          |
 | `assets/resume.enc.json`      | Encrypted resume blob (AES-GCM, PBKDF2-SHA256 / 250k iters)      |
 | `tools/encrypt-resume.html`   | **Offline** browser tool — paste markdown + pass → encrypted JSON|
 | `tools/_encrypt_placeholder.mjs` | Node 18+ helper to regenerate a placeholder blob              |
 | `tools/README.md`             | Crypto details + security notes                                  |
 | `CNAME`                       | GitHub Pages custom domain (`yulong.wang`)                       |
-| `404/`, `colorname/`          | Legacy sub-pages (untouched, self-contained)                     |
+| `colorname/`                  | Legacy toy page                                                  |
 | `favicon.ico`, `robots.txt`   | Site furniture                                                   |
 
 ## Resume — encryption workflow

@@ -30,6 +30,9 @@ import yaml
 UA = {"User-Agent": "Mozilla/5.0 (compatible; blueyi-feeds/1.0)"}
 ENGINE_DIR = Path(__file__).resolve().parent.parent          # feeds/_engine
 FEEDS_DIR = ENGINE_DIR.parent                                # feeds/
+REPO_DIR = FEEDS_DIR.parent
+sys.path.insert(0, str(REPO_DIR / "_engine"))
+from text_match import arxiv_category_allowed, clean_xml_text, compile_keywords  # noqa: E402
 
 # 宽泛中文源(kind=cn_broad)机器人/具身关键词过滤器：泛科技源(InfoQ/cnBeta/ITHome 等)
 # 内容庞杂，只保留命中以下具身/机器人术语的条目，避免灌入大模型/消费电子噪音。
@@ -50,7 +53,7 @@ CN_ROBOT_KEYWORDS = [
     "自变量", "穹彻", "千寻智能", "灵初", "它石智航",
     "地平线机器人", "特斯拉机器人", "擎朗", "普渡机器人",
 ]
-CN_ROBOT_RE = re.compile("|".join(re.escape(k) for k in CN_ROBOT_KEYWORDS), re.I)
+CN_ROBOT_RE = compile_keywords(CN_ROBOT_KEYWORDS)
 
 # 宽泛中文源(kind=cn_broad)AI-Infra 关键词过滤器：给 ai-infra 频道用。
 # cnBeta/IT之家 等泛科技源充斥手机/显卡游戏评测/消费电子噪音，只保留命中以下
@@ -73,7 +76,7 @@ CN_INFRA_KEYWORDS = [
     # 端侧 / 边缘推理
     "端侧推理", "边缘推理", "npu", "llama.cpp", "端侧大模型", "端侧llm",
 ]
-CN_INFRA_RE = re.compile("|".join(re.escape(k) for k in CN_INFRA_KEYWORDS), re.I)
+CN_INFRA_RE = compile_keywords(CN_INFRA_KEYWORDS)
 
 
 def iso_week_id(dt: datetime) -> str:
@@ -119,15 +122,15 @@ def build_keyword_index(spec: dict):
     for d in spec["domains"]:
         kws = d.get("keywords", []) or []
         all_kw.extend(kws)
-        if kws:
-            rgx = re.compile("|".join(re.escape(k) for k in kws), re.I)
+        rgx = compile_keywords(kws)
+        if rgx is not None:
             per_domain.append((d["id"], rgx))
-    all_re = re.compile("|".join(re.escape(k) for k in all_kw), re.I) if all_kw else None
+    all_re = compile_keywords(all_kw)
     excl = spec.get("exclude_to_channel") or {}
     excl_kw = []
     for _ch, kws in excl.items():
         excl_kw.extend(kws or [])
-    excl_re = re.compile("|".join(re.escape(k) for k in excl_kw), re.I) if excl_kw else None
+    excl_re = compile_keywords(excl_kw)
     return all_re, per_domain, excl_re
 
 
@@ -178,12 +181,7 @@ def fetch_hn(all_re, per_domain, excl_re, min_score: int, max_items: int = 40) -
 
 
 def _clean_xml(s: str) -> str:
-    s = s.replace("<![CDATA[", "").replace("]]>", "")
-    s = re.sub(r"(?is)<!--.*?-->", " ", s)
-    s = re.sub(r"(?is)<meta\\b[^>]*>", " ", s)
-    s = re.sub(r"(?is)<(script|style)\\b[^>]*>.*?</\\1>", " ", s)
-    s = re.sub(r"<[^>]+>", " ", s)
-    return html.unescape(re.sub(r"\\s+", " ", s).strip())
+    return clean_xml_text(s)
 
 
 def _clean_feed_url(value: str) -> str:
@@ -253,6 +251,8 @@ def fetch_arxiv(all_re, per_domain, excl_re, cats, per_cat: int = 15) -> list:
                 out.append({"_error": f"arxiv api {cat}: {e}"})
         for r in rows:
             text = f"{r['title']} {r.get('abstract','')}"
+            if not arxiv_category_allowed(cat, text, all_re):
+                continue
             domains = tag_domains(text, per_domain)
             if excl_re and excl_re.search(text) and not domains:
                 continue
