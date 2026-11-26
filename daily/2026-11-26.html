@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infra Daily · 2026-11-26</title>
+<link rel="stylesheet" href="assets/daily.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/"><svg class="home-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Home</a> / <a href="index.html">Daily</a> / 2026-11-26</div>
+  <header class="site">
+    <h1>AI Infra Daily · 2026-11-26 · 周四</h1>
+    <div class="sub">AI Infra daily news digest — chips / compilers / inference / datacenters / safety / embodied / autokernels / edge</div>
+  </header>
+  <div class="meta-bar">
+    <span>Window: <b>2026-11-23 ~ 2026-11-26</b></span>
+    <span>Sources: <b>HN / arXiv / tech blogs / Chinese media / embodied RSS</b></span>
+    <span>Date: <b>2026-11-26</b></span>
+  </div>
+  <div class="highlights">
+    <h2>🌟 今日亮点</h2>
+    <ol>
+      <li><b>黄仁勋回到英伟达 CEO 职位，标普仍把治理和关键人放进评级讨论</b>：复职后的第一次全员大会上他向员工道歉，并撇清白宫与科技领袖帮他复职的说法；HN 上 CNBC 的复职报道为 2839 分。标普考虑降到 AA-。人回来了，信用定价还停在关键人上。来源</li>
+      <li><b>FCC 放行最多 100 万颗 Starmind 星上数据中心卫星，地面新云却等不到未完工机房的背书</b>：轨道方案拿到的是数量上限和许可，谷歌与 Blue Origin 也被点名为在追同一方向。英伟达表明不为还不能运行的数据中心背书，新云面对的是工期和更贵的债务。可交付容量仍先看土地、电力和建成的厂房。来源</li>
+      <li><b>Anthropic 盘前跌破 83 美元发行价，蒸馏指控和因子分解传闻同一时间停在 HN 高位</b>：420 分对应发行价失守，437 分是「如何证明没有蒸馏」，457 分是多项式时间因子分解的传闻。后者没有实验室确认，不能写成已成立的攻击。资本锚、权重权利和公钥假设被放进同一周。来源</li>
+      <li><b>矩阵乘法指数被写成九分之四，电路和微架构搜索也在交给模型</b>：HN 1019 分的预印本若成立，会改写 GEMM 的理论起点。同批论文在做网络引导的 MAC 综合、带仿真定位的 RTL 调试，以及用反模仿避免缓存策略退回已知实现。自动算子的对象从手写内核扩到了电路。来源</li>
+      <li><b>128GB 的 RTX Spark 开售，手机出货却因内存危机同比下降 16%</b>：本地微调有了新的一体机，消费设备连续三个季度加深下滑。RISC-V 上的块量化矩阵乘和显式 K/V 常驻，是在这条供应约束里把推理往开放指令集上搬，而不是再等下一颗数据中心 GPU。来源</li>
+    </ol>
+  </div>
+  <section class="domain">
+    <h2>1️⃣ AI 芯片</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">theverge.com</span><a href="https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology" target="_blank" rel="noopener">黄仁勋回到英伟达 CEO 职位，并在复职后的第一次全员大会上道歉</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">The Verge 引述彭博、纽约时报等报道写道，他向员工道歉，同时试图撇清「白宫和科技业领袖帮他拿回这份工作」的说法。复职这条消息在 Hacker News 的 CNBC 链接下为 2839 分。CEO 职务恢复，不自动取消关键人风险：客户的 GPU 订单、供应商账期和资本市场的授信，这一周仍绑在同一个人是否稳定上。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/" target="_blank" rel="noopener">标普考虑因治理和关键人风险把英伟达评级降到 AA-</a></div>
+      <div class="it-sum">TechCrunch 11 月 25 日报道，评级机构可能把英伟达降到 AA-，也就是第四高的档。这是「正在考虑」，不是已经下调。复职消息和评级讨论出现在同一周：人回到职位上，信用模型仍把治理和关键人单独定价。若下调落地，受影响的首先是发债成本和以这家公司信用为锚的设备账期，而不是某一颗 GPU 的峰值算力。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">phoronix.com</span><a href="https://www.phoronix.com/review/amd-epyc-9006-7601" target="_blank" rel="noopener">AMD EPYC Zen 6 相对 Zen 1：不到十年几何平均 12.1 倍</a></div>
+      <div class="it-sum">Phoronix 对比 EPYC 9006 与 Zen 1 时代的 7601，几何平均 12.1 倍，Hacker News 232 分。训练和推理的公开叙事几乎都写在 GPU 上，主机 CPU 容易被当成不变的喂数器。这份跨代对照说明服务器 CPU 的十年曲线没有走平。节点设计若只刷新加速卡、不刷新主机核与内存路径，整机效率会被这一侧重新卡住。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1587946.htm" target="_blank" rel="noopener">台积电评估得州布拉索斯县一座约 226 亿美元的 2 纳米厂</a></div>
+      <div class="it-sum">cnBeta 称，项目采用 2 纳米或更先进制程，子公司已向得州主计长办公室提交税收优惠申请。报道的口径是「正评估」，并写明若最终落地，2027 年动工、2031 年投入商业运营。这还不是开工令。先进逻辑产能继续往美国本土的大额制造项目上靠，但 2031 才是报道里的商业运营年份，填不满 2027 年之前的加速卡缺口。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1587948.htm" target="_blank" rel="noopener">英伟达据报再砍 RTX 50 供应两到三成，标题称 RTX 60 或推迟到 2028</a></div>
+      <div class="it-sum">cnBeta 引述中国分销论坛博板堂：2026 年 11 月至 2027 年 1 月这个季度，向板卡合作伙伴减少 20% 至 30% 的游戏显卡供应。同一篇写道，本周公司还在庆祝黄仁勋重返 CEO。标题里的「RTX 60 或推迟至 2028」正文没有再展开，不把它写成已经公布的路线图。游戏卡减供通常意味着晶圆、封装或内存继续优先让给数据中心 GPU。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>2️⃣ AI 编译器与框架</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">andlukyane.com</span><a href="https://andlukyane.com/blog/cayley-graphs-and-torchtpu" target="_blank" rel="noopener">把 Cayley 图求解器从 CUDA、JAX 迁到 TorchTPU</a></div>
+      <div class="it-sum">Hacker News 88 分。标题给出的就是移植路径，报道没有加速比。同一算法换三套栈，变的不是数学，而是算子有没有对应实现、编译要等多久、数据布局由谁负责。TPU 软件栈若只在演示模型上闭合，真实求解器一迁就会露出缺口。这篇适合当作移植清单，而不是一份新的性能榜。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">engram.com</span><a href="https://engram.com/blog/lora-size" target="_blank" rel="noopener">在训练开始前预测任意数据集的 LoRA 规模</a></div>
+      <div class="it-sum">Engram 的博客标题如此，Hacker News 104 分。适配器大小直接决定显存、批大小，以及一次微调能不能放进给定的卡。若规模可以事先预测，排期就不必靠一次失败的显存溢出来发现秩选大了。报道没有给出预测误差。对编译器和训练运行时，这是内存计划问题：适配器不再是事后才知道的常数。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.31674" target="_blank" rel="noopener">用读生成的 C++ 来验证 SystemVerilog 到 SystemC 的翻译</a></div>
+      <div class="it-sum">arXiv 论文指出，虚拟平台、固件提前开发和免商业许可证仿真越来越依赖翻译器甚至语言模型产出的 SystemC。错误模型通常能编译，也通常能在测试上与 RTL 一致。一个具体的语义差是：SystemVerilog 把 8 位加法留在 8 位里，C++ 会提升到 64 位；漏掉一次截断不会在编译期暴露。智能体开始改 RTL 的配套模型之后，翻译验证比再多一轮「看起来能跑」的仿真更接近可合并的标准。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">microsoft.com</span><a href="https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/" target="_blank" rel="noopener">微软 PDD Kit：把开发者意图写成 Verus 规格，再证明智能体代码</a></div>
+      <div class="it-sum">Microsoft Research 写道，智能体写代码的规模已经难以逐行审阅。PDD Kit 把意图转成 Verus 规格，并证明生成的代码满足规格，同时用规格做测试。形式化证明补的是审查带宽，不是再提高一次补全速度。自动生成的服务、胶水代码和算子要进主干，可被机器检查的规格比多一轮对话更接近门禁。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>3️⃣ AI 推理优化（数据中心）</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/" target="_blank" rel="noopener">ChatGPT 合并 Chat 与 Work，重度用户会更快触到同一把用量尺</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">TechCrunch 11 月 25 日报道，OpenAI 将在合并两种体验的同时，引入跨 ChatGPT 的单一用量计量。报道没有给出新的配额数字。分开的额度池允许用户在两个入口之间腾挪；合成一把尺子之后，重用户的上限由合计用量决定。对数据中心推理，这是容量管理被做成产品规则：限流不再只是集群过载时的临时开关，而会写进日常计费体验。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">noahbuilt.it</span><a href="https://noahbuilt.it/writing/qwen-on-5600-lambdas" target="_blank" rel="noopener">用约 5600 个 AWS Lambda 托管 Qwen，标题写成 80 倍负利润</a></div>
+      <div class="it-sum">链接路径为 `qwen-on-5600-lambdas`，Hacker News 127 分。标题把结果写成「为了好玩，以及 80 倍的负利润」。报道没有拆开账单。无服务器函数不是为常驻的大模型权重准备的，按调用计费会把解码的等待直接变成亏损。推理服务的默认形态仍是常驻 GPU 进程，而不是把一次生成拆成几千个短函数。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">blocksandfiles.com</span><a href="https://www.blocksandfiles.com/ai-ml/2026/11/23/dell-azure-local-gets-nvidia-blackwell-support/5311697" target="_blank" rel="noopener">戴尔 Azure Local 获得英伟达 Blackwell 支持</a></div>
+      <div class="it-sum">Blocks &amp; Files 的标题日期是 11 月 23 日，没有 SKU、驱动版本或可供货区域。能确认的是产品关系：Azure 的本地部署栈写上了 Blackwell。想在本地机房沿用 Azure 管理面、同时换上当前一代 GPU 的团队，不必先等一份公开的性能对照表，才知道这条产品线被点名。本地推理的采购清单因此多了一个明确选项，而不是停留在「云上才有 Blackwell」。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.32223" target="_blank" rel="noopener">模拟存内计算更适合扩散语言模型，而不是自回归</a></div>
+      <div class="it-sum">arXiv 论文认为，模拟存内计算能做更省电的语言模型推理，但器件非理想性会扰动矩阵向量乘，从而拉低生成质量。自回归模型每生成一个 token 就写进因果上下文，扰动会沿序列累积。扩散语言模型反复修整整段结果，错误不在出生的那一步被锁定。若模拟存内要进推理加速器，模型族的选择会变成电路容错的一部分，而不是先把自回归模型硬搬上噪声很大的模拟阵列。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>4️⃣ 数据中心与基础设施</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">theverge.com</span><a href="https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers" target="_blank" rel="noopener">FCC 批准 SpaceX 部署最多 100 万颗带 AI 芯片的 Starmind 卫星</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">The Verge 称，公告在周三发布，这些卫星属于 Starmind 计划。报道同时点名，谷歌和 Blue Origin 也在推进把 AI 数据中心放进太空。这是牌照和数量上限，不是已在轨的百万颗卫星，也没有给出轨道、单星功耗或发射节奏。轨道算力从概念变成了监管对象。地面机房仍受并网和工期约束时，空中方案拿到的是部署许可，两者还不能互相替代已签约的兆瓦。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">techcrunch.com</span><a href="https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/" target="_blank" rel="noopener">新云机房更难建：英伟达不为尚未就绪的数据中心背书</a></div>
+      <div class="it-sum">TechCrunch 的这期节目称，英伟达已经表明，不会为一座还不能运行的 AI 数据中心提供背书；与此同时，新云公司报告工期延误，债务也更贵。节目把话收成一句：对开发商更重要的是土地、电力和一座建成的房子，而不是融资故事。GPU 预留若必须等到机房接近可运行，资本开支的顺序就被反过来了：先有电和建筑，才有芯片侧的信用支持。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/ohio-regulators-approve-up-to-800mw-gas-plant-set-to-power-edgeconnex-data-center-in-pickaway-county/" target="_blank" rel="noopener">俄亥俄监管机构批准最高 800MW 燃气电厂，供电皮卡威县 EdgeConneX</a></div>
+      <div class="it-sum">Data Center Dynamics 写道，项目在当地反对声中仍获批。800MW 是电厂量级的负荷，不是一个机柜改造。批准不等于已经并网发电，报道没有给出商业运行日期。推理和训练集群若继续往单点数十到上百兆瓦走，燃料电厂会成为数据中心审批文件的一部分。电力路径一旦绑死在某个县的燃气项目上，延期会直接变成集群的延期。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">datacenterdynamics.com</span><a href="https://www.datacenterdynamics.com/en/news/gds-holdings-posts-10-percent-net-revenue-increase-yoy-revises-down-capex-expectations/" target="_blank" rel="noopener">万国数据净收入同比增 10%，同时下调资本开支预期</a></div>
+      <div class="it-sum">Data Center Dynamics 只补充了一句：公司称这是在应对变化的市场条件。报道没有给出下调后的资本开支金额。收入还在增长、建设预算却往下修，说明可见订单已经不足以支持原来的建设节奏。第三方数据中心的资本开支是后续可租机柜的先行指标；预算下修会先反映在下一批机柜，而不是这一季的收入数字上。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>5️⃣ AI 安全与治理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">bloomberg.com</span><a href="https://www.bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading" target="_blank" rel="noopener">Anthropic 盘前跌破 83 美元发行价</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">彭博标题如此，Hacker News 420 分，链接指向盘前交易。发行价是上市时市场接受的锚。跌破它，后来者的上一轮估值就少了一块公开对照。报道写的是盘前价格，不是收盘价。资本开支若还靠持续融资，价格锚的晃动会先出现在下一轮条款里。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">news.ycombinator.com</span><a href="https://news.ycombinator.com/item?id=50630809" target="_blank" rel="noopener">有公司称遭 Anthropic 指控蒸馏，并公开询问如何自证</a></div>
+      <div class="it-sum">这是一条 Ask HN，没有外链文章，Hacker News 437 分。标题没有给出公司名字和指控所依据的日志。蒸馏争议正在从论文里的方法，变成商业上的指控与抗辩。要自证「没有蒸馏」，依赖的是访问记录、输出分布和训练数据的边界，而不是一句声明。模型提供方把蒸馏当成可执行的权利主张之后，API 客户的合规成本会升高。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">reddit.com</span><a href="https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/" target="_blank" rel="noopener">因子分解进入多项式时间仍只是传闻</a></div>
+      <div class="it-sum">Hacker News 标题写的是 “Rumors swirling that labs might have cracked Factoring in P”，457 分，链接到 Reddit 讨论，不是论文，也不是实验室公告。讨论把对象指向 OpenAI 或 Anthropic，但没有任何一方确认。若大整数因子分解真能在多项式时间内完成，现有公钥体系会被推翻，集群认证、权重分发和软件供应链的签名都要重做。在被证实之前，它说明密码学假设已经进入社区风险讨论，不能写成已出现的攻击。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">cnbeta.com.tw</span><a href="https://www.cnbeta.com.tw/articles/tech/1587944.htm" target="_blank" rel="noopener">美国收紧先进 AI 芯片远程访问后，高端 GPU 在找新买家</a></div>
+      <div class="it-sum">cnBeta 称，新规针对的是中国企业使用先进人工智能芯片的远程访问。规则公布后，市场上出现异常规模的英伟达 GPU 出售信息，其中一部分原本准备放在海外数据中心，用于向中国相关客户出租算力。芯片没有消失，租约的合规前提变了，库存就从「已有客户」变成「待售」。出口管制因此从发货时的最终用户，延伸到上架之后谁可以远程使用。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>6️⃣ 具身智能</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/industrynews/KnGzlsg6xlU9Nnpk.html" target="_blank" rel="noopener">浙江人形把 SPIRE 升级为 2.0，用 NAVIAI 稳住长序列作业</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">雷锋网写道，物理环境里的物体状态、接触条件和多环节任务，不是一个更强的「大脑」就能交付。单一模型或孤立技能撑不住长流程，需要多种模型与技能协同。SPIRE 2.0 被定义成全链路任务对齐体系，NAVIAI 用来提升长序列任务的作业稳定性。报道没有给出成功率或节拍。具身走到产线，卡的是任务链是否对齐，不是单次抓取的展示。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">infoq.cn</span><a href="https://www.infoq.cn/article/stLpgV1kNHuvr21qRH9x?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">AMD 与中科慧灵完成人形机器人端侧 AI 验证，探索大小脑双处理器</a></div>
+      <div class="it-sum">InfoQ 中国的标题确认端侧验证已经做完，方向是「大脑」和「小脑」分属两颗处理器，而不是默认一颗大 GPU 同时负责规划和实时控制。报道没有给出芯片型号、功耗或任务清单。控制回路的时延和规划模型的显存因此可以分开预算。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">leiphone.com</span><a href="https://www.leiphone.com/category/chips/omZ0PFr6zVtmUnap.html" target="_blank" rel="noopener">九章云极开放物理 AI 的基础设施接口和开发接口</a></div>
+      <div class="it-sum">雷锋网记载，11 月 25 日深圳的物理 AI 行业峰会上，九章云极 DataCanvas 宣布 Physical AI Infra API 与 Physical AI Dev API，并与二十余家伙伴成立极光物理 AI 产业生态联盟。Infra API 面向异构算力的接入、管理与调度；Dev API 把仿真、数据生成、训练和验证工具接到这层算力上。机器人公司缺的往往不是又一块孤立的 GPU，而是仿真和训练能调用同一套调度。接口开放是工程化声明，还不是已公布的集群规模。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">qbitai.com</span><a href="https://www.qbitai.com/2026/11/512715.html" target="_blank" rel="noopener">智元灵心：一年孵化超过 3 万个机器人智能体，并推出 AIMA</a></div>
+      <div class="it-sum">量子位标题给出「超 3 万」这个规模，报道称 AIMA 是行业首个开放且完整的具身智能生态技术体系，并写明零基础也能做开发。数字说明开发者侧在铺开，没有给出真实任务的成功率。平台能创建智能体，还不等于长序列作业已经稳定。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>7️⃣ AI 自动算子与代码生成优化</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">github.com</span><a href="https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf" target="_blank" rel="noopener">OpenAI 数学预印本称矩阵乘法指数是九分之四</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">论文日期写在链接里，为 2026 年 11 月 24 日，Hacker News 1019 分。九分之四等于 2.25。这里记录的是标题中的主张。训练和推理的时间大多花在 GEMM 上。理论指数下移不会在次日改写现有的 GPU 矩阵乘库，但自动算子搜索会把更低的指数当成可追的算法族，而不再把三次方当成不可讨论的起点。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.31986" target="_blank" rel="noopener">用网络本身引导 MAC 单元的自动综合</a></div>
+      <div class="it-sum">arXiv 论文指出，推理加速器里乘法累加数据通路占掉大部分面积和关键路径；算子级数值格式同时决定硬件开销和量化误差。逻辑综合对数据通路的改写高度非线性，硬件成本与端到端精度之间没有直接换算。因此综合要由网络来引导，而不是先选一种格式再希望精度碰巧成立。自动算子若只搜索软件内核、不搜索 MAC 的位宽和电路，会漏掉面积和时序的主要来源。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.31709" target="_blank" rel="noopener">RTLDetective：用数据流和仿真定位来做多智能体 RTL 调试</a></div>
+      <div class="it-sum">论文承认，大语言模型智能体已经能参与 RTL 调试，但功能错误的定位和可靠修复仍然难。RTLDetective 把信号依赖分析、仿真引导的故障定位和基于知识的推理放进同一个多智能体框架，用于自动调试和修复。智能体写 RTL 的速度上来之后，卡点变成「哪一个信号才是错的」。没有仿真定位的补丁，只是另一份能编译的猜测。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.31876" target="_blank" rel="noopener">AgentDRC：用有空间概念的多智能体自动改 DRC</a></div>
+      <div class="it-sum">设计规则检查的错误修复仍是物理设计里的人工瓶颈。论文认为现有 LLM 智能体失败，是因为上下文图形冗余、对原始坐标的空间推理弱、以及版图被摊成低效的平面表示。AgentDRC 把 DRC 修正写成迭代过程，并强调空间感知。版图规则不是另一个文本补丁任务。自动布线要进生产，修复器必须理解形状和坐标，而不是只复述规则文本。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.31733" target="_blank" rel="noopener">MOSAIC：用反模仿交叉做免训练的微架构搜索</a></div>
+      <div class="it-sum">论文观察，语言模型可以生成缓存替换策略，但难的是守住没参与搜索的工作负载。作者改编已发表的搜索方法后，生成代码与已知策略的余弦相似度达到 0.78 到 0.84，留出集上调和平均 IPC 损失 1.0% 到 2.4%。模仿会把搜索拉回已有策略，并在没见过的负载上付出 IPC。MOSAIC 用带记忆组织的搜索和反模仿交叉来避开这种模仿，并且不需要训练。论文标题如此，没有在摘要里给出它自己的 IPC 数字。来源</div>
+    </li>
+    </ul>
+  </section>
+  <section class="domain">
+    <h2>8️⃣ 边缘与端侧推理</h2>
+    <ul class="items">
+    <li>
+      <div class="it-title"><span class="badge score">blogs.nvidia.com</span><a href="https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/" target="_blank" rel="noopener">RTX Spark 小型台式机开售：华硕、戴尔、微星，最高 128GB 统一内存</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">NVIDIA 博客称这些系统今天可供货，面向本地智能体、图像和视频生成以及模型微调，并带 NVIDIA 的 AI 软件栈。最高 128GB 统一内存被用来放下更大的本地模型。数据中心 GPU 仍是训练和大流量推理的默认位置；一台带完整软件栈的 Windows 小主机，把微调和常驻智能体收进办公桌。采购因此多了一档不必先把数据上传到机房的机器。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">servethehome.com</span><a href="https://www.servethehome.com/supermicro-sys-e103-14p-h-fanless-panther-lake-review/" target="_blank" rel="noopener">超微无风扇 Panther Lake 边缘机：Core Ultra X7 368H</a></div>
+      <div class="it-sum">ServeTheHome 评测 SYS-E103-14P-H，把它描述成一台无风扇小设备，处理器是英特尔 Panther Lake 的 Core Ultra X7 368H，并带密集的工业 I/O。评测摘要没有跑分。无风扇加上工业接口，指向机柜旁、产线和现场，而不是办公桌主机。端侧推理若要进没有空调的环境，散热方式和 I/O 密度会先于峰值 TOPS 决定能不能部署。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">arxiv.org</span><a href="https://arxiv.org/abs/2611.31937" target="_blank" rel="noopener">RISC-V 向量处理器上的块量化矩阵乘，以及显式常驻的 K/V</a></div>
+      <div class="it-sum">arXiv 论文认为，大模型推理里有些执行状态会跨越多条指令存活，而 RVV 的语义以单条操作为中心，表达和利用这些状态都困难。作者按数据状态的寿命划定专用边界，提出量化块流 QBS 和注意力 / KV 上下文 AKV，同时保留 RVV 可编程性。QBS 组织的是原生块量化矩阵乘，AKV 提供显式的 K/V 常驻和双视图访问。开放指令集上的推理加速，不一定靠另造一套不兼容的扩展，也可以把跨指令的状态收成可编程的对象。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/032/532.htm" target="_blank" rel="noopener">华为 OSCAR：Counterpoint 称频谱效率约升 30%、能效升 40%</a></div>
+      <div class="it-sum">IT之家引述这一方案的全称 Optimal Solution with Cross-Domain Autoregression for Radio。它在无线物理层运行定制的高阶自回归模型，算力放在通用基带处理板 UBBP 上的异构加速器里，经 SpiritPath 高速互联连接。优化对象是三类容量损失：多变量的小区干扰、不精确的信道估计，以及传统的单小区独立调度。这是基站侧的推理，不是手机 NPU。自回归模型被放进基带板之后，无线容量变成了模型加加速器的问题。来源</div>
+    </li>
+    <li>
+      <div class="it-title"><span class="badge score">ithome.com</span><a href="https://www.ithome.com/1/032/490.htm" target="_blank" rel="noopener">内存供应危机压低手机出货：全球 Q3 同比下降 16%</a></div>
+      <div class="it-sum">IT之家引述 Counterpoint：2026 年第三季度全球智能手机销量同比下降 16%，第二季度降幅为 11%，第一季度为 4%。报告把主因归于内存供应危机，入门级被重创，中高端价格被推高。标题另给中国市场的操作系统份额：安卓 60%、鸿蒙 22%、iOS 18%。这组比例按标题记在中国。出货降幅连续三个季度扩大，内存供应已经反映到消费终端，而不只是数据中心的采购单。来源</div>
+    </li>
+    </ul>
+  </section>
+  <div class="wk-nav">
+    <span><a href="2026-11-25.html">← 2026-11-25</a></span>
+    <span><a href="/">Home →</a></span>
+  </div>
+  <footer class="site">Auto-generated · AI Infra daily digest · GitHub Pages</footer>
+</div>
+</body>
+</html>
