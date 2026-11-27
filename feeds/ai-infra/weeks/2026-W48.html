@@ -14,42 +14,42 @@
     <div class="sub">AI Infra Weekly weekly digest</div>
   </header>
   <div class="meta-bar">
-    <span>Window: <b>2026-11-18 ~ 2026-11-25</b></span>
+    <span>Window: <b>2026-11-21 ~ 2026-11-28</b></span>
     <span>Sources: <b>HN / arXiv / industry media / official / funding / markets</b></span>
     <span>Issue: <b>2026-W48</b></span>
   </div>
   <div class="highlights">
     <h2>🌟 本周亮点</h2>
     <ol>
-      <li>黄仁勋重返英伟达 CEO，美国随即将 Megaspeed 列入出口黑名单，芯片龙头的人事回归和出口管制审查仍绑在一起。</li>
-      <li>Vera Rubin 首登 MLPerf 并包揽 Training v6.1，AMD Zen 6 EPYC 相对初代给出约 12.1 倍几何平均，训练芯片进入新一轮公开对标。</li>
-      <li>Anthropic 2028 年电力结构、Applied Digital 54 亿美元 150MW 长约，以及奥罗拉暂禁导致项目搁浅，说明电力和落地许可正在约束算力扩张。</li>
-      <li>1800 亿参数 MoE 被推进到约 32GB 内存，但 Hopper 上 4-bit KV 解码仍明显慢于 FP8，低比特推理的软件栈还没有跟上内存墙。</li>
-      <li>llama.cpp 1.0 与 RTX Spark 把端侧推理推向可交付产品，CompoundingKernel 则显示 B200 上的内核生成已经能靠搜索冲到公开榜前列。</li>
+      <li>黄仁勋重返英伟达 CEO 的同一周，公司暂停向东南亚四国出货服务器，上海数据中心的贷款文件里又出现 GB300，人事回归和出口管制审查仍然绑在一起。</li>
+      <li>Vera Rubin 首登 MLPerf 并包揽 Training v6.1；FCC 批准 SpaceX 最多部署 100 万颗 Starmind 在轨数据中心卫星。</li>
+      <li>光传输设备交期最长约 18 个月、价格约涨五成，英国拒绝就 AI 数据中心做全国咨询，算力扩张卡在网络器件和落地许可上。</li>
+      <li>数据中心推理侧同时出现流水线粒度拆分、非对称投机解码和 MoE rank 均衡；OpenAI 的数学预印本则把矩阵乘法指数写成 9/4。</li>
+      <li>RTX Spark 紧凑台式机开卖，AMD 专用 llama.cpp 分支在 Hacker News 获得 436 分，端侧推理从论文走到可购买的整机和可运行的本地后端。</li>
     </ol>
   </div>
   <section class="domain" id="chips">
     <h2>1️⃣ AI 芯片</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">2732★</span><a href="https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" target="_blank" rel="noopener">黄仁勋重返英伟达 CEO</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">英伟达重新任命黄仁勋为首席执行官，相关讨论在 Hacker News 达到 2732 分。国内报道称，亚洲供应商、客户和被投初创企业认为，这降低了下一代产品规划、供应链协作和投资方向的不确定性。</div>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">2858★</span><a href="https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" target="_blank" rel="noopener">黄仁勋重返英伟达 CEO</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">英伟达重新任命黄仁勋为首席执行官，Hacker News 讨论达到 2858 分。同周围绕这次人事的报道很多，这里只记回归本身。</div>
     </li>
     <li>
       <div class="it-title"><a href="https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/" target="_blank" rel="noopener">Vera Rubin 首登 MLPerf 并包揽训练榜</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">英伟达称 Vera Rubin 平台首次参加 MLPerf，在训练、后训练和智能体推理上给出领先成绩，并包揽 MLPerf Training v6.1 全部基准，同时完成该平台首次 Endpoints 提交。</div>
+      <div class="it-sum">英伟达称 Vera Rubin 平台首次参加 MLPerf，在训练、后训练和智能体推理上给出领先成绩，并包揽 MLPerf Training v6.1 的全部基准，同时完成该平台首次 Endpoints 提交。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">186★</span><a href="https://www.phoronix.com/review/amd-epyc-9006-7601" target="_blank" rel="noopener">Zen 6 EPYC 相对初代几何平均约 12.1 倍</a></div>
-      <div class="it-sum">Phoronix 对比 AMD EPYC Zen 6 与 Zen 1，不到十年几何平均性能约为 12.1 倍。这是服务器 CPU 公开对标，不是新的 GPU 指令集发布。</div>
+      <div class="it-title"><a href="https://chipsandcheese.com/p/amds-zen-6-family-feeding-the-beast" target="_blank" rel="noopener">Chips and Cheese 讨论 Zen 6 如何喂饱核心</a></div>
+      <div class="it-sum">Chips and Cheese 发表 Zen 6 家族文章，题目放在如何为这代核心供给带宽和数据。公开摘要没有给出可引用的测试数字。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://www.datacenterdynamics.com/en/news/tsmc-files-application-for-proposed-2nm-chip-fab-in-brazos-county-texas/" target="_blank" rel="noopener">台积电为得州 2nm 厂提交申请</a></div>
-      <div class="it-sum">台积电向得克萨斯州 Brazos 县提交拟建 2nm 晶圆厂的申请，厂址靠近 SpaceX 的 TeraFab 项目。公司同时表示，是否建厂尚未作出最终决定。</div>
+      <div class="it-title"><a href="https://www.blocksandfiles.com/ai-ml/2026/11/23/dell-azure-local-gets-nvidia-blackwell-support/5311697" target="_blank" rel="noopener">戴尔 Azure Local 支持 Blackwell</a></div>
+      <div class="it-sum">Blocks &amp; Files 在 11 月 23 日报道，戴尔的 Azure Local 开始支持英伟达 Blackwell。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.22115" target="_blank" rel="noopener">Xing 4 在昇腾上推进智能体模型</a></div>
-      <div class="it-sum">Xing 4 延续 TeleChat，把架构选择、大规模预训练、推理与智能体后训练放在昇腾的训练基础设施上一起做。国内芯片栈开始直接承载前沿智能体模型，而不是只承接现成权重。</div>
+      <div class="it-title"><a href="https://www.cnbeta.com.tw/articles/tech/1588254.htm" target="_blank" rel="noopener">ASML 首席执行官称中国先进制程仍落后十余年</a></div>
+      <div class="it-sum">cnBeta 引述 ASML 首席执行官富凯的播客访谈：由于缺少 EUV 光刻机，中国先进半导体技术仍落后国际先进水平约 10 至 15 年。这是他的判断，不是新的出口规则。</div>
     </li>
     </ul>
   </section>
@@ -57,12 +57,12 @@
     <h2>2️⃣ AI 编译器与框架</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><a href="http://arxiv.org/abs/2611.30446v1" target="_blank" rel="noopener">Pudding 面向存内计算的可重定向编译器</a></div>
-      <div class="it-sum">存内计算（Processing-Using-DRAM）各方案的原语、行分配和执行指标并不相同，目前多被写死在各自实现里。Pudding 试图把这些差异收成可重定向的编译目标，减少内存密集型负载的数据搬运。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.34273v1" target="_blank" rel="noopener">Libtt 把 PyTorch 和 JAX 接到 Tenstorrent</a></div>
+      <div class="it-sum">Libtt 实现 PJRT，让 JAX 直接跑在 Tenstorrent 上，PyTorch 则经 TorchTPU 运行。面向 TPU 写的软件除了替换自定义内核外可以沿用，整套编译器和运行时基于 Tenstorrent 的开源栈。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://blogs.nvidia.com/blog/cuda-x-libraries-agents-accelerate-scientific-discovery/" target="_blank" rel="noopener">CUDA-X 扩充科学计算库给智能体用</a></div>
-      <div class="it-sum">英伟达扩充 CUDA-X，点名 cuPhoton、cuPotential 和 cuSpa，让研究者和智能体在更大的科学数据集上做分析与建模，覆盖天体物理、材料到单细胞生物。这是 CUDA 软件栈的库扩展，不是新的通用 AI 编译器。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.33817v1" target="_blank" rel="noopener">SentryWard 形式化验证 warp 专用 GPU 内核</a></div>
+      <div class="it-sum">现在的 GPU 内核会把异步数据搬运、通用计算核心和 Tensor Core 叠在一起，warp specialization 把同步顺序变复杂。SentryWard 要对这类内核做形式化验证，目标是抓住数据竞争、过早复用资源和不正确的结果。</div>
     </li>
     </ul>
   </section>
@@ -70,24 +70,24 @@
     <h2>3️⃣ AI 推理优化（数据中心）</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><a href="https://huggingface.co/blog/moe-expert-streaming" target="_blank" rel="noopener">1800 亿参数 MoE 被推进到 32GB 内存</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">Hugging Face 博客展示用 Transformers 在约 32GB 内存上运行约 1800 亿参数的 MoE。文章路径指向专家流式加载，目标是不必把全部专家常驻内存。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.34615v1" target="_blank" rel="noopener">PipeAxes 拆开流水线服务的计算与通信粒度</a></div>
+      <div class="it-sum">流水线并行可以在 PCIe 服务器和异构 GPU 集群上服务长上下文模型。现有引擎用 token 分块限制解码停顿，但分块大小同时决定了 GPU 批宽和阶段之间的激活传输。PipeAxes 把计算粒度和通信粒度拆开。</div>
     </li>
     <li>
-      <div class="it-title"><a href="http://arxiv.org/abs/2611.30027v1" target="_blank" rel="noopener">Hopper 上 4-bit KV 解码仍慢于 FP8</a></div>
-      <div class="it-sum">4-bit KV 的读取量大约只有 FP8 的一半，但 Hopper 没有 FP4 硬件，解码要在软件里完成。论文测量 H200 上 vLLM 的 NVFP4 KV 路径只达到内存带宽的 10%–20%，最多比 FP8 慢 1.7 倍。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.34010v1" target="_blank" rel="noopener">非对称投机解码改草稿模型的上下文</a></div>
+      <div class="it-sum">投机解码先起草再并行验证，但推理任务上的实际加速远低于理论。论文把原因归为任务同构：草稿模型和目标模型收到同一份提示，草稿模型被迫去解超出自身能力的题。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.23388" target="_blank" rel="noopener">智能体闭环搜索量化配方</a></div>
-      <div class="it-sum">后训练量化的最佳配方随模型和比特宽变化，换一次模型往往要专家重做。QDA 让智能体多轮构建并评估候选配方，把这件事收成闭环设计。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.33542v1" target="_blank" rel="noopener">RankCast 按阶段平衡 MoE 的专家并行</a></div>
+      <div class="it-sum">MoE 服务已经把预填充和解码拆开，并用专家并行。每一层仍要等最忙的那个 EP rank，而两个阶段的主要延迟来源并不相同。RankCast 按阶段做 rank 负载均衡。</div>
     </li>
     <li>
-      <div class="it-title"><a href="http://arxiv.org/abs/2611.30417v1" target="_blank" rel="noopener">稀疏注意力把完整 KV 放到近存计算</a></div>
-      <div class="it-sum">长上下文推理必须留着完整 KV cache，稀疏注意力每步却只读其中一小部分。ANOR 讨论用经 CXL 连接的近存计算设备承担这份缓存，把稀疏注意力放进 GPU 与近存的层级。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="https://arxiv.org/abs/2611.27973" target="_blank" rel="noopener">MemOnce 改长程推理的记忆状态</a></div>
+      <div class="it-sum">长程交互需要可复用的记忆状态。标准 Transformer 按 token 堆积 KV cache，显存随上下文线性增长，计算更接近二次。MemOnce 把可扩展的记忆架构当作推理系统问题来做。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.27973" target="_blank" rel="noopener">MemOnce 改长程推理的记忆状态</a></div>
-      <div class="it-sum">长程对话如果继续按 token 堆积 KV cache，显存随上下文线性增长，计算则更接近二次。MemOnce 把可复用的记忆状态当作推理架构问题，而不是只把上下文窗口做大。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.34402v1" target="_blank" rel="noopener">Any-Rate 用半比特做多精度量化</a></div>
+      <div class="it-sum">嵌套多精度量化只读权重的高位，就能从同一检查点得到多种精度，适合在不同内存和能耗预算下部署。现有方法只有整数比特，相邻精度落差大，2 bit 掉点严重。Any-Rate 用编码比特平面做半比特多精度。</div>
     </li>
     </ul>
   </section>
@@ -95,24 +95,24 @@
     <h2>4️⃣ 数据中心与基础设施</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">1035★</span><a href="https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/" target="_blank" rel="noopener">Anthropic 2028 年电力仍以化石能源为主</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">一份电力拆解称，到 2028 年 Anthropic 约 87% 的电力来自天然气、11% 来自煤。讨论在 Hacker News 达到 1035 分，数据中心的自备电和电网电力被分开计算。</div>
+      <div class="it-title"><a href="https://siliconangle.com/2026/11/25/fcc-clears-spacex-to-put-up-to-1-million-starmind-data-centers-in-space/" target="_blank" rel="noopener">FCC 批准最多 100 万颗 Starmind 在轨数据中心卫星</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">FCC 空间局依授权批准 SpaceX 部署最多 100 万颗 Starmind 卫星，用作在轨数据中心。这是许可，不是已经在轨的算力。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://www.datacenterdynamics.com/en/news/applied-digital-signs-54bn-18-year-lease-with-unnamed-hyperscaler/" target="_blank" rel="noopener">Applied Digital 签下 54 亿美元长约</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">Applied Digital 与一家未具名超大规模客户签订 18 年、54 亿美元租约，将提供 150MW 容量。这是已签约的电力容量，不是意向备忘录。</div>
+      <div class="it-title"><a href="https://www.theregister.com/networks/2026/11/27/ai-boom-leaves-network-operators-waiting-up-to-18-months-for-kit/5312366" target="_blank" rel="noopener">光传输设备交期最长 18 个月</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">The Register 引述 RETN：AI 建设让网络运营商等设备最长要 18 个月，光传输设备今年价格大约上涨 50%，电信运营商在和数据中心抢器件。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://www.datacenterdynamics.com/en/news/vantage-drops-plans-for-trident-data-center-after-colorados-aurora-city-passes-moratorium/" target="_blank" rel="noopener">奥罗拉禁令后 Vantage 放弃 Trident</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">科罗拉多州奥罗拉市通过暂禁后，Vantage 放弃 Trident 数据中心计划。该项目原本会成为科罗拉多州最大的数据中心。</div>
+      <div class="it-title"><a href="https://www.datacenterdynamics.com/en/news/spacex-installs-250m-worth-of-tesla-megapack-batteries-at-starbase-data-center-site-in-texas-report/" target="_blank" rel="noopener">SpaceX 在 Starbase 安装 2.5 亿美元电池</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">报道称 SpaceX 在得州 Starbase 的数据中心场址安装了价值 2.5 亿美元的特斯拉 Megapack，并寻求在该址建设最高 240 亿美元的数据中心和天然气电厂。金额来自报道，不是公司公告里确认的投资额。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://blogs.nvidia.com/blog/lambda-photonics/" target="_blank" rel="noopener">Lambda 用共封装光连接 GB300 机架</a></div>
-      <div class="it-sum">Lambda 采用英伟达光子学共封装光模块交换机，把网络当作 AI 工厂的可靠性问题来做，用于连接 GB300 NVL72。训练集群的瓶颈在这里被写成交换和光互连，而不只是 GPU 数量。</div>
+      <div class="it-title"><a href="https://www.theregister.com/off-prem/2026/11/27/uk-government-rejects-national-consultation-on-ai-datacenters/5312501" target="_blank" rel="noopener">英国拒绝就 AI 数据中心做全国咨询</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">英国政府拒绝就 AI 数据中心进行全国性咨询，部长们指向项目层面的环境审查。相关请愿已超过 3.9 万个签名。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://www.cnbeta.com.tw/articles/tech/1587846.htm" target="_blank" rel="noopener">SpaceX 向竞争对手出租数据中心算力</a></div>
-      <div class="it-sum">cnBeta 引述称，SpaceX 正在把数据中心算力租给包括 Anthropic 在内的竞争对手，而这会让它自己的人工智能业务更难做。算力本身成为可以卖给模型公司的产品。</div>
+      <div class="it-title"><a href="https://www.theregister.com/ai-and-ml/2026/11/27/europes-ai-sovereignty-push-lots-of-cloud-not-much-silver-lining/5312120" target="_blank" rel="noopener">欧洲主权云开支上去了，芯片和模型仍在外面</a></div>
+      <div class="it-sum">The Register 写道，欧洲的 AI 主权推进带来大量云和数据中心开支，但模型、芯片和话语权仍在美国和亚洲。</div>
     </li>
     </ul>
   </section>
@@ -120,54 +120,45 @@
     <h2>5️⃣ AI 安全与治理</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><a href="https://www.theregister.com/systems/2026/11/24/us-blacklists-megaspeed-hours-after-jensen-huang-returns-to-nvidia/5311901" target="_blank" rel="noopener">美国将 Megaspeed 列入出口黑名单</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">黄仁勋回归英伟达数小时后，美国将 Megaspeed 列入黑名单。人事回归并没有结束华盛顿对这家公司的出口管制调查。</div>
+      <div class="it-title"><a href="https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/" target="_blank" rel="noopener">英伟达暂停向东南亚四国出货服务器</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">英伟达已通知制造伙伴暂停向马来西亚、新加坡、泰国和印度尼西亚出货服务器，背景是美国收紧防止 AI 芯片流入中国的做法。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://www.tomshardware.com/tech-industry/policy/reinstated-nvidia-ceo-jensen-huang-must-still-face-china-congressional-and-senate-banking-committees-senators-and-representatives-demand-answers-from-nvidia-ceo-on-national-security-threats-and-export-controls" target="_blank" rel="noopener">黄仁勋仍需出席对华与银行委员会</a></div>
-      <div class="it-sum">回归后的黄仁勋仍需在 12 月 1 日面对美国众议院对华特别委员会，并在 12 月 3 日面对参议院银行委员会，议题是国家安全威胁与出口管制。</div>
+      <div class="it-title"><a href="https://www.cnbeta.com.tw/articles/tech/1588260.htm" target="_blank" rel="noopener">上海数据中心文件出现 GB300，指向 Megaspeed</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">cnBeta 引述提交给中国监管机构的贷款文件：长三角项目以一台 GB300 NVL72 机架和一台 GB200 服务器作为抵押，项目与 Megaspeed 创始人黄乐有关。稿件称这些 Blackwell 服务器出现在上海一处数据中心。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">80★</span><a href="https://openai.com/index/introducing-shirudo/" target="_blank" rel="noopener">OpenAI 与思科开源 Shirudo</a></div>
-      <div class="it-sum">Shirudo 是 OpenAI 和思科推出的开源 Linux 运行时，用来在补丁还没铺开时给正在运行的系统加一层防护。它保护的是主机，不是模型对齐评测。</div>
+      <div class="it-title"><a href="https://siliconangle.com/2026/11/26/report-sheds-light-on-china-ties-of-some-us-based-nvidia-partners/" target="_blank" rel="noopener">C4ADS 梳理英伟达美国合作伙伴的中国关联</a></div>
+      <div class="it-sum">非营利组织 C4ADS 应 CBS News 请求做了调查，梳理部分美国英伟达合作伙伴与中国公司，或与被指违反出口管制的公司之间的关联。CBS 于周三公布结果。</div>
+    </li>
+    <li>
+      <div class="it-title"><a href="https://openai.com/index/introducing-shirudo" target="_blank" rel="noopener">OpenAI 与思科开源 Shirudo</a></div>
+      <div class="it-sum">Shirudo 是 OpenAI 和思科推出的开源 Linux 运行时，用来在补丁还没铺开时保护正在运行的系统。它防护的是主机，不是模型对齐评测。</div>
     </li>
     <li>
       <div class="it-title"><a href="https://openai.com/index/combatting-adversarial-distillation" target="_blank" rel="noopener">OpenAI 分层应对对抗蒸馏</a></div>
-      <div class="it-sum">OpenAI 把对抗蒸馏防护拆成训练、安全措施、检测和执法四层，用来阻止从模型里抽取能力。这是模型权重与能力外流的治理，不是新的推理框架。</div>
-    </li>
-    <li>
-      <div class="it-title"><a href="https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit" target="_blank" rel="noopener">两州起诉 SpaceX 的 Grok 安全宣传</a></div>
-      <div class="it-sum">俄勒冈与弗吉尼亚州总检察长分别起诉 SpaceX，指控其忽视行业安全措施，并虚假宣传 X 与 Grok 的安全性，违反州消费者保护法。</div>
+      <div class="it-sum">OpenAI 把对抗蒸馏防护拆成训练、安全措施、检测和执法四层，用来阻止从模型里抽取能力。</div>
     </li>
     </ul>
   </section>
   <section class="domain" id="embodied-infra">
     <h2>6️⃣ 具身智能（基础设施视角）</h2>
-    <ul class="items">
-    <li>
-      <div class="it-title"><a href="http://arxiv.org/abs/2611.30083v1" target="_blank" rel="noopener">多机器人共用 GPU 提供 VLA 推理</a></div>
-      <div class="it-sum">多台机械臂如果各占一块 GPU 跑各自的视觉-语言-动作策略，成本会很高。MotionServe 改成共享 GPU 推理，并用 LoRA 让多个策略共用冻结骨干、只保留轻量适配器。</div>
-    </li>
-    <li>
-      <div class="it-title"><a href="http://arxiv.org/abs/2611.30177v1" target="_blank" rel="noopener">移动 GPU 上共置 VLA 推理与 MPC</a></div>
-      <div class="it-sum">现有具身系统常把视觉-语言-动作推理和高频模型预测控制串行跑在移动 GPU 上，从而错过控制截止时间。Dubot 自动调度这两类负载，把问题放在算力共置而不是新的操作策略。</div>
-    </li>
-    </ul>
+    <div class="empty">本周该方向公开源未见重大动态。</div>
   </section>
   <section class="domain" id="autokernel">
     <h2>7️⃣ AI 自动算子与代码生成优化</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.19230" target="_blank" rel="noopener">CompoundingKernel 在 B200 算子榜取得领先</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">CompoundingKernel 用搜索让智能体自己写 GPU 内核。论文称截至 11 月 11 日，其内核在 SOL-ExecBench 的 B200 公开 L1、L2 和量化榜上排名第一，235 道题都有经站点验证的正确内核。</div>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">1067★</span><a href="https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf" target="_blank" rel="noopener">OpenAI 预印本把矩阵乘法指数写成 9/4</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">OpenAI 在 GitHub 放出数学预印本，标题写矩阵乘法指数为 9/4，路径标明 2026 年 11 月 24 日。Hacker News 讨论达到 1067 分。这是复杂度结果，不是已经进库的 GEMM 内核。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.17621" target="_blank" rel="noopener">AscendGYM 给昇腾算子优化做评测</a></div>
-      <div class="it-sum">AscendGYM 用真实负载评测昇腾 NPU 上的算子优化，设两种评估模式，并用 Speedup-Token Score 同时看加速和 token 成本。它量的是优化过程是否划算，而不只是最终加速比。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.33973v1" target="_blank" rel="noopener">Kolpona 不靠梯度训练改进 RTL 模型</a></div>
+      <div class="it-sum">开源 RTL 模型通常靠在经过验证的 Verilog 语料上微调，这需要大量设计和 GPU 训练。Kolpona 用智能体框架，在不做梯度训练的情况下改进这类模型，核心是一种写进权重空间的神经元编程。</div>
     </li>
     <li>
-      <div class="it-title"><a href="http://arxiv.org/abs/2611.30766v1" target="_blank" rel="noopener">分层形式化约束自然语言生成 RTL</a></div>
-      <div class="it-sum">用自然语言生成 RTL 时，高层描述经常漏掉复杂控制与时序所需的细节，模型只能猜测未写出的行为。这篇工作用分层形式化引导去补这个语义缺口。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.33346v1" target="_blank" rel="noopener">NEVA 用自然语言协同演化微架构</a></div>
+      <div class="it-sum">已有的 LLM 微架构搜索多半在改 C++ 仿真器代码，而不是直接讨论微架构本身。NEVA 让模型用自然语言协同演化和验证微架构设计。</div>
     </li>
     </ul>
   </section>
@@ -175,58 +166,55 @@
     <h2>8️⃣ 边缘与端侧推理</h2>
     <ul class="items">
     <li>
-      <div class="it-title"><a href="https://huggingface.co/blog/ggml-org/llama-cpp-v1" target="_blank" rel="noopener">llama.cpp 发布 1.0.0</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">llama.cpp 发布 1.0.0，官方称之为本地 AI 生态更稳固的基础。端侧推理使用最广的运行时之一进入正式版本周期。</div>
+      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">436★</span><a href="https://devnull.land/amd-specific-llama-cpp" target="_blank" rel="noopener">AMD 专用 llama.cpp 分支</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">一篇面向 AMD 的 llama.cpp 分支被放到 Hacker News，讨论达到 436 分。它是本地推理后端的硬件分支，不是新的数据中心服务框架。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/" target="_blank" rel="noopener">RTX Spark 小型桌面机开始出货</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">华硕、戴尔和微星的 RTX Spark 小型桌面机已经开卖，面向本地智能体、图像和视频生成以及模型微调。最高 128GB 统一内存，加上英伟达的 AI 软件栈，用来放下更大的本地模型。</div>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/" target="_blank" rel="noopener">RTX Spark 紧凑台式机开卖</a> <span class="hot">🔥</span></div>
+      <div class="it-sum">华硕、戴尔和微星的 RTX Spark 紧凑台式机已经开卖，面向本地智能体、图像与视频生成以及模型微调。统一内存最高 128GB，并带英伟达的 AI 软件栈。</div>
     </li>
     <li>
-      <div class="it-title"><span class="badge hn">HN</span><span class="badge score">183★</span><a href="https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF" target="_blank" rel="noopener">NariQ 把 Qwen3.8-27B 压进 10GB</a></div>
-      <div class="it-sum">NariQ 发布 Qwen3.8-27B 的 GGUF 量化，声称在约 10GB 文件里保持接近 BF16 的水平。Hacker News 得分为 183，目标是单机文件体积而不是数据中心吞吐。</div>
+      <div class="it-title"><a href="https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/" target="_blank" rel="noopener">SC26 推出四节点 DGX Spark 开发套件</a></div>
+      <div class="it-sum">本周芝加哥 SC26 上，英伟达推出 DGX Spark HPC 开发者套件：四台 DGX Spark 组成集群，每台与相邻两台直接连成环。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://arxiv.org/abs/2611.14848" target="_blank" rel="noopener">Tideway 在消费级设备上调度 MoE 内存</a></div>
-      <div class="it-sum">Tideway 把主机内存和 GPU 显存看成一块池，按 MoE 推理阶段切换布局，并在专家换入时用 CUDA Graph 执行。对象是内存不够的消费级设备，不是 H100/B200 集群。</div>
+      <div class="it-title"><span class="badge arxiv">arXiv</span><a href="http://arxiv.org/abs/2611.33981v1" target="_blank" rel="noopener">MixMoMo 在手机 GPU 和 NPU 上跑超大 MoE</a></div>
+      <div class="it-sum">手机上的 MoE 靠稀疏专家扩大容量，但细粒度专家一多，加载和计算都变难。MixMoMo 用混合精度，把超大 MoE 的推理拆到移动端 GPU 和 NPU 上一起跑。</div>
     </li>
     <li>
-      <div class="it-title"><a href="https://www.qbitai.com/2026/11/512362.html" target="_blank" rel="noopener">端侧超节点主张组队计算</a> <span class="hot">🔥</span></div>
-      <div class="it-sum">量子位报道称，业界提出「端侧超节点」，让端侧 AI 组队计算，并称效率提升 270%，而且不必更换芯片或模型。270% 是报道中的说法，不是本刊复测。</div>
+      <div class="it-title"><a href="https://www.servethehome.com/supermicro-sys-e103-14p-h-fanless-panther-lake-review/" target="_blank" rel="noopener">超微无风扇 Panther Lake 边缘整机</a></div>
+      <div class="it-sum">ServeTheHome 评测超微 SYS-E103-14P-H。这是一台无风扇边缘设备，处理器为英特尔 Panther Lake Core Ultra X7 368H，并带较密的工业接口。</div>
     </li>
     </ul>
   </section>
   <section class="domain industry" id="industry">
     <h2>📈 产业动态</h2>
     <details class="stocks-fold">
-      <summary>上市公司风向（14 只，点击展开 · 截至最近收盘）</summary>
+      <summary>上市公司风向（11 只，点击展开 · 截至最近收盘）</summary>
       <div class="stock-region">🌍 海外</div>
       <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
-        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>152.29 USD</td><td class="up">+0.88%</td><td>黄仁勋回归 CEO；同期报道称公司营收与利润再创新高。</td></tr>
-        <tr><td>AMD <span class="tk">AMD</span></td><td>409.08 USD</td><td class="down">-22.84%</td><td>Phoronix 测得 Zen 6 EPYC 相对 Zen 1 几何平均约 12.1 倍。</td></tr>
-        <tr><td>博通 <span class="tk">AVGO</span></td><td>302.03 USD</td><td class="down">-14.69%</td><td></td></tr>
-        <tr><td>台积电 <span class="tk">TSM</span></td><td>347.38 USD</td><td class="down">-4.2%</td><td>向得州 Brazos 县提交 2nm 晶圆厂申请，公司称尚未最终决定。</td></tr>
-        <tr><td>美光 <span class="tk">MU</span></td><td>632.23 USD</td><td class="down">-10.36%</td><td></td></tr>
-        <tr><td>Arm <span class="tk">ARM</span></td><td>162.07 USD</td><td class="down">-11.32%</td><td></td></tr>
-        <tr><td>微软 <span class="tk">MSFT</span></td><td>499.23 USD</td><td class="down">-1.78%</td><td>Ignite 上与英伟达把加速计算从 Azure 延伸到 Windows PC。</td></tr>
-        <tr><td>亚马逊 <span class="tk">AMZN</span></td><td>252.7 USD</td><td class="down">-5.62%</td><td>报道称以约 75 亿美元收购 Decart，用于提升 Trainium 效率。</td></tr>
+        <tr><td>英伟达 <span class="tk">NVDA</span></td><td>150.49 USD</td><td class="up">+19.88%</td><td>黄仁勋回归 CEO；标普正在考虑因治理和关键人风险把信用评级降至 AA-。</td></tr>
+        <tr><td>AMD <span class="tk">AMD</span></td><td>424.54 USD</td><td class="up">+0.04%</td><td>Chips and Cheese 讨论 Zen 6 的供数；llama.cpp 出现 AMD 专用分支。</td></tr>
+        <tr><td>台积电 <span class="tk">TSM</span></td><td>353.34 USD</td><td class="up">+10.87%</td><td></td></tr>
+        <tr><td>美光 <span class="tk">MU</span></td><td>646.95 USD</td><td class="up">+8.82%</td><td></td></tr>
+        <tr><td>Arm <span class="tk">ARM</span></td><td>171.55 USD</td><td class="up">+12.71%</td><td></td></tr>
+        <tr><td>英特尔 <span class="tk">INTC</span></td><td>57.4 USD</td><td class="up">+11.93%</td><td>超微无风扇边缘整机采用 Panther Lake Core Ultra X7 368H。</td></tr>
+        <tr><td>超微SMCI <span class="tk">SMCI</span></td><td>23.76 USD</td><td class="up">+9.75%</td><td></td></tr>
+        <tr><td>甲骨文 <span class="tk">ORCL</span></td><td>107.13 USD</td><td class="up">+5.87%</td><td></td></tr>
       </tbody></table>
       <div class="stock-region">🇨🇳 国内（A股/港股）</div>
       <table class="stocks"><thead><tr><th>公司</th><th>最新价</th><th>周涨跌</th><th>关键事件</th></tr></thead><tbody>
-        <tr><td>中芯国际 <span class="tk">116.00981 · 港股</span></td><td>49.0 HKD</td><td class="up">+0.53%</td><td></td></tr>
-        <tr><td>华虹半导体 <span class="tk">116.01347 · 港股</span></td><td>75.55 HKD</td><td class="up">+1.55%</td><td></td></tr>
-        <tr><td>寒武纪 <span class="tk">1.688256 · A股</span></td><td>970.0 CNY</td><td class="up">+6.03%</td><td></td></tr>
-        <tr><td>海光信息 <span class="tk">1.688041 · A股</span></td><td>163.01 CNY</td><td class="down">-0.6%</td><td></td></tr>
-        <tr><td>中际旭创 <span class="tk">0.300308 · A股</span></td><td>417.0 CNY</td><td class="down">-0.05%</td><td></td></tr>
-        <tr><td>浪潮信息 <span class="tk">0.000977 · A股</span></td><td>43.99 CNY</td><td class="down">-0.38%</td><td></td></tr>
+        <tr><td>中芯国际 <span class="tk">116.00981 · 港股</span></td><td>53.4 HKD</td><td class="up">+16.39%</td><td>ASML 首席执行官称，缺少 EUV 使中国先进制程仍落后约 10 至 15 年。</td></tr>
+        <tr><td>海光信息 <span class="tk">1.688041 · A股</span></td><td>186.37 CNY</td><td class="up">+18.05%</td><td></td></tr>
+        <tr><td>浪潮信息 <span class="tk">0.000977 · A股</span></td><td>46.81 CNY</td><td class="up">+10.01%</td><td></td></tr>
       </tbody></table>
     </details>
     <h3 class="sub-h">融资与独角兽</h3>
     <ul class="items">
-      <li><div class="it-title"><span class="badge amt">$7.5B</span><span class="badge region">海外</span><a href="https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/" target="_blank" rel="noopener">亚马逊据报道以 75 亿美元收购 Decart</a></div><div class="it-sum">TechCrunch 报道亚马逊收购 Decart，金额为报道中的 75 亿美元，目的是用软件提高 Trainium 效率、缩小与英伟达的差距。金额来自媒体报道，不是公司公告里的确认数字。</div></li>
-      <li><div class="it-title"><span class="badge amt">$2.65bn</span><span class="badge region">海外</span><a href="https://www.datacenterdynamics.com/en/news/ziehl-abegg-is-a-growing-technology-leader-with-a-compelling-portfolio-and-a-significant-presence-in-some-of-the-worlds-most-dynamic-markets-at-the-heart-of-our-success-are-our-employees-whose-expertise-dedication-and-innovative-spirit-have-made-us/" target="_blank" rel="noopener">ABB 以 26.5 亿美元收购冷却风机公司</a></div><div class="it-sum">ABB 拟以 26.5 亿美元收购 Ziehl-Abegg。后者的风机业务覆盖数据中心和其他暖通市场，属于机房散热供应链上的并购。</div></li>
-      <li><div class="it-title"><span class="badge amt">$22M</span><span class="badge region">海外</span><a href="https://www.datacenterdynamics.com/en/news/taiwanese-ai-infrastructure-firm-nocera-takes-22m-stake-in-canadian-ai-data-center-developer-bitrock/" target="_blank" rel="noopener">Nocera 以 2200 万美元入股 BitRock</a></div><div class="it-sum">台湾 AI 基础设施公司 Nocera 以 2200 万美元入股加拿大数据中心开发商 BitRock，交易资金将用于一座 10MW、自备电力的数据中心园区。</div></li>
-      <li><div class="it-title"><span class="badge region">海外</span><a href="https://www.msn.com/en-us/money/top-stocks/anthropic-stock-sinks-below-ipo-price-why-that-s-happened-so-fast/ar-AA2i7rqa" target="_blank" rel="noopener">Anthropic 上市后股价跌破发行价</a></div><div class="it-sum">Anthropic 完成本季最受关注的上市之后，后续交易已跌破发行价。报道没有给出可核对的募资总额，这里不写金额。</div></li>
+      <li><div class="it-title"><span class="badge amt">数千万元人民币</span><span class="badge region">国内</span><a href="https://www.leiphone.com/category/ai/ilqJyKclWkhaWIps.html" target="_blank" rel="noopener">闪科光联完成数千万元天使轮</a></div><div class="it-sum">雷锋网报道，MicroLED 高速光互连芯片与光引擎公司闪科光联完成数千万元人民币天使轮，由商汤国香、长石资本、厚雪资本联合领投。金额是报道中的区间，不是精确到个位的公告数字。</div></li>
+      <li><div class="it-title"><span class="badge amt">$100M</span><span class="badge region">海外</span><a href="https://www.datacenterdynamics.com/en/news/sony-spin-off-altair-targets-edge-ai-connectivity-with-100m-raise-report/" target="_blank" rel="noopener">索尼分拆公司 Altair 据报融资约 1 亿美元</a></div><div class="it-sum">Data Center Dynamics 报道，索尼分拆的 Altair 以约 1 亿美元融资做边缘 AI 连接，芯片组已在和爱立信测试，方向转向可穿戴设备上的 AI。金额来自报道。</div></li>
+      <li><div class="it-title"><span class="badge region">国内</span><a href="https://www.qbitai.com/2026/11/513346.html" target="_blank" rel="noopener">商汤大装置 Token 工厂拿到信通院最高评级</a></div><div class="it-sum">量子位报道，商汤大装置 Token 工厂获得中国信通院 Token 工厂智算能力评估的「全栈服务型·领先级」，并称是全国首批首家。这是能力评级，不是一轮融资。</div></li>
+      <li><div class="it-title"><span class="badge region">海外</span><a href="https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/" target="_blank" rel="noopener">Anthropic 上市后股价跌破发行价</a></div><div class="it-sum">TechCrunch 报道 Anthropic 上市后的股价跌破发行价，并认为这会给 AI 初创公司的估值带来压力。报道没有给出可核对的募资余额，这里不写金额。</div></li>
     </ul>
   </section>
   <div class="wk-nav">
